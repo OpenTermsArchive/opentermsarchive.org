@@ -1,0 +1,63 @@
+- name: Include vars
+  include_vars: '{{ENV}}.yml'
+
+- name: Find out ops's path
+  shell: pwd
+  register: ops_path_output
+  connection: local
+
+- name: get version from package
+  shell: cat "{{ops_path_output.stdout}}/../package.json"
+  register: package_json
+  connection: local
+
+- set_fact: package="{{ package_json.stdout | from_json }}"
+
+- name: Clone Repo
+  git:
+    repo: '{{ repository }}'
+    dest: '/home/{{ ansible_user }}/{{ app }}'
+    version: '{{ branch }}'
+    force: yes
+    accept_hostkey: yes
+    key_file: '/home/{{ ansible_user }}/.ssh/cgus-bot-key'
+  tags:
+    - setup
+    - update
+
+- name: Build the image
+  become: yes
+  community.general.docker_image:
+    timeout: 600 # Build can take a long time as it pre-creates all pages
+    source: build
+    build:
+      network: host
+      pull: yes
+      args:
+        ENV_FILE: '{{ env_file }}'
+      path: '/home/{{ ansible_user }}/{{ app }}'
+    name: '{{ app }}:{{ package.version }}'
+    force_source: yes
+
+- name: Start the container
+  become: yes
+  community.general.docker_container:
+    name: '{{ app }}'
+    image: '{{ app }}:{{ package.version }}'
+    restart: yes
+    state: started
+    restart_policy: unless-stopped
+    env:
+      AUTH_CREDENTIALS: "{{ nextauth_basic_auth if nextauth_basic_auth is defined else '' }}"
+      AUTH_JWT_SECRET: "{{ nextauth_secret if nextauth_secret is defined else '' }}"
+    ports:
+      - '{{ app_port }}:3000'
+
+- name: Prune containers and images
+  become: yes
+  community.docker.docker_prune:
+    containers: yes
+    images: yes
+    networks: false
+    volumes: false
+    builder_cache: false

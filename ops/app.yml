@@ -1,0 +1,6 @@
+---
+- name: Setup information-manipulation-analyzer
+  hosts: all
+
+  roles:
+    - ima/github-clone

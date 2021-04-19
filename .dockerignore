@@ -1,0 +1,17 @@
+# Common
+.docker
+.dockerignore
+.env.local
+.git
+.husky
+.idea
+.next
+ansible.cfg
+CHANGELOG.md
+decision-records
+docker-compose.yml
+Dockerfile
+node_modules
+ops
+README.md
+vault.key

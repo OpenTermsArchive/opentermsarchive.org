@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color-white;
+  font-size: $default-font-size;
+  @extend .font-marianne;
+  line-height: $default-line-height;
+  color: $color-g700;
+
+  /* Improve font rendering on HiDPI devices (opinionated) */
+  @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+  }
+}

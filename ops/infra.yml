@@ -1,0 +1,6 @@
+---
+- name: Setup information-manipulation-analyzer infrastructure
+  hosts: all
+  become: yes
+
+  roles:

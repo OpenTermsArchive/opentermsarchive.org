@@ -1,0 +1,16 @@
+#nprogress {
+  .bar {
+    height: 4px;
+    background: var(--bf500);
+    background: linear-gradient(90deg, var(--bf500) 0%, var(--rm500) 100%);
+  }
+  .spinner-icon {
+    border-color: white;
+    border-top-color: var(--bf500);
+    border-bottom-color: var(--rm500);
+    animation: nprogress-spinner 800ms linear infinite;
+  }
+  .peg {
+    box-shadow: none;
+  }
+}
