@@ -6,6 +6,7 @@
 .husky
 .idea
 .next
+dist
 ansible.cfg
 CHANGELOG.md
 decision-records
