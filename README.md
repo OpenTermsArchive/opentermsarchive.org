@@ -1,17 +1,14 @@
-# Information Manipulation Analyzer
+# OpenTermsArchive.org
 
-TODO
+WORK IN PROGRESS
 
 ## Development
 
-create a `.env.local` file at the root of the project
+Copy `.env.local.example` to `.env.local` file at the root of the project
 
 ```
 NODE_PATH="src"
-MONGODB_URI="mongodb://localhost:27017/information-manipulation-analyzer-preproduction?&compressors=zlib&retryWrites=true&w=majority"
 ```
-
-launch a mongoDb Instance or connect to a distant one
 
 Then launch
 
