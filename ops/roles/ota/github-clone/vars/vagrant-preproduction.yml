@@ -1,0 +1,5 @@
+app: 'ima-vagrant-preproduction'
+repository: 'https://github.com/ambanum/information-manipulation-analyzer.git'
+branch: 'develop'
+app_port: '7022'
+env_file: '.env.vagrant.preproduction'

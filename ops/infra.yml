@@ -1,5 +1,5 @@
 ---
-- name: Setup information-manipulation-analyzer infrastructure
+- name: Setup OpenTermArchive.org infrastructure
   hosts: all
   become: yes
 

@@ -1,6 +1,6 @@
 ---
-- name: Setup information-manipulation-analyzer
+- name: Setup OpenTermArchive.org
   hosts: all
 
   roles:
-    - ima/github-clone
+    - ota/github-clone

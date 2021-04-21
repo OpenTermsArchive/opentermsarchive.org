@@ -47,9 +47,6 @@
     restart: yes
     state: started
     restart_policy: unless-stopped
-    env:
-      AUTH_CREDENTIALS: "{{ nextauth_basic_auth if nextauth_basic_auth is defined else '' }}"
-      AUTH_JWT_SECRET: "{{ nextauth_secret if nextauth_secret is defined else '' }}"
     ports:
       - '{{ app_port }}:3000'
 
