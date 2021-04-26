@@ -1,164 +1,70 @@
-import { GetContributeServiceResponse } from '../../interfaces';
+import Drawer from 'components/Drawer';
+// import { GetContributeServiceResponse } from '../../interfaces';
+import { MdCancel as IconRemove } from 'react-icons/md';
+import IframeSelector from 'components/IframeSelector';
 import Layout from 'modules/Embassy/components/Layout';
+import Link from 'next/link';
 import Loading from 'components/Loading';
 import React from 'react';
-import { useRouter } from 'next/router';
-import useSWR from 'swr';
-// var iframeDocument = document.getElementsByTagName("iframe")[0].contentDocument;
-//
-// var style = document.createElement('style');
-// style.textContent = `
-//   div:hover,article:hover {
-//     border: 1px solid red;
-//     opacity:0.8;
-//   }
-// `;
-// iframeDocument.head.appendChild(style);
+import s from './service.module.scss';
+// import useSWR from 'swr';
+import { useToggle } from 'react-use';
+import useUrl from 'hooks/useUrl';
 
 const TermPage = ({}: {}) => {
-  const router = useRouter();
-  const { url } = router.query;
+  const {
+    queryParams: { url, step: initialStep, selectedCss: initialSelectedCss },
+    pushQueryParam,
+  } = useUrl();
 
-  const { data } = useSWR<GetContributeServiceResponse>(`/api/contribute/services?url=${url}`, {
-    initialData: {
-      status: 'ko',
-      message: '',
-      url: '',
-    },
-  });
+  const [selectedCss, setSelectedCss] = React.useState<string[]>([]);
+  const [selectable, toggleSelectable] = useToggle(false);
+  const [step, setStep] = React.useState<number>(initialStep ? +initialStep : 1);
 
-  const iframeRef = React.useRef<HTMLIFrameElement>(null);
+  const data = { url: 'http://localhost:3000/contribute' };
+  // const { data } = useSWR<GetContributeServiceResponse>(`/api/contribute/services?url=${url}`, {
+  //   initialData: {
+  //     status: 'ko',
+  //     message: '',
+  //     url: '',
+  //   },
+  // });
 
-  const onIframeLoad = () => {
-    if (!iframeRef.current) {
-      return;
-    }
-    const iframeDocument = iframeRef.current.contentDocument;
-    if (!iframeDocument) {
-      return;
-    }
-    const highlight = document.createElement('div');
-    highlight.id = 'highlight';
-    iframeDocument.body.appendChild(highlight);
-
-    window.document.addEventListener(
-      'myCustomEvent',
-      (data: any) => {
-        console.log(''); // eslint-disable-line
-        console.log('╔════START══data══════════════════════════════════════════════════'); // eslint-disable-line
-        console.log(data.detail?.cssPath); // eslint-disable-line
-        console.log('╚════END════data══════════════════════════════════════════════════'); // eslint-disable-line
-      },
-      false
-    );
-
-    const style = document.createElement('style');
-    style.textContent = `
-      #highlight {
-        position: absolute;
-        background-color: blue;
-        opacity: 0.4;
-        text-align: center;
-        border: 1px solid red;
-        box-sizing: border-box;
-        pointer-events: none;
-      }
-    `;
-    iframeDocument.body.appendChild(style);
-
-    const script = document.createElement('script');
-    script.textContent = `
-    const highlight = document.getElementById('highlight');
-    const body = document.body;
-    let currentlyHighlightedItem = null;
-
-    // window.onbeforeunload = function() {
-    //   // Cancel the event as stated by the standard.
-    //   event.preventDefault();
-    //   // Chrome requires returnValue to be set.
-    //   event.returnValue = '';
-    //   return "";
-    // }
-
-    body.addEventListener('click', function (e) {
-      var target = e.target;
-      var cssPath = getCssPath(e.target);
-      var event = new CustomEvent('myCustomEvent', {detail:{ cssPath }});
-      window.parent.document.dispatchEvent(event);
-    });
-
-    function getCssPath(originalEl) {
-      // Build a CSS path for the clicked element
-      var el = originalEl;
-      if (el instanceof Node) {
-        // Build the list of elements along the path
-        var elList = [];
-        do {
-          if (el instanceof Element) {
-
-            var classString = el.classList ? [].slice.call(el.classList).join('.') : '';
-            var elementName =
-              (el.tagName ? el.tagName.toLowerCase() : '') +
-              (classString ? '.' + classString : '') +
-              (el.id ? '#' + el.id : '');
-            if (elementName && el.tagName !=="HTML") elList.unshift(elementName);
-          }
-          el = el.parentNode;
-        } while (el != null);
-        // Get the stringified element object name
-        var objString = originalEl.toString().match(/\[object (\w+)\]/);
-        var elementType = objString ? objString[1] : originalEl.toString();
-        console.log('elementType',elementType)
-        var cssString = elList.join(' > ');
-        // Return the CSS path as a string, prefixed with the element object name
-        return cssString ? cssString : elementType;
-      }
-    }
-
-    function highlightElement(element) {
-      if (currentlyHighlightedItem == element) return;
-
-      let rect = element.getBoundingClientRect();
-
-      highlight.style.left = rect.x + 'px';
-      highlight.style.top = rect.y + 'px';
-      highlight.style.width = rect.width + 'px';
-      highlight.style.height = rect.height + 'px';
-      body.appendChild(highlight);
-
-      currentlyHighlightedItem = element;
-    }
-
-    // on the body itself
-
-    body.addEventListener(
-      'mousemove',
-      function (e) {
-        let target = e.target;
-        e.preventDefault();
-        e.stopPropagation();
-
-        // prevent navigating out
-        e.target.onclick = () => {};
-        if (e.target.href) {
-          e.target.href = '#';
-        }
-
-        highlightElement(target);
-      },
-      true
-    );
-
-    body.addEventListener('mouseleave', function (e) {
-      e.preventDefault();
-      e.stopPropagation();
-      highlight.remove();
-      currentlyHighlightedItem = null;
-    });
-
-    `;
-    iframeDocument.head.appendChild(script);
+  const passToStep = (newStep: number) => (e: any) => {
+    e.preventDefault();
+    e.stopPropagation();
+    pushQueryParam('step')(newStep);
+    setStep(newStep);
   };
+
+  const onSelect = React.useCallback(
+    (cssPath: string) => {
+      if (!selectedCss.includes(cssPath)) {
+        pushQueryParam('selectedCss')([...selectedCss, cssPath]);
+      }
+      toggleSelectable(false);
+    },
+    [selectedCss, pushQueryParam, toggleSelectable]
+  );
+
+  const onRemove = (index: number) => () => {
+    const newSelectedCss = [...selectedCss];
+    delete newSelectedCss[index];
+    pushQueryParam('selectedCss')(newSelectedCss);
+  };
+
+  React.useEffect(() => {
+    const newSelectedCss = !initialSelectedCss
+      ? []
+      : Array.isArray(initialSelectedCss)
+      ? initialSelectedCss
+      : [initialSelectedCss];
+
+    if (newSelectedCss.length === selectedCss.length) {
+      return;
+    }
+    setSelectedCss(newSelectedCss);
+  }, [initialSelectedCss, selectedCss]);
 
   if (!data?.url) {
     return (
@@ -197,12 +103,77 @@ const TermPage = ({}: {}) => {
 
   return (
     <div>
-      <iframe
-        ref={iframeRef}
-        src={data.url}
-        width="100%"
-        style={{ height: '10000px' }}
-        onLoad={onIframeLoad}
+      <Drawer className={s.wrapper}>
+        {step === 1 && (
+          <>
+            <nav>
+              <Link href="/contribute">
+                <a className={s.backButton}>Go back</a>
+              </Link>
+            </nav>
+            <div>
+              <h1>What is expected of you</h1>
+              <p>
+                Most of the time, contractual documents contains a header, a footer, navigation
+                menus, possibly ads… We aim at tracking only{' '}
+                <strong>the significant parts of the document</strong>
+              </p>
+              <p>
+                In order to achieve that, you will have to select the part of the documents that
+                contains the relevant part and remove the insignificant parts.
+              </p>
+            </div>
+            <nav>
+              <button type="button" className="rf-btn" onClick={passToStep(2)}>
+                OK
+              </button>
+            </nav>
+          </>
+        )}
+        {step === 2 && (
+          <>
+            <nav>
+              <a className={s.backButton} onClick={passToStep(1)}>
+                Go back
+              </a>
+            </nav>
+            <div>
+              <h1>Step 2: selecting significant part of the document</h1>
+              <form>
+                {selectedCss.map((selected, i) => (
+                  <div key={selected} className={s.selectionItem}>
+                    <input defaultValue={selected} className="rf-input" />
+                    <button
+                      type="button"
+                      className="rf-btn rf-fi-delete-fill"
+                      onClick={onRemove(i)}
+                    ></button>
+                  </div>
+                ))}
+                <button
+                  type="button"
+                  className="rf-btn rf-btn--secondary"
+                  onClick={toggleSelectable}
+                  disabled={selectable}
+                >
+                  Add
+                </button>
+              </form>
+            </div>
+            <nav>
+              <a onClick={passToStep(1)}>Need help?</a>
+              <button type="button" className="rf-btn">
+                Validate
+              </button>
+            </nav>
+          </>
+        )}
+      </Drawer>
+      <IframeSelector
+        selectable={selectable}
+        url={data.url}
+        selected={selectedCss}
+        onSelect={onSelect}
       />
     </div>
   );

@@ -1,0 +1,33 @@
+.wrapper {
+  > nav,
+  > div {
+    padding: 20px;
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    margin-top: 20px;
+    font-size: 25px;
+  }
+
+  form {
+    button {
+      margin: 10px 0;
+    }
+  }
+}
+
+.selectionItem {
+  display: flex;
+  align-items: center;
+}
