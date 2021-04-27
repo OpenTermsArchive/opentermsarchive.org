@@ -115,7 +115,7 @@ const ServicePage = ({}: {}) => {
               </Link>
             </nav>
             <div>
-              <h2>What is expected of you</h2>
+              <h2>What is expected from you</h2>
               <p>
                 Most of the time, contractual documents contains a header, a footer, navigation
                 menus, possibly ads… We aim at tracking only{' '}
@@ -213,6 +213,7 @@ const ServicePage = ({}: {}) => {
       ) : (
         <div className={s.fullPage}>
           <h1>We're preparing the website</h1>
+          <p>It usually takes between 30s and 1 min</p>
           <Loading />
         </div>
       )}

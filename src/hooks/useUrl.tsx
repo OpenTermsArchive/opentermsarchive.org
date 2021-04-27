@@ -62,7 +62,9 @@ const useUrl = () => {
         }
       }
 
-      return router.push(`${pathname}?${queryString.stringify(parsed)}`);
+      const newUrl = `${pathname}?${queryString.stringify(parsed)}`;
+      router.push(newUrl);
+      return newUrl;
     },
     [router, pathname, queryParams]
   );

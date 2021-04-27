@@ -1,0 +1,19 @@
+.form {
+  h3 {
+    margin: 50px 0 20px;
+    font-size: 18px;
+  }
+
+  label {
+    margin-top: 20px;
+  }
+
+  h3 + label {
+    margin-top: 0;
+  }
+
+  footer {
+    text-align: right;
+    margin-top: 50px;
+  }
+}

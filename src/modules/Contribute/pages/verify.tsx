@@ -1,30 +1,87 @@
+import VerifyForm, { VerifyFormValues } from '../components/VerifyForm';
+
 import Breadcrumb from 'components/BreadCrumb';
 // import { CreateHashtagResponse } from 'modules/Common/interfaces';
 // import LastHashtags from '../data-components/LastHashtags';
 import Layout from 'modules/Embassy/components/Layout';
+import React from 'react';
 import axios from 'axios';
 import s from './verify.module.scss';
+import { useRouter } from 'next/router';
+import { useToggle } from 'react-use';
 // import api from 'utils/api';
 import useUrl from 'hooks/useUrl';
 
 const DOCUMENT_TYPES_URL =
   'https://raw.githubusercontent.com/ambanum/OpenTermsArchive/master/scripts/rewrite/renamer/rules/documentTypes.json';
+const EMAIL_SUPPORT = 'martinratinaud@gmail.com';
+
+interface Json {
+  name: string;
+  documents: {
+    [key: string]: {
+      fetch: string;
+      select: string[];
+      remove?: string[];
+    };
+  };
+}
 
 const VerifyPage = ({ documentTypes }: { documentTypes: any }) => {
+  const router = useRouter();
   const {
-    queryParams: { url, selectedCss: initialSelectedCss, removedCss: initialRemovedCss },
-    pushQueryParam,
+    queryParams: {
+      url,
+      selectedCss: initialSelectedCss,
+      removedCss: initialRemovedCss,
+      name: initialName,
+      documentType: initialDocumentType,
+    },
+    pushQueryParams,
   } = useUrl();
-
-  const json = {
-    name: '',
+  const [showJson, toggleJson] = useToggle(false);
+  const [json, setJson] = React.useState<Json>({
+    name: initialName,
     documents: {
-      'Document Name': {
+      [initialDocumentType || '???']: {
         fetch: url,
         select: initialSelectedCss,
         remove: initialRemovedCss,
       },
     },
+  });
+  const onSubmit = ({ name, documentType, email, ...rest }: VerifyFormValues) => {
+    const newUrl = pushQueryParams({ name, documentType });
+    setJson({
+      name,
+      documents: {
+        [documentType]: rest,
+      },
+    });
+    const subject = 'Here is a new service to track in Open Terms Archive';
+    const body = `Hi,
+
+I need you to track "${documentType}" of "${name}" for me.
+
+Here is the url ${window.location.origin}${newUrl}
+
+Thank you very much`;
+
+    window.open(
+      `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
+      '_blank'
+    );
+
+    router.push('/contribute/thanks');
+  };
+
+  const defaultValues: VerifyFormValues = {
+    name: initialName,
+    documentType: initialDocumentType,
+    fetch: url,
+    select: initialSelectedCss,
+    remove: initialRemovedCss,
+    email: '',
   };
 
   return (
@@ -55,24 +112,33 @@ const VerifyPage = ({ documentTypes }: { documentTypes: any }) => {
                 { name: 'Verify informations' },
               ]}
             />
-            <h3>Verify informations (last step)</h3>
+            <VerifyForm
+              defaultValues={defaultValues}
+              documentTypes={documentTypes}
+              onSubmit={onSubmit}
+            />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <button className="rf-btn rf-btn--sm rf-btn--secondary" onClick={toggleJson}>
+              Show Json file (expert mode)
+            </button>
 
-            <h3>Optional Additional Informations</h3>
-            <p>
-              If you wish, you can add additional information, please refer to the{' '}
-              <a
-                href="https://github.com/ambanum/OpenTermsArchive#adding-a-new-service"
-                target="_blank"
-                rel="noopener noreferrer"
+            {showJson && (
+              <textarea
+                style={{
+                  width: '800px',
+                  maxWidth: '100%',
+                  height: '300px',
+                  overflow: 'auto',
+                  padding: '10px',
+                }}
               >
-                documentation
-              </a>{' '}
-              on the contribution guide.
-            </p>
-
-            <pre style={{ maxWidth: '400px', overflow: 'auto' }}>
-              {JSON.stringify(json, null, 2)}
-            </pre>
+                {JSON.stringify(json, null, 2)}
+              </textarea>
+            )}
           </div>
         </div>
       </div>
