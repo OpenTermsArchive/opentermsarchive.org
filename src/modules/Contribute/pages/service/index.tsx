@@ -97,8 +97,8 @@ const ServicePage = ({}: {}) => {
   }, [initialRemovedCss, removedCss]);
 
   return (
-    <div>
-      <Drawer className={s.wrapper}>
+    <div className={s.wrapper}>
+      <Drawer className={s.drawer}>
         {step === 1 && (
           <>
             <nav>

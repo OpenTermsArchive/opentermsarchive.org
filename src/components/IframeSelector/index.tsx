@@ -44,8 +44,16 @@ const IframeSelector = ({
 
     // @ts-ignore
     iframeDocument.querySelector(`#${CUSTOM_STYLE_TAG_ID}`).innerHTML = `
-      ${selected.length ? `${selected.join(',')} {background: #169b62EE;}` : ''}
-      ${removed.length ? `${removed.join(',')} {background: #e10600EE;}` : ''}
+      ${
+        selected.length
+          ? `${selected.join(',')} {box-shadow: 0 0 0 2px #169b62; background: #169b6244;}`
+          : ''
+      }
+      ${
+        removed.length
+          ? `${removed.join(',')} {box-shadow: 0 0 0 2px #e10600; background: #e1060044;}`
+          : ''
+      }
     `;
   }, [selected, removed]);
 

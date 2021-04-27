@@ -1,6 +1,8 @@
-.wrapper {
+.drawer {
   display: flex;
+  position: sticky;
   flex-direction: column;
+  height: 100vh;
 
   > nav,
   > div {
@@ -37,6 +39,15 @@
     button {
       margin: 10px 0;
     }
+  }
+}
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+
+  > div {
+    flex: 1;
   }
 }
 

@@ -1,19 +1,30 @@
 .wrapper {
   background: white;
-  width: 400px;
+  width: 0;
   position: fixed;
   transition: all 300ms;
   top: 0;
   bottom: 0;
   left: 0;
-  transform: translateX(-100%);
+  transform: translateX(calc(-100% - 1px));
   border-right: 1px solid var(--g500);
   box-shadow: 0 10px 10px var(--g500);
   z-index: 1;
+  > nav,
+  > div {
+    transition: transform 200ms;
+    transform: translateX(-1000px);
+  }
 }
 
 .expanded {
   transform: translateX(0%);
+  width: 400px;
+
+  > nav,
+  > div {
+    transform: translateX(0%);
+  }
 }
 
 .expander {
