@@ -5,11 +5,13 @@ import Link from 'next/link';
 import Loading from 'components/Loading';
 import React from 'react';
 import s from './service.module.scss';
+import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useToggle } from 'react-use';
 import useUrl from 'hooks/useUrl';
 
 const ServicePage = ({}: {}) => {
+  const router = useRouter();
   const {
     queryParams: {
       url,
@@ -96,6 +98,12 @@ const ServicePage = ({}: {}) => {
     setRemovedCss(newRemovedCss);
   }, [initialRemovedCss, removedCss]);
 
+  const onValidate = () => {
+    router.push(router.asPath.replace('/contribute/service', '/contribute/verify'));
+  };
+
+  const submitDisabled = !initialSelectedCss;
+
   return (
     <div className={s.wrapper}>
       <Drawer className={s.drawer}>
@@ -181,7 +189,12 @@ const ServicePage = ({}: {}) => {
             </div>
             <nav>
               <a onClick={passToStep(1)}>Need help?</a>
-              <button type="button" className="rf-btn">
+              <button
+                type="button"
+                className="rf-btn"
+                disabled={submitDisabled}
+                onClick={onValidate}
+              >
                 Validate
               </button>
             </nav>

@@ -1,0 +1,22 @@
+.wrapper {
+  font-size: 0.8rem;
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  li:not(:first-child) {
+    margin-left: 5px;
+  }
+  i {
+    font-size: 8px;
+    display: block;
+  }
+  a {
+    font-weight: 300;
+  }
+  svg {
+    display: flex;
+  }
+}
