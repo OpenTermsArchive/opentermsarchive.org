@@ -1,4 +1,7 @@
 .wrapper {
+  display: flex;
+  flex-direction: column;
+
   > nav,
   > div {
     padding: 20px;
@@ -15,9 +18,19 @@
     justify-content: space-between;
   }
 
-  h1 {
+  h2 {
     margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 25px;
+  }
+
+  h3 {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+
+  > div {
+    overflow-y: auto;
   }
 
   form {
@@ -30,4 +43,17 @@
 .selectionItem {
   display: flex;
   align-items: center;
+}
+
+.fullPage {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  h1 {
+    max-width: 50%;
+    margin: 0 auto;
+  }
 }

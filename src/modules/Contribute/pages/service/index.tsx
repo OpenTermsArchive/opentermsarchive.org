@@ -1,34 +1,39 @@
 import Drawer from 'components/Drawer';
-// import { GetContributeServiceResponse } from '../../interfaces';
-import { MdCancel as IconRemove } from 'react-icons/md';
+import { GetContributeServiceResponse } from '../../interfaces';
 import IframeSelector from 'components/IframeSelector';
-import Layout from 'modules/Embassy/components/Layout';
 import Link from 'next/link';
 import Loading from 'components/Loading';
 import React from 'react';
 import s from './service.module.scss';
-// import useSWR from 'swr';
+import useSWR from 'swr';
 import { useToggle } from 'react-use';
 import useUrl from 'hooks/useUrl';
 
-const TermPage = ({}: {}) => {
+const ServicePage = ({}: {}) => {
   const {
-    queryParams: { url, step: initialStep, selectedCss: initialSelectedCss },
+    queryParams: {
+      url,
+      step: initialStep,
+      selectedCss: initialSelectedCss,
+      removedCss: initialRemovedCss,
+    },
     pushQueryParam,
   } = useUrl();
 
   const [selectedCss, setSelectedCss] = React.useState<string[]>([]);
-  const [selectable, toggleSelectable] = useToggle(false);
+  const [removedCss, setRemovedCss] = React.useState<string[]>([]);
+  const [selectable, toggleSelectable] = React.useState('');
+  const [iframeReady, toggleIframeReady] = useToggle(false);
   const [step, setStep] = React.useState<number>(initialStep ? +initialStep : 1);
 
-  const data = { url: 'http://localhost:3000/contribute' };
-  // const { data } = useSWR<GetContributeServiceResponse>(`/api/contribute/services?url=${url}`, {
-  //   initialData: {
-  //     status: 'ko',
-  //     message: '',
-  //     url: '',
-  //   },
-  // });
+  // const data = { url: 'http://localhost:3000/contribute' };
+  const { data } = useSWR<GetContributeServiceResponse>(`/api/contribute/services?url=${url}`, {
+    initialData: {
+      status: 'ko',
+      message: '',
+      url: '',
+    },
+  });
 
   const passToStep = (newStep: number) => (e: any) => {
     e.preventDefault();
@@ -37,20 +42,32 @@ const TermPage = ({}: {}) => {
     setStep(newStep);
   };
 
+  const selectInIframe = (queryparam: 'selectedCss' | 'removedCss') => () => {
+    toggleSelectable(queryparam);
+  };
+
   const onSelect = React.useCallback(
     (cssPath: string) => {
-      if (!selectedCss.includes(cssPath)) {
-        pushQueryParam('selectedCss')([...selectedCss, cssPath]);
+      const cssRules = selectable === 'selectedCss' ? selectedCss : removedCss;
+
+      if (!cssRules.includes(cssPath)) {
+        pushQueryParam(selectable)([...cssRules, cssPath]);
       }
-      toggleSelectable(false);
+      toggleSelectable('');
     },
-    [selectedCss, pushQueryParam, toggleSelectable]
+    [removedCss, selectedCss, pushQueryParam, selectable, toggleSelectable]
   );
 
-  const onRemove = (index: number) => () => {
+  const onRemoveSelected = (index: number) => () => {
     const newSelectedCss = [...selectedCss];
     delete newSelectedCss[index];
     pushQueryParam('selectedCss')(newSelectedCss);
+  };
+
+  const onRemoveRemoved = (index: number) => () => {
+    const newRemovedCss = [...removedCss];
+    delete newRemovedCss[index];
+    pushQueryParam('removedCss')(newRemovedCss);
   };
 
   React.useEffect(() => {
@@ -66,40 +83,18 @@ const TermPage = ({}: {}) => {
     setSelectedCss(newSelectedCss);
   }, [initialSelectedCss, selectedCss]);
 
-  if (!data?.url) {
-    return (
-      <Layout title="Contributing to Open Terms Archive">
-        <div className="rf-container rf-mb-12w">
-          <div className="rf-grid-row">
-            <div className="rf-col">
-              <h1 className="text-center rf-mb-1w">
-                Contributing to Open Terms Archive
-                <sup>
-                  <span
-                    style={{
-                      background: 'var(--rm500)',
-                      color: 'white',
-                      fontWeight: 'bold',
-                    }}
-                    className="rf-tag rf-tag--sm"
-                  >
-                    BETA
-                  </span>
-                </sup>
-              </h1>
-              <p
-                className="rf-text--lg text-center rf-mb-7w"
-                style={{ maxWidth: '400px', marginLeft: 'auto', marginRight: 'auto' }}
-              >
-                We're loading the page
-              </p>
-              <Loading />
-            </div>
-          </div>
-        </div>
-      </Layout>
-    );
-  }
+  React.useEffect(() => {
+    const newRemovedCss = !initialRemovedCss
+      ? []
+      : Array.isArray(initialRemovedCss)
+      ? initialRemovedCss
+      : [initialRemovedCss];
+
+    if (newRemovedCss.length === removedCss.length) {
+      return;
+    }
+    setRemovedCss(newRemovedCss);
+  }, [initialRemovedCss, removedCss]);
 
   return (
     <div>
@@ -112,7 +107,7 @@ const TermPage = ({}: {}) => {
               </Link>
             </nav>
             <div>
-              <h1>What is expected of you</h1>
+              <h2>What is expected of you</h2>
               <p>
                 Most of the time, contractual documents contains a header, a footer, navigation
                 menus, possibly ads… We aim at tracking only{' '}
@@ -138,26 +133,50 @@ const TermPage = ({}: {}) => {
               </a>
             </nav>
             <div>
-              <h1>Step 2: selecting significant part of the document</h1>
+              <h2>Step 2: selecting significant part of the document</h2>
               <form>
-                {selectedCss.map((selected, i) => (
-                  <div key={selected} className={s.selectionItem}>
-                    <input defaultValue={selected} className="rf-input" />
-                    <button
-                      type="button"
-                      className="rf-btn rf-fi-delete-fill"
-                      onClick={onRemove(i)}
-                    ></button>
-                  </div>
-                ))}
-                <button
-                  type="button"
-                  className="rf-btn rf-btn--secondary"
-                  onClick={toggleSelectable}
-                  disabled={selectable}
-                >
-                  Add
-                </button>
+                <div>
+                  <h3>Significant part(s)</h3>
+                  {selectedCss.map((selected, i) => (
+                    <div key={selected} className={s.selectionItem}>
+                      <input defaultValue={selected} className="rf-input" />
+                      <button
+                        type="button"
+                        className="rf-btn rf-fi-delete-fill"
+                        onClick={onRemoveSelected(i)}
+                      ></button>
+                    </div>
+                  ))}
+                  <button
+                    type="button"
+                    className="rf-btn rf-btn--secondary"
+                    onClick={selectInIframe('selectedCss')}
+                    disabled={!!selectable || !iframeReady}
+                  >
+                    Add part
+                  </button>
+                </div>
+                <div>
+                  <h3>Insignificant part(s)</h3>
+                  {removedCss.map((selected, i) => (
+                    <div key={selected} className={s.selectionItem}>
+                      <input defaultValue={selected} className="rf-input" />
+                      <button
+                        type="button"
+                        className="rf-btn rf-fi-delete-fill"
+                        onClick={onRemoveRemoved(i)}
+                      ></button>
+                    </div>
+                  ))}
+                  <button
+                    type="button"
+                    className="rf-btn rf-btn--secondary"
+                    onClick={selectInIframe('removedCss')}
+                    disabled={!!selectable || !iframeReady}
+                  >
+                    Remove part
+                  </button>
+                </div>
               </form>
             </div>
             <nav>
@@ -169,14 +188,23 @@ const TermPage = ({}: {}) => {
           </>
         )}
       </Drawer>
-      <IframeSelector
-        selectable={selectable}
-        url={data.url}
-        selected={selectedCss}
-        onSelect={onSelect}
-      />
+      {data?.url ? (
+        <IframeSelector
+          selectable={!!selectable}
+          url={data.url}
+          selected={selectedCss}
+          removed={removedCss}
+          onSelect={onSelect}
+          onReady={toggleIframeReady}
+        />
+      ) : (
+        <div className={s.fullPage}>
+          <h1>We're preparing the website</h1>
+          <Loading />
+        </div>
+      )}
     </div>
   );
 };
 
-export default TermPage;
+export default ServicePage;

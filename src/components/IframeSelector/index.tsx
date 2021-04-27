@@ -8,6 +8,7 @@ interface IframeSelectorProps {
   removed?: string[];
   selectable: boolean;
   onSelect: (cssPath: string) => any;
+  onReady: () => any;
 }
 
 // const injectedScript = fs.readFileSync('./_iframeInjectedScript');
@@ -21,6 +22,7 @@ const IframeSelector = ({
   selected = [],
   removed = [],
   onSelect,
+  onReady,
 }: IframeSelectorProps) => {
   const iframeRef = React.useRef<HTMLIFrameElement>(null);
   const [iframeLoaded, toggleIframeLoaded] = useToggle(false);
@@ -42,9 +44,10 @@ const IframeSelector = ({
 
     // @ts-ignore
     iframeDocument.querySelector(`#${CUSTOM_STYLE_TAG_ID}`).innerHTML = `
-      ${selected ? `${selected.join(',')} {background: #169b62EE;}` : ''}
+      ${selected.length ? `${selected.join(',')} {background: #169b62EE;}` : ''}
+      ${removed.length ? `${removed.join(',')} {background: #e10600EE;}` : ''}
     `;
-  }, [selected]);
+  }, [selected, removed]);
 
   React.useEffect(() => {
     if (!initDone) {
@@ -62,7 +65,7 @@ const IframeSelector = ({
     }
 
     hightlightSelected();
-  }, [initDone, selected]);
+  }, [initDone, selected, removed]);
 
   React.useEffect(() => {
     if (!initDone) {
@@ -240,6 +243,7 @@ const IframeSelector = ({
 
     hightlightSelected();
     toggleInitDone(true);
+    onReady();
   }, [iframeLoaded]);
 
   return (
