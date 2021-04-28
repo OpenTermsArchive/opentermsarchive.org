@@ -60,16 +60,18 @@ const ServicePage = ({}: {}) => {
     [removedCss, selectedCss, pushQueryParam, selectable, toggleSelectable]
   );
 
-  const onRemoveSelected = (index: number) => () => {
-    const newSelectedCss = [...selectedCss];
-    delete newSelectedCss[index];
-    pushQueryParam('selectedCss')(newSelectedCss);
+  const onChangeCssRule = (queryparam: 'selectedCss' | 'removedCss', index: number) => (e: any) => {
+    const cssRules = queryparam === 'selectedCss' ? selectedCss : removedCss;
+    const newCss = [...cssRules];
+    newCss[index] = e.target?.value;
+    pushQueryParam(queryparam)(newCss);
   };
 
-  const onRemoveRemoved = (index: number) => () => {
-    const newRemovedCss = [...removedCss];
-    delete newRemovedCss[index];
-    pushQueryParam('removedCss')(newRemovedCss);
+  const onRemoveCssRule = (queryparam: 'selectedCss' | 'removedCss', index: number) => () => {
+    const cssRules = queryparam === 'selectedCss' ? selectedCss : removedCss;
+    const newCss = [...cssRules];
+    delete newCss[index];
+    pushQueryParam(queryparam)(newCss);
   };
 
   React.useEffect(() => {
@@ -147,11 +149,15 @@ const ServicePage = ({}: {}) => {
                   <h3>Significant part(s)</h3>
                   {selectedCss.map((selected, i) => (
                     <div key={selected} className={s.selectionItem}>
-                      <input defaultValue={selected} className="rf-input" />
+                      <input
+                        defaultValue={selected}
+                        className="rf-input"
+                        onChange={onChangeCssRule('selectedCss', i)}
+                      />
                       <button
                         type="button"
                         className="rf-btn rf-fi-delete-fill"
-                        onClick={onRemoveSelected(i)}
+                        onClick={onRemoveCssRule('selectedCss', i)}
                       ></button>
                     </div>
                   ))}
@@ -168,11 +174,15 @@ const ServicePage = ({}: {}) => {
                   <h3>Insignificant part(s)</h3>
                   {removedCss.map((selected, i) => (
                     <div key={selected} className={s.selectionItem}>
-                      <input defaultValue={selected} className="rf-input" />
+                      <input
+                        defaultValue={selected}
+                        className="rf-input"
+                        onChange={onChangeCssRule('removedCss', i)}
+                      />
                       <button
                         type="button"
                         className="rf-btn rf-fi-delete-fill"
-                        onClick={onRemoveRemoved(i)}
+                        onClick={onRemoveCssRule('removedCss', i)}
                       ></button>
                     </div>
                   ))}
