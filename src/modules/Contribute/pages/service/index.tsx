@@ -4,13 +4,14 @@ import IframeSelector from 'components/IframeSelector';
 import Link from 'next/link';
 import Loading from 'components/Loading';
 import React from 'react';
+import { getDocumentTypes } from 'modules/Github/api';
 import s from './service.module.scss';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useToggle } from 'react-use';
 import useUrl from 'hooks/useUrl';
 
-const ServicePage = ({}: {}) => {
+const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   const router = useRouter();
   const {
     queryParams: {
@@ -18,6 +19,7 @@ const ServicePage = ({}: {}) => {
       step: initialStep,
       selectedCss: initialSelectedCss,
       removedCss: initialRemovedCss,
+      documentType: initialDocumentType,
     },
     pushQueryParam,
   } = useUrl();
@@ -74,6 +76,10 @@ const ServicePage = ({}: {}) => {
     pushQueryParam(queryparam)(newCss);
   };
 
+  const onSelectChange = (event: any) => {
+    pushQueryParam('documentType')(event.target.value);
+  };
+
   React.useEffect(() => {
     const newSelectedCss = !initialSelectedCss
       ? []
@@ -104,7 +110,7 @@ const ServicePage = ({}: {}) => {
     router.push(router.asPath.replace('/contribute/service', '/contribute/verify'));
   };
 
-  const submitDisabled = !initialSelectedCss;
+  const submitDisabled = !initialSelectedCss || !iframeReady;
 
   return (
     <div className={s.wrapper}>
@@ -146,6 +152,20 @@ const ServicePage = ({}: {}) => {
               <h2>Step 2: selecting significant part of the document</h2>
               <form>
                 <div>
+                  <h3>Type of document</h3>
+                  <select
+                    className="rf-input"
+                    onChange={onSelectChange}
+                    defaultValue={initialDocumentType}
+                  >
+                    <option value="">Select...</option>
+                    {documentTypes.map((documentType) => (
+                      <option key={documentType} value={documentType}>
+                        {documentType}
+                      </option>
+                    ))}
+                  </select>
+
                   <h3>Significant part(s)</h3>
                   {selectedCss.map((selected, i) => (
                     <div key={selected} className={s.selectionItem}>
@@ -230,5 +250,9 @@ const ServicePage = ({}: {}) => {
     </div>
   );
 };
+
+export const getStaticProps = async () => ({
+  props: { documentTypes: await getDocumentTypes() },
+});
 
 export default ServicePage;

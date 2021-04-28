@@ -1,1 +1,1 @@
-export { default } from 'modules/Contribute/pages/service';
+export { default, getStaticProps } from 'modules/Contribute/pages/service';

@@ -1,19 +1,14 @@
 import VerifyForm, { VerifyFormValues } from '../components/VerifyForm';
 
 import Breadcrumb from 'components/BreadCrumb';
-// import { CreateHashtagResponse } from 'modules/Common/interfaces';
-// import LastHashtags from '../data-components/LastHashtags';
 import Layout from 'modules/Embassy/components/Layout';
 import React from 'react';
-import axios from 'axios';
+import { getDocumentTypes } from 'modules/Github/api';
 import s from './verify.module.scss';
 import { useRouter } from 'next/router';
 import { useToggle } from 'react-use';
-// import api from 'utils/api';
 import useUrl from 'hooks/useUrl';
 
-const DOCUMENT_TYPES_URL =
-  'https://raw.githubusercontent.com/ambanum/OpenTermsArchive/master/scripts/rewrite/renamer/rules/documentTypes.json';
 const EMAIL_SUPPORT = 'martinratinaud@gmail.com';
 
 interface Json {
@@ -146,12 +141,8 @@ Thank you very much`;
   );
 };
 
-export async function getStaticProps() {
-  const { data: documentTypes } = await axios.get(DOCUMENT_TYPES_URL);
-
-  return {
-    props: { documentTypes: [...new Set(Object.values(documentTypes))].sort() },
-  };
-}
+export const getStaticProps = async () => ({
+  props: { documentTypes: await getDocumentTypes() },
+});
 
 export default VerifyPage;
