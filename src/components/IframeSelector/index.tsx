@@ -49,16 +49,26 @@ const IframeSelector = ({
       return;
     }
 
+    const selectedCssSelectors = selected.join(',');
+    const selectedChildrenCssSelectors = selected.map((s) => `${s} *`).join(',');
+    const removedCssSelectors = removed.join(',');
+    const removedChildrenCssSelectors = removed.map((s) => `${s} *`).join(',');
+
     // @ts-ignore
     iframeDocument.querySelector(`#${CUSTOM_STYLE_TAG_ID}`).innerHTML = `
       ${
         selected.length
-          ? `${selected.join(',')} {box-shadow: 0 0 0 2px #169b62; background: #169b6244;}`
+          ? `
+          ${selectedCssSelectors} { background: #8acfb1!important; box-shadow: 0 0 0 2px #169b62!important; }
+          ${selectedChildrenCssSelectors} { background: #8acfb1!important; }
+          `
           : ''
       }
       ${
         removed.length
-          ? `${removed.join(',')} {box-shadow: 0 0 0 2px #e10600; background: #e1060044;}`
+          ? `
+          ${removedCssSelectors} { background: #e39694!important; box-shadow: 0 0 0 2px #e10600!important; }
+          ${removedChildrenCssSelectors} { background: #e39694!important; }`
           : ''
       }
     `;
