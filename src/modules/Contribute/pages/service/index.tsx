@@ -243,7 +243,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
       ) : (
         <div className={s.fullPage}>
           <h1>We're preparing the website</h1>
-          <p>It usually takes between 30s and 1 min</p>
+          <p>It usually takes between 5s and 30s</p>
           <Loading />
         </div>
       )}
