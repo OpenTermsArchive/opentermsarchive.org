@@ -11,6 +11,17 @@ import useSWR from 'swr';
 import { useToggle } from 'react-use';
 import useUrl from 'hooks/useUrl';
 
+interface Json {
+  name: string;
+  documents: {
+    [key: string]: {
+      fetch: string;
+      select: string[];
+      remove?: string[];
+    };
+  };
+}
+
 const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   const router = useRouter();
   const {
@@ -21,9 +32,21 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
       removedCss: initialRemovedCss,
       documentType: initialDocumentType,
       name: initialName,
+      expertMode,
     },
     pushQueryParam,
   } = useUrl();
+
+  const [json, setJson] = React.useState<Json>({
+    name: initialName || '???',
+    documents: {
+      [initialDocumentType || '???']: {
+        fetch: url,
+        select: initialSelectedCss,
+        remove: initialRemovedCss,
+      },
+    },
+  });
 
   const [selectable, toggleSelectable] = React.useState('');
   const [iframeReady, toggleIframeReady] = useToggle(false);
@@ -91,6 +114,10 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     pushQueryParam(fieldName)(event.target.value);
   };
 
+  const toggleExpertMode = () => {
+    pushQueryParam('expertMode')(!!expertMode ? '' : 'true');
+  };
+
   const onValidate = () => {
     router.push(router.asPath.replace('/contribute/service', '/contribute/verify'));
   };
@@ -129,9 +156,10 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
         {step === 2 && (
           <>
             <nav>
-              <a className={s.backButton} onClick={passToStep(1)}>
-                Go back
-              </a>
+              <Link href="/disinfo/contribute">
+                <a className={s.backButton}>Go back</a>
+              </Link>
+              <a onClick={passToStep(1)}>Need help?</a>
             </nav>
             <div>
               <form>
@@ -207,10 +235,23 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
                     Remove part
                   </button>
                 </div>
+                {expertMode && (
+                  <textarea
+                    style={{
+                      width: '800px',
+                      maxWidth: '100%',
+                      height: '300px',
+                      overflow: 'auto',
+                      padding: '10px',
+                    }}
+                  >
+                    {JSON.stringify(json, null, 2)}
+                  </textarea>
+                )}
               </form>
             </div>
             <nav>
-              <a onClick={passToStep(1)}>Need help?</a>
+              <a onClick={toggleExpertMode}>Expert Mode</a>
               <button
                 type="button"
                 className="rf-btn"
