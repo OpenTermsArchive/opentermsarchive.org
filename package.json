@@ -30,7 +30,7 @@
     "express": "^4.17.1",
     "fs-extra": "^9.1.0",
     "http-status-codes": "^2.1.4",
-    "next": "^10.0.7",
+    "next": "^10.2.0",
     "next-auth": "^3.14.6",
     "nprogress": "^0.2.0",
     "puppeteer": "^8.0.0",
