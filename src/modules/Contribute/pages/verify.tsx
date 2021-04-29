@@ -9,7 +9,10 @@ import { useRouter } from 'next/router';
 import { useToggle } from 'react-use';
 import useUrl from 'hooks/useUrl';
 
-const EMAIL_SUPPORT = 'martinratinaud@gmail.com';
+const EMAIL_SUPPORT = 'contribute@disinfo.beta.gouv.fr';
+const BASE_URL = `${typeof window !== 'undefined' ? window.location.origin : ''}${
+  process.env.NEXT_PUBLIC_BASE_PATH || ''
+}`;
 
 interface Json {
   name: string;
@@ -58,7 +61,7 @@ const VerifyPage = ({ documentTypes }: { documentTypes: any }) => {
 
 I need you to track "${documentType}" of "${name}" for me.
 
-Here is the url ${window.location.origin}${newUrl}
+Here is the url ${BASE_URL}${newUrl.replace('/contribute/verify', '/contribute/service')}
 
 Thank you very much`;
 
