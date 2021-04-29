@@ -20,6 +20,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
       selectedCss: initialSelectedCss,
       removedCss: initialRemovedCss,
       documentType: initialDocumentType,
+      name: initialName,
     },
     pushQueryParam,
   } = useUrl();
@@ -76,8 +77,8 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     pushQueryParam(queryparam)(newCss);
   };
 
-  const onSelectChange = (event: any) => {
-    pushQueryParam('documentType')(event.target.value);
+  const onInputChange = (fieldName: string) => (event: any) => {
+    pushQueryParam(fieldName)(event.target.value);
   };
 
   React.useEffect(() => {
@@ -149,13 +150,13 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
               </a>
             </nav>
             <div>
-              <h2>Step 2: selecting significant part of the document</h2>
               <form>
                 <div>
+                  <h2>Step 2: defining this document</h2>
                   <h3>Type of document</h3>
                   <select
                     className="rf-input"
-                    onChange={onSelectChange}
+                    onChange={onInputChange('documentType')}
                     defaultValue={initialDocumentType}
                   >
                     <option value="">Select...</option>
@@ -165,7 +166,14 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
                       </option>
                     ))}
                   </select>
+                  <h3>Name of service</h3>
+                  <input
+                    defaultValue={initialName}
+                    className="rf-input"
+                    onChange={onInputChange('name')}
+                  />
 
+                  <h2>Step 3: selecting significant part of the document</h2>
                   <h3>Significant part(s)</h3>
                   {selectedCss.map((selected, i) => (
                     <div key={selected} className={s.selectionItem}>
