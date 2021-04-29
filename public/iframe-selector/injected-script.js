@@ -53,40 +53,14 @@ function disablePicker() {
   body.removeEventListener('mouseleave', onMouseLeave);
 }
 
-function getCssPath(originalEl) {
-  // Build a CSS path for the clicked element
-  var el = originalEl;
-  if (el instanceof Node) {
-    // Build the list of elements along the path
-    var elList = [];
-    do {
-      if (el instanceof Element) {
-        // var classString = el.classList ? [].slice.call(el.classList).join('.') : '';
-        var classString = '';
-        var elementName = el.id
-          ? '#' + el.id
-          : (el.tagName ? el.tagName.toLowerCase() : '') + (classString ? '.' + classString : '');
-        if (elementName && el.tagName !== 'HTML') elList.unshift(elementName);
-      }
-      el = el.parentNode;
-    } while (el != null);
-    // Get the stringified element object name
-    var objString = originalEl.toString().match(/\[object (\w+)\]/);
-    var elementType = objString ? objString[1] : originalEl.toString();
-    var cssString = elList.join(' > ');
-
-    // Return the CSS path as a string, prefixed with the element object name
-    return cssString ? cssString : elementType;
-  }
-}
-
 function highlightElement(element) {
   if (currentlyHighlightedItem === element) return;
 
   let rect = element.getBoundingClientRect();
+  const offset = window.pageYOffset || document.documentElement.scrollTop;
 
   highlight.style.left = rect.x + 'px';
-  highlight.style.top = rect.y + 'px';
+  highlight.style.top = offset + rect.y + 'px';
   highlight.style.width = rect.width + 'px';
   highlight.style.height = rect.height + 'px';
   body.appendChild(highlight);

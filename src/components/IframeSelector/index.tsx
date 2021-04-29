@@ -136,7 +136,7 @@ const IframeSelector = ({
         ref={iframeRef}
         src={url}
         width="100%"
-        style={{ height: '10000px', opacity: initDone ? 1 : 0.4 }}
+        style={{ height: '100vh', opacity: initDone ? 1 : 0.4 }}
         onLoad={toggleIframeLoaded}
       />
     </div>
