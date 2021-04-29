@@ -15,7 +15,9 @@ const get = (url: string) => async (
 
   const folderPath = path.join(process.env.TMP_SCRAPED_SERVICES_FOLDER || '', folderName);
 
-  const newUrl = `${process.env.TMP_SCRAPED_SERVICES_URL || ''}/${folderName}/index.html`;
+  const newUrl = `${process.env.NEXT_PUBLIC_BASE_PATH}${
+    process.env.TMP_SCRAPED_SERVICES_URL || ''
+  }/${folderName}/index.html`;
 
   if (fs.existsSync(folderPath)) {
     console.log(`Folder ${folderPath} exists`);
