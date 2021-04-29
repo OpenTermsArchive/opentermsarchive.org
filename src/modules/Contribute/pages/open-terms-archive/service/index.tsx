@@ -103,7 +103,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
         {step === 1 && (
           <>
             <nav>
-              <Link href="/contribute">
+              <Link href="/open-terms-archive/contribute">
                 <a className={s.backButton}>Go back</a>
               </Link>
             </nav>
