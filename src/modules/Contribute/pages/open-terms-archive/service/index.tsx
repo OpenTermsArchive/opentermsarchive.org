@@ -1,5 +1,5 @@
 import Drawer from 'components/Drawer';
-import { GetContributeServiceResponse } from '../../interfaces';
+import { GetContributeServiceResponse } from '../../../interfaces';
 import IframeSelector from 'components/IframeSelector';
 import Link from 'next/link';
 import Loading from 'components/Loading';

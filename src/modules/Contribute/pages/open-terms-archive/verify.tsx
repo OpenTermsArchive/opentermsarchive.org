@@ -1,4 +1,4 @@
-import VerifyForm, { VerifyFormValues } from '../components/VerifyForm';
+import VerifyForm, { VerifyFormValues } from '../../components/VerifyForm';
 
 import Breadcrumb from 'components/BreadCrumb';
 import Layout from 'modules/Embassy/components/Layout';
@@ -48,6 +48,7 @@ const VerifyPage = ({ documentTypes }: { documentTypes: any }) => {
       },
     },
   });
+
   const onSubmit = ({ name, documentType, email, ...rest }: VerifyFormValues) => {
     const newUrl = pushQueryParams({ name, documentType });
     setJson({
@@ -70,7 +71,7 @@ Thank you very much`;
       '_blank'
     );
 
-    router.push('/contribute/thanks');
+    router.push('/open-terms-archive/contribute/thanks');
   };
 
   const defaultValues: VerifyFormValues = {
@@ -106,7 +107,7 @@ Thank you very much`;
               className={s.breadcrumb}
               items={[
                 { name: 'Open Terms Archive', url: 'https://www.opentermsarchive.org' },
-                { name: 'Add a document', url: '/contribute' },
+                { name: 'Add a document', url: '/open-terms-archive/contribute' },
                 { name: 'Verify informations' },
               ]}
             />

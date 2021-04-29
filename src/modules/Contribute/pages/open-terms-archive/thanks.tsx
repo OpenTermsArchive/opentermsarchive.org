@@ -29,7 +29,7 @@ const ThanksPage = () => {
               className={s.breadcrumb}
               items={[
                 { name: 'Open Terms Archive', url: 'https://www.opentermsarchive.org' },
-                { name: 'Add a document', url: '/contribute' },
+                { name: 'Add a document', url: '/open-terms-archive/contribute' },
                 { name: 'Thanks' },
               ]}
             />
@@ -39,7 +39,7 @@ const ThanksPage = () => {
               know as soon as the service is integrated in the system
             </p>
 
-            <Link href="/contribute">
+            <Link href="/open-terms-archive/contribute">
               <a className="rf-btn">Add another document</a>
             </Link>
           </div>
