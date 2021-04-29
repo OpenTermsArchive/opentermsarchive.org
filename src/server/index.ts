@@ -21,9 +21,10 @@ if (!process.env.TMP_SCRAPED_SERVICES_FOLDER || !process.env.TMP_SCRAPED_SERVICE
     const server = express();
 
     server.use(
-      process.env.TMP_SCRAPED_SERVICES_URL || '',
+      `${process.env.NEXT_PUBLIC_BASE_PATH}${process.env.TMP_SCRAPED_SERVICES_URL || ''}`,
       express.static(process.env.TMP_SCRAPED_SERVICES_FOLDER || '')
     );
+
     server.all('*', (req: Request, res: Response) => {
       return handle(req, res);
     });

@@ -1,0 +1,22 @@
+.breadcrumb {
+  margin: 20px 0;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+  h1 {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  h2 {
+    margin: 50px;
+  }
+
+  > a {
+    margin: 50px;
+  }
+}

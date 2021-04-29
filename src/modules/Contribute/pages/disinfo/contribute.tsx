@@ -10,7 +10,7 @@ const ContributePage = () => {
   const router = useRouter();
   const onSubmit: SearchProps['onSearchSubmit'] = async (url) => {
     try {
-      router.push(`/contribute/service?url=${encodeURIComponent(url)}`);
+      router.push(`/disinfo/contribute/service?url=${encodeURIComponent(url)}`);
     } catch (e) {
       console.log(''); // eslint-disable-line
       console.log('╔════START══e══════════════════════════════════════════════════'); // eslint-disable-line
@@ -43,7 +43,7 @@ const ContributePage = () => {
               className="rf-text--lg text-center rf-mb-7w"
               style={{ maxWidth: '400px', marginLeft: 'auto', marginRight: 'auto' }}
             >
-              Thanks
+              Thanks for helping
             </p>
             <Search
               className="rf-mx-md-12w"
