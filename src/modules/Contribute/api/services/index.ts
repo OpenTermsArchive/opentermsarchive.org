@@ -15,13 +15,15 @@ const get = (url: string) => async (
 
   const folderPath = path.join(process.env.TMP_SCRAPED_SERVICES_FOLDER || '', folderName);
 
+  const newUrl = `${process.env.TMP_SCRAPED_SERVICES_URL || ''}/${folderName}/index.html`;
+
   if (fs.existsSync(folderPath)) {
     console.log(`Folder ${folderPath} exists`);
     res.statusCode = HttpStatusCode.OK;
     res.json({
       status: 'ok',
       message: 'OK',
-      url: `${process.env.TMP_SCRAPED_SERVICES_URL || ''}/${folderName}/index.html`,
+      url: newUrl,
     });
     return res;
   }
@@ -36,7 +38,7 @@ const get = (url: string) => async (
     res.json({
       status: 'ok',
       message: 'OK',
-      url: `${process.env.TMP_SCRAPED_SERVICES_URL || ''}/${folderName}/index.html`,
+      url: newUrl,
     });
     return res;
   } catch (e) {
