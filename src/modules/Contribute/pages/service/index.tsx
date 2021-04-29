@@ -25,11 +25,21 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     pushQueryParam,
   } = useUrl();
 
-  const [selectedCss, setSelectedCss] = React.useState<string[]>([]);
-  const [removedCss, setRemovedCss] = React.useState<string[]>([]);
   const [selectable, toggleSelectable] = React.useState('');
   const [iframeReady, toggleIframeReady] = useToggle(false);
   const [step, setStep] = React.useState<number>(initialStep ? +initialStep : 1);
+
+  const selectedCss = !initialSelectedCss
+    ? []
+    : Array.isArray(initialSelectedCss)
+    ? initialSelectedCss
+    : [initialSelectedCss];
+
+  const removedCss = !initialRemovedCss
+    ? []
+    : Array.isArray(initialRemovedCss)
+    ? initialRemovedCss
+    : [initialRemovedCss];
 
   // const data = { url: 'http://localhost:3000/contribute' };
   const { data } = useSWR<GetContributeServiceResponse>(`/api/contribute/services?url=${url}`, {
@@ -80,32 +90,6 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   const onInputChange = (fieldName: string) => (event: any) => {
     pushQueryParam(fieldName)(event.target.value);
   };
-
-  React.useEffect(() => {
-    const newSelectedCss = !initialSelectedCss
-      ? []
-      : Array.isArray(initialSelectedCss)
-      ? initialSelectedCss
-      : [initialSelectedCss];
-
-    if (newSelectedCss.length === selectedCss.length) {
-      return;
-    }
-    setSelectedCss(newSelectedCss);
-  }, [initialSelectedCss, selectedCss]);
-
-  React.useEffect(() => {
-    const newRemovedCss = !initialRemovedCss
-      ? []
-      : Array.isArray(initialRemovedCss)
-      ? initialRemovedCss
-      : [initialRemovedCss];
-
-    if (newRemovedCss.length === removedCss.length) {
-      return;
-    }
-    setRemovedCss(newRemovedCss);
-  }, [initialRemovedCss, removedCss]);
 
   const onValidate = () => {
     router.push(router.asPath.replace('/contribute/service', '/contribute/verify'));
