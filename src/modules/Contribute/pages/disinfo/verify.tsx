@@ -71,7 +71,7 @@ Thank you very much`;
       '_blank'
     );
 
-    router.push('/open-terms-archive/contribute/thanks');
+    router.push('/disinfo/contribute/thanks');
   };
 
   const defaultValues: VerifyFormValues = {
@@ -107,7 +107,7 @@ Thank you very much`;
               className={s.breadcrumb}
               items={[
                 { name: 'Open Terms Archive', url: 'https://www.opentermsarchive.org' },
-                { name: 'Add a document', url: '/open-terms-archive/contribute' },
+                { name: 'Add a document', url: '/disinfo/contribute' },
                 { name: 'Verify informations' },
               ]}
             />

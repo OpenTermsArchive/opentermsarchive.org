@@ -10,7 +10,7 @@ const ContributePage = () => {
   const router = useRouter();
   const onSubmit: SearchProps['onSearchSubmit'] = async (url) => {
     try {
-      router.push(`/open-terms-archive/contribute/service?url=${encodeURIComponent(url)}`);
+      router.push(`/disinfo/contribute/service?url=${encodeURIComponent(url)}`);
     } catch (e) {
       console.log(''); // eslint-disable-line
       console.log('╔════START══e══════════════════════════════════════════════════'); // eslint-disable-line

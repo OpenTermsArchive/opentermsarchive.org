@@ -14,7 +14,7 @@ const HomePage = () => {
             >
               Homepage
             </p>
-            <Link href={'/contribute'}>
+            <Link href={'/disinfo/contribute'}>
               <a className="rf-btn">Contribute</a>
             </Link>
           </div>
