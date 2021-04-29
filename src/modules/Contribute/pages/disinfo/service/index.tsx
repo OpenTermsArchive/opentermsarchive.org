@@ -11,16 +11,7 @@ import useSWR from 'swr';
 import { useToggle } from 'react-use';
 import useUrl from 'hooks/useUrl';
 
-interface Json {
-  name: string;
-  documents: {
-    [key: string]: {
-      fetch: string;
-      select: string[];
-      remove?: string[];
-    };
-  };
-}
+const EMAIL_SUPPORT = 'contribute@disinfo.beta.gouv.fr';
 
 const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   const router = useRouter();
@@ -37,7 +28,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     pushQueryParam,
   } = useUrl();
 
-  const [json, setJson] = React.useState<Json>({
+  const json = {
     name: initialName || '???',
     documents: {
       [initialDocumentType || '???']: {
@@ -46,7 +37,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
         remove: initialRemovedCss,
       },
     },
-  });
+  };
 
   const [selectable, toggleSelectable] = React.useState('');
   const [iframeReady, toggleIframeReady] = useToggle(false);
@@ -119,7 +110,21 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   };
 
   const onValidate = () => {
-    router.push(router.asPath.replace('/contribute/service', '/contribute/verify'));
+    const subject = 'Here is a new service to track in Open Terms Archive';
+    const body = `Hi,
+
+I need you to track "${initialDocumentType}" of "${initialName}" for me.
+
+Here is the url ${window.location.href}&expertMode=true
+
+Thank you very much`;
+
+    window.open(
+      `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
+      '_blank'
+    );
+
+    router.push('/disinfo/contribute/thanks');
   };
 
   const submitDisabled = !initialSelectedCss || !iframeReady;
@@ -275,7 +280,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
         />
       ) : (
         <div className={s.fullPage}>
-          <h1>We're preparing the website</h1>
+          <h1>We're preparing the website --{data?.url}--</h1>
           <p>It usually takes between 5s and 30s</p>
           <Loading />
         </div>

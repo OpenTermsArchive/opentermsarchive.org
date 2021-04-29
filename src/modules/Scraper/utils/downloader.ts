@@ -26,7 +26,6 @@ export const downloadUrl = async (url: string, { folderPath }: { folderPath: str
     }
   });
 
-  await page.screenshot({ path: `${folderPath}/example.png` });
   const html = await page.content();
   fse.writeFileSync(`${folderPath}/index.html`, html.replace(/<script.*?>.*?<\/script>/gim, ''));
 
