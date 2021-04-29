@@ -280,7 +280,7 @@ Thank you very much`;
         />
       ) : (
         <div className={s.fullPage}>
-          <h1>We're preparing the website --{data?.url}--</h1>
+          <h1>We're preparing the website</h1>
           <p>It usually takes between 5s and 30s</p>
           <Loading />
         </div>
