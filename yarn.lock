@@ -929,6 +929,11 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@socialgouv/matomo-next@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@socialgouv/matomo-next/-/matomo-next-1.2.1.tgz#2adf7fdf0fc2275216122505c3ca62643df1466e"
+  integrity sha512-ImnL6V5ICxxHOVqKillcq8KsiuXtQwtbDiHGKjDjE/Bygbe1wgaefA2xCNFOPmjLDPs9QgssVTfxtnr2MSn68w==
+
 "@sqltools/formatter@^1.2.2":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@sqltools/formatter/-/formatter-1.2.3.tgz#1185726610acc37317ddab11c3c7f9066966bd20"
