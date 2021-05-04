@@ -62,6 +62,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
       message: '',
       url: '',
     },
+    revalidateOnMount: true,
   });
 
   const passToStep = (newStep: number) => (e: any) => {
