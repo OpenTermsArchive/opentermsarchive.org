@@ -7,6 +7,7 @@
     "build": "next build && tsc --project tsconfig.server.json",
     "start": "NODE_ENV=production node dist/index.js",
     "type-check": "tsc",
+    "update-cookie-extension": "src/modules/Scraper/i-dont-care-about-cookies/tools/copy-to-folder.sh",
     "precommit": "echo \"No need for precommit yet\"",
     "precommit2": "(git diff --diff-filter=AM --name-only --staged | grep ops/roles/ota/github-clone/vars/ | xargs grep -rL \"ANSIBLE\") && echo \"some vault files are not encrypted\" && exit",
     "encrypt": "grep -rL \"ANSIBLE\" ./ops/roles/ota/github-clone/vars/* | xargs ansible-vault encrypt",
