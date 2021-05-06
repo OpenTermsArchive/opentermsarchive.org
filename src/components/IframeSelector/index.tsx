@@ -49,15 +49,15 @@ const IframeSelector = ({
       return;
     }
 
-    const selectedCssSelectors = selected.join(',');
+    const selectedCssSelectors = selected.filter((m) => !!m).join(',');
     const selectedChildrenCssSelectors = selected.map((s) => `${s} *`).join(',');
-    const removedCssSelectors = removed.join(',');
+    const removedCssSelectors = removed.filter((m) => !!m).join(',');
     const removedChildrenCssSelectors = removed.map((s) => `${s} *`).join(',');
 
     // @ts-ignore
     iframeDocument.querySelector(`#${CUSTOM_STYLE_TAG_ID}`).innerHTML = `
       ${
-        selected.length
+        selectedCssSelectors
           ? `
           ${selectedCssSelectors} { background: #8acfb1!important; box-shadow: 0 0 0 2px #169b62!important; }
           ${selectedChildrenCssSelectors} { background: #8acfb1!important; }
@@ -65,7 +65,7 @@ const IframeSelector = ({
           : ''
       }
       ${
-        removed.length
+        removedCssSelectors
           ? `
           ${removedCssSelectors} { background: #e39694!important; box-shadow: 0 0 0 2px #e10600!important; }
           ${removedChildrenCssSelectors} { background: #e39694!important; }`
