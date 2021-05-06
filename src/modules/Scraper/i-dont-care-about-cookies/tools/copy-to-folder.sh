@@ -21,6 +21,10 @@ EXTENSION_VERSION=$(ls "$CHROME_EXTENSIONS_FOLDER")
 rm -Rf $EXTENSION_FOLDER/*
 echo "folder $EXTENSION_FOLDER emptied"
 
+# Copy all data
+# cp -Rf "$CHROME_EXTENSIONS_FOLDER/"*/* $EXTENSION_FOLDER
+
+# Copy necesary data
 cp -Rf "$CHROME_EXTENSIONS_FOLDER/"*/data $EXTENSION_FOLDER/data
 
 # remove unused

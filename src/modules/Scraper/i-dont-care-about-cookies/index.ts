@@ -12,7 +12,7 @@ import puppeteer from 'puppeteer';
 const cached_rules: any = {};
 
 // Load files from chrome extension
-const extensionPath = path.join(
+export const extensionPath = path.join(
   path.resolve(),
   'src/modules/Scraper/i-dont-care-about-cookies/extension'
 );
@@ -81,6 +81,18 @@ export const interceptCookieUrls = (url: string, host_levels: string[]) => {
   return false;
 };
 
+export const getHostname = (url: string, cleanup?: boolean) => {
+  try {
+    if (url.indexOf('http') != 0) throw true;
+
+    var a = new URL(url);
+
+    return typeof cleanup == 'undefined' ? a.hostname : a.hostname.replace(/^w{2,3}\d*\./i, '');
+  } catch (error) {
+    return '';
+  }
+};
+
 export const getHostlevels = (hostname: string = '') => {
   const subparts = hostname.split(/\.(?![^.]*$)/gim);
   if (subparts.length <= 1) {
@@ -130,4 +142,7 @@ export const removeCookieBanners = async (page: puppeteer.Page, hostname: string
   if (!status) {
     await page.addScriptTag({ content: commonFile });
   }
+
+  // To give the time to the popup to actually close. 1s seemed too short
+  await new Promise((resolve) => setTimeout(resolve, 1.5 * 1000));
 };
