@@ -93,9 +93,14 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   );
 
   const onChangeCssRule = (queryparam: 'selectedCss' | 'removedCss', index: number) => (e: any) => {
+    const value = e.target?.value;
+    if (!value) {
+      onRemoveCssRule(queryparam, index)();
+      return;
+    }
     const cssRules = queryparam === 'selectedCss' ? selectedCss : removedCss;
     const newCss = [...cssRules];
-    newCss[index] = e.target?.value;
+    newCss[index] = value;
     pushQueryParam(queryparam)(newCss);
   };
 
