@@ -6,6 +6,7 @@ import Loading from 'components/Loading';
 import React from 'react';
 import { getDocumentTypes } from 'modules/Github/api';
 import s from './service.module.scss';
+import { useEvent } from 'react-use';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useToggle } from 'react-use';
@@ -15,6 +16,9 @@ const EMAIL_SUPPORT = 'contribute@disinfo.beta.gouv.fr';
 
 const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   const router = useRouter();
+  useEvent('touchstart', () => {
+    router.push('/disinfo/contribute/sorry');
+  });
   const {
     queryParams: {
       url,
@@ -89,9 +93,14 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   );
 
   const onChangeCssRule = (queryparam: 'selectedCss' | 'removedCss', index: number) => (e: any) => {
+    const value = e.target?.value;
+    if (!value) {
+      onRemoveCssRule(queryparam, index)();
+      return;
+    }
     const cssRules = queryparam === 'selectedCss' ? selectedCss : removedCss;
     const newCss = [...cssRules];
-    newCss[index] = e.target?.value;
+    newCss[index] = value;
     pushQueryParam(queryparam)(newCss);
   };
 

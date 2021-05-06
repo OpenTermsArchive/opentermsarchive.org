@@ -1,10 +1,10 @@
 import {
   getHostlevels,
+  getHostname,
   interceptCookieUrls,
   removeCookieBanners,
 } from '../i-dont-care-about-cookies';
 
-import { URL } from 'url';
 import debug from 'debug';
 import fse from 'fs-extra';
 import puppeteer from 'puppeteer';
@@ -17,13 +17,18 @@ export const downloadUrl = async (url: string, { folderPath }: { folderPath: str
   const browser = await puppeteer.launch({
     executablePath: process.env.CHROME_BIN,
     headless: true,
-    ignoreDefaultArgs: ['--disable-extensions', '--enable-automation'],
-    args: ['--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage'],
+    // ignoreDefaultArgs: ['--disable-extensions', '--enable-automation'],
+    args: [
+      '--no-sandbox',
+      '--disable-gpu',
+      '--disable-dev-shm-usage',
+      // `--load-extension=${extensionPath}`,
+    ],
   });
   const page = await browser.newPage();
   page.on('console', (consoleObj: any) => logDebug('>> in page', consoleObj.text()));
 
-  const { hostname } = new URL(url);
+  const hostname = getHostname(url, true);
   const hostLevels = getHostlevels(hostname);
 
   // Intercept not wanted requests
