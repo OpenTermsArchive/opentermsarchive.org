@@ -19,7 +19,7 @@ if (!process.env.TMP_SCRAPED_SERVICES_FOLDER || !process.env.TMP_SCRAPED_SERVICE
     try {
         await app.prepare();
         const server = express_1.default();
-        server.use(process.env.TMP_SCRAPED_SERVICES_URL || '', express_1.default.static(process.env.TMP_SCRAPED_SERVICES_FOLDER || ''));
+        server.use(`${process.env.NEXT_PUBLIC_BASE_PATH}${process.env.TMP_SCRAPED_SERVICES_URL || ''}`, express_1.default.static(process.env.TMP_SCRAPED_SERVICES_FOLDER || ''));
         server.all('*', (req, res) => {
             return handle(req, res);
         });

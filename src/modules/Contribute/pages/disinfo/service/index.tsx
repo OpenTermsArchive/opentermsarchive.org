@@ -65,6 +65,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
       status: 'ko',
       message: '',
       url: '',
+      error: '',
     },
     revalidateOnMount: true,
   });
@@ -124,6 +125,28 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     const body = `Hi,
 
 I need you to track "${initialDocumentType}" of "${initialName}" for me.
+
+Here is the url ${window.location.href}&expertMode=true
+
+Thank you very much`;
+
+    window.open(
+      `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
+      '_blank'
+    );
+
+    router.push('/disinfo/contribute/thanks');
+  };
+
+  const onErrorClick = () => {
+    const subject = 'I tried to add this service but it did not work';
+    const body = `Hi,
+
+I need you to track "${initialDocumentType}" of "${initialName}" for me but I add a failure with.
+
+-----
+${data?.error}
+-----
 
 Here is the url ${window.location.href}&expertMode=true
 
@@ -279,21 +302,34 @@ Thank you very much`;
           </>
         )}
       </Drawer>
-      {data?.url ? (
-        <IframeSelector
-          selectable={!!selectable}
-          url={data.url}
-          selected={selectedCss}
-          removed={removedCss}
-          onSelect={onSelect}
-          onReady={toggleIframeReady}
-        />
-      ) : (
+      {data?.error && (
         <div className={s.fullPage}>
-          <h1>We're preparing the website</h1>
-          <p>It usually takes between 5s and 30s</p>
-          <Loading />
+          <h1>We're sorry, an error occured</h1>
+          <p>{data?.error}</p>
+          <button type="button" className="rf-btn" onClick={onErrorClick}>
+            Let us know
+          </button>
         </div>
+      )}
+      {!data?.error && (
+        <>
+          {data?.url ? (
+            <IframeSelector
+              selectable={!!selectable}
+              url={data.url}
+              selected={selectedCss}
+              removed={removedCss}
+              onSelect={onSelect}
+              onReady={toggleIframeReady}
+            />
+          ) : (
+            <div className={s.fullPage}>
+              <h1>We're preparing the website</h1>
+              <p>It usually takes between 5s and 30s</p>
+              <Loading />
+            </div>
+          )}
+        </>
       )}
     </div>
   );

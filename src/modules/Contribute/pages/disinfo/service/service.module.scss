@@ -72,6 +72,13 @@
   width: 100vw;
   h1 {
     max-width: 50%;
-    margin: 0 auto;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  > * {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

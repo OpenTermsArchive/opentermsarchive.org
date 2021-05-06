@@ -45,13 +45,19 @@ export const downloadUrl = async (url: string, { folderPath }: { folderPath: str
     }
   });
 
-  await page.goto(url, { waitUntil: 'networkidle0' });
+  try {
+    await page.goto(url, { waitUntil: 'networkidle0' });
 
-  await removeCookieBanners(page, hostname);
+    await removeCookieBanners(page, hostname);
 
-  const html = await page.content();
-  fse.writeFileSync(`${folderPath}/index.html`, html.replace(/<script.*?>.*?<\/script>/gim, ''));
-
-  browser.close();
-  return folderPath;
+    const html = await page.content();
+    fse.writeFileSync(`${folderPath}/index.html`, html.replace(/<script.*?>.*?<\/script>/gim, ''));
+    browser.close();
+    return { status: 'ok' };
+  } catch (e) {
+    console.error(e);
+    fse.removeSync(folderPath);
+    browser.close();
+    return { status: 'ko', error: e.toString() };
+  }
 };
