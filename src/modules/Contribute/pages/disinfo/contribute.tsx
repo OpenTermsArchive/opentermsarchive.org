@@ -1,13 +1,16 @@
 import Search, { SearchProps } from 'components/Search';
 
-// import { CreateHashtagResponse } from 'modules/Common/interfaces';
-// import LastHashtags from '../data-components/LastHashtags';
 import Layout from 'modules/Embassy/components/Layout';
-// import api from 'utils/api';
+import { useEvent } from 'react-use';
 import { useRouter } from 'next/router';
 
 const ContributePage = () => {
   const router = useRouter();
+
+  useEvent('touchstart', () => {
+    router.push('/disinfo/contribute/sorry');
+  });
+
   const onSubmit: SearchProps['onSearchSubmit'] = async (url) => {
     try {
       router.push(`/disinfo/contribute/service?url=${encodeURIComponent(url)}`);
