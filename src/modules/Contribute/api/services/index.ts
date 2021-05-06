@@ -34,8 +34,20 @@ const get = (url: string) => async (
     console.log(`Folder ${folderPath} does not exist`);
     console.log(`downloading ${url}`);
     console.time('downloading');
-    await downloadUrl(url, { folderPath });
+    const { error } = await downloadUrl(url, { folderPath });
     console.timeEnd('downloading');
+
+    if (error) {
+      res.statusCode = HttpStatusCode.OK;
+      res.json({
+        status: 'ko',
+        message: 'Could not download url',
+        url: '',
+        error,
+      });
+      return res;
+    }
+
     res.statusCode = HttpStatusCode.OK;
     res.json({
       status: 'ok',
