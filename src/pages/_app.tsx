@@ -1,10 +1,13 @@
 import 'modules/Wdyr';
-// FIXME All global css must be loaded from _app
-// This means that all scss files using animations must be loaded here
-// This is bad as it breaks the modularity of components
-// Go Fix it
-import 'modules/Design/styles/vendor/minireset.css';
-import 'modules/Design/styles/base.css';
+
+//Import global css reset
+import 'modules/Common/styles/vendor/minireset.css';
+
+//Import global css styles
+import 'modules/Common/styles/config.css';
+import 'modules/Common/styles/base.css';
+import 'modules/Common/styles/loader.css';
+
 // NProgress
 import 'nprogress/nprogress.css'; //styles of nprogress//Binding events.
 import 'modules/NProgress/nprogress.theme.scss';

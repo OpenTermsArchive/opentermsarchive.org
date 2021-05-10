@@ -1,7 +1,7 @@
 import React from 'react';
 
-const SubscribeForm = () => {
-  return <>SubscribeForm here</>;
+const Header = () => {
+  return <>Header here</>;
 };
 
-export default SubscribeForm;
+export default Header;
