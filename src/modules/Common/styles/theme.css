@@ -15,6 +15,7 @@
 
   /* Colors */
   --colorPrimary: #0496ff;
+  --colorSecondary: #0B08A0;
   --colorError: #ec368d;
   --colorSuccess: #11ebc3;
   --colorBlack900: #010613;
@@ -23,6 +24,23 @@
   --colorBlack400: #999999;
   --colorBlack200: #f5f5f5;
   --colorWhite: #fefffd;
+
+  /* Padding & margin */
+  --p2XS: 4px;
+  --pXS: 8px;
+  --pS: 12px;
+  --pM: 24px;
+  --pL: 36px;
+  --pXL: 48px;
+  --p2XL: 64px;
+
+  --m2XS: 4px;
+  --mXS: 8px;
+  --mS: 12px;
+  --mM: 24px;
+  --mL: 36px;
+  --mXL: 48px;
+  --m2XL: 64px;
 }
 
 /* custom media queries  */

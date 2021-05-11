@@ -16,6 +16,8 @@
         }
       }
     ],
-    "postcss-calc"
+    "postcss-calc",
+    "postcss-animation",
+    "postcss-easings"
   ]
 }

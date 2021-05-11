@@ -1,11 +1,17 @@
-.header {
-  height: 60px;
-  border: 1px solid blue;
+@import '../styles/mixins.css';
+
+.container{
+  max-width:100%;
 }
-.footer {
-  height: 100px;
-  border: 1px solid purple;
-}
-.main {
-  border: 1px solid red;
+
+.wrapper{
+  margin: 0 auto;
+  @mixin grid 12,11;
+  @mixin debug;
+
+  @media (--gridPlus) {
+    border:1px solid black;
+		padding-left: var(--pM);
+		padding-right: var(--pM);
+	}
 }

@@ -1,4 +1,7 @@
-/* Mixin */
+/* Vendor */
+@import 'vendor/minireset.css';
+
+/* Mixins */
 @import 'mixins.css';
 
 /* Import elements styles */

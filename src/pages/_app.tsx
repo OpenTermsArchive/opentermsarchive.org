@@ -4,7 +4,7 @@ import 'modules/Wdyr';
 import 'modules/Common/styles/vendor/minireset.css';
 
 //Import global css styles
-import 'modules/Common/styles/config.css';
+import 'modules/Common/styles/theme.css';
 import 'modules/Common/styles/base.css';
 import 'modules/Common/styles/loader.css';
 
