@@ -1,4 +1,5 @@
 import LinkArrow from 'modules/Common/components/LinkArrow';
+import Logo from 'modules/Common/components/Logo';
 import Layout from 'modules/Common/containers/Layout';
 
 const DesignPage = () => {
@@ -29,15 +30,17 @@ const DesignPage = () => {
       </p>
       <p>
         Quam sollicitudin augue suspendisse tempus. Id pharetra duis at felis. Massa vitae eget
-        viverra sit. Odio vitae lorem proin sit neque, elementum cum tempor metus. Turpis sociis
-        felis vitae diam et scelerisque tempor nunc. Feugiat eget aliquet metus egestas. Vulputate
-        habitant ac lectus tincidunt quam in. Scelerisque consectetur erat at tristique mauris.
-        Scelerisque dapibus felis sagittis sed. Metus tortor pellentesque feugiat morbi eu rutrum
-        varius risus nisl. Tortor ac semper pharetra senectus.
+        viverra sit. <span class="text__light">Odio vitae lorem proin</span> sit neque, elementum
+        cum tempor metus. Turpis sociis felis vitae diam et scelerisque tempor nunc. Feugiat eget
+        aliquet metus egestas. <span class="text__smallcaps">Vulputate habitant a</span> lectus
+        tincidunt quam in. Scelerisque consectetur erat at tristique mauris. Scelerisque dapibus
+        felis sagittis sed. Metus tortor pellentesque feugiat morbi eu rutrum varius risus nisl.
+        Tortor ac semper pharetra senectus.
       </p>
       <LinkArrow iconColor="#999999" href="http://www.google.fr">
         Test de link
       </LinkArrow>
+      <Logo fill="#010613" />
     </Layout>
   );
 };
