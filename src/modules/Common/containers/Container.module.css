@@ -2,7 +2,61 @@
 
 .container {
   margin: 0 auto;
-  @mixin grid 12, 11;
+  border: 1px solid red;
+
+  &__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  &__1211 {
+    @mixin grid 12, 11;
+  }
+
+  &__1110 {
+    @mixin grid 11, 10;
+  }
+
+  &__1011 {
+    @mixin grid 10, 11;
+  }
+
+  &__109 {
+    @mixin grid 10, 9;
+  }
+
+  &__98 {
+    @mixin grid 9, 8;
+  }
+
+  &__87 {
+    @mixin grid 8, 7;
+  }
+
+  &__76 {
+    @mixin grid 7, 6;
+  }
+
+  &__65 {
+    @mixin grid 6, 5;
+  }
+
+  &__54 {
+    @mixin grid 5, 4;
+  }
+
+  &__43 {
+    @mixin grid 4, 3;
+  }
+
+  &__32 {
+    @mixin grid 3, 2;
+  }
+
+  &__21 {
+    @mixin grid 2, 1;
+  }
 
   @media (--gridPlus) {
     padding-left: var(--pM);

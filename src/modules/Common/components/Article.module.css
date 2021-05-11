@@ -1,0 +1,19 @@
+.article {
+  border: 1px solid black;
+  flex-shrink: 1;
+}
+
+.article_header {
+}
+
+.article_subtitle {
+}
+
+.article_title {
+}
+
+.article_content {
+  p {
+    margin-bottom: var(--mS);
+  }
+}

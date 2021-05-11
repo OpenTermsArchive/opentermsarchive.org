@@ -1,5 +1,8 @@
+import Article from 'modules/Common/components/Article';
+import Aside from 'modules/Common/components/Aside';
 import LinkArrow from 'modules/Common/components/LinkArrow';
 import Logo from 'modules/Common/components/Logo';
+import Container from 'modules/Common/containers/Container';
 import Layout from 'modules/Common/containers/Layout';
 
 const DesignPage = () => {
@@ -30,17 +33,40 @@ const DesignPage = () => {
       </p>
       <p>
         Quam sollicitudin augue suspendisse tempus. Id pharetra duis at felis. Massa vitae eget
-        viverra sit. <span class="text__light">Odio vitae lorem proin</span> sit neque, elementum
-        cum tempor metus. Turpis sociis felis vitae diam et scelerisque tempor nunc. Feugiat eget
-        aliquet metus egestas. <span class="text__smallcaps">Vulputate habitant a</span> lectus
-        tincidunt quam in. Scelerisque consectetur erat at tristique mauris. Scelerisque dapibus
-        felis sagittis sed. Metus tortor pellentesque feugiat morbi eu rutrum varius risus nisl.
-        Tortor ac semper pharetra senectus.
+        viverra sit. <span className="text__light">Odio vitae lorem proin</span> sit neque,
+        elementum cum tempor metus. Turpis sociis felis vitae diam et scelerisque tempor nunc.
+        Feugiat eget aliquet metus egestas.
+        <span className="text__smallcaps">Vulputate habitant a</span> lectus tincidunt quam in.
+        Scelerisque consectetur erat at tristique mauris. Scelerisque dapibus felis sagittis sed.
+        Metus tortor pellentesque feugiat morbi eu rutrum varius risus nisl. Tortor ac semper
+        pharetra senectus.
       </p>
       <LinkArrow iconColor="#999999" href="http://www.google.fr">
         Test de link
       </LinkArrow>
       <Logo fill="#010613" />
+      <Container gridCols="10" gridGutters="11" flex={true}>
+        <Article subtitle="Subtitle" title="Lorem ipsum dolor" titleLevel="h2">
+          <p>
+            Adipisicing mollit aliquip qui anim exercitation ipsum qui velit consectetur. Nisi magna
+            qui esse ex esse dolore commodo id ipsum Lorem enim pariatur eu commodo. Occaecat
+            commodo aliquip reprehenderit amet aute tempor sint nostrud excepteur.
+          </p>
+          <p>
+            Et ex nostrud consequat cupidatat qui cillum ad incididunt. Et elit ex nulla cupidatat
+            magna culpa. Duis est Lorem eiusmod pariatur reprehenderit. Et nulla aliquip deserunt
+            ipsum culpa mollit labore sit exercitation officia reprehenderit est irure tempor.
+          </p>
+          <p>
+            Commodo et dolor sit exercitation amet ad elit commodo. Quis anim irure incididunt
+            adipisicing Lorem minim minim nisi. Do incididunt incididunt deserunt adipisicing
+            nostrud amet. Ea mollit pariatur proident consequat enim occaecat consectetur. In
+            adipisicing voluptate cillum adipisicing reprehenderit mollit in dolore occaecat nisi.
+            Id eu adipisicing do minim magna quis eu esse anim proident aliqua.
+          </p>
+        </Article>
+        <Aside>Aside test</Aside>
+      </Container>
     </Layout>
   );
 };

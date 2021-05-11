@@ -1,0 +1,8 @@
+@import '../styles/mixins';
+
+.aside {
+  flex-shrink: 0;
+  border: 1px solid red;
+  margin-left: var(--mM);
+  @mixin grid 3, 3;
+}
