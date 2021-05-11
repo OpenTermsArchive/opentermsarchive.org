@@ -1,3 +1,25 @@
-.linkArrow{
-	
+.linkArrow {
+  display: inline-flex;
+  align-items: center;
+
+  > svg {
+    transition: stroke 0.1s easeInCirc;
+  }
+
+  &:hover {
+    .linkArrow_content {
+      transition: transform 1s easeOutCirc;
+      transform: translateX(4px);
+    }
+
+    > svg {
+      transition: stroke 1s easeOutCirc;
+
+      stroke: var(--colorSecondary);
+    }
+  }
+}
+
+.linkArrow_content {
+  transition: all 0.1s easeInCirc;
 }

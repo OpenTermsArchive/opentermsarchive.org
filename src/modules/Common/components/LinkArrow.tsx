@@ -12,9 +12,9 @@ type LinkArrowProps = {
 const LinkArrow: React.FC<LinkArrowProps> = ({ children, iconColor, className, ...props }) => {
   return (
     <Link {...props}>
-      <a className={classNames(s.LinkArrow, className)}>
+      <a className={classNames(s.linkArrow, className)}>
         <IconArrow color={iconColor} />
-        {children}
+        <span className={s.linkArrow_content}>{children}</span>
       </a>
     </Link>
   );
