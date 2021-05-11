@@ -1,0 +1,16 @@
+@import '../styles/mixins.css';
+
+.container {
+  margin: 0 auto;
+  @mixin grid 12, 11;
+
+  @media (--gridPlus) {
+    border: 1px solid black;
+    padding-left: var(--pM);
+    padding-right: var(--pM);
+  }
+
+  &__fluid {
+    background-color: red;
+  }
+}

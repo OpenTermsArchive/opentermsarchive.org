@@ -1,13 +1,13 @@
 import React from 'react';
-import l from './Layout.module.css';
 import s from './Footer.module.css';
+import Container from './Container';
 
 const Footer = () => {
-  return <>
-    <div className={`${l.container} ${s.footer}`}>
-      <div className={`${l.wrapper} ${s.footer_content}`}>Footer</div>
-    </div>
-  </>;
+  return (
+    <footer className={s.footer}>
+      <Container className={s.footer_content}>Footer 123</Container>
+    </footer>
+  );
 };
 
 export default Footer;

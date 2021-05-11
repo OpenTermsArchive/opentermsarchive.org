@@ -4,7 +4,7 @@ import { Analytics } from 'modules/Analytics';
 import Footer from './Footer';
 import Head from 'next/head';
 import Header from './Header';
-import l from './Layout.module.css';
+import Container from './Container';
 
 type Props = {
   children?: ReactNode;
@@ -20,11 +20,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     </Head>
     <Analytics />
     <Header />
-    <div className={l.container}>
-      <div className={l.wrapper}>
-        {children}
-      </div>
-    </div>
+    <Container layout="fluid">{children}</Container>
     <Footer />
   </>
 );
