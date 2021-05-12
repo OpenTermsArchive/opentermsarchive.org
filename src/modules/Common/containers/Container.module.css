@@ -71,4 +71,12 @@
     padding-right: var(--pL);
     max-width: 100%;
   }
+
+  &__wide {
+    max-width: var(--desktopWide);
+    margin: 0 auto;
+    padding-left: var(--pL);
+    padding-right: var(--pL);
+    border: 1px solid red;
+  }
 }

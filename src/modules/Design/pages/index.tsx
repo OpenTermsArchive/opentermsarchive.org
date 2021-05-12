@@ -49,6 +49,7 @@ const DesignPage = () => {
         </LinkArrow>
         <Logo fill="#010613" />
       </Container>
+      <Container layout="wide">Test</Container>
       <Container gridCols="10" gridGutters="11" flex={true}>
         <Article subtitle="Subtitle" title="Lorem ipsum dolor" titleLevel="h2">
           <p>

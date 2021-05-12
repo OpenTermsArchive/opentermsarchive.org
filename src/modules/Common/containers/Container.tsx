@@ -4,7 +4,7 @@ import s from './Container.module.css';
 
 type ContainerProps = {
   className?: string;
-  layout?: 'boxed' | 'fluid';
+  layout?: 'boxed' | 'fluid'| 'wide';
   flex?: true | false,
   gridCols?:string,
   gridGutters?:string
@@ -25,6 +25,7 @@ const Container: React.FC<ContainerProps> = ({
       className={classNames(
         s.container,
         { [s.container__fluid]: layout === 'fluid' },
+        { [s.container__wide]: layout === 'wide' },
         { [s.container__flex]: flex === true },
         s.[`container__${gridCols+gridGutters}`],
         className
