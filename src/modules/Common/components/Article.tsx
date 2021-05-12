@@ -1,8 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
-import Container from '../containers/Container';
 import s from './Article.module.css';
-import Aside from './Aside';
 
 type ArticleProps = {
   className?: string;

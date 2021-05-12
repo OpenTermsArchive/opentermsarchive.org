@@ -2,7 +2,12 @@
 
 .aside {
   flex-shrink: 0;
-  border: 1px solid red;
   margin-left: var(--mM);
   @mixin grid 3, 3;
+
+  @media (--tabletSmall) {
+    margin-left: 0;
+    margin-top: var(--mM);
+    max-width: 100%;
+  }
 }

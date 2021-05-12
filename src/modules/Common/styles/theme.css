@@ -28,18 +28,20 @@
   --p2XS: 4px;
   --pXS: 8px;
   --pS: 12px;
-  --pM: 24px;
-  --pL: 36px;
-  --pXL: 48px;
-  --p2XL: 64px;
+  --pM: 16px;
+  --pL: 24px;
+  --pXL: 36px;
+  --p2XL: 48px;
+  --p3XL: 64px;
 
   --m2XS: 4px;
   --mXS: 8px;
   --mS: 12px;
-  --mM: 24px;
-  --mL: 36px;
-  --mXL: 48px;
-  --m2XL: 64px;
+  --mM: 16px;
+  --mL: 24px;
+  --mXL: 36px;
+  --m2XL: 48px;
+  --m3XL: 64px;
 }
 
 /* custom media queries  */

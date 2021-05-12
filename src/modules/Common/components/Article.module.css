@@ -1,5 +1,4 @@
 .article {
-  border: 1px solid black;
   flex-shrink: 1;
 }
 
@@ -13,7 +12,9 @@
 }
 
 .article_content {
-  p {
-    margin-bottom: var(--mS);
+  margin-top: var(--mL);
+
+  p:not(:last-child) {
+    margin-bottom: var(--mM);
   }
 }

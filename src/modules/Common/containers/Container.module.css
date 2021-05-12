@@ -3,10 +3,9 @@
 .container {
   margin: 0 auto;
 
-  &__flex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+  @media (--gridPlus) {
+    padding-left: var(--pL);
+    padding-right: var(--pL);
   }
 
   &__1211 {
@@ -57,15 +56,19 @@
     @mixin grid 2, 1;
   }
 
-  @media (--gridPlus) {
-    padding-left: var(--pM);
-    padding-right: var(--pM);
-    border: 10px solid black;
+  &__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    @media (--tabletSmall) {
+      flex-direction: column;
+    }
   }
 
   &__fluid {
-    padding-left: var(--pM);
-    padding-right: var(--pM);
+    padding-left: var(--pL);
+    padding-right: var(--pL);
     max-width: 100%;
   }
 }

@@ -4,6 +4,8 @@ import LinkArrow from 'modules/Common/components/LinkArrow';
 import Logo from 'modules/Common/components/Logo';
 import Container from 'modules/Common/containers/Container';
 import Layout from 'modules/Common/containers/Layout';
+import FeatureList from 'modules/Common/components/FeatureList';
+import FeatureItem from 'modules/Common/components/FeatureItem';
 
 const DesignPage = () => {
   return (
@@ -45,7 +47,7 @@ const DesignPage = () => {
         <LinkArrow iconColor="#999999" href="http://www.google.fr">
           Test de link
         </LinkArrow>
-        <Logo fill="red" />
+        <Logo fill="#010613" />
       </Container>
       <Container gridCols="10" gridGutters="11" flex={true}>
         <Article subtitle="Subtitle" title="Lorem ipsum dolor" titleLevel="h2">
@@ -67,7 +69,25 @@ const DesignPage = () => {
             Id eu adipisicing do minim magna quis eu esse anim proident aliqua.
           </p>
         </Article>
-        <Aside>Aside test</Aside>
+        <Aside>
+          <FeatureList>
+            <FeatureItem
+              iconName="FiSmile"
+              title="Open Source"
+              desc="Free and collaborative software, any entity can contribute to improve it."
+            />
+            <FeatureItem
+              iconName="FiBox"
+              title="180 services"
+              desc="Google, Amazon, Apple, AirBnB, Facebook, Twitter, Instagram, Bing, Microsoft, Reddit, Youtube, TikTok..."
+            />
+            <FeatureItem
+              iconName="FiFile"
+              title="540 documents"
+              desc="Terms of Service, Privacy Policy, Trackers Policy, Developer Terms, Community Guidelines..."
+            />
+          </FeatureList>
+        </Aside>
       </Container>
     </Layout>
   );
