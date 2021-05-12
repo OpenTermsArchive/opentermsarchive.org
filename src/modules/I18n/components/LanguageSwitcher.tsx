@@ -17,11 +17,15 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps & React.HTMLAttributes<HT
   return (
     <div className={s.wrapper} {...props}>
       {router.locales?.map((locale) => (
-        <>
-          <Link href={router.pathname} locale={locale}>
-            {locale}
-          </Link>{' '}
-        </>
+        <React.Fragment key={locale}>
+          {locale === router.locale ? (
+            locale
+          ) : (
+            <Link href={router.pathname} locale={locale}>
+              {locale}
+            </Link>
+          )}{' '}
+        </React.Fragment>
       ))}
       {children}
     </div>

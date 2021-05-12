@@ -13,11 +13,12 @@ import 'nprogress/nprogress.css'; //styles of nprogress//Binding events.
 import 'modules/NProgress/nprogress.theme.scss';
 import 'modules/NProgress'; //nprogress module
 
+import { appWithTranslation } from 'next-i18next';
 import { AppProps } from 'next/app';
 import { SWRConfig } from 'swr';
 import { fetcher } from 'utils/api';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <SWRConfig
       value={{
@@ -29,4 +30,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(App);
