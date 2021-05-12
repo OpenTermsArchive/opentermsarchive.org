@@ -20,7 +20,7 @@ const Container: React.FC<ContainerProps> = ({
   ...props
 }: ContainerProps) => {
   return (
-    <section
+    <div
       {...props}
       className={classNames(
         s.container,
@@ -31,7 +31,7 @@ const Container: React.FC<ContainerProps> = ({
       )}
     >
       {children}
-    </section>
+    </div>
   );
 };
 

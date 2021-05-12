@@ -2,7 +2,6 @@
 
 .container {
   margin: 0 auto;
-  border: 1px solid red;
 
   &__flex {
     display: flex;
@@ -61,6 +60,7 @@
   @media (--gridPlus) {
     padding-left: var(--pM);
     padding-right: var(--pM);
+    border: 10px solid black;
   }
 
   &__fluid {

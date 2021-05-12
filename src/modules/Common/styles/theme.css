@@ -2,7 +2,6 @@
 * Custom properties
 **/
 :root {
-
   /* Fonts */
   --defaultFontSize: 1.6rem;
   --defaultFontFamily: 'Inter';
@@ -15,7 +14,7 @@
 
   /* Colors */
   --colorPrimary: #0496ff;
-  --colorSecondary: #0B08A0;
+  --colorSecondary: #0b08a0;
   --colorError: #ec368d;
   --colorSuccess: #11ebc3;
   --colorBlack900: #010613;

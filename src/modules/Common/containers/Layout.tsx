@@ -20,7 +20,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     </Head>
     <Analytics />
     <Header />
-    <Container layout="fluid">{children}</Container>
+    {children}
     <Footer />
   </>
 );
