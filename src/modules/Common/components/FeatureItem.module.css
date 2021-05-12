@@ -22,8 +22,8 @@
   margin: 0 calc((76px-40px) / 2);
   border-radius: 10px;
 
-  & > svg {
-    stroke: var(--colorPrimary);
+  @media (--tabletSmall) {
+    margin-left: 0;
   }
 }
 
