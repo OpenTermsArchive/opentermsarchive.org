@@ -33,6 +33,7 @@
   --pXL: 36px;
   --p2XL: 48px;
   --p3XL: 64px;
+  --p4XL: 96px;
 
   --m2XS: 4px;
   --mXS: 8px;
@@ -45,13 +46,13 @@
   --m4XL: 96px;
 
   /* Breakpoints */
-  --mobileSmall: 320px;
-  --mobileLarge: 480px;
-  --mobileExtraLarge: 620px;
-  --tabletSmall: 768px;
-  --tabletLarge: 1024px;
-  --gridPlus: 1196px;
-  --desktopWide: 1440px;
+  --bpMobileSmall: 320px;
+  --bpMobileLarge: 480px;
+  --bpMobileExtraLarge: 620px;
+  --bpTabletSmall: 768px;
+  --bpTabletLarge: 1024px;
+  --bpGridPlus: 1196px;
+  --bpDesktopWide: 1440px;
 }
 
 /* 
@@ -59,10 +60,10 @@ Custom media queries
 Read https://preset-env.cssdb.org/features#custom-media-queries
 Use : @media (--tabletLarge) {}
 */
-@custom-media --mobileSmall (max-width: var(--mobileSmall));
-@custom-media --mobileLarge (max-width: var(--mobileLarge));
-@custom-media --mobileExtraLarge (max-width: var(--mobileExtraLarge));
-@custom-media --tabletSmall (max-width: var(--tabletSmall));
-@custom-media --tabletLarge (max-width: var(--tabletLarge));
-@custom-media --gridPlus (max-width: var(--gridPlus));
-@custom-media --desktopWide (max-width: var(--desktopWide));
+@custom-media --mobileSmall (max-width: 320px);
+@custom-media --mobileLarge (max-width: 480px);
+@custom-media --mobileExtraLarge (max-width: 620px);
+@custom-media --tabletSmall (max-width: 768px);
+@custom-media --tabletLarge (max-width: 1024px);
+@custom-media --gridPlus (max-width: 1196px);
+@custom-media --desktopWide (max-width: 1440px);

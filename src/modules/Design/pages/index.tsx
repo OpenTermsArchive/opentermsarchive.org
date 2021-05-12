@@ -6,6 +6,7 @@ import Container from 'modules/Common/containers/Container';
 import Layout from 'modules/Common/containers/Layout';
 import FeatureList from 'modules/Common/components/FeatureList';
 import FeatureItem from 'modules/Common/components/FeatureItem';
+import Hero from 'modules/Common/components/Hero';
 
 const DesignPage = () => {
   return (
@@ -49,13 +50,30 @@ const DesignPage = () => {
         </LinkArrow>
         <Logo fill="#010613" />
       </Container>
-      <Container layout="wide">Test</Container>
+      <Container layout="wide" backgroundImage="/images/bg1.jpg">
+        <Container gridCols="12" gridGutters="11" flex={true} padding={false}>
+          <Hero
+            title="Follow the changes to the Terms of Service"
+            subTitle="Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms."
+          ></Hero>
+        </Container>
+      </Container>
+      <Container layout="wide">
+        <Container gridCols="12" gridGutters="11" flex={true} padding={false}>
+          <Hero title="Hero without image background and subtitle" isDark={false}></Hero>
+        </Container>
+      </Container>
+      <Container layout="wide">
+        <Container gridCols="12" gridGutters="11" flex={true} padding={false}>
+          <Hero subTitle="Hero without image background and title" isDark={false}></Hero>
+        </Container>
+      </Container>
       <Container gridCols="10" gridGutters="11" flex={true}>
         <Article subtitle="Subtitle" title="Lorem ipsum dolor" titleLevel="h2">
           <p>
             Adipisicing mollit aliquip qui anim exercitation ipsum qui velit consectetur. Nisi magna
-            qui esse ex esse dolore commodo id ipsum Lorem enim pariatur eu commodo. Occaecat
-            commodo aliquip reprehenderit amet aute tempor sint nostrud excepteur.
+            qui esse ex esse dolore <strong>commodo</strong> id ipsum Lorem enim pariatur eu
+            commodo. Occaecat commodo aliquip reprehenderit amet aute tempor sint nostrud excepteur.
           </p>
           <p>
             Et ex nostrud consequat cupidatat qui cillum ad incididunt. Et elit ex nulla cupidatat

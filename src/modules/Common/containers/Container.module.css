@@ -75,8 +75,15 @@
   &__wide {
     max-width: var(--desktopWide);
     margin: 0 auto;
-    padding-left: var(--pL);
-    padding-right: var(--pL);
-    border: 1px solid red;
+  }
+
+  &__hasBgImage {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__hasNoPadding {
+    padding: 0;
   }
 }
