@@ -54,5 +54,10 @@ module.exports = {
       suffix: '}}',
     },
   },
-  transform: typescriptTransform({ extensions: ['.ts', '.tsx'] }),
+  transform: typescriptTransform({
+    extensions: ['.ts', '.tsx'],
+    tsOptions: {
+      target: 'es2018', // if not here, <Trans component will not be parsed
+    },
+  }),
 };
