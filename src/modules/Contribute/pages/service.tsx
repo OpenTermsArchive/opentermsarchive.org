@@ -177,21 +177,17 @@ Thank you very much`;
             <div>
               <h2>{t('contribute:service_page.title', 'What is expected from you')}</h2>
               <p>
-                {t(
-                  'contribute:service_page.description1',
-                  'Most of the time, contractual documents contains a header, a footer, navigation menus, possibly ads… We aim at tracking only <strong>the significant parts of the document</strong>'
-                )}
-              </p>
-              <p>
-                <Trans i18nKey="contribute:service_page.description2">
+                <Trans i18nKey="contribute:service_page.description1">
                   Most of the time, contractual documents contains a header, a footer, navigation
                   menus, possibly ads… We aim at tracking only{' '}
                   <strong>the significant parts of the document</strong>
                 </Trans>
               </p>
               <p>
-                In order to achieve that, you will have to select the part of the documents that
-                contains the relevant part and remove the insignificant parts.
+                <Trans i18nKey="contribute:service_page.description2">
+                  In order to achieve that, you will have to select the part of the documents that
+                  contains the relevant part and remove the insignificant parts.
+                </Trans>
               </p>
             </div>
             <nav>
