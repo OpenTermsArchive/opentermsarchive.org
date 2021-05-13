@@ -1,4 +1,15 @@
 {
-  "home_page.subtitle": "Merci pour votre aide",
-  "home_page.title": "Contribuez à Open Terms Archive"
+  "home_page.search.button": "Next",
+  "home_page.search.label": "Première étape, veuillez remplir l'URL à suivre",
+  "home_page.subtitle": "Nous avons besoin de vous !",
+  "home_page.title": "Contribuez",
+  "service_page.description1": "La plupart du temps, les documents contractuels contiennent un en-tête, un pied de page, des menus de navigation, éventuellement des publicités... Nous visons à ne suivre que <strong>les parties significatives du document</strong>",
+  "service_page.title": "Ce que l'on attend de vous",
+  "sorry_page.explanation": "Parce que nous utilisons la fonctionnalité \"hover\" pour mettre en évidence les parties du document que nous voulons suivre, nous avons besoin que vous ayez un ordinateur et une souris",
+  "sorry_page.subtitle": "Nous avons besoin de vous sur un vrai ordinateur",
+  "sorry_page.title": "Désolé",
+  "thanks_page.cta": "Ajouter un autre document",
+  "thanks_page.explanation": "Il vous suffit de nous envoyer l'email (une popup aurait dû s'ouvrir) et nous vous informerons dès que le service sera intégré au système",
+  "thanks_page.subtitle": "Merci pour votre contribution",
+  "thanks_page.title": "Thanks"
 }

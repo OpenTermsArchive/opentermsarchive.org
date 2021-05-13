@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 
 export interface SearchProps {
   label?: React.ReactNode;
@@ -19,7 +20,6 @@ const Search = ({
   ...props
 }: SearchProps & React.HTMLAttributes<HTMLDivElement>) => {
   const [search, setSearch] = React.useState('');
-
   const handleChange = (event: any) => {
     setSearch(event.target.value);
   };
@@ -31,16 +31,15 @@ const Search = ({
   };
 
   return (
-    <div className={`rf-search-bar ${className || ''}`} {...props}>
-      {label && <label className="rf-label">{label}</label>}
+    <div className={classNames(className)} {...props}>
+      {label && <label>{label}</label>}
       <input
-        className="rf-input"
         placeholder={placeholder}
         type="search"
         name="search-input-input"
         onChange={handleChange}
       />
-      <button className="rf-btn" title={buttonLabel} onClick={handleSubmit}>
+      <button title={buttonLabel} onClick={handleSubmit}>
         {buttonLabel}
       </button>
     </div>

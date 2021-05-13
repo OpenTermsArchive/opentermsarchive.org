@@ -1,4 +1,15 @@
 {
-  "home_page.subtitle": "Thanks for helping",
-  "home_page.title": "Contributing to Open Terms Archive"
+  "home_page.search.button": "Next",
+  "home_page.search.label": "First step, please fill the URL to track",
+  "home_page.subtitle": "We need you!",
+  "home_page.title": "Contribute",
+  "service_page.description1": "Most of the time, contractual documents contains a header, a footer, navigation menus, possibly ads… We aim at tracking only <strong>the significant parts of the document</strong>",
+  "service_page.title": "What is expected from you",
+  "sorry_page.explanation": "Because we use the \"hover\" functionnality to highlight the parts of the document we want to track, we need you to have a computer and a mouse.",
+  "sorry_page.subtitle": "We need you on a real computer",
+  "sorry_page.title": "Sorry",
+  "thanks_page.cta": "Add another document",
+  "thanks_page.explanation": "You only need to send us the email (a popup should have opened) and we will let you know as soon as the service is integrated in the system",
+  "thanks_page.subtitle": "Thanks for your contribution",
+  "thanks_page.title": "Thanks"
 }
