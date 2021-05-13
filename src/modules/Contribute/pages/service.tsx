@@ -171,7 +171,7 @@ Thank you very much`;
           <>
             <nav>
               <Link href="/contribute">
-                <a className={s.backButton}>Go back</a>
+                <a className={s.backButton}>{t('contribute:service_page.back', 'Go back')}</a>
               </Link>
             </nav>
             <div>
@@ -191,8 +191,8 @@ Thank you very much`;
               </p>
             </div>
             <nav>
-              <button type="button" className="rf-btn" onClick={passToStep(2)}>
-                OK
+              <button type="button" onClick={passToStep(2)}>
+                {t('contribute:service_page.cta', 'OK')}
               </button>
             </nav>
           </>
@@ -201,32 +201,46 @@ Thank you very much`;
           <>
             <nav>
               <Link href="/contribute">
-                <a className={s.backButton}>Go back</a>
+                <a className={s.backButton}>{t('contribute:service_page.back', 'Go back')}</a>
               </Link>
-              <a onClick={passToStep(1)}>Need help?</a>
+              <a onClick={passToStep(1)}>{t('contribute:service_page.help', 'Need help?')}</a>
             </nav>
             <div>
               <form>
                 <div>
-                  <h2>Step 2: defining this document</h2>
-                  <h3>Type of document</h3>
+                  <h2>
+                    {t('contribute:service_page.step2.title', 'Step 2: defining this document')}
+                  </h2>
+                  <h3>
+                    {t('contribute:service_page.step2.form.documentType', 'Type of document')}
+                  </h3>
                   <select
-                    className="rf-input"
                     onChange={onInputChange('documentType')}
                     defaultValue={initialDocumentType}
                   >
-                    <option value="">Select...</option>
+                    <option value="">
+                      {t('contribute:service_page.step2.form.select', 'Select...')}
+                    </option>
                     {documentTypes.map((documentType) => (
                       <option key={documentType} value={documentType}>
                         {documentType}
                       </option>
                     ))}
                   </select>
-                  <h3>Name of service</h3>
+                  <h3>
+                    {t('contribute:service_page.step2.form.serviceName', 'Name of the service')}
+                  </h3>
                   <input defaultValue={initialName} onChange={onInputChange('name')} />
 
-                  <h2>Step 3: selecting significant part of the document</h2>
-                  <h3>Significant part(s)</h3>
+                  <h2>
+                    {t(
+                      'contribute:service_page.step3.title',
+                      'Step 3: selecting significant part of the document'
+                    )}
+                  </h2>
+                  <h3>
+                    {t('contribute:service_page.step3.form.significantPart', 'Significant part(s)')}
+                  </h3>
                   {selectedCss.map((selected, i) => (
                     <div key={selected} className={s.selectionItem}>
                       <input defaultValue={selected} onChange={onChangeCssRule('selectedCss', i)} />
@@ -238,11 +252,16 @@ Thank you very much`;
                     onClick={selectInIframe('selectedCss')}
                     disabled={!!selectable || !iframeReady}
                   >
-                    Add part
+                    {t('contribute:service_page.step3.form.significantPart.cta', 'Add part')}
                   </button>
                 </div>
                 <div>
-                  <h3>Insignificant part(s)</h3>
+                  <h3>
+                    {t(
+                      'contribute:service_page.step3.form.insignificantPart',
+                      'Insignificant part(s)'
+                    )}
+                  </h3>
                   {removedCss.map((selected, i) => (
                     <div key={selected} className={s.selectionItem}>
                       <input defaultValue={selected} onChange={onChangeCssRule('removedCss', i)} />
@@ -254,7 +273,7 @@ Thank you very much`;
                     onClick={selectInIframe('removedCss')}
                     disabled={!!selectable || !iframeReady}
                   >
-                    Remove part
+                    {t('contribute:service_page.step3.form.insignificantPart.cta', 'Remove part')}
                   </button>
                 </div>
                 {expertMode && (
@@ -273,9 +292,11 @@ Thank you very much`;
               </form>
             </div>
             <nav>
-              <a onClick={toggleExpertMode}>Expert Mode</a>
+              <a onClick={toggleExpertMode}>
+                {t('contribute:service_page.expertMode', 'Expert Mode')}
+              </a>
               <button type="button" disabled={submitDisabled} onClick={onValidate}>
-                Validate
+                {t('contribute:service_page.validate', 'Validate')}
               </button>
             </nav>
           </>
@@ -283,10 +304,10 @@ Thank you very much`;
       </Drawer>
       {data?.error && (
         <div className={s.fullPage}>
-          <h1>We're sorry, an error occured</h1>
+          <h1>{t('contribute:service_page.error.title', "We're sorry, an error occured")}</h1>
           <p>{data?.error}</p>
           <button type="button" onClick={onErrorClick}>
-            Let us know
+            {t('contribute:service_page.error.cta', 'Les us know!')}
           </button>
         </div>
       )}
@@ -303,8 +324,13 @@ Thank you very much`;
             />
           ) : (
             <div className={s.fullPage}>
-              <h1>We're preparing the website</h1>
-              <p>It usually takes between 5s and 30s</p>
+              <h1>{t('contribute:service_page.loading.title', "We're preparing the website")}</h1>
+              <p>
+                {t(
+                  'contribute:service_page.loading.subtitle',
+                  'It usually takes between 5s and 30s'
+                )}
+              </p>
               <Loading />
             </div>
           )}
