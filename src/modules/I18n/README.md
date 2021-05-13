@@ -48,6 +48,41 @@ module.exports = {
 
 See https://github.com/isaachinman/next-i18next
 
+There are also some new wrappers to ease the use on `pages`
+
+You can use it with
+
+```
+import { withI18n } from 'modules/I18n';
+
+export const getStaticProps = withI18n(['common', 'footer'])();
+```
+
+or if you need som emore treatment
+
+```
+import { withI18n } from 'modules/I18n';
+
+export const getStaticProps = withI18n(['common', 'footer'])(async (props: any) => {
+  // do something
+  return {
+    props,
+  };
+});
+```
+
+instead of the documented feature whicj I found too verbose and not typescript proof
+
+```
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...await serverSideTranslations(locale, ['common', 'footer']),
+  }
+})
+```
+
 ## generate translation files
 
 ```
