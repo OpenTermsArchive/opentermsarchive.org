@@ -38,7 +38,7 @@ module.exports = {
 4. add tools to your script to generate translations
 
 ```
-    "i18n": "yarn i18n:extract && yarn i18n:clean",
+    "i18n": "yarn i18n:extract && yarn i18n:clean && echo '\n⚠️  You may need to restart your dev server\n'",
     "i18n:extract": "NODE_ENV=development i18next-scanner --config 'src/modules/I18n/i18next-scanner.config.js'",
     "i18n:clean": "find public/locales -size 3c -delete",
 
