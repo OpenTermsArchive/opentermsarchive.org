@@ -58,7 +58,7 @@ import { withI18n } from 'modules/I18n';
 export const getStaticProps = withI18n(['common', 'footer'])();
 ```
 
-or if you need som emore treatment
+or if you need some more treatment
 
 ```
 import { withI18n } from 'modules/I18n';
@@ -83,8 +83,55 @@ export const getStaticProps = async ({ locale }) => ({
 })
 ```
 
+### translate simple strings
+
+```
+{t('contribute:service_page.title', 'What is expected from you')}
+```
+
+### translate html
+
+```
+<Trans i18nKey="contribute:service_page.description1">
+  Most of the time, contractual documents contains a header, a footer, navigation
+  menus, possibly ads… We aim at tracking only{' '}
+  <strong>the significant parts of the document</strong>
+</Trans>
+```
+
 ## generate translation files
 
 ```
 yarn i18n
+```
+
+## VSCode snippets
+
+Get fast with these snippets
+
+```
+  "snippet-t": {
+    "prefix": "t",
+    "body": [
+      "import { useTranslation } from 'next-i18next';",
+      "const { t } = useTranslation();"
+    ],
+    "description": "use translation hook"
+  },
+  "snippet-t(": {
+    "prefix": "t(",
+    "body": [
+      "t('${TM_DIRECTORY/^.*\\/src\\/modules\\/(.*)\\/(.*)/${1:/downcase}/}:$1','$2')"
+    ],
+    "description": "use translation function"
+  },
+  "snippet-trans": {
+    "prefix": "trans",
+    "body": [
+      "<Trans i18nKey=\"${TM_DIRECTORY/^.*\\/src\\/modules\\/(.*)\\/(.*)/${1:/downcase}/}:$1\">",
+      "",
+      "</Trans>"
+    ],
+    "description": "use translation component"
+  }
 ```
