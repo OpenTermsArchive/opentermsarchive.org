@@ -16,3 +16,8 @@ Then launch
 yarn
 yarn dev
 ```
+
+## Modules documentation
+
+- [I18n](./src/modules/I18n/README.md)
+- [Analytics](./src/modules/Analytics/README.md)
