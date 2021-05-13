@@ -2,6 +2,8 @@ import Layout from 'modules/Common/containers/Layout';
 import SubscribeForm from 'modules/Common/components/SubscribeForm';
 import { withI18n } from 'modules/I18n';
 import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
+import Container from 'modules/Common/containers/Container';
 
 const HomePage = () => {
   const { t } = useTranslation('common');
@@ -15,11 +17,16 @@ const HomePage = () => {
           'Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms.'
         )}
       </h2>
+      <Container>
+        <Link href="/contribute">
+          <a>Contribute</a>
+        </Link>
+      </Container>
       <SubscribeForm />
     </Layout>
   );
 };
 
-export const getStaticProps = withI18n(['common', 'footer'])();
+export const getStaticProps = withI18n(['common'])();
 
 export default HomePage;
