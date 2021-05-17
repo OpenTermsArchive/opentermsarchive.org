@@ -52,6 +52,9 @@ const DesignPage = () => {
         <LinkArrow iconColor="#999999" href="http://www.google.fr">
           Test de link
         </LinkArrow>
+        <LinkArrow iconColor="#999999" href="http://www.google.fr" small={true}>
+          Test de link
+        </LinkArrow>
         <Logo fill="#010613" />
       </Container>
       <Container layout="wide" backgroundImage="/images/bg1.jpg">
@@ -118,17 +121,17 @@ const DesignPage = () => {
             title="Add documents"
             desc="Easily and quickly add documents to follow."
             iconName="FiPlus"
-            iconColor="red"
+            iconColor="#0496FF"
           >
             <Button href="https://www.google.fr">Je suis un bouton</Button>
           </ButtonBloc>
           <ButtonBloc
             desc="Without title un button bloc avec un descirption un peu plus longue pour voir comment ça se comporte. Ouias ouias !"
             iconName="FiPlus"
-            iconColor="black"
+            iconColor="#0496FF"
           >
             <Button href="https://www.google.fr">Add documents</Button>
-            <LinkArrow iconColor="red" href="https://www.google.fr">
+            <LinkArrow iconColor="#999999" href="https://www.google.fr" small={true}>
               Another link
             </LinkArrow>
           </ButtonBloc>
@@ -138,10 +141,10 @@ const DesignPage = () => {
           <ButtonBloc
             desc="Without title un button bloc avec un descirption un peu plus longue pour voir comment ça se comporte. Ouias ouias !"
             iconName="FiPlus"
-            iconColor="black"
+            iconColor="#0496FF"
           >
             <Button href="https://www.google.fr">Add documents</Button>
-            <LinkArrow iconColor="red" href="https://www.google.fr">
+            <LinkArrow iconColor="#999999" href="https://www.google.fr" small={true}>
               Another link
             </LinkArrow>
           </ButtonBloc>

@@ -17,8 +17,18 @@
       stroke: var(--colorSecondary);
     }
   }
+
+  &__isSmall {
+    font-size: 1.4rem;
+    &:hover {
+      .linkArrow_content {
+        transform: translateX(2px);
+      }
+    }
+  }
 }
 
 .linkArrow_content {
   transition: all 0.1s easeInCirc;
+  margin-left: var(--m2XS);
 }

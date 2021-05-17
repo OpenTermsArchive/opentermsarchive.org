@@ -1,21 +1,21 @@
 @import '../styles/mixins';
 
-.buttonbloclist {
+.buttonBlocList {
 }
 
-.buttonbloclist_header {
+.buttonBlocList_header {
   text-align: center;
   @mixin grid 6, 5;
   margin: 0 auto;
 }
 
-.buttonbloclist_subtitle {
+.buttonBlocList_subtitle {
 }
 
-.buttonbloclist_title {
+.buttonBlocList_title {
 }
 
-.buttonbloclist_items {
+.buttonBlocList_items {
   @mixin grid 10, 9;
   margin: 0 auto;
   margin-top: var(--m2XL);

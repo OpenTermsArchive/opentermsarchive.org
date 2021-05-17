@@ -1,2 +1,13 @@
 .button {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--colorPrimary);
+  padding: var(--pS) var(--pL);
+  color: var(--colorBlack200);
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--colorSecondary);
+    color: var(--colorBlack200);
+  }
 }

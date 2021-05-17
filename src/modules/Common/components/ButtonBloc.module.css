@@ -1,16 +1,16 @@
 @import '../styles/mixins';
 
-.buttonbloc {
+.buttonBloc {
   border: 1px solid var(--colorBlack200);
   @mixin grid 3, 3;
   text-align: center;
-  padding: var(--p2XL) var(--pXL) var(--pXL) var(--pXL);
+  padding: var(--p2XL) var(--pL) var(--pXL) var(--pL);
   position: relative;
   flex-shrink: 0;
   margin: 0 calc(var(--gridGutterWidth) / 2) var(--gridGutterWidth);
 }
 
-.buttonbloc_icon {
+.buttonBloc_icon {
   position: absolute;
   background-color: var(--colorWhite);
   width: 44px;
@@ -27,18 +27,22 @@
   }
 }
 
-.buttonbloc_title {
-  & + .buttonbloc_desc {
+.buttonBloc_title {
+  & + .buttonBloc_desc {
     margin-top: var(--mXS);
   }
 }
 
-.buttonbloc_desc {
+.buttonBloc_desc {
 }
 
-.buttonbloc_actions {
+.buttonBloc_actions {
   margin-top: var(--mL);
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  & > a:not(:first-child) {
+    margin-top: var(--m2XS);
+  }
 }
