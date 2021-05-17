@@ -1,0 +1,44 @@
+@import '../styles/mixins';
+
+.buttonbloc {
+  border: 1px solid var(--colorBlack200);
+  @mixin grid 3, 3;
+  text-align: center;
+  padding: var(--p2XL) var(--pXL) var(--pXL) var(--pXL);
+  position: relative;
+  flex-shrink: 0;
+  margin: 0 calc(var(--gridGutterWidth) / 2) var(--gridGutterWidth);
+}
+
+.buttonbloc_icon {
+  position: absolute;
+  background-color: var(--colorWhite);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+
+  & > svg {
+    margin: 0 auto;
+  }
+}
+
+.buttonbloc_title {
+  & + .buttonbloc_desc {
+    margin-top: var(--mXS);
+  }
+}
+
+.buttonbloc_desc {
+}
+
+.buttonbloc_actions {
+  margin-top: var(--mL);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

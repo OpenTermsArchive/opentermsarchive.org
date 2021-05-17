@@ -1,7 +1,7 @@
 a {
   color: var(--colorPrimary);
   text-decoration: none;
-  transition: all 0.5s easeOutExpo;
+  transition: all 0.3s easeOutExpo;
 
   &:hover {
     color: var(--colorSecondary);

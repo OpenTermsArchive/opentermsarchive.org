@@ -1,0 +1,26 @@
+@import '../styles/mixins';
+
+.buttonbloclist {
+}
+
+.buttonbloclist_header {
+  text-align: center;
+  @mixin grid 6, 5;
+  margin: 0 auto;
+}
+
+.buttonbloclist_subtitle {
+}
+
+.buttonbloclist_title {
+}
+
+.buttonbloclist_items {
+  @mixin grid 10, 9;
+  margin: 0 auto;
+  margin-top: var(--m2XL);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}

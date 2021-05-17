@@ -3,17 +3,17 @@
   align-items: center;
 
   > svg {
-    transition: stroke 0.1s easeInCirc;
+    transition: stroke 0.3s easeOutCirc;
   }
 
   &:hover {
     .linkArrow_content {
-      transition: transform 1s easeOutCirc;
+      transition: transform 0.3s easeOutCirc;
       transform: translateX(4px);
     }
 
     > svg {
-      transition: stroke 1s easeOutCirc;
+      transition: stroke 0.3s easeOutCirc;
       stroke: var(--colorSecondary);
     }
   }

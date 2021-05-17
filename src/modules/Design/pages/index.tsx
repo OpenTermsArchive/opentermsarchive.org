@@ -6,7 +6,11 @@ import Container from 'modules/Common/containers/Container';
 import Layout from 'modules/Common/containers/Layout';
 import FeatureList from 'modules/Common/components/FeatureList';
 import FeatureItem from 'modules/Common/components/FeatureItem';
+import ButtonBlocList from 'modules/Common/components/ButtonBlocList';
+import ButtonBloc from 'modules/Common/components/ButtonBloc';
 import Hero from 'modules/Common/components/Hero';
+import React from 'react';
+import Button from 'modules/Common/components/Button';
 
 const DesignPage = () => {
   return (
@@ -107,6 +111,49 @@ const DesignPage = () => {
             />
           </FeatureList>
         </Aside>
+      </Container>
+      <Container gridCols="12" gridGutters="11">
+        <ButtonBlocList title="Want to help us build a digital common ?" subTitle="Contribute">
+          <ButtonBloc
+            title="Add documents"
+            desc="Easily and quickly add documents to follow."
+            iconName="FiPlus"
+            iconColor="red"
+          >
+            <Button href="https://www.google.fr">Je suis un bouton</Button>
+          </ButtonBloc>
+          <ButtonBloc
+            desc="Without title un button bloc avec un descirption un peu plus longue pour voir comment ça se comporte. Ouias ouias !"
+            iconName="FiPlus"
+            iconColor="black"
+          >
+            <Button href="https://www.google.fr">Add documents</Button>
+            <LinkArrow iconColor="red" href="https://www.google.fr">
+              Another link
+            </LinkArrow>
+          </ButtonBloc>
+          <ButtonBloc title="Un titre un peu plus long" desc="Un bloc sans icon">
+            <Button href="https://www.google.fr">Je suis un bouton</Button>
+          </ButtonBloc>
+          <ButtonBloc
+            desc="Without title un button bloc avec un descirption un peu plus longue pour voir comment ça se comporte. Ouias ouias !"
+            iconName="FiPlus"
+            iconColor="black"
+          >
+            <Button href="https://www.google.fr">Add documents</Button>
+            <LinkArrow iconColor="red" href="https://www.google.fr">
+              Another link
+            </LinkArrow>
+          </ButtonBloc>
+          <ButtonBloc title="Un titre un peu plus long" desc="Un bloc sans icon">
+            <Button href="https://www.google.fr">Je suis un bouton</Button>
+          </ButtonBloc>
+        </ButtonBlocList>
+        <ButtonBlocList title="Want to help us build a digital common ?" subTitle="Contribute">
+          <ButtonBloc title="Un titre un peu plus long" desc="Un bloc sans icon">
+            <Button href="https://www.google.fr">Je suis un bouton</Button>
+          </ButtonBloc>
+        </ButtonBlocList>
       </Container>
     </Layout>
   );
