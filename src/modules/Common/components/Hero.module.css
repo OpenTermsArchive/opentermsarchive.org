@@ -1,9 +1,6 @@
 @import '../styles/mixins';
 
 .hero {
-  padding-top: var(--p4XL);
-  padding-bottom: var(--p3XL);
-
   &__isDark {
     color: var(--colorWhite);
     .hero_title,

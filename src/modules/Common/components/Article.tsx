@@ -1,5 +1,5 @@
-import classNames from 'classnames';
 import React from 'react';
+import classNames from 'classnames';
 import s from './Article.module.css';
 
 type ArticleProps = {
@@ -20,7 +20,9 @@ const Article: React.FC<ArticleProps> = ({
   return (
     <article {...props} className={classNames(s.article, className)}>
       <header className={s.article_header}>
-        <div className={classNames('text__smallcaps', s.article_subtitle)}>{subtitle}</div>
+        {subtitle ? (
+          <div className={classNames('text__smallcaps', s.article_subtitle)}>{subtitle}</div>
+        ) : undefined}
         {titleLevel === 'h1' ? <h1 className={s.article_title}>{title}</h1> : undefined}
         {titleLevel === 'h2' ? <h2 className={s.article_title}>{title}</h2> : undefined}
         {titleLevel === 'h3' ? <h3 className={s.article_title}>{title}</h3> : undefined}

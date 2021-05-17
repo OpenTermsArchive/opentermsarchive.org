@@ -12,9 +12,4 @@
 }
 
 .article_content {
-  margin-top: var(--mL);
-
-  p:not(:last-child) {
-    margin-bottom: var(--mM);
-  }
 }

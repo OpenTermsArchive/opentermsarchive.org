@@ -1,0 +1,23 @@
+.textContent {
+  margin-top: var(--mL);
+
+  p:not(:last-child) {
+    margin-bottom: var(--mM);
+  }
+
+  ul {
+    margin-left: var(--mL);
+  }
+
+  li {
+    position: relative;
+    & > svg {
+      left: calc(var(--mL) * -1);
+      top: var(--m2XS);
+      position: absolute;
+    }
+    &:not(:last-child) {
+      margin-bottom: var(--mM);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.showcaseItem {
+  border: 1px solid red;
+}
+
+.showcaseItem_title {
+}
+
+.showcaseItem_desc {
+}
+
+.showcaseItem_author {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: 1px solid red;
+  align-items: center;
+}
+
+.showcaseItem_author_icon {
+}
+.showcaseItem_author_desc {
+}

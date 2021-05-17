@@ -3,6 +3,11 @@
 .container {
   margin: 0 auto;
 
+  & + .container {
+    padding-top: var(--p4XL);
+    padding-bottom: var(--p3XL);
+  }
+
   @media (--gridPlus) {
     padding-left: var(--pL);
     padding-right: var(--pL);
@@ -81,6 +86,17 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  &__isDark {
+    color: var(--colorWhite);
+
+    & h1,
+    & h2,
+    & h3,
+    & .text__subtitle {
+      color: var(--colorWhite);
+    }
   }
 
   &__hasNoPadding {

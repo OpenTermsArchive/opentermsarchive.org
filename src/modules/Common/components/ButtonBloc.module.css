@@ -8,6 +8,11 @@
   position: relative;
   flex-shrink: 0;
   margin: 0 calc(var(--gridGutterWidth) / 2) var(--gridGutterWidth);
+
+  &__fillParent {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .buttonBloc_icon {
