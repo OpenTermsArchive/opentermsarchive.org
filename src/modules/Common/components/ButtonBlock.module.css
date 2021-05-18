@@ -1,13 +1,12 @@
 @import '../styles/mixins';
 
-.buttonBloc {
+.buttonBlock {
   border: 1px solid var(--colorBlack200);
   @mixin grid 3, 3;
   text-align: center;
   padding: var(--p2XL) var(--pL) var(--pXL) var(--pL);
   position: relative;
   flex-shrink: 0;
-  margin: 0 calc(var(--gridGutterWidth) / 2) var(--gridGutterWidth);
 
   &__fillParent {
     width: 100%;
@@ -15,7 +14,7 @@
   }
 }
 
-.buttonBloc_icon {
+.buttonBlock_icon {
   position: absolute;
   background-color: var(--colorWhite);
   width: 44px;
@@ -32,16 +31,16 @@
   }
 }
 
-.buttonBloc_title {
-  & + .buttonBloc_desc {
+.buttonBlock_title {
+  & + .buttonBlock_desc {
     margin-top: var(--mXS);
   }
 }
 
-.buttonBloc_desc {
+.buttonBlock_desc {
 }
 
-.buttonBloc_actions {
+.buttonBlock_actions {
   margin-top: var(--mL);
   display: flex;
   flex-direction: column;

@@ -27,7 +27,7 @@ const ShowcaseItem: React.FC<ShowcaseItemProps> = ({
         <div className={s.showcaseItem_author_icon}>
           <FiUser color="#999999" />
         </div>
-        <div className={s.showcaseItem_author_desc}>{author}</div>
+        <div className={classNames(s.showcaseItem_author_desc, 'text__light')}>{author}</div>
       </div>
     </div>
   );

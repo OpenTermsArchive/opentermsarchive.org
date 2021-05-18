@@ -2,7 +2,7 @@ import * as FeatherIcons from 'react-icons/fi';
 
 import React from 'react';
 import classNames from 'classnames';
-import s from './ButtonBloc.module.css';
+import s from './ButtonBlock.module.css';
 
 type ButtonBlocProps = {
   className?: string;
@@ -30,16 +30,16 @@ const ButtonBloc: React.FC<ButtonBlocProps> = ({
   return (
     <div
       className={classNames(
-        s.buttonBloc,
-        { [s.buttonBloc__fillParent]: fillParent === true },
+        s.buttonBlock,
+        { [s.buttonBlock__fillParent]: fillParent === true },
         className
       )}
       {...props}
     >
-      {icon ? <div className={classNames(s.buttonBloc_icon)}>{icon}</div> : undefined}
-      {title ? <h3 className={classNames(s.buttonBloc_title)}>{title}</h3> : undefined}
-      {desc ? <p className={classNames(s.buttonBloc_desc)}>{desc}</p> : undefined}
-      <div className={classNames(s.buttonBloc_actions)}>{children}</div>
+      {icon ? <div className={classNames(s.buttonBlock_icon)}>{icon}</div> : undefined}
+      {title ? <h3 className={classNames(s.buttonBlock_title)}>{title}</h3> : undefined}
+      {desc ? <p className={classNames(s.buttonBlock_desc)}>{desc}</p> : undefined}
+      <div className={classNames(s.buttonBlock_actions)}>{children}</div>
     </div>
   );
 };

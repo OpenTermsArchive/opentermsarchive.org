@@ -1,21 +1,21 @@
 @import '../styles/mixins';
 
-.buttonBlocList {
+.buttonBlockList {
 }
 
-.buttonBlocList_header {
+.buttonBlockList_header {
   text-align: center;
   @mixin grid 6, 5;
   margin: 0 auto;
 }
 
-.buttonBlocList_subtitle {
+.buttonBlockList_subtitle {
 }
 
-.buttonBlocList_title {
+.buttonBlockList_title {
 }
 
-.buttonBlocList_items {
+.buttonBlockList_items {
   @mixin grid 10, 9;
   margin: 0 auto;
   margin-top: var(--m2XL);
@@ -23,4 +23,8 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+
+  > div {
+    margin: 0 calc(var(--gridGutterWidth) / 2) var(--gridGutterWidth);
+  }
 }

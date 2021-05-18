@@ -1,8 +1,8 @@
 import Article from 'modules/Common/components/Article';
 import Aside from 'modules/Common/components/Aside';
 import Button from 'modules/Common/components/Button';
-import ButtonBloc from 'modules/Common/components/ButtonBloc';
-import ButtonBlocList from 'modules/Common/components/ButtonBlocList';
+import ButtonBlock from 'modules/Common/components/ButtonBlock';
+import ButtonBlockList from 'modules/Common/components/ButtonBlockList';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import FeatureItem from 'modules/Common/components/FeatureItem';
@@ -64,8 +64,8 @@ const DesignPage = () => {
       </Container>
 
       {/* Hero with background, darked, title and subtitle */}
-      <Container layout="wide" backgroundImage="/images/bg1.jpg" isDark={true}>
-        <Container gridCols="12" gridGutters="11" flex={true} padding={false}>
+      <Container layout="wide" backgroundImage="/images/bg1.jpg" isDark={true} paddingY={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
             title="Hero with background, dark, title and subtitle"
             subtitle="Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms."
@@ -74,8 +74,8 @@ const DesignPage = () => {
       </Container>
 
       {/* Hero with title and subtitle, without image background, no darked */}
-      <Container layout="wide">
-        <Container gridCols="12" gridGutters="11" flex={true} padding={false}>
+      <Container layout="wide" paddingY={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
             title="Hero with title and subtitle, without image background, no darked"
             subtitle="Minim ea sit commodo quis proident consequat dolor consequat deserunt aliquip fugiat ad ad sint. Exercitation aute commodo quis aliquip aute minim nostrud quis enim dolor laboris do enim. Fugiat veniam fugiat enim eu voluptate cillum ullamco proident eiusmod proident sunt. Fugiat mollit reprehenderit Lorem incididunt officia do ipsum ea aliqua. Do pariatur ea sit elit aute esse aliquip qui amet consequat tempor laborum. Ex laborum quis enim aliqua qui consequat duis mollit id quis ipsum. Anim enim ut et mollit qui consequat est aliquip id officia."
@@ -84,15 +84,15 @@ const DesignPage = () => {
       </Container>
 
       {/* Hero with title only */}
-      <Container layout="wide">
-        <Container gridCols="12" gridGutters="11" flex={true} padding={false}>
+      <Container layout="wide" paddingY={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero title="Hero with title only"></Hero>
         </Container>
       </Container>
 
       {/* Hero with subtitle only */}
-      <Container layout="wide">
-        <Container gridCols="12" gridGutters="11" flex={true} padding={false}>
+      <Container layout="wide" paddingY={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero subtitle="Hero with subtitle only"></Hero>
         </Container>
       </Container>
@@ -144,16 +144,16 @@ const DesignPage = () => {
 
       {/* Button Bloc List */}
       <Container gridCols="12" gridGutters="11">
-        <ButtonBlocList title="Want to help us build a digital common ?" subTitle="Contribute">
-          <ButtonBloc
+        <ButtonBlockList title="Want to help us build a digital common ?" subTitle="Contribute 2">
+          <ButtonBlock
             title="Add documents"
             desc="Easily and quickly add documents to follow."
             iconName="FiPlus"
             iconColor="#0496FF"
           >
             <Button href="https://www.google.fr">Je suis un bouton</Button>
-          </ButtonBloc>
-          <ButtonBloc
+          </ButtonBlock>
+          <ButtonBlock
             desc="Without title un button bloc avec un descirption un peu plus longue pour voir comment ça se comporte. Ouias ouias !"
             iconName="FiPlus"
             iconColor="#0496FF"
@@ -162,11 +162,11 @@ const DesignPage = () => {
             <LinkArrow iconColor="#999999" href="https://www.google.fr" small={true}>
               Another link
             </LinkArrow>
-          </ButtonBloc>
-          <ButtonBloc title="Un titre un peu plus long" desc="Un bloc sans icon">
+          </ButtonBlock>
+          <ButtonBlock title="Un titre un peu plus long" desc="Un bloc sans icon">
             <Button href="https://www.google.fr">Je suis un bouton</Button>
-          </ButtonBloc>
-          <ButtonBloc
+          </ButtonBlock>
+          <ButtonBlock
             desc="Without title un button bloc avec un descirption un peu plus longue pour voir comment ça se comporte. Ouias ouias !"
             iconName="FiPlus"
             iconColor="#0496FF"
@@ -175,21 +175,16 @@ const DesignPage = () => {
             <LinkArrow iconColor="#999999" href="https://www.google.fr" small={true}>
               Another link
             </LinkArrow>
-          </ButtonBloc>
-          <ButtonBloc title="Un titre un peu plus long" desc="Un bloc sans icon">
+          </ButtonBlock>
+          <ButtonBlock title="Un titre un peu plus long" desc="Un bloc sans icon">
             <Button href="https://www.google.fr">Je suis un bouton</Button>
-          </ButtonBloc>
-        </ButtonBlocList>
-        <ButtonBlocList title="Want to help us build a digital common ?" subTitle="Contribute">
-          <ButtonBloc title="Un titre un peu plus long" desc="Un bloc sans icon">
-            <Button href="https://www.google.fr">Je suis un bouton</Button>
-          </ButtonBloc>
-        </ButtonBlocList>
+          </ButtonBlock>
+        </ButtonBlockList>
       </Container>
 
       {/* Columns width 50/50, background image, darked, x center, y center*/}
-      <Container layout="wide" backgroundImage="/images/bg2.jpg">
-        <Container gridCols="12" gridGutters="11" flex={true} padding={false} isDark={true}>
+      <Container layout="wide" backgroundImage="/images/bg2.jpg" paddingY={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} isDark={true}>
           <Column width={50} alignX="center" alignY="center">
             <Logo fill="#fefffd" />
           </Column>
@@ -234,8 +229,8 @@ const DesignPage = () => {
       </Container>
 
       {/* Column width 75/25 */}
-      <Container layout="wide">
-        <Container gridCols="12" gridGutters="11" flex={true} padding={false}>
+      <Container layout="wide" paddingY={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={75} title="Un titre un peu plus long" subtitle="Culpa tempor">
             <TextContent>
               <p>
@@ -276,12 +271,9 @@ const DesignPage = () => {
         </Container>
       </Container>
 
-      {/*  */}
-      <Container gridCols="10" gridGutters="11" flex={true}>
+      {/* Showcase */}
+      <Container gridCols="10" gridGutters="11" flex={true} paddingY={false}>
         <Column width={50} title="Built in" subtitle="Showcase">
-          <TextContent>
-            <p>yoyo</p>
-          </TextContent>
           <ShowcaseList>
             <ShowcaseItem
               title="Scripta Manent"
@@ -304,13 +296,13 @@ const DesignPage = () => {
           </ShowcaseList>
         </Column>
         <Column width={50} alignX="center" alignY="center">
-          <ButtonBloc
+          <ButtonBlock
             title="Have you developed an Open Terms Archive based tool?"
             desc="Let the community know about it here"
             fillParent={true}
           >
             <Button href="https://www.google.fr">Contact us</Button>
-          </ButtonBloc>
+          </ButtonBlock>
         </Column>
       </Container>
     </Layout>

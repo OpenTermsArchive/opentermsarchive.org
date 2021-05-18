@@ -2,15 +2,17 @@
 
 .container {
   margin: 0 auto;
-
-  & + .container {
-    padding-top: var(--p4XL);
-    padding-bottom: var(--p3XL);
-  }
+  padding-top: var(--p4XL);
+  padding-bottom: var(--p3XL);
 
   @media (--gridPlus) {
     padding-left: var(--pL);
     padding-right: var(--pL);
+  }
+
+  @media (--tabletSmall) {
+    padding-top: var(--p3XL);
+    padding-bottom: var(--p2XL);
   }
 
   &__1211 {
@@ -99,7 +101,13 @@
     }
   }
 
-  &__hasNoPadding {
-    padding: 0;
+  &__hasNoPaddingX {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__hasNoPaddingY {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
