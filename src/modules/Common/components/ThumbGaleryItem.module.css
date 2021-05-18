@@ -1,0 +1,3 @@
+.thumbGaleryItem {
+  margin: 0 calc(var(--gridGutterWidth) / 2) var(--gridGutterWidth) calc(var(--gridGutterWidth) / 2);
+}

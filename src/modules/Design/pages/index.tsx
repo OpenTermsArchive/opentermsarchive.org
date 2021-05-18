@@ -16,6 +16,8 @@ import React from 'react';
 import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
 import ShowcaseList from 'modules/Common/components/ShowcaseList';
 import TextContent from 'modules/Common/components/TextContent';
+import ThumbGalery from 'modules/Common/components/ThumbGalery';
+import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
 
 const DesignPage = () => {
   return (
@@ -304,6 +306,16 @@ const DesignPage = () => {
             <Button href="https://www.google.fr">Contact us</Button>
           </ButtonBlock>
         </Column>
+      </Container>
+
+      <Container paddingY={false} gray={true} layout="fluid">
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+          <ThumbGalery title="Our Partners" subtitle="They make Open Terms Archive existing">
+            <ThumbGaleryItem src="/images/logo-ambnum.png" width="158" height="80" />
+            <ThumbGaleryItem src="/images/logo-gdi.png" width="150" height="32" />
+            <ThumbGaleryItem src="/images/logo-peren.png" width="110" height="84" />
+          </ThumbGalery>
+        </Container>
       </Container>
     </Layout>
   );

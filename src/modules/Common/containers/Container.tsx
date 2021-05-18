@@ -5,10 +5,11 @@ import s from './Container.module.css';
 type ContainerProps = {
   className?: string;
   layout?: 'boxed' | 'fluid' | 'wide';
-  flex?: true | false;
+  flex?: boolean;
   dark?: boolean;
-  paddingX?: true | false;
-  paddingY?: true | false;
+  gray?: boolean;
+  paddingX?: boolean;
+  paddingY?: boolean;
   gridCols?: string;
   gridGutters?: string;
   backgroundImage?: string;
@@ -22,6 +23,7 @@ const Container: React.FC<ContainerProps> = ({
   paddingX = true,
   paddingY = true,
   dark = false,
+  gray = false,
   gridCols = '12',
   gridGutters = '11',
   backgroundImage,
@@ -44,6 +46,7 @@ const Container: React.FC<ContainerProps> = ({
         { [s.container__hasBgImage]: backgroundImage !== undefined },
         { [s.container__flex]: flex === true },
         { [s.container__isDark]: dark === true },
+        { [s.container__isGray]: !!gray },
         { [s.container__hasNoPaddingX]: paddingX === false },
         { [s.container__hasNoPaddingY]: paddingY === false },
         s[`container__${gridCols}${gridGutters}`],
