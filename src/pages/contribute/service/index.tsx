@@ -1,8 +1,12 @@
-import { withI18n } from 'modules/I18n';
 import { getDocumentTypes } from 'modules/Github/api';
+import { withI18n } from 'modules/I18n';
 
 export { default } from 'modules/Contribute/pages/service';
 
-export const getStaticProps = withI18n(['contribute'])(async (props: any) => ({
-  props: { ...props, documentTypes: await getDocumentTypes() },
-}));
+export const getStaticProps = withI18n(['contribute'])(async (props: any) =>
+  JSON.parse(
+    JSON.stringify({
+      props: { ...props, documentTypes: await getDocumentTypes() },
+    })
+  )
+);

@@ -1,7 +1,7 @@
-import { SSRConfig } from 'next-i18next';
-
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
+
+import { SSRConfig } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 type HasCallback<T> = T extends undefined
   ? GetStaticProps<SSRConfig>
@@ -19,9 +19,11 @@ export const withI18n = (namespaces: string[]) => (callback?: GetStaticProps<SSR
     };
 
     if (!callback) {
-      return {
-        props: computedProps,
-      };
+      return JSON.parse(
+        JSON.stringify({
+          props: computedProps,
+        })
+      );
     }
 
     return callback(computedProps);
