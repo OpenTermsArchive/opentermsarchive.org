@@ -6,6 +6,7 @@ type ThumbGaleryProps = {
   title?: string;
   subtitle?: string;
   titleLevel?: 'h2' | 'h3' | 'h4';
+  small?: boolean;
   className?: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
@@ -14,6 +15,7 @@ const ThumbGalery: React.FC<ThumbGaleryProps> = ({
   title,
   subtitle,
   titleLevel = 'h2',
+  small = false,
   className,
   ...props
 }) => {
@@ -21,7 +23,10 @@ const ThumbGalery: React.FC<ThumbGaleryProps> = ({
   const hasTitle = title || subtitle;
 
   return (
-    <div className={classNames(s.thumbGalery, className)} {...props}>
+    <div
+      className={classNames(s.thumbGalery, { [s.thumbGalery__isSmall]: !!small }, className)}
+      {...props}
+    >
       {hasTitle && (
         <div className={s.thumbGalery_header}>
           <div className={classNames(s.thumbGalery_header)}>

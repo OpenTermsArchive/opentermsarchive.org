@@ -3,8 +3,10 @@
 .thumbGalery {
   margin: 0 auto;
 
-  &__isGray {
-    background-color: var(--colorBlack200);
+  &__isSmall {
+    .thumbGalery_items {
+      margin-top: var(--mL);
+    }
   }
 }
 
@@ -18,6 +20,7 @@
 }
 
 .thumbGalery_subtitle {
+  margin-top: var(--mXS);
 }
 
 .thumbGalery_items {

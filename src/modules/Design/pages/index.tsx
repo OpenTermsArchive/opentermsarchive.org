@@ -308,12 +308,36 @@ const DesignPage = () => {
         </Column>
       </Container>
 
-      <Container paddingY={false} gray={true} layout="fluid">
+      {/* Partners */}
+      <Container paddingY={false} layout="fluid">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <ThumbGalery title="Our Partners" subtitle="They make Open Terms Archive existing">
+          <ThumbGalery
+            title="Our Partners"
+            titleLevel="h3"
+            subtitle="They make Open Terms Archive existing"
+          >
             <ThumbGaleryItem src="/images/logo-ambnum.png" width="158" height="80" />
             <ThumbGaleryItem src="/images/logo-gdi.png" width="150" height="32" />
             <ThumbGaleryItem src="/images/logo-peren.png" width="110" height="84" />
+          </ThumbGalery>
+        </Container>
+      </Container>
+
+      {/* Press */}
+      <Container paddingY={false} gray={true} layout="fluid">
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingYSmall={true}>
+          <ThumbGalery
+            title="Press"
+            titleLevel="h4"
+            subtitle="They talk about Open Terms Archive"
+            small={true}
+          >
+            <ThumbGaleryItem src="/images/01net.png" width="75" height="32" small={true} />
+            <ThumbGaleryItem src="/images/labofnac.png" width="125" height="18" small={true} />
+            <ThumbGaleryItem src="/images/nextimpact.png" width="122" height="30" small={true} />
+            <ThumbGaleryItem src="/images/numerama.png" width="119" height="24" small={true} />
+            <ThumbGaleryItem src="/images/zdnet.png" width="76" height="50" small={true} />
+            <ThumbGaleryItem src="/images/wired.png" width="112" height="20" small={true} />
           </ThumbGalery>
         </Container>
       </Container>

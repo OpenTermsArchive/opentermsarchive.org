@@ -114,4 +114,9 @@
     padding-top: 0;
     padding-bottom: 0;
   }
+
+  &__hasPaddingYSmall {
+    padding-top: var(--p2XL);
+    padding-bottom: var(--pL);
+  }
 }

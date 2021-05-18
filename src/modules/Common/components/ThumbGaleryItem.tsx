@@ -7,6 +7,7 @@ type ThumbGaleryItemProps = {
   width: string;
   height: string;
   src: string;
+  small?: boolean;
   className?: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
@@ -15,11 +16,19 @@ const ThumbGaleryItem: React.FC<ThumbGaleryItemProps> = ({
   width,
   height,
   src,
+  small = false,
   className,
   ...props
 }) => {
   return (
-    <div className={classNames(s.thumbGaleryItem, className)} {...props}>
+    <div
+      className={classNames(
+        s.thumbGaleryItem,
+        { [s.thumbGaleryItem__isSmall]: !!small },
+        className
+      )}
+      {...props}
+    >
       <Image src={src} width={width} height={height} />
       {children}
     </div>
