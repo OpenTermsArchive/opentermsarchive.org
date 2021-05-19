@@ -18,11 +18,43 @@ import ShowcaseList from 'modules/Common/components/ShowcaseList';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
+import { useAsync } from 'react-use';
 import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
 
 const HomePage = () => {
   const { t } = useTranslation('common');
+
+  //Get services list
+  const services = useAsync(async () => {
+    const response = await fetch(
+      'https://disinfo.quaidorsay.fr/api/open-terms-archive/list_services/v1/?multiple_versions_only=false'
+    );
+    const result = await response.json();
+    return result;
+  });
+
+  //Format services and docs feature item title
+  let nbServicesTitle = t('common:home_page.how.feature2.defaultTitle', 'Many services');
+  let nbDocsTitle = t('common:home_page.how.feature3.defaultTitle', 'Many documents');
+
+  //When services loaded
+  if (services.value) {
+    //Get services number and format title
+    const nbServices = Object.keys(services.value).length.toString();
+    nbServicesTitle = nbServices.concat(
+      t('common:home_page.how.feature2.dynamicTitle', ' services')
+    );
+
+    //Browse services to count documents and format title
+    let nbDocs = 0;
+    Object.entries(services.value).forEach(([service, docs]) => {
+      nbDocs += docs.length;
+    });
+    nbDocsTitle = nbDocs
+      .toString()
+      .concat(t('common:home_page.how.feature3.dynamicTitle', ' documents'));
+  }
 
   return (
     <Layout>
@@ -89,7 +121,7 @@ const HomePage = () => {
             />
             <FeatureItem
               iconName="FiBox"
-              title={t('common:home_page.how.feature2.title', '180 services')}
+              title={nbServicesTitle}
               desc={t(
                 'common:home_page.how.feature2.desc',
                 'Google, Amazon, Apple, AirBnB, Facebook, Twitter, Instagram, Bing, Microsoft, Reddit, Youtube, TikTok...'
@@ -97,7 +129,7 @@ const HomePage = () => {
             />
             <FeatureItem
               iconName="FiFile"
-              title={t('common:home_page.how.feature3.title', '540 documents')}
+              title={nbDocsTitle}
               desc={t(
                 'common:home_page.how.feature3.desc',
                 'Terms of Service, Privacy Policy, Trackers Policy, Developer Terms, Community Guidelines...'

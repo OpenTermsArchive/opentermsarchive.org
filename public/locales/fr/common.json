@@ -6,9 +6,7 @@
   "home_page.how.title": "Comment fonctionne OTA ?",
   "home_page.how.feature1.title": "Open Source",
   "home_page.how.feature1.desc": "Logiciel libre et collaboratif, toute entité peut contribuer à l'améliorer",
-  "home_page.how.feature2.title": "180 services",
   "home_page.how.feature2.desc": "Google, Amazon, Apple, AirBnB, Facebook, Twitter, Instagram, Bing, Microsoft, Reddit, Youtube, TikTok...",
-  "home_page.how.feature3.title": "540 documents",
   "home_page.how.feature3.desc": "Conditions d'utilisation, Politique de confidentialité, Politique relative aux traceurs, Conditions des développeurs, Directives de la communauté...",
   "home_page.how.id": "how",
   "home_page.contribute.id": "contribute",
@@ -49,5 +47,9 @@
   "home_page.press.subtitle": "Ils parlent de l'archive des termes ouverts",
   "home_page.contribute.buttonbloc1.desc": "Easily and quickly add documents to follow.",
   "home_page.contribute.buttonbloc2.desc": "Add features, write tests, fix bugs, help us make better code.",
-  "home_page.contribute.buttonbloc3.desc": "Design your use cases using the data via the API."
+  "home_page.contribute.buttonbloc3.desc": "Design your use cases using the data via the API.",
+  "home_page.how.feature2.defaultTitle": "Many services",
+  "home_page.how.feature3.defaultTitle": "Many documents",
+  "home_page.how.feature2.dynamicTitle": " services",
+  "home_page.how.feature3.dynamicTitle": " documents"
 }
