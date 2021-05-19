@@ -11,7 +11,7 @@
 
   &__isOpen {
     & > .header_menus {
-      transition: 0.3s all;
+      transition: 0.5s all easeOutCirc;
 
       transform: translateX(0);
     }
@@ -51,8 +51,7 @@
   }
 
   @media (--tabletLarge) {
-    transition: 0.3s all;
-
+    transition: 0.3s all easeOutExpo;
     transform: translateX(100%);
     background-color: var(--colorSecondary);
     position: fixed;
@@ -80,6 +79,11 @@
       &:last-child {
         margin-top: auto;
         margin-bottom: var(--mXL);
+        flex-direction: column;
+
+        > div {
+          margin-bottom: var(--mL);
+        }
       }
     }
   }

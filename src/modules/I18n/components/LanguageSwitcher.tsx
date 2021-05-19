@@ -1,7 +1,11 @@
+import { FiArrowDown, FiChevronDown } from 'react-icons/fi';
+
 import Link from 'next/link';
 import React from 'react';
+import classNames from 'classnames';
 import s from './LanguageSwitcher.module.css';
 import { useRouter } from 'next/router';
+import { useToggle } from 'react-use';
 
 interface LanguageSwitcherProps {
   // TODO
@@ -13,25 +17,35 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps & React.HTMLAttributes<HT
   ...props
 }) => {
   const router = useRouter();
+  const [open, toggleExtended] = useToggle(false);
 
   return (
-    <div className={s.wrapper} {...props}>
-      {router.locales
-        // https://github.com/vercel/next.js/discussions/18419
-        // TO BE REMOVED alog with catchAll when this feature request is done
-        ?.filter((locale) => locale !== 'catchAll')
-        ?.map((locale) => (
-          <React.Fragment key={locale}>
-            {locale === router.locale ? (
-              locale
-            ) : (
-              <Link href={router.pathname} locale={locale}>
-                {locale}
-              </Link>
-            )}{' '}
-          </React.Fragment>
-        ))}
-      {children}
+    <div
+      className={classNames(s.languageSwitcher, {
+        [s.languageSwitcher__isOpen]: open,
+      })}
+      {...props}
+    >
+      <button className={s.languageSwitcher_current} onClick={toggleExtended}>
+        {router?.locale?.toUpperCase()}
+        <FiChevronDown color="#999999" />
+      </button>
+
+      <div className={s.languageSwitcher_items}>
+        {router.locales
+          // https://github.com/vercel/next.js/discussions/18419
+          // TO BE REMOVED alog with catchAll when this feature request is done
+          ?.filter((locale) => locale !== 'catchAll' && locale !== router.locale)
+          ?.map((locale) => (
+            <React.Fragment key={locale}>
+              <div className={s.languageSwitcher_item} onClick={toggleExtended}>
+                <Link href={router.pathname} locale={locale}>
+                  {locale.toUpperCase()}
+                </Link>
+              </div>
+            </React.Fragment>
+          ))}
+      </div>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 .headerMenu {
   display: flex;
+  align-items: center;
 
   > ul {
     display: flex;
