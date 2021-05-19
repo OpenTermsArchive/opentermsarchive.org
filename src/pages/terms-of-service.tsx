@@ -1,21 +1,12 @@
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Layout from 'modules/Common/containers/Layout';
+// import { useTranslation } from 'next-i18next';
+import { withI18n } from 'modules/I18n';
 
 const TermsOfServicePage = () => {
-  const { t } = useTranslation('common');
-  return (
-    <Layout>
-      <h1>{t('title')}</h1>
-      <h2>{t('description')}</h2>
-    </Layout>
-  );
+  // const { t } = useTranslation('common');
+  return <Layout>TODO</Layout>;
 };
 
-export const getStaticProps = async ({ locale }: { locale: any }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ['common', 'footer'])),
-  },
-});
+export const getStaticProps = withI18n(['common'])();
 
 export default TermsOfServicePage;

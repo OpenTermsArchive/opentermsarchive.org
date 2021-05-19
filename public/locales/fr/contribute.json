@@ -9,7 +9,6 @@
   "service_page.description2": "Pour y parvenir, vous devrez sélectionner la partie des documents qui contient la partie pertinente et supprimer les parties insignifiantes.",
   "service_page.error.cta": "Laissez-nous savoir !",
   "service_page.error.title": "Nous sommes désolés, une erreur est survenue",
-  "page_service.expertMode": "Mode expert",
   "service_page.help": "Besoin d'aide ?",
   "service_page.loading.subtitle": "Cela prend généralement entre 5s et 30s",
   "service_page.loading.title": "Nous préparons le site Web",
@@ -30,5 +29,6 @@
   "thanks_page.cta": "Ajouter un autre document",
   "thanks_page.explanation": "Il vous suffit de nous envoyer l'email (une popup aurait dû s'ouvrir) et nous vous informerons dès que le service sera intégré au système",
   "thanks_page.subtitle": "Merci pour votre contribution",
-  "thanks_page.title": "Merci"
+  "thanks_page.title": "Merci",
+  "service_page.expertMode": "Expert Mode"
 }
