@@ -1,5 +1,4 @@
-import { FiArrowDown, FiChevronDown } from 'react-icons/fi';
-
+import { FiChevronDown } from 'react-icons/fi';
 import Link from 'next/link';
 import React from 'react';
 import classNames from 'classnames';
