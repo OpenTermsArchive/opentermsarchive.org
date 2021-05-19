@@ -1,5 +1,44 @@
 .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  padding-top: var(--pL);
+  padding-bottom: var(--pL);
+  border: 1px solid red;
+
+  @media (--gridPlus) {
+    padding-left: var(--pL);
+    padding-right: var(--pL);
+  }
 }
 
-.header_content {
+.header_logo {
+  border: 1px solid blue;
+}
+
+.header_menus {
+  border: 1px solid red;
+  flex-grow: 1;
+  display: flex;
+
+  > nav {
+    &:first-child {
+      border: 1px solid black;
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+
+      > ul {
+        > li {
+          margin: 0 var(--mS);
+        }
+      }
+    }
+
+    &:last-child {
+      border: 1px solid yellow;
+      margin-left: auto;
+    }
+  }
 }

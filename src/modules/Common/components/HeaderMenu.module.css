@@ -1,0 +1,7 @@
+.headerMenu {
+  display: flex;
+
+  > ul {
+    display: flex;
+  }
+}

@@ -1,0 +1,12 @@
+.icon_github_circle {
+  background-color: var(--colorBlack400);
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > svg {
+  }
+}

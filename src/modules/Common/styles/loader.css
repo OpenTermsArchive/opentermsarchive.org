@@ -6,6 +6,7 @@
 
 /* Import elements styles */
 @import 'elements/fonts.css';
+@import 'elements/icons.css';
 @import 'elements/inline.css';
 @import 'elements/titles.css';
 @import 'elements/links.css';
