@@ -3,5 +3,25 @@
 
   > ul {
     display: flex;
+
+    > li {
+      margin: 0 var(--mS);
+    }
+  }
+
+  @media (--tabletLarge) {
+    > ul {
+      width: 100%;
+
+      > li {
+        width: 100%;
+        margin: var(--mS) auto;
+
+        a {
+          color: var(--colorWhite);
+          display: inline-flex;
+        }
+      }
+    }
   }
 }
