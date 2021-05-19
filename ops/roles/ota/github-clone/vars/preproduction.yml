@@ -1,5 +1,5 @@
 app: 'ota-org-preproduction'
 repository: 'https://github.com/ambanum/OpenTermsArchive.org.git'
-branch: 'develop'
+branch: 'feat/websiteorg'
 app_port: '7022'
 env_file: '.env.preproduction'
