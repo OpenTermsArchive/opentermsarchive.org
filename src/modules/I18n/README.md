@@ -40,8 +40,16 @@ module.exports = {
 ```
     "i18n": "yarn i18n:extract && yarn i18n:clean && echo '\n⚠️  You may need to restart your dev server\n'",
     "i18n:extract": "NODE_ENV=development i18next-scanner --config 'src/modules/I18n/i18next-scanner.config.js'",
-    "i18n:clean": "find public/locales -size 3c -delete",
+    "i18n:clean": "find public/locales -size 3c -delete && rm -Rf public/locales/catchAll",
+```
 
+5. replace build script
+
+Because next will create all pages on build, it will complain of not having the catchAll route which we do not want to keep using
+So we simply temporarily copy it and remove it after generation
+
+```
+    "build": "cp -R public/locales/en public/locales/catchAll && next build && tsc --project tsconfig.server.json && rm -Rf public/locales/catchAll",
 ```
 
 ## usage

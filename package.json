@@ -4,7 +4,7 @@
   "prettier": "prettier-config-ambanum",
   "scripts": {
     "dev": "ts-node --project tsconfig.server.json src/server/index.ts",
-    "build": "next build && tsc --project tsconfig.server.json",
+    "build": "cp -R public/locales/en public/locales/catchAll && next build && tsc --project tsconfig.server.json && rm -Rf public/locales/catchAll",
     "start": "NODE_ENV=production node dist/index.js",
     "type-check": "tsc",
     "update-cookie-extension": "src/modules/Scraper/i-dont-care-about-cookies/tools/copy-to-folder.sh",
@@ -22,7 +22,7 @@
     "docker:ssh": "docker exec -it opentermsarchive.org /bin/sh",
     "i18n": "yarn i18n:extract && yarn i18n:clean && echo '\n⚠️  You may need to restart your dev server\n'",
     "i18n:extract": "NODE_ENV=development i18next-scanner --config 'src/modules/I18n/i18next-scanner.config.js'",
-    "i18n:clean": "find public/locales -size 3c -delete",
+    "i18n:clean": "find public/locales -size 3c -delete && rm -Rf public/locales/catchAll",
     "test": "jest",
     "prepare": "husky install",
     "prettier": "prettier --write ."
