@@ -9,7 +9,7 @@ import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import FeatureItem from 'modules/Common/components/FeatureItem';
 import FeatureList from 'modules/Common/components/FeatureList';
-import Footer from 'modules/Common/components/Footer';
+import Footer from 'modules/Common/containers/Footer';
 import FooterMenu from 'modules/Common/components/FooterMenu';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
@@ -343,64 +343,6 @@ const DesignPage = () => {
             <ThumbGaleryItem src="/images/zdnet.png" width="76" height="50" small={true} />
             <ThumbGaleryItem src="/images/wired.png" width="112" height="20" small={true} />
           </ThumbGalery>
-        </Container>
-      </Container>
-
-      {/* Footer */}
-      <Container paddingY={false} gray={true} layout="fluid">
-        <Container
-          gridCols="12"
-          gridGutters="11"
-          flex={true}
-          paddingX={false}
-          paddingY={true}
-          paddingYSmall={true}
-        >
-          <Footer>
-            <FooterMenu>
-              <ul>
-                <li>
-                  <Link href="/">Home</Link>
-                </li>
-                <li>
-                  <Link href="/#how">How ?</Link>
-                </li>
-                <li>
-                  <Link href="/#contribute">Contribute</Link>
-                </li>
-                <li>
-                  <Link href="/#values">Values</Link>
-                </li>
-                <li>
-                  <Link href="/#built-with">Build with</Link>
-                </li>
-                <li>
-                  <Link href="https://disinfo.quaidorsay.fr/api/open-terms-archive/docs">API</Link>
-                </li>
-                <li>
-                  <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
-                    Dataset
-                  </Link>
-                </li>
-              </ul>
-            </FooterMenu>
-            <FooterMenu small={true}>
-              <ul>
-                <li>
-                  <Link href="/">Terms and conditions</Link>
-                </li>
-                <li>
-                  <Link href="/">Privacy Policy</Link>
-                </li>
-                <li>
-                  <Link href="/">Sitemap</Link>
-                </li>
-                <li>
-                  <Link href="https://github.com/ambanum/OpenTermsArchive">GitHub</Link>
-                </li>
-              </ul>
-            </FooterMenu>
-          </Footer>
         </Container>
       </Container>
     </Layout>

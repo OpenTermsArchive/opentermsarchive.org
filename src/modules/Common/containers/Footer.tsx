@@ -1,11 +1,17 @@
+import Logo from '../components/Logo';
 import React from 'react';
+import classNames from 'classnames';
 import s from './Footer.module.css';
-import Container from './Container';
 
-const Footer = () => {
+type FooterProps = {
+  className?: string;
+} & React.HTMLAttributes<HTMLDivElement>;
+
+const Footer: React.FC<FooterProps> = ({ children, className, ...props }) => {
   return (
-    <footer className={s.footer}>
-      <Container className={s.footer_content}>Footer 123</Container>
+    <footer className={classNames(s.footer, className)} {...props}>
+      <Logo />
+      <div className={classNames(s.footer_menus)}>{children}</div>
     </footer>
   );
 };
