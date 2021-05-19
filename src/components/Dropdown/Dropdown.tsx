@@ -1,5 +1,5 @@
-import classNames from 'classnames';
 import React from 'react';
+import classNames from 'classnames';
 import s from './Dropdown.module.css';
 
 export const DropdownContext = React.createContext({});
@@ -28,7 +28,7 @@ const Dropdown: React.FC<DropdownProps> = ({ children, className, title, ...prop
   );
 };
 
-export type DropdownItemProps = {} & React.HTMLAttributes<HTMLUListElement>;
+export type DropdownItemProps = {} & React.HTMLAttributes<HTMLLIElement>;
 
 const DropdownItem: React.FC<DropdownItemProps> = ({ children, ...props }) => {
   return <li {...props}>{children}</li>;

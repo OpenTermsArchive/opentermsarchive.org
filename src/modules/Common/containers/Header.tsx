@@ -16,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ children, className, ...props }) => {
   useLockBodyScroll(open);
 
   return (
-    <header className={classNames(s.header, { [s.header__isOpen]: open })}>
+    <header className={classNames(s.header, { [s.header__isOpen]: open })} {...props}>
       <div className={s.header_logo}>
         <Link href="/">
           <Logo />

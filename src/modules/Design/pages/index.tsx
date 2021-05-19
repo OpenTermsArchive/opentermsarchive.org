@@ -1,5 +1,3 @@
-import { FiArrowRightCircle, FiGithub } from 'react-icons/fi';
-
 import Article from 'modules/Common/components/Article';
 import Aside from 'modules/Common/components/Aside';
 import Button from 'modules/Common/components/Button';
@@ -9,11 +7,9 @@ import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import FeatureItem from 'modules/Common/components/FeatureItem';
 import FeatureList from 'modules/Common/components/FeatureList';
-import Footer from 'modules/Common/containers/Footer';
-import FooterMenu from 'modules/Common/components/FooterMenu';
+import { FiArrowRightCircle } from 'react-icons/fi';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
-import Link from 'next/link';
 import LinkArrow from 'modules/Common/components/LinkArrow';
 import Logo from 'modules/Common/components/Logo';
 import React from 'react';
