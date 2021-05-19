@@ -4,13 +4,13 @@ import s from './ButtonBlockList.module.css';
 
 type ButtonBlocListProps = {
   className?: string;
-  subTitle: string;
+  subtitle: string;
   title: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const ButtonBlocList: React.FC<ButtonBlocListProps> = ({
   children,
-  subTitle,
+  subtitle: subTitle,
   title,
   className,
   ...props
