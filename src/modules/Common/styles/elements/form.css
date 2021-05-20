@@ -1,0 +1,37 @@
+@import '../styles/mixins';
+input,
+select,
+textarea {
+  font-size: 1.6rem;
+  border-radius: 4px;
+  background-color: var(--colorWhite);
+  padding: var(--pS) var(--pM);
+  border: 1px solid var(--colorBlack400);
+  width: 100%;
+
+  &::placeholder {
+    color: var(--colorBlack400);
+  }
+
+  /* TODO size modifier */
+}
+
+label {
+  color: var(--color1-600);
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  margin-bottom: var(--mXS);
+}
+
+.formfield {
+  width: 100%;
+
+  & + .formfield {
+    margin-top: var(--mL);
+  }
+
+  &__alignRight {
+    text-align: right;
+  }
+}

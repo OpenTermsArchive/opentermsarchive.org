@@ -34,14 +34,19 @@ const Search = ({
 
   return (
     <div className={classNames(className)} {...props}>
-      <p>{label && <label>{label}</label>}</p>
-      <input
-        placeholder={placeholder}
-        type="search"
-        name="search-input-input"
-        onChange={handleChange}
-      />
-      <Button onClick={handleSubmit}>{buttonLabel}</Button>
+      <div className={classNames('formfield')}>
+        {label && <label htmlFor="url">{label}</label>}
+        <input
+          placeholder={placeholder}
+          type="search"
+          name="search-input-input"
+          onChange={handleChange}
+          id="url"
+        />
+      </div>
+      <div className={classNames('formfield', 'formfield__alignRight')}>
+        <Button onClick={handleSubmit}>{buttonLabel}</Button>
+      </div>
     </div>
   );
 };

@@ -8,6 +8,7 @@ type ContainerProps = {
   flex?: boolean;
   dark?: boolean;
   gray?: boolean;
+  bgColor?: string;
   paddingX?: boolean;
   paddingY?: boolean;
   paddingYSmall?: boolean;
@@ -26,17 +27,20 @@ const Container: React.FC<ContainerProps> = ({
   paddingYSmall = false,
   dark = false,
   gray = false,
+  bgColor,
   gridCols = '12',
   gridGutters = '11',
   backgroundImage,
   ...props
 }: ContainerProps) => {
   let additionnalStyle: any = {};
-  if (backgroundImage !== undefined) {
-    additionnalStyle = {
-      backgroundImage: `url(${backgroundImage})`,
-    };
+  if (backgroundImage) {
+    additionnalStyle.backgroundImage = `url(${backgroundImage})`;
   }
+  if (bgColor) {
+    additionnalStyle.backgroundColor = bgColor;
+  }
+  console.log(additionnalStyle);
 
   return (
     <div

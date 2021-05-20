@@ -5,6 +5,10 @@
     margin-bottom: var(--mM);
   }
 
+  h2 {
+    margin-bottom: var(--mXL);
+  }
+
   ul {
     margin-left: var(--mL);
   }

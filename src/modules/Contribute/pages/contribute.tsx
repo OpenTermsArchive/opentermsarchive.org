@@ -1,4 +1,4 @@
-import Search, { SearchProps } from 'components/Search';
+import Search, { SearchProps } from 'components/Search/Search';
 
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
@@ -31,7 +31,7 @@ const ContributePage = () => {
   return (
     <Layout>
       {/* Hero */}
-      <Container layout="wide" paddingY={false}>
+      <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
             title={t('contribute:home_page.title', 'Contributing to Open Terms ArchiveBETA')}
@@ -40,21 +40,18 @@ const ContributePage = () => {
         </Container>
       </Container>
 
-      {/* Column width 75/25 */}
       <Container paddingY={false}>
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingYSmall={true}>
-          <Column width={75}>
-            <TextContent>
-              <Search
-                label={t(
-                  'contribute:home_page.search.label',
-                  'First step, please fill the URL to track'
-                )}
-                buttonLabel={t('contribute:home_page.search.button', 'Next')}
-                placeholder="https://www.amazon.com/gp/help/customer/display.html?nodeId=13819201"
-                onSearchSubmit={onSubmit}
-              />
-            </TextContent>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+          <Column width={100}>
+            <Search
+              label={t(
+                'contribute:home_page.search.label',
+                'First step, please fill the URL to track'
+              )}
+              buttonLabel={t('contribute:home_page.search.button', 'Next')}
+              placeholder="https://www.amazon.com/gp/help/customer/display.html?nodeId=13819201"
+              onSearchSubmit={onSubmit}
+            />
           </Column>
         </Container>
       </Container>
