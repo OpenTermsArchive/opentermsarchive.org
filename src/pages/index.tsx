@@ -1,5 +1,3 @@
-import { Trans, useTranslation } from 'next-i18next';
-
 import Article from 'modules/Common/components/Article';
 import Aside from 'modules/Common/components/Aside';
 import Button from 'modules/Common/components/Button';
@@ -20,6 +18,7 @@ import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
 import { getServices } from 'modules/Common/api/ota/services';
+import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
 
 const HomePage = ({ services }: any) => {

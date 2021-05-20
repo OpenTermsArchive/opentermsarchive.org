@@ -6,12 +6,16 @@ import Logo from 'modules/Common/components/Logo';
 import React from 'react';
 import classNames from 'classnames';
 import s from './Header.module.css';
+import { useTranslation } from 'next-i18next';
+import { withI18n } from 'modules/I18n';
 
 type HeaderProps = {
   className?: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const Header: React.FC<HeaderProps> = ({ children, className, ...props }) => {
+  const { t } = useTranslation('common');
+
   const [open, toggleExtended] = useToggle(false);
   useLockBodyScroll(open);
 
@@ -19,16 +23,18 @@ const Header: React.FC<HeaderProps> = ({ children, className, ...props }) => {
     <header className={classNames(s.header, { [s.header__isOpen]: open })} {...props}>
       <div className={s.header_logo}>
         <Link href="/">
-          <Logo />
+          <a>
+            <Logo />
+          </a>
         </Link>
       </div>
       <div className={classNames(s.header_menus)}>{children}</div>
 
       <button type="button" className={classNames(s.header_openLink)} onClick={toggleExtended}>
-        Menu
+        {t('common:header.open', 'Menu')}
       </button>
       <button type="button" className={classNames(s.header_closeLink)} onClick={toggleExtended}>
-        Close
+        {t('common:header.close', 'Close')}
         <FiX color="#fefffd" />
       </button>
     </header>
