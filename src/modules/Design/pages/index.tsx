@@ -146,7 +146,7 @@ const DesignPage = () => {
 
       {/* Button Bloc List */}
       <Container gridCols="12" gridGutters="11">
-        <ButtonBlockList title="Want to help us build a digital common ?" subTitle="Contribute 2">
+        <ButtonBlockList title="Want to help us build a digital common ?" subtitle="Contribute 2">
           <ButtonBlock
             title="Add documents"
             desc="Easily and quickly add documents to follow."

@@ -10,7 +10,6 @@ import FeatureList from 'modules/Common/components/FeatureList';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
-import Link from 'next/link';
 import LinkArrow from 'modules/Common/components/LinkArrow';
 import Logo from 'modules/Common/components/Logo';
 import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
@@ -18,42 +17,27 @@ import ShowcaseList from 'modules/Common/components/ShowcaseList';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
-import { useAsync } from 'react-use';
+import { getServices } from 'modules/Common/api/ota/services';
 import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
 
-const HomePage = () => {
+const HomePage = ({ services }: any) => {
   const { t } = useTranslation('common');
 
-  //Get services list
-  const services = useAsync(async () => {
-    const response = await fetch(
-      'https://disinfo.quaidorsay.fr/api/open-terms-archive/list_services/v1/?multiple_versions_only=false'
-    );
-    const result = await response.json();
-    return result;
-  });
-
-  //Format services and docs feature item title
+  // Format services and docs feature item title
   let nbServicesTitle = t('common:home_page.how.feature2.defaultTitle', 'Many services');
   let nbDocsTitle = t('common:home_page.how.feature3.defaultTitle', 'Many documents');
 
-  //When services loaded
-  if (services.value) {
-    //Get services number and format title
-    const nbServices = Object.keys(services.value).length.toString();
-    nbServicesTitle = nbServices.concat(
-      t('common:home_page.how.feature2.dynamicTitle', ' services')
-    );
-
-    //Browse services to count documents and format title
-    let nbDocs = 0;
-    Object.entries(services.value).forEach(([service, docs]) => {
-      nbDocs += docs.length;
+  if (services) {
+    const nbServices = Object.keys(services).length;
+    nbServicesTitle = t('common:home_page.how.feature2.dynamicTitle', '{{count}} services', {
+      count: nbServices,
     });
-    nbDocsTitle = nbDocs
-      .toString()
-      .concat(t('common:home_page.how.feature3.dynamicTitle', ' documents'));
+
+    const nbDocuments = Object.values(services).flat().length;
+    nbDocsTitle = t('common:home_page.how.feature3.dynamicTitle', '{{count}} documents', {
+      count: nbDocuments,
+    });
   }
 
   return (
@@ -389,6 +373,9 @@ const HomePage = () => {
   );
 };
 
-export const getStaticProps = withI18n(['common'])();
+export const getStaticProps = withI18n(['common'])(async (props: any) => {
+  const services = await getServices();
+  return JSON.parse(JSON.stringify({ props: { ...props, services } }));
+});
 
 export default HomePage;

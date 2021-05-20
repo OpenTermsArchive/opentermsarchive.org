@@ -50,6 +50,6 @@
   "home_page.contribute.buttonbloc3.desc": "Design your use cases using the data via the API.",
   "home_page.how.feature2.defaultTitle": "Many services",
   "home_page.how.feature3.defaultTitle": "Many documents",
-  "home_page.how.feature2.dynamicTitle": " services",
-  "home_page.how.feature3.dynamicTitle": " documents"
+  "home_page.how.feature2.dynamicTitle_0": "{{count}} services",
+  "home_page.how.feature3.dynamicTitle_0": "{{count}} documents"
 }
