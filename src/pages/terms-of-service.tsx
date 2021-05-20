@@ -1,12 +1,18 @@
+import { WithI18nResult, withI18n } from 'modules/I18n';
+
+import Container from 'modules/Common/containers/Container';
 import Layout from 'modules/Common/containers/Layout';
-// import { useTranslation } from 'next-i18next';
-import { withI18n } from 'modules/I18n';
+import { MDXRemote } from 'next-mdx-remote';
+import React from 'react';
 
-const TermsOfServicePage = () => {
-  // const { t } = useTranslation('common');
-  return <Layout>TODO</Layout>;
-};
+export default function TermsOfServicePage({ mdxContent }: WithI18nResult) {
+  return (
+    <Layout>
+      <Container gridCols="12" gridGutters="11" paddingX={false}>
+        <MDXRemote {...(mdxContent as any)} components={{}} />
+      </Container>
+    </Layout>
+  );
+}
 
-export const getStaticProps = withI18n(['common'])();
-
-export default TermsOfServicePage;
+export const getStaticProps = withI18n({ load: 'mdx' })();
