@@ -380,7 +380,7 @@ const HomePage = ({ services }: any) => {
   );
 };
 
-export const getStaticProps = withI18n(['common'])(async (props: any) => {
+export const getStaticProps = withI18n()(async (props: any) => {
   const services = await getServices();
   return JSON.parse(JSON.stringify({ props: { ...props, services } }));
 });

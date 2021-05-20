@@ -63,7 +63,7 @@ You can use it with
 ```
 import { withI18n } from 'modules/I18n';
 
-export const getStaticProps = withI18n(['common', 'footer'])();
+export const getStaticProps = withI18n()();
 ```
 
 or if you need some more treatment
@@ -71,7 +71,7 @@ or if you need some more treatment
 ```
 import { withI18n } from 'modules/I18n';
 
-export const getStaticProps = withI18n(['common', 'footer'])(async (props: any) => {
+export const getStaticProps = withI18n()(async (props: any) => {
   // do something
   return {
     props,
@@ -105,6 +105,33 @@ export const getStaticProps = async ({ locale }) => ({
   menus, possibly ads… We aim at tracking only{' '}
   <strong>the significant parts of the document</strong>
 </Trans>
+```
+
+### translate complete files with mdx
+
+You can use the helper `withI18n` to ask for content of mdx files that are located in the same folder and with the name structure `<filename>.<lang>.mdx`
+
+Then you can use it as you like or with this example
+
+```
+import { WithI18nResult, withI18n } from 'modules/I18n';
+
+import Container from 'modules/Common/containers/Container';
+import Layout from 'modules/Common/containers/Layout';
+import { MDXRemote } from 'next-mdx-remote';
+import React from 'react';
+
+export default function TermsOfServicePage({ mdxContent }: WithI18nResult) {
+  return (
+    <Layout>
+      <Container gridCols="12" gridGutters="11" paddingX={false}>
+        <MDXRemote {...(mdxContent as any)} components={{}} />
+      </Container>
+    </Layout>
+  );
+}
+
+export const getStaticProps = withI18n({ load: 'mdx' })();
 ```
 
 ## generate translation files
