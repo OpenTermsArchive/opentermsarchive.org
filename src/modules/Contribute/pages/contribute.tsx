@@ -1,5 +1,10 @@
 import Search, { SearchProps } from 'components/Search';
+
+import Column from 'modules/Common/components/Column';
+import Container from 'modules/Common/containers/Container';
+import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
+import TextContent from 'modules/Common/components/TextContent';
 import { useEvent } from 'react-use';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
@@ -25,14 +30,34 @@ const ContributePage = () => {
 
   return (
     <Layout>
-      <h1>{t('contribute:home_page.title', 'Contribute')}</h1>
-      <h2>{t('contribute:home_page.subtitle', 'We need you!')}</h2>
-      <Search
-        label={t('contribute:home_page.search.label', 'First step, please fill the URL to track')}
-        buttonLabel={t('contribute:home_page.search.button', 'Next')}
-        placeholder="https://www.amazon.com/gp/help/customer/display.html?nodeId=13819201"
-        onSearchSubmit={onSubmit}
-      />
+      {/* Hero */}
+      <Container layout="wide" paddingY={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+          <Hero
+            title={t('contribute:home_page.title', 'Contributing to Open Terms ArchiveBETA')}
+            subtitle={t('contribute:home_page.subtitle', 'Thanks for helping')}
+          ></Hero>
+        </Container>
+      </Container>
+
+      {/* Column width 75/25 */}
+      <Container paddingY={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingYSmall={true}>
+          <Column width={75}>
+            <TextContent>
+              <Search
+                label={t(
+                  'contribute:home_page.search.label',
+                  'First step, please fill the URL to track'
+                )}
+                buttonLabel={t('contribute:home_page.search.button', 'Next')}
+                placeholder="https://www.amazon.com/gp/help/customer/display.html?nodeId=13819201"
+                onSearchSubmit={onSubmit}
+              />
+            </TextContent>
+          </Column>
+        </Container>
+      </Container>
     </Layout>
   );
 };

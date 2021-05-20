@@ -89,9 +89,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
                   <Link href="/">{t('common.footer.link.home', 'Home')}</Link>
                 </li>
                 <li>
-                  <Link href={'/#'.concat(t('common:home_page.how.id'))}>
-                    {t('common:footer.link.how', 'How')}
-                  </Link>
+                  <Link href={'/'}>{t('common:footer.link.how', 'How')}</Link>
                 </li>
                 <li>
                   <Link href="/#contribute">Contribute</Link>
@@ -121,14 +119,12 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => {
             <FooterMenu small={true}>
               <ul>
                 <li>
-                  <Link href={t('common:pages.tos.slug', '/terms-and-conditions')}>
+                  <Link href="/terms-and-conditions">
                     {t('common:footer.link.tos', 'Terms and conditions')}
                   </Link>
                 </li>
                 <li>
-                  <Link href={t('common:pages.privacy.slug', '/privacy')}>
-                    {t('common:footer.link.privacy', 'Privacy policy')}
-                  </Link>
+                  <Link href="/privacy">{t('common:footer.link.privacy', 'Privacy policy')}</Link>
                 </li>
                 <li>
                   <Link href="https://github.com/ambanum/OpenTermsArchive">

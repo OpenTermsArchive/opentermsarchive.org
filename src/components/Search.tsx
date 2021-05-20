@@ -1,3 +1,5 @@
+import Button from 'modules/Common/components/Button';
+import Link from 'next/link';
 import React from 'react';
 import classNames from 'classnames';
 
@@ -32,16 +34,14 @@ const Search = ({
 
   return (
     <div className={classNames(className)} {...props}>
-      {label && <label>{label}</label>}
+      <p>{label && <label>{label}</label>}</p>
       <input
         placeholder={placeholder}
         type="search"
         name="search-input-input"
         onChange={handleChange}
       />
-      <button title={buttonLabel} onClick={handleSubmit}>
-        {buttonLabel}
-      </button>
+      <Button onClick={handleSubmit}>{buttonLabel}</Button>
     </div>
   );
 };

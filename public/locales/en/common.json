@@ -62,5 +62,21 @@
   "home_page.values.desc.p3": " This understanding is also necessary to:",
   "home_page.values.desc.list.item1": "each user so that he can identify precisely what he has agreed upon, the data he has shared, the rights he has yielded to the services and the rights he has retained;",
   "home_page.values.desc.list.item2": "the authorities in order to verify the compatibility of these contractual frameworks with national and supranational law, in particular when the latter evolve;",
-  "home_page.values.desc.list.item3": "regulators so that they can assess the efforts of the platforms, but also to make sure that they say what they do and that they do what they say. It creates transparency in the practices of digital players, in line with the first recommendations discussed within the framework of the DSA and the DMA."
+  "home_page.values.desc.list.item3": "regulators so that they can assess the efforts of the platforms, but also to make sure that they say what they do and that they do what they say. It creates transparency in the practices of digital players, in line with the first recommendations discussed within the framework of the DSA and the DMA.",
+  "header.open": "Menu",
+  "header.close": "Close",
+  "header.link.how": "How",
+  "header.link.values": "Values",
+  "header.link.contribute": "Contribute",
+  "header.link.showcase": "Built with",
+  "footer.link.how": "How",
+  "footer.link.values": "Values",
+  "footer.link.showcase": "Built with",
+  "footer.link.api": "API",
+  "footer.link.dataset": "Dataset",
+  "pages.tos.slug": "/terms-and-conditions",
+  "footer.link.tos": "Terms and conditions",
+  "pages.privacy.slug": "/privacy",
+  "footer.link.privacy": "Privacy policy",
+  "footer.link.github": "GitHub"
 }

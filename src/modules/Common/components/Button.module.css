@@ -1,4 +1,6 @@
+@import '../styles/mixins';
 .button {
+  @mixin resetButton;
   display: inline-flex;
   align-items: center;
   background-color: var(--colorPrimary);

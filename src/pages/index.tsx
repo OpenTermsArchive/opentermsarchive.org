@@ -10,6 +10,7 @@ import FeatureList from 'modules/Common/components/FeatureList';
 import { FiArrowRightCircle } from 'react-icons/fi';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
+import Link from 'next/link';
 import LinkArrow from 'modules/Common/components/LinkArrow';
 import Logo from 'modules/Common/components/Logo';
 import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
@@ -137,9 +138,11 @@ const HomePage = ({ services }: any) => {
             iconName="FiPlus"
             iconColor="#0496FF"
           >
-            <Button href={t('common:home_page.contribute.buttonbloc1.button.href', '/contribute')}>
-              {t('common:home_page.contribute.buttonbloc1.button.label', 'Add now')}
-            </Button>
+            <Link href={t('common:home_page.contribute.buttonbloc1.button.href', '/contribute')}>
+              <Button>
+                {t('common:home_page.contribute.buttonbloc1.button.label', 'Add now')}
+              </Button>
+            </Link>
           </ButtonBlock>
           <ButtonBlock
             title={t('common:home_page.contribute.buttonbloc2.title', 'Improve source code')}
@@ -150,14 +153,16 @@ const HomePage = ({ services }: any) => {
             iconName="FiGithub"
             iconColor="#0496FF"
           >
-            <Button
+            <Link
               href={t(
                 'common:home_page.contribute.buttonbloc2.button.href',
                 'https://github.com/ambanum/OpenTermsArchive'
               )}
             >
-              {t('common:home_page.contribute.buttonbloc2.button.label', 'View source code')}
-            </Button>
+              <Button>
+                {t('common:home_page.contribute.buttonbloc2.button.label', 'View source code')}
+              </Button>
+            </Link>
           </ButtonBlock>
           <ButtonBlock
             title={t('common:home_page.contribute.buttonbloc3.title', 'Use the data')}
@@ -168,14 +173,16 @@ const HomePage = ({ services }: any) => {
             iconName="FiDatabase"
             iconColor="#0496FF"
           >
-            <Button
+            <Link
               href={t(
                 'common:home_page.contribute.buttonbloc3.button.href',
                 'https://disinfo.quaidorsay.fr/api/open-terms-archive/docs'
               )}
             >
-              {t('common:home_page.contribute.buttonbloc3.button.label', 'Discover the API')}
-            </Button>
+              <Button>
+                {t('common:home_page.contribute.buttonbloc3.button.label', 'Discover the API')}
+              </Button>
+            </Link>
             <LinkArrow
               iconColor="#999999"
               href={t(
@@ -319,14 +326,14 @@ const HomePage = ({ services }: any) => {
             )}
             fillParent={true}
           >
-            <Button
+            <Link
               href={t(
                 'common:home_page.showcase.buttonbloc.href',
                 'mailto:contact@opentermsarchive.org'
               )}
             >
-              {t('common:home_page.showcase.buttonbloc.label', 'Contact us')}
-            </Button>
+              <Button>{t('common:home_page.showcase.buttonbloc.label', 'Contact us')}</Button>
+            </Link>
           </ButtonBlock>
         </Column>
       </Container>
