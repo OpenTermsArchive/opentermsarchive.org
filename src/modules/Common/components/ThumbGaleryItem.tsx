@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import React from 'react';
 import classNames from 'classnames';
 import s from './ThumbGaleryItem.module.css';
@@ -29,7 +29,7 @@ const ThumbGaleryItem: React.FC<ThumbGaleryItemProps> = ({
       )}
       {...props}
     >
-      <Image src={src} width={width} height={height} />
+      <img src={src} width={width} height={height} />
       {children}
     </div>
   );
