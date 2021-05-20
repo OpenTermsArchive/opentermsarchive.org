@@ -1,3 +1,5 @@
+import { Trans, useTranslation } from 'next-i18next';
+
 import Article from 'modules/Common/components/Article';
 import Aside from 'modules/Common/components/Aside';
 import Button from 'modules/Common/components/Button';
@@ -18,7 +20,6 @@ import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
 import { getServices } from 'modules/Common/api/ota/services';
-import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
 
 const HomePage = ({ services }: any) => {
@@ -68,28 +69,23 @@ const HomePage = ({ services }: any) => {
           titleLevel="h2"
         >
           <TextContent>
-            {/* {t(
-              'common:home_page.how.desc',
-              '<p>Services are declared within Open Terms Archive with a declaration file listing all the documents that, together, constitute the terms under which this service can be used. These documents all have a type, such as “terms and conditions”, “privacy policy”, “developer agreement”…</p><p>In order to track their changes, documents are periodically obtained by fetching a web location and selecting content within the web page to remove the noise (ads, navigation menu, login fields…). Beyond selecting a subset of a page, some documents have additional noise (hashes in links, CSRF tokens…) that would be false positives for changes. Open Terms Archive thus supports specific filters for each document.</p><p>However, the shape of that noise can change over time. In order to recover in case of information loss during the noise filtering step, a snapshot is recorded every time there is a change. After the noise is filtered out from the snapshot, if there are changes in the resulting document, a new version of the document is recorded.</p>'
-            )} */}
             <p>
-              Services are declared within Open Terms Archive with a declaration file listing all
-              the documents that, together, constitute the terms under which this service can be
-              used. These documents all have a type, such as “terms and conditions”, “privacy
-              policy”, “developer agreement”…
+              {t(
+                'common:home_page.how.desc.p1',
+                'Services are declared within Open Terms Archive with a declaration file listing all the documents that, together, constitute the terms under which this service can be used. These documents all have a type, such as “terms and conditions”, “privacy policy”, “developer agreement”…'
+              )}
             </p>
             <p>
-              In order to track their changes, documents are periodically obtained by fetching a web
-              location and selecting content within the web page to remove the noise (ads,
-              navigation menu, login fields…). Beyond selecting a subset of a page, some documents
-              have additional noise (hashes in links, CSRF tokens…) that would be false positives
-              for changes. Open Terms Archive thus supports specific filters for each document.
+              {t(
+                'common:home_page.how.desc.p2',
+                'In order to track their changes, documents are periodically obtained by fetching a web location and selecting content within the web page to remove the noise (ads, navigation menu, login fields…). Beyond selecting a subset of a page, some documents have additional noise (hashes in links, CSRF tokens…) that would be false for changes. Open Terms Archive thus supports specific filters for each document.'
+              )}
             </p>
             <p>
-              However, the shape of that noise can change over time. In order to recover in case of
-              information loss during the noise filtering step, a snapshot is recorded every time
-              there is a change. After the noise is filtered out from the snapshot, if there are
-              changes in the resulting document, a new version of the document is recorded.
+              {t(
+                'common:home_page.how.desc.p3',
+                'However, the shape of that noise can change over time. In order to recover in case of information loss during the noise filtering step, a snapshot is recorded every there is a change. After the noise is filtered out from the snapshot, if there are changes in the resulting document, a new version of the document is recorded.'
+              )}
             </p>
           </TextContent>
         </Article>
@@ -213,36 +209,41 @@ const HomePage = ({ services }: any) => {
           >
             <TextContent>
               <p>
-                Large digital companies today occupy a central position which, through the ToS,
-                allows them to transform their practices and values ​​into de facto standards which
-                are at the heart of many aspects of our existence and our economies.
+                {t(
+                  'common:home_page.values.desc.p1',
+                  'Large digital companies today occupy a central position which, through the ToS, allows them to transform their practices and values ​​into de facto which are at the heart of many aspects of our existence and our economies.'
+                )}
               </p>
               <p>
-                However, they communicate in an insufficiently clear, readable and continuous manner
-                on these ToS, whereas rigorously understanding the ToS and how they have evolved
-                over time has become essential to appreciate the practices and loyalty of these
-                digital players.
+                {t(
+                  'common:home_page.values.desc.p2',
+                  'However, they communicate in an insufficiently clear, readable and continuous manner on these ToS, whereas rigorously understanding the ToS and how they have evolved over time has become essential to appreciate the practices and loyalty of these digital players.'
+                )}
               </p>
-              <p>This understanding is also necessary to:</p>
+              <p>
+                {t('common:home_page.values.desc.p3', ' This understanding is also necessary to:')}
+              </p>
               <ul>
                 <li>
                   <FiArrowRightCircle color="#0496FF" />
-                  each user so that he can identify precisely what he has agreed upon, the data he
-                  has shared, the rights he has yielded to the services and the rights he has
-                  retained;
+                  {t(
+                    'common:home_page.values.desc.list.item1',
+                    'each user so that he can identify precisely what he has agreed upon, the data he has shared, the rights he has yielded to the services and the rights he has retained;'
+                  )}
                 </li>
                 <li>
                   <FiArrowRightCircle color="#0496FF" />
-                  the authorities in order to verify the compatibility of these contractual
-                  frameworks with national and supranational law, in particular when the latter
-                  evolve;
+                  {t(
+                    'common:home_page.values.desc.list.item2',
+                    'the authorities in order to verify the compatibility of these contractual frameworks with national and supranational law, in particular when the latter evolve;'
+                  )}
                 </li>
                 <li>
                   <FiArrowRightCircle color="#0496FF" />
-                  regulators so that they can assess the efforts of the platforms, but also to make
-                  sure that they say what they do and that they do what they say. It creates
-                  transparency in the practices of digital players, in line with the first
-                  recommendations discussed within the framework of the DSA and the DMA.
+                  {t(
+                    'common:home_page.values.desc.list.item3',
+                    'regulators so that they can assess the efforts of the platforms, but also to make sure that they say what they do and that they do what they say. It creates transparency in the practices of digital players, in line with the first recommendations discussed within the framework of the DSA and the DMA.'
+                  )}
                 </li>
               </ul>
             </TextContent>
