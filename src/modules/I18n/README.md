@@ -63,7 +63,7 @@ You can use it with
 ```
 import { withI18n } from 'modules/I18n';
 
-export const getStaticProps = withI18n(['common', 'footer'])();
+export const getStaticProps = withI18n()();
 ```
 
 or if you need some more treatment
@@ -71,7 +71,7 @@ or if you need some more treatment
 ```
 import { withI18n } from 'modules/I18n';
 
-export const getStaticProps = withI18n(['common', 'footer'])(async (props: any) => {
+export const getStaticProps = withI18n()(async (props: any) => {
   // do something
   return {
     props,
