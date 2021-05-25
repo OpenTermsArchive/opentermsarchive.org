@@ -30,12 +30,15 @@ const ContributePage = () => {
   };
 
   return (
-    <Layout>
+    <Layout
+      title={t('contribute:home_page.seo.title', 'Contributing to Open Terms Archive')}
+      desc={t('contribute:home_page.seo.desc', 'Thanks for helping')}
+    >
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
-            title={t('contribute:home_page.title', 'Contributing to Open Terms ArchiveBETA')}
+            title={t('contribute:home_page.title', 'Contributing to Open Terms Archive')}
             subtitle={t('contribute:home_page.subtitle', 'Thanks for helping')}
           ></Hero>
         </Container>

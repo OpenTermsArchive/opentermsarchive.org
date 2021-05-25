@@ -42,7 +42,13 @@ const HomePage = ({ services }: any) => {
   }
 
   return (
-    <Layout>
+    <Layout
+      title={t('common:home_page.seo.title', 'Follow the changes to the terms of service')}
+      desc={t(
+        'common:home_page.seo.desc',
+        'Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms.'
+      )}
+    >
       {/* Hero */}
       <Container layout="wide" backgroundImage="/images/bg1.jpg" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>

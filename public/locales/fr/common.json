@@ -79,5 +79,9 @@
   "footer.link.github": "GitHub",
   "footer.link.home": "Accueil",
   "home_page.partners.subtitle": "C'est grâce à eux qu'Open Terms Archive existe.",
-  "footer.link.contribute": "Contribuer"
+  "footer.link.contribute": "Contribuer",
+  "home_page.seo.title": "Open Terms Archive",
+  "home_page.seo.desc": "Suivre les engagements contractuels des principaux fournisseurs de services en ligne",
+  "privacy-policy.seo.title": "Politique de confidentialité",
+  "terms-of-service.seo.title": "Mentions légales"
 }

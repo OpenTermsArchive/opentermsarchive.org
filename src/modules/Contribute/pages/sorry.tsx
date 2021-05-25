@@ -11,7 +11,10 @@ const EMAIL_SUPPORT = 'contribute@disinfo.beta.gouv.fr';
 const SorryPage = () => {
   const { t } = useTranslation();
   return (
-    <Layout>
+    <Layout
+      title={t('contribute:sorry_page.seo.title', 'Sorry')}
+      desc={t('contribute:sorry_page.seo.desc', 'You cannot access this page')}
+    >
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>

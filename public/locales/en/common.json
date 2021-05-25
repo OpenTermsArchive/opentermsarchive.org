@@ -79,5 +79,9 @@
   "footer.link.github": "GitHub",
   "footer.link.home": "Home",
   "home_page.partners.subtitle": "They make Open Terms Archive existing",
-  "footer.link.contribute": "Showcase"
+  "footer.link.contribute": "Showcase",
+  "home_page.seo.title": "Open Terms Archive",
+  "home_page.seo.desc": "Follow the changes to the terms of service.",
+  "privacy-policy.seo.title": "Privacy Policy",
+  "terms-of-service.seo.title": "Terms of Service"
 }

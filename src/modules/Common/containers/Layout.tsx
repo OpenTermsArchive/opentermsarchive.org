@@ -17,14 +17,20 @@ import { withI18n } from 'modules/I18n';
 type Props = {
   children?: ReactNode;
   title?: string;
+  desc?: string;
 };
 
-const Layout = ({ children, title = 'This is the default title' }: Props) => {
+const Layout = ({
+  children,
+  title = 'This is the default title',
+  desc = 'This is the default desc',
+}: Props) => {
   const { t } = useTranslation();
   return (
     <>
       <Head>
         <title>{title}</title>
+        <meta name="description" content={desc} />
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png" />

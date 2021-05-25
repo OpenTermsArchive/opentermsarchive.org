@@ -12,7 +12,10 @@ import { useTranslation } from 'react-i18next';
 const ThanksPage = () => {
   const { t } = useTranslation();
   return (
-    <Layout>
+    <Layout
+      title={t('contribute:thanks_page.seo.title', 'Thanks')}
+      desc={t('contribute:thanks_page.seo.desc', 'Thanks for contributing')}
+    >
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>

@@ -6,10 +6,12 @@ import Layout from 'modules/Common/containers/Layout';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
+import { useTranslation } from 'next-i18next';
 
 export default function PrivacyPolicyPage({ mdxContent }: WithI18nResult) {
+  const { t } = useTranslation('common');
   return (
-    <Layout>
+    <Layout title={t('common:privacy-policy.seo.title', 'Privacy Policy')}>
       <Container gridCols="10" gridGutters="9" paddingX={false}>
         <TextContent>
           <MDXRemote {...(mdxContent as any)} components={{ Button: Button }} />
