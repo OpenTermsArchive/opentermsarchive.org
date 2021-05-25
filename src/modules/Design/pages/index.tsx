@@ -1,3 +1,5 @@
+import { FiArrowRightCircle, FiChevronDown } from 'react-icons/fi';
+
 import Article from 'modules/Common/components/Article';
 import Aside from 'modules/Common/components/Aside';
 import Button from 'modules/Common/components/Button';
@@ -7,7 +9,6 @@ import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import FeatureItem from 'modules/Common/components/FeatureItem';
 import FeatureList from 'modules/Common/components/FeatureList';
-import { FiArrowRightCircle } from 'react-icons/fi';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import LinkArrow from 'modules/Common/components/LinkArrow';
@@ -18,6 +19,7 @@ import ShowcaseList from 'modules/Common/components/ShowcaseList';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
+import classNames from 'classnames';
 
 const DesignPage = () => {
   return (
@@ -68,6 +70,13 @@ const DesignPage = () => {
           Test de link inversé
         </LinkArrow>
         <Logo fill="#010613" />
+        <div className={classNames('select')}>
+          <select>
+            <option value="">select moi</option>
+            <option value="">ou pas</option>
+          </select>
+          <FiChevronDown color="333333"></FiChevronDown>
+        </div>
       </Container>
 
       {/* Hero with background, darked, title and subtitle */}

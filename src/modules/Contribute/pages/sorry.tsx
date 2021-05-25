@@ -28,6 +28,10 @@ const SorryPage = () => {
             <Breadcrumb
               items={[
                 { name: 'Open Terms Archive', url: 'https://www.opentermsarchive.org' },
+                {
+                  name: 'Contribute',
+                  url: './../#' + t('common:home_page.contribute.id', 'contribute'),
+                },
                 { name: 'Contribute', url: '/contribute' },
                 { name: t('contribute:sorry_page.title') },
               ]}

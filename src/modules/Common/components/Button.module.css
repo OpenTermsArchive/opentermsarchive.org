@@ -24,4 +24,9 @@
       border: 1px solid var(--colorSecondary);
     }
   }
+
+  &__hasOnlyIcon {
+    padding-left: var(--pS);
+    padding-right: var(--pS);
+  }
 }

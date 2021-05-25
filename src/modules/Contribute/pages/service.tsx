@@ -277,7 +277,11 @@ Thank you very much`;
                           onChange={onChangeCssRule('selectedCss', i)}
                         />
 
-                        <Button onClick={onRemoveCssRule('selectedCss', i)} type="secondary">
+                        <Button
+                          onClick={onRemoveCssRule('selectedCss', i)}
+                          type="secondary"
+                          onlyIcon={true}
+                        >
                           <FiTrash2></FiTrash2>
                         </Button>
                       </div>
@@ -303,7 +307,11 @@ Thank you very much`;
                     <div key={selected} className={s.selectionItem}>
                       <input defaultValue={selected} onChange={onChangeCssRule('removedCss', i)} />
 
-                      <Button onClick={onRemoveCssRule('removedCss', i)} type="secondary">
+                      <Button
+                        onClick={onRemoveCssRule('removedCss', i)}
+                        type="secondary"
+                        onlyIcon={true}
+                      >
                         <FiTrash2></FiTrash2>
                       </Button>
                     </div>
