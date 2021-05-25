@@ -3,6 +3,8 @@
   position: sticky;
   flex-direction: column;
   height: 100vh;
+  border-right: 1px solid var(--colorBlack200);
+  background-color: var(--colorWhite);
 
   > nav,
   > div {
@@ -20,32 +22,25 @@
     justify-content: space-between;
   }
 
-  p {
-    margin-top: 20px;
-  }
+  h3 {
+    margin-top: var(--mXL);
+    margin-bottom: var(--mS);
 
-  h2 {
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-size: 25px;
     &:first-child {
       margin-top: 0;
     }
   }
 
-  h3 {
-    margin-top: 40px;
-    font-size: 16px;
+  label {
+    margin-top: var(--mM);
+  }
+
+  textarea {
+    margin-top: var(--mL);
   }
 
   > div {
     overflow-y: auto;
-  }
-
-  form {
-    button {
-      margin: 10px 0;
-    }
   }
 }
 
@@ -60,7 +55,12 @@
 
 .selectionItem {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: var(--mXS);
+
+  > button {
+    margin-left: var(--mS);
+  }
 }
 
 .fullPage {

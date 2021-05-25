@@ -1,7 +1,7 @@
 import Button from 'modules/Common/components/Button';
-import Link from 'next/link';
 import React from 'react';
 import classNames from 'classnames';
+import s from './Search.module.css';
 
 export interface SearchProps {
   label?: React.ReactNode;
@@ -33,7 +33,7 @@ const Search = ({
   };
 
   return (
-    <div className={classNames(className)} {...props}>
+    <div className={classNames(s.search, className)} {...props}>
       <div className={classNames('formfield')}>
         {label && <label htmlFor="url">{label}</label>}
         <input

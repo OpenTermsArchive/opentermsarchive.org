@@ -1,10 +1,14 @@
+import { FiChevronDown, FiTrash2 } from 'react-icons/fi';
+
+import Button from 'modules/Common/components/Button';
 import Drawer from 'components/Drawer';
 import { GetContributeServiceResponse } from '../interfaces';
 import IframeSelector from 'components/IframeSelector';
-import Link from 'next/link';
+import LinkArrow from 'modules/Common/components/LinkArrow';
 import Loading from 'components/Loading';
 import React from 'react';
 import { Trans } from 'react-i18next';
+import classNames from 'classnames';
 import s from './service.module.css';
 import { useEvent } from 'react-use';
 import { useRouter } from 'next/router';
@@ -170,9 +174,15 @@ Thank you very much`;
         {step === 1 && (
           <>
             <nav>
-              <Link href="/contribute">
-                <a className={s.backButton}>{t('contribute:service_page.back', 'Go back')}</a>
-              </Link>
+              <LinkArrow
+                className={s.backButton}
+                iconColor="#999999"
+                href="/contribute"
+                direction="left"
+                small={true}
+              >
+                {t('contribute:service_page.back', 'Go back')}
+              </LinkArrow>
             </nav>
             <div>
               <h2>{t('contribute:service_page.title', 'What is expected from you')}</h2>
@@ -191,91 +201,122 @@ Thank you very much`;
               </p>
             </div>
             <nav>
-              <button type="button" onClick={passToStep(2)}>
-                {t('contribute:service_page.cta', 'OK')}
-              </button>
+              <Button onClick={passToStep(2)}>{t('contribute:service_page.cta', 'OK')}</Button>
             </nav>
           </>
         )}
         {step === 2 && (
           <>
             <nav>
-              <Link href="/contribute">
-                <a className={s.backButton}>{t('contribute:service_page.back', 'Go back')}</a>
-              </Link>
-              <a onClick={passToStep(1)}>{t('contribute:service_page.help', 'Need help?')}</a>
+              <LinkArrow
+                className={s.backButton}
+                iconColor="#999999"
+                href="/contribute"
+                direction="left"
+                small={true}
+              >
+                {t('contribute:service_page.back', 'Go back')}
+              </LinkArrow>
+              <a className="a__small" onClick={passToStep(1)}>
+                {t('contribute:service_page.help', 'Need help?')}
+              </a>
             </nav>
             <div>
               <form>
                 <div>
-                  <h2>
+                  <h3>
                     {t('contribute:service_page.step2.title', 'Step 2: defining this document')}
-                  </h2>
-                  <h3>
-                    {t('contribute:service_page.step2.form.documentType', 'Type of document')}
                   </h3>
-                  <select
-                    onChange={onInputChange('documentType')}
-                    defaultValue={initialDocumentType}
-                  >
-                    <option value="">
-                      {t('contribute:service_page.step2.form.select', 'Select...')}
-                    </option>
-                    {documentTypes.map((documentType) => (
-                      <option key={documentType} value={documentType}>
-                        {documentType}
-                      </option>
-                    ))}
-                  </select>
-                  <h3>
-                    {t('contribute:service_page.step2.form.serviceName', 'Name of the service')}
-                  </h3>
-                  <input defaultValue={initialName} onChange={onInputChange('name')} />
+                  <div className={classNames('formfield')}>
+                    <label>
+                      {t('contribute:service_page.step2.form.documentType', 'Type of document')}
+                    </label>
+                    <div className={classNames('select')}>
+                      <select
+                        onChange={onInputChange('documentType')}
+                        defaultValue={initialDocumentType}
+                      >
+                        <option value="">
+                          {t('contribute:service_page.step2.form.select', 'Select...')}
+                        </option>
+                        {documentTypes.map((documentType) => (
+                          <option key={documentType} value={documentType}>
+                            {documentType}
+                          </option>
+                        ))}
+                      </select>
+                      <FiChevronDown color="333333"></FiChevronDown>
+                    </div>
+                  </div>
 
-                  <h2>
+                  <div className={classNames('formfield')}>
+                    <label>
+                      {t('contribute:service_page.step2.form.serviceName', 'Name of the service')}
+                    </label>
+                    <input defaultValue={initialName} onChange={onInputChange('name')} />
+                  </div>
+
+                  <h3>
                     {t(
                       'contribute:service_page.step3.title',
                       'Step 3: selecting significant part of the document'
                     )}
-                  </h2>
-                  <h3>
-                    {t('contribute:service_page.step3.form.significantPart', 'Significant part(s)')}
                   </h3>
-                  {selectedCss.map((selected, i) => (
-                    <div key={selected} className={s.selectionItem}>
-                      <input defaultValue={selected} onChange={onChangeCssRule('selectedCss', i)} />
-                      <button type="button" onClick={onRemoveCssRule('selectedCss', i)}></button>
-                    </div>
-                  ))}
-                  <button
-                    type="button"
-                    onClick={selectInIframe('selectedCss')}
-                    disabled={!!selectable || !iframeReady}
-                  >
-                    {t('contribute:service_page.step3.form.significantPart.cta', 'Add part')}
-                  </button>
+
+                  <div className={classNames('formfield')}>
+                    <label>
+                      {t(
+                        'contribute:service_page.step3.form.significantPart',
+                        'Significant part(s)'
+                      )}
+                    </label>
+                    {selectedCss.map((selected, i) => (
+                      <div key={selected} className={s.selectionItem}>
+                        <input
+                          defaultValue={selected}
+                          onChange={onChangeCssRule('selectedCss', i)}
+                        />
+
+                        <Button onClick={onRemoveCssRule('selectedCss', i)} type="secondary">
+                          <FiTrash2></FiTrash2>
+                        </Button>
+                      </div>
+                    ))}
+                    <Button
+                      onClick={selectInIframe('selectedCss')}
+                      disabled={!!selectable || !iframeReady}
+                      type="secondary"
+                    >
+                      {t('contribute:service_page.step3.form.significantPart.cta', 'Add part')}
+                    </Button>
+                  </div>
                 </div>
-                <div>
-                  <h3>
+
+                <div className={classNames('formfield')}>
+                  <label>
                     {t(
                       'contribute:service_page.step3.form.insignificantPart',
                       'Insignificant part(s)'
                     )}
-                  </h3>
+                  </label>
                   {removedCss.map((selected, i) => (
                     <div key={selected} className={s.selectionItem}>
                       <input defaultValue={selected} onChange={onChangeCssRule('removedCss', i)} />
-                      <button type="button" onClick={onRemoveCssRule('removedCss', i)}></button>
+
+                      <Button onClick={onRemoveCssRule('removedCss', i)} type="secondary">
+                        <FiTrash2></FiTrash2>
+                      </Button>
                     </div>
                   ))}
-                  <button
-                    type="button"
+                  <Button
                     onClick={selectInIframe('removedCss')}
                     disabled={!!selectable || !iframeReady}
+                    type="secondary"
                   >
                     {t('contribute:service_page.step3.form.insignificantPart.cta', 'Remove part')}
-                  </button>
+                  </Button>
                 </div>
+
                 {expertMode && (
                   <textarea
                     style={{
@@ -292,12 +333,12 @@ Thank you very much`;
               </form>
             </div>
             <nav>
-              <a onClick={toggleExpertMode}>
+              <a className="a__small" onClick={toggleExpertMode}>
                 {t('contribute:service_page.expertMode', 'Expert Mode')}
               </a>
-              <button type="button" disabled={submitDisabled} onClick={onValidate}>
+              <Button disabled={submitDisabled} onClick={onValidate}>
                 {t('contribute:service_page.validate', 'Validate')}
-              </button>
+              </Button>
             </nav>
           </>
         )}
@@ -306,9 +347,9 @@ Thank you very much`;
         <div className={s.fullPage}>
           <h1>{t('contribute:service_page.error.title', "We're sorry, an error occured")}</h1>
           <p>{data?.error}</p>
-          <button type="button" onClick={onErrorClick}>
+          <Button onClick={onErrorClick}>
             {t('contribute:service_page.error.cta', 'Les us know!')}
-          </button>
+          </Button>
         </div>
       )}
       {!data?.error && (

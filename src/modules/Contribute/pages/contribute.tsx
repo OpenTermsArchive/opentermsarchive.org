@@ -1,5 +1,6 @@
 import Search, { SearchProps } from 'components/Search/Search';
 
+import Breadcrumb from 'components/BreadCrumb';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
@@ -43,6 +44,20 @@ const ContributePage = () => {
       <Container paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={100}>
+            <Breadcrumb
+              items={[
+                { name: 'Open Terms Archive', url: 'https://www.opentermsarchive.org' },
+                { name: t('contribute:home_page.title') },
+              ]}
+            />
+            <TextContent>
+              <p>
+                {t(
+                  'contribute:home_page.content.p1',
+                  'With 3-step process, you can add a document quickly (it should only take you a few minutes)'
+                )}
+              </p>
+            </TextContent>
             <Search
               label={t(
                 'contribute:home_page.search.label',

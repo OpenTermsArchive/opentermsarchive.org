@@ -59,8 +59,13 @@ const DesignPage = () => {
         <LinkArrow iconColor="#999999" href="http://www.google.fr">
           Test de link
         </LinkArrow>
+        <br />
         <LinkArrow iconColor="#999999" href="http://www.google.fr" small={true}>
           Test de link
+        </LinkArrow>
+        <br />
+        <LinkArrow iconColor="#999999" href="http://www.google.fr" direction="left">
+          Test de link inversé
         </LinkArrow>
         <Logo fill="#010613" />
       </Container>

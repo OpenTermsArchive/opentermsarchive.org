@@ -26,6 +26,12 @@
       }
     }
   }
+
+  &__isLeft {
+    > svg {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 .linkArrow_content {

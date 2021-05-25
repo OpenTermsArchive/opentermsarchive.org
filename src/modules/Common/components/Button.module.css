@@ -12,4 +12,16 @@
     background-color: var(--colorSecondary);
     color: var(--colorBlack200);
   }
+
+  &__secondary {
+    background-color: var(--colorWhite);
+    border: 1px solid var(--colorPrimary);
+    color: var(--colorPrimary);
+
+    &:hover {
+      background-color: var(--colorBlack200);
+      color: var(--colorSecondary);
+      border: 1px solid var(--colorSecondary);
+    }
+  }
 }

@@ -1,4 +1,5 @@
-@import '../styles/mixins';
+@import '../mixins.css';
+
 input,
 select,
 textarea {
@@ -8,6 +9,7 @@ textarea {
   padding: var(--pS) var(--pM);
   border: 1px solid var(--colorBlack400);
   width: 100%;
+  color: var(--colorBlack800);
 
   &::placeholder {
     color: var(--colorBlack400);
@@ -33,5 +35,21 @@ label {
 
   &__alignRight {
     text-align: right;
+  }
+}
+
+.select {
+  position: relative;
+
+  select {
+    position: relative;
+    appearance: none;
+  }
+
+  > svg {
+    top: var(--mS);
+    right: var(--mS);
+    position: absolute;
+    pointer-events: none;
   }
 }

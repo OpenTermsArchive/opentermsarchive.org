@@ -8,3 +8,7 @@ a {
     transition: all 0.25s easeOutCirc;
   }
 }
+
+.a__small {
+  font-size: 1.4rem;
+}

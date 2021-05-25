@@ -15,7 +15,10 @@ const SorryPage = () => {
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Hero title={t('contribute:sorry_page.title', 'Sorry 😿')}></Hero>
+          <Hero
+            title={t('contribute:sorry_page.title', 'Sorry 😿')}
+            subtitle={t('contribute:sorry_page.subtitle', 'You cannot access this page')}
+          ></Hero>
         </Container>
       </Container>
 
@@ -25,11 +28,11 @@ const SorryPage = () => {
             <Breadcrumb
               items={[
                 { name: 'Open Terms Archive', url: 'https://www.opentermsarchive.org' },
+                { name: 'Contribute', url: '/contribute' },
                 { name: t('contribute:sorry_page.title') },
               ]}
             />
             <TextContent>
-              <h2>{t('contribute:sorry_page.subtitle', 'We need you on a real computer')}</h2>
               <p>
                 {t(
                   'contribute:sorry_page.explanation',
