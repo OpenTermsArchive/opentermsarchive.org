@@ -74,9 +74,10 @@
   "footer.link.showcase": "Built with",
   "footer.link.api": "API",
   "footer.link.dataset": "Dataset",
-  "pages.tos.slug": "/terms-and-conditions",
-  "footer.link.tos": "Terms and conditions",
-  "pages.privacy.slug": "/privacy",
+  "footer.link.tos": "Terms of service",
   "footer.link.privacy": "Privacy policy",
-  "footer.link.github": "GitHub"
+  "footer.link.github": "GitHub",
+  "footer.link.home": "Home",
+  "home_page.partners.subtitle": "They make Open Terms Archive existing",
+  "footer.link.contribute": "Showcase"
 }

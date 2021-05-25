@@ -7,7 +7,7 @@ import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 
-export default function TermsOfServicePage({ mdxContent }: WithI18nResult) {
+export default function PrivacyPolicyPage({ mdxContent }: WithI18nResult) {
   return (
     <Layout>
       <Container gridCols="10" gridGutters="9" paddingX={false}>

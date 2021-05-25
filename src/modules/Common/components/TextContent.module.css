@@ -5,12 +5,24 @@
     margin-bottom: var(--mM);
   }
 
+  h1 {
+    margin-bottom: var(--m3XL);
+  }
+
   h2 {
-    margin-bottom: var(--mXL);
+    margin-bottom: var(--mL);
   }
 
   ul {
     margin-left: var(--mL);
+  }
+
+  p + h2 {
+    margin-top: var(--m3XL);
+  }
+
+  iframe {
+    margin-bottom: var(--mXL);
   }
 
   li {

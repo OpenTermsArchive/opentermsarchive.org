@@ -30,5 +30,6 @@
   "thanks_page.explanation": "Il vous suffit de nous envoyer l'email (une popup aurait dû s'ouvrir) et nous vous informerons dès que le service sera intégré au système",
   "thanks_page.subtitle": "Merci pour votre contribution",
   "thanks_page.title": "Merci",
-  "service_page.expertMode": "Expert Mode"
+  "service_page.expertMode": "Expert Mode",
+  "home_page.content.p1": "With 3-step process, you can add a document quickly (it should only take you a few minutes)"
 }

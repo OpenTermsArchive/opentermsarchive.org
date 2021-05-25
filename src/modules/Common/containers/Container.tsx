@@ -40,7 +40,6 @@ const Container: React.FC<ContainerProps> = ({
   if (bgColor) {
     additionnalStyle.backgroundColor = bgColor;
   }
-  console.log(additionnalStyle);
 
   return (
     <div

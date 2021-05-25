@@ -1,8 +1,8 @@
 {
   "home_page.search.button": "Next",
   "home_page.search.label": "First step, please fill the URL to track",
-  "home_page.subtitle": "We need you!",
-  "home_page.title": "Contribute",
+  "home_page.subtitle": "In a few quick steps, you can add a document to be tracked in Open Terms Archive.",
+  "home_page.title": "Add a document",
   "service_page.description1": "Most of the time, contractual documents contains a header, a footer, navigation menus, possibly ads… We aim at tracking only <strong>the significant parts of the document</strong>",
   "service_page.title": "What is expected from you",
   "sorry_page.explanation": "Because we use the \"hover\" functionnality to highlight the parts of the document we want to track, we need you to have a computer and a mouse.",
@@ -30,5 +30,6 @@
   "service_page.error.cta": "Les us know!",
   "service_page.loading.title": "We're preparing the website",
   "service_page.loading.subtitle": "It usually takes between 5s and 30s",
-  "service_page.description2": "In order to achieve that, you will have to select the part of the documents that contains the relevant part and remove the insignificant parts."
+  "service_page.description2": "In order to achieve that, you will have to select the part of the documents that contains the relevant part and remove the insignificant parts.",
+  "home_page.content.p1": "With 3-step process, you can add a document quickly (it should only take you a few minutes)"
 }

@@ -342,7 +342,10 @@ const HomePage = ({ services }: any) => {
       <Container layout="fluid" gridCols="12" gridGutters="11" flex={true} paddingX={false}>
         <ThumbGalery
           title={t('common:home_page.partners.title', 'Our Partners')}
-          subtitle={t('common:home_page.partners.title', 'They make Open Terms Archive existing')}
+          subtitle={t(
+            'common:home_page.partners.subtitle',
+            'They make Open Terms Archive existing'
+          )}
           titleLevel="h3"
         >
           <ThumbGaleryItem src="/images/logo-ambnum.png" width="158" height="80" />
