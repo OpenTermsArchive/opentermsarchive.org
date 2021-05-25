@@ -12,7 +12,6 @@ import LanguageSwitcher from 'modules/I18n/components/LanguageSwitcher';
 import Link from 'next/link';
 import classNames from 'classnames';
 import { useTranslation } from 'next-i18next';
-import { withI18n } from 'modules/I18n';
 
 type Props = {
   children?: ReactNode;

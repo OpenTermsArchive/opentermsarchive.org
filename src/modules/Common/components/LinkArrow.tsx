@@ -9,7 +9,7 @@ type LinkArrowProps = {
   iconColor?: string;
   className?: string;
   small?: boolean;
-  direction: 'right' | 'left';
+  direction?: 'right' | 'left';
 } & LinkProps;
 
 const LinkArrow: React.FC<LinkArrowProps> = ({

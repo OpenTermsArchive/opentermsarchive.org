@@ -7,7 +7,6 @@ import React from 'react';
 import classNames from 'classnames';
 import s from './Header.module.css';
 import { useTranslation } from 'next-i18next';
-import { withI18n } from 'modules/I18n';
 
 type HeaderProps = {
   className?: string;
