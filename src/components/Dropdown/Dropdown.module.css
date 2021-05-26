@@ -1,0 +1,30 @@
+.dropdown {
+  /*hide the inputs/checkmarks and submenu*/
+  input {
+    display: none;
+  }
+
+  ul {
+    display: none;
+  }
+
+  li {
+  }
+
+  /*position the label*/
+  label {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+
+  /*show the submenu when input is checked*/
+  input:checked ~ ul {
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: red;
+  }
+}

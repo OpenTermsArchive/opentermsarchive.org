@@ -1,25 +1,16 @@
-import Layout from 'modules/Embassy/components/Layout';
-import Link from 'next/link';
+import Layout from '../containers/Layout';
+import SubscribeForm from '../components/SubscribeForm';
 
 const HomePage = () => {
   return (
-    <Layout title="Contributing to Open Terms Archive">
-      <div className="rf-container rf-mb-12w">
-        <div className="rf-grid-row">
-          <div className="rf-col">
-            <h1 className="text-center rf-mb-1w">Open Terms Archive</h1>
-            <p
-              className="rf-text--lg text-center rf-mb-7w"
-              style={{ maxWidth: '400px', marginLeft: 'auto', marginRight: 'auto' }}
-            >
-              Homepage
-            </p>
-            <Link href={'/disinfo/contribute'}>
-              <a className="rf-btn">Contribute</a>
-            </Link>
-          </div>
-        </div>
-      </div>
+    <Layout>
+      <h1>Follow the changes to the terms of service</h1>
+      <h2>
+        Services have terms that can change over time. Open Terms Archive enables users rights
+        advocates, regulatory bodies and any interested citizen to follow the changes to these
+        terms.
+      </h2>
+      <SubscribeForm />
     </Layout>
   );
 };

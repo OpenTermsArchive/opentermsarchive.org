@@ -1,0 +1,52 @@
+@import '../styles/mixins';
+
+.buttonBlock {
+  border: 1px solid var(--colorBlack200);
+  @mixin grid 3, 3;
+  text-align: center;
+  padding: var(--p2XL) var(--pL) var(--pXL) var(--pL);
+  position: relative;
+  flex-shrink: 0;
+
+  &__fillParent {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.buttonBlock_icon {
+  position: absolute;
+  background-color: var(--colorWhite);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+
+  & > svg {
+    margin: 0 auto;
+  }
+}
+
+.buttonBlock_title {
+  & + .buttonBlock_desc {
+    margin-top: var(--mXS);
+  }
+}
+
+.buttonBlock_desc {
+}
+
+.buttonBlock_actions {
+  margin-top: var(--mL);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & > a:not(:first-child) {
+    margin-top: var(--m2XS);
+  }
+}

@@ -1,4 +1,4 @@
-import { MdChevronLeft as IconCollapse, MdChevronRight as IconExpand } from 'react-icons/md';
+import { FiChevronLeft as IconCollapse, FiChevronRight as IconExpand } from 'react-icons/fi';
 
 import React from 'react';
 import s from './Drawer.module.scss';

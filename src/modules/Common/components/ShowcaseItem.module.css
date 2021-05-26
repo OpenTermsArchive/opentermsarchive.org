@@ -1,0 +1,29 @@
+.showcaseItem {
+  &:not(:first-child) {
+    margin-top: calc(var(--mXL) / 2);
+    padding-top: calc(var(--mXL) / 2);
+    border-top: 1px solid var(--colorBlack200);
+  }
+}
+
+.showcaseItem_title {
+}
+
+.showcaseItem_desc {
+  margin-top: var(--mS);
+  margin-bottom: var(--mXS);
+}
+
+.showcaseItem_author {
+  margin-top: var(--mS);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.showcaseItem_author_icon {
+  margin-right: var(--mXS);
+}
+.showcaseItem_author_desc {
+}

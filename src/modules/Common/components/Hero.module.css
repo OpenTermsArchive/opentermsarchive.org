@@ -1,0 +1,23 @@
+@import '../styles/mixins';
+
+.hero {
+  &__isDark {
+    color: var(--colorWhite);
+    .hero_title,
+    .hero_subtile {
+      color: var(--colorWhite);
+    }
+  }
+}
+
+.hero_title {
+  @mixin grid 9, 9;
+}
+
+.hero_subtitle {
+  @mixin grid 11, 10;
+}
+
+.hero_title + .hero_subtitle {
+  margin-top: var(--mXS);
+}
