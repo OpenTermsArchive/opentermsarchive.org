@@ -38,9 +38,16 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps & React.HTMLAttributes<HT
           ?.map((locale) => (
             <React.Fragment key={locale}>
               <div className={s.languageSwitcher_item} onClick={toggleExtended}>
-                <Link href={router.pathname} locale={locale}>
-                  {locale.toUpperCase()}
-                </Link>
+                {router.asPath.includes('#') ? (
+                  <>
+                    {/* A bug in nextjs prevents urls with # from refreshing the page */}
+                    <a href={`/${locale}${router.asPath}`}>{locale.toUpperCase()}</a>
+                  </>
+                ) : (
+                  <Link href={router.asPath} locale={locale} passHref={true}>
+                    <a>{locale.toUpperCase()}</a>
+                  </Link>
+                )}
               </div>
             </React.Fragment>
           ))}
