@@ -1,4 +1,4 @@
-import { MdChevronRight as IconSeparator } from 'react-icons/md';
+import { FiChevronRight as IconSeparator } from 'react-icons/fi';
 import Link from 'next/link';
 import React from 'react';
 import s from './Breadcrumb.module.scss';
@@ -16,7 +16,7 @@ const Breadcrumb: React.FC<IProps & React.HTMLAttributes<HTMLDivElement>> = ({
   items,
   className,
 }) => (
-  <nav className={`${s.wrapper} ${className}`} role="navigation">
+  <nav className={`${s.breadcrumb} ${className}`} role="navigation">
     <ul>
       {items.map(({ name, url }, i: number) => (
         <React.Fragment key={name ? `${name}-${i}` : i}>

@@ -1,0 +1,32 @@
+@import '../styles/mixins';
+.button {
+  @mixin resetButton;
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--colorPrimary);
+  padding: var(--pS) var(--pL);
+  color: var(--colorBlack200);
+  border-radius: 4px;
+
+  &:hover {
+    background-color: var(--colorSecondary);
+    color: var(--colorBlack200);
+  }
+
+  &__secondary {
+    background-color: var(--colorWhite);
+    border: 1px solid var(--colorPrimary);
+    color: var(--colorPrimary);
+
+    &:hover {
+      background-color: var(--colorBlack200);
+      color: var(--colorSecondary);
+      border: 1px solid var(--colorSecondary);
+    }
+  }
+
+  &__hasOnlyIcon {
+    padding-left: var(--pS);
+    padding-right: var(--pS);
+  }
+}

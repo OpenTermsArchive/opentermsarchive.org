@@ -1,0 +1,14 @@
+a {
+  color: var(--colorPrimary);
+  text-decoration: none;
+  transition: all 0.3s easeOutExpo;
+
+  &:hover {
+    color: var(--colorSecondary);
+    transition: all 0.25s easeOutCirc;
+  }
+}
+
+.a__small {
+  font-size: 1.4rem;
+}

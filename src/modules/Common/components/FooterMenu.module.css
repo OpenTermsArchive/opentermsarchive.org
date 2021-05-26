@@ -1,0 +1,5 @@
+.footerMenu {
+  &__isSmall {
+    font-size: 1.4rem;
+  }
+}

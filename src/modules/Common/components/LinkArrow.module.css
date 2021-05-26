@@ -1,0 +1,40 @@
+.linkArrow {
+  display: inline-flex;
+  align-items: center;
+
+  > svg {
+    transition: stroke 0.3s easeOutCirc;
+  }
+
+  &:hover {
+    .linkArrow_content {
+      transition: transform 0.3s easeOutCirc;
+      transform: translateX(4px);
+    }
+
+    > svg {
+      transition: stroke 0.3s easeOutCirc;
+      stroke: var(--colorSecondary);
+    }
+  }
+
+  &__isSmall {
+    font-size: 1.4rem;
+    &:hover {
+      .linkArrow_content {
+        transform: translateX(2px);
+      }
+    }
+  }
+
+  &__isLeft {
+    > svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.linkArrow_content {
+  transition: all 0.1s easeInCirc;
+  margin-left: var(--m2XS);
+}
