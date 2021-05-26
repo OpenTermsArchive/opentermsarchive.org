@@ -45,9 +45,13 @@ export const withI18n =
         try {
           content = fs.readFileSync(`${pagesDir}/${filename}.${props.locale}.mdx`).toString();
         } catch (e) {
-          content = fs
-            .readFileSync(`${pagesDir}/${filename}.${props.defaultLocale}.mdx`)
-            .toString();
+          try {
+            content = fs
+              .readFileSync(`${pagesDir}/${filename}.${props.defaultLocale}.mdx`)
+              .toString();
+          } catch (e) {
+            content = '';
+          }
         }
 
         computedProps.mdxContent = await serialize(content);
@@ -57,6 +61,7 @@ export const withI18n =
         return JSON.parse(
           JSON.stringify({
             props: computedProps,
+            revalidate: 60,
           })
         );
       }
