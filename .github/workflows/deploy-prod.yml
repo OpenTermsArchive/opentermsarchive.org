@@ -1,0 +1,25 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      ENV: production
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.head.sha }}
+      - run: git checkout HEAD
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      - run: echo "${{ secrets.ANSIBLE_VAULT_PASSWORD }}" > vault.key
+      - run: pip install --upgrade setuptools
+      - run: pip install ansible==2.9.11
+      - run: ansible-galaxy collection install community.general:==1.3.5
+      - run: ansible-playbook ops/site.yml -i ops/inventories/production.yml -e "ENV=production"
