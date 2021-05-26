@@ -16,10 +16,12 @@ jobs:
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
+          # https://zellwk.com/blog/github-actions-deploy/
           key: ${{ secrets.SSH_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
-      - run: echo "${{ secrets.ANSIBLE_VAULT_PASSWORD }}" > vault.key
+      # - run: echo "${{ secrets.ANSIBLE_VAULT_PASSWORD }}" > vault.key
       - run: pip install --upgrade setuptools
       - run: pip install ansible==2.9.11
       - run: ansible-galaxy collection install community.general:==1.3.5
-      - run: ansible-playbook ops/site.yml -i ops/inventories/production.yml -e "ENV=production"
+      - run: ansible-galaxy collection install community.docker:=1.6.1
+      - run: npm run deploy:production
