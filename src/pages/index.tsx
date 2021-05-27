@@ -26,17 +26,17 @@ const HomePage = ({ services }: any) => {
   const { t } = useTranslation('common');
 
   // Format services and docs feature item title
-  let nbServicesTitle = t('common:home_page.how.feature2.defaultTitle', 'Many services');
-  let nbDocsTitle = t('common:home_page.how.feature3.defaultTitle', 'Many documents');
+  let nbServicesTitle = t('common:home_page.how.feature1.defaultTitle', 'Many services');
+  let nbDocsTitle = t('common:home_page.how.feature2.defaultTitle', 'Many documents');
 
   if (services) {
     const nbServices = Object.keys(services).length;
-    nbServicesTitle = t('common:home_page.how.feature2.dynamicTitle', '{{count}} services', {
+    nbServicesTitle = t('common:home_page.how.feature1.dynamicTitle', '{{count}} services', {
       count: nbServices,
     });
 
     const nbDocuments = Object.values(services).flat().length;
-    nbDocsTitle = t('common:home_page.how.feature3.dynamicTitle', '{{count}} documents', {
+    nbDocsTitle = t('common:home_page.how.feature2.dynamicTitle', '{{count}} documents', {
       count: nbDocuments,
     });
   }
@@ -98,18 +98,10 @@ const HomePage = ({ services }: any) => {
         <Aside>
           <FeatureList>
             <FeatureItem
-              iconName="FiSmile"
-              title={t('common:home_page.how.feature1.title', 'Open Source')}
-              desc={t(
-                'common:home_page.how.feature1.desc',
-                'Free and collaborative software, any entity can contribute to improve it.'
-              )}
-            />
-            <FeatureItem
               iconName="FiBox"
               title={nbServicesTitle}
               desc={t(
-                'common:home_page.how.feature2.desc',
+                'common:home_page.how.feature1.desc',
                 'Google, Amazon, Apple, AirBnB, Facebook, Twitter, Instagram, Bing, Microsoft, Reddit, Youtube, TikTok...'
               )}
             />
@@ -117,8 +109,16 @@ const HomePage = ({ services }: any) => {
               iconName="FiFile"
               title={nbDocsTitle}
               desc={t(
-                'common:home_page.how.feature3.desc',
+                'common:home_page.how.feature2.desc',
                 'Terms of Service, Privacy Policy, Trackers Policy, Developer Terms, Community Guidelines...'
+              )}
+            />
+            <FeatureItem
+              iconName="FiSmile"
+              title={t('common:home_page.how.feature3.title', 'Open Source')}
+              desc={t(
+                'common:home_page.how.feature3.desc',
+                'Free and collaborative software, any entity can contribute to improve it.'
               )}
             />
           </FeatureList>
@@ -354,9 +354,21 @@ const HomePage = ({ services }: any) => {
           )}
           titleLevel="h3"
         >
-          <ThumbGaleryItem src="/images/logo-ambnum.png" width="158" height="80" />
-          <ThumbGaleryItem src="/images/logo-gdi.png" width="150" height="32" />
-          <ThumbGaleryItem src="/images/logo-peren.png" width="110" height="84" />
+          <Link href="https://disinfo.quaidorsay.fr">
+            <a target="_blank">
+              <ThumbGaleryItem src="/images/logo-ambnum.png" width="158" height="80" />
+            </a>
+          </Link>
+          <Link href="https://disinformationindex.org/">
+            <a target="_blank">
+              <ThumbGaleryItem src="/images/logo-gdi.png" width="150" height="32" />
+            </a>
+          </Link>
+          <Link href="https://www.peren.gouv.fr/">
+            <a target="_blank">
+              <ThumbGaleryItem src="/images/logo-peren.png" width="110" height="84" />
+            </a>
+          </Link>
         </ThumbGalery>
       </Container>
 
