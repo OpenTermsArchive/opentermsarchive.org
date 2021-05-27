@@ -17,4 +17,8 @@ body {
   line-height: 1.5;
   letter-spacing: -0.2px;
   font-weight: normal;
+
+  @media (--tabletLarge) {
+    border: 10px solid blue;
+  }
 }

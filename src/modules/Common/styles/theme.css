@@ -59,6 +59,7 @@
 Custom media queries  
 Read https://preset-env.cssdb.org/features#custom-media-queries
 Use : @media (--tabletLarge) {}
+Custom properties are not allowed inside custom media /!\
 */
 @custom-media --mobileSmall (max-width: 320px);
 @custom-media --mobileLarge (max-width: 480px);

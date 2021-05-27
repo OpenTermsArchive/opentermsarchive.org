@@ -3,4 +3,14 @@
     width: 276px;
     height: 37px;
   }
+
+  @media (--tabletLarge) {
+    border: 10px solid red;
+  }
+}
+
+@media (--tabletLarge) {
+  .logo {
+    border: 10px solid red;
+  }
 }

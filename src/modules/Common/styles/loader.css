@@ -4,6 +4,9 @@
 /* Mixins */
 @import 'mixins.css';
 
+/* Base */
+@import 'base.css';
+
 /* Import elements styles */
 @import 'elements/fonts.css';
 @import 'elements/icons.css';
