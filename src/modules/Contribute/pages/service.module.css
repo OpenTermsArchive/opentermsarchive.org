@@ -6,23 +6,23 @@
   border-right: 1px solid var(--colorBlack200);
   background-color: var(--colorWhite);
 
-  > nav,
-  > div {
+  & > nav,
+  & > div {
     padding: 20px;
   }
 
-  a,
-  button {
+  & a,
+  & button {
     cursor: pointer;
   }
 
-  nav {
+  & nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  h3 {
+  & h3 {
     margin-top: var(--mXL);
     margin-bottom: var(--mS);
 
@@ -31,15 +31,15 @@
     }
   }
 
-  label {
+  & label {
     margin-top: var(--mM);
   }
 
-  textarea {
+  & textarea {
     margin-top: var(--mL);
   }
 
-  > div {
+  & > div {
     overflow-y: auto;
   }
 }
@@ -48,7 +48,7 @@
   display: flex;
   align-items: flex-start;
 
-  > div {
+  & > div {
     flex: 1;
   }
 }
@@ -58,7 +58,7 @@
   align-items: flex-start;
   margin-bottom: var(--mXS);
 
-  > button {
+  & > button {
     margin-left: var(--mS);
   }
 }
@@ -70,12 +70,12 @@
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  h1 {
+  & h1 {
     max-width: 50%;
     margin: 0 auto 40px;
     text-align: center;
   }
-  > * {
+  & > * {
     margin-bottom: 40px;
     &:last-child {
       margin-bottom: 0;

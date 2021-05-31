@@ -45,6 +45,7 @@ h3,
   color: var(--colorBlack900);
   line-height: 1.25;
 }
+
 h3,
 .h3 {
   @media (--gridPlus) {
