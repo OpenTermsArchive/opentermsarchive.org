@@ -7,7 +7,7 @@
   }
 
   &:hover {
-    .linkArrow_content {
+    & .linkArrow_content {
       transition: transform 0.3s easeOutCirc;
       transform: translateX(4px);
     }
@@ -21,7 +21,7 @@
   &.linkArrow__isSmall {
     font-size: 1.4rem;
     &:hover {
-      .linkArrow_content {
+      & .linkArrow_content {
         transform: translateX(2px);
       }
     }
