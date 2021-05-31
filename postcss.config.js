@@ -17,7 +17,7 @@ module.exports = {
       // Adds warnings when calc() are not reduced to a single value.
       //warnWhenCannotResolve: true,
     },
-
+    'postcss-easings': {},
     autoprefixer: {
       //Add prefixes only for final and IE versions of specification (see browserslist in package.json)
       flexbox: 'no-2009',

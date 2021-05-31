@@ -6,10 +6,12 @@
   padding: var(--pS) var(--pL);
   color: var(--colorBlack200);
   border-radius: 4px;
+  transition: all 0.3s easeOutExpo;
 
   &:hover {
     background-color: var(--colorSecondary);
     color: var(--colorBlack200);
+    transition: all 0.25s easeOutCirc;
   }
 
   &.button__secondary {
