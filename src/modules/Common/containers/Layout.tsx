@@ -46,38 +46,46 @@ const Layout = ({
       <Container paddingY={false} paddingX={false} layout="fluid">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingY={false}>
           <Header>
-            <HeaderMenu>
-              <ul>
-                <li>
-                  <Link href={'/#'.concat(t('common:home_page.how.id'))}>
-                    {t('common:header.link.how', 'How')}
+            {({ toggleExtended }) => (
+              <>
+                <HeaderMenu>
+                  <ul>
+                    <li>
+                      <Link href={'/#'.concat(t('common:home_page.how.id'))}>
+                        <a onClick={toggleExtended}>{t('common:header.link.how', 'How')}</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={'/#'.concat(t('common:home_page.values.id'))}>
+                        <a onClick={toggleExtended}>{t('common:header.link.values', 'Values')}</a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={'/#'.concat(t('common:home_page.contribute.id'))}>
+                        <a onClick={toggleExtended}>
+                          {t('common:header.link.contribute', 'Contribute')}
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={'/#'.concat(t('common:home_page.showcase.id'))}>
+                        <a onClick={toggleExtended}>
+                          {t('common:header.link.showcase', 'Built with')}
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
+                </HeaderMenu>
+                <HeaderMenu>
+                  <LanguageSwitcher />
+                  <Link href="https://github.com/ambanum/OpenTermsArchive/">
+                    <a className={classNames('icon_github_circle')} target="_blank">
+                      <FiGithub color="#fefffd" />
+                    </a>
                   </Link>
-                </li>
-                <li>
-                  <Link href={'/#'.concat(t('common:home_page.values.id'))}>
-                    {t('common:header.link.values', 'Values')}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={'/#'.concat(t('common:home_page.contribute.id'))}>
-                    {t('common:header.link.contribute', 'Contribute')}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={'/#'.concat(t('common:home_page.showcase.id'))}>
-                    {t('common:header.link.showcase', 'Built with')}
-                  </Link>
-                </li>
-              </ul>
-            </HeaderMenu>
-            <HeaderMenu>
-              <LanguageSwitcher />
-              <Link href="https://github.com/ambanum/OpenTermsArchive/">
-                <a className={classNames('icon_github_circle')} target="_blank">
-                  <FiGithub color="#fefffd" />
-                </a>
-              </Link>
-            </HeaderMenu>
+                </HeaderMenu>
+              </>
+            )}
           </Header>
         </Container>
       </Container>
