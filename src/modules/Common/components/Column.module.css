@@ -42,7 +42,17 @@
 
 @media (--tabletSmall) {
   .column {
-    width: 100%;
+    &.column__25 {
+      width: 100%;
+    }
+
+    &.column__50 {
+      width: 100%;
+    }
+
+    &.column__75 {
+      width: 100%;
+    }
 
     &:not(:first-child) {
       margin-left: 0;
