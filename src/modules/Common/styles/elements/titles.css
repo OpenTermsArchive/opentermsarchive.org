@@ -7,8 +7,11 @@ h1,
   letter-spacing: -1.5px;
   color: var(--colorBlack900);
   line-height: 1.25;
+}
 
-  @media (--gridPlus) {
+@media (--gridPlus) {
+  h1,
+  .h1 {
     font-size: 5.2rem;
     line-height: 1.15;
   }
@@ -23,8 +26,10 @@ h2,
   letter-spacing: -1.5px;
   color: var(--colorBlack900);
   line-height: 1.25;
-
-  @media (--gridPlus) {
+}
+@media (--gridPlus) {
+  h2,
+  .h2 {
     font-size: 3.4rem;
     line-height: 1.2;
   }
@@ -39,7 +44,9 @@ h3,
   letter-spacing: -1.5px;
   color: var(--colorBlack900);
   line-height: 1.25;
-
+}
+h3,
+.h3 {
   @media (--gridPlus) {
     font-size: 2.4rem;
     line-height: 1.2;
