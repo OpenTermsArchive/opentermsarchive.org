@@ -1,8 +1,6 @@
 import 'modules/Wdyr';
 //Import global css reset
 import 'modules/Common/styles/vendor/minireset.css';
-//Import global css styles
-import 'modules/Common/styles/theme.css';
 import 'modules/Common/styles/loader.css';
 // NProgress
 import 'nprogress/nprogress.css'; //styles of nprogress//Binding events.

@@ -31,6 +31,7 @@
     "@gouvfr/all": "^0.5.3",
     "@socialgouv/matomo-next": "^1.2.1",
     "@welldone-software/why-did-you-render": "^6.1.1",
+    "autoprefixer": "^10.2.6",
     "axios": "^0.21.1",
     "classnames": "^2.3.1",
     "debug": "^4.3.1",
@@ -42,16 +43,15 @@
     "next-i18next": "^8.2.0",
     "next-mdx-remote": "^3.0.2",
     "nprogress": "^0.2.0",
+    "postcss": "^8.3.0",
     "postcss-animation": "^0.0.12",
     "postcss-calc": "^8.0.0",
-    "postcss-debug": "^0.4.2",
+    "postcss-custom-media": "^8.0.0",
+    "postcss-custom-properties": "^11.0.0",
     "postcss-easings": "^3.0.1",
-    "postcss-easy-import": "^3.0.0",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-import": "^14.0.2",
-    "postcss-mixins": "8.0.0",
-    "postcss-nested": "^5.0.5",
-    "postcss-preset-env": "^6.7.0",
+    "postcss-mixins": "^8.0.0",
+    "postcss-nesting": "^8.0.1",
     "puppeteer": "9.0.0",
     "query-string": "^7.0.0",
     "react": "17.0.2",
@@ -92,5 +92,10 @@
     "ts-node": "^9.1.1",
     "typescript": "4.2.4"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "browserslist": [
+    "last 1 version",
+    "> 0.3%",
+    "IE 10"
+  ]
 }

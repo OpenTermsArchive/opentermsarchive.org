@@ -1,69 +1,57 @@
-@import '../styles/mixins.css';
-
 .container {
   margin: 0 auto;
   padding-top: var(--p4XL);
   padding-bottom: var(--p3XL);
 
-  @media (--gridPlus) {
-    padding-left: var(--pL);
-    padding-right: var(--pL);
-  }
-
-  @media (--tabletSmall) {
-    padding-top: var(--p3XL);
-    padding-bottom: var(--p2XL);
-  }
-
-  &__1211 {
+  &.container__1211 {
     @mixin grid 12, 11;
   }
 
-  &__1110 {
+  &.container__1110 {
     @mixin grid 11, 10;
   }
 
-  &__1011 {
+  &.container__1011 {
     @mixin grid 10, 11;
   }
 
-  &__109 {
+  &.container__109 {
     @mixin grid 10, 9;
   }
 
-  &__98 {
+  &.container__98 {
     @mixin grid 9, 8;
   }
 
-  &__87 {
+  &.container__87 {
     @mixin grid 8, 7;
   }
 
-  &__76 {
+  &.container__76 {
     @mixin grid 7, 6;
   }
 
-  &__65 {
+  &.container__65 {
     @mixin grid 6, 5;
   }
 
-  &__54 {
+  &.container__54 {
     @mixin grid 5, 4;
   }
 
-  &__43 {
+  &.container__43 {
     @mixin grid 4, 3;
   }
 
-  &__32 {
+  &.container__32 {
     @mixin grid 3, 2;
   }
 
-  &__21 {
+  &.container__21 {
     @mixin grid 2, 1;
   }
 
-  &__flex {
+  &.container__flex {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -73,24 +61,24 @@
     }
   }
 
-  &__fluid {
+  &.container__fluid {
     padding-left: var(--pL);
     padding-right: var(--pL);
     max-width: 100%;
   }
 
-  &__wide {
+  &.container__wide {
     max-width: var(--desktopWide);
     margin: 0 auto;
   }
 
-  &__hasBgImage {
+  &.container__hasBgImage {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  &__isDark {
+  &.container__isDark {
     color: var(--colorWhite);
 
     & h1,
@@ -101,22 +89,36 @@
     }
   }
 
-  &__isGray {
+  &.container__isGray {
     background-color: var(--colorBlack200);
   }
 
-  &__hasNoPaddingX {
+  &.container__hasNoPaddingX {
     padding-left: 0;
     padding-right: 0;
   }
 
-  &__hasNoPaddingY {
+  &.container__hasNoPaddingY {
     padding-top: 0;
     padding-bottom: 0;
   }
 
-  &__hasPaddingYSmall {
+  &.container__hasPaddingYSmall {
     padding-top: var(--p2XL);
     padding-bottom: var(--pL);
+  }
+}
+
+@media (--gridPlus) {
+  .container {
+    padding-left: var(--pL);
+    padding-right: var(--pL);
+  }
+}
+
+@media (--tabletSmall) {
+  .container {
+    padding-top: var(--p3XL);
+    padding-bottom: var(--p2XL);
   }
 }

@@ -1,10 +1,8 @@
-@import '../styles/mixins';
-
 .thumbGalery {
   margin: 0 auto;
 
-  &__isSmall {
-    .thumbGalery_items {
+  &.thumbGalery__isSmall {
+    &.thumbGalery_items {
       margin-top: var(--mL);
     }
   }

@@ -1,17 +1,17 @@
 .column {
-  &__25 {
+  &.column__25 {
     width: calc(25% - (var(--gridGutterWidth) / 2));
   }
 
-  &__50 {
+  &.column__50 {
     width: calc(50% - (var(--gridGutterWidth) / 2));
   }
 
-  &__75 {
+  &.column__75 {
     width: calc(75% - (var(--gridGutterWidth) / 2));
   }
 
-  &__100 {
+  &.column__100 {
     width: 100%;
   }
 
@@ -38,8 +38,10 @@
   &:not(:first-child) {
     margin-left: var(--gridGutterWidth);
   }
+}
 
-  @media (--tabletSmall) {
+@media (--tabletSmall) {
+  .column {
     width: 100%;
 
     &:not(:first-child) {

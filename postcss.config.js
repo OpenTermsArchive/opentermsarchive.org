@@ -1,15 +1,26 @@
 module.exports = {
   plugins: {
-    'postcss-import': {},
-    'postcss-mixins': {},
-    'postcss-easings': {},
+    'postcss-mixins': {
+      //Path to mixin file
+      mixinsFiles: './src/modules/Common/styles/mixins.css',
+    },
     'postcss-flexbugs-fixes': {},
-    'postcss-calc': {},
-    'postcss-preset-env': {
-      autoprefixer: {
-        flexbox: 'no-2009',
-      },
-      stage: 1,
+    'postcss-custom-media': {
+      importFrom: './src/modules/Common/styles/custom-media-queries.css',
+    },
+    'postcss-nesting': {},
+    'postcss-custom-properties': {
+      //Necessary to make next working, todo: publish an issue
+      importFrom: './src/modules/Common/styles/custom-properties.css',
+    },
+    'postcss-calc': {
+      // Adds warnings when calc() are not reduced to a single value.
+      //warnWhenCannotResolve: true,
+    },
+
+    autoprefixer: {
+      //Add prefixes only for final and IE versions of specification (see browserslist in package.json)
+      flexbox: 'no-2009',
     },
   },
 };

@@ -21,8 +21,10 @@
   padding: 4px;
   margin: 0 calc((76px-40px) / 2);
   border-radius: 10px;
+}
 
-  @media (--tabletSmall) {
+@media (--tabletSmall) {
+  .featureItem_icon {
     margin-left: 0;
   }
 }
