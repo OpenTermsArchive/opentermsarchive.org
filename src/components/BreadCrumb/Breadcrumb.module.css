@@ -1,21 +1,21 @@
 .breadcrumb {
   margin-bottom: var(--mXL);
 
-  ul {
+  & ul {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
   }
-  li:not(:first-child) {
+  & li:not(:first-child) {
     margin-left: var(--m2XS);
   }
 
-  i {
+  & i {
     font-size: 8px;
     display: block;
   }
 
-  svg {
+  & svg {
     display: flex;
   }
 }
