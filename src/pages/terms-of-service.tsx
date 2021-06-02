@@ -15,11 +15,11 @@ export default function TermsOfServicePage({ mdxContent }: WithI18nResult) {
     <Layout title={t('common:terms-of-service.seo.title', 'Terms of Service')}>
       <Container gridCols="10" gridGutters="9" paddingX={false}>
         <TextContent>
-          <MDXRemote {...(mdxContent as any)} components={{ Button: Button }} />
+          <MDXRemote {...(mdxContent as any)} components={{ Button }} />
         </TextContent>
       </Container>
     </Layout>
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx' })();
+export const getStaticProps = withI18n({ load: 'mdx', filename: 'terms-of-service' })();
