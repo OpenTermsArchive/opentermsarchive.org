@@ -52,6 +52,8 @@ COPY ./docker/$ENV_FILE /usr/src/app/.env.production
 ENV NODE_ENV=production
 ENV NODE_OPTIONS='--max_old_space_size=8192'
 
+RUN ls -alh public
+
 RUN yarn build
 
 RUN rm -Rf node_modules
