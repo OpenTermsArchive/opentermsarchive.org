@@ -62,7 +62,7 @@ const HomePage = ({ services }: any) => {
         </Container>
       </Container>
 
-      {/* How */}
+      {/* How section */}
       <Container
         gridCols="10"
         gridGutters="11"
