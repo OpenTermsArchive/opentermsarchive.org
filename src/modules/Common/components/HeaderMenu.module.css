@@ -2,23 +2,25 @@
   display: flex;
   align-items: center;
 
-  > ul {
+  & ul {
     display: flex;
 
-    > li {
+    & li {
       margin: 0 var(--mS);
     }
   }
+}
 
-  @media (--tabletLarge) {
-    > ul {
+@media (--tabletLarge) {
+  .headerMenu {
+    & ul {
       width: 100%;
 
-      > li {
+      & li {
         width: 100%;
         margin: var(--mS) auto;
 
-        a {
+        & a {
           color: var(--colorWhite);
           display: inline-flex;
         }

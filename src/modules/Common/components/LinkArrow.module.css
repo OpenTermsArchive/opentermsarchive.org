@@ -2,33 +2,33 @@
   display: inline-flex;
   align-items: center;
 
-  > svg {
+  & svg {
     transition: stroke 0.3s easeOutCirc;
   }
 
   &:hover {
-    .linkArrow_content {
+    & .linkArrow_content {
       transition: transform 0.3s easeOutCirc;
       transform: translateX(4px);
     }
 
-    > svg {
+    & svg {
       transition: stroke 0.3s easeOutCirc;
       stroke: var(--colorSecondary);
     }
   }
 
-  &__isSmall {
+  &.linkArrow__isSmall {
     font-size: 1.4rem;
     &:hover {
-      .linkArrow_content {
+      & .linkArrow_content {
         transform: translateX(2px);
       }
     }
   }
 
-  &__isLeft {
-    > svg {
+  &.linkArrow__isLeft {
+    & svg {
       transform: rotate(180deg);
     }
   }

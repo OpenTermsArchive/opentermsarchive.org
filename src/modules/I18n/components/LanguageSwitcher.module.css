@@ -1,12 +1,10 @@
-@import '../../Common/styles/mixins.css';
-
 .languageSwitcher {
   text-align: right;
   margin-right: var(--mXS);
   font-size: 1.4rem;
   position: relative;
 
-  &__isOpen {
+  &.languageSwitcher__isOpen {
     & .languageSwitcher_items {
       display: block;
     }
@@ -22,7 +20,7 @@
   align-items: center;
   background-color: var(--colorWhite);
 
-  > svg {
+  & > svg {
     margin-left: var(--m2XS);
   }
 
@@ -49,7 +47,7 @@
   white-space: nowrap;
   padding: var(--pXS);
 
-  &__isActive {
+  &.languageSwitcher_item__isActive {
     border: 1px solid red;
   }
 }

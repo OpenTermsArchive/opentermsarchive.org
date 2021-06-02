@@ -4,6 +4,13 @@
 /* Mixins */
 @import 'mixins.css';
 
+/* Custom media queries and custom properties */
+@import 'custom-media-queries.css';
+@import 'custom-properties.css';
+
+/* Base */
+@import 'base.css';
+
 /* Import elements styles */
 @import 'elements/fonts.css';
 @import 'elements/icons.css';

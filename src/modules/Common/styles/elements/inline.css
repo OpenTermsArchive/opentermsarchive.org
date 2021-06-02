@@ -15,8 +15,10 @@
   font-size: 2.4rem;
   font-weight: 300;
   letter-spacing: -0.2px;
+}
 
-  @media (--gridPlus) {
+@media (--gridPlus) {
+  .text__subtitle {
     font-size: 2rem;
   }
 }

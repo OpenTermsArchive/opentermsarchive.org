@@ -1,5 +1,3 @@
-@import '../mixins.css';
-
 input,
 select,
 textarea {
@@ -33,7 +31,7 @@ label {
     margin-top: var(--mL);
   }
 
-  &__alignRight {
+  &.formfield__alignRight {
     text-align: right;
   }
 }
@@ -41,12 +39,12 @@ label {
 .select {
   position: relative;
 
-  select {
+  & select {
     position: relative;
     appearance: none;
   }
 
-  > svg {
+  & svg {
     top: var(--mS);
     right: var(--mS);
     position: absolute;

@@ -1,6 +1,16 @@
 .logo {
-  & > svg {
+  & svg {
     width: 276px;
     height: 37px;
+  }
+}
+
+@media (--mobileLarge) {
+  .logo {
+    margin-top: 8px;
+    & svg {
+      width: 200px;
+      height: 27px;
+    }
   }
 }

@@ -1,4 +1,3 @@
-@import '../styles/mixins';
 .button {
   @mixin resetButton;
   display: inline-flex;
@@ -7,13 +6,15 @@
   padding: var(--pS) var(--pL);
   color: var(--colorBlack200);
   border-radius: 4px;
+  transition: all 0.3s easeOutExpo;
 
   &:hover {
     background-color: var(--colorSecondary);
     color: var(--colorBlack200);
+    transition: all 0.25s easeOutCirc;
   }
 
-  &__secondary {
+  &.button__secondary {
     background-color: var(--colorWhite);
     border: 1px solid var(--colorPrimary);
     color: var(--colorPrimary);
@@ -25,7 +26,7 @@
     }
   }
 
-  &__hasOnlyIcon {
+  &.button__hasOnlyIcon {
     padding-left: var(--pS);
     padding-right: var(--pS);
   }

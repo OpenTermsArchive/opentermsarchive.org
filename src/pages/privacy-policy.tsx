@@ -21,4 +21,4 @@ export default function PrivacyPolicyPage({ mdxContent }: WithI18nResult) {
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx' })();
+export const getStaticProps = withI18n({ load: 'mdx', filename: 'privacy-policy' })();

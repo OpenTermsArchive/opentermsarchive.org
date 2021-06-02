@@ -1,5 +1,3 @@
-@import '../styles/mixins';
-
 .buttonBlock {
   border: 1px solid var(--colorBlack200);
   @mixin grid 3, 3;
@@ -8,7 +6,7 @@
   position: relative;
   flex-shrink: 0;
 
-  &__fillParent {
+  &.buttonBlock__fillParent {
     width: 100%;
     max-width: 100%;
   }
@@ -26,7 +24,7 @@
   display: flex;
   align-items: center;
 
-  & > svg {
+  & svg {
     margin: 0 auto;
   }
 }
@@ -46,7 +44,7 @@
   flex-direction: column;
   align-items: center;
 
-  & > a:not(:first-child) {
+  & a:not(:first-child) {
     margin-top: var(--m2XS);
   }
 }

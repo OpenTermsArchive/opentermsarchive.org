@@ -10,6 +10,7 @@ import { useTranslation } from 'next-i18next';
 
 type HeaderProps = {
   className?: string;
+  children: (data: any) => any;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const Header: React.FC<HeaderProps> = ({ children, className, ...props }) => {
@@ -27,7 +28,8 @@ const Header: React.FC<HeaderProps> = ({ children, className, ...props }) => {
           </a>
         </Link>
       </div>
-      <div className={classNames(s.header_menus)}>{children}</div>
+
+      <div className={classNames(s.header_menus)}>{children({ toggleExtended })}</div>
 
       <button type="button" className={classNames(s.header_openLink)} onClick={toggleExtended}>
         {t('common:header.open', 'Menu')}

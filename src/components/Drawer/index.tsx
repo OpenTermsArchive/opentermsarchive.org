@@ -1,7 +1,7 @@
 import { FiChevronLeft as IconCollapse, FiChevronRight as IconExpand } from 'react-icons/fi';
 
 import React from 'react';
-import s from './Drawer.module.scss';
+import s from './Drawer.module.css';
 import { useToggle } from 'react-use';
 
 const Drawer: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
