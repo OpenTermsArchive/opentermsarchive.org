@@ -12,7 +12,7 @@
   "home_page.contribute.title": "Aidez nous à apprécier la loyauté des services.",
   "home_page.contribute.subtitle": "Contribuer",
   "home_page.contribute.buttonbloc1.title": "Ajouter des documents",
-  "home_page.contribute.buttonbloc1.button.href": "/contribuer",
+  "home_page.contribute.buttonbloc1.button.href": "/contribute",
   "home_page.contribute.buttonbloc1.button.label": "Ajouter maintenant",
   "home_page.contribute.buttonbloc2.title": "Améliorer le code source",
   "home_page.contribute.buttonbloc2.button.href": "https://github.com/ambanum/OpenTermsArchive",

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import classnames from 'classnames';
-import s from './FullPageLayout.module.scss';
+import s from './FullPageLayout.module.css';
 
 const FullPageLayout: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
   children,

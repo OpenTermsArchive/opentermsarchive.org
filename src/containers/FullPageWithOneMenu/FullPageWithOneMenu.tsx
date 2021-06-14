@@ -4,7 +4,7 @@ import Header from './Header';
 import Main from './Main';
 import Menu from './Menu';
 import classNames from 'classnames';
-import s from './FullPageWithOneMenu.module.scss';
+import s from './FullPageWithOneMenu.module.css';
 
 export type TypeBreakpoint =
   | 'smallMobile'

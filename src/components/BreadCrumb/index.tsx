@@ -1,7 +1,7 @@
 import { FiChevronRight as IconSeparator } from 'react-icons/fi';
 import Link from 'next/link';
 import React from 'react';
-import s from './Breadcrumb.module.scss';
+import s from './Breadcrumb.module.css';
 
 export interface IBreadcrumb {
   name: string;

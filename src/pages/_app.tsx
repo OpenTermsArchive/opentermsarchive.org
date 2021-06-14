@@ -4,7 +4,7 @@ import 'modules/Common/styles/vendor/minireset.css';
 import 'modules/Common/styles/loader.css';
 // NProgress
 import 'nprogress/nprogress.css'; //styles of nprogress//Binding events.
-import 'modules/NProgress/nprogress.theme.scss';
+import 'modules/NProgress/nprogress.theme.css';
 import 'modules/NProgress'; //nprogress module
 
 import { AppProps } from 'next/app';
