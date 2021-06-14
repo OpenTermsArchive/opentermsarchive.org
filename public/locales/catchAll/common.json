@@ -48,6 +48,8 @@
   "home_page.contribute.buttonbloc2.desc": "Add features, write tests, fix bugs, help us make better code.",
   "home_page.contribute.buttonbloc3.desc": "Design your use cases using the data via the API.",
   "home_page.how.feature1.defaultTitle": "Many services",
+  "home_page.how.feature1.dynamicTitle": "{{count}} service",
+  "home_page.how.feature1.dynamicTitle_plural": "{{count}} services",
   "home_page.how.desc.p1": "Every online service provider has terms of use defined in a set of contractual documents that govern the terms of interaction with its users, such as content moderation policies, publisher liability, and jurisdiction in the event of a dispute.",
   "home_page.how.desc.p2": "In order to track their changes, documents are periodically obtained by fetching a web location and selecting content within the web page to remove the noise (ads, navigation menu, login fields…). Beyond selecting a subset of a page, some documents have additional noise (hashes in links, CSRF tokens…) that would be false for changes. Open Terms Archive thus supports specific filters for each document.",
   "home_page.how.desc.p3": "However, the shape of that noise can change over time. In order to recover in case of information loss during the noise filtering step, a snapshot is recorded every there is a change. After the noise is filtered out from the snapshot, if there are changes in the resulting document, a new version of the document is recorded.",
@@ -79,5 +81,7 @@
   "privacy-policy.seo.title": "Privacy Policy",
   "terms-of-service.seo.title": "Terms of Service",
   "home_page.how.feature2.defaultTitle": "Many documents",
+  "home_page.how.feature2.dynamicTitle": "{{count}} document",
+  "home_page.how.feature2.dynamicTitle_plural": "{{count}} documents",
   "home_page.how.feature3.title": "Open Source"
 }
