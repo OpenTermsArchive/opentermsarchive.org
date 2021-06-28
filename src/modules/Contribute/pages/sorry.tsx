@@ -6,7 +6,7 @@ import Layout from 'modules/Common/containers/Layout';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
-const EMAIL_SUPPORT = 'contribute@disinfo.beta.gouv.fr';
+const EMAIL_SUPPORT = 'contact@opentermsarchive.org';
 
 const SorryPage = () => {
   const { t } = useTranslation();
