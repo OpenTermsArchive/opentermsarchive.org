@@ -83,5 +83,8 @@
   "home_page.how.feature2.defaultTitle": "Many documents",
   "home_page.how.feature2.dynamicTitle": "{{count}} document",
   "home_page.how.feature2.dynamicTitle_plural": "{{count}} documents",
-  "home_page.how.feature3.title": "Open Source"
+  "home_page.how.feature3.title": "Open Source",
+  "case-studies.seo.title": "Case Studies",
+  "case-studies.hero.title": "Case Studies",
+  "case-studies.hero.subtitle": "So far, Open Terms Archive taught us a lot."
 }
