@@ -17,7 +17,7 @@ import { useToggle } from 'react-use';
 import { useTranslation } from 'next-i18next';
 import useUrl from 'hooks/useUrl';
 
-const EMAIL_SUPPORT = 'contribute@disinfo.beta.gouv.fr';
+const EMAIL_SUPPORT = 'contribute@opentermsarchive.org';
 
 const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   const router = useRouter();

@@ -83,5 +83,9 @@
   "home_page.how.feature1.defaultTitle": "Many services",
   "home_page.how.feature1.dynamicTitle": "{{count}} services",
   "home_page.how.feature1.dynamicTitle_plural": "{{count}} services",
-  "home_page.how.feature3.title": "Open Source"
+  "home_page.how.feature3.title": "Open Source",
+  "case-studies.seo.title": "Études de cas",
+  "case-studies.hero.title": "Études de cas",
+  "case-studies.hero.subtitle": "Que nous a appris Open Terms Archive jusqu’à présent ?",
+  "header.link.case-studies": "Études de cas"
 }

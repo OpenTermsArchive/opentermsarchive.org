@@ -74,6 +74,13 @@ const Layout = ({
                         </a>
                       </Link>
                     </li>
+                    <li>
+                      <Link href={'/case-studies'}>
+                        <a onClick={toggleExtended}>
+                          {t('common:header.link.case-studies', 'Case studies')}
+                        </a>
+                      </Link>
+                    </li>
                   </ul>
                 </HeaderMenu>
                 <HeaderMenu>

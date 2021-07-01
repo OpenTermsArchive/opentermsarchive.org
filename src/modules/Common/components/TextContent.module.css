@@ -1,6 +1,15 @@
 .textContent {
   margin-top: var(--mL);
 
+  & hr {
+    border: 1px solid var(--colorBlack200);
+    margin-bottom: var(--mXL);
+  }
+
+  & button {
+    margin-bottom: var(--mXL);
+  }
+
   & p:not(:last-child) {
     margin-bottom: var(--mM);
   }
