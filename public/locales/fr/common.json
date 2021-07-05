@@ -103,5 +103,8 @@
   "home_page.contribute.buttonbloc1.link.title": "Ajouter un document à suivre dans Open Terms Archive",
   "home_page.contribute.buttonbloc2.link.title": "Aller sur le dépôt GitHub",
   "home_page.contribute.buttonbloc3.link.title": "Lire la documentation de l'API pour l'utiliser",
-  "home_page.contribute.buttonbloc3.sublink.title": "Télécharger un jeu de données"
+  "home_page.contribute.buttonbloc3.sublink.title": "Télécharger un jeu de données",
+  "home_page.showcase.item1.link.title": "Essayer Scripta Manent sur le site de Disinfo maintenant",
+  "home_page.showcase.item2.link.title": "Voir les expérimentations de l'équipe de Disinfo avec les données d'Open Terms Archive",
+  "home_page.showcase.buttonbloc.link.title": "Envoyer nous un courriel"
 }

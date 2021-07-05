@@ -99,5 +99,8 @@
   "home_page.contribute.buttonbloc1.link.title": "Add a document now",
   "home_page.contribute.buttonbloc2.link.title": "Go to the GitHub repository",
   "home_page.contribute.buttonbloc3.link.title": "Read the documentation for use the API",
-  "home_page.contribute.buttonbloc3.sublink.title": "Download a dataset"
+  "home_page.contribute.buttonbloc3.sublink.title": "Download a dataset",
+  "home_page.showcase.item1.link.title": "Try Scripta Manent on Disinfo website now",
+  "home_page.showcase.item2.link.title": "See Disinfo experiments with Open Terms Archive data",
+  "home_page.showcase.buttonbloc.link.title": "Send us a mail"
 }

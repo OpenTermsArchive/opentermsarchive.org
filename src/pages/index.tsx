@@ -325,7 +325,14 @@ const HomePage = ({ services }: any) => {
                   'https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent'
                 )}
               >
-                {t('common:home_page.showcase.item1.link.label', 'Try')}
+                <a
+                  title={t(
+                    'common:home_page.showcase.item1.link.title',
+                    'Try Scripta Manent on Disinfo website now'
+                  )}
+                >
+                  {t('common:home_page.showcase.item1.link.label', 'Try')}
+                </a>
               </LinkArrow>
             </ShowcaseItem>
             <ShowcaseItem
@@ -346,7 +353,14 @@ const HomePage = ({ services }: any) => {
                   'https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments'
                 )}
               >
-                {t('common:home_page.showcase.item2.link.label', 'See')}
+                <a
+                  title={t(
+                    'common:home_page.showcase.item2.link.title',
+                    'See Disinfo experiments with Open Terms Archive data'
+                  )}
+                >
+                  {t('common:home_page.showcase.item2.link.label', 'See')}
+                </a>
               </LinkArrow>
             </ShowcaseItem>
           </ShowcaseList>
@@ -369,7 +383,9 @@ const HomePage = ({ services }: any) => {
                 'mailto:contact@opentermsarchive.org'
               )}
             >
-              <Button>{t('common:home_page.showcase.buttonbloc.label', 'Contact us')}</Button>
+              <a title={t('common:home_page.showcase.buttonbloc.link.title', 'Send us a mail')}>
+                <Button>{t('common:home_page.showcase.buttonbloc.label', 'Contact us')}</Button>
+              </a>
             </Link>
           </ButtonBlock>
         </Column>
