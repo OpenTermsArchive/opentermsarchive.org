@@ -99,5 +99,9 @@
   "footer.link.tos.title": "Lire les mentions légales du site d'Open Terms Archive",
   "footer.link.privacy.title": "Lire la politique de confidentialité du site d'Open Terms Archive",
   "footer.link.github.title": "Voir le code source",
-  "header.link.github.title": "Voir le code source"
+  "header.link.github.title": "Voir le code source",
+  "home_page.contribute.buttonbloc1.link.title": "Ajouter un document à suivre dans Open Terms Archive",
+  "home_page.contribute.buttonbloc2.link.title": "Aller sur le dépôt GitHub",
+  "home_page.contribute.buttonbloc3.link.title": "Lire la documentation de l'API pour l'utiliser",
+  "home_page.contribute.buttonbloc3.sublink.title": "Télécharger un jeu de données"
 }

@@ -95,5 +95,9 @@
   "footer.link.tos.title": "Read the TOS of Open Terms Archive website",
   "footer.link.privacy.title": "Read the privacy policy of Open Terms Archive website",
   "footer.link.github.title": "Go to the GitHub repository",
-  "header.link.github.title": "View the source code"
+  "header.link.github.title": "View the source code",
+  "home_page.contribute.buttonbloc1.link.title": "Add a document now",
+  "home_page.contribute.buttonbloc2.link.title": "Go to the GitHub repository",
+  "home_page.contribute.buttonbloc3.link.title": "Read the documentation for use the API",
+  "home_page.contribute.buttonbloc3.sublink.title": "Download a dataset"
 }
