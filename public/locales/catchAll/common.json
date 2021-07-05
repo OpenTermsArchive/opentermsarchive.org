@@ -83,5 +83,17 @@
   "case-studies.seo.title": "Case Studies",
   "case-studies.hero.title": "Case Studies",
   "case-studies.hero.subtitle": "So far, Open Terms Archive taught us a lot.",
-  "header.link.case-studies": "Case studies"
+  "header.link.case-studies": "Case studies",
+  "header.link.case-studies.title": "So far, Open Terms Archive taught us a lot.",
+  "header.link.how.title": "How does OTA work?",
+  "header.link.values.title": "What we believe in",
+  "header.link.contribute.title": "Help us appreciate the loyalty of the services.",
+  "header.link.showcase.title": "Applications built with Open Terms Archive",
+  "footer.link.home.title": "Back to home",
+  "footer.link.api.title": "Use the API",
+  "footer.link.dataset.title": "Download the dataset",
+  "footer.link.tos.title": "Read the TOS of Open Terms Archive website",
+  "footer.link.privacy.title": "Read the privacy policy of Open Terms Archive website",
+  "footer.link.github.title": "Go to the GitHub repository",
+  "header.link.github.title": "View the source code"
 }

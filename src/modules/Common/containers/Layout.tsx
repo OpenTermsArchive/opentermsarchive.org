@@ -52,31 +52,59 @@ const Layout = ({
                   <ul>
                     <li>
                       <Link href={'/#'.concat(t('common:home_page.how.id'))}>
-                        <a onClick={toggleExtended}>{t('common:header.link.how', 'How')}</a>
+                        <a
+                          title={t('common:header.link.how.title', 'How does OTA work?')}
+                          onClick={toggleExtended}
+                        >
+                          {t('common:header.link.how', 'How')}
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href={'/#'.concat(t('common:home_page.values.id'))}>
-                        <a onClick={toggleExtended}>{t('common:header.link.values', 'Values')}</a>
+                        <a
+                          title={t('common:header.link.values.title', 'What we believe in')}
+                          onClick={toggleExtended}
+                        >
+                          {t('common:header.link.values', 'Values')}
+                        </a>
                       </Link>
                     </li>
                     <li>
                       <Link href={'/#'.concat(t('common:home_page.contribute.id'))}>
-                        <a onClick={toggleExtended}>
+                        <a
+                          title={t(
+                            'common:header.link.contribute.title',
+                            'Help us appreciate the loyalty of the services.'
+                          )}
+                          onClick={toggleExtended}
+                        >
                           {t('common:header.link.contribute', 'Contribute')}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href={'/#'.concat(t('common:home_page.showcase.id'))}>
-                        <a onClick={toggleExtended}>
+                        <a
+                          title={t(
+                            'common:header.link.showcase.title',
+                            'Applications built with Open Terms Archive'
+                          )}
+                          onClick={toggleExtended}
+                        >
                           {t('common:header.link.showcase', 'Built with')}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href={'/case-studies'}>
-                        <a onClick={toggleExtended}>
+                        <a
+                          onClick={toggleExtended}
+                          title={t(
+                            'common:header.link.case-studies.title',
+                            'So far, Open Terms Archive taught us a lot.'
+                          )}
+                        >
                           {t('common:header.link.case-studies', 'Case studies')}
                         </a>
                       </Link>
@@ -86,7 +114,11 @@ const Layout = ({
                 <HeaderMenu>
                   <LanguageSwitcher />
                   <Link href="https://github.com/ambanum/OpenTermsArchive/">
-                    <a className={classNames('icon_github_circle')} target="_blank">
+                    <a
+                      className={classNames('icon_github_circle')}
+                      target="_blank"
+                      title={t('common:header.link.github.title', 'View the source code')}
+                    >
                       <FiGithub color="#fefffd" />
                     </a>
                   </Link>
@@ -113,7 +145,11 @@ const Layout = ({
             <FooterMenu>
               <ul>
                 <li>
-                  <Link href="/">{t('common:footer.link.home', 'Home')}</Link>
+                  <Link href="/">
+                    <a title={t('common:footer.link.home.title', 'Back to home')}>
+                      {t('common:footer.link.home', 'Home')}
+                    </a>
+                  </Link>
                 </li>
                 <li>
                   <Link href={'/#'.concat(t('common:home_page.how.id'))}>
@@ -137,12 +173,19 @@ const Layout = ({
                 </li>
                 <li>
                   <Link href="https://disinfo.quaidorsay.fr/api/open-terms-archive/docs">
-                    {t('common:footer.link.api', 'API')}
+                    <a title={t('common:footer.link.api.title', 'Use the API')}>
+                      {t('common:footer.link.api', 'API')}
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
-                    <a target="_blank">{t('common:footer.link.dataset', 'Dataset')}</a>
+                    <a
+                      title={t('common:footer.link.dataset.title', 'Download the dataset')}
+                      target="_blank"
+                    >
+                      {t('common:footer.link.dataset', 'Dataset')}
+                    </a>
                   </Link>
                 </li>
               </ul>
@@ -151,17 +194,36 @@ const Layout = ({
               <ul>
                 <li>
                   <Link href="/terms-of-service">
-                    {t('common:footer.link.tos', 'Terms of service')}
+                    <a
+                      title={t(
+                        'common:footer.link.tos.title',
+                        'Read the TOS of Open Terms Archive website'
+                      )}
+                    >
+                      {t('common:footer.link.tos', 'Terms of service')}
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/privacy-policy">
-                    {t('common:footer.link.privacy', 'Privacy policy')}
+                    <a
+                      title={t(
+                        'common:footer.link.privacy.title',
+                        'Read the privacy policy of Open Terms Archive website'
+                      )}
+                    >
+                      {t('common:footer.link.privacy', 'Privacy policy')}
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://github.com/ambanum/OpenTermsArchive">
-                    <a target="_blank">{t('common:footer.link.github', 'GitHub')}</a>
+                    <a
+                      title={t('common:footer.link.github.title', 'Go to the GitHub repository')}
+                      target="_blank"
+                    >
+                      {t('common:footer.link.github', 'GitHub')}
+                    </a>
                   </Link>
                 </li>
               </ul>
