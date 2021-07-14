@@ -112,5 +112,9 @@
   "press.hero.subtitle": "They talk about the Open Terms Archive",
   "footer.link.case-studies.title": "So far, Open Terms Archive taught us a lot.",
   "footer.link.case-studies": "Case studies",
-  "header.link.twitter.title": "Follow us on Twitter"
+  "header.link.twitter.title": "Follow us on Twitter",
+  "footer.link.twitter.title": "Follow us on Twitter",
+  "footer.link.twitter": "Follow us",
+  "footer.link.contact.title": "Contact us by mail",
+  "footer.link.contact": "Contact us"
 }
