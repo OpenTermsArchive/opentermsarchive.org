@@ -59,4 +59,8 @@
     background-color: var(--colorBlack200);
     padding: 0 0.4rem;
   }
+
+  & button {
+    margin-top: var(--mM);
+  }
 }

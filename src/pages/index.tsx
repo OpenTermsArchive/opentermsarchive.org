@@ -93,6 +93,11 @@ const HomePage = ({ services }: any) => {
                 'However, the shape of that noise can change over time. In order to recover in case of information loss during the noise filtering step, a snapshot is recorded every there is a change. After the noise is filtered out from the snapshot, if there are changes in the resulting document, a new version of the document is recorded.'
               )}
             </p>
+            <Link href={t('common:home_page.how.button.href', '/how-it-works')}>
+              <a title={t('common:home_page.how.button.title', 'How OTA works ?')}>
+                <Button>{t('common:home_page.how.button.label', 'Know more')}</Button>
+              </a>
+            </Link>
           </TextContent>
         </Article>
         <Aside>

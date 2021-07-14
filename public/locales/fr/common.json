@@ -4,7 +4,7 @@
   "subscribe_form": "Formulaire d'abonnement",
   "home_page.how.subtitle": "Fonctionnement",
   "home_page.how.title": "Comment fonctionne OTA ?",
-  "home_page.how.feature3.desc": "Logiciel libre et collaboratif, toute entité peut contribuer à l'améliorer",
+  "home_page.how.feature3.desc": "Logiciel libre et collaboratif, toute entité peut contribuer à l'améliorer.",
   "home_page.how.feature1.desc": "Google, Amazon, Apple, AirBnB, Facebook, Twitter, Instagram, Bing, Microsoft, Reddit, Youtube, TikTok...",
   "home_page.how.feature2.desc": "Conditions d'utilisation, politique de confidentialité, politique relative aux traceurs, conditions pour les développeurs, guide pour la communauté...",
   "home_page.how.id": "fonctionnement",
@@ -51,8 +51,8 @@
   "home_page.how.feature2.dynamicTitle": "{{count}} document",
   "home_page.how.feature2.dynamicTitle_plural": "{{count}} documents",
   "home_page.how.desc.p1": "Tout fournisseur de services en ligne dispose de conditions d’utilisation définies dans un ensemble de documents contractuels qui régissent les modalités d’interaction avec ses utilisateurs, comme les politiques de modération des contenus, la responsabilité de l’éditeur ou encore la juridiction compétente en cas de litige.",
-  "home_page.how.desc.p2": "Afin de suivre leurs modifications, les documents sont périodiquement obtenus via une URL et en sélectionnant le contenu de la page web pour supprimer le bruit (publicités, menu de navigation, champs de connexion...). Au-delà de la sélection d'un sous-ensemble d'une page, certains documents ont un bruit supplémentaire (hashs dans les liens, CSRF tokens...) qui serait faux pour les changements. Open Terms Archive supporte donc des filtres spécifiques pour chaque document.",
-  "home_page.how.desc.p3": "Cependant, la forme de ce bruit peut changer au fil du temps. Afin de récupérer en cas de perte d'information pendant l'étape de filtrage du bruit, un instantané est enregistré chaque fois qu'il y a un changement. Après que le bruit est filtré de l'instantané, s'il y a des changements dans le document résultant, une nouvelle version du document est enregistrée.",
+  "home_page.how.desc.p2": "La plateforme entreprend d’agréger, de manière centralisée, le plus grand nombre de documents contractuels dans la plus grande variété de langues possible.",
+  "home_page.how.desc.p3": "Afin de suivre leurs modifications, les documents sont périodiquement obtenus via une URL et un instantané est enregistré chaque fois qu'il y a un changement. La partie signifiante du document (sans le bruit: publicités, menu de navigation, champs de connexion...) est extraite pour être enregistrée à part.",
   "home_page.values.desc.p1": "Les grandes entreprises du numérique occupent aujourd'hui une position centrale qui leur permet, par le biais des TdS, de transformer leurs pratiques et leurs valeurs en des valeurs de fait qui sont au cœur de nombreux aspects de nos existences et de nos économies.",
   "home_page.values.desc.p2": "Cependant, ils communiquent de manière insuffisamment claire, lisible et continue sur ces CGU, alors que la compréhension rigoureuse des CGU et de leur évolution dans le temps est devenue indispensable pour apprécier les pratiques et la loyauté de ces acteurs du numérique.",
   "home_page.values.desc.p3": "Cette compréhension est également nécessaire pour :",
@@ -119,5 +119,8 @@
   "footer.link.contact": "Contactez nous",
   "how-it-works.hero.title": "Comment ça fonctionne ?",
   "how-it-works.hero.subtitle": "La plateforme entreprend d’agréger, de manière centralisée, le plus grand nombre de documents contractuels dans la plus grande variété de langues possible.",
-  "how-it-works.seo.title": "Comment Open Terms Archive fonctionne ?"
+  "how-it-works.seo.title": "Comment Open Terms Archive fonctionne ?",
+  "home_page.how.button.href": "/how-it-works",
+  "home_page.how.button.title": "Comment OTA fonctionne ?",
+  "home_page.how.button.label": "Connaître les détails"
 }

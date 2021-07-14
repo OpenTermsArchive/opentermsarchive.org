@@ -51,8 +51,8 @@
   "home_page.how.feature1.dynamicTitle": "{{count}} service",
   "home_page.how.feature1.dynamicTitle_plural": "{{count}} services",
   "home_page.how.desc.p1": "Every online service provider has terms of use defined in a set of contractual documents that govern the terms of interaction with its users, such as content moderation policies, publisher liability, and jurisdiction in the event of a dispute.",
-  "home_page.how.desc.p2": "In order to track their changes, documents are periodically obtained by fetching a web location and selecting content within the web page to remove the noise (ads, navigation menu, login fields…). Beyond selecting a subset of a page, some documents have additional noise (hashes in links, CSRF tokens…) that would be false for changes. Open Terms Archive thus supports specific filters for each document.",
-  "home_page.how.desc.p3": "However, the shape of that noise can change over time. In order to recover in case of information loss during the noise filtering step, a snapshot is recorded every there is a change. After the noise is filtered out from the snapshot, if there are changes in the resulting document, a new version of the document is recorded.",
+  "home_page.how.desc.p2": "The platform undertakes to aggregate, in a centralised manner, as many contractual documents in as many languages as possible.",
+  "home_page.how.desc.p3": "In order to track their changes, documents are periodically obtained via a URL and a snapshot is recorded whenever there is a change. The meaningful part of the document (without the noise: ads, navigation menu, login fields...) is extracted to be recorded separately.",
   "home_page.values.desc.p1": " Large digital companies today occupy a central position which, through the ToS, allows them to transform their practices and values ​​into de facto which are at the heart of many aspects of our existence and our economies.",
   "home_page.values.desc.p2": " However, they communicate in an insufficiently clear, readable and continuous manner on these ToS, whereas rigorously understanding the ToS and how they have evolved over time has become essential to appreciate the practices and loyalty of these digital players.",
   "home_page.values.desc.p3": " This understanding is also necessary to:",
@@ -119,5 +119,8 @@
   "footer.link.contact": "Contact us",
   "how-it-works.hero.title": "How it works ?",
   "how-it-works.hero.subtitle": "The platform undertakes to aggregate, in a centralised manner, as many contractual documents in as many languages as possible.",
-  "how-it-works.seo.title": "How Open Terms Archive works ?"
+  "how-it-works.seo.title": "How Open Terms Archive works ?",
+  "home_page.how.button.href": "/how-it-works",
+  "home_page.how.button.title": "How OTA works ?",
+  "home_page.how.button.label": "Know more"
 }
