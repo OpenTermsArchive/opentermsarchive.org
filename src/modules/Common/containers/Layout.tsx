@@ -1,8 +1,8 @@
+import { FiMail, FiTwitter } from 'react-icons/fi';
 import React, { ReactNode } from 'react';
 
 import { Analytics } from 'modules/Analytics';
 import Container from './Container';
-import { FiTwitter } from 'react-icons/fi';
 import Footer from './Footer';
 import FooterMenu from '../components/FooterMenu';
 import Head from 'next/head';
@@ -115,9 +115,9 @@ const Layout = ({
                   <LanguageSwitcher />
                   <Link href="https://twitter.com/OpenTerms">
                     <a
-                      className={classNames('icon_twitter_circle')}
+                      className={classNames('icon_circle')}
                       target="_blank"
-                      title={t('common:header.link.twitter.title', 'Follow us on Twitter')}
+                      title={t('common:header.link.twitter.title', 'Follow us')}
                     >
                       <FiTwitter color="#fefffd" />
                     </a>
@@ -180,8 +180,37 @@ const Layout = ({
                   </Link>
                 </li>
               </ul>
+              <ul>
+                <li>
+                  <Link href="https://twitter.com/OpenTerms">
+                    <a
+                      target="_blank"
+                      title={t('common:footer.link.twitter.title', 'Follow us on Twitter')}
+                      className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
+                    >
+                      <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
+                        <FiTwitter color="#fefffd" />
+                      </span>
+                      <span>{t('common:footer.link.twitter', 'Follow us')}</span>
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="mailto:contact@opentermsarchive.org">
+                    <a
+                      title={t('common:footer.link.contact.title', 'Contact us by mail')}
+                      className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
+                    >
+                      <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
+                        <FiMail color="#fefffd" />
+                      </span>
+                      <span>{t('common:footer.link.contact', 'Contact us')}</span>
+                    </a>
+                  </Link>
+                </li>
+              </ul>
             </FooterMenu>
-            <FooterMenu small={true}>
+            <FooterMenu small={true} align={'right'}>
               <ul>
                 <li>
                   <Link href="/press">

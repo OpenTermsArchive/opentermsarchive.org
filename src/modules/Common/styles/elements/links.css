@@ -12,3 +12,14 @@ a {
 .a__small {
   font-size: 1.4rem;
 }
+
+.a_icontext {
+  display: flex;
+  align-items: center;
+}
+
+@media (--mobileExtraLarge) {
+  .a_icontext {
+    justify-content: center;
+  }
+}
