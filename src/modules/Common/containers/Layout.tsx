@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 
 import { Analytics } from 'modules/Analytics';
 import Container from './Container';
-import { FiGithub } from 'react-icons/fi';
+import { FiTwitter } from 'react-icons/fi';
 import Footer from './Footer';
 import FooterMenu from '../components/FooterMenu';
 import Head from 'next/head';
@@ -113,13 +113,13 @@ const Layout = ({
                 </HeaderMenu>
                 <HeaderMenu>
                   <LanguageSwitcher />
-                  <Link href="https://github.com/ambanum/OpenTermsArchive/">
+                  <Link href="https://twitter.com/OpenTerms">
                     <a
-                      className={classNames('icon_github_circle')}
+                      className={classNames('icon_twitter_circle')}
                       target="_blank"
-                      title={t('common:header.link.github.title', 'View the source code')}
+                      title={t('common:header.link.twitter.title', 'Follow us on Twitter')}
                     >
-                      <FiGithub color="#fefffd" />
+                      <FiTwitter color="#fefffd" />
                     </a>
                   </Link>
                 </HeaderMenu>
@@ -145,11 +145,7 @@ const Layout = ({
             <FooterMenu>
               <ul>
                 <li>
-                  <Link href="/">
-                    <a title={t('common:footer.link.home.title', 'Back to home')}>
-                      {t('common:footer.link.home', 'Home')}
-                    </a>
-                  </Link>
+                  <Link href="/">{t('common:footer.link.home', 'Home')}</Link>
                 </li>
                 <li>
                   <Link href={'/#'.concat(t('common:home_page.how.id'))}>
@@ -172,19 +168,14 @@ const Layout = ({
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://disinfo.quaidorsay.fr/api/open-terms-archive/docs">
-                    <a title={t('common:footer.link.api.title', 'Use the API')}>
-                      {t('common:footer.link.api', 'API')}
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
+                  <Link href={'/case-studies'}>
                     <a
-                      title={t('common:footer.link.dataset.title', 'Download the dataset')}
-                      target="_blank"
+                      title={t(
+                        'common:footer.link.case-studies.title',
+                        'So far, Open Terms Archive taught us a lot.'
+                      )}
                     >
-                      {t('common:footer.link.dataset', 'Dataset')}
+                      {t('common:footer.link.case-studies', 'Case studies')}
                     </a>
                   </Link>
                 </li>
@@ -225,6 +216,25 @@ const Layout = ({
                       )}
                     >
                       {t('common:footer.link.privacy', 'Privacy policy')}
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <Link href="https://disinfo.quaidorsay.fr/api/open-terms-archive/docs">
+                    <a title={t('common:footer.link.api.title', 'Use the API')}>
+                      {t('common:footer.link.api', 'API')}
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
+                    <a
+                      title={t('common:footer.link.dataset.title', 'Download the dataset')}
+                      target="_blank"
+                    >
+                      {t('common:footer.link.dataset', 'Dataset')}
                     </a>
                   </Link>
                 </li>
