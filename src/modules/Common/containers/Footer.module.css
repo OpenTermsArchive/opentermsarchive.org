@@ -40,6 +40,10 @@
           color: var(--colorBlack600);
         }
       }
+
+      & + ul {
+        margin-top: 1rem;
+      }
     }
   }
 }
@@ -74,6 +78,10 @@
           &:last-child {
             margin-right: var(--mXS);
           }
+        }
+
+        & + ul {
+          flex-direction: column;
         }
       }
     }

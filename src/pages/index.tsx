@@ -145,9 +145,16 @@ const HomePage = ({ services }: any) => {
             iconColor="#0496FF"
           >
             <Link href={t('common:home_page.contribute.buttonbloc1.button.href', '/contribute')}>
-              <Button>
-                {t('common:home_page.contribute.buttonbloc1.button.label', 'Add now')}
-              </Button>
+              <a
+                title={t(
+                  'common:home_page.contribute.buttonbloc1.link.title',
+                  'Add a document now'
+                )}
+              >
+                <Button>
+                  {t('common:home_page.contribute.buttonbloc1.button.label', 'Add now')}
+                </Button>
+              </a>
             </Link>
           </ButtonBlock>
           <ButtonBlock
@@ -165,9 +172,16 @@ const HomePage = ({ services }: any) => {
                 'https://github.com/ambanum/OpenTermsArchive'
               )}
             >
-              <Button>
-                {t('common:home_page.contribute.buttonbloc2.button.label', 'View source code')}
-              </Button>
+              <a
+                title={t(
+                  'common:home_page.contribute.buttonbloc2.link.title',
+                  'Go to the GitHub repository'
+                )}
+              >
+                <Button>
+                  {t('common:home_page.contribute.buttonbloc2.button.label', 'View source code')}
+                </Button>
+              </a>
             </Link>
           </ButtonBlock>
           <ButtonBlock
@@ -185,9 +199,16 @@ const HomePage = ({ services }: any) => {
                 'https://disinfo.quaidorsay.fr/api/open-terms-archive/docs'
               )}
             >
-              <Button>
-                {t('common:home_page.contribute.buttonbloc3.button.label', 'Discover the API')}
-              </Button>
+              <a
+                title={t(
+                  'common:home_page.contribute.buttonbloc3.link.title',
+                  'Read the documentation for use the API'
+                )}
+              >
+                <Button>
+                  {t('common:home_page.contribute.buttonbloc3.button.label', 'Discover the API')}
+                </Button>
+              </a>
             </Link>
             <LinkArrow
               iconColor="#999999"
@@ -197,7 +218,17 @@ const HomePage = ({ services }: any) => {
               )}
               small={true}
             >
-              {t('common:home_page.contribute.buttonbloc3.sublink.label', 'or download a dataset')}
+              <a
+                title={t(
+                  'common:home_page.contribute.buttonbloc3.sublink.title',
+                  'Download a dataset'
+                )}
+              >
+                {t(
+                  'common:home_page.contribute.buttonbloc3.sublink.label',
+                  'or download a dataset'
+                )}
+              </a>
             </LinkArrow>
           </ButtonBlock>
         </ButtonBlockList>
@@ -294,7 +325,14 @@ const HomePage = ({ services }: any) => {
                   'https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent'
                 )}
               >
-                {t('common:home_page.showcase.item1.link.label', 'Try')}
+                <a
+                  title={t(
+                    'common:home_page.showcase.item1.link.title',
+                    'Try Scripta Manent on Disinfo website now'
+                  )}
+                >
+                  {t('common:home_page.showcase.item1.link.label', 'Try')}
+                </a>
               </LinkArrow>
             </ShowcaseItem>
             <ShowcaseItem
@@ -315,7 +353,14 @@ const HomePage = ({ services }: any) => {
                   'https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments'
                 )}
               >
-                {t('common:home_page.showcase.item2.link.label', 'See')}
+                <a
+                  title={t(
+                    'common:home_page.showcase.item2.link.title',
+                    'See Disinfo experiments with Open Terms Archive data'
+                  )}
+                >
+                  {t('common:home_page.showcase.item2.link.label', 'See')}
+                </a>
               </LinkArrow>
             </ShowcaseItem>
           </ShowcaseList>
@@ -338,7 +383,9 @@ const HomePage = ({ services }: any) => {
                 'mailto:contact@opentermsarchive.org'
               )}
             >
-              <Button>{t('common:home_page.showcase.buttonbloc.label', 'Contact us')}</Button>
+              <a title={t('common:home_page.showcase.buttonbloc.link.title', 'Send us a mail')}>
+                <Button>{t('common:home_page.showcase.buttonbloc.label', 'Contact us')}</Button>
+              </a>
             </Link>
           </ButtonBlock>
         </Column>

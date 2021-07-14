@@ -2,6 +2,7 @@
   margin-top: var(--mL);
 
   & hr {
+    clear: both;
     border: 1px solid var(--colorBlack200);
     margin-bottom: var(--mXL);
   }
@@ -44,5 +45,9 @@
     &:not(:last-child) {
       margin-bottom: var(--mM);
     }
+  }
+
+  & blockquote {
+    margin-bottom: var(--mL);
   }
 }
