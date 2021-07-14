@@ -110,11 +110,14 @@
   "press.seo.title": "Presse",
   "press.hero.title": "Presse",
   "press.hero.subtitle": "Ils parlent d'Open Terms Archive",
-  "footer.link.case-studies.title": "So far, Open Terms Archive taught us a lot.",
-  "footer.link.case-studies": "Case studies",
+  "footer.link.case-studies.title": "Que nous a appris Open Terms Archive jusqu’à présent ?",
+  "footer.link.case-studies": "Études de cas",
   "header.link.twitter.title": "Suivez nous sur Twitter",
   "footer.link.twitter.title": "Suivez nous surTwitter",
   "footer.link.twitter": "Suivez nous",
   "footer.link.contact.title": "Contactez nous par email",
-  "footer.link.contact": "Contactez nous"
+  "footer.link.contact": "Contactez nous",
+  "how-it-works.hero.title": "Comment ça fonctionne ?",
+  "how-it-works.hero.subtitle": "La plateforme entreprend d’agréger, de manière centralisée, le plus grand nombre de documents contractuels dans la plus grande variété de langues possible.",
+  "how-it-works.seo.title": "Comment Open Terms Archive fonctionne ?"
 }
