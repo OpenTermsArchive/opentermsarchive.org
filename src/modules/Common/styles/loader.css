@@ -12,9 +12,11 @@
 @import 'base.css';
 
 /* Import elements styles */
+@import 'elements/utility.css';
 @import 'elements/fonts.css';
 @import 'elements/icons.css';
 @import 'elements/inline.css';
 @import 'elements/titles.css';
 @import 'elements/links.css';
 @import 'elements/form.css';
+@import 'elements/blockquote.css';

@@ -9,18 +9,15 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
 
-export default function PrivacyPolicyPage({ mdxContent }: WithI18nResult) {
+export default function PressPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation('common');
   return (
-    <Layout title={t('common:case-studies.seo.title', 'Case Studies')}>
+    <Layout title={t('common:press.seo.title', 'Press')}>
       <Container layout="wide" backgroundImage="/images/bg1.jpg" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
-            title={t('common:case-studies.hero.title', 'Case Studies')}
-            subtitle={t(
-              'common:case-studies.hero.subtitle',
-              'So far, Open Terms Archive taught us a lot.'
-            )}
+            title={t('common:press.hero.title', 'Press')}
+            subtitle={t('common:press.hero.subtitle', 'They talk about the Open Terms Archive')}
           ></Hero>
         </Container>
       </Container>
@@ -33,4 +30,4 @@ export default function PrivacyPolicyPage({ mdxContent }: WithI18nResult) {
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx', filename: 'case-studies' })();
+export const getStaticProps = withI18n({ load: 'mdx', filename: 'press' })();

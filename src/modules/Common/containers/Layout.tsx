@@ -193,6 +193,18 @@ const Layout = ({
             <FooterMenu small={true}>
               <ul>
                 <li>
+                  <Link href="/press">
+                    <a
+                      title={t(
+                        'common:footer.link.press.title',
+                        'They talk about Open Terms Archive'
+                      )}
+                    >
+                      {t('common:footer.link.press', 'Press')}
+                    </a>
+                  </Link>
+                </li>
+                <li>
                   <Link href="/terms-of-service">
                     <a
                       title={t(

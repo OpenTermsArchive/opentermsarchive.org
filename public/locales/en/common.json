@@ -106,5 +106,10 @@
   "home_page.contribute.buttonbloc3.sublink.title": "Download a dataset",
   "home_page.showcase.item1.link.title": "Try Scripta Manent on Disinfo website now",
   "home_page.showcase.item2.link.title": "See Disinfo experiments with Open Terms Archive data",
-  "home_page.showcase.buttonbloc.link.title": "Send us a mail"
+  "home_page.showcase.buttonbloc.link.title": "Send us a mail",
+  "footer.link.press.title": "They talk about Open Terms Archive",
+  "footer.link.press": "Press",
+  "press.seo.title": "Press",
+  "press.hero.title": "Press",
+  "press.hero.subtitle": "They talk about the Open Terms Archive"
 }

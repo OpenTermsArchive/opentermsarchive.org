@@ -106,5 +106,10 @@
   "home_page.contribute.buttonbloc3.sublink.title": "Télécharger un jeu de données",
   "home_page.showcase.item1.link.title": "Essayer Scripta Manent sur le site de Disinfo maintenant",
   "home_page.showcase.item2.link.title": "Voir les expérimentations de l'équipe de Disinfo avec les données d'Open Terms Archive",
-  "home_page.showcase.buttonbloc.link.title": "Envoyer nous un courriel"
+  "home_page.showcase.buttonbloc.link.title": "Envoyer nous un courriel",
+  "footer.link.press.title": "Ils parlent d'Open Terms Archive",
+  "footer.link.press": "Presse",
+  "press.seo.title": "Presse",
+  "press.hero.title": "Presse",
+  "press.hero.subtitle": "Ils parlent d'Open Terms Archive"
 }
