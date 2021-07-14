@@ -51,7 +51,7 @@ const Layout = ({
                 <HeaderMenu>
                   <ul>
                     <li>
-                      <Link href={'/#'.concat(t('common:home_page.how.id'))}>
+                      <Link href="/how-it-works">
                         <a
                           title={t('common:header.link.how.title', 'How does OTA work?')}
                           onClick={toggleExtended}
@@ -148,9 +148,7 @@ const Layout = ({
                   <Link href="/">{t('common:footer.link.home', 'Home')}</Link>
                 </li>
                 <li>
-                  <Link href={'/#'.concat(t('common:home_page.how.id'))}>
-                    {t('common:footer.link.how', 'How')}
-                  </Link>
+                  <Link href="how-it-works">{t('common:footer.link.how', 'How')}</Link>
                 </li>
                 <li>
                   <Link href={'/#'.concat(t('common:home_page.values.id'))}>
