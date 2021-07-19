@@ -5,13 +5,15 @@ import s from './Button.module.css';
 type ButtonProps = {
   className?: string;
   type?: 'primary' | 'secondary';
+  size?: 'sm' | 'md';
   onlyIcon?: boolean;
-} & React.HTMLProps<HTMLButtonElement>;
+} & Omit<React.HTMLProps<HTMLButtonElement>, 'size'>;
 
 const Button: React.FC<ButtonProps> = ({
   children,
   className,
   type = 'primary',
+  size = 'md',
   onlyIcon = false,
   ...props
 }) => {
@@ -22,6 +24,7 @@ const Button: React.FC<ButtonProps> = ({
         s.button,
         type === 'secondary' ? s.button__secondary : null,
         onlyIcon === true ? s.button__hasOnlyIcon : null,
+        size ? s[size] : null,
         className
       )}
       {...props}
