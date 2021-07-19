@@ -122,5 +122,10 @@
   "how-it-works.seo.title": "Comment Open Terms Archive fonctionne ?",
   "home_page.how.button.href": "/how-it-works",
   "home_page.how.button.title": "  OTA fonctionne ?",
-  "home_page.how.button.label": "En savoir plus"
+  "home_page.how.button.label": "En savoir plus",
+  "press.getintouch.title": "Vous souhaitez entrer en relation avec nous ?",
+  "press.getintouch.p1": "Contactez-nous par mail :",
+  "press.getintouch.p2": "N'hésitez pas à",
+  "press.getintouch.presskitlink.label": "télécharger le kit presse",
+  "press.getintouch.subtitle": "Vous êtes journaliste"
 }

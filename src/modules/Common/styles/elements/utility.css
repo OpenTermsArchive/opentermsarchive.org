@@ -7,6 +7,10 @@
   float: left;
 }
 
+.tcenter {
+  text-align: center;
+}
+
 /* padding left utility */
 .pl__2XS {
   padding-left: var(--p2XS);
