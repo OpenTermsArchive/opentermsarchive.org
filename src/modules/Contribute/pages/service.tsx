@@ -324,19 +324,8 @@ Thank you very much`;
                     {t('contribute:service_page.step3.form.insignificantPart.cta', 'Remove part')}
                   </Button>
                 </div>
-
                 {expertMode && (
-                  <textarea
-                    style={{
-                      width: '800px',
-                      maxWidth: '100%',
-                      height: '300px',
-                      overflow: 'auto',
-                      padding: '10px',
-                    }}
-                  >
-                    {JSON.stringify(json, null, 2)}
-                  </textarea>
+                  <pre className={classNames(s.json)}>{JSON.stringify(json, null, 2)}</pre>
                 )}
               </form>
             </div>
