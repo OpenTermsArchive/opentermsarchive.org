@@ -365,7 +365,7 @@ Thank you very much`;
           <h1>{t('contribute:service_page.error.title', "We're sorry, an error occured")}</h1>
           <p>{data?.error}</p>
           <Button onClick={onErrorClick}>
-            {t('contribute:service_page.error.cta', 'Les us know!')}
+            {t('contribute:service_page.error.cta', 'Let us know!')}
           </Button>
         </div>
       )}
