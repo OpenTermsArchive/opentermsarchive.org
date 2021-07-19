@@ -52,7 +52,7 @@
   "home_page.how.feature1.dynamicTitle_plural": "{{count}} services",
   "home_page.how.desc.p1": "Every online service provider has terms of use defined in a set of contractual documents that govern the terms of interaction with its users, such as content moderation policies, publisher liability, and jurisdiction in the event of a dispute.",
   "home_page.how.desc.p2": "The platform undertakes to aggregate, in a centralised manner, as many contractual documents in as many languages as possible.",
-  "home_page.how.desc.p3": "In order to track their changes, documents are periodically obtained via a URL and a snapshot is recorded whenever there is a change. The meaningful part of the document (without the noise: ads, navigation menu, login fields...) is extracted to be recorded separately.",
+  "home_page.how.desc.p3": "In order to track their changes, documents are periodically obtained via a URL and a snapshot is recorded every time a change is made. The meaningful part of the document (without the noise: ads, navigation menu, login fields...) is extracted to be recorded separately.",
   "home_page.values.desc.p1": " Large digital companies today occupy a central position which, through the ToS, allows them to transform their practices and values ​​into de facto which are at the heart of many aspects of our existence and our economies.",
   "home_page.values.desc.p2": " However, they communicate in an insufficiently clear, readable and continuous manner on these ToS, whereas rigorously understanding the ToS and how they have evolved over time has become essential to appreciate the practices and loyalty of these digital players.",
   "home_page.values.desc.p3": " This understanding is also necessary to:",
