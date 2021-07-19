@@ -4,7 +4,6 @@ import Article from 'modules/Common/components/Article';
 import Button from 'modules/Common/components/Button';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
-import { FiArrowRightCircle } from 'react-icons/fi';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
