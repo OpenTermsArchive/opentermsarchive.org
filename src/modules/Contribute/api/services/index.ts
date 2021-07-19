@@ -7,65 +7,64 @@ import { downloadUrl } from 'modules/Scraper/utils/downloader';
 import fs from 'fs';
 import path from 'path';
 
-const get = (url: string) => async (
-  _: NextApiRequest,
-  res: NextApiResponse<GetContributeServiceResponse>
-) => {
-  const folderName = url.replace(/[^\p{L}\d_]/gimu, '_');
+const get =
+  (url: string) =>
+  async (_: NextApiRequest, res: NextApiResponse<GetContributeServiceResponse>) => {
+    const folderName = url.replace(/[^\p{L}\d_]/gimu, '_');
 
-  const folderPath = path.join(process.env.TMP_SCRAPED_SERVICES_FOLDER || '', folderName);
+    const folderPath = path.join(process.env.TMP_SCRAPED_SERVICES_FOLDER || '', folderName);
 
-  const newUrl = `${process.env.NEXT_PUBLIC_BASE_PATH}${
-    process.env.TMP_SCRAPED_SERVICES_URL || ''
-  }/${folderName}/index.html`;
+    const newUrl = `${process.env.NEXT_PUBLIC_BASE_PATH}${
+      process.env.TMP_SCRAPED_SERVICES_URL || ''
+    }/${folderName}/index.html`;
 
-  if (fs.existsSync(folderPath)) {
-    console.log(`Folder ${folderPath} exists`);
-    res.statusCode = HttpStatusCode.OK;
-    res.json({
-      status: 'ok',
-      message: 'OK',
-      url: newUrl,
-    });
-    return res;
-  }
-
-  try {
-    console.log(`Folder ${folderPath} does not exist`);
-    console.log(`downloading ${url}`);
-    console.time('downloading');
-    const { error } = await downloadUrl(url, { folderPath });
-    console.timeEnd('downloading');
-
-    if (error) {
+    if (fs.existsSync(folderPath)) {
+      console.log(`Folder ${folderPath} exists`);
       res.statusCode = HttpStatusCode.OK;
       res.json({
-        status: 'ko',
-        message: 'Could not download url',
-        url: '',
-        error,
+        status: 'ok',
+        message: 'OK',
+        url: newUrl,
       });
       return res;
     }
 
-    res.statusCode = HttpStatusCode.OK;
-    res.json({
-      status: 'ok',
-      message: 'OK',
-      url: newUrl,
-    });
-    return res;
-  } catch (e) {
-    console.error(e);
-    res.statusCode = HttpStatusCode.METHOD_FAILURE;
-    res.json({
-      status: 'ko',
-      message: 'Could not download url',
-      url: '',
-    });
-    return res;
-  }
-};
+    try {
+      console.log(`Folder ${folderPath} does not exist`);
+      console.log(`downloading ${url}`);
+      console.time('downloading');
+      const { error } = await downloadUrl(url, { folderPath });
+      console.timeEnd('downloading');
+
+      if (error) {
+        res.statusCode = HttpStatusCode.OK;
+        res.json({
+          status: 'ko',
+          message: 'Could not download url',
+          url: '',
+          error,
+        });
+        return res;
+      }
+
+      res.statusCode = HttpStatusCode.OK;
+      res.json({
+        status: 'ok',
+        message: 'OK',
+        url: newUrl,
+      });
+      return res;
+    } catch (e) {
+      console.error(e);
+      res.statusCode = HttpStatusCode.METHOD_FAILURE;
+      res.json({
+        status: 'ko',
+        message: 'Could not download url',
+        url: '',
+      });
+      return res;
+    }
+  };
 
 const services = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET' && req?.query?.url) {
