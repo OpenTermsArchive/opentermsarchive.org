@@ -5,6 +5,7 @@ import { GetContributeServiceResponse } from '../../interfaces';
 import HttpStatusCode from 'http-status-codes';
 import { downloadUrl } from 'modules/Scraper/utils/downloader';
 import fs from 'fs';
+import merge from 'lodash/merge';
 import path from 'path';
 
 const get =
@@ -66,9 +67,43 @@ const get =
     }
   };
 
+const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResponse<any>) => {
+  try {
+    let json = JSON.parse(data);
+    const sanitizedName = json.name.replace(/[^\p{L}\d]/gimu, '');
+    const fullPath = `${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}/${sanitizedName}.json`;
+
+    if (fs.existsSync(fullPath)) {
+      const existingJson = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+      json = merge(existingJson, json);
+    }
+
+    fs.writeFileSync(fullPath, JSON.stringify(json, null, 2));
+    res.json({
+      status: 'ok',
+      message: `File saved`,
+      path: fullPath,
+    });
+  } catch (e) {
+    res.statusCode = HttpStatusCode.METHOD_FAILURE;
+    res.json({
+      status: 'ko',
+      message: 'Could not download url',
+      error: e.toString(),
+    });
+    return res;
+  }
+
+  return res;
+};
+
 const services = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET' && req?.query?.url) {
     return get(req?.query?.url as string)(req, res);
+  }
+
+  if (req.method === 'POST' && req?.body?.data) {
+    return saveOnLocal(req?.body?.data as string)(req, res);
   }
 
   res.statusCode = HttpStatusCode.FORBIDDEN;

@@ -8,6 +8,7 @@ import LinkArrow from 'modules/Common/components/LinkArrow';
 import Loading from 'components/Loading';
 import React from 'react';
 import { Trans } from 'react-i18next';
+import api from 'utils/api';
 import classNames from 'classnames';
 import s from './service.module.css';
 import { useEvent } from 'react-use';
@@ -164,6 +165,13 @@ Thank you very much`;
     );
 
     router.push('/contribute/thanks');
+  };
+
+  const saveOnLocal = async () => {
+    await api.post('/api/contribute/services', {
+      path: process.env.NEXT_PUBLIC_OTA_SERVICES_PATH,
+      data: JSON.stringify(json),
+    });
   };
 
   const submitDisabled = !initialSelectedCss || !iframeReady;
@@ -325,7 +333,19 @@ Thank you very much`;
                   </Button>
                 </div>
                 {expertMode && (
-                  <pre className={classNames(s.json)}>{JSON.stringify(json, null, 2)}</pre>
+                  <>
+                    <pre className={classNames(s.json)}>{JSON.stringify(json, null, 2)}</pre>
+                    {process.env.NEXT_PUBLIC_OTA_SERVICES_PATH && (
+                      <Button
+                        onClick={saveOnLocal}
+                        size="sm"
+                        type="secondary"
+                        title={`Save on ${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}`}
+                      >
+                        Save on local
+                      </Button>
+                    )}
+                  </>
                 )}
               </form>
             </div>
