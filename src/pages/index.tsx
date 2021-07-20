@@ -1,3 +1,5 @@
+import SubscribeForm, { SubscribeFormProps } from 'modules/Common/components/SubscribeForm';
+
 import Article from 'modules/Common/components/Article';
 import Aside from 'modules/Common/components/Aside';
 import Button from 'modules/Common/components/Button';
@@ -41,6 +43,13 @@ const HomePage = ({ services }: any) => {
     });
   }
 
+  const onSubscription: SubscribeFormProps['onSubmit'] = (data) => {
+    console.log(''); //eslint-disable-line
+    console.log('╔════START══data══════════════════════════════════════════════════'); //eslint-disable-line
+    console.log(data); //eslint-disable-line
+    console.log('╚════END════data══════════════════════════════════════════════════'); //eslint-disable-line
+  };
+
   return (
     <Layout
       title={t('common:home_page.seo.title', 'Follow the changes to the terms of service')}
@@ -58,10 +67,11 @@ const HomePage = ({ services }: any) => {
               'common:home_page.subtitle',
               'Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms.'
             )}
-          ></Hero>
+          >
+            <SubscribeForm onSubmit={onSubscription} />
+          </Hero>
         </Container>
       </Container>
-
       {/* How section */}
       <Container
         gridCols="10"
@@ -129,7 +139,6 @@ const HomePage = ({ services }: any) => {
           </FeatureList>
         </Aside>
       </Container>
-
       {/* Contribute */}
       <Container
         gridCols="12"
@@ -238,7 +247,6 @@ const HomePage = ({ services }: any) => {
           </ButtonBlock>
         </ButtonBlockList>
       </Container>
-
       {/* Values */}
       <Container
         layout="wide"
@@ -298,7 +306,6 @@ const HomePage = ({ services }: any) => {
           </Column>
         </Container>
       </Container>
-
       {/* Showcase */}
       <Container
         gridCols="10"
@@ -395,7 +402,6 @@ const HomePage = ({ services }: any) => {
           </ButtonBlock>
         </Column>
       </Container>
-
       {/* Partners */}
       <Container layout="fluid" gridCols="12" gridGutters="11" flex={true} paddingX={false}>
         <ThumbGalery
@@ -423,7 +429,6 @@ const HomePage = ({ services }: any) => {
           </Link>
         </ThumbGalery>
       </Container>
-
       {/* Press */}
       <Container
         paddingY={false}
