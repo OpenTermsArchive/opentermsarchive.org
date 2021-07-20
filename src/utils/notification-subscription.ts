@@ -6,12 +6,9 @@ export type Contact = SibApiV3Sdk.GetContactDetails;
 class NotificationSubscription {
   private contactsApi: any;
 
-  constructor() {
+  constructor(apiKey: string) {
     this.contactsApi = new SibApiV3Sdk.ContactsApi();
-    this.contactsApi.setApiKey(
-      SibApiV3Sdk.ContactsApiApiKeys.apiKey,
-      process.env.SENDINBLUE_API_KEY
-    );
+    this.contactsApi.setApiKey(SibApiV3Sdk.ContactsApiApiKeys.apiKey, apiKey);
   }
 
   public async createContactList({ name, folderId }: { name: string; folderId: number }) {

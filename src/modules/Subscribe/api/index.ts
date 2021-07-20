@@ -4,7 +4,12 @@ import { CreateSubscriptionResponse } from '../interfaces';
 import HttpStatusCode from 'http-status-codes';
 import NotificationSubscription from 'utils/notification-subscription';
 
-const notificationSubscription = new NotificationSubscription();
+if (!process.env.SENDINBLUE_API_KEY) {
+  console.error('You need a SENDINBLUE_API_KEY env variable');
+  process.exit();
+}
+
+const notificationSubscription = new NotificationSubscription(process.env.SENDINBLUE_API_KEY);
 
 const SIB_SERVICE_PROVIDER_UPDATE_FOLDER_ID = 203;
 
