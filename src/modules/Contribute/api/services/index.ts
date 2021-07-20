@@ -70,7 +70,7 @@ const get =
 const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResponse<any>) => {
   try {
     let json = JSON.parse(data);
-    const sanitizedName = json.name.replace(/[^\p{L}\s\d]/gimu, '');
+    const sanitizedName = json.name.replace(/[^\p{L}\.\s\d]/gimu, '');
     const fullPath = `${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}/${sanitizedName}.json`;
 
     if (fs.existsSync(fullPath)) {
