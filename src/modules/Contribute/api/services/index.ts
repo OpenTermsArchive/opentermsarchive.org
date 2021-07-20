@@ -15,7 +15,7 @@ const get =
 
     const folderPath = path.join(process.env.TMP_SCRAPED_SERVICES_FOLDER || '', folderName);
 
-    const newUrl = `${process.env.NEXT_PUBLIC_BASE_PATH}${
+    const newUrl = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${
       process.env.TMP_SCRAPED_SERVICES_URL || ''
     }/${folderName}/index.html`;
 
