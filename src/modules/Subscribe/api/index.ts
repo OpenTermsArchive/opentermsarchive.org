@@ -1,3 +1,5 @@
+import * as otaApi from 'modules/OTA-api/api';
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { CreateSubscriptionResponse } from '../interfaces';
@@ -14,8 +16,16 @@ const notificationSubscription = new NotificationSubscription(process.env.SENDIN
 const SIB_SERVICE_PROVIDER_UPDATE_FOLDER_ID = 203;
 
 const createSubscription =
-  (contactListName: string, email: string) =>
+  ({ service, documentType, email }: { service: string; documentType: string; email: string }) =>
   async (_: NextApiRequest, res: NextApiResponse<CreateSubscriptionResponse>) => {
+    const existingService = await otaApi.getService(service);
+    if (!existingService.includes(documentType)) {
+      res.statusCode = HttpStatusCode.NOT_FOUND;
+      res.json({ status: 'ko', message: 'Service and document type not found' });
+      return;
+    }
+
+    const contactListName = `${service} - ${documentType} - Update`;
     let contactList = await notificationSubscription.searchContactList(contactListName);
 
     if (!contactList) {
@@ -54,13 +64,10 @@ const createSubscription =
   };
 
 const subscribe = async (req: NextApiRequest, res: NextApiResponse) => {
-  const queryParams = req?.query;
+  const bodyParams = req?.body;
 
-  if (req.method === 'GET' && queryParams.contactListName && queryParams.email) {
-    return createSubscription(queryParams.contactListName as string, queryParams.email as string)(
-      req,
-      res
-    );
+  if (req.method === 'POST') {
+    return createSubscription(bodyParams)(req, res);
   }
 
   res.statusCode = HttpStatusCode.FORBIDDEN;

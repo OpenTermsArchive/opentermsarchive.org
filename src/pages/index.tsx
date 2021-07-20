@@ -15,17 +15,23 @@ import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
 import LinkArrow from 'modules/Common/components/LinkArrow';
 import Logo from 'modules/Common/components/Logo';
+import React from 'react';
 import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
 import ShowcaseList from 'modules/Common/components/ShowcaseList';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
+import api from 'utils/api';
 import { getServices } from 'modules/Common/api/ota/services';
+import service from 'modules/Contribute/pages/service';
+import { useToggle } from 'react-use';
 import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
 
 const HomePage = ({ services }: any) => {
   const { t } = useTranslation('common');
+  const [subscribing, toggleSubscribing] = useToggle(false);
+  const [subscribeAnswerMessage, setSubscribeAnswerMessage] = React.useState('');
 
   // Format services and docs feature item title
   let nbServicesTitle = t('common:home_page.how.feature1.defaultTitle', 'Many services');
@@ -43,11 +49,29 @@ const HomePage = ({ services }: any) => {
     });
   }
 
-  const onSubscription: SubscribeFormProps['onSubmit'] = (data) => {
-    console.log(''); //eslint-disable-line
-    console.log('╔════START══data══════════════════════════════════════════════════'); //eslint-disable-line
-    console.log(data); //eslint-disable-line
-    console.log('╚════END════data══════════════════════════════════════════════════'); //eslint-disable-line
+  const onSubscription: SubscribeFormProps['onSubmit'] = async (data) => {
+    toggleSubscribing(true);
+    let message;
+    let timeout;
+
+    try {
+      await api.post(`/api/subscribe`, {
+        email: data.email,
+        service: data.service,
+        documentType: data.documentType,
+      });
+      message = t('subscribe_form.success', 'Thanks for subscribing');
+      timeout = 3000;
+    } catch (err) {
+      console.error(err);
+      message = t('subscribe_form.error', 'Sorry, but there was a problem, please try again');
+      timeout = 5000;
+    }
+    setSubscribeAnswerMessage(message);
+    setTimeout(() => {
+      setSubscribeAnswerMessage('');
+    }, timeout);
+    toggleSubscribing(false);
   };
 
   return (
@@ -68,7 +92,8 @@ const HomePage = ({ services }: any) => {
               'Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms.'
             )}
           >
-            <SubscribeForm onSubmit={onSubscription} />
+            <SubscribeForm onSubmit={onSubscription} loading={subscribing} />
+            {subscribeAnswerMessage && <div>{subscribeAnswerMessage}</div>}
           </Hero>
         </Container>
       </Container>
