@@ -3,8 +3,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, ToastOptions, toast } from 'react-toastify';
 
 const defaultOptions: Partial<ToastOptions> = {
-  position: 'bottom-right',
-  autoClose: 3000,
+  position: 'top-center',
+  autoClose: 4000,
   hideProgressBar: false,
   closeOnClick: true,
   pauseOnHover: true,

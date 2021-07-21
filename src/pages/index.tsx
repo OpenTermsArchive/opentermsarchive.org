@@ -63,11 +63,10 @@ const HomePage = ({ services }: any) => {
       notify('success', t('common:subscribe_form.success', 'Thanks for subscribing'));
     } catch (err) {
       notify(
-        'success',
+        'error',
         t('common:subscribe_form.error', 'Sorry, but there was a problem, please try again')
       );
     }
-
     toggleSubscribing(false);
   };
 

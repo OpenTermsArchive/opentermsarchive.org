@@ -1,4 +1,4 @@
-/* Vendor */
+/* Reset */
 @import 'vendor/minireset.css';
 
 /* Mixins */
@@ -7,6 +7,9 @@
 /* Custom media queries and custom properties */
 @import 'custom-media-queries.css';
 @import 'custom-properties.css';
+
+/* Toastify */
+@import 'vendor/toastify.css';
 
 /* Base */
 @import 'base.css';
