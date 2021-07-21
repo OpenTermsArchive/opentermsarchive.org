@@ -15,22 +15,25 @@ export interface SubscribeFormFields {
 
 export interface SubscribeFormProps {
   loading: boolean;
+  defaultValues: Partial<SubscribeFormFields>;
   onSubmit: (data: SubscribeFormFields) => any;
 }
 
-const SubscribeForm = ({ onSubmit, loading = false }: SubscribeFormProps) => {
+const SubscribeForm = ({ onSubmit, loading = false, defaultValues }: SubscribeFormProps) => {
   const { t } = useTranslation('common');
 
   const { register, handleSubmit, watch } = useForm<SubscribeFormFields>({
     reValidateMode: 'onChange',
+    defaultValues,
   });
 
-  const { consent, service } = watch();
+  const { consent, service, documentType } = watch();
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={s.subscribeForm}>
       <SelectService
         service={service}
+        documentType={documentType}
         serviceProps={register('service', { required: true })}
         documentTypeProps={register('documentType', { required: true })}
       />

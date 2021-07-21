@@ -27,11 +27,13 @@ import { getServices } from 'modules/Common/api/ota/services';
 import service from 'modules/Contribute/pages/service';
 import { useToggle } from 'react-use';
 import { useTranslation } from 'next-i18next';
+import useUrl from 'hooks/useUrl';
 import { withI18n } from 'modules/I18n';
 
 const HomePage = ({ services }: any) => {
   const { t } = useTranslation('common');
   const [subscribing, toggleSubscribing] = useToggle(false);
+  const { queryParams } = useUrl();
   const [subscribeAnswerMessage, setSubscribeAnswerMessage] = React.useState('');
 
   // Format services and docs feature item title
@@ -107,7 +109,14 @@ const HomePage = ({ services }: any) => {
                 'Be informed by email of the changes on the documents of your choice.'
               )}
             </h4>
-            <SubscribeForm onSubmit={onSubscription} loading={subscribing} />
+            <SubscribeForm
+              onSubmit={onSubscription}
+              loading={subscribing}
+              defaultValues={{
+                service: queryParams.service,
+                documentType: queryParams.documentType,
+              }}
+            />
           </Column>
           <Column width={40} className="mt__2XL">
             <TextContent>

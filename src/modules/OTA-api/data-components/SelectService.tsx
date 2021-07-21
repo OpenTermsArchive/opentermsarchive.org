@@ -10,15 +10,14 @@ type SelectServiceProps = {
   serviceProps: any;
   documentTypeProps: any;
   service: string;
+  documentType: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const SelectService: React.FC<SelectServiceProps> = ({
-  children,
-  className,
   serviceProps,
   documentTypeProps,
   service: selectedService,
-  ...props
+  documentType: selectedDocumentType,
 }) => {
   const { t } = useTranslation('common');
   const { data } = useSWR(SERVICES_URL);
@@ -35,16 +34,24 @@ const SelectService: React.FC<SelectServiceProps> = ({
           {t('common:subscribe_form.fields.service.label', 'Select a service')}
         </label>
         <div className={classNames('select')}>
-          <select id="services" disabled={loading} {...serviceProps}>
-            <option selected disabled hidden>
-              {t('common:subscribe_form.fields.service.default', 'Service')}
-            </option>
-            {services.map((service) => (
-              <option key={service} value={service}>
-                {service}
-              </option>
-            ))}
-          </select>
+          {
+            // This is done in order for default values to be selected correctly
+            // if the options are not present at init, it will never be selected
+            loading ? (
+              <select disabled />
+            ) : (
+              <select id="services" defaultValue={selectedService} {...serviceProps}>
+                <option selected disabled hidden>
+                  {t('common:subscribe_form.fields.service.default', 'Select...')}
+                </option>
+                {services.map((service) => (
+                  <option key={service} value={service}>
+                    {service}
+                  </option>
+                ))}
+              </select>
+            )
+          }
           <FiChevronDown color="#333333"></FiChevronDown>
         </div>
       </div>
@@ -53,16 +60,29 @@ const SelectService: React.FC<SelectServiceProps> = ({
           {t('common:subscribe_form.fields.document.label', 'Select a document type')}
         </label>
         <div className={classNames('select')}>
-          <select id="documentTypes" disabled={loading || !selectedService} {...documentTypeProps}>
-            <option selected disabled hidden>
-              {t('common:subscribe_form.fields.document.default', 'Document')}
-            </option>
-            {documentTypes.map((documentType) => (
-              <option key={`${selectedService}_${documentType}`} value={documentType}>
-                {documentType}
-              </option>
-            ))}
-          </select>
+          {
+            // This is done in order for default values to be selected correctly
+            // if the options are not present at init, it will never be selected
+            loading ? (
+              <select disabled />
+            ) : (
+              <select
+                id="documentTypes"
+                disabled={!selectedService}
+                defaultValue={selectedDocumentType}
+                {...documentTypeProps}
+              >
+                <option selected disabled hidden>
+                  {t('common:subscribe_form.fields.document.default', 'Select...')}
+                </option>
+                {documentTypes.map((documentType) => (
+                  <option key={`${selectedService}_${documentType}`} value={documentType}>
+                    {documentType}
+                  </option>
+                ))}
+              </select>
+            )
+          }
           <FiChevronDown color="#333333"></FiChevronDown>
         </div>
       </div>
