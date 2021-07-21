@@ -1,7 +1,6 @@
 import React from 'react';
 import SelectService from 'modules/OTA-api/data-components/SelectService';
 import classNames from 'classnames';
-import s from './SubscribeForm.module.css';
 import sButton from './Button.module.css';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'next-i18next';
@@ -30,7 +29,7 @@ const SubscribeForm = ({ onSubmit, loading = false, defaultValues }: SubscribeFo
   const { consent, service, documentType } = watch();
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={s.subscribeForm}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <SelectService
         service={service}
         documentType={documentType}

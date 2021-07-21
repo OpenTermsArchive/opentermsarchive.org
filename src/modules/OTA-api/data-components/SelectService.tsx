@@ -2,7 +2,6 @@ import { FiChevronDown } from 'react-icons/fi';
 import React from 'react';
 import { SERVICES_URL } from '../api';
 import classNames from 'classnames';
-import s from './SelectService.module.css';
 import useSWR from 'swr';
 import { useTranslation } from 'next-i18next';
 
