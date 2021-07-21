@@ -18,13 +18,12 @@ import Logo from 'modules/Common/components/Logo';
 import React from 'react';
 import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
 import ShowcaseList from 'modules/Common/components/ShowcaseList';
-import SubscribeMessage from 'modules/Common/components/SubscribeMessage';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
 import api from 'utils/api';
 import { getServices } from 'modules/Common/api/ota/services';
-import service from 'modules/Contribute/pages/service';
+import useNotifier from 'hooks/useNotifier';
 import { useToggle } from 'react-use';
 import { useTranslation } from 'next-i18next';
 import useUrl from 'hooks/useUrl';
@@ -34,7 +33,7 @@ const HomePage = ({ services }: any) => {
   const { t } = useTranslation('common');
   const [subscribing, toggleSubscribing] = useToggle(false);
   const { queryParams } = useUrl();
-  const [subscribeAnswerMessage, setSubscribeAnswerMessage] = React.useState('');
+  const { notify } = useNotifier();
 
   // Format services and docs feature item title
   let nbServicesTitle = t('common:home_page.how.feature1.defaultTitle', 'Many services');
@@ -54,8 +53,6 @@ const HomePage = ({ services }: any) => {
 
   const onSubscription: SubscribeFormProps['onSubmit'] = async (data) => {
     toggleSubscribing(true);
-    let message;
-    let timeout;
 
     try {
       await api.post(`/api/subscribe`, {
@@ -63,21 +60,13 @@ const HomePage = ({ services }: any) => {
         service: data.service,
         documentType: data.documentType,
       });
-      message = t('common:subscribe_form.success', 'Thanks for subscribing');
-      timeout = 3000;
+      notify('success', t('common:subscribe_form.success', 'Thanks for subscribing'));
     } catch (err) {
-      console.error(err);
-      message = t(
-        'common:subscribe_form.error',
-        'Sorry, but there was a problem, please try again'
+      notify(
+        'success',
+        t('common:subscribe_form.error', 'Sorry, but there was a problem, please try again')
       );
-      timeout = 5000;
     }
-
-    // TODO :
-    // Immplement Toastify
-    // Reset from on success
-    alert(message);
 
     toggleSubscribing(false);
   };
