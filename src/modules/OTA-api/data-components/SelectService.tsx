@@ -1,8 +1,10 @@
+import { FiChevronDown } from 'react-icons/fi';
 import React from 'react';
 import { SERVICES_URL } from '../api';
 import classNames from 'classnames';
 import s from './SelectService.module.css';
 import useSWR from 'swr';
+import { useTranslation } from 'next-i18next';
 
 type SelectServiceProps = {
   serviceProps: any;
@@ -18,6 +20,7 @@ const SelectService: React.FC<SelectServiceProps> = ({
   service: selectedService,
   ...props
 }) => {
+  const { t } = useTranslation('common');
   const { data } = useSWR(SERVICES_URL);
 
   const services = data ? Object.keys(data).sort() : [];
@@ -26,42 +29,44 @@ const SelectService: React.FC<SelectServiceProps> = ({
   const loading = !data;
 
   return (
-    <div className={classNames(s.wrapper, className)} {...props}>
-      <label htmlFor="services">
-        <input
-          list="services"
-          name="services"
-          type="text"
-          placeholder={loading ? 'Loading...' : 'Select a service'}
-          disabled={loading}
-          {...serviceProps}
-        />
-        <datalist id="services" defaultValue={services[0]}>
-          {services.map((service) => (
-            <option key={service} value={service}>
-              {service}
+    <>
+      <div className={classNames('formfield')}>
+        <label htmlFor="services">
+          {t('common:subscribe_form.fields.service.label', 'Select a service')}
+        </label>
+        <div className={classNames('select')}>
+          <select id="services" disabled={loading} {...serviceProps}>
+            <option selected disabled hidden>
+              {t('common:subscribe_form.fields.service.default', 'Service')}
             </option>
-          ))}
-        </datalist>
-      </label>
-      <label htmlFor="documentTypes">
-        <input
-          list="documentTypes"
-          name="documentTypes"
-          type="text"
-          placeholder={loading ? 'Loading...' : !selectedService ? ' - ' : 'Select a document type'}
-          disabled={loading || !selectedService}
-          {...documentTypeProps}
-        />
-        <datalist id="documentTypes" defaultValue={documentTypes[0] || ''}>
-          {documentTypes.map((documentType) => (
-            <option key={`${selectedService}_${documentType}`} value={documentType}>
-              {documentType}
+            {services.map((service) => (
+              <option key={service} value={service}>
+                {service}
+              </option>
+            ))}
+          </select>
+          <FiChevronDown color="#333333"></FiChevronDown>
+        </div>
+      </div>
+      <div className={classNames('formfield')}>
+        <label htmlFor="documentTypes">
+          {t('common:subscribe_form.fields.document.label', 'Select a document type')}
+        </label>
+        <div className={classNames('select')}>
+          <select id="documentTypes" disabled={loading || !selectedService} {...documentTypeProps}>
+            <option selected disabled hidden>
+              {t('common:subscribe_form.fields.document.default', 'Document')}
             </option>
-          ))}
-        </datalist>
-      </label>
-    </div>
+            {documentTypes.map((documentType) => (
+              <option key={`${selectedService}_${documentType}`} value={documentType}>
+                {documentType}
+              </option>
+            ))}
+          </select>
+          <FiChevronDown color="#333333"></FiChevronDown>
+        </div>
+      </div>
+    </>
   );
 };
 

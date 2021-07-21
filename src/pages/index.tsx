@@ -1,3 +1,4 @@
+import { FiArrowRightCircle, FiChevronRight } from 'react-icons/fi';
 import SubscribeForm, { SubscribeFormProps } from 'modules/Common/components/SubscribeForm';
 
 import Article from 'modules/Common/components/Article';
@@ -9,7 +10,6 @@ import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import FeatureItem from 'modules/Common/components/FeatureItem';
 import FeatureList from 'modules/Common/components/FeatureList';
-import { FiArrowRightCircle } from 'react-icons/fi';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
@@ -18,6 +18,7 @@ import Logo from 'modules/Common/components/Logo';
 import React from 'react';
 import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
 import ShowcaseList from 'modules/Common/components/ShowcaseList';
+import SubscribeMessage from 'modules/Common/components/SubscribeMessage';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
@@ -60,17 +61,22 @@ const HomePage = ({ services }: any) => {
         service: data.service,
         documentType: data.documentType,
       });
-      message = t('subscribe_form.success', 'Thanks for subscribing');
+      message = t('common:subscribe_form.success', 'Thanks for subscribing');
       timeout = 3000;
     } catch (err) {
       console.error(err);
-      message = t('subscribe_form.error', 'Sorry, but there was a problem, please try again');
+      message = t(
+        'common:subscribe_form.error',
+        'Sorry, but there was a problem, please try again'
+      );
       timeout = 5000;
     }
-    setSubscribeAnswerMessage(message);
-    setTimeout(() => {
-      setSubscribeAnswerMessage('');
-    }, timeout);
+
+    // TODO :
+    // Immplement Toastify
+    // Reset from on success
+    alert(message);
+
     toggleSubscribing(false);
   };
 
@@ -91,10 +97,45 @@ const HomePage = ({ services }: any) => {
               'common:home_page.subtitle',
               'Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms.'
             )}
-          >
+          ></Hero>
+        </Container>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingTop={false}>
+          <Column width={60}>
+            <h4 className="h4__white mb__L">
+              {t(
+                'common:subscribe_form.title',
+                'Be informed by email of the changes on the documents of your choice.'
+              )}
+            </h4>
             <SubscribeForm onSubmit={onSubscription} loading={subscribing} />
-            {subscribeAnswerMessage && <div>{subscribeAnswerMessage}</div>}
-          </Hero>
+          </Column>
+          <Column width={40} className="mt__2XL">
+            <TextContent>
+              <ul>
+                <li>
+                  <FiChevronRight color="#0496FF" />
+                  {t(
+                    'common:subscribe_form.p1',
+                    'As the frequency of change of a document can vary from one document to another it is difficult to estimate the frequency of emails you will receive. However, we have observed that large digital services change their documents approximately once every fortnight.'
+                  )}
+                </li>
+                <li>
+                  <FiChevronRight color="#0496FF" />
+                  {t(
+                    'common:subscribe_form.p2',
+                    'If you wish to track several documents, simply complete this form as many times as necessary. If you want to subscribre to all documents please contact us.'
+                  )}
+                </li>
+                <li>
+                  <FiChevronRight color="#0496FF" />
+                  {t(
+                    'common:subscribe_form.p3',
+                    'You can unsubscribe at any time from the link provided in the email and ou may be interested in our privacy policy.'
+                  )}
+                </li>
+              </ul>
+            </TextContent>
+          </Column>
         </Container>
       </Container>
       {/* How section */}
