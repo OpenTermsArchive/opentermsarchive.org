@@ -32,7 +32,7 @@ import { withI18n } from 'modules/I18n';
 const HomePage = ({ services }: any) => {
   const { t } = useTranslation('common');
   const [subscribing, toggleSubscribing] = useToggle(false);
-  const { queryParams } = useUrl();
+  const { queryParams, pushQueryParams } = useUrl();
   const { notify } = useNotifier();
 
   // Format services and docs feature item title
@@ -100,6 +100,7 @@ const HomePage = ({ services }: any) => {
             <SubscribeForm
               onSubmit={onSubscription}
               loading={subscribing}
+              onChange={(data) => pushQueryParams(data, undefined, { shallow: true })}
               defaultValues={{
                 service: queryParams.service,
                 documentType: queryParams.documentType,

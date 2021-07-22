@@ -16,9 +16,15 @@ export interface SubscribeFormProps {
   loading: boolean;
   defaultValues: Partial<SubscribeFormFields>;
   onSubmit: (data: SubscribeFormFields) => any;
+  onChange: (data: Partial<{ service: string; documentType: string }>) => any;
 }
 
-const SubscribeForm = ({ onSubmit, loading = false, defaultValues }: SubscribeFormProps) => {
+const SubscribeForm = ({
+  onSubmit,
+  onChange,
+  loading = false,
+  defaultValues,
+}: SubscribeFormProps) => {
   const { t } = useTranslation('common');
 
   const { register, handleSubmit, watch } = useForm<SubscribeFormFields>({
@@ -27,6 +33,10 @@ const SubscribeForm = ({ onSubmit, loading = false, defaultValues }: SubscribeFo
   });
 
   const { consent, service, documentType } = watch();
+
+  React.useEffect(() => {
+    onChange({ service, documentType });
+  }, [service, documentType]);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

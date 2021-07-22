@@ -40,7 +40,7 @@ const SelectService: React.FC<SelectServiceProps> = ({
               <select disabled />
             ) : (
               <select id="services" defaultValue={selectedService} {...serviceProps}>
-                <option disabled hidden>
+                <option value="">
                   {t('common:subscribe_form.fields.service.default', 'Select...')}
                 </option>
                 {services.map((service) => (
@@ -71,7 +71,7 @@ const SelectService: React.FC<SelectServiceProps> = ({
                 defaultValue={selectedDocumentType}
                 {...documentTypeProps}
               >
-                <option disabled hidden>
+                <option value="">
                   {t('common:subscribe_form.fields.document.default', 'Select...')}
                 </option>
                 {documentTypes.map((documentType) => (
