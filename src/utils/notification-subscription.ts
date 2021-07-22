@@ -1,14 +1,22 @@
-import * as SibApiV3Sdk from 'sib-api-v3-typescript';
+// do not use IMPORT as it would break the build
+// https://github.com/sendinblue/APIv3-typescript-library/pull/24
+// https://github.com/vercel/next.js/discussions/20315
+const {
+  ContactsApi,
+  ContactsApiApiKeys,
+  GetContactDetails,
+  GetList,
+} = require('sib-api-v3-typescript');
 
-export type ContactList = SibApiV3Sdk.GetList;
-export type Contact = SibApiV3Sdk.GetContactDetails;
+export type ContactList = typeof GetList;
+export type Contact = typeof GetContactDetails;
 
 class NotificationSubscription {
   private contactsApi: any;
 
   constructor(apiKey: string) {
-    this.contactsApi = new SibApiV3Sdk.ContactsApi();
-    this.contactsApi.setApiKey(SibApiV3Sdk.ContactsApiApiKeys.apiKey, apiKey);
+    this.contactsApi = new ContactsApi();
+    this.contactsApi.setApiKey(ContactsApiApiKeys.apiKey, apiKey);
   }
 
   public async createContactList({ name, folderId }: { name: string; folderId: number }) {
