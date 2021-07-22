@@ -28,7 +28,6 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
-    "@gouvfr/all": "^0.5.3",
     "@socialgouv/matomo-next": "^1.2.1",
     "@types/lodash": "^4.14.171",
     "@welldone-software/why-did-you-render": "6.1.4",
@@ -40,7 +39,7 @@
     "fs-extra": "^9.1.0",
     "http-status-codes": "^2.1.4",
     "lodash": "^4.17.21",
-    "next": "10.2.3",
+    "next": "^11.0.1",
     "next-auth": "3.24.0",
     "next-i18next": "8.4.0",
     "next-mdx-remote": "^3.0.2",
