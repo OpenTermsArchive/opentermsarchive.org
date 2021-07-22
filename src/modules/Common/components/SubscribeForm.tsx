@@ -10,11 +10,13 @@ export interface SubscribeFormFields {
   consent: boolean;
   service: string;
   documentType: string;
+  defaultServices: any;
 }
 
 export interface SubscribeFormProps {
   loading: boolean;
   defaultValues: Partial<SubscribeFormFields>;
+  defaultServices: any;
   onSubmit: (data: SubscribeFormFields) => any;
   onChange: (data: Partial<{ service: string; documentType: string }>) => any;
 }
@@ -24,6 +26,7 @@ const SubscribeForm = ({
   onChange,
   loading = false,
   defaultValues,
+  defaultServices,
 }: SubscribeFormProps) => {
   const { t } = useTranslation('common');
 
@@ -41,6 +44,7 @@ const SubscribeForm = ({
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <SelectService
+        defaultServices={defaultServices}
         service={service}
         documentType={documentType}
         serviceProps={register('service', { required: true })}

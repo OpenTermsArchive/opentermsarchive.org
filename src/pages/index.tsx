@@ -98,6 +98,7 @@ const HomePage = ({ services }: any) => {
               )}
             </h4>
             <SubscribeForm
+              defaultServices={services}
               onSubmit={onSubscription}
               loading={subscribing}
               onChange={(data) => pushQueryParams(data, undefined, { shallow: true })}

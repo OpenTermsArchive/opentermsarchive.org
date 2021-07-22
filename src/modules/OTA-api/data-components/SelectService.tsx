@@ -9,6 +9,7 @@ type SelectServiceProps = {
   documentTypeProps: any;
   service: string;
   documentType: string;
+  defaultServices: any;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const SelectService: React.FC<SelectServiceProps> = ({
@@ -16,9 +17,10 @@ const SelectService: React.FC<SelectServiceProps> = ({
   documentTypeProps,
   service: selectedService,
   documentType: selectedDocumentType,
+  defaultServices,
 }) => {
   const { t } = useTranslation('common');
-  const { data } = useSWR('/api/ota/services');
+  const { data } = useSWR('/api/ota/services', { initialData: defaultServices });
 
   const services = data ? Object.keys(data).sort() : [];
   const documentTypes: string[] = data ? data[selectedService] || [] : [];
