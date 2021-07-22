@@ -20,7 +20,10 @@ const SelectService: React.FC<SelectServiceProps> = ({
   defaultServices,
 }) => {
   const { t } = useTranslation('common');
-  const { data } = useSWR('/api/ota/services', { initialData: defaultServices });
+  const { data } = useSWR('/api/ota/services', {
+    initialData: defaultServices,
+    revalidateOnMount: true,
+  });
 
   const services = data ? Object.keys(data).sort() : [];
   const documentTypes: string[] = data ? data[selectedService] || [] : [];
@@ -38,9 +41,14 @@ const SelectService: React.FC<SelectServiceProps> = ({
             // This is done in order for default values to be selected correctly
             // if the options are not present at init, it will never be selected
             loading ? (
-              <select disabled />
+              <select key="select_service_disabled" disabled />
             ) : (
-              <select id="services" defaultValue={selectedService} {...serviceProps}>
+              <select
+                key="select_service"
+                id="services"
+                defaultValue={selectedService}
+                {...serviceProps}
+              >
                 <option value="">
                   {t('common:subscribe_form.fields.service.default', 'Select...')}
                 </option>
@@ -64,11 +72,11 @@ const SelectService: React.FC<SelectServiceProps> = ({
             // This is done in order for default values to be selected correctly
             // if the options are not present at init, it will never be selected
             loading ? (
-              <select disabled />
+              <select key="select_documentTypes_disabled" disabled />
             ) : (
               <select
+                key={`select_documentTypes`}
                 id="documentTypes"
-                disabled={!selectedService}
                 defaultValue={selectedDocumentType}
                 {...documentTypeProps}
               >
