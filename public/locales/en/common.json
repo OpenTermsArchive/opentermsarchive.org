@@ -131,7 +131,7 @@
   "subscribe_form.error": "Sorry, but there was a problem, please try again",
   "subscribe_form.title": "Be informed by email of the changes on the documents of your choice.",
   "subscribe_form.p1": "As the frequency of change of a document can vary from one document to another it is difficult to estimate the frequency of emails you will receive. However, we have observed that large digital services change their documents approximately once every fortnight.",
-  "subscribe_form.p2": "If you wish to track several documents, simply complete this form as many times as necessary. If you want to subscribre to all documents please contact us.",
+  "subscribe_form.p2": "If you wish to track several documents, simply complete this form as many times as necessary. If you want to subscribe to all documents please contact us.",
   "subscribe_form.p3": "You can unsubscribe at any time from the link provided in the email and ou may be interested in our privacy policy.",
   "subscribe_form.fields.email.label": "Fill your email",
   "subscribe_form.consent": "Check to agree to receive emails informing you of changes to a document.",
