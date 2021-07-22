@@ -52,6 +52,7 @@ const HomePage = ({ services }: any) => {
   }
 
   const onSubscription: SubscribeFormProps['onSubmit'] = async (data) => {
+    let success;
     toggleSubscribing(true);
 
     try {
@@ -61,13 +62,16 @@ const HomePage = ({ services }: any) => {
         documentType: data.documentType,
       });
       notify('success', t('common:subscribe_form.success', 'Thanks for subscribing'));
+      success = true;
     } catch (err) {
       notify(
         'error',
         t('common:subscribe_form.error', 'Sorry, but there was a problem, please try again')
       );
+      success = false;
     }
     toggleSubscribing(false);
+    return success;
   };
 
   return (
