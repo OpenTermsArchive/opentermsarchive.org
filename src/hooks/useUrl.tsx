@@ -1,6 +1,7 @@
+import { Router, useRouter } from 'next/router';
+
 import React from 'react';
 import queryString from 'query-string';
-import { useRouter } from 'next/router';
 
 interface IParams {
   url?: string;
@@ -11,6 +12,9 @@ interface IParams {
 interface IParamsObject {
   [key: string]: string | string[] | undefined;
 }
+
+type IParamsAs = Parameters<Router['push']>[1];
+type IParamsOptions = Parameters<Router['push']>[2];
 
 const useUrl = () => {
   const router = useRouter();
@@ -41,15 +45,15 @@ const useUrl = () => {
   );
 
   const pushParam = React.useCallback(
-    (params: IParams) => {
+    (params: IParams, as?: IParamsAs, options?: IParamsOptions) => {
       const newUrl = setQueryParameter(params);
-      return router.push(newUrl);
+      return router.push(newUrl, as, options);
     },
     [router, setQueryParameter]
   );
 
   const pushQueryParams = React.useCallback(
-    (newUrlParams: IParamsObject) => {
+    (newUrlParams: IParamsObject, as?: IParamsAs, options?: IParamsOptions) => {
       const parsed = queryString.parse(window.location.search, { arrayFormat: 'bracket' });
 
       for (const newUrlParam in newUrlParams) {
@@ -62,15 +66,22 @@ const useUrl = () => {
         }
       }
 
-      const newUrl = `${pathname}?${queryString.stringify(parsed)}`;
-      router.push(newUrl);
+      const newParsed = queryString.stringify(newUrlParams);
+
+      const newUrl = `${pathname}${newParsed ? `?${newParsed}` : ''}`;
+      router.push(newUrl, as, options);
       return newUrl;
     },
     [router, pathname, queryParams]
   );
 
-  const replaceQueryParams = (newUrlParams: IParamsObject) => {
-    return router.push(`${pathname}?${queryString.stringify(newUrlParams)}`);
+  const replaceQueryParams = (
+    newUrlParams: IParamsObject,
+    as?: IParamsAs,
+    options?: IParamsOptions
+  ) => {
+    const parsed = queryString.stringify(newUrlParams);
+    return router.push(`${pathname}${parsed ? `?${parsed}` : ''}`, as, options);
   };
 
   const pushQueryParam = React.useCallback(
@@ -80,8 +91,8 @@ const useUrl = () => {
   );
 
   const removeQueryParam = React.useCallback(
-    (paramName: string) => {
-      pushQueryParams({ ...queryParams, [paramName]: undefined });
+    (paramName: string, as?: IParamsAs, options?: IParamsOptions) => {
+      pushQueryParams({ ...queryParams, [paramName]: undefined }, as, options);
     },
     [pushQueryParams, queryParams]
   );

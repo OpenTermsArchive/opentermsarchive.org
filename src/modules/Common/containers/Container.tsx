@@ -10,7 +10,11 @@ type ContainerProps = {
   gray?: boolean;
   bgColor?: string;
   paddingX?: boolean;
+  paddingLeft?: boolean;
+  paddingRight?: boolean;
   paddingY?: boolean;
+  paddingTop?: boolean;
+  paddingBottom?: boolean;
   paddingYSmall?: boolean;
   gridCols?: string;
   gridGutters?: string;
@@ -23,7 +27,11 @@ const Container: React.FC<ContainerProps> = ({
   layout = 'boxed',
   flex = false,
   paddingX = true,
+  paddingLeft = true,
+  paddingRight = true,
   paddingY = true,
+  paddingTop = true,
+  paddingBottom = true,
   paddingYSmall = false,
   dark = false,
   gray = false,
@@ -53,7 +61,11 @@ const Container: React.FC<ContainerProps> = ({
         { [s.container__isDark]: dark === true },
         { [s.container__isGray]: !!gray },
         { [s.container__hasNoPaddingX]: paddingX === false },
+        { [s.container__hasNoPaddingLeft]: paddingLeft === false },
+        { [s.container__hasNoPaddingRight]: paddingRight === false },
         { [s.container__hasNoPaddingY]: paddingY === false },
+        { [s.container__hasNoPaddingTop]: paddingTop === false },
+        { [s.container__hasNoPaddingBottom]: paddingBottom === false },
         { [s.container__hasPaddingYSmall]: paddingYSmall === true },
         s[`container__${gridCols}${gridGutters}`],
         className

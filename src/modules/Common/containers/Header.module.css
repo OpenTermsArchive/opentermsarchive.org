@@ -57,6 +57,7 @@
     transform: translateX(100%);
     background-color: var(--colorSecondary);
     position: fixed;
+    z-index: 1;
     left: 0;
     right: 0;
     top: 0;
@@ -118,6 +119,7 @@
   top: var(--mL);
   right: var(--mL);
   align-items: center;
+  z-index: 1;
 
   & svg {
     margin-left: var(--m2XS);

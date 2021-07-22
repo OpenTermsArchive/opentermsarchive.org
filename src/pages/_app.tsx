@@ -8,6 +8,7 @@ import 'modules/NProgress/nprogress.theme.css';
 import 'modules/NProgress'; //nprogress module
 
 import { AppProps } from 'next/app';
+import { NotifierContainer } from 'hooks/useNotifier';
 import { SWRConfig } from 'swr';
 import { appWithTranslation } from 'next-i18next';
 import { fetcher } from 'utils/api';
@@ -19,6 +20,8 @@ function App({ Component, pageProps }: AppProps) {
         fetcher,
       }}
     >
+      {' '}
+      <NotifierContainer />
       <Component {...pageProps} />
     </SWRConfig>
   );

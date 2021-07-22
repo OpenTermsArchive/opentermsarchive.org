@@ -16,12 +16,28 @@ textarea {
   /* TODO size modifier */
 }
 
+select:disabled,
+input:is([disabled]):not([type='submit']) textarea:disabled {
+  background-color: var(--colorBlack400);
+}
+
+input[type='checkbox'] {
+  width: 2rem;
+  height: 2rem;
+  margin-right: var(--mXS);
+}
+
 label {
   color: var(--color1-600);
   font-weight: bold;
   display: block;
   width: 100%;
   margin-bottom: var(--mXS);
+}
+
+.label__inline {
+  display: inline-flex;
+  width: auto;
 }
 
 .formfield {
@@ -34,6 +50,10 @@ label {
   &.formfield__alignRight {
     text-align: right;
   }
+
+  &.formfield__flex {
+    display: flex;
+  }
 }
 
 .select {
@@ -45,7 +65,7 @@ label {
   }
 
   & svg {
-    top: var(--mS);
+    top: var(--mM);
     right: var(--mS);
     position: absolute;
     pointer-events: none;

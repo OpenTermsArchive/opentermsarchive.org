@@ -87,15 +87,26 @@
 
 @media (--tabletSmall) {
   .column {
-    &.column__25 {
-      width: 100%;
-    }
-
-    &.column__50 {
-      width: 100%;
-    }
-
-    &.column__75 {
+    &.colum__5,
+    &.column__10,
+    &.column__15,
+    &.column__20,
+    &.column__25,
+    &.column__30,
+    &.column__35,
+    &.column__40,
+    &.column__45,
+    &.column__50,
+    &.column__55,
+    &.column__60,
+    &.column__65,
+    &.column__70,
+    &.column__75,
+    &.column__80,
+    &.column__85,
+    &.column__90,
+    &.column__95,
+    &.column__100 {
       width: 100%;
     }
 

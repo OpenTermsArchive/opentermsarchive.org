@@ -35,4 +35,8 @@
     font-size: 0.8em;
     padding: var(--pXS) var(--pM);
   }
+
+  &:disabled {
+    opacity: 0.6;
+  }
 }

@@ -1,3 +1,6 @@
+import { FiArrowRightCircle, FiChevronRight } from 'react-icons/fi';
+import SubscribeForm, { SubscribeFormProps } from 'modules/Common/components/SubscribeForm';
+
 import Article from 'modules/Common/components/Article';
 import Aside from 'modules/Common/components/Aside';
 import Button from 'modules/Common/components/Button';
@@ -7,23 +10,30 @@ import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import FeatureItem from 'modules/Common/components/FeatureItem';
 import FeatureList from 'modules/Common/components/FeatureList';
-import { FiArrowRightCircle } from 'react-icons/fi';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
 import LinkArrow from 'modules/Common/components/LinkArrow';
 import Logo from 'modules/Common/components/Logo';
+import React from 'react';
 import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
 import ShowcaseList from 'modules/Common/components/ShowcaseList';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
+import api from 'utils/api';
 import { getServices } from 'modules/Common/api/ota/services';
+import useNotifier from 'hooks/useNotifier';
+import { useToggle } from 'react-use';
 import { useTranslation } from 'next-i18next';
+import useUrl from 'hooks/useUrl';
 import { withI18n } from 'modules/I18n';
 
 const HomePage = ({ services }: any) => {
   const { t } = useTranslation('common');
+  const [subscribing, toggleSubscribing] = useToggle(false);
+  const { queryParams, pushQueryParams } = useUrl();
+  const { notify } = useNotifier();
 
   // Format services and docs feature item title
   let nbServicesTitle = t('common:home_page.how.feature1.defaultTitle', 'Many services');
@@ -40,6 +50,25 @@ const HomePage = ({ services }: any) => {
       count: nbDocuments,
     });
   }
+
+  const onSubscription: SubscribeFormProps['onSubmit'] = async (data) => {
+    toggleSubscribing(true);
+
+    try {
+      await api.post(`/api/subscribe`, {
+        email: data.email,
+        service: data.service,
+        documentType: data.documentType,
+      });
+      notify('success', t('common:subscribe_form.success', 'Thanks for subscribing'));
+    } catch (err) {
+      notify(
+        'error',
+        t('common:subscribe_form.error', 'Sorry, but there was a problem, please try again')
+      );
+    }
+    toggleSubscribing(false);
+  };
 
   return (
     <Layout
@@ -60,8 +89,53 @@ const HomePage = ({ services }: any) => {
             )}
           ></Hero>
         </Container>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingTop={false}>
+          <Column width={60}>
+            <h4 className="h4__white mb__L">
+              {t(
+                'common:subscribe_form.title',
+                'Be informed by email of the changes on the documents of your choice.'
+              )}
+            </h4>
+            <SubscribeForm
+              onSubmit={onSubscription}
+              loading={subscribing}
+              onChange={(data) => pushQueryParams(data, undefined, { shallow: true })}
+              defaultValues={{
+                service: queryParams.service,
+                documentType: queryParams.documentType,
+              }}
+            />
+          </Column>
+          <Column width={40} className="mt__2XL">
+            <TextContent>
+              <ul>
+                <li>
+                  <FiChevronRight color="#0496FF" />
+                  {t(
+                    'common:subscribe_form.p1',
+                    'As the frequency of change of a document can vary from one document to another it is difficult to estimate the frequency of emails you will receive. However, we have observed that large digital services change their documents approximately once every fortnight.'
+                  )}
+                </li>
+                <li>
+                  <FiChevronRight color="#0496FF" />
+                  {t(
+                    'common:subscribe_form.p2',
+                    'If you wish to track several documents, simply complete this form as many times as necessary. If you want to subscribre to all documents please contact us.'
+                  )}
+                </li>
+                <li>
+                  <FiChevronRight color="#0496FF" />
+                  {t(
+                    'common:subscribe_form.p3',
+                    'You can unsubscribe at any time from the link provided in the email and ou may be interested in our privacy policy.'
+                  )}
+                </li>
+              </ul>
+            </TextContent>
+          </Column>
+        </Container>
       </Container>
-
       {/* How section */}
       <Container
         gridCols="10"
@@ -129,7 +203,6 @@ const HomePage = ({ services }: any) => {
           </FeatureList>
         </Aside>
       </Container>
-
       {/* Contribute */}
       <Container
         gridCols="12"
@@ -238,7 +311,6 @@ const HomePage = ({ services }: any) => {
           </ButtonBlock>
         </ButtonBlockList>
       </Container>
-
       {/* Values */}
       <Container
         layout="wide"
@@ -298,7 +370,6 @@ const HomePage = ({ services }: any) => {
           </Column>
         </Container>
       </Container>
-
       {/* Showcase */}
       <Container
         gridCols="10"
@@ -395,7 +466,6 @@ const HomePage = ({ services }: any) => {
           </ButtonBlock>
         </Column>
       </Container>
-
       {/* Partners */}
       <Container layout="fluid" gridCols="12" gridGutters="11" flex={true} paddingX={false}>
         <ThumbGalery
@@ -423,7 +493,6 @@ const HomePage = ({ services }: any) => {
           </Link>
         </ThumbGalery>
       </Container>
-
       {/* Press */}
       <Container
         paddingY={false}
