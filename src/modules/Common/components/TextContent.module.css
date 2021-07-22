@@ -23,8 +23,16 @@
     margin-bottom: var(--mL);
   }
 
+  & h3 {
+    margin-bottom: var(--mM);
+  }
+
   & ul {
     margin-left: var(--mL);
+
+    &:not(:last-child) {
+      margin-bottom: var(--mM);
+    }
   }
 
   & p + h2 {
@@ -49,5 +57,14 @@
 
   & blockquote {
     margin-bottom: var(--mL);
+  }
+
+  & code {
+    background-color: var(--colorBlack200);
+    padding: 0 0.4rem;
+  }
+
+  & button {
+    margin-top: var(--mM);
   }
 }

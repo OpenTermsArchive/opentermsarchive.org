@@ -1,0 +1,39 @@
+## 1. Déclarer les documents contractuels d’un service
+
+Pour ajouter un document contractuel à la base de données vous pouvez utiliser <Link href="/contribute">l'interface dédiée à cet effet</Link> sur le présent site web. Cette interface simple vous permet en quelques clics d’envoyer une demande d’ajout de document, qui sera par la suite testée et validée par notre équipe de modération.
+
+Pour les plus à l'aise avec GitHub, il est possible de soumettre une "pull request" sur le dépôt GitHub [OpenTermsArchive](https://github.com/ambanum/OpenTermsArchive) en déclarant un nouveau fichier <abbr title="JavaScript Object Notation">JSON</abbr> contenant les informations du service et du document à suivre dans le dossier `services`.
+
+**Quelle que soit la méthode envisagée, [la documentation complète](https://github.com/ambanum/OpenTermsArchive/blob/master/CONTRIBUTING.md) au sujet de la contribution pourra vous être utile.**
+
+La liste des services et des documents suivis est [consultable ici](https://github.com/ambanum/OpenTermsArchive/tree/master/services).
+
+## 2. Enregistrer des données brutes
+
+Pour scruter les modifications des documents au plus près, Open Term Archive les télécharge à fréquence régulière depuis leurs adresse URL. **Chaque version des documents téléchargée** (appelée `snapshot`)** est enregistrée dans un dépôt Git** accessible à ce lien : [OpenTermsArchive-Snapshots](https://github.com/ambanum/OpenTermsArchive-snapshots).
+
+Ce dépôt peut être considéré comme une base de donnée. Elle est distribuée sous licence [ODC-BY 1.0](https://opendatacommons.org/licenses/by/1-0/), ce qui implique que ses utilisateurs sont libres de la partager (de la copier, distribuer et de l'utiliser), de l'adapter (de la modifier, transformer et l'exploiter) pour autant que cette base reste attribuée au bureau de l'Ambassadeur français pour le numérique.
+
+## 3. Enregistrer des données signifiantes
+
+Les pages Web téléchargées peuvent contenir des éléments de navigation ( menu principal, fil d'Ariane, liens de bas de page... ), des publicités, un champ de recherche... Ces élements de la page, appelés "bruit", sont non signifiants, ce qui revient à dire qu'ils ne concernent pas directement le contenu intéressant à suivre. **Open Terms Archive enregistre une version de ce document dans laquelle le bruit est supprimé.**
+
+Pour ce faire, dans la déclaration [d'un nouveau service](https://github.com/ambanum/OpenTermsArchive/blob/master/CONTRIBUTING.md#tracking-new-documents) la propriété `select` permet de cibler un noeud <abbr title="Document Object Model">DOM</abbr> de la page et la propriété `remove` d'en supprimer. Il existe aussi un [mécanisme de filtres](https://github.com/ambanum/OpenTermsArchive/blob/master/CONTRIBUTING.md#filter) (en Javascript), qui permets pour les documents plus complexes, de faire des opérations sur le <abbr title="Document Object Model">DOM</abbr> avant de l'enregistrer.
+
+Les données sont disponibles dans le dépôt GitHub [OpenTermsArchive-versions](https://github.com/ambanum/OpenTermsArchive-versions) et sont aussi distribuées sous licence [ODC-BY 1.0](https://opendatacommons.org/licenses/by/1-0/).
+
+## 4. Naviguer dans l'historique des versions
+
+Il est possible de naviguer dans l'historique des différentes version à travers l'interface GitHub du dépôt [OpenTermsArchive-versions](https://github.com/ambanum/OpenTermsArchive-versions/). Pour cela, cliquez sur le dossier du service de votre choix puis sur le type de document. Vous aurez la possibilité de voir l'ensemble des versions en cliquant sur le lien "History".
+
+<!--- Ajouter un GIF animé du process -->
+
+Vous pouvez aussi utiliser [Scripta Manent](https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent), un outil simple bâti sur Open Terms Archive qui permet de mesurer les changements survenus entre deux dates de votre choix.
+
+## 5. Être notifié
+
+Toute personne qui souhaiterait suivre des modifications de documents peut choisir d’en être notifiées par mail.
+
+Attention toutefois, ce service est en version bêta et vous risquez de recevoir de nombreuses notifications ! Il reste possible de se désabonner en répondant à n’importe quel courriel reçu. Chaque utilisateur peut également être informé des modifications survenues sur un document contractuel en s’abonnant au flux RSS relatif à une page spécifique.
+
+Pour en savoir plus, [c'est ici](https://github.com/ambanum/OpenTermsArchive#be-notified).

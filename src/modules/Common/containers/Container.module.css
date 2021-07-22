@@ -98,8 +98,24 @@
     padding-right: 0;
   }
 
+  &.container__hasNoPaddingLeft {
+    padding-left: 0;
+  }
+
+  &.container__hasNoPaddingRight {
+    padding-right: 0;
+  }
+
   &.container__hasNoPaddingY {
     padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &.container__hasNoPaddingTop {
+    padding-top: 0;
+  }
+
+  &.container__hasNoPaddingBottom {
     padding-bottom: 0;
   }
 

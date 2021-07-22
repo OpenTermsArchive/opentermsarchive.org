@@ -8,6 +8,7 @@ import LinkArrow from 'modules/Common/components/LinkArrow';
 import Loading from 'components/Loading';
 import React from 'react';
 import { Trans } from 'react-i18next';
+import api from 'utils/api';
 import classNames from 'classnames';
 import s from './service.module.css';
 import { useEvent } from 'react-use';
@@ -164,6 +165,13 @@ Thank you very much`;
     );
 
     router.push('/contribute/thanks');
+  };
+
+  const saveOnLocal = async () => {
+    await api.post('/api/contribute/services', {
+      path: process.env.NEXT_PUBLIC_OTA_SERVICES_PATH,
+      data: JSON.stringify(json),
+    });
   };
 
   const submitDisabled = !initialSelectedCss || !iframeReady;
@@ -324,19 +332,20 @@ Thank you very much`;
                     {t('contribute:service_page.step3.form.insignificantPart.cta', 'Remove part')}
                   </Button>
                 </div>
-
                 {expertMode && (
-                  <textarea
-                    style={{
-                      width: '800px',
-                      maxWidth: '100%',
-                      height: '300px',
-                      overflow: 'auto',
-                      padding: '10px',
-                    }}
-                  >
-                    {JSON.stringify(json, null, 2)}
-                  </textarea>
+                  <>
+                    <pre className={classNames(s.json)}>{JSON.stringify(json, null, 2)}</pre>
+                    {process.env.NEXT_PUBLIC_OTA_SERVICES_PATH && (
+                      <Button
+                        onClick={saveOnLocal}
+                        size="sm"
+                        type="secondary"
+                        title={`Save on ${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}`}
+                      >
+                        Save on local
+                      </Button>
+                    )}
+                  </>
                 )}
               </form>
             </div>
@@ -356,7 +365,7 @@ Thank you very much`;
           <h1>{t('contribute:service_page.error.title', "We're sorry, an error occured")}</h1>
           <p>{data?.error}</p>
           <Button onClick={onErrorClick}>
-            {t('contribute:service_page.error.cta', 'Les us know!')}
+            {t('contribute:service_page.error.cta', 'Let us know!')}
           </Button>
         </div>
       )}

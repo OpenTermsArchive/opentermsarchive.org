@@ -13,6 +13,12 @@ a {
   font-size: 1.4rem;
 }
 
+.a__darked {
+  &:hover {
+    color: var(--colorBlack200);
+  }
+}
+
 .a_icontext {
   display: flex;
   align-items: center;

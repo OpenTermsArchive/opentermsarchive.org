@@ -82,3 +82,14 @@
     }
   }
 }
+
+.json {
+  width: 800px;
+  max-width: 100%;
+  height: 300px;
+  margin-top: 20px;
+  overflow: auto;
+  padding: 10px;
+  border: 1px solid var(--colorBlack400);
+  background-color: var(--colorBlack200);
+}

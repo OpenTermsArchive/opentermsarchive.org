@@ -9,7 +9,7 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
 
-export default function PrivacyPolicyPage({ mdxContent }: WithI18nResult) {
+export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation('common');
   return (
     <Layout title={t('common:case-studies.seo.title', 'Case Studies')}>

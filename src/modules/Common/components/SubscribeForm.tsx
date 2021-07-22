@@ -1,10 +1,116 @@
 import React from 'react';
+import SelectService from 'modules/OTA-api/data-components/SelectService';
+import classNames from 'classnames';
+import sButton from './Button.module.css';
+import { useForm } from 'react-hook-form';
+import { usePrevious } from 'react-use';
 import { useTranslation } from 'next-i18next';
 
-const SubscribeForm = () => {
+export interface SubscribeFormFields {
+  email: string;
+  consent: boolean;
+  service: string;
+  documentType: string;
+  defaultServices: any;
+}
+
+export interface SubscribeFormProps {
+  loading: boolean;
+  defaultValues: Partial<SubscribeFormFields>;
+  defaultServices: any;
+  onSubmit: (data: SubscribeFormFields) => Promise<boolean>;
+  onChange: (data: Partial<{ service: string; documentType: string }>) => any;
+}
+
+const SubscribeForm = ({
+  onSubmit: onExternalSubmit,
+  onChange,
+  loading = false,
+  defaultValues,
+  defaultServices,
+}: SubscribeFormProps) => {
   const { t } = useTranslation('common');
 
-  return <>{t('common:subscribe_form', 'Subscribe form')}</>;
+  const { register, handleSubmit, watch, reset } = useForm<SubscribeFormFields>({
+    reValidateMode: 'onChange',
+    defaultValues,
+  });
+
+  const { consent, service, documentType, email } = watch();
+  const previousService = usePrevious(service);
+  const [success, setSuccess] = React.useState(false);
+
+  React.useEffect(() => {
+    onChange({
+      ...(service ? { service } : {}),
+      ...(documentType ? { documentType } : {}),
+    });
+  }, [service, documentType]);
+
+  // reset document type on service change
+  React.useEffect(() => {
+    if (previousService !== service && !!previousService && !!documentType) {
+      reset({ documentType: undefined, service, email, consent });
+    }
+  }, [previousService, documentType, service, reset, email, consent]);
+
+  // reset document type and service when submit as occured
+  // we need to decouple submit from reset as explained here https://react-hook-form.com/api/useform/reset
+  React.useEffect(() => {
+    if (success) {
+      // we keep the same service if there are many as the user may want to subscribe to all documentTypes
+      // from the same service
+      const newService = defaultServices[service].length === 1 ? undefined : service;
+      reset({ service: newService, documentType: undefined, email, consent });
+      setSuccess(false);
+    }
+  }, [success, reset, email, consent, service]);
+
+  // reset all fields on submit
+  const onSubmit = async (data: any) => {
+    const success = await onExternalSubmit(data);
+    setSuccess(success);
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <SelectService
+        defaultServices={defaultServices}
+        service={service}
+        documentType={documentType}
+        serviceProps={register('service', { required: true })}
+        documentTypeProps={register('documentType', { required: true })}
+      />
+      <div className={classNames('formfield')}>
+        <label htmlFor="email">
+          {t('common:subscribe_form.fields.email.label', 'Fill your email')}
+        </label>
+        <input
+          id="email"
+          type="email"
+          placeholder={t('common:subscribe_form.fields.email.input.placeholder', 'Email')}
+          {...register('email', { required: true })}
+        />
+      </div>
+      <div className={classNames('formfield', 'formfield__flex')}>
+        <input id="consent" {...register('consent', { required: true })} type="checkbox" />
+        <label htmlFor="consent">
+          {t(
+            'common:subscribe_form.consent',
+            'Check to agree to receive emails informing you of changes to a document.'
+          )}
+        </label>
+      </div>
+      <div className={classNames('formfield', 'formfield__alignRight')}>
+        <input
+          type="submit"
+          className={sButton.button}
+          disabled={!consent || !email || !service || !documentType || loading}
+          value={loading ? '...' : `${t('common:subscribe_form.submit', 'Subscribe')}`}
+        />
+      </div>
+    </form>
+  );
 };
 
 export default SubscribeForm;
