@@ -22,7 +22,7 @@ import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
 import api from 'utils/api';
-import { getServices } from 'modules/Common/api/ota/services';
+import { getServices } from 'modules/OTA-api/api';
 import useNotifier from 'hooks/useNotifier';
 import { useToggle } from 'react-use';
 import { useTranslation } from 'next-i18next';
