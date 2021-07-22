@@ -49,6 +49,8 @@
     restart_policy: unless-stopped
     ports:
       - '{{ app_port }}:3000'
+    env:
+      SENDINBLUE_API_KEY: "{{ SENDINBLUE_API_KEY if SENDINBLUE_API_KEY is defined else '' }}"
 
 - name: Prune containers and images
   become: yes
