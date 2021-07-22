@@ -137,8 +137,8 @@
   "subscribe_form.consent": "Cochez pour accepter de recevoir des courriels vous informant des modifications apportées à un document.",
   "subscribe_form.submit": "S'inscrire",
   "subscribe_form.fields.service.label": "Sélectionner un service",
-  "subscribe_form.fields.service.default": "Service",
+  "subscribe_form.fields.service.default": "Sélectionner...",
   "subscribe_form.fields.document.label": "Sélectionner un type de document",
-  "subscribe_form.fields.document.default": "Type de document",
+  "subscribe_form.fields.document.default": "Sélectionner...",
   "subscribe_form.fields.email.input.placeholder": "Email"
 }

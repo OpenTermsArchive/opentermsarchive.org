@@ -137,8 +137,8 @@
   "subscribe_form.consent": "Check to agree to receive emails informing you of changes to a document.",
   "subscribe_form.submit": "Subscribe",
   "subscribe_form.fields.service.label": "Select a service",
-  "subscribe_form.fields.service.default": "Service",
+  "subscribe_form.fields.service.default": "Select...",
   "subscribe_form.fields.document.label": "Select a document type",
-  "subscribe_form.fields.document.default": "Document type",
+  "subscribe_form.fields.document.default": "Select...",
   "subscribe_form.fields.email.input.placeholder": "Email"
 }
