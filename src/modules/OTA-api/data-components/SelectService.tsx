@@ -1,6 +1,5 @@
 import { FiChevronDown } from 'react-icons/fi';
 import React from 'react';
-import { SERVICES_URL } from '../api';
 import classNames from 'classnames';
 import useSWR from 'swr';
 import { useTranslation } from 'next-i18next';
@@ -19,7 +18,7 @@ const SelectService: React.FC<SelectServiceProps> = ({
   documentType: selectedDocumentType,
 }) => {
   const { t } = useTranslation('common');
-  const { data } = useSWR(SERVICES_URL);
+  const { data } = useSWR('/api/ota/services');
 
   const services = data ? Object.keys(data).sort() : [];
   const documentTypes: string[] = data ? data[selectedService] || [] : [];
