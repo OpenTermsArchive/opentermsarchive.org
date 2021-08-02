@@ -143,6 +143,7 @@ const IframeSelector = ({
   return (
     <div>
       <iframe
+        loading="lazy"
         ref={iframeRef}
         src={url}
         width="100%"
