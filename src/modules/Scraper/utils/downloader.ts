@@ -5,6 +5,7 @@ import {
   removeCookieBanners,
 } from '../i-dont-care-about-cookies';
 
+import UserAgent from 'user-agents';
 import debug from 'debug';
 import fse from 'fs-extra';
 import puppeteer from 'puppeteer';
@@ -26,6 +27,7 @@ export const downloadUrl = async (url: string, { folderPath }: { folderPath: str
     ],
   });
   const page = await browser.newPage();
+  await page.setUserAgent(new UserAgent().toString());
   page.on('console', (consoleObj: any) => logDebug('>> in page', consoleObj.text()));
 
   const hostname = getHostname(url, true);
