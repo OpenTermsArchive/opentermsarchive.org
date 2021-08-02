@@ -161,6 +161,20 @@ chrome.runtime.onInstalled.addListener(function(d){
 
 function blockUrlCallback(d)
 {
+	// Cached request: find the appropriate tab
+	
+	if (d.tabId == -1 && d.initiator) {
+		let hostname = getHostname(d.initiator, true);
+		
+		for (let tabId in tab_list) {
+			if (tab_list[tabId].hostname == getHostname(d.initiator, true)) {
+				d.tabId = parseInt(tabId);
+				break;
+			}
+		}
+	}
+	
+	
 	if (tab_list[d.tabId] && !tab_list[d.tabId].whitelisted && d.url)
 	{
 		var clean_url = d.url.split('?')[0];
