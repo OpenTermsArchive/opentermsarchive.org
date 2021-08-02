@@ -1,6 +1,6 @@
 {
   "name": "OpenTermsArchive.org",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "prettier": "prettier-config-ambanum",
   "scripts": {
     "dev": "ts-node --project tsconfig.server.json src/server/index.ts",
@@ -66,7 +66,8 @@
     "react-virtualized-auto-sizer": "^1.0.5",
     "react-window": "^1.8.6",
     "sib-api-v3-typescript": "^2.2.2",
-    "swr": "0.5.5"
+    "swr": "0.5.5",
+    "user-agents": "^1.0.731"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
@@ -84,6 +85,7 @@
     "@types/react-table": "7.7.1",
     "@types/react-virtualized-auto-sizer": "^1.0.0",
     "@types/react-window": "1.8.3",
+    "@types/user-agents": "^1.0.2",
     "fast-glob": "^3.2.5",
     "husky": "^6.0.0",
     "i18next-scanner": "^3.0.0",

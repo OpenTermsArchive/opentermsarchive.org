@@ -1,4 +1,4 @@
-# I don't care about cookies - Chrome extension - 3.3.0_0
+# I don't care about cookies - Chrome extension - 3.3.1_0
 
 We are using the software of [i-dont-care-about-cookies.eu](https://www.i-dont-care-about-cookies.eu/)
 

@@ -8,6 +8,10 @@
 			'#cookieConsent .btn[data-cookie="accepted"]'
 		],
 		
+		'.reveal-overlay[style*="block"]': [
+			'a[onclick*="AcceptStrictOnlyCookie"]'
+		],
+ 
 		'.pum-open': [
 			'.pum-active[data-popmake*="slug\\":\\"cookie"] .pum-close',
 			'.pum-active[data-popmake*="rodo"] .pum-close',
@@ -27,7 +31,9 @@
 		'.modal-open': [
 			'#PrivacyCategoryAlert[style*="block"] .btn[data-id="ConfirmSettings"]',
 			'#cookie-control-modal[style*="block"] .js-toggle-cookie-control',
-			'.kmt-ckextmodal[style*="block"] .btn[href*="accept"]'
+			'.kmt-ckextmodal[style*="block"] .btn[href*="accept"]',
+			'.cookie-alert[style*="block"] .btn-info[data-dismiss]',
+			'#cookiesplus-bas[style*="block"] .btn[name="save-basic"]'
 		],
 		
 		'.modal[style*="block"]': [
@@ -41,13 +47,22 @@
 			'#rodo_form .btn',
 			'#cookieNoticeForm #saveCookies',
 			'.btn[onclick*="saveCookieSettings"]',
-			'.btn.set_essential_cookies'
+			'.btn.set_essential_cookies',
+			'.btn.js-offcanvas-cookie-submit',
+			'.btn#cookie-save-selected',
+			'.bcee-cookies-manager-deny-all',
+			'.consent-banner-confirmation-button.btn-default',
+			'a[onclick="setConsentSelect()"]',
+			'.container_acceptcookies .btn[name="save"]',
+			'#cookieSelectForm .btn[type="submit"]',
+			'button[data-tracking="ACCEPT_REQUIRED_COOKIES"]'
 		]
 	};
 	
 	let searchGroups = [
-		'.qc-cmp2-container button[mode="secondary"],\
-		#didomi-host .didomi-button-highlight,\
+		'.qc-cmp2-summary-buttons button[mode="secondary"],\
+		.qc-cmp2-buttons-desktop > button:first-child,\
+		#didomi-host .didomi-button-highlight:not([class*="paywall"]),\
 		#CookieModal.in .btn[data-dismiss],\
 		#rgpd_video .rgpd-mask a[data-rgpd-consent],\
 		.js--modal[style*="block"] .cookie-permission--accept-button,\
@@ -231,7 +246,7 @@
 		#sanoma-consent-accept-button',
 		
 		'#rodo.in .button[href*="accept"],\
-		#gdpr_popin[style*="block"] .gdpr-agree button,\
+		#gdpr_popin[style*="block"] .gdpr-agree,\
 		form[action*="cookieservice"] #acceptButton,\
 		#cookiescript_injected #cookiescript_accept,\
 		#js-cookie-wall[style*="block"] #js-cookie-wall-accept,\
@@ -402,10 +417,10 @@
 	var start = setInterval(function() {
 		var html = document.querySelector('html');
 		
-		if (!html || /idc0_330/.test(html.className))
+		if (!html || /idc0_331/.test(html.className))
 			return;
 		
-		html.className += ' idc0_330';
+		html.className += ' idc0_331';
 		searchLoop(0);
 		clearInterval(start);
 	}, 500);

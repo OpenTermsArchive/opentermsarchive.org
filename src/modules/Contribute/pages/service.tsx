@@ -50,6 +50,8 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     },
   };
 
+  const [isPdf, toggleIsPdf] = useToggle(/\.pdf$/gi.test(url));
+
   const [selectable, toggleSelectable] = React.useState('');
   const [iframeReady, toggleIframeReady] = useToggle(false);
   const [step, setStep] = React.useState<number>(initialStep ? +initialStep : 1);
@@ -67,15 +69,18 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     : [initialRemovedCss];
 
   // const data = { url: 'http://localhost:3000/contribute' };
-  const { data } = useSWR<GetContributeServiceResponse>(`/api/contribute/services?url=${url}`, {
-    initialData: {
-      status: 'ko',
-      message: '',
-      url: '',
-      error: '',
-    },
-    revalidateOnMount: true,
-  });
+  const { data } = useSWR<GetContributeServiceResponse>(
+    isPdf ? null : `/api/contribute/services?url=${url}`,
+    {
+      initialData: {
+        status: 'ko',
+        message: '',
+        url: '',
+        error: '',
+      },
+      revalidateOnMount: true,
+    }
+  );
 
   const passToStep = (newStep: number) => (e: any) => {
     e.preventDefault();
@@ -176,6 +181,12 @@ Thank you very much`;
 
   const submitDisabled = !initialSelectedCss || !iframeReady;
 
+  React.useEffect(() => {
+    if (!!data?.isPdf) {
+      toggleIsPdf(true);
+    }
+  }, [data?.isPdf]);
+
   return (
     <div className={s.wrapper}>
       <Drawer className={s.drawer}>
@@ -263,74 +274,83 @@ Thank you very much`;
                     </label>
                     <input defaultValue={initialName} onChange={onInputChange('name')} />
                   </div>
+                  {!isPdf && (
+                    <>
+                      <h3>
+                        {t(
+                          'contribute:service_page.step3.title',
+                          'Step 3: selecting significant part of the document'
+                        )}
+                      </h3>
 
-                  <h3>
-                    {t(
-                      'contribute:service_page.step3.title',
-                      'Step 3: selecting significant part of the document'
-                    )}
-                  </h3>
+                      <div className={classNames('formfield')}>
+                        <label>
+                          {t(
+                            'contribute:service_page.step3.form.significantPart',
+                            'Significant part(s)'
+                          )}
+                        </label>
+                        {selectedCss.map((selected, i) => (
+                          <div key={selected} className={s.selectionItem}>
+                            <input
+                              defaultValue={selected}
+                              onChange={onChangeCssRule('selectedCss', i)}
+                            />
 
-                  <div className={classNames('formfield')}>
-                    <label>
-                      {t(
-                        'contribute:service_page.step3.form.significantPart',
-                        'Significant part(s)'
-                      )}
-                    </label>
-                    {selectedCss.map((selected, i) => (
-                      <div key={selected} className={s.selectionItem}>
-                        <input
-                          defaultValue={selected}
-                          onChange={onChangeCssRule('selectedCss', i)}
-                        />
-
+                            <Button
+                              onClick={onRemoveCssRule('selectedCss', i)}
+                              type="secondary"
+                              onlyIcon={true}
+                            >
+                              <FiTrash2></FiTrash2>
+                            </Button>
+                          </div>
+                        ))}
                         <Button
-                          onClick={onRemoveCssRule('selectedCss', i)}
+                          onClick={selectInIframe('selectedCss')}
+                          disabled={!!selectable || !iframeReady}
                           type="secondary"
-                          onlyIcon={true}
                         >
-                          <FiTrash2></FiTrash2>
+                          {t('contribute:service_page.step3.form.significantPart.cta', 'Add part')}
                         </Button>
                       </div>
-                    ))}
-                    <Button
-                      onClick={selectInIframe('selectedCss')}
-                      disabled={!!selectable || !iframeReady}
-                      type="secondary"
-                    >
-                      {t('contribute:service_page.step3.form.significantPart.cta', 'Add part')}
-                    </Button>
-                  </div>
-                </div>
 
-                <div className={classNames('formfield')}>
-                  <label>
-                    {t(
-                      'contribute:service_page.step3.form.insignificantPart',
-                      'Insignificant part(s)'
-                    )}
-                  </label>
-                  {removedCss.map((selected, i) => (
-                    <div key={selected} className={s.selectionItem}>
-                      <input defaultValue={selected} onChange={onChangeCssRule('removedCss', i)} />
+                      <div className={classNames('formfield')}>
+                        <label>
+                          {t(
+                            'contribute:service_page.step3.form.insignificantPart',
+                            'Insignificant part(s)'
+                          )}
+                        </label>
+                        {removedCss.map((selected, i) => (
+                          <div key={selected} className={s.selectionItem}>
+                            <input
+                              defaultValue={selected}
+                              onChange={onChangeCssRule('removedCss', i)}
+                            />
 
-                      <Button
-                        onClick={onRemoveCssRule('removedCss', i)}
-                        type="secondary"
-                        onlyIcon={true}
-                      >
-                        <FiTrash2></FiTrash2>
-                      </Button>
-                    </div>
-                  ))}
-                  <Button
-                    onClick={selectInIframe('removedCss')}
-                    disabled={!!selectable || !iframeReady}
-                    type="secondary"
-                  >
-                    {t('contribute:service_page.step3.form.insignificantPart.cta', 'Remove part')}
-                  </Button>
+                            <Button
+                              onClick={onRemoveCssRule('removedCss', i)}
+                              type="secondary"
+                              onlyIcon={true}
+                            >
+                              <FiTrash2></FiTrash2>
+                            </Button>
+                          </div>
+                        ))}
+                        <Button
+                          onClick={selectInIframe('removedCss')}
+                          disabled={!!selectable || !iframeReady}
+                          type="secondary"
+                        >
+                          {t(
+                            'contribute:service_page.step3.form.insignificantPart.cta',
+                            'Remove part'
+                          )}
+                        </Button>
+                      </div>
+                    </>
+                  )}
                 </div>
                 {expertMode && (
                   <>
@@ -371,15 +391,19 @@ Thank you very much`;
       )}
       {!data?.error && (
         <>
-          {data?.url ? (
-            <IframeSelector
-              selectable={!!selectable}
-              url={data.url}
-              selected={selectedCss}
-              removed={removedCss}
-              onSelect={onSelect}
-              onReady={toggleIframeReady}
-            />
+          {data?.url || isPdf ? (
+            isPdf ? (
+              <iframe src={url} width="100%" style={{ height: '100vh' }} />
+            ) : (
+              <IframeSelector
+                selectable={!!selectable}
+                url={isPdf ? url : data?.url}
+                selected={selectedCss}
+                removed={removedCss}
+                onSelect={onSelect}
+                onReady={toggleIframeReady}
+              />
+            )
           ) : (
             <div className={s.fullPage}>
               <h1>{t('contribute:service_page.loading.title', "We're preparing the website")}</h1>
