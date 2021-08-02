@@ -2,6 +2,9 @@ function getItem(h)
 {
 	switch (h)
 	{
+		case 'figuya.com': return {strict: false, key: 'cookie-dialog', value: 'closed'};
+		case 'scoodleplay.be': return {strict: false, key: 'scoodleAllowCookies', value: 'true'};
+		case 'lifesum.com': return {strict: false, key: 'accepted-cookies', value: '[]'};
 		case 'm.aliexpress.com': return {strict: false, key: 'MSITE_GDPR', value: 'true'};
 		case 'programmitv.it': return {strict: false, key: 'privacy_choices_made', value: 'OK'};
 		case 'nexus.gg': return {strict: true, key: 'cookie-notice:accepted', value: 'true'};
