@@ -3,14 +3,30 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { GetContributeServiceResponse } from '../../interfaces';
 import HttpStatusCode from 'http-status-codes';
+import axios from 'axios';
 import { downloadUrl } from 'modules/Scraper/utils/downloader';
 import fs from 'fs';
 import merge from 'lodash/merge';
 import path from 'path';
 
+const isPdf = async (url: string) => {
+  const response = await axios.head(url);
+  return response.headers['content-type'] === 'application/pdf';
+};
+
 const get =
   (url: string) =>
   async (_: NextApiRequest, res: NextApiResponse<GetContributeServiceResponse>) => {
+    if (await isPdf(url)) {
+      res.json({
+        status: 'ok',
+        message: 'OK',
+        url,
+        isPdf: true,
+      });
+      return res;
+    }
+
     const folderName = url.replace(/[^\p{L}\d_]/gimu, '_');
 
     const folderPath = path.join(process.env.TMP_SCRAPED_SERVICES_FOLDER || '', folderName);

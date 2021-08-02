@@ -22,10 +22,7 @@ const ContributePage = () => {
     try {
       router.push(`/contribute/service?url=${encodeURIComponent(url)}`);
     } catch (e) {
-      console.log(''); // eslint-disable-line
-      console.log('╔════START══e══════════════════════════════════════════════════'); // eslint-disable-line
-      console.log(e); // eslint-disable-line
-      console.log('╚════END════e══════════════════════════════════════════════════'); // eslint-disable-line
+      console.error(e);
     }
   };
 
