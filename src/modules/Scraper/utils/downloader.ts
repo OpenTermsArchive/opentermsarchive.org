@@ -35,8 +35,10 @@ export const downloadUrl = async (url: string, { folderPath }: { folderPath: str
 
   // Intercept not wanted requests
   await page.setRequestInterception(true);
+
   page.on('request', (req) => {
     const reqUrl = req.url();
+
     if (
       interceptCookieUrls(reqUrl, hostLevels) ||
       (req.isNavigationRequest() && req.frame() === page.mainFrame() && reqUrl !== url)
@@ -54,7 +56,12 @@ export const downloadUrl = async (url: string, { folderPath }: { folderPath: str
     await removeCookieBanners(page, hostname);
 
     const html = await page.content();
-    fse.writeFileSync(`${folderPath}/index.html`, html.replace(/<script.*?>.*?<\/script>/gim, ''));
+    fse.writeFileSync(
+      `${folderPath}/index.html`,
+      // https://stackoverflow.com/questions/6659351/removing-all-script-tags-from-html-with-js-regular-expression
+      // replace all scripts with empty string
+      html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gim, '')
+    );
 
     message = { status: 'ok' };
   } catch (e) {
