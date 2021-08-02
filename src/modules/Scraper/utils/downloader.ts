@@ -17,11 +17,11 @@ export const downloadUrl = async (url: string, { folderPath }: { folderPath: str
 
   const browser = await puppeteer.launch({
     executablePath: process.env.CHROME_BIN,
-    headless: true,
     // ignoreDefaultArgs: ['--disable-extensions', '--enable-automation'],
     args: [
       '--no-sandbox',
       '--disable-gpu',
+      '--headless',
       '--disable-dev-shm-usage',
       // `--load-extension=${extensionPath}`,
     ],
@@ -47,19 +47,23 @@ export const downloadUrl = async (url: string, { folderPath }: { folderPath: str
     }
   });
 
+  let message: any;
   try {
-    await page.goto(url, { waitUntil: 'networkidle0' });
+    await page.goto(url, { waitUntil: ['domcontentloaded', 'networkidle0', 'networkidle2'] });
 
     await removeCookieBanners(page, hostname);
 
     const html = await page.content();
     fse.writeFileSync(`${folderPath}/index.html`, html.replace(/<script.*?>.*?<\/script>/gim, ''));
-    browser.close();
-    return { status: 'ok' };
+
+    message = { status: 'ok' };
   } catch (e) {
-    console.error(e);
+    console.error(e.toString());
     fse.removeSync(folderPath);
-    browser.close();
-    return { status: 'ko', error: e.toString() };
+    message = { status: 'ko', error: e.toString() };
   }
+  await page.close();
+  await browser.close();
+
+  return message;
 };
