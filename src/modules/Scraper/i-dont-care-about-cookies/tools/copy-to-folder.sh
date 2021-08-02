@@ -2,11 +2,11 @@
 
 EXTENSION_ID=fihnjjcciajhdojfnbdddfaoknhalnja
 EXTENSION_FOLDER=./src/modules/Scraper/i-dont-care-about-cookies/extension
-CHROME_EXTENSIONS_FOLDER=~/Library/Application\ Support/Google/Chrome/Default/Extensions/$EXTENSION_ID
+BROWSER_EXTENSIONS_FOLDER=~/Library/Application\ Support/BraveSoftware/Brave-Browser/Default/Extensions/$EXTENSION_ID
 
-if [[ ! -e $CHROME_EXTENSIONS_FOLDER ]]; then
+if [[ ! -e $BROWSER_EXTENSIONS_FOLDER ]]; then
   echo ""
-  echo "You first need to install this extension in your chrome"
+  echo "You first need to install this extension in your chrome or brave"
   echo "https://chrome.google.com/webstore/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja"
   echo ""
   echo ""
@@ -16,16 +16,16 @@ if [[ ! -e $CHROME_EXTENSIONS_FOLDER ]]; then
   exit 0;
 fi
 
-EXTENSION_VERSION=$(ls "$CHROME_EXTENSIONS_FOLDER")
+EXTENSION_VERSION=$(ls "$BROWSER_EXTENSIONS_FOLDER")
 
 rm -Rf $EXTENSION_FOLDER/*
 echo "folder $EXTENSION_FOLDER emptied"
 
 # Copy all data
-# cp -Rf "$CHROME_EXTENSIONS_FOLDER/"*/* $EXTENSION_FOLDER
+# cp -Rf "$BROWSER_EXTENSIONS_FOLDER/"*/* $EXTENSION_FOLDER
 
 # Copy necesary data
-cp -Rf "$CHROME_EXTENSIONS_FOLDER/"*/data $EXTENSION_FOLDER/data
+cp -Rf "$BROWSER_EXTENSIONS_FOLDER/"*/data $EXTENSION_FOLDER/data
 
 # remove unused
 rm -Rf $EXTENSION_FOLDER/data/menu*
