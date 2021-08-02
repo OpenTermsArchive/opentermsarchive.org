@@ -10,8 +10,12 @@ import merge from 'lodash/merge';
 import path from 'path';
 
 const isPdf = async (url: string) => {
-  const response = await axios.head(url);
-  return response.headers['content-type'] === 'application/pdf';
+  try {
+    const response = await axios.head(url);
+    return response.headers['content-type'] === 'application/pdf';
+  } catch (e) {
+    return false;
+  }
 };
 
 const get =
