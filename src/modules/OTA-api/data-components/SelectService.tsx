@@ -25,7 +25,10 @@ const SelectService: React.FC<SelectServiceProps> = ({
     revalidateOnMount: true,
   });
 
-  const services = data ? Object.keys(data).sort() : [];
+  const services = data
+    ? // sort services with insensitive case
+      Object.keys(data).sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }))
+    : [];
   const documentTypes: string[] = data ? data[selectedService] || [] : [];
 
   const loading = !data;
