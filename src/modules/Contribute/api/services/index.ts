@@ -22,6 +22,7 @@ const get =
         status: 'ok',
         message: 'OK',
         url,
+        isPdf: true,
       });
       return res;
     }

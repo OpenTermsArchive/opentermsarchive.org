@@ -181,6 +181,12 @@ Thank you very much`;
 
   const submitDisabled = !initialSelectedCss || !iframeReady;
 
+  React.useEffect(() => {
+    if (!!data?.isPdf) {
+      toggleIsPdf(true);
+    }
+  }, [data?.isPdf]);
+
   return (
     <div className={s.wrapper}>
       <Drawer className={s.drawer}>
