@@ -93,3 +93,10 @@
   border: 1px solid var(--colorBlack400);
   background-color: var(--colorBlack200);
 }
+
+.expertButtons {
+  margin-top: var(--mS);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

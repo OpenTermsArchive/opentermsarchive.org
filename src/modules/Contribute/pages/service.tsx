@@ -1,4 +1,4 @@
-import { FiChevronDown, FiTrash2 } from 'react-icons/fi';
+import { FiChevronDown, FiExternalLink, FiTrash2 } from 'react-icons/fi';
 
 import Button from 'modules/Common/components/Button';
 import Drawer from 'components/Drawer';
@@ -355,16 +355,21 @@ Thank you very much`;
                 {expertMode && (
                   <>
                     <pre className={classNames(s.json)}>{JSON.stringify(json, null, 2)}</pre>
-                    {process.env.NEXT_PUBLIC_OTA_SERVICES_PATH && (
-                      <Button
-                        onClick={saveOnLocal}
-                        size="sm"
-                        type="secondary"
-                        title={`Save on ${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}`}
-                      >
-                        Save on local
-                      </Button>
-                    )}
+                    <div className={classNames(s.expertButtons)}>
+                      {process.env.NEXT_PUBLIC_OTA_SERVICES_PATH && (
+                        <Button
+                          onClick={saveOnLocal}
+                          size="sm"
+                          type="secondary"
+                          title={`Save on ${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}`}
+                        >
+                          Save on local
+                        </Button>
+                      )}
+                      <a href={url} target="_blank" title={url}>
+                        <FiExternalLink />
+                      </a>
+                    </div>
                   </>
                 )}
               </form>
