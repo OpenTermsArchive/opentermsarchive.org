@@ -1,3 +1,5 @@
+import 'ts-replace-all';
+
 import {
   getHostlevels,
   getHostname,
@@ -92,7 +94,7 @@ export const downloadUrl = async (
     let filteredHtml = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gim, '');
 
     assets.forEach(({ from, to }) => {
-      filteredHtml = filteredHtml.replace(from, to);
+      filteredHtml = filteredHtml.replaceAll(from, to);
     });
 
     fse.writeFileSync(`${folderPath}/index.html`, filteredHtml);
