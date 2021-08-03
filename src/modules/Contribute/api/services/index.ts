@@ -34,10 +34,11 @@ const get =
     const folderName = url.replace(/[^\p{L}\d_]/gimu, '_');
 
     const folderPath = path.join(process.env.TMP_SCRAPED_SERVICES_FOLDER || '', folderName);
-
-    const newUrl = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${
+    const newUrlPath = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${
       process.env.TMP_SCRAPED_SERVICES_URL || ''
-    }/${folderName}/index.html`;
+    }/${folderName}`;
+
+    const newUrl = `${newUrlPath}/index.html`;
 
     if (fs.existsSync(folderPath)) {
       console.log(`Folder ${folderPath} exists`);
@@ -54,7 +55,7 @@ const get =
       console.log(`Folder ${folderPath} does not exist`);
       console.log(`downloading ${url}`);
       console.time('downloading');
-      const { error } = await downloadUrl(url, { folderPath });
+      const { error } = await downloadUrl(url, { folderPath, newUrlPath });
       console.timeEnd('downloading');
 
       if (error) {
