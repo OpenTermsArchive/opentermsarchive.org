@@ -67,6 +67,7 @@
     "react-window": "^1.8.6",
     "sib-api-v3-typescript": "^2.2.2",
     "swr": "0.5.5",
+    "ts-replace-all": "^1.0.0",
     "user-agents": "^1.0.731"
   },
   "devDependencies": {
