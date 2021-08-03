@@ -66,8 +66,16 @@ export const downloadUrl = async (
       return;
     }
     const buffer = await response.buffer();
+    const { pathname: newUrlPathname, search: newUrlSearch } = new URL(response.url());
+    const newUrl = `${newUrlPathname}${newUrlSearch}`;
+
+    // sometimes the url is relative to the root of the domain, so we need to remove both
+    // and in order to prevent string to be replaced twice, we need to replace it along with the surrounding quotes
+    assets.push({ from: `"${newUrl}"`, to: `"${newUrlPath}${pathname}"` });
+    assets.push({ from: `'${newUrl}'`, to: `'${newUrlPath}${pathname}'` });
 
     assets.push({ from: response.url(), to: `${newUrlPath}${pathname}` });
+
     fse.outputFile(`${folderPath}${pathname}`, buffer, 'base64');
   });
 
