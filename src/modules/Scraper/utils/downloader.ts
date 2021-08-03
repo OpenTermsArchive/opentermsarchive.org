@@ -12,8 +12,15 @@ import puppeteer from 'puppeteer';
 
 const logDebug = debug('ota.org:debug');
 
-export const downloadUrl = async (url: string, { folderPath }: { folderPath: string }) => {
+export const downloadUrl = async (
+  url: string,
+  { folderPath, newUrlPath }: { folderPath: string; newUrlPath: string }
+) => {
   fse.ensureDirSync(folderPath);
+  const parsedUrl = new URL(url);
+  // extract domain name from subdomain
+  const [extension, domain] = parsedUrl.hostname.split('.').reverse();
+  const domainname = `${domain}.${extension}`;
 
   const browser = await puppeteer.launch({
     executablePath: process.env.CHROME_BIN,
@@ -49,6 +56,21 @@ export const downloadUrl = async (url: string, { folderPath }: { folderPath: str
     }
   });
 
+  let assets: { from: string; to: string }[] = [];
+
+  page.on('response', async (response) => {
+    const resourceType = response.request().resourceType();
+    const { hostname, pathname } = new URL(response.url());
+
+    if (!hostname.includes(domainname) || !['image', 'stylesheet'].includes(resourceType)) {
+      return;
+    }
+    const buffer = await response.buffer();
+
+    assets.push({ from: response.url(), to: `${newUrlPath}${pathname}` });
+    fse.outputFile(`${folderPath}${pathname}`, buffer, 'base64');
+  });
+
   let message: any;
   try {
     await page.goto(url, { waitUntil: ['domcontentloaded', 'networkidle0', 'networkidle2'] });
@@ -56,12 +78,16 @@ export const downloadUrl = async (url: string, { folderPath }: { folderPath: str
     await removeCookieBanners(page, hostname);
 
     const html = await page.content();
-    fse.writeFileSync(
-      `${folderPath}/index.html`,
-      // https://stackoverflow.com/questions/6659351/removing-all-script-tags-from-html-with-js-regular-expression
-      // replace all scripts with empty string
-      html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gim, '')
-    );
+
+    // https://stackoverflow.com/questions/6659351/removing-all-script-tags-from-html-with-js-regular-expression
+    // replace all scripts with empty string
+    let filteredHtml = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gim, '');
+
+    assets.forEach(({ from, to }) => {
+      filteredHtml = filteredHtml.replace(from, to);
+    });
+
+    fse.writeFileSync(`${folderPath}/index.html`, filteredHtml);
 
     message = { status: 'ok' };
   } catch (e) {
