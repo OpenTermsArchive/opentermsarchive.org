@@ -529,7 +529,7 @@ const HomePage = ({ services }: any) => {
 
 export const getStaticProps = withI18n()(async (props: any) => {
   const services = await getServices();
-  return JSON.parse(JSON.stringify({ props: { ...props, services } }));
+  return JSON.parse(JSON.stringify({ props: { ...props, services }, revalidate: 10 }));
 });
 
 export default HomePage;
