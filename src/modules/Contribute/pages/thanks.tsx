@@ -63,7 +63,7 @@ const ThanksPage = () => {
                     .<br />
                     <br />
                     You may also track the changes to the terms of service and privacy policies for
-                    other online services by email.Please refer to the form you will find on our
+                    other online services by email. Please refer to the form you will find on our
                     homepage.
                   </Trans>
                 </p>
