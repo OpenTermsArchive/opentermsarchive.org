@@ -54,7 +54,7 @@ const ThanksPage = () => {
               )}
               {url && (
                 <p>
-                  <Trans i18nKey="contribute:thanks_page.github_url" url={url}>
+                  <Trans i18nKey="contribute:thanks_page.github_url" values={{ url }}>
                     We just created a GitHub issue for your demand. <br />
                     You can subscribe to notifications there: 
                     <a href={url} target="_blank">

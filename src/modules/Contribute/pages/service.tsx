@@ -56,6 +56,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
 
   const [selectable, toggleSelectable] = React.useState('');
   const [iframeReady, toggleIframeReady] = useToggle(false);
+  const [loading, toggleLoading] = useToggle(false);
   const [step, setStep] = React.useState<number>(initialStep ? +initialStep : 1);
 
   const selectedCss = !initialSelectedCss
@@ -135,40 +136,46 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   };
 
   const onValidate = async () => {
-    const {
-      data: { url },
-    } = await api.post<PostContributeServiceResponse>('/api/contribute/services', {
-      json,
-      name: initialName,
-      documentType: initialDocumentType,
-      url: `${window.location.href}&expertMode=true`,
-    });
+    toggleLoading(true);
+    try {
+      const {
+        data: { url },
+      } = await api.post<PostContributeServiceResponse>('/api/contribute/services', {
+        json,
+        name: initialName,
+        documentType: initialDocumentType,
+        url: `${window.location.href}&expertMode=true`,
+      });
 
-    if (!url) {
-      notify(
-        'error',
-        t(
-          'contribute:service_page.could_not_create_issue',
-          `We're truly sorry but the automatic creation of this new service failed, we will need you to send us an email`
-        )
-      );
-      const subject = 'Here is a new service to track in Open Terms Archive';
-      const body = `Hi,
+      if (!url) {
+        notify(
+          'error',
+          t(
+            'contribute:service_page.could_not_create_issue',
+            `We're truly sorry but the automatic creation of this new service failed, we will need you to send us an email`
+          )
+        );
+        const subject = 'Here is a new service to track in Open Terms Archive';
+        const body = `Hi,
 
-I need you to track "${initialDocumentType}" of "${initialName}" for me.
+  I need you to track "${initialDocumentType}" of "${initialName}" for me.
 
-Here is the url ${window.location.href}&expertMode=true
+  Here is the url ${window.location.href}&expertMode=true
 
-Thank you very much`;
+  Thank you very much`;
 
-      window.open(
-        `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
-        '_blank'
-      );
-      router.push(`/contribute/thanks?email`);
-      return;
+        window.open(
+          `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
+          '_blank'
+        );
+        router.push(`/contribute/thanks?email`);
+        return;
+      }
+      router.push(`/contribute/thanks?url=${encodeURIComponent(url)}`);
+    } catch (e) {
+      notify('error', e.toString());
+      toggleLoading(false);
     }
-    router.push(`/contribute/thanks?url=${encodeURIComponent(url)}`);
   };
 
   const onErrorClick = () => {
@@ -200,7 +207,7 @@ Thank you very much`;
     });
   };
 
-  const submitDisabled = !initialSelectedCss || !iframeReady;
+  const submitDisabled = !initialSelectedCss || !iframeReady || loading;
 
   React.useEffect(() => {
     if (!!data?.isPdf) {
@@ -400,7 +407,7 @@ Thank you very much`;
                 {t('contribute:service_page.expertMode', 'Expert Mode')}
               </a>
               <Button disabled={submitDisabled} onClick={onValidate}>
-                {t('contribute:service_page.validate', 'Validate')}
+                {loading ? '...' : t('contribute:service_page.submit', 'Submit')}
               </Button>
             </nav>
           </>

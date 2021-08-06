@@ -120,8 +120,7 @@ const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResp
 };
 
 const addNewService =
-  (body: any) =>
-  async (req: NextApiRequest, res: NextApiResponse<PostContributeServiceResponse>) => {
+  (body: any) => async (_: NextApiRequest, res: NextApiResponse<PostContributeServiceResponse>) => {
     const service = await addService({
       name: body?.name,
       documentType: body?.documentType,
