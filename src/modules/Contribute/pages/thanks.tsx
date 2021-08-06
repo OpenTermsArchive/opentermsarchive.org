@@ -1,3 +1,5 @@
+import { Trans, useTranslation } from 'react-i18next';
+
 import Breadcrumb from 'components/BreadCrumb';
 import Button from 'modules/Common/components/Button';
 import Column from 'modules/Common/components/Column';
@@ -7,10 +9,13 @@ import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import { useTranslation } from 'react-i18next';
+import useUrl from 'hooks/useUrl';
 
 const ThanksPage = () => {
   const { t } = useTranslation();
+  const {
+    queryParams: { email, url },
+  } = useUrl();
   return (
     <Layout
       title={t('contribute:thanks_page.seo.title', 'Thanks')}
@@ -39,12 +44,30 @@ const ThanksPage = () => {
             />
             <TextContent>
               <h2>{t('contribute:thanks_page.subtitle', 'Thanks for your contribution')}</h2>
-              <p>
-                {t(
-                  'contribute:thanks_page.explanation',
-                  'You only need to send us the email (a popup should have opened) and we will let you know as soon as the service is integrated in the system.'
-                )}
-              </p>
+              {email && (
+                <p>
+                  {t(
+                    'contribute:thanks_page.explanation',
+                    'You only need to send us the email (a popup should have opened) and we will let you know as soon as the service is integrated in the system.'
+                  )}
+                </p>
+              )}
+              {url && (
+                <p>
+                  <Trans i18nKey="contribute:thanks_page.github_url" values={{ url }}>
+                    We just created a GitHub issue for your demand. <br />
+                    You can subscribe to notifications there: 
+                    <a href={url} target="_blank">
+                      {{ url }}
+                    </a>
+                    .<br />
+                    <br />
+                    You may also track the changes to the terms of service and privacy policies for
+                    other online services by email. Please refer to the form you will find on our
+                    homepage.
+                  </Trans>
+                </p>
+              )}
               <Link href="/contribute">
                 <Button>{t('contribute:thanks_page.cta')}</Button>
               </Link>

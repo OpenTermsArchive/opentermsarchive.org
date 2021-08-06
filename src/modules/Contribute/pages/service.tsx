@@ -1,8 +1,8 @@
 import { FiChevronDown, FiExternalLink, FiTrash2 } from 'react-icons/fi';
+import { GetContributeServiceResponse, PostContributeServiceResponse } from '../interfaces';
 
 import Button from 'modules/Common/components/Button';
 import Drawer from 'components/Drawer';
-import { GetContributeServiceResponse } from '../interfaces';
 import IframeSelector from 'components/IframeSelector';
 import LinkArrow from 'modules/Common/components/LinkArrow';
 import Loading from 'components/Loading';
@@ -12,6 +12,7 @@ import api from 'utils/api';
 import classNames from 'classnames';
 import s from './service.module.css';
 import { useEvent } from 'react-use';
+import useNotifier from 'hooks/useNotifier';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useToggle } from 'react-use';
@@ -23,6 +24,7 @@ const EMAIL_SUPPORT = 'contribute@opentermsarchive.org';
 const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   const router = useRouter();
   const { t } = useTranslation();
+  const { notify } = useNotifier();
   useEvent('touchstart', () => {
     router.push('/contribute/sorry');
   });
@@ -54,6 +56,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
 
   const [selectable, toggleSelectable] = React.useState('');
   const [iframeReady, toggleIframeReady] = useToggle(false);
+  const [loading, toggleLoading] = useToggle(false);
   const [step, setStep] = React.useState<number>(initialStep ? +initialStep : 1);
 
   const selectedCss = !initialSelectedCss
@@ -132,22 +135,47 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     pushQueryParam('expertMode')(!!expertMode ? '' : 'true');
   };
 
-  const onValidate = () => {
-    const subject = 'Here is a new service to track in Open Terms Archive';
-    const body = `Hi,
+  const onValidate = async () => {
+    toggleLoading(true);
+    try {
+      const {
+        data: { url },
+      } = await api.post<PostContributeServiceResponse>('/api/contribute/services', {
+        json,
+        name: initialName,
+        documentType: initialDocumentType,
+        url: `${window.location.href}&expertMode=true`,
+      });
 
-I need you to track "${initialDocumentType}" of "${initialName}" for me.
+      if (!url) {
+        notify(
+          'error',
+          t(
+            'contribute:service_page.could_not_create_issue',
+            `We're truly sorry but the automatic creation of this new service failed, we will need you to send us an email`
+          )
+        );
+        const subject = 'Here is a new service to track in Open Terms Archive';
+        const body = `Hi,
 
-Here is the url ${window.location.href}&expertMode=true
+  I need you to track "${initialDocumentType}" of "${initialName}" for me.
 
-Thank you very much`;
+  Here is the url ${window.location.href}&expertMode=true
 
-    window.open(
-      `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
-      '_blank'
-    );
+  Thank you very much`;
 
-    router.push('/contribute/thanks');
+        window.open(
+          `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
+          '_blank'
+        );
+        router.push(`/contribute/thanks?email`);
+        return;
+      }
+      router.push(`/contribute/thanks?url=${encodeURIComponent(url)}`);
+    } catch (e) {
+      notify('error', e.toString());
+      toggleLoading(false);
+    }
   };
 
   const onErrorClick = () => {
@@ -179,7 +207,7 @@ Thank you very much`;
     });
   };
 
-  const submitDisabled = !initialSelectedCss || !iframeReady;
+  const submitDisabled = !initialSelectedCss || !iframeReady || loading;
 
   React.useEffect(() => {
     if (!!data?.isPdf) {
@@ -379,7 +407,7 @@ Thank you very much`;
                 {t('contribute:service_page.expertMode', 'Expert Mode')}
               </a>
               <Button disabled={submitDisabled} onClick={onValidate}>
-                {t('contribute:service_page.validate', 'Validate')}
+                {loading ? '...' : t('contribute:service_page.submit', 'Submit')}
               </Button>
             </nav>
           </>
