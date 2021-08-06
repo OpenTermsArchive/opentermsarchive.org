@@ -1,8 +1,8 @@
 import { FiChevronDown, FiExternalLink, FiTrash2 } from 'react-icons/fi';
+import { GetContributeServiceResponse, PostContributeServiceResponse } from '../interfaces';
 
 import Button from 'modules/Common/components/Button';
 import Drawer from 'components/Drawer';
-import { GetContributeServiceResponse } from '../interfaces';
 import IframeSelector from 'components/IframeSelector';
 import LinkArrow from 'modules/Common/components/LinkArrow';
 import Loading from 'components/Loading';
@@ -12,6 +12,7 @@ import api from 'utils/api';
 import classNames from 'classnames';
 import s from './service.module.css';
 import { useEvent } from 'react-use';
+import useNotifier from 'hooks/useNotifier';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { useToggle } from 'react-use';
@@ -23,6 +24,7 @@ const EMAIL_SUPPORT = 'contribute@opentermsarchive.org';
 const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   const router = useRouter();
   const { t } = useTranslation();
+  const { notify } = useNotifier();
   useEvent('touchstart', () => {
     router.push('/contribute/sorry');
   });
@@ -132,9 +134,26 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     pushQueryParam('expertMode')(!!expertMode ? '' : 'true');
   };
 
-  const onValidate = () => {
-    const subject = 'Here is a new service to track in Open Terms Archive';
-    const body = `Hi,
+  const onValidate = async () => {
+    const {
+      data: { url },
+    } = await api.post<PostContributeServiceResponse>('/api/contribute/services', {
+      json,
+      name: initialName,
+      documentType: initialDocumentType,
+      url: `${window.location.href}&expertMode=true`,
+    });
+
+    if (!url) {
+      notify(
+        'error',
+        t(
+          'contribute:service_page.could_not_create_issue',
+          `We're truly sorry but the automatic creation of this new service failed, we will need you to send us an email`
+        )
+      );
+      const subject = 'Here is a new service to track in Open Terms Archive';
+      const body = `Hi,
 
 I need you to track "${initialDocumentType}" of "${initialName}" for me.
 
@@ -142,12 +161,14 @@ Here is the url ${window.location.href}&expertMode=true
 
 Thank you very much`;
 
-    window.open(
-      `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
-      '_blank'
-    );
-
-    router.push('/contribute/thanks');
+      window.open(
+        `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
+        '_blank'
+      );
+      router.push(`/contribute/thanks?email`);
+      return;
+    }
+    router.push(`/contribute/thanks?url=${encodeURIComponent(url)}`);
   };
 
   const onErrorClick = () => {
