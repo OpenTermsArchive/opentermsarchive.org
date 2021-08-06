@@ -5,3 +5,7 @@ export interface GetContributeServiceResponse extends CommonResponse {
   error?: string;
   isPdf?: boolean;
 }
+export interface PostContributeServiceResponse extends CommonResponse {
+  url?: string;
+  error?: string;
+}

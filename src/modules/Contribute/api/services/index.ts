@@ -1,8 +1,9 @@
+import { GetContributeServiceResponse, PostContributeServiceResponse } from '../../interfaces';
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { GetContributeServiceResponse } from '../../interfaces';
 import HttpStatusCode from 'http-status-codes';
+import { addService } from '../../managers/ServiceManager';
 import axios from 'axios';
 import { downloadUrl } from 'modules/Scraper/utils/downloader';
 import fs from 'fs';
@@ -118,9 +119,31 @@ const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResp
   return res;
 };
 
+const addNewService =
+  (body: any) =>
+  async (req: NextApiRequest, res: NextApiResponse<PostContributeServiceResponse>) => {
+    const service = await addService({
+      name: body?.name,
+      documentType: body?.documentType,
+      json: body?.json,
+      url: body?.url,
+    });
+
+    return res.json({
+      status: 'ok',
+      message: `issue available on Github`,
+      url: service?.html_url,
+    });
+  };
+
 const services = async (req: NextApiRequest, res: NextApiResponse) => {
-  if (req.method === 'GET' && req?.query?.url) {
-    return get(req?.query?.url as string)(req, res);
+  const { body, query } = req;
+  if (req.method === 'GET' && query?.url) {
+    return get(query.url as string)(req, res);
+  }
+
+  if (req.method === 'POST' && body?.json) {
+    return addNewService(body)(req, res);
   }
 
   if (req.method === 'POST' && req?.body?.data) {

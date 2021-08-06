@@ -37,5 +37,7 @@
   "sorry_page.seo.title": "Désolé 😭",
   "sorry_page.seo.desc": "Nous ne pouvons pas accéder à cette page",
   "thanks_page.seo.title": "Merci 🎉",
-  "thanks_page.seo.desc": "Merci pour votre contribution."
+  "thanks_page.seo.desc": "Merci pour votre contribution.",
+  "service_page.could_not_create_issue": "We're truly sorry but the automatic creation of this new service failed, we will need you to send us an email",
+  "thanks_page.github_url": "Nous venons de créer une issue GitHub pour votre demande. <1></1>Vous pouvez vous y abonner aux notifications : <3><0>{{url}}</0></3>.<5></5><6></6>Vous pouvez également suivre les modifications des conditions d'utilisation et des politiques de confidentialité d'autres services en ligne par courriel. Veuillez vous référer au formulaire que vous trouverez sur notre page d'accueil."
 }
