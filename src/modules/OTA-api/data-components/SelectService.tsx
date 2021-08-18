@@ -49,7 +49,6 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
     const loading = !data;
 
     const dmaServices = services.filter((service) => dmaActors.includes(service));
-    const otherServices = services.filter((service) => !dmaActors.includes(service));
 
     return (
       <>
@@ -76,7 +75,7 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
                   <optgroup>
                     {dmaServices.map((service) => (
                       <option
-                        key={`${selectedService}_${service}`}
+                        key={`dma_${selectedService}_${service}`}
                         value={service}
                         selected={service === selectedService}
                       >
@@ -85,7 +84,7 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
                     ))}
                   </optgroup>
                   <optgroup>
-                    {otherServices.map((service) => (
+                    {services.map((service) => (
                       <option
                         key={`${selectedService}_${service}`}
                         value={service}

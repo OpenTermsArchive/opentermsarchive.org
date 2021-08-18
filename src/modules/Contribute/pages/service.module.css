@@ -11,6 +11,14 @@
     padding: 20px;
   }
 
+  & > div > p:not(:last-child) {
+    margin-bottom: var(--mM);
+  }
+
+  & > div > h2 {
+    margin-bottom: var(--mL);
+  }
+
   & a,
   & button {
     cursor: pointer;
