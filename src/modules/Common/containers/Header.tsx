@@ -1,4 +1,4 @@
-import { useLockBodyScroll, useToggle } from 'react-use';
+import { useLockBodyScroll, useToggle, useWindowSize } from 'react-use';
 
 import { FiX } from 'react-icons/fi';
 import Link from 'next/link';
@@ -17,6 +17,7 @@ const Header: React.FC<HeaderProps> = ({ children, className, ...props }) => {
   const { t } = useTranslation('common');
 
   const [open, toggleExtended] = useToggle(false);
+  const { width } = useWindowSize();
   useLockBodyScroll(open);
 
   return (
@@ -29,7 +30,9 @@ const Header: React.FC<HeaderProps> = ({ children, className, ...props }) => {
         </Link>
       </div>
 
-      <div className={classNames(s.header_menus)}>{children({ toggleExtended })}</div>
+      <div className={classNames(s.header_menus)}>
+        {children({ toggleExtended: width <= 1024 ? toggleExtended : () => {} })}
+      </div>
 
       <button type="button" className={classNames(s.header_openLink)} onClick={toggleExtended}>
         {t('common:header.open', 'Menu')}
