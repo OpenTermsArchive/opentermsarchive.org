@@ -50,7 +50,8 @@ class NotificationSubscription {
       const response = await this.contactsApi.getLists(limit, offset);
       return response?.body || [];
     } catch (err) {
-      console.error(err.toString(), err?.response?.body?.message);
+      console.error(err.toString(), err?.response?.body?.message || err?.response?.statusMessage);
+
       return { lists: [], count: 0 };
     }
   }
