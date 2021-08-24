@@ -493,7 +493,7 @@ const HomePage = ({ services }: any) => {
           </Link>
           <Link href="https://www.peren.gouv.fr/">
             <a target="_blank">
-              <ThumbGaleryItem src="/images/logo-peren.png" width="110" height="84" />
+              <ThumbGaleryItem src="/images/logo-peren.png" width="150" height="121" />
             </a>
           </Link>
         </ThumbGalery>
