@@ -95,12 +95,6 @@ const HomePage = ({ services }: any) => {
         </Container>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingTop={false}>
           <Column width={60}>
-            <h4 className="h4__white mb__L">
-              {t(
-                'common:subscribe_form.title',
-                'Be informed by email of the changes on the documents of your choice.'
-              )}
-            </h4>
             <SubscribeForm
               defaultServices={services}
               onSubmit={onSubscription}
