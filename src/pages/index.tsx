@@ -197,8 +197,15 @@ const HomePage = ({ services }: any) => {
         gridCols="12"
         gridGutters="11"
         id={t('common:home_page.contribute.id', 'contribute')}
+        paddingTop={false}
       >
+        <Container gridCols="8" gridGutters="7" paddingY={false}>
+          <Column width={100} alignX="center">
+            <img src="/images/contribute.jpg" />
+          </Column>
+        </Container>
         <ButtonBlockList
+          className="mt__XL"
           title={t('common:home_page.contribute.title', 'Want to help us build a digital common ?')}
           subtitle={t('common:home_page.contribute.subtitle', 'Contribute')}
         >
