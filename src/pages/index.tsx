@@ -13,7 +13,7 @@ import FeatureList from 'modules/Common/components/FeatureList';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
-import LinkArrow from 'modules/Common/components/LinkArrow';
+import LinkIcon from 'modules/Common/components/LinkIcon';
 import Logo from 'modules/Common/components/Logo';
 import React from 'react';
 import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
@@ -104,12 +104,13 @@ const HomePage = ({ services }: any) => {
           paddingBottom={false}
         >
           <Column width={60}>
-            <h4 className=" mb__L">
+            <h4 className="mb__L">
               {t(
                 'common:subscribe_form.title',
                 'Be informed by email of the changes on the documents of your choice.'
               )}
             </h4>
+
             <SubscribeForm
               defaultServices={services}
               onSubmit={onSubscription}
@@ -309,7 +310,7 @@ const HomePage = ({ services }: any) => {
                 </Button>
               </a>
             </Link>
-            <LinkArrow
+            <LinkIcon
               iconColor="#999999"
               href={t(
                 'common:home_page.contribute.buttonbloc3.sublink.href',
@@ -328,7 +329,7 @@ const HomePage = ({ services }: any) => {
                   'or download a dataset'
                 )}
               </a>
-            </LinkArrow>
+            </LinkIcon>
           </ButtonBlock>
         </ButtonBlockList>
       </Container>
@@ -415,7 +416,7 @@ const HomePage = ({ services }: any) => {
                 'By the team of the French Ambassador for Digital Affairs'
               )}
             >
-              <LinkArrow
+              <LinkIcon
                 iconColor="#0496FF"
                 href={t(
                   'common:home_page.showcase.item1.link.href',
@@ -430,7 +431,7 @@ const HomePage = ({ services }: any) => {
                 >
                   {t('common:home_page.showcase.item1.link.label', 'Try')}
                 </a>
-              </LinkArrow>
+              </LinkIcon>
             </ShowcaseItem>
             <ShowcaseItem
               title={t('common:home_page.showcase.item2.title', 'Disinfo experiments')}
@@ -443,7 +444,7 @@ const HomePage = ({ services }: any) => {
                 'By the team of the French Ambassador for Digital Affairs'
               )}
             >
-              <LinkArrow
+              <LinkIcon
                 iconColor="#0496FF"
                 href={t(
                   'common:home_page.showcase.item2.link.href',
@@ -458,7 +459,7 @@ const HomePage = ({ services }: any) => {
                 >
                   {t('common:home_page.showcase.item2.link.label', 'See')}
                 </a>
-              </LinkArrow>
+              </LinkIcon>
             </ShowcaseItem>
           </ShowcaseList>
         </Column>

@@ -15,7 +15,7 @@ a {
 
 .a__darked {
   &:hover {
-    color: var(--colorBlack200);
+    color: var(--colorDarkedSecondary);
   }
 }
 

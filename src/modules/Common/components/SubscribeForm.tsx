@@ -1,6 +1,9 @@
+import Link from 'next/link';
+import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import SelectService from 'modules/OTA-api/data-components/SelectService';
 import classNames from 'classnames';
+import s from './SubscribeForm.module.css';
 import sButton from './Button.module.css';
 import { useForm } from 'react-hook-form';
 import { usePrevious } from 'react-use';
@@ -29,7 +32,10 @@ const SubscribeForm = ({
   defaultValues,
   defaultServices,
 }: SubscribeFormProps) => {
-  const { t } = useTranslation('common');
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation('common');
 
   const { register, handleSubmit, watch, reset } = useForm<SubscribeFormFields>({
     reValidateMode: 'onChange',
@@ -74,6 +80,12 @@ const SubscribeForm = ({
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <h4 className="h4__white mb__L">
+        {t(
+          'common:subscribe_form.changes.title',
+          'Be informed by email of the changes on the documents of your choice.'
+        )}
+      </h4>
       <SelectService
         defaultServices={defaultServices}
         service={service}
@@ -81,6 +93,38 @@ const SubscribeForm = ({
         serviceProps={register('service', { required: true })}
         documentTypeProps={register('documentType', { required: true })}
       />
+
+      {!!service && !!documentType && (
+        <div className={classNames('formfield')}>
+          {t(
+            'common:subscribe_form.changes.changes',
+            'Before suscribing, you should be interesssed to '
+          )}
+          <Link
+            href={`https://github.com/ambanum/OpenTermsArchive-versions/commits/master/${encodeURIComponent(
+              service
+            )}/${encodeURIComponent(documentType)}.md`}
+          >
+            <a target="_blank" className="a__darked">
+              {t('common:subscribe_form.changes.github', 'see latest changes on Github ')}
+            </a>
+          </Link>
+          {t('common:subscribe_form.changes.changes.separator', 'or ')}
+          <Link
+            href={`https://disinfo.quaidorsay.fr/${language}/open-terms-archive/scripta-manent?service=${encodeURIComponent(
+              service
+            )}&typeofdocument=${encodeURIComponent(documentType)}`}
+          >
+            <a target="_blank" className="a__darked">
+              {t(
+                'common:subscribe_form.changes.scripta-manent',
+                'compare versions by date with Scripta Manent.'
+              )}
+            </a>
+          </Link>
+        </div>
+      )}
+
       <div className={classNames('formfield')}>
         <label htmlFor="email">
           {t('common:subscribe_form.fields.email.label', 'Fill your email')}
@@ -93,7 +137,7 @@ const SubscribeForm = ({
         />
       </div>
       <div className={classNames('formfield', 'formfield__flex')}>
-        <input id="consent" {...register('consent', { required: true })} type="checkbox" />
+        <input id="consent" type="checkbox" {...register('consent', { required: true })} />
         <label htmlFor="consent">
           {t(
             'common:subscribe_form.consent',
