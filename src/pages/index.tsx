@@ -117,8 +117,8 @@ const HomePage = ({ services }: any) => {
               }}
             />
           </Column>
-          <Column width={40} className="mt__2XL" hideOnTablet={true}>
-            <img src="/images/16.png" alt="" />
+          <Column width={40} className="" hideOnTablet={true}>
+            <img src="/images/form-subscribe.jpg" alt="" />
           </Column>
         </Container>
       </Container>
