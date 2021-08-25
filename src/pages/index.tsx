@@ -94,6 +94,8 @@ const HomePage = ({ services }: any) => {
           ></Hero>
         </Container>
       </Container>
+
+      {/* Subscribe form */}
       <Container layout="wide">
         <Container
           gridCols="12"
@@ -104,13 +106,6 @@ const HomePage = ({ services }: any) => {
           paddingBottom={false}
         >
           <Column width={60}>
-            <h4 className="mb__L">
-              {t(
-                'common:subscribe_form.title',
-                'Be informed by email of the changes on the documents of your choice.'
-              )}
-            </h4>
-
             <SubscribeForm
               defaultServices={services}
               onSubmit={onSubscription}
@@ -123,39 +118,11 @@ const HomePage = ({ services }: any) => {
             />
           </Column>
           <Column width={40} className="mt__2XL" hideOnTablet={true}>
-            <img src="/images/16.png" alt="test5" />
-          </Column>
-        </Container>
-        <Container gridCols="12" gridGutters="11" paddingY={false} paddingYSmall={true}>
-          <Column width={80}>
-            <TextContent>
-              <ul className="text__light">
-                <li>
-                  <FiChevronRight color="#0496FF" />
-                  {t(
-                    'common:subscribe_form.p1',
-                    'As the frequency of change of a document can vary from one document to another it is difficult to estimate the frequency of emails you will receive. However, we have observed that large digital services change their documents approximately once every fortnight.'
-                  )}
-                </li>
-                <li>
-                  <FiChevronRight color="#0496FF" />
-                  {t(
-                    'common:subscribe_form.p2',
-                    'If you wish to track several documents, simply complete this form as many times as necessary. If you want to subscribre to all documents please contact us.'
-                  )}
-                </li>
-                <li>
-                  <FiChevronRight color="#0496FF" />
-                  {t(
-                    'common:subscribe_form.p3',
-                    'You can unsubscribe at any time from the link provided in the email and ou may be interested in our privacy policy.'
-                  )}
-                </li>
-              </ul>
-            </TextContent>
+            <img src="/images/16.png" alt="" />
           </Column>
         </Container>
       </Container>
+
       {/* How section */}
       <Container
         gridCols="10"

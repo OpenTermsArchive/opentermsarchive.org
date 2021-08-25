@@ -138,7 +138,7 @@
   "subscribe_form.fields.email.input.placeholder": "Email",
   "subscribe_form.changes.github": "See latest changes on github",
   "subscribe_form.changes.scripta-manent": "Compare versions by date with Scripta Manent",
-  "subscribe_form.changes.title": "Be informed by email of the changes on the documents of your choice.",
-  "subscribe_form.changes.changes": "Before suscribing, you should be interesssed to ",
-  "subscribe_form.changes.changes.separator": "ou "
+  "subscribe_form.changes.changes.separator": "ou ",
+  "subscribe_form.title": "Be informed by email of the changes on the documents of your choice.",
+  "subscribe_form.changes.before": "For this document, you should be interesssed to"
 }
