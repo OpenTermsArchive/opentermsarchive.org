@@ -93,9 +93,18 @@ const HomePage = ({ services }: any) => {
             )}
           ></Hero>
         </Container>
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingTop={false}>
+      </Container>
+      <Container layout="wide">
+        <Container
+          gridCols="12"
+          gridGutters="11"
+          flex={true}
+          paddingX={false}
+          paddingTop={false}
+          paddingBottom={false}
+        >
           <Column width={60}>
-            <h4 className="h4__white mb__L">
+            <h4 className=" mb__L">
               {t(
                 'common:subscribe_form.title',
                 'Be informed by email of the changes on the documents of your choice.'
@@ -112,9 +121,14 @@ const HomePage = ({ services }: any) => {
               }}
             />
           </Column>
-          <Column width={40} className="mt__2XL">
+          <Column width={40} className="mt__2XL ">
+            <img src="/images/16.png" alt="test5" width={701} height={352} />
+          </Column>
+        </Container>
+        <Container gridCols="12" gridGutters="11" paddingY={false} paddingYSmall={true}>
+          <Column width={80}>
             <TextContent>
-              <ul>
+              <ul className="text__light">
                 <li>
                   <FiChevronRight color="#0496FF" />
                   {t(
