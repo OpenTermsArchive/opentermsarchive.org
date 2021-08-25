@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import SelectService from 'modules/OTA-api/data-components/SelectService';
@@ -82,7 +83,7 @@ const SubscribeForm = ({
       <h4 className="h4__white mb__L">
         {t(
           'common:subscribe_form.changes.title',
-          'First, check the latest changes for the documents of your choice.'
+          'Be informed by email of the changes on the documents of your choice.'
         )}
       </h4>
       <SelectService
@@ -92,41 +93,38 @@ const SubscribeForm = ({
         serviceProps={register('service', { required: true })}
         documentTypeProps={register('documentType', { required: true })}
       />
-      <div className={classNames(s.linksToServices)}>
-        {!!service && !!documentType && (
-          <>
-            <LinkIcon
-              iconColor="#0496FF"
-              iconName="FiGithub"
-              href={`https://github.com/ambanum/OpenTermsArchive-versions/commits/master/${encodeURIComponent(
-                service
-              )}/${encodeURIComponent(documentType)}.md`}
-              target="_blank"
-            >
-              {t('common:subscribe_form.changes.github', 'See latest changes on github')}
-            </LinkIcon>
-            <LinkIcon
-              iconColor="#0496FF"
-              iconName="FiBookOpen"
-              href={`https://disinfo.quaidorsay.fr/${language}/open-terms-archive/scripta-manent?service=${encodeURIComponent(
-                service
-              )}&typeofdocument=${encodeURIComponent(documentType)}`}
-              target="_blank"
-            >
+
+      {!!service && !!documentType && (
+        <div className={classNames('formfield')}>
+          {t(
+            'common:subscribe_form.changes.changes',
+            'Before suscribing, you should be interesssed to '
+          )}
+          <Link
+            href={`https://github.com/ambanum/OpenTermsArchive-versions/commits/master/${encodeURIComponent(
+              service
+            )}/${encodeURIComponent(documentType)}.md`}
+          >
+            <a target="_blank">
+              {t('common:subscribe_form.changes.github', 'see latest changes on Github ')}
+            </a>
+          </Link>
+          {t('common:subscribe_form.changes.changes.separator', 'or ')}
+          <Link
+            href={`https://disinfo.quaidorsay.fr/${language}/open-terms-archive/scripta-manent?service=${encodeURIComponent(
+              service
+            )}&typeofdocument=${encodeURIComponent(documentType)}`}
+          >
+            <a target="_blank">
               {t(
                 'common:subscribe_form.changes.scripta-manent',
-                'Compare versions by date with Scripta Manent'
+                'compare versions by date with Scripta Manent.'
               )}
-            </LinkIcon>
-          </>
-        )}
-      </div>
-      <h4 className="h4__white mb__L mt__L">
-        {t(
-          'common:subscribe_form.subscribe.title',
-          'Like it? Be informed by email of its next changes'
-        )}
-      </h4>
+            </a>
+          </Link>
+        </div>
+      )}
+
       <div className={classNames('formfield')}>
         <label htmlFor="email">
           {t('common:subscribe_form.fields.email.label', 'Fill your email')}
