@@ -93,8 +93,24 @@ const HomePage = ({ services }: any) => {
             )}
           ></Hero>
         </Container>
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingTop={false}>
+      </Container>
+      <Container layout="wide">
+        <Container
+          gridCols="12"
+          gridGutters="11"
+          flex={true}
+          paddingX={false}
+          paddingTop={false}
+          paddingBottom={false}
+        >
           <Column width={60}>
+            <h4 className="mb__L">
+              {t(
+                'common:subscribe_form.title',
+                'Be informed by email of the changes on the documents of your choice.'
+              )}
+            </h4>
+
             <SubscribeForm
               defaultServices={services}
               onSubmit={onSubscription}
@@ -106,9 +122,14 @@ const HomePage = ({ services }: any) => {
               }}
             />
           </Column>
-          <Column width={40} className="mt__2XL">
+          <Column width={40} className="mt__2XL" hideOnTablet={true}>
+            <img src="/images/16.png" alt="test5" />
+          </Column>
+        </Container>
+        <Container gridCols="12" gridGutters="11" paddingY={false} paddingYSmall={true}>
+          <Column width={80}>
             <TextContent>
-              <ul>
+              <ul className="text__light">
                 <li>
                   <FiChevronRight color="#0496FF" />
                   {t(
@@ -168,7 +189,9 @@ const HomePage = ({ services }: any) => {
             </p>
             <Link href={t('common:home_page.how.button.href', '/how-it-works')}>
               <a title={t('common:home_page.how.button.title', 'How OTA works ?')}>
-                <Button>{t('common:home_page.how.button.label', 'Know more')}</Button>
+                <Button type="secondary">
+                  {t('common:home_page.how.button.label', 'Know more')}
+                </Button>
               </a>
             </Link>
           </TextContent>
@@ -487,7 +510,7 @@ const HomePage = ({ services }: any) => {
           </Link>
           <Link href="https://www.peren.gouv.fr/">
             <a target="_blank">
-              <ThumbGaleryItem src="/images/logo-peren.png" width="110" height="84" />
+              <ThumbGaleryItem src="/images/logo-peren.png" width="150" height="121" />
             </a>
           </Link>
         </ThumbGalery>
