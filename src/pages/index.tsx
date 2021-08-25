@@ -122,7 +122,7 @@ const HomePage = ({ services }: any) => {
             />
           </Column>
           <Column width={40} className="mt__2XL" hideOnTablet={true}>
-            <img src="/images/16.png" alt="test5" width={701} height={352} />
+            <img src="/images/16.png" alt="test5" />
           </Column>
         </Container>
         <Container gridCols="12" gridGutters="11" paddingY={false} paddingYSmall={true}>
