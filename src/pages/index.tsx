@@ -174,7 +174,9 @@ const HomePage = ({ services }: any) => {
             </p>
             <Link href={t('common:home_page.how.button.href', '/how-it-works')}>
               <a title={t('common:home_page.how.button.title', 'How OTA works ?')}>
-                <Button>{t('common:home_page.how.button.label', 'Know more')}</Button>
+                <Button type="secondary">
+                  {t('common:home_page.how.button.label', 'Know more')}
+                </Button>
               </a>
             </Link>
           </TextContent>
