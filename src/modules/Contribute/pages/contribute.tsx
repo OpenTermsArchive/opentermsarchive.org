@@ -32,12 +32,17 @@ const ContributePage = () => {
       desc={t('contribute:home_page.seo.desc', 'Thanks for helping')}
     >
       {/* Hero */}
-      <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
+      <Container layout="wide" paddingY={false} dark={true} backgroundImage="/images/bg1.jpg">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Hero
-            title={t('contribute:home_page.title', 'Contributing to Open Terms Archive')}
-            subtitle={t('contribute:home_page.subtitle', 'Thanks for helping')}
-          ></Hero>
+          <Column width={70}>
+            <Hero
+              title={t('contribute:home_page.title', 'Contributing to Open Terms Archive')}
+              subtitle={t('contribute:home_page.subtitle', 'Thanks for helping')}
+            ></Hero>
+          </Column>
+          <Column width={30}>
+            <img src="/images/add-document.png" />
+          </Column>
         </Container>
       </Container>
 
