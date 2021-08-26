@@ -16,7 +16,7 @@ module.exports = {
           permanent: false,
         },
         {
-          source: '/catchAll/:slug*',
+          source: '/catchAll/(!api/):slug*',
           destination: '/en/:slug*',
           locale: false,
           permanent: false,
