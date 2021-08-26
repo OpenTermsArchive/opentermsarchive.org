@@ -1,4 +1,3 @@
-import { FiArrowRightCircle, FiChevronRight } from 'react-icons/fi';
 import SubscribeForm, { SubscribeFormProps } from 'modules/Common/components/SubscribeForm';
 
 import Article from 'modules/Common/components/Article';
@@ -10,6 +9,7 @@ import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import FeatureItem from 'modules/Common/components/FeatureItem';
 import FeatureList from 'modules/Common/components/FeatureList';
+import { FiArrowRightCircle } from 'react-icons/fi';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
