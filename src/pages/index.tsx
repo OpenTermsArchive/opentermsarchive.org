@@ -310,6 +310,7 @@ const HomePage = ({ services }: any) => {
           </ButtonBlock>
         </ButtonBlockList>
       </Container>
+
       {/* Values */}
       <Container
         layout="wide"
@@ -319,7 +320,7 @@ const HomePage = ({ services }: any) => {
       >
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
           <Column width={50} alignX="center" alignY="center">
-            <Logo fill="#fefffd" />
+            <img src="/images/values.png" />
           </Column>
           <Column
             width={50}
