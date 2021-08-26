@@ -124,80 +124,83 @@ const HomePage = ({ services }: any) => {
       </Container>
 
       {/* How section */}
-      <Container
-        gridCols="10"
-        gridGutters="11"
-        flex={true}
-        id={t('common:home_page.how.id', 'how')}
-      >
-        <Article
-          subtitle={t('common:home_page.how.subtitle', 'How ?')}
-          title={t('common:home_page.how.title', 'How does OTA work?')}
-          titleLevel="h2"
+      <Container layout="wide" gray={true}>
+        <Container
+          gridCols="10"
+          gridGutters="11"
+          flex={true}
+          paddingY={false}
+          id={t('common:home_page.how.id', 'how')}
         >
-          <TextContent>
-            <p>
-              {t(
-                'common:home_page.how.desc.p1',
-                'Services are declared within Open Terms Archive with a declaration file listing all the documents that, together, constitute the terms under which this service can be used. These documents all have a type, such as “terms and conditions”, “privacy policy”, “developer agreement”…'
-              )}
-            </p>
-            <p>
-              {t(
-                'common:home_page.how.desc.p2',
-                'In order to track their changes, documents are periodically obtained by fetching a web location and selecting content within the web page to remove the noise (ads, navigation menu, login fields…). Beyond selecting a subset of a page, some documents have additional noise (hashes in links, CSRF tokens…) that would be false for changes. Open Terms Archive thus supports specific filters for each document.'
-              )}
-            </p>
-            <p>
-              {t(
-                'common:home_page.how.desc.p3',
-                'However, the shape of that noise can change over time. In order to recover in case of information loss during the noise filtering step, a snapshot is recorded every there is a change. After the noise is filtered out from the snapshot, if there are changes in the resulting document, a new version of the document is recorded.'
-              )}
-            </p>
-            <Link href={t('common:home_page.how.button.href', '/how-it-works')}>
-              <a title={t('common:home_page.how.button.title', 'How OTA works ?')}>
-                <Button type="secondary">
-                  {t('common:home_page.how.button.label', 'Know more')}
-                </Button>
-              </a>
-            </Link>
-          </TextContent>
-        </Article>
-        <Aside>
-          <FeatureList>
-            <FeatureItem
-              iconName="FiBox"
-              title={nbServicesTitle}
-              desc={t(
-                'common:home_page.how.feature1.desc',
-                'Google, Amazon, Apple, AirBnB, Facebook, Twitter, Instagram, Bing, Microsoft, Reddit, Youtube, TikTok...'
-              )}
-            />
-            <FeatureItem
-              iconName="FiFile"
-              title={nbDocsTitle}
-              desc={t(
-                'common:home_page.how.feature2.desc',
-                'Terms of Service, Privacy Policy, Trackers Policy, Developer Terms, Community Guidelines...'
-              )}
-            />
-            <FeatureItem
-              iconName="FiSmile"
-              title={t('common:home_page.how.feature3.title', 'Open Source')}
-              desc={t(
-                'common:home_page.how.feature3.desc',
-                'Free and collaborative software, any entity can contribute to improve it.'
-              )}
-            />
-          </FeatureList>
-        </Aside>
+          <Article
+            subtitle={t('common:home_page.how.subtitle', 'How ?')}
+            title={t('common:home_page.how.title', 'How does OTA work?')}
+            titleLevel="h2"
+          >
+            <TextContent>
+              <p>
+                {t(
+                  'common:home_page.how.desc.p1',
+                  'Services are declared within Open Terms Archive with a declaration file listing all the documents that, together, constitute the terms under which this service can be used. These documents all have a type, such as “terms and conditions”, “privacy policy”, “developer agreement”…'
+                )}
+              </p>
+              <p>
+                {t(
+                  'common:home_page.how.desc.p2',
+                  'In order to track their changes, documents are periodically obtained by fetching a web location and selecting content within the web page to remove the noise (ads, navigation menu, login fields…). Beyond selecting a subset of a page, some documents have additional noise (hashes in links, CSRF tokens…) that would be false for changes. Open Terms Archive thus supports specific filters for each document.'
+                )}
+              </p>
+              <p>
+                {t(
+                  'common:home_page.how.desc.p3',
+                  'However, the shape of that noise can change over time. In order to recover in case of information loss during the noise filtering step, a snapshot is recorded every there is a change. After the noise is filtered out from the snapshot, if there are changes in the resulting document, a new version of the document is recorded.'
+                )}
+              </p>
+              <Link href={t('common:home_page.how.button.href', '/how-it-works')}>
+                <a title={t('common:home_page.how.button.title', 'How OTA works ?')}>
+                  <Button type="secondary">
+                    {t('common:home_page.how.button.label', 'Know more')}
+                  </Button>
+                </a>
+              </Link>
+            </TextContent>
+          </Article>
+          <Aside>
+            <FeatureList>
+              <FeatureItem
+                iconName="FiBox"
+                title={nbServicesTitle}
+                desc={t(
+                  'common:home_page.how.feature1.desc',
+                  'Google, Amazon, Apple, AirBnB, Facebook, Twitter, Instagram, Bing, Microsoft, Reddit, Youtube, TikTok...'
+                )}
+              />
+              <FeatureItem
+                iconName="FiFile"
+                title={nbDocsTitle}
+                desc={t(
+                  'common:home_page.how.feature2.desc',
+                  'Terms of Service, Privacy Policy, Trackers Policy, Developer Terms, Community Guidelines...'
+                )}
+              />
+              <FeatureItem
+                iconName="FiSmile"
+                title={t('common:home_page.how.feature3.title', 'Open Source')}
+                desc={t(
+                  'common:home_page.how.feature3.desc',
+                  'Free and collaborative software, any entity can contribute to improve it.'
+                )}
+              />
+            </FeatureList>
+          </Aside>
+        </Container>
       </Container>
+
       {/* Contribute */}
       <Container
         gridCols="12"
         gridGutters="11"
         id={t('common:home_page.contribute.id', 'contribute')}
-        paddingTop={false}
       >
         <Container gridCols="8" gridGutters="7" paddingY={false}>
           <Column width={100} alignX="center">
