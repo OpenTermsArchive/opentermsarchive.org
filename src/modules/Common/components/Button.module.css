@@ -20,7 +20,7 @@
     color: var(--colorPrimary);
 
     &:hover {
-      background-color: var(--colorBlack200);
+      background-color: var(--colorWhite);
       color: var(--colorSecondary);
       border: 1px solid var(--colorSecondary);
     }
