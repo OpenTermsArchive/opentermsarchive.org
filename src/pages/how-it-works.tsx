@@ -1,6 +1,7 @@
 import { WithI18nResult, withI18n } from 'modules/I18n';
 
 import Button from 'modules/Common/components/Button';
+import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
@@ -16,13 +17,18 @@ export default function HowItWorksPage({ mdxContent }: WithI18nResult) {
     <Layout title={t('common:how-it-works.seo.title', 'How Open Terms Archive works ?')}>
       <Container layout="wide" backgroundImage="/images/bg1.jpg" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Hero
-            title={t('common:how-it-works.hero.title', 'How it works')}
-            subtitle={t(
-              'common:how-it-works.hero.subtitle',
-              'The platform undertakes to aggregate, in a centralised manner, as many contractual documents in as many languages as possible.'
-            )}
-          ></Hero>
+          <Column width={70}>
+            <Hero
+              title={t('common:how-it-works.hero.title', 'How it works')}
+              subtitle={t(
+                'common:how-it-works.hero.subtitle',
+                'The platform undertakes to aggregate, in a centralised manner, as many contractual documents in as many languages as possible.'
+              )}
+            ></Hero>
+          </Column>
+          <Column width={30}>
+            <img src="/images/how.png" />
+          </Column>
         </Container>
       </Container>
       <Container gridCols="9" gridGutters="8">
