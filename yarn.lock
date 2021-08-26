@@ -5201,10 +5201,10 @@ next-auth@*, next-auth@3.29.0:
     preact-render-to-string "^5.1.14"
     querystring "^0.2.0"
 
-next-i18next@8.6.0:
-  version "8.6.0"
-  resolved "https://registry.yarnpkg.com/next-i18next/-/next-i18next-8.6.0.tgz#702afa61c2ce9a485879d1ae4478627940a240ca"
-  integrity sha512-MBTmwGx7w7H5FqxHJ5OQrEPghmsT5HZ1wk/hNzikdueeu25nVFTn2tYP2MFDSYVPzUeVYeB8PobOZceVPbc1Fg==
+next-i18next@8.4.0:
+  version "8.4.0"
+  resolved "https://registry.yarnpkg.com/next-i18next/-/next-i18next-8.4.0.tgz#c98c33071a3165a58ee7f3a566c78abe15ac6f6d"
+  integrity sha512-QwUXDMOnguEWSrbA6fPDBReiQG0kgXm/c69R3u21ClrurT/7JJwNm2qUhtsY3+EZDC4O/7mFXK3lRrSszgf5BA==
   dependencies:
     "@babel/runtime" "^7.13.17"
     "@types/hoist-non-react-statics" "^3.3.1"
