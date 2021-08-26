@@ -14,7 +14,6 @@ import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
-import Logo from 'modules/Common/components/Logo';
 import React from 'react';
 import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
 import ShowcaseList from 'modules/Common/components/ShowcaseList';
@@ -117,7 +116,7 @@ const HomePage = ({ services }: any) => {
               }}
             />
           </Column>
-          <Column width={40} className="" hideOnTablet={true}>
+          <Column width={40} alignX="center">
             <img src="/images/form-subscribe.jpg" alt="" />
           </Column>
         </Container>

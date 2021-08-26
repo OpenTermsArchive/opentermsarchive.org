@@ -16,7 +16,7 @@ export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
     <Layout title={t('common:case-studies.seo.title', 'Case Studies')}>
       <Container layout="wide" backgroundImage="/images/bg1.jpg" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Column width={70} alignY="center">
+          <Column width={50} alignY="center">
             <Hero
               title={t('common:case-studies.hero.title', 'Case Studies')}
               subtitle={t(
@@ -25,7 +25,7 @@ export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
               )}
             ></Hero>
           </Column>
-          <Column width={30}>
+          <Column width={50} alignX="center">
             <img src="/images/case-studies.png" />
           </Column>
         </Container>
