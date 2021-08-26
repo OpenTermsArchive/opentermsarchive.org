@@ -140,7 +140,7 @@
   "subscribe_form.fields.document.label": "Sélectionner un type de document",
   "subscribe_form.fields.document.default": "Sélectionner...",
   "subscribe_form.fields.email.input.placeholder": "Email",
-  "subscribe_form.changes.github": "voir les dernières modifications sur Github",
+  "subscribe_form.changes.github": "voir les dernières modifications sur Github ",
   "subscribe_form.changes.scripta-manent": "comparer les versions par date avec Scripta Manent.",
   "subscribe_form.changes.before": "Pour ce document vous pourriez être intéressé part ",
   "subscribe_form.changes.changes.separator": "ou ",
