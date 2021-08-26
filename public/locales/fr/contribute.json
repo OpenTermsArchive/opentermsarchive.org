@@ -22,7 +22,6 @@
   "service_page.step3.form.significantPart": "Partie(s) significative(s)",
   "service_page.step3.title": "Étape 3 : sélection d'une partie significative du document",
   "service_page.title": "Quelques points d'attention 🤗",
-  "service_page.validate": "Valider",
   "sorry_page.explanation": "Parce que nous utilisons la fonctionnalité \"hover\" pour mettre en évidence les parties du document que nous voulons suivre, nous avons besoin que vous ayez un ordinateur et une souris",
   "sorry_page.subtitle": "Nous avons besoin de vous sur un vrai ordinateur",
   "sorry_page.title": "Désolé",
@@ -39,5 +38,6 @@
   "thanks_page.seo.title": "Merci 🎉",
   "thanks_page.seo.desc": "Merci pour votre contribution.",
   "service_page.could_not_create_issue": "We're truly sorry but the automatic creation of this new service failed, we will need you to send us an email",
-  "thanks_page.github_url": "Nous venons de créer une issue GitHub pour votre demande. <1></1>Vous pouvez vous y abonner aux notifications : <3><0>{{url}}</0></3>.<5></5><6></6>Vous pouvez également suivre les modifications des conditions d'utilisation et des politiques de confidentialité d'autres services en ligne par courriel. Veuillez vous référer au formulaire que vous trouverez sur notre page d'accueil."
+  "thanks_page.github_url": "Nous venons de créer une issue GitHub pour votre demande. <1></1>Vous pouvez vous y abonner aux notifications : <3><0>{{url}}</0></3>.<5></5><6></6>Vous pouvez également suivre les modifications des conditions d'utilisation et des politiques de confidentialité d'autres services en ligne par courriel. Veuillez vous référer au formulaire que vous trouverez sur notre page d'accueil.",
+  "service_page.submit": "Submit"
 }

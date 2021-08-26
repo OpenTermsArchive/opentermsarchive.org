@@ -4,7 +4,7 @@ import { GetContributeServiceResponse, PostContributeServiceResponse } from '../
 import Button from 'modules/Common/components/Button';
 import Drawer from 'components/Drawer';
 import IframeSelector from 'components/IframeSelector';
-import LinkArrow from 'modules/Common/components/LinkArrow';
+import LinkIcon from 'modules/Common/components/LinkIcon';
 import Loading from 'components/Loading';
 import React from 'react';
 import { Trans } from 'react-i18next';
@@ -221,7 +221,7 @@ Thank you very much`;
         {step === 1 && (
           <>
             <nav>
-              <LinkArrow
+              <LinkIcon
                 className={s.backButton}
                 iconColor="#999999"
                 href="/contribute"
@@ -229,7 +229,7 @@ Thank you very much`;
                 small={true}
               >
                 {t('contribute:service_page.back', 'Go back')}
-              </LinkArrow>
+              </LinkIcon>
             </nav>
             <div>
               <h2>{t('contribute:service_page.title', 'What is expected from you')}</h2>
@@ -255,7 +255,7 @@ Thank you very much`;
         {step === 2 && (
           <>
             <nav>
-              <LinkArrow
+              <LinkIcon
                 className={s.backButton}
                 iconColor="#999999"
                 href="/contribute"
@@ -263,7 +263,7 @@ Thank you very much`;
                 small={true}
               >
                 {t('contribute:service_page.back', 'Go back')}
-              </LinkArrow>
+              </LinkIcon>
               <a className="a__small" onClick={passToStep(1)}>
                 {t('contribute:service_page.help', 'Need help?')}
               </a>

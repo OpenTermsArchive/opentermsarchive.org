@@ -25,7 +25,6 @@
   "service_page.step3.form.insignificantPart": "Insignificant part(s)",
   "service_page.step3.form.insignificantPart.cta": "Remove part",
   "service_page.expertMode": "Expert Mode",
-  "service_page.validate": "Validate",
   "service_page.error.title": "We're sorry, an error occured",
   "service_page.error.cta": "Let us know!",
   "service_page.loading.title": "We're preparing the website",
@@ -39,5 +38,6 @@
   "thanks_page.seo.title": "Thanks 🎉",
   "thanks_page.seo.desc": "Thanks for contributing",
   "service_page.could_not_create_issue": "We're truly sorry but the automatic creation of this new service failed, we will need you to send us an email",
-  "thanks_page.github_url": "We just created a GitHub issue for your demand. <1></1>You can subscribe to notifications there: <3><0>{{url}}</0></3>.<5></5><6></6>You may also track the changes to the terms of service and privacy policies for other online services by email. Please refer to the form you will find on our homepage."
+  "thanks_page.github_url": "We just created a GitHub issue for your demand. <1></1>You can subscribe to notifications there: <3><0>{{url}}</0></3>.<5></5><6></6>You may also track the changes to the terms of service and privacy policies for other online services by email. Please refer to the form you will find on our homepage.",
+  "service_page.submit": "Submit"
 }

@@ -9,6 +9,7 @@ type ColumnProps = {
   subtitle?: string;
   alignX?: 'center' | 'right'; //Default positionning is left
   alignY?: 'center' | 'bottom'; //Default positionning is top
+  hideOnTablet?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const Column: React.FC<ColumnProps> = ({
@@ -18,6 +19,7 @@ const Column: React.FC<ColumnProps> = ({
   subtitle,
   alignX,
   alignY,
+  hideOnTablet = false,
   className,
   ...props
 }) => {
@@ -29,6 +31,7 @@ const Column: React.FC<ColumnProps> = ({
         { [s.column__hasAlign]: alignX != undefined || alignY != undefined },
         s[`column__alignX${alignX}`],
         s[`column__alignY${alignY}`],
+        { [s.column__hideOnTablet]: hideOnTablet === true },
         className
       )}
       {...props}

@@ -11,7 +11,7 @@ import FeatureItem from 'modules/Common/components/FeatureItem';
 import FeatureList from 'modules/Common/components/FeatureList';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
-import LinkArrow from 'modules/Common/components/LinkArrow';
+import LinkIcon from 'modules/Common/components/LinkIcon';
 import Logo from 'modules/Common/components/Logo';
 import React from 'react';
 import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
@@ -58,17 +58,17 @@ const DesignPage = () => {
           Metus tortor pellentesque feugiat morbi eu rutrum varius risus nisl. Tortor ac semper
           pharetra senectus.
         </p>
-        <LinkArrow iconColor="#999999" href="http://www.google.fr">
+        <LinkIcon iconColor="#999999" href="http://www.google.fr">
           Test de link
-        </LinkArrow>
+        </LinkIcon>
         <br />
-        <LinkArrow iconColor="#999999" href="http://www.google.fr" small={true}>
+        <LinkIcon iconColor="#999999" href="http://www.google.fr" small={true}>
           Test de link
-        </LinkArrow>
+        </LinkIcon>
         <br />
-        <LinkArrow iconColor="#999999" href="http://www.google.fr" direction="left">
+        <LinkIcon iconColor="#999999" href="http://www.google.fr" direction="left">
           Test de link inversé
-        </LinkArrow>
+        </LinkIcon>
         <Logo fill="#010613" />
         <div className={classNames('select')}>
           <select>
@@ -175,9 +175,9 @@ const DesignPage = () => {
             iconColor="#0496FF"
           >
             <Button href="https://www.google.fr">Add documents</Button>
-            <LinkArrow iconColor="#999999" href="https://www.google.fr" small={true}>
+            <LinkIcon iconColor="#999999" href="https://www.google.fr" small={true}>
               Another link
-            </LinkArrow>
+            </LinkIcon>
           </ButtonBlock>
           <ButtonBlock title="Un titre un peu plus long" desc="Un bloc sans icon">
             <Button href="https://www.google.fr">Je suis un bouton</Button>
@@ -188,9 +188,9 @@ const DesignPage = () => {
             iconColor="#0496FF"
           >
             <Button href="https://www.google.fr">Add documents</Button>
-            <LinkArrow iconColor="#999999" href="https://www.google.fr" small={true}>
+            <LinkIcon iconColor="#999999" href="https://www.google.fr" small={true}>
               Another link
-            </LinkArrow>
+            </LinkIcon>
           </ButtonBlock>
           <ButtonBlock title="Un titre un peu plus long" desc="Un bloc sans icon">
             <Button href="https://www.google.fr">Je suis un bouton</Button>
@@ -296,18 +296,18 @@ const DesignPage = () => {
               desc="Explore the contractual documents of the main online service providers and compare their evolution through time."
               author="By the team of the French Ambassador for Digital Affairs"
             >
-              <LinkArrow iconColor="#0496FF" href="https://www.google.fr">
+              <LinkIcon iconColor="#0496FF" href="https://www.google.fr">
                 Try
-              </LinkArrow>
+              </LinkIcon>
             </ShowcaseItem>
             <ShowcaseItem
               title="Disinfo experiments"
               desc="Experiments are ongoing so as to produce use cases using Open Terms Archive data."
               author="By the team of the French Ambassador for Digital Affairs"
             >
-              <LinkArrow iconColor="#0496FF" href="https://www.google.fr">
+              <LinkIcon iconColor="#0496FF" href="https://www.google.fr">
                 See
-              </LinkArrow>
+              </LinkIcon>
             </ShowcaseItem>
           </ShowcaseList>
         </Column>

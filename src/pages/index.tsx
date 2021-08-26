@@ -1,4 +1,3 @@
-import { FiArrowRightCircle, FiChevronRight } from 'react-icons/fi';
 import SubscribeForm, { SubscribeFormProps } from 'modules/Common/components/SubscribeForm';
 
 import Article from 'modules/Common/components/Article';
@@ -10,11 +9,11 @@ import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import FeatureItem from 'modules/Common/components/FeatureItem';
 import FeatureList from 'modules/Common/components/FeatureList';
+import { FiArrowRightCircle } from 'react-icons/fi';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
-import LinkArrow from 'modules/Common/components/LinkArrow';
-import Logo from 'modules/Common/components/Logo';
+import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
 import ShowcaseList from 'modules/Common/components/ShowcaseList';
@@ -93,14 +92,19 @@ const HomePage = ({ services }: any) => {
             )}
           ></Hero>
         </Container>
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingTop={false}>
+      </Container>
+
+      {/* Subscribe form */}
+      <Container layout="wide">
+        <Container
+          gridCols="12"
+          gridGutters="11"
+          flex={true}
+          paddingX={false}
+          paddingTop={false}
+          paddingBottom={false}
+        >
           <Column width={60}>
-            <h4 className="h4__white mb__L">
-              {t(
-                'common:subscribe_form.title',
-                'Be informed by email of the changes on the documents of your choice.'
-              )}
-            </h4>
             <SubscribeForm
               defaultServices={services}
               onSubmit={onSubscription}
@@ -112,109 +116,98 @@ const HomePage = ({ services }: any) => {
               }}
             />
           </Column>
-          <Column width={40} className="mt__2XL">
-            <TextContent>
-              <ul>
-                <li>
-                  <FiChevronRight color="#0496FF" />
-                  {t(
-                    'common:subscribe_form.p1',
-                    'As the frequency of change of a document can vary from one document to another it is difficult to estimate the frequency of emails you will receive. However, we have observed that large digital services change their documents approximately once every fortnight.'
-                  )}
-                </li>
-                <li>
-                  <FiChevronRight color="#0496FF" />
-                  {t(
-                    'common:subscribe_form.p2',
-                    'If you wish to track several documents, simply complete this form as many times as necessary. If you want to subscribre to all documents please contact us.'
-                  )}
-                </li>
-                <li>
-                  <FiChevronRight color="#0496FF" />
-                  {t(
-                    'common:subscribe_form.p3',
-                    'You can unsubscribe at any time from the link provided in the email and ou may be interested in our privacy policy.'
-                  )}
-                </li>
-              </ul>
-            </TextContent>
+          <Column width={40} alignX="center">
+            <img src="/images/form-subscribe.jpg" alt="" />
           </Column>
         </Container>
       </Container>
+
       {/* How section */}
-      <Container
-        gridCols="10"
-        gridGutters="11"
-        flex={true}
-        id={t('common:home_page.how.id', 'how')}
-      >
-        <Article
-          subtitle={t('common:home_page.how.subtitle', 'How ?')}
-          title={t('common:home_page.how.title', 'How does OTA work?')}
-          titleLevel="h2"
+      <Container layout="wide" gray={true}>
+        <Container
+          gridCols="10"
+          gridGutters="11"
+          flex={true}
+          paddingY={false}
+          id={t('common:home_page.how.id', 'how')}
         >
-          <TextContent>
-            <p>
-              {t(
-                'common:home_page.how.desc.p1',
-                'Services are declared within Open Terms Archive with a declaration file listing all the documents that, together, constitute the terms under which this service can be used. These documents all have a type, such as “terms and conditions”, “privacy policy”, “developer agreement”…'
-              )}
-            </p>
-            <p>
-              {t(
-                'common:home_page.how.desc.p2',
-                'In order to track their changes, documents are periodically obtained by fetching a web location and selecting content within the web page to remove the noise (ads, navigation menu, login fields…). Beyond selecting a subset of a page, some documents have additional noise (hashes in links, CSRF tokens…) that would be false for changes. Open Terms Archive thus supports specific filters for each document.'
-              )}
-            </p>
-            <p>
-              {t(
-                'common:home_page.how.desc.p3',
-                'However, the shape of that noise can change over time. In order to recover in case of information loss during the noise filtering step, a snapshot is recorded every there is a change. After the noise is filtered out from the snapshot, if there are changes in the resulting document, a new version of the document is recorded.'
-              )}
-            </p>
-            <Link href={t('common:home_page.how.button.href', '/how-it-works')}>
-              <a title={t('common:home_page.how.button.title', 'How OTA works ?')}>
-                <Button>{t('common:home_page.how.button.label', 'Know more')}</Button>
-              </a>
-            </Link>
-          </TextContent>
-        </Article>
-        <Aside>
-          <FeatureList>
-            <FeatureItem
-              iconName="FiBox"
-              title={nbServicesTitle}
-              desc={t(
-                'common:home_page.how.feature1.desc',
-                'Google, Amazon, Apple, AirBnB, Facebook, Twitter, Instagram, Bing, Microsoft, Reddit, Youtube, TikTok...'
-              )}
-            />
-            <FeatureItem
-              iconName="FiFile"
-              title={nbDocsTitle}
-              desc={t(
-                'common:home_page.how.feature2.desc',
-                'Terms of Service, Privacy Policy, Trackers Policy, Developer Terms, Community Guidelines...'
-              )}
-            />
-            <FeatureItem
-              iconName="FiSmile"
-              title={t('common:home_page.how.feature3.title', 'Open Source')}
-              desc={t(
-                'common:home_page.how.feature3.desc',
-                'Free and collaborative software, any entity can contribute to improve it.'
-              )}
-            />
-          </FeatureList>
-        </Aside>
+          <Article
+            subtitle={t('common:home_page.how.subtitle', 'How ?')}
+            title={t('common:home_page.how.title', 'How does OTA work?')}
+            titleLevel="h2"
+          >
+            <TextContent>
+              <p>
+                {t(
+                  'common:home_page.how.desc.p1',
+                  'Services are declared within Open Terms Archive with a declaration file listing all the documents that, together, constitute the terms under which this service can be used. These documents all have a type, such as “terms and conditions”, “privacy policy”, “developer agreement”…'
+                )}
+              </p>
+              <p>
+                {t(
+                  'common:home_page.how.desc.p2',
+                  'In order to track their changes, documents are periodically obtained by fetching a web location and selecting content within the web page to remove the noise (ads, navigation menu, login fields…). Beyond selecting a subset of a page, some documents have additional noise (hashes in links, CSRF tokens…) that would be false for changes. Open Terms Archive thus supports specific filters for each document.'
+                )}
+              </p>
+              <p>
+                {t(
+                  'common:home_page.how.desc.p3',
+                  'However, the shape of that noise can change over time. In order to recover in case of information loss during the noise filtering step, a snapshot is recorded every there is a change. After the noise is filtered out from the snapshot, if there are changes in the resulting document, a new version of the document is recorded.'
+                )}
+              </p>
+              <Link href={t('common:home_page.how.button.href', '/how-it-works')}>
+                <a title={t('common:home_page.how.button.title', 'How OTA works ?')}>
+                  <Button type="secondary">
+                    {t('common:home_page.how.button.label', 'Know more')}
+                  </Button>
+                </a>
+              </Link>
+            </TextContent>
+          </Article>
+          <Aside>
+            <FeatureList>
+              <FeatureItem
+                iconName="FiBox"
+                title={nbServicesTitle}
+                desc={t(
+                  'common:home_page.how.feature1.desc',
+                  'Google, Amazon, Apple, AirBnB, Facebook, Twitter, Instagram, Bing, Microsoft, Reddit, Youtube, TikTok...'
+                )}
+              />
+              <FeatureItem
+                iconName="FiFile"
+                title={nbDocsTitle}
+                desc={t(
+                  'common:home_page.how.feature2.desc',
+                  'Terms of Service, Privacy Policy, Trackers Policy, Developer Terms, Community Guidelines...'
+                )}
+              />
+              <FeatureItem
+                iconName="FiSmile"
+                title={t('common:home_page.how.feature3.title', 'Open Source')}
+                desc={t(
+                  'common:home_page.how.feature3.desc',
+                  'Free and collaborative software, any entity can contribute to improve it.'
+                )}
+              />
+            </FeatureList>
+          </Aside>
+        </Container>
       </Container>
+
       {/* Contribute */}
       <Container
         gridCols="12"
         gridGutters="11"
         id={t('common:home_page.contribute.id', 'contribute')}
       >
+        <Container gridCols="8" gridGutters="7" paddingY={false}>
+          <Column width={100} alignX="center">
+            <img src="/images/contribute.jpg" />
+          </Column>
+        </Container>
         <ButtonBlockList
+          className="mt__XL"
           title={t('common:home_page.contribute.title', 'Want to help us build a digital common ?')}
           subtitle={t('common:home_page.contribute.subtitle', 'Contribute')}
         >
@@ -293,7 +286,7 @@ const HomePage = ({ services }: any) => {
                 </Button>
               </a>
             </Link>
-            <LinkArrow
+            <LinkIcon
               iconColor="#999999"
               href={t(
                 'common:home_page.contribute.buttonbloc3.sublink.href',
@@ -312,10 +305,11 @@ const HomePage = ({ services }: any) => {
                   'or download a dataset'
                 )}
               </a>
-            </LinkArrow>
+            </LinkIcon>
           </ButtonBlock>
         </ButtonBlockList>
       </Container>
+
       {/* Values */}
       <Container
         layout="wide"
@@ -325,7 +319,7 @@ const HomePage = ({ services }: any) => {
       >
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
           <Column width={50} alignX="center" alignY="center">
-            <Logo fill="#fefffd" />
+            <img src="/images/values.png" />
           </Column>
           <Column
             width={50}
@@ -399,7 +393,7 @@ const HomePage = ({ services }: any) => {
                 'By the team of the French Ambassador for Digital Affairs'
               )}
             >
-              <LinkArrow
+              <LinkIcon
                 iconColor="#0496FF"
                 href={t(
                   'common:home_page.showcase.item1.link.href',
@@ -414,7 +408,7 @@ const HomePage = ({ services }: any) => {
                 >
                   {t('common:home_page.showcase.item1.link.label', 'Try')}
                 </a>
-              </LinkArrow>
+              </LinkIcon>
             </ShowcaseItem>
             <ShowcaseItem
               title={t('common:home_page.showcase.item2.title', 'Disinfo experiments')}
@@ -427,7 +421,7 @@ const HomePage = ({ services }: any) => {
                 'By the team of the French Ambassador for Digital Affairs'
               )}
             >
-              <LinkArrow
+              <LinkIcon
                 iconColor="#0496FF"
                 href={t(
                   'common:home_page.showcase.item2.link.href',
@@ -442,7 +436,7 @@ const HomePage = ({ services }: any) => {
                 >
                   {t('common:home_page.showcase.item2.link.label', 'See')}
                 </a>
-              </LinkArrow>
+              </LinkIcon>
             </ShowcaseItem>
           </ShowcaseList>
         </Column>

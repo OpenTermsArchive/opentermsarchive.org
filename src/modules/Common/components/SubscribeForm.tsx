@@ -1,5 +1,7 @@
+import Link from 'next/link';
 import React from 'react';
 import SelectService from 'modules/OTA-api/data-components/SelectService';
+import TextContent from './TextContent';
 import classNames from 'classnames';
 import sButton from './Button.module.css';
 import { useForm } from 'react-hook-form';
@@ -29,7 +31,10 @@ const SubscribeForm = ({
   defaultValues,
   defaultServices,
 }: SubscribeFormProps) => {
-  const { t } = useTranslation('common');
+  const {
+    t,
+    i18n: { language },
+  } = useTranslation('common');
 
   const { register, handleSubmit, watch, reset } = useForm<SubscribeFormFields>({
     reValidateMode: 'onChange',
@@ -74,6 +79,12 @@ const SubscribeForm = ({
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
+      <h4 className="mb__L">
+        {t(
+          'common:subscribe_form.title',
+          'Be informed by email of the changes on the documents of your choice.'
+        )}
+      </h4>
       <SelectService
         defaultServices={defaultServices}
         service={service}
@@ -81,6 +92,48 @@ const SubscribeForm = ({
         serviceProps={register('service', { required: true })}
         documentTypeProps={register('documentType', { required: true })}
       />
+
+      <div className={classNames('formfield')}>
+        {!!service && !!documentType && (
+          <TextContent>
+            <p>
+              {t(
+                'common:subscribe_form.changes.before',
+                'For this document you may be interested to '
+              )}
+              <Link
+                href={`https://github.com/ambanum/OpenTermsArchive-versions/commits/master/${encodeURIComponent(
+                  service
+                )}/${encodeURIComponent(documentType)}.md`}
+              >
+                <a target="_blank" className="a__darked">
+                  {t('common:subscribe_form.changes.github', 'see the latest changes on Github ')}
+                </a>
+              </Link>
+              {t('common:subscribe_form.changes.changes.separator', 'or ')}
+              <Link
+                href={`https://disinfo.quaidorsay.fr/${language}/open-terms-archive/scripta-manent?service=${encodeURIComponent(
+                  service
+                )}&typeofdocument=${encodeURIComponent(documentType)}`}
+              >
+                <a target="_blank" className="a__darked">
+                  {t(
+                    'common:subscribe_form.changes.scripta-manent',
+                    'compare versions by date with Scripta Manent.'
+                  )}
+                </a>
+              </Link>
+            </p>
+            <p className="text__light">
+              {t(
+                'common:subscribe_form.p2',
+                'If you wish to track several documents, simply complete this form as many times as necessary. If you want to subscribre to all documents please contact us.'
+              )}
+            </p>
+          </TextContent>
+        )}
+      </div>
+
       <div className={classNames('formfield')}>
         <label htmlFor="email">
           {t('common:subscribe_form.fields.email.label', 'Fill your email')}
@@ -93,7 +146,7 @@ const SubscribeForm = ({
         />
       </div>
       <div className={classNames('formfield', 'formfield__flex')}>
-        <input id="consent" {...register('consent', { required: true })} type="checkbox" />
+        <input id="consent" type="checkbox" {...register('consent', { required: true })} />
         <label htmlFor="consent">
           {t(
             'common:subscribe_form.consent',
@@ -101,6 +154,30 @@ const SubscribeForm = ({
           )}
         </label>
       </div>
+      {!!consent && (
+        <div className={classNames('formfield')}>
+          <TextContent>
+            <p className="text__light">
+              {t(
+                'common:subscribe_form.p3',
+                'You can unsubscribe at any time from the link provided in the email.'
+              )}
+            </p>
+            <p className="text__light">
+              {t(
+                'common:subscribe_form.p1',
+                'As the frequency of change of a document can vary from one document to another it is difficult to estimate the frequency of emails you will receive. However, we have observed that large digital services change their documents approximately once every fortnight.'
+              )}
+            </p>
+            <p className="text__light">
+              {t(
+                'common:subscribe_form.p3',
+                'We take care of your data and do not sell it, check our privacy policy.'
+              )}
+            </p>
+          </TextContent>
+        </div>
+      )}
       <div className={classNames('formfield', 'formfield__alignRight')}>
         <input
           type="submit"

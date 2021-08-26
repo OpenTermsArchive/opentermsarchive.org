@@ -21,6 +21,7 @@
   padding: 4px;
   margin: 0 calc((76px-40px) / 2);
   border-radius: 10px;
+  background-color: var(--colorWhite);
 }
 
 @media (--tabletSmall) {

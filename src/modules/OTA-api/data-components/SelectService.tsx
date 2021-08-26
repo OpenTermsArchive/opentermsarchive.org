@@ -72,7 +72,12 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
                   <option value="">
                     {t('common:subscribe_form.fields.service.default', 'Select...')}
                   </option>
-                  <optgroup>
+                  <optgroup
+                    label={t(
+                      'common:subscribe_form.fields.service.optgroup.gatekeepers',
+                      'Gatekeepers'
+                    )}
+                  >
                     {dmaServices.map((service) => (
                       <option
                         key={`dma_${selectedService}_${service}`}
@@ -83,7 +88,12 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
                       </option>
                     ))}
                   </optgroup>
-                  <optgroup>
+                  <optgroup
+                    label={t(
+                      'common:subscribe_form.fields.service.optgroup.otherservices',
+                      'Other services'
+                    )}
+                  >
                     {services.map((service) => (
                       <option
                         key={`${selectedService}_${service}`}
