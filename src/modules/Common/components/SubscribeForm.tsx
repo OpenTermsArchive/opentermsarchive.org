@@ -1,4 +1,3 @@
-import { FiChevronRight } from 'react-icons/fi';
 import Link from 'next/link';
 import React from 'react';
 import SelectService from 'modules/OTA-api/data-components/SelectService';
