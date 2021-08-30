@@ -2,7 +2,11 @@
   width: 100%;
   padding: 0 0 var(--pL) 0;
 }
-.footer {
+.version {
+  color: var(--colorBlack400);
+  font-size: 0.8em;
+  text-align: right;
+  font-style: italic;
 }
 
 @media (--tabletLarge) {
