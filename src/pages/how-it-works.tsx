@@ -27,7 +27,7 @@ export default function HowItWorksPage({ mdxContent }: WithI18nResult) {
             ></Hero>
           </Column>
           <Column width={30}>
-            <img src="/images/how.png" />
+            <img src="/images/how.png" loading="lazy" />
           </Column>
         </Container>
       </Container>

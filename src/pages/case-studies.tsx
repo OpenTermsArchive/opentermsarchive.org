@@ -26,7 +26,7 @@ export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
             ></Hero>
           </Column>
           <Column width={50} alignX="center">
-            <img src="/images/case-studies.png" />
+            <img src="/images/case-studies.png" loading="lazy" />
           </Column>
         </Container>
       </Container>

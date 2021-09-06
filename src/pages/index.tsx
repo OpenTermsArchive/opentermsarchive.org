@@ -117,7 +117,7 @@ const HomePage = ({ services }: any) => {
             />
           </Column>
           <Column width={40} alignX="center">
-            <img src="/images/form-subscribe.jpg" alt="" />
+            <img src="/images/form-subscribe.jpg" alt="" loading="lazy" />
           </Column>
         </Container>
       </Container>
@@ -203,7 +203,7 @@ const HomePage = ({ services }: any) => {
       >
         <Container gridCols="8" gridGutters="7" paddingY={false}>
           <Column width={100} alignX="center">
-            <img src="/images/contribute.jpg" />
+            <img src="/images/contribute.jpg" loading="lazy" />
           </Column>
         </Container>
         <ButtonBlockList
@@ -319,7 +319,7 @@ const HomePage = ({ services }: any) => {
       >
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
           <Column width={50} alignX="center" alignY="center">
-            <img src="/images/values.png" />
+            <img src="/images/values.png" loading="lazy" />
           </Column>
           <Column
             width={50}
