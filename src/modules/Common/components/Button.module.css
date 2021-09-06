@@ -4,13 +4,13 @@
   align-items: center;
   background-color: var(--colorPrimary);
   padding: var(--pS) var(--pL);
-  color: var(--colorBlack200);
+  color: var(--colorWhite);
   border-radius: 4px;
   transition: all 0.3s easeOutExpo;
 
   &:hover {
     background-color: var(--colorSecondary);
-    color: var(--colorBlack200);
+    color: var(--colorWhite);
     transition: all 0.25s easeOutCirc;
   }
 
