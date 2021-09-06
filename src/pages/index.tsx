@@ -82,7 +82,7 @@ const HomePage = ({ services }: any) => {
       )}
     >
       {/* Hero */}
-      <Container layout="wide" backgroundImage="/images/bg1.jpg" dark={true} paddingY={false}>
+      <Container layout="wide" backgroundImage="/images/bg1.webp" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
             title={t('common:home_page.title', 'Follow the changes to the terms of service')}
@@ -313,7 +313,7 @@ const HomePage = ({ services }: any) => {
       {/* Values */}
       <Container
         layout="wide"
-        backgroundImage="/images/bg2.jpg"
+        backgroundImage="/images/bg2.webp"
         paddingY={false}
         id={t('common:home_page.values.id', 'values')}
       >

@@ -32,7 +32,7 @@ const ContributePage = () => {
       desc={t('contribute:home_page.seo.desc', 'Thanks for helping')}
     >
       {/* Hero */}
-      <Container layout="wide" paddingY={false} dark={true} backgroundImage="/images/bg1.jpg">
+      <Container layout="wide" paddingY={false} dark={true} backgroundImage="/images/bg1.webp">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={70}>
             <Hero

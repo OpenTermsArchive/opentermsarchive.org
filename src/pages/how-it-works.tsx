@@ -15,7 +15,7 @@ export default function HowItWorksPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation('common');
   return (
     <Layout title={t('common:how-it-works.seo.title', 'How Open Terms Archive works ?')}>
-      <Container layout="wide" backgroundImage="/images/bg1.jpg" dark={true} paddingY={false}>
+      <Container layout="wide" backgroundImage="/images/bg1.webp" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={70}>
             <Hero
