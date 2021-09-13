@@ -1,38 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	<url>
-		<loc>https://opentermsarchive.org/</loc>
-		<lastmod>2021-06-22T18:24:18+01:00</lastmod>
-		<priority>1.0</priority>
-	</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
 		<loc>https://opentermsarchive.org/en</loc>
-		<lastmod>2021-06-22T18:24:18+01:00</lastmod>
-		<priority>1.0</priority>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>1.00</priority>
 	</url>
 	<url>
-		<loc>https://opentermsarchive.org/fr</loc>
-		<lastmod>2021-06-22T18:24:21+01:00</lastmod>
-		<priority>1.0</priority>
+		<loc>https://opentermsarchive.org/en/how-it-works</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/en/case-studies</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/en/contribute</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/how-it-works</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/en/press</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://opentermsarchive.org/en/terms-of-service</loc>
-		<lastmod>2021-06-22T18:24:21+01:00</lastmod>
-		<priority>0.4</priority>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://opentermsarchive.org/en/privacy-policy</loc>
-		<lastmod>2021-06-22T18:24:21+01:00</lastmod>
-		<priority>0.4</priority>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.80</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/fr/how-it-works</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.64</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/fr/case-studies</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.64</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/fr</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.64</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/fr/contribute</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.64</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/fr/press</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://opentermsarchive.org/fr/terms-of-service</loc>
-		<lastmod>2021-06-22T18:24:21+01:00</lastmod>
-		<priority>0.4</priority>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://opentermsarchive.org/fr/privacy-policy</loc>
-		<lastmod>2021-06-22T18:24:22+01:00</lastmod>
-		<priority>0.4</priority>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.64</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/case-studies</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.64</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/press</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.64</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/terms-of-service</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.64</priority>
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/privacy-policy</loc>
+		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
+		<priority>0.64</priority>
 	</url>
 </urlset>
