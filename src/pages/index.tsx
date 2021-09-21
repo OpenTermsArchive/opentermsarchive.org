@@ -7,6 +7,7 @@ import ButtonBlock from 'modules/Common/components/ButtonBlock';
 import ButtonBlockList from 'modules/Common/components/ButtonBlockList';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
+import Contributors from 'modules/OTA-api/data-components/Contributors';
 import FeatureItem from 'modules/Common/components/FeatureItem';
 import FeatureList from 'modules/Common/components/FeatureList';
 import { FiArrowRightCircle } from 'react-icons/fi';
@@ -308,6 +309,9 @@ const HomePage = ({ services }: any) => {
             </LinkIcon>
           </ButtonBlock>
         </ButtonBlockList>
+        <Container gridCols="6" gridGutters="5" paddingYSmall={true}>
+          <Contributors subtitle={t('common:home_page.contributors.subtitle', 'Thanks 🙏')} />
+        </Container>
       </Container>
 
       {/* Values */}
@@ -369,6 +373,7 @@ const HomePage = ({ services }: any) => {
           </Column>
         </Container>
       </Container>
+
       {/* Showcase */}
       <Container
         gridCols="10"
@@ -465,6 +470,7 @@ const HomePage = ({ services }: any) => {
           </ButtonBlock>
         </Column>
       </Container>
+
       {/* Partners */}
       <Container layout="fluid" gridCols="12" gridGutters="11" flex={true} paddingX={false}>
         <ThumbGalery
@@ -492,6 +498,7 @@ const HomePage = ({ services }: any) => {
           </Link>
         </ThumbGalery>
       </Container>
+
       {/* Press */}
       <Container
         paddingY={false}

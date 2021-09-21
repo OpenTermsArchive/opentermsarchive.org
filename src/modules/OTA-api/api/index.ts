@@ -6,6 +6,7 @@ import axios from 'axios';
 export type Service = string;
 export type DocumentType = string;
 
+
 export interface Services {
   [key: string]: DocumentType[];
 }

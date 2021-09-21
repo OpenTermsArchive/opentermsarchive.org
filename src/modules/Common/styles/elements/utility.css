@@ -1,14 +1,21 @@
 /* float utility */
-.fright {
+.float__right {
   float: right;
 }
 
-.fleft {
+.float__left {
   float: left;
 }
 
-.tcenter {
+/* align utility */
+.text__center {
   text-align: center;
+}
+.text__right {
+  text-align: right;
+}
+.text__left {
+  text-align: left;
 }
 
 /* padding left utility */

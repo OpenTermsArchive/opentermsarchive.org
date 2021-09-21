@@ -1,0 +1,27 @@
+.contributors {
+}
+
+.contributors_items {
+  margin-top: var(--mL);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contributor {
+  margin-left: calc(var(--mM) * -1);
+  margin-bottom: var(--mXS);
+}
+
+.contributor_link {
+  display: flex;
+
+  &:hover > img {
+    box-shadow: 0px 0px 0px 6px var(--colorSecondary);
+  }
+}
+
+.contributor_image {
+  transition: box-shadow 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  border-radius: 50%;
+}
