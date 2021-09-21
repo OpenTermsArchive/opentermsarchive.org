@@ -20,6 +20,12 @@ const Contributors: React.FC<ContributorsProps> = React.memo(({ subtitle }) => {
     return <Loading />;
   }
 
+  data.unshift({
+    html_url: 'https://github.com/trujilloelsa',
+    avatar_url: 'https://avatars.githubusercontent.com/u/86837188?v=4',
+    login: 'Elsa Trujillo',
+  });
+
   return (
     <div className={s.contributors}>
       <div className="text__smallcaps text__center">{subtitle}</div>
