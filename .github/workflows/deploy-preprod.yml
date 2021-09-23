@@ -1,9 +1,26 @@
-name: Deploy
+name: Deploy on preproduction
 on:
   push:
-    branches: [develop]
+    tags:
+      - '*'
 jobs:
+  on-branch-check:
+    runs-on: ubuntu-latest
+    outputs:
+      on_branch: ${{ steps.contains_tag.outputs.retval }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: rickstaa/action-contains-tag@v1
+        id: contains_tag
+        with:
+          reference: 'develop'
+          tag: '${{ github.ref }}'
+
   deploy:
+    needs: on-branch-check
+    if: ${{ needs.on-branch-check.outputs.on_branch == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,15 +28,17 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.head.sha }}
       - run: git checkout HEAD
+      # Enable deployment from github actions https://zellwk.com/blog/github-actions-deploy/
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
-          # https://zellwk.com/blog/github-actions-deploy/
-          key: ${{ secrets.SSH_KEY }}
-          known_hosts: ${{ secrets.KNOWN_HOSTS }}
-      - run: echo "${{ secrets.ANSIBLE_VAULT_PASSWORD }}" > vault.key
+          key: ${{ secrets.SSH_GITHUB_ACTIONS_PRIVATE_KEY }} # generate with ssh-keygen -t rsa -b 4096 -C "martin.ratinaud@beta.gouv.fr"
+          known_hosts: ${{ secrets.SSH_KNOWN_HOSTS }} # generate with ssh-keyscan -H 51.75.169.235
+      - run: echo "${{ secrets.ANSIBLE_VAULT_PASSWORD }}" > vault.key # in Safety Box https://github.com/ambanum/disinfo.quaidorsay.fr/wiki/Safety-box
       - run: pip install --upgrade setuptools
       - run: pip install ansible==2.9.11
       - run: ansible-galaxy collection install community.general:==1.3.5
       - run: ansible-galaxy collection install community.docker:=1.6.1
-      - run: npm run deploy:preproduction
+      # Preproduction
+      - name: Deploy on preproduction
+        run: npm run deploy:preproduction
