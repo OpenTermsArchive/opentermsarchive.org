@@ -32,7 +32,7 @@ export default function PressPage({ mdxContent }: WithI18nResult) {
           </TextContent>
         </Article>
       </Container>
-      <Container layout="wide" backgroundImage="/images/bg2.jpg" paddingY={false}>
+      <Container layout="wide" backgroundImage="/images/bg2.webp" paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
           <Column
             width={100}

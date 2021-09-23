@@ -80,7 +80,7 @@ const DesignPage = () => {
       </Container>
 
       {/* Hero with background, darked, title and subtitle */}
-      <Container layout="wide" backgroundImage="/images/bg1.jpg" dark={true} paddingY={false}>
+      <Container layout="wide" backgroundImage="/images/bg1.webp" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
             title="Hero with background, dark, title and subtitle"
@@ -199,7 +199,7 @@ const DesignPage = () => {
       </Container>
 
       {/* Columns width 50/50, background image, darked, x center, y center*/}
-      <Container layout="wide" backgroundImage="/images/bg2.jpg" paddingY={false}>
+      <Container layout="wide" backgroundImage="/images/bg2.webp" paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
           <Column width={50} alignX="center" alignY="center">
             <Logo fill="#fefffd" />

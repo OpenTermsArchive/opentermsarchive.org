@@ -7,6 +7,7 @@ import ButtonBlock from 'modules/Common/components/ButtonBlock';
 import ButtonBlockList from 'modules/Common/components/ButtonBlockList';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
+import Contributors from 'modules/OTA-api/data-components/Contributors';
 import FeatureItem from 'modules/Common/components/FeatureItem';
 import FeatureList from 'modules/Common/components/FeatureList';
 import { FiArrowRightCircle } from 'react-icons/fi';
@@ -82,7 +83,7 @@ const HomePage = ({ services }: any) => {
       )}
     >
       {/* Hero */}
-      <Container layout="wide" backgroundImage="/images/bg1.jpg" dark={true} paddingY={false}>
+      <Container layout="wide" backgroundImage="/images/bg1.webp" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
             title={t('common:home_page.title', 'Follow the changes to the terms of service')}
@@ -117,7 +118,7 @@ const HomePage = ({ services }: any) => {
             />
           </Column>
           <Column width={40} alignX="center">
-            <img src="/images/form-subscribe.jpg" alt="" />
+            <img src="/images/form-subscribe.jpg" alt="" loading="lazy" />
           </Column>
         </Container>
       </Container>
@@ -203,7 +204,7 @@ const HomePage = ({ services }: any) => {
       >
         <Container gridCols="8" gridGutters="7" paddingY={false}>
           <Column width={100} alignX="center">
-            <img src="/images/contribute.jpg" />
+            <img src="/images/contribute.jpg" loading="lazy" />
           </Column>
         </Container>
         <ButtonBlockList
@@ -308,18 +309,21 @@ const HomePage = ({ services }: any) => {
             </LinkIcon>
           </ButtonBlock>
         </ButtonBlockList>
+        <Container gridCols="6" gridGutters="5" paddingYSmall={true}>
+          <Contributors subtitle={t('common:home_page.contributors.subtitle', 'Thanks 🙏')} />
+        </Container>
       </Container>
 
       {/* Values */}
       <Container
         layout="wide"
-        backgroundImage="/images/bg2.jpg"
+        backgroundImage="/images/bg2.webp"
         paddingY={false}
         id={t('common:home_page.values.id', 'values')}
       >
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
           <Column width={50} alignX="center" alignY="center">
-            <img src="/images/values.png" />
+            <img src="/images/values.png" loading="lazy" />
           </Column>
           <Column
             width={50}
@@ -369,6 +373,7 @@ const HomePage = ({ services }: any) => {
           </Column>
         </Container>
       </Container>
+
       {/* Showcase */}
       <Container
         gridCols="10"
@@ -465,6 +470,7 @@ const HomePage = ({ services }: any) => {
           </ButtonBlock>
         </Column>
       </Container>
+
       {/* Partners */}
       <Container layout="fluid" gridCols="12" gridGutters="11" flex={true} paddingX={false}>
         <ThumbGalery
@@ -492,6 +498,7 @@ const HomePage = ({ services }: any) => {
           </Link>
         </ThumbGalery>
       </Container>
+
       {/* Press */}
       <Container
         paddingY={false}

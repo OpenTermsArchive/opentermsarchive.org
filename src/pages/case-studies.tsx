@@ -14,7 +14,7 @@ export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation('common');
   return (
     <Layout title={t('common:case-studies.seo.title', 'Case Studies')}>
-      <Container layout="wide" backgroundImage="/images/bg1.jpg" dark={true} paddingY={false}>
+      <Container layout="wide" backgroundImage="/images/bg1.webp" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={50} alignY="center">
             <Hero
@@ -26,7 +26,7 @@ export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
             ></Hero>
           </Column>
           <Column width={50} alignX="center">
-            <img src="/images/case-studies.png" />
+            <img src="/images/case-studies.png" loading="lazy" />
           </Column>
         </Container>
       </Container>

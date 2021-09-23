@@ -7,4 +7,7 @@ module.exports = {
   publicRuntimeConfig: {
     version,
   },
+  images: {
+    domains: ['avatars.githubusercontent.com'],
+  },
 };

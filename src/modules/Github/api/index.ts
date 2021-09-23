@@ -1,5 +1,6 @@
 const DOCUMENT_TYPES_URL =
   'https://raw.githubusercontent.com/ambanum/OpenTermsArchive/master/src/app/types.json';
+export const CONTRIBUTORS_URL = 'https://api.github.com/repos/ambanum/OpenTermsArchive/contributors';
 
 import { Octokit } from 'octokit';
 import axios from 'axios';
@@ -21,7 +22,6 @@ export const createIssue: any = async (
 ) => {
   try {
     const { data } = await octokit.rest.issues.create(params);
-
     return data;
   } catch (e) {
     console.error(e);
@@ -61,3 +61,23 @@ export const addCommentToIssue = async (
     return null;
   }
 };
+
+export interface Contributor {
+  login: string;
+  avatar_url: string;
+  html_url: string;
+  contributions: number;
+  type: string;
+}
+
+export type Contributors = Contributor[];
+
+export const getContributors = async () => {
+  try {
+    const  { data }  = await octokit.request(`GET ${CONTRIBUTORS_URL}`)
+    return data;
+  } catch (e) {
+    console.error(e);
+    return {};
+  }
+}

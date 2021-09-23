@@ -146,5 +146,6 @@
   "subscribe_form.changes.changes.separator": "ou ",
   "subscribe_form.title": "Soyez informé par e-mail des changements sur les documents de votre choix.",
   "subscribe_form.fields.service.optgroup.gatekeepers": "Gatekeepers",
-  "subscribe_form.fields.service.optgroup.otherservices": "Autre services"
+  "subscribe_form.fields.service.optgroup.otherservices": "Autre services",
+  "home_page.contributors.subtitle": "Merci 🙏"
 }
