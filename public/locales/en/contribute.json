@@ -10,9 +10,7 @@
   "sorry_page.subtitle": "We need you on a real computer",
   "sorry_page.title": "Sorry",
   "thanks_page.cta": "Add another document",
-  "thanks_page.explanation": "You only need to send us the email (a popup should have opened) and we will let you know as soon as the service is integrated in the system",
-  "thanks_page.subtitle": "Thanks for your contribution",
-  "thanks_page.title": "Thanks",
+  "thanks_page.title": "Thanks 🙏",
   "service_page.cta": "OK",
   "service_page.back": "Go back",
   "service_page.help": "Need help?",
@@ -38,6 +36,10 @@
   "thanks_page.seo.title": "Thanks 🎉",
   "thanks_page.seo.desc": "Thanks for contributing",
   "service_page.could_not_create_issue": "We're truly sorry but the automatic creation of this new service failed, we will need you to send us an email",
-  "thanks_page.github_url": "We just created a GitHub issue for your demand. <1></1>You can subscribe to notifications there: <3><0>{{url}}</0></3>.<5></5><6></6>You may also track the changes to the terms of service and privacy policies for other online services by email. Please refer to the form you will find on our homepage.",
-  "service_page.submit": "Submit"
+  "service_page.submit": "Submit",
+  "breadcrumb.home_page.name": "Home",
+  "breadcrumb.contribute.name": "Contribute",
+  "breadcrumb.adddocument.name": "Add a document",
+  "breadcrumb.thanks.name": "Thanks",
+  "contributors.subtitle": "Contributors"
 }
