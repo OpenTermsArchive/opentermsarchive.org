@@ -1,9 +1,7 @@
-import { Trans, useTranslation } from 'react-i18next';
 import { WithI18nResult, withI18n } from 'modules/I18n';
 
 import Breadcrumb from 'components/BreadCrumb';
 import Button from 'modules/Common/components/Button';
-import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Contributors from 'modules/OTA-api/data-components/Contributors';
 import Hero from 'modules/Common/components/Hero';
@@ -12,6 +10,7 @@ import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
+import { useTranslation } from 'react-i18next';
 import useUrl from 'hooks/useUrl';
 
 export default function ThanksPage({ mdxContent }: WithI18nResult) {
