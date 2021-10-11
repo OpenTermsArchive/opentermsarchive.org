@@ -7,10 +7,6 @@
     margin-bottom: var(--mXL);
   }
 
-  & button {
-    margin-bottom: var(--mXL);
-  }
-
   & p:not(:last-child) {
     margin-bottom: var(--mM);
   }
@@ -65,6 +61,6 @@
   }
 
   & button {
-    margin-top: var(--mM);
+    margin-bottom: var(--mXL);
   }
 }

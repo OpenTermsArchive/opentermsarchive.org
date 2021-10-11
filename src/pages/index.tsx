@@ -491,6 +491,8 @@ const HomePage = ({ services }: any) => {
               <ThumbGaleryItem src="/images/logo-gdi.png" width="150" height="32" />
             </a>
           </Link>
+          <ThumbGaleryItem src="/images/nextgen.png" width="191" height="48" />
+          <ThumbGaleryItem src="/images/france-relance.png" width="77" height="77" />
           <Link href="https://www.peren.gouv.fr/">
             <a target="_blank">
               <ThumbGaleryItem src="/images/logo-peren.png" width="150" height="121" />
