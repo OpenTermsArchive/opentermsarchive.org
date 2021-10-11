@@ -1,5 +1,5 @@
 const DOCUMENT_TYPES_URL =
-  'https://raw.githubusercontent.com/ambanum/OpenTermsArchive/master/src/app/types.json';
+  'https://opentermsarchive.org/data/api/list_documentTypes/v1/';
 export const CONTRIBUTORS_URL = 'https://api.github.com/repos/ambanum/OpenTermsArchive/contributors';
 
 import { Octokit } from 'octokit';
