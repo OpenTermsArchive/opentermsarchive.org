@@ -1,5 +1,5 @@
 export const SERVICES_URL =
-  'https://opentermsarchive.org/api/open-terms-archive/list_services/v1/?multiple_versions_only=false';
+  'https://opentermsarchive.org/data/api/list_services/v1/?multiple_versions_only=false';
 
 import axios from 'axios';
 
