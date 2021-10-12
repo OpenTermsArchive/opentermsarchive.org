@@ -39,6 +39,14 @@
       }
     }
 
+    &.headerMenu__primary {
+      & ul {
+        & li {
+          margin: var(--mS) auto;
+        }
+      }
+    }
+
     &.headerMenu__secondary {
       & ul {
         & li:not(:last-child) {

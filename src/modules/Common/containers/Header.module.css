@@ -70,6 +70,10 @@
     & nav {
       width: 100%;
 
+      &:first-child {
+        align-items: end;
+      }
+
       &:first-child,
       &:last-child {
         flex-grow: 1;
