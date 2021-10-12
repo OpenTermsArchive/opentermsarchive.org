@@ -59,9 +59,6 @@
   "header.open": "Menu",
   "header.close": "Close",
   "header.link.how": "How",
-  "header.link.values": "Values",
-  "header.link.contribute": "Contribute",
-  "header.link.showcase": "Built with",
   "footer.link.how": "How",
   "footer.link.values": "Values",
   "footer.link.showcase": "Built with",
@@ -85,9 +82,6 @@
   "header.link.case-studies": "Case studies",
   "header.link.case-studies.title": "So far, Open Terms Archive taught us a lot.",
   "header.link.how.title": "How does OTA work?",
-  "header.link.values.title": "What we believe in",
-  "header.link.contribute.title": "Help us appreciate the loyalty of the services.",
-  "header.link.showcase.title": "Applications built with Open Terms Archive",
   "footer.link.api.title": "Use the API",
   "footer.link.dataset.title": "Download the dataset",
   "footer.link.tos.title": "Read the TOS of Open Terms Archive website",
@@ -143,5 +137,10 @@
   "subscribe_form.changes.before": "For this document, you should be interesssed to",
   "subscribe_form.fields.service.optgroup.gatekeepers": "Gatekeepers",
   "subscribe_form.fields.service.optgroup.otherservices": "Other services",
-  "home_page.contributors.subtitle": "Thanks 🙏"
+  "home_page.contributors.subtitle": "Thanks 🙏",
+  "header.link.home.title": "Home",
+  "header.link.adddocument.title": "Add a document",
+  "header.link.home": "Home",
+  "header.link.adddocument": "Add a document",
+  "header.link.github.title": "See the source code"
 }

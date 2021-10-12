@@ -1,4 +1,4 @@
-import { FiMail, FiTwitter } from 'react-icons/fi';
+import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
 import React, { ReactNode } from 'react';
 
 import { Analytics } from 'modules/Analytics';
@@ -51,16 +51,42 @@ const Layout = ({
                 <HeaderMenu>
                   <ul>
                     <li>
-                      <Link href="/how-it-works">
+                      <Link href="/">
                         <a
-                          title={t('common:header.link.how.title', 'How does OTA work?')}
+                          title={t('common:header.link.home.title', 'Back to the home page')}
                           onClick={toggleExtended}
                         >
-                          {t('common:header.link.how', 'How')}
+                          {t('common:header.link.home', 'Home')}
                         </a>
                       </Link>
                     </li>
                     <li>
+                      <Link href="/how-it-works">
+                        <a
+                          title={t(
+                            'common:header.link.how.title',
+                            'How does Open Terms Archive work?'
+                          )}
+                          onClick={toggleExtended}
+                        >
+                          {t('common:header.link.how', 'How it works?')}
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/contribute">
+                        <a
+                          title={t(
+                            'common:header.link.adddocument.title',
+                            'Add a document to Open Terms Archive'
+                          )}
+                          onClick={toggleExtended}
+                        >
+                          {t('common:header.link.adddocument', 'Add a document')}
+                        </a>
+                      </Link>
+                    </li>
+                    {/* <li>
                       <Link href={'/#'.concat(t('common:home_page.values.id'))}>
                         <a
                           title={t('common:header.link.values.title', 'What we believe in')}
@@ -69,8 +95,8 @@ const Layout = ({
                           {t('common:header.link.values', 'Values')}
                         </a>
                       </Link>
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                       <Link href={'/#'.concat(t('common:home_page.contribute.id'))}>
                         <a
                           title={t(
@@ -82,8 +108,8 @@ const Layout = ({
                           {t('common:header.link.contribute', 'Contribute')}
                         </a>
                       </Link>
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                       <Link href={'/#'.concat(t('common:home_page.showcase.id'))}>
                         <a
                           title={t(
@@ -95,7 +121,7 @@ const Layout = ({
                           {t('common:header.link.showcase', 'Built with')}
                         </a>
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link href={'/case-studies'}>
                         <a
@@ -111,17 +137,32 @@ const Layout = ({
                     </li>
                   </ul>
                 </HeaderMenu>
-                <HeaderMenu>
+                <HeaderMenu type="secondary">
                   <LanguageSwitcher />
-                  <Link href="https://twitter.com/OpenTerms">
-                    <a
-                      className={classNames('icon_circle')}
-                      target="_blank"
-                      title={t('common:header.link.twitter.title', 'Follow us')}
-                    >
-                      <FiTwitter color="#fefffd" />
-                    </a>
-                  </Link>
+                  <ul>
+                    <li>
+                      <Link href="https://twitter.com/OpenTerms">
+                        <a
+                          className={classNames('icon_circle')}
+                          target="_blank"
+                          title={t('common:header.link.twitter.title', 'Follow us')}
+                        >
+                          <FiTwitter color="#fefffd" />
+                        </a>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="https://github.com/ambanum/OpenTermsArchive/">
+                        <a
+                          className={classNames('icon_circle')}
+                          target="_blank"
+                          title={t('common:header.link.github.title', 'See the source code')}
+                        >
+                          <FiGithub color="#fefffd" />
+                        </a>
+                      </Link>
+                    </li>
+                  </ul>
                 </HeaderMenu>
               </>
             )}
