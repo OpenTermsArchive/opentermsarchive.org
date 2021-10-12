@@ -17,6 +17,22 @@ yarn
 yarn dev
 ```
 
+### Test to your local IP address
+
+When building responsive applications, it is very important to be able to test on mobile and other devices in real-time.
+
+Get your local IP
+
+```
+ipconfig getifaddr en0
+```
+
+Run
+
+```
+yarn dev -H YOUR.LOCAL.IP.ADRESS
+```
+
 ### Local creation of services
 
 If you're a developer and a contributor of [OpenTermsArchive](https://github.com/ambanum/openTermsArchive), you can be interested in setting up a local instance where you can directly save the result of the contribution in the corresponding folder in OTA project, and thus test it on your local environment.
