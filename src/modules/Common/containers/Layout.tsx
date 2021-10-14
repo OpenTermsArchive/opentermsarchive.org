@@ -297,7 +297,7 @@ const Layout = ({
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://disinfo.quaidorsay.fr/api/open-terms-archive/docs">
+                  <Link href="https://opentermsarchive.org/data/api">
                     <a title={t('common:footer.link.api.title', 'Use the API')}>
                       {t('common:footer.link.api', 'API')}
                     </a>

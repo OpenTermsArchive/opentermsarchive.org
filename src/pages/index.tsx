@@ -243,12 +243,7 @@ const HomePage = ({ services }: any) => {
             iconName="FiGithub"
             iconColor="#0496FF"
           >
-            <Link
-              href={t(
-                'common:home_page.contribute.buttonbloc2.button.href',
-                'https://github.com/ambanum/OpenTermsArchive'
-              )}
-            >
+            <Link href="https://github.com/ambanum/OpenTermsArchive">
               <a
                 title={t(
                   'common:home_page.contribute.buttonbloc2.link.title',
@@ -270,12 +265,7 @@ const HomePage = ({ services }: any) => {
             iconName="FiDatabase"
             iconColor="#0496FF"
           >
-            <Link
-              href={t(
-                'common:home_page.contribute.buttonbloc3.button.href',
-                'https://disinfo.quaidorsay.fr/api/open-terms-archive/docs'
-              )}
-            >
+            <Link href="https://opentermsarchive.org/data/api">
               <a
                 title={t(
                   'common:home_page.contribute.buttonbloc3.link.title',
@@ -289,10 +279,7 @@ const HomePage = ({ services }: any) => {
             </Link>
             <LinkIcon
               iconColor="#999999"
-              href={t(
-                'common:home_page.contribute.buttonbloc3.sublink.href',
-                'https://github.com/ambanum/OpenTermsArchive-versions/releases'
-              )}
+              href="https://github.com/ambanum/OpenTermsArchive-versions/releases"
               small={true}
             >
               <a
@@ -400,10 +387,7 @@ const HomePage = ({ services }: any) => {
             >
               <LinkIcon
                 iconColor="#0496FF"
-                href={t(
-                  'common:home_page.showcase.item1.link.href',
-                  'https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent'
-                )}
+                href="https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent"
               >
                 <a
                   title={t(
@@ -428,10 +412,7 @@ const HomePage = ({ services }: any) => {
             >
               <LinkIcon
                 iconColor="#0496FF"
-                href={t(
-                  'common:home_page.showcase.item2.link.href',
-                  'https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments'
-                )}
+                href="https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments"
               >
                 <a
                   title={t(
