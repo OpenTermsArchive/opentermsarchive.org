@@ -290,6 +290,13 @@ const Layout = ({
               </ul>
               <ul>
                 <li>
+                  <Link href="/dashboard">
+                    <a title={t('common:footer.link.dashboard.title', 'A set of activity metrics')}>
+                      {t('common:footer.link.dashboard', 'Dashboard')}
+                    </a>
+                  </Link>
+                </li>
+                <li>
                   <Link href="https://disinfo.quaidorsay.fr/api/open-terms-archive/docs">
                     <a title={t('common:footer.link.api.title', 'Use the API')}>
                       {t('common:footer.link.api', 'API')}

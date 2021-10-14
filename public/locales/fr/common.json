@@ -146,5 +146,16 @@
   "header.link.adddocument.title": "Ajouter un document à Open Terms Archive maintenant",
   "header.link.home": "Accueil",
   "header.link.adddocument": "Ajouter un document",
-  "header.link.github.title": "Voir le code source"
+  "header.link.github.title": "Voir le code source",
+  "footer.link.dashboard.title": "Des données pour mesurer l'activité",
+  "footer.link.dashboard": "Tableau de bord",
+  "dashboard.seo.title": "Tableau de bord",
+  "dashboard.hero.title": "Tableau de bord",
+  "dashboard.hero.subtitle": "Des données pour mesurer l'activité d'Open Terms Archive",
+  "dashboard.services.chart.legend.trackedservices": "Services suivis",
+  "dashboard.services.chart.legend.activeservices": "Services actifs",
+  "dashboard.services.title": "Services",
+  "dashboard.services.subtitle": "Évolution des services suivis et actifs.",
+  "dashboard.services.chart.axis.bottom.legend": "année-mois",
+  "dashboard.services.chart.axis.left.legend": "nombre de services"
 }

@@ -28,6 +28,8 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
+    "@nivo/core": "^0.74.0",
+    "@nivo/line": "^0.74.0",
     "@socialgouv/matomo-next": "^1.2.1",
     "@types/lodash": "^4.14.171",
     "@welldone-software/why-did-you-render": "6.2.1",
