@@ -104,7 +104,7 @@ export interface GitHubAuthor {
   site_admin: boolean;
 }
 
-export interface ContributorActivityWeeks{
+export interface ContributorActivityWeek{
   w:number; //Start of the week, given as a Unix timestamp.
   a:number; //Number of additions
   d:number; //Number of deletions
@@ -113,7 +113,7 @@ export interface ContributorActivityWeeks{
 
 export interface ContributorActivity {
   total:number;
-  weeks:ContributorActivityWeeks[];
+  weeks:ContributorActivityWeek[];
   author:GitHubAuthor;
 }
 

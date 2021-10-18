@@ -143,10 +143,12 @@
   "dashboard.seo.title": "Dashboard",
   "dashboard.hero.title": "Dashboard",
   "dashboard.hero.subtitle": "A set of activity metrics",
-  "dashboard.services.chart.legend.trackedservices": "Tracked services",
-  "dashboard.services.chart.legend.activeservices": "Active services",
-  "dashboard.services.title": "Services",
-  "dashboard.services.subtitle": "Evolution of tracked and active services",
-  "dashboard.services.chart.axis.bottom.legend": "Year-Month",
-  "dashboard.services.chart.axis.left.legend": "Number of services"
+  "dashboard.activity.chart.legend.trackedservices": "Documents versions",
+  "dashboard.activity.chart.legend.activeservices": "Active services",
+  "dashboard.activity.chart.axis.bottom.legend": "year-month",
+  "dashboard.activity.chart.axis.left.legend": "number",
+  "dashboard.activity.title": "Last 12 months activity",
+  "dashboard.activity.subtitle": "Evolution of services and documents versions over the last 12 months",
+  "dashboard.activity.chart.legend.documentsversions": "Documents versions",
+  "dashboard.activity.desc": "Evolution of services and documents versions over the last 12 months"
 }
