@@ -1,6 +1,7 @@
 const DOCUMENT_TYPES_URL =
   'https://opentermsarchive.org/data/api/list_documentTypes/v1/';
 export const CONTRIBUTORS_URL = 'https://api.github.com/repos/ambanum/OpenTermsArchive/contributors';
+export const VERSIONS_CONTRIBUTOR_COMMIT_ACTIVITY = 'https://api.github.com/repos/ambanum/OpenTermsArchive-versions/stats/contributors';
 
 import { Octokit } from 'octokit';
 import axios from 'axios';
@@ -74,7 +75,51 @@ export type Contributors = Contributor[];
 
 export const getContributors = async () => {
   try {
-    const  { data }  = await octokit.request(`GET ${CONTRIBUTORS_URL}`)
+    const  { data } : { data : Contributors }  = await octokit.request(`GET ${CONTRIBUTORS_URL}`)
+    return data;
+  } catch (e) {
+    console.error(e);
+    return {};
+  }
+}
+
+export interface GitHubAuthor {
+  login: string;
+  id: number;
+  node_id: number;
+  avatar_url: string;
+  gravatar_id: string;
+  url:string;
+  html_url: string;
+  followers_url: string;
+  following_url: string;
+  gists_url: string;
+  starred_url: string;
+  susbscriptions_url: string;
+  organizations_url: string;
+  repos_url:string;
+  events_url: string;
+  received_events_url: string;
+  type: string;
+  site_admin: boolean;
+}
+
+export interface ContributorActivityWeeks{
+  w:number; //Start of the week, given as a Unix timestamp.
+  a:number; //Number of additions
+  d:number; //Number of deletions
+  c:number; //Number of commits
+}
+
+export interface ContributorActivity {
+  total:number;
+  weeks:ContributorActivityWeeks[];
+  author:GitHubAuthor;
+}
+
+export const getAllVersionsContributorCommitActivity = async () => {
+  try {
+    const  { data } : { data: ContributorActivity } = await octokit.request(`GET ${VERSIONS_CONTRIBUTOR_COMMIT_ACTIVITY}`);
     return data;
   } catch (e) {
     console.error(e);

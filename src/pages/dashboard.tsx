@@ -1,3 +1,5 @@
+import { ContributorActivity, getAllVersionsContributorCommitActivity } from 'modules/Github/api';
+
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
@@ -8,8 +10,19 @@ import { getGraphServices } from 'modules/OTA-api/api';
 import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
 
-const DashboardPage = ({ graphServices }: any) => {
+const DashboardPage = ({ graphServices, versionsContributorCommitActivity }: any) => {
   const { t } = useTranslation('common');
+
+  //Calculate the total number of versions commits
+  const totalVersionsCommits = versionsContributorCommitActivity
+    .map((contributorActivity: ContributorActivity) => {
+      return contributorActivity.total;
+    })
+    .reduce((pv: number, cv: number) => {
+      console.log('pv', pv);
+      console.log('cv', cv);
+      return pv + cv;
+    });
 
   //Format data for line graph services
   const trackedServicesData: any[] = [];
@@ -113,7 +126,13 @@ const DashboardPage = ({ graphServices }: any) => {
 
 export const getStaticProps = withI18n()(async (props: any) => {
   const graphServices = await getGraphServices();
-  return JSON.parse(JSON.stringify({ props: { ...props, graphServices }, revalidate: 10 }));
+  const versionsContributorCommitActivity = await getAllVersionsContributorCommitActivity();
+  return JSON.parse(
+    JSON.stringify({
+      props: { ...props, graphServices, versionsContributorCommitActivity },
+      revalidate: 60 * 60 * 1,
+    })
+  );
 });
 
 export default DashboardPage;
