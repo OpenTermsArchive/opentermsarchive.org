@@ -154,5 +154,15 @@
   "dashboard.activity.chart.axis.left.legend": "nombre",
   "dashboard.activity.title": "Activité générale",
   "dashboard.activity.subtitle": "Services et versions de documents.",
-  "dashboard.activity.desc": "Évolution des services et des versions de documents enregistrés sur les 12 derniers mois."
+  "dashboard.activity.desc": "Évolution des services et des versions de documents enregistrés sur les 12 derniers mois.",
+  "dashboard.latestversionscommits.title": "Derniers changements enregistrés",
+  "dashboard.latestversionscommits.subtitle": "sur les documents suivis",
+  "dashboard.latestversionscommits.buttonbloc.title": "Nous avons enregistré {{count}} version de document",
+  "dashboard.latestversionscommits.buttonbloc.title_plural": "Nous avons enregistré {{count}} versions de documents",
+  "dashboard.latestversionscommits.buttonbloc.desc": "Et il y en a des nouvelles tous les jours",
+  "dashboard.latestversionscommits.buttonbloc.link.title": "Explorer les versions de documents",
+  "dashboard.latestversionscommits.buttonbloc.label": "Explorer",
+  "dashboard.serviceslist.title": "Liste des services",
+  "dashboard.serviceslist.subtitle": "{{count}} services",
+  "dashboard.serviceslist.subtitle_plural": "{{count}} services"
 }

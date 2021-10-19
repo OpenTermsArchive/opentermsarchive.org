@@ -23,22 +23,16 @@ import { withI18n } from 'modules/I18n';
 
 const DashboardPage = React.memo(
   ({
-    graphServices,
+    graphServices = [],
     versionsContributorCommitActivity = [],
     latestVersionsCommits = [],
-    services,
+    services = [],
   }: any) => {
     const { t } = useTranslation('common');
 
     const nbServices = Object.keys(services).length;
-    const nbServicesTitle = t('common:dashboard.services.nb', '{{count}} services', {
-      count: nbServices,
-    });
 
-    const nbDocuments = Object.values(services).flat().length;
-    const nbDocsTitle = t('common:dashboard.documents.nb', '{{count}} documents', {
-      count: nbDocuments,
-    });
+    services = Object.entries(services).sort();
 
     const cuttOffDate = new Date(new Date().setFullYear(new Date().getFullYear() - 1));
     const firstDayOfCurrentMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
@@ -220,7 +214,8 @@ const DashboardPage = React.memo(
                     <li>
                       <LinkIcon target="_blank" href={versionCommit.html_url}>
                         {splittedMessage[0]}
-                      </LinkIcon>{' '}
+                      </LinkIcon>
+                      {' - '}
                       <span className="text__light">({date.toUTCString()})</span>
                     </li>
                   );
@@ -232,8 +227,8 @@ const DashboardPage = React.memo(
             <ButtonBlock
               title={t(
                 'common:dashboard.latestversionscommits.buttonbloc.title',
-                'We recorded {{totalVersionsCommits}} documents versions',
-                { totalVersionsCommits }
+                'We recorded {{count}} documents versions',
+                { count: totalVersionsCommits }
               )}
               desc={t(
                 'common:dashboard.latestversionscommits.buttonbloc.desc',
@@ -254,6 +249,43 @@ const DashboardPage = React.memo(
                 </a>
               </Link>
             </ButtonBlock>
+          </Column>
+        </Container>
+        <Container gridCols="12" gridGutters="11">
+          <Column
+            width={100}
+            title={t('common:dashboard.serviceslist.title', 'Services list')}
+            subtitle={t('common:dashboard.serviceslist.subtitle', '{{count}} services', {
+              count: nbServices,
+            })}
+          >
+            <TextContent>
+              <ul>
+                {services.map((service: any) => {
+                  return (
+                    <li>
+                      {service[0]}
+                      {' - '}
+
+                      {service[1].map((documentType: string, index: number, array: any) => {
+                        const separator = index < array.length - 1 ? '; ' : '';
+                        const target = `https://github.com/ambanum/OpenTermsArchive-versions/blob/master/${service}/${documentType}.md`;
+                        return (
+                          <>
+                            <Link href={target}>
+                              <a className="a__small" target="_blank" rel="noopener">
+                                {documentType}
+                                {separator}
+                              </a>
+                            </Link>
+                          </>
+                        );
+                      })}
+                    </li>
+                  );
+                })}
+              </ul>
+            </TextContent>
           </Column>
         </Container>
       </Layout>

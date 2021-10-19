@@ -154,5 +154,15 @@
   "dashboard.activity.title": "General activity",
   "dashboard.activity.subtitle": "Services and documents versions",
   "dashboard.activity.chart.legend.documentsversions": "Documents versions",
-  "dashboard.activity.desc": "Evolution of services and documents versions over the last 12 months"
+  "dashboard.activity.desc": "Evolution of services and documents versions over the last 12 months",
+  "dashboard.latestversionscommits.title": "Latest changes recorded",
+  "dashboard.latestversionscommits.subtitle": "on the tracked documents",
+  "dashboard.latestversionscommits.buttonbloc.title": "We recorded {{count}} documents versions",
+  "dashboard.latestversionscommits.buttonbloc.title_plural": "We recorded {{count}} documents versions",
+  "dashboard.latestversionscommits.buttonbloc.desc": "And it continues every day, explore them on GitHub.",
+  "dashboard.latestversionscommits.buttonbloc.link.title": "Explore the documents versions",
+  "dashboard.latestversionscommits.buttonbloc.label": "Explore now",
+  "dashboard.serviceslist.title": "Services list",
+  "dashboard.serviceslist.subtitle": "{{count}} services",
+  "dashboard.serviceslist.subtitle_plural": "{{count}} services"
 }
