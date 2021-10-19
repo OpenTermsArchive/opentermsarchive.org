@@ -5,38 +5,52 @@ import {
   getAllVersionsContributorCommitActivity,
   getLastVersionsCommits,
 } from 'modules/Github/api';
+import { getGraphServices, getServices } from 'modules/OTA-api/api';
 
+import Button from 'modules/Common/components/Button';
+import ButtonBlock from 'modules/Common/components/ButtonBlock';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import LineChart from 'modules/Common/components/Charts/LineChart';
+import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import { getGraphServices } from 'modules/OTA-api/api';
 import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
 
 const DashboardPage = React.memo(
   ({
     graphServices,
-    versionsContributorCommitActivity,
-    lastVersionsCommits: lastestVersionsCommits,
+    versionsContributorCommitActivity = [],
+    latestVersionsCommits = [],
+    services,
   }: any) => {
     const { t } = useTranslation('common');
+
+    const nbServices = Object.keys(services).length;
+    const nbServicesTitle = t('common:dashboard.services.nb', '{{count}} services', {
+      count: nbServices,
+    });
+
+    const nbDocuments = Object.values(services).flat().length;
+    const nbDocsTitle = t('common:dashboard.documents.nb', '{{count}} documents', {
+      count: nbDocuments,
+    });
 
     const cuttOffDate = new Date(new Date().setFullYear(new Date().getFullYear() - 1));
     const firstDayOfCurrentMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
 
     //Total number of versions commits
-    // const totalVersionsCommits = versionsContributorCommitActivity
-    //   .map((contributorActivity: ContributorActivity) => {
-    //     return contributorActivity.total;
-    //   })
-    //   .reduce((pv: number, cv: number) => {
-    //     return pv + cv;
-    //   });
+    const totalVersionsCommits = versionsContributorCommitActivity
+      .map((contributorActivity: ContributorActivity) => {
+        return contributorActivity.total;
+      })
+      .reduce((pv: number, cv: number) => {
+        return pv + cv;
+      });
 
     //Format commits versions data
     const tempVersionsCommitsData = versionsContributorCommitActivity
@@ -188,18 +202,18 @@ const DashboardPage = React.memo(
           </Column>
         </Container>
 
-        <Container gridCols="12" gridGutters="11">
+        <Container gridCols="12" gridGutters="11" flex={true}>
           <Column
-            width={100}
-            title={t('common:dashboard.lastestversionscommits.title', 'Latest changes recorded')}
+            width={60}
+            title={t('common:dashboard.latestversionscommits.title', 'Latest changes recorded')}
             subtitle={t(
-              'common:dashboard.lastestversionscommits.subtitle',
+              'common:dashboard.latestversionscommits.subtitle',
               'on the tracked documents'
             )}
           >
             <TextContent>
               <ul>
-                {lastestVersionsCommits.map((versionCommit: Commit) => {
+                {latestVersionsCommits.map((versionCommit: Commit) => {
                   const splittedMessage = versionCommit.commit.message.split('\n\n');
                   const date = new Date(versionCommit.commit.author.date);
                   return (
@@ -214,6 +228,33 @@ const DashboardPage = React.memo(
               </ul>
             </TextContent>
           </Column>
+          <Column width={40} alignX="center" alignY="center">
+            <ButtonBlock
+              title={t(
+                'common:dashboard.latestversionscommits.buttonbloc.title',
+                'We recorded {{totalVersionsCommits}} documents versions',
+                { totalVersionsCommits }
+              )}
+              desc={t(
+                'common:dashboard.latestversionscommits.buttonbloc.desc',
+                'And it continues every day, explore them on GitHub.'
+              )}
+              fillParent={true}
+            >
+              <Link href="https://github.com/ambanum/OpenTermsArchive-versions/">
+                <a
+                  title={t(
+                    'common:dashboard.latestversionscommits.buttonbloc.link.title',
+                    'Explore the documents versions'
+                  )}
+                >
+                  <Button>
+                    {t('common:dashboard.latestversionscommits.buttonbloc.label', 'Explore now')}
+                  </Button>
+                </a>
+              </Link>
+            </ButtonBlock>
+          </Column>
         </Container>
       </Layout>
     );
@@ -221,16 +262,18 @@ const DashboardPage = React.memo(
 );
 
 export const getStaticProps = withI18n()(async (props: any) => {
+  const services = await getServices();
   const graphServices = await getGraphServices();
   const versionsContributorCommitActivity = await getAllVersionsContributorCommitActivity();
-  const lastestVersionsCommits = await getLastVersionsCommits();
+  const latestVersionsCommits = await getLastVersionsCommits();
   return JSON.parse(
     JSON.stringify({
       props: {
         ...props,
         graphServices,
         versionsContributorCommitActivity,
-        lastVersionsCommits: lastestVersionsCommits,
+        latestVersionsCommits,
+        services,
       },
       revalidate: 60 * 60 * 1,
     })
