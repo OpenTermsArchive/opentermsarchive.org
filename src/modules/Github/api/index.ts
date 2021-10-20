@@ -43,6 +43,8 @@ export interface ContributorActivity {
   author:GitHubAuthor;
 }
 
+export type ContributorsActivity = ContributorActivity[];
+
 export interface Commit{
   url: string;
   sha: string;
@@ -60,9 +62,7 @@ export interface Commit{
   }
 }
 
-export interface Commits{
-  commits:Commit[]
-}
+export type Commits = Commit[];
 
 export interface Contributor {
   login: string;
@@ -141,7 +141,7 @@ export const getContributors = async () => {
 
 export const getAllVersionsContributorCommitActivity = async () => {
   try {
-    const  { data } : { data: ContributorActivity } = await octokit.request(`GET ${VERSIONS_CONTRIBUTOR_COMMITS_ACTIVITY}`);
+    const  { data } : { data: ContributorsActivity } = await octokit.request(`GET ${VERSIONS_CONTRIBUTOR_COMMITS_ACTIVITY}`);
     return data;
   } catch (e) {
     console.error(e);

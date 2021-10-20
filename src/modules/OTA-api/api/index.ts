@@ -23,7 +23,9 @@ export type GraphServices = GraphService[];
 export const getServices = async () => {
   try {
     const { data } = await axios.get<Services>(SERVICES_URL);
-    return data;
+    return Object.keys(data)
+      .sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }))
+      .reduce((acc: Services, key) => ({ ...acc, [key]: data[key] }), {});
   } catch (e) {
     console.error(e);
     return {};

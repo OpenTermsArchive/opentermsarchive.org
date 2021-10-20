@@ -27,6 +27,7 @@
   --colorWhite: #fefffd;
 
   /* Padding & margin */
+  --p3XS: 2px;
   --p2XS: 4px;
   --pXS: 8px;
   --pS: 12px;
@@ -37,6 +38,7 @@
   --p3XL: 64px;
   --p4XL: 96px;
 
+  --m3XS: 2px;
   --m2XS: 4px;
   --mXS: 8px;
   --mS: 12px;

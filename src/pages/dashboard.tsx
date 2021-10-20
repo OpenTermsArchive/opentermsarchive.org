@@ -1,11 +1,13 @@
 import {
   Commit,
+  Commits,
   ContributorActivity,
   ContributorActivityWeek,
+  ContributorsActivity,
   getAllVersionsContributorCommitActivity,
   getLastVersionsCommits,
 } from 'modules/Github/api';
-import { getGraphServices, getServices } from 'modules/OTA-api/api';
+import { GraphServices, Services, getGraphServices, getServices } from 'modules/OTA-api/api';
 
 import Button from 'modules/Common/components/Button';
 import ButtonBlock from 'modules/Common/components/ButtonBlock';
@@ -17,28 +19,55 @@ import LineChart from 'modules/Common/components/Charts/LineChart';
 import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
+import ServicesList from 'modules/Common/components/ServicesList';
 import TextContent from 'modules/Common/components/TextContent';
+import useSWR from 'swr';
 import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
 
 const DashboardPage = React.memo(
   ({
-    graphServices = [],
-    versionsContributorCommitActivity = [],
-    latestVersionsCommits = [],
-    services = [],
-  }: any) => {
+    graphServices: defaultGraphService,
+    versionsContributorCommitActivity: defaultVersionsContributorCommitActivity,
+    latestVersionsCommits: defaultLatestVersionsCommits,
+    services: defaultServices,
+  }: {
+    graphServices: GraphServices;
+    versionsContributorCommitActivity: ContributorsActivity;
+    latestVersionsCommits: Commits;
+    services: Services;
+  }) => {
     const { t } = useTranslation('common');
 
-    const nbServices = Object.keys(services).length;
+    const { data: services } = useSWR<Services>('/api/ota/services/all', {
+      initialData: defaultServices,
+      revalidateOnMount: true,
+    });
 
-    services = Object.entries(services).sort();
+    const { data: versionsContributorCommitActivity } = useSWR<ContributorsActivity>(
+      '/api/ota/stats/contributors',
+      {
+        initialData: defaultVersionsContributorCommitActivity,
+        revalidateOnMount: true,
+      }
+    );
 
+    const { data: graphServices } = useSWR<GraphServices>('/api/ota/services/graph', {
+      initialData: defaultGraphService,
+      revalidateOnMount: true,
+    });
+
+    const { data: latestVersionsCommits } = useSWR<Commits>('/api/ota/versions/commits/latest', {
+      initialData: defaultLatestVersionsCommits,
+      revalidateOnMount: true,
+    });
+
+    const nbServices = Object.keys(services || {}).length;
     const cuttOffDate = new Date(new Date().setFullYear(new Date().getFullYear() - 1));
     const firstDayOfCurrentMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
 
     //Total number of versions commits
-    const totalVersionsCommits = versionsContributorCommitActivity
+    const totalVersionsCommits = (versionsContributorCommitActivity || [])
       .map((contributorActivity: ContributorActivity) => {
         return contributorActivity.total;
       })
@@ -47,7 +76,7 @@ const DashboardPage = React.memo(
       });
 
     //Format commits versions data
-    const tempVersionsCommitsData = versionsContributorCommitActivity
+    const tempVersionsCommitsData = (versionsContributorCommitActivity || [])
       .map((contributorActivity: ContributorActivity) => {
         return contributorActivity.weeks;
       })
@@ -91,7 +120,6 @@ const DashboardPage = React.memo(
           new Date(graphService.year_month).getMonth() + 1,
           0
         );
-
         if (
           graphServiceDate.getTime() >= cuttOffDate.getTime() &&
           graphServiceDate.getTime() < firstDayOfCurrentMonth.getTime()
@@ -207,7 +235,7 @@ const DashboardPage = React.memo(
           >
             <TextContent>
               <ul>
-                {latestVersionsCommits.map((versionCommit: Commit) => {
+                {(latestVersionsCommits || []).map((versionCommit: Commit) => {
                   const splittedMessage = versionCommit.commit.message.split('\n\n');
                   const date = new Date(versionCommit.commit.author.date);
                   return (
@@ -251,43 +279,17 @@ const DashboardPage = React.memo(
             </ButtonBlock>
           </Column>
         </Container>
-        <Container gridCols="12" gridGutters="11">
-          <Column
-            width={100}
-            title={t('common:dashboard.serviceslist.title', 'Services list')}
-            subtitle={t('common:dashboard.serviceslist.subtitle', '{{count}} services', {
+        <ServicesList
+          services={services || {}}
+          title={t('common:dashboard.serviceslist.title', 'Services list')}
+          subtitle={t(
+            'common:dashboard.serviceslist.subtitle',
+            '{{count}} services and related documents',
+            {
               count: nbServices,
-            })}
-          >
-            <TextContent>
-              <ul>
-                {services.map((service: any) => {
-                  return (
-                    <li>
-                      {service[0]}
-                      {' - '}
-
-                      {service[1].map((documentType: string, index: number, array: any) => {
-                        const separator = index < array.length - 1 ? '; ' : '';
-                        const target = `https://github.com/ambanum/OpenTermsArchive-versions/blob/master/${service}/${documentType}.md`;
-                        return (
-                          <>
-                            <Link href={target}>
-                              <a className="a__small" target="_blank" rel="noopener">
-                                {documentType}
-                                {separator}
-                              </a>
-                            </Link>
-                          </>
-                        );
-                      })}
-                    </li>
-                  );
-                })}
-              </ul>
-            </TextContent>
-          </Column>
-        </Container>
+            }
+          )}
+        />
       </Layout>
     );
   }

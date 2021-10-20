@@ -37,7 +37,7 @@ const outsideContributors = [
 ];
 
 const Contributors: React.FC<ContributorsProps> = React.memo(({ subtitle }) => {
-  const { data } = useSWR('/api/ota/contributors', {
+  const { data } = useSWR('/api/ota/contributors/all', {
     revalidateOnMount: true,
   });
 

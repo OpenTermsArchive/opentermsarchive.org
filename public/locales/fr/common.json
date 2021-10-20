@@ -163,6 +163,6 @@
   "dashboard.latestversionscommits.buttonbloc.link.title": "Explorer les versions de documents",
   "dashboard.latestversionscommits.buttonbloc.label": "Explorer",
   "dashboard.serviceslist.title": "Liste des services",
-  "dashboard.serviceslist.subtitle": "{{count}} services",
-  "dashboard.serviceslist.subtitle_plural": "{{count}} services"
+  "dashboard.serviceslist.subtitle": "{{count}} services et documents associés",
+  "dashboard.serviceslist.subtitle_plural": "{{count}} services et documents associés"
 }
