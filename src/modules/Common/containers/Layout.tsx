@@ -53,7 +53,7 @@ const Layout = ({
                     <li>
                       <Link href="/">
                         <a
-                          title={t('common:header.link.home.title', 'Back to the home page')}
+                          title={t('common:header.link.home.title', 'Back to home page')}
                           onClick={toggleExtended}
                         >
                           {t('common:header.link.home', 'Home')}
