@@ -36,6 +36,7 @@
     "autoprefixer": "^10.2.6",
     "axios": "^0.21.1",
     "classnames": "^2.3.1",
+    "dayjs": "^1.10.7",
     "debug": "^4.3.1",
     "express": "^4.17.1",
     "fs-extra": "10.0.0",

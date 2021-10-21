@@ -21,9 +21,13 @@ import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import ServicesList from 'modules/Common/components/ServicesList';
 import TextContent from 'modules/Common/components/TextContent';
+import dayjs from 'dayjs';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
 import useSWR from 'swr';
 import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
+
+dayjs.extend(localizedFormat);
 
 const DashboardPage = React.memo(
   ({
@@ -236,15 +240,15 @@ const DashboardPage = React.memo(
             <TextContent>
               <ul>
                 {(latestVersionsCommits || []).map((versionCommit: Commit) => {
-                  const splittedMessage = versionCommit.commit.message.split('\n\n');
-                  const date = new Date(versionCommit.commit.author.date);
                   return (
                     <li key={`latest_versions_commits_${versionCommit.sha}`}>
                       <LinkIcon target="_blank" href={versionCommit.html_url}>
-                        {splittedMessage[0]}
+                        {versionCommit.commit.message.split('\n\n')[0]}
                       </LinkIcon>
                       {' - '}
-                      <span className="text__light">({date.toUTCString()})</span>
+                      <span className="text__light">
+                        ({dayjs(versionCommit.commit.author.date).format('llll')})
+                      </span>
                     </li>
                   );
                 })}
