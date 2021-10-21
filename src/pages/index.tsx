@@ -219,7 +219,7 @@ const HomePage = ({ services }: any) => {
               'Easily and quickly add documents to follow.'
             )}
             iconName="FiPlus"
-            iconColor="#0496FF"
+            iconColor="var(--colorPrimary)"
           >
             <Link href={t('common:home_page.contribute.buttonbloc1.button.href', '/contribute')}>
               <a
@@ -241,7 +241,7 @@ const HomePage = ({ services }: any) => {
               'Add features, write tests, fix bugs, help us make better code.'
             )}
             iconName="FiGithub"
-            iconColor="#0496FF"
+            iconColor="var(--colorPrimary)"
           >
             <Link href="https://github.com/ambanum/OpenTermsArchive">
               <a
@@ -263,7 +263,7 @@ const HomePage = ({ services }: any) => {
               'Design your use cases using the data via the API.'
             )}
             iconName="FiDatabase"
-            iconColor="#0496FF"
+            iconColor="var(--colorPrimary)"
           >
             <Link href="https://opentermsarchive.org/data/api">
               <a
@@ -278,7 +278,7 @@ const HomePage = ({ services }: any) => {
               </a>
             </Link>
             <LinkIcon
-              iconColor="#999999"
+              iconColor="var(--colorBlack400)"
               href="https://github.com/ambanum/OpenTermsArchive-versions/releases"
               small={true}
             >
@@ -386,7 +386,7 @@ const HomePage = ({ services }: any) => {
               )}
             >
               <LinkIcon
-                iconColor="#0496FF"
+                iconColor="var(--colorBlack400)"
                 href="https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent"
               >
                 <a
@@ -411,7 +411,7 @@ const HomePage = ({ services }: any) => {
               )}
             >
               <LinkIcon
-                iconColor="#0496FF"
+                iconColor="var(--colorPrimary)"
                 href="https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments"
               >
                 <a
