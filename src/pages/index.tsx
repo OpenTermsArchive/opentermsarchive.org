@@ -213,31 +213,31 @@ const HomePage = ({ services }: any) => {
           subtitle={t('common:home_page.contribute.subtitle', 'Contribute')}
         >
           <ButtonBlock
-            title={t('common:home_page.contribute.buttonbloc1.title', 'Add documents')}
+            title={t('common:home_page.contribute.buttonblock1.title', 'Add documents')}
             desc={t(
-              'common:home_page.contribute.buttonbloc1.desc',
+              'common:home_page.contribute.buttonblock1.desc',
               'Easily and quickly add documents to follow.'
             )}
             iconName="FiPlus"
             iconColor="var(--colorPrimary)"
           >
-            <Link href={t('common:home_page.contribute.buttonbloc1.button.href', '/contribute')}>
+            <Link href={t('common:home_page.contribute.buttonblock1.button.href', '/contribute')}>
               <a
                 title={t(
-                  'common:home_page.contribute.buttonbloc1.link.title',
+                  'common:home_page.contribute.buttonblock1.link.title',
                   'Add a document now'
                 )}
               >
                 <Button>
-                  {t('common:home_page.contribute.buttonbloc1.button.label', 'Add now')}
+                  {t('common:home_page.contribute.buttonblock1.button.label', 'Add now')}
                 </Button>
               </a>
             </Link>
           </ButtonBlock>
           <ButtonBlock
-            title={t('common:home_page.contribute.buttonbloc2.title', 'Improve source code')}
+            title={t('common:home_page.contribute.buttonblock2.title', 'Improve source code')}
             desc={t(
-              'common:home_page.contribute.buttonbloc2.desc',
+              'common:home_page.contribute.buttonblock2.desc',
               'Add features, write tests, fix bugs, help us make better code.'
             )}
             iconName="FiGithub"
@@ -246,20 +246,20 @@ const HomePage = ({ services }: any) => {
             <Link href="https://github.com/ambanum/OpenTermsArchive">
               <a
                 title={t(
-                  'common:home_page.contribute.buttonbloc2.link.title',
+                  'common:home_page.contribute.buttonblock2.link.title',
                   'Go to the GitHub repository'
                 )}
               >
                 <Button>
-                  {t('common:home_page.contribute.buttonbloc2.button.label', 'View source code')}
+                  {t('common:home_page.contribute.buttonblock2.button.label', 'View source code')}
                 </Button>
               </a>
             </Link>
           </ButtonBlock>
           <ButtonBlock
-            title={t('common:home_page.contribute.buttonbloc3.title', 'Use the data')}
+            title={t('common:home_page.contribute.buttonblock3.title', 'Use the data')}
             desc={t(
-              'common:home_page.contribute.buttonbloc3.desc',
+              'common:home_page.contribute.buttonblock3.desc',
               'Design your use cases using the data via the API.'
             )}
             iconName="FiDatabase"
@@ -268,12 +268,12 @@ const HomePage = ({ services }: any) => {
             <Link href="https://opentermsarchive.org/data/api">
               <a
                 title={t(
-                  'common:home_page.contribute.buttonbloc3.link.title',
+                  'common:home_page.contribute.buttonblock3.link.title',
                   'Read the documentation for use the API'
                 )}
               >
                 <Button>
-                  {t('common:home_page.contribute.buttonbloc3.button.label', 'Discover the API')}
+                  {t('common:home_page.contribute.buttonblock3.button.label', 'Discover the API')}
                 </Button>
               </a>
             </Link>
@@ -284,12 +284,12 @@ const HomePage = ({ services }: any) => {
             >
               <a
                 title={t(
-                  'common:home_page.contribute.buttonbloc3.sublink.title',
+                  'common:home_page.contribute.buttonblock3.sublink.title',
                   'Download a dataset'
                 )}
               >
                 {t(
-                  'common:home_page.contribute.buttonbloc3.sublink.label',
+                  'common:home_page.contribute.buttonblock3.sublink.label',
                   'or download a dataset'
                 )}
               </a>
@@ -429,23 +429,23 @@ const HomePage = ({ services }: any) => {
         <Column width={50} alignX="center" alignY="center">
           <ButtonBlock
             title={t(
-              'common:home_page.showcase.buttonbloc.title',
+              'common:home_page.showcase.buttonblock.title',
               'Have you developed an Open Terms Archive based tool?'
             )}
             desc={t(
-              'common:home_page.showcase.buttonbloc.desc',
+              'common:home_page.showcase.buttonblock.desc',
               'Let the community know about it here'
             )}
             fillParent={true}
           >
             <Link
               href={t(
-                'common:home_page.showcase.buttonbloc.href',
+                'common:home_page.showcase.buttonblock.href',
                 'mailto:contact@opentermsarchive.org'
               )}
             >
-              <a title={t('common:home_page.showcase.buttonbloc.link.title', 'Send us a mail')}>
-                <Button>{t('common:home_page.showcase.buttonbloc.label', 'Contact us')}</Button>
+              <a title={t('common:home_page.showcase.buttonblock.link.title', 'Send us a mail')}>
+                <Button>{t('common:home_page.showcase.buttonblock.label', 'Contact us')}</Button>
               </a>
             </Link>
           </ButtonBlock>

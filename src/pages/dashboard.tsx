@@ -258,12 +258,12 @@ const DashboardPage = React.memo(
           <Column width={40} alignX="center" alignY="center">
             <ButtonBlock
               title={t(
-                'common:dashboard.latestversionscommits.buttonbloc.title',
+                'common:dashboard.latestversionscommits.buttonblock.title',
                 'We recorded {{count}} documents versions',
                 { count: totalVersionsCommits }
               )}
               desc={t(
-                'common:dashboard.latestversionscommits.buttonbloc.desc',
+                'common:dashboard.latestversionscommits.buttonblock.desc',
                 'And it continues every day, explore them on GitHub.'
               )}
               fillParent={true}
@@ -271,12 +271,12 @@ const DashboardPage = React.memo(
               <Link href="https://github.com/ambanum/OpenTermsArchive-versions/">
                 <a
                   title={t(
-                    'common:dashboard.latestversionscommits.buttonbloc.link.title',
+                    'common:dashboard.latestversionscommits.buttonblock.link.title',
                     'Explore the documents versions'
                   )}
                 >
                   <Button>
-                    {t('common:dashboard.latestversionscommits.buttonbloc.label', 'Explore now')}
+                    {t('common:dashboard.latestversionscommits.buttonblock.label', 'Explore now')}
                   </Button>
                 </a>
               </Link>
