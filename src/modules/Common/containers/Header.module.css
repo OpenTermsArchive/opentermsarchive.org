@@ -71,7 +71,7 @@
       width: 100%;
 
       &:first-child {
-        align-items: end;
+        align-items: flex-end;
       }
 
       &:first-child,
