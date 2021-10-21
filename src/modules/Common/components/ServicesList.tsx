@@ -27,13 +27,16 @@ const ServicesList: React.FC<ServicesListProps> = ({
           {Object.keys(services || {}).map((serviceName: string) => {
             const documentTypes = (services || {})[serviceName];
             return (
-              <li className={s.listServices_item}>
+              <li className={s.listServices_item} key={`service_list_${serviceName}`}>
                 <div className={s.listServices_item_service}>{serviceName} :</div>
                 <div className={s.listServices_item_docs}>
                   {documentTypes.map((documentType: string) => {
                     const target = `https://github.com/ambanum/OpenTermsArchive-versions/blob/master/${serviceName}/${documentType}.md`;
                     return (
-                      <div className={s.listServices_item_doc}>
+                      <div
+                        className={s.listServices_item_doc}
+                        key={`service_list_${serviceName}_${documentType}`}
+                      >
                         <IconDocument color="#999999" size={14} />
                         <Link href={target}>
                           <a className="a__small" target="_blank" rel="noopener">

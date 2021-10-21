@@ -239,7 +239,7 @@ const DashboardPage = React.memo(
                   const splittedMessage = versionCommit.commit.message.split('\n\n');
                   const date = new Date(versionCommit.commit.author.date);
                   return (
-                    <li>
+                    <li key={`latest_versions_commits_${versionCommit.sha}`}>
                       <LinkIcon target="_blank" href={versionCommit.html_url}>
                         {splittedMessage[0]}
                       </LinkIcon>
