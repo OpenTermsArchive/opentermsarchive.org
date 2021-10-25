@@ -7,10 +7,12 @@ import {
   removeCookieBanners,
 } from '../i-dont-care-about-cookies';
 
+import RecaptchaPlugin from 'puppeteer-extra-plugin-recaptcha';
+import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 import UserAgent from 'user-agents';
 import debug from 'debug';
 import fse from 'fs-extra';
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-extra';
 
 const logDebug = debug('ota.org:debug');
 
@@ -24,17 +26,19 @@ export const downloadUrl = async (
   const [extension, domain] = parsedUrl.hostname.split('.').reverse();
   const domainname = `${domain}.${extension}`;
 
-  const browser = await puppeteer.launch({
-    executablePath: process.env.CHROME_BIN,
-    // ignoreDefaultArgs: ['--disable-extensions', '--enable-automation'],
-    args: [
-      '--no-sandbox',
-      '--disable-gpu',
-      '--headless',
-      '--disable-dev-shm-usage',
-      // `--load-extension=${extensionPath}`,
-    ],
-  });
+  const browser = await puppeteer
+    .use(RecaptchaPlugin())
+    .use(StealthPlugin())
+    .launch({
+      executablePath: process.env.CHROME_BIN,
+      args: [
+        '--no-sandbox',
+        '--disable-gpu',
+        '--headless',
+        '--disable-dev-shm-usage',
+        '--disable-setuid-sandbox',
+      ],
+    });
   const page = await browser.newPage();
   await page.setUserAgent(new UserAgent().toString());
   page.on('console', (consoleObj: any) => logDebug('>> in page', consoleObj.text()));
@@ -52,10 +56,10 @@ export const downloadUrl = async (
       interceptCookieUrls(reqUrl, hostLevels) ||
       (req.isNavigationRequest() && req.frame() === page.mainFrame() && reqUrl !== url)
     ) {
-      req.abort('aborted');
-    } else {
-      req.continue();
+      // FIXME Here we should abort but it makes the script break
+      return req.continue();
     }
+    return req.continue();
   });
 
   let assets: { from: string; to: string }[] = [];
@@ -84,7 +88,6 @@ export const downloadUrl = async (
   let message: any;
   try {
     await page.goto(url, { waitUntil: ['domcontentloaded', 'networkidle0', 'networkidle2'] });
-
     await removeCookieBanners(page, hostname);
 
     const html = await page.content();
