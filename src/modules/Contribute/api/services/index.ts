@@ -5,8 +5,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import HttpStatusCode from 'http-status-codes';
 import { addService } from '../../managers/ServiceManager';
 import axios from 'axios';
+import dayjs from 'dayjs';
 import { downloadUrl } from 'modules/Scraper/utils/downloader';
 import fs from 'fs';
+import { getLatestCommit } from 'modules/Github/api';
 import merge from 'lodash/merge';
 import path from 'path';
 
@@ -92,15 +94,43 @@ const get =
 const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResponse<any>) => {
   try {
     let json = JSON.parse(data);
+
+    const documentType = Object.keys(json.documents)[0];
     const sanitizedName = json.name.replace(/[^\p{L}\.\s\d]/gimu, '');
     const fullPath = `${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}/${sanitizedName}.json`;
+    const historyFullPath = `${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}/${sanitizedName}.history.json`;
 
     if (fs.existsSync(fullPath)) {
       const existingJson = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+
+      if (!fs.existsSync(historyFullPath)) {
+        fs.writeFileSync(historyFullPath, '{}');
+      }
+
+      let historyJson = JSON.parse(fs.readFileSync(historyFullPath, 'utf8'));
+
+      const latestCommit = await getLatestCommit({
+        path: `${encodeURIComponent(sanitizedName)}/${encodeURIComponent(documentType)}.md`,
+      });
+
+      const lastCommitDate = latestCommit?.commit?.author.date;
+
+      const newHistoryJson = {
+        ...historyJson,
+        [documentType]: [
+          {
+            ...existingJson.documents[documentType],
+            validUntil: dayjs(lastCommitDate || new Date()).format(),
+          },
+          ...historyJson[documentType],
+        ],
+      };
+      fs.writeFileSync(historyFullPath, JSON.stringify(newHistoryJson, null, 2));
+
       json = merge(existingJson, json);
+      fs.writeFileSync(fullPath, JSON.stringify(json, null, 2));
     }
 
-    fs.writeFileSync(fullPath, JSON.stringify(json, null, 2));
     res.json({
       status: 'ok',
       message: `File saved`,
