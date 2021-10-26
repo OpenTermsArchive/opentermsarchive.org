@@ -24,6 +24,7 @@
 
 .header {
 }
+
 @media (--gridPlus) {
   .header {
     padding-left: var(--pL);
@@ -32,6 +33,7 @@
 }
 
 .header_logo {
+  line-height: 0;
 }
 
 .header_menus {
@@ -67,6 +69,10 @@
 
     & nav {
       width: 100%;
+
+      &:first-child {
+        align-items: flex-end;
+      }
 
       &:first-child,
       &:last-child {

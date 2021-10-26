@@ -4,9 +4,21 @@
 
   & ul {
     display: flex;
+  }
 
-    & li {
-      margin: 0 var(--mS);
+  &.headerMenu__primary {
+    & ul {
+      & li {
+        margin: 0 var(--mS);
+      }
+    }
+  }
+
+  &.headerMenu__secondary {
+    & ul {
+      & li:not(:last-child) {
+        margin: 0 var(--m2XS);
+      }
     }
   }
 }
@@ -23,6 +35,22 @@
         & a {
           color: var(--colorWhite);
           display: inline-flex;
+        }
+      }
+    }
+
+    &.headerMenu__primary {
+      & ul {
+        & li {
+          margin: var(--mS) auto;
+        }
+      }
+    }
+
+    &.headerMenu__secondary {
+      & ul {
+        & li:not(:last-child) {
+          margin: var(--mS) auto;
         }
       }
     }

@@ -58,15 +58,15 @@ const DesignPage = () => {
           Metus tortor pellentesque feugiat morbi eu rutrum varius risus nisl. Tortor ac semper
           pharetra senectus.
         </p>
-        <LinkIcon iconColor="#999999" href="http://www.google.fr">
+        <LinkIcon iconColor="var(--colorBlack400)" href="http://www.google.fr">
           Test de link
         </LinkIcon>
         <br />
-        <LinkIcon iconColor="#999999" href="http://www.google.fr" small={true}>
+        <LinkIcon iconColor="var(--colorBlack400)" href="http://www.google.fr" small={true}>
           Test de link
         </LinkIcon>
         <br />
-        <LinkIcon iconColor="#999999" href="http://www.google.fr" direction="left">
+        <LinkIcon iconColor="var(--colorBlack400)" href="http://www.google.fr" direction="left">
           Test de link inversé
         </LinkIcon>
         <Logo fill="#010613" />
@@ -165,17 +165,17 @@ const DesignPage = () => {
             title="Add documents"
             desc="Easily and quickly add documents to follow."
             iconName="FiPlus"
-            iconColor="#0496FF"
+            iconColor="var(--colorPrimary)"
           >
             <Button href="https://www.google.fr">Je suis un bouton</Button>
           </ButtonBlock>
           <ButtonBlock
             desc="Without title un button bloc avec un descirption un peu plus longue pour voir comment ça se comporte. Ouias ouias !"
             iconName="FiPlus"
-            iconColor="#0496FF"
+            iconColor="var(--colorPrimary)"
           >
             <Button href="https://www.google.fr">Add documents</Button>
-            <LinkIcon iconColor="#999999" href="https://www.google.fr" small={true}>
+            <LinkIcon iconColor="var(--colorBlack400)" href="https://www.google.fr" small={true}>
               Another link
             </LinkIcon>
           </ButtonBlock>
@@ -185,10 +185,10 @@ const DesignPage = () => {
           <ButtonBlock
             desc="Without title un button bloc avec un descirption un peu plus longue pour voir comment ça se comporte. Ouias ouias !"
             iconName="FiPlus"
-            iconColor="#0496FF"
+            iconColor="var(--colorPrimary)"
           >
             <Button href="https://www.google.fr">Add documents</Button>
-            <LinkIcon iconColor="#999999" href="https://www.google.fr" small={true}>
+            <LinkIcon iconColor="var(--colorBlack400)" href="https://www.google.fr" small={true}>
               Another link
             </LinkIcon>
           </ButtonBlock>
@@ -296,7 +296,7 @@ const DesignPage = () => {
               desc="Explore the contractual documents of the main online service providers and compare their evolution through time."
               author="By the team of the French Ambassador for Digital Affairs"
             >
-              <LinkIcon iconColor="#0496FF" href="https://www.google.fr">
+              <LinkIcon iconColor="var(--colorPrimary)" href="https://www.google.fr">
                 Try
               </LinkIcon>
             </ShowcaseItem>
@@ -305,7 +305,7 @@ const DesignPage = () => {
               desc="Experiments are ongoing so as to produce use cases using Open Terms Archive data."
               author="By the team of the French Ambassador for Digital Affairs"
             >
-              <LinkIcon iconColor="#0496FF" href="https://www.google.fr">
+              <LinkIcon iconColor="var(--colorPrimary)" href="https://www.google.fr">
                 See
               </LinkIcon>
             </ShowcaseItem>

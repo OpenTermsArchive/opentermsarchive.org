@@ -1,5 +1,6 @@
 import { FiChevronDown } from 'react-icons/fi';
 import React from 'react';
+import { Services } from '../api';
 import classNames from 'classnames';
 import useSWR from 'swr';
 import { useTranslation } from 'next-i18next';
@@ -32,23 +33,21 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
     documentTypeProps,
     service: selectedService,
     documentType: selectedDocumentType,
-    defaultServices,
+    defaultServices = {},
   }) => {
     const { t } = useTranslation('common');
-    const { data } = useSWR('/api/ota/services', {
+    const { data: services } = useSWR<Services>('/api/ota/services/all', {
       initialData: defaultServices,
       revalidateOnMount: true,
     });
 
-    const services = data
-      ? // sort services with insensitive case
-        Object.keys(data).sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }))
-      : [];
-    const documentTypes: string[] = data ? data[selectedService] || [] : [];
+    const documentTypes: string[] = services ? services[selectedService] || [] : [];
 
-    const loading = !data;
+    const loading = !services;
 
-    const dmaServices = services.filter((service) => dmaActors.includes(service));
+    const dmaServices = Object.keys(services || {}).filter((service) =>
+      dmaActors.includes(service)
+    );
 
     return (
       <>
@@ -94,7 +93,7 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
                       'Other services'
                     )}
                   >
-                    {services.map((service) => (
+                    {Object.keys(services || {}).map((service) => (
                       <option
                         key={`${selectedService}_${service}`}
                         value={service}

@@ -223,7 +223,7 @@ Thank you very much`;
             <nav>
               <LinkIcon
                 className={s.backButton}
-                iconColor="#999999"
+                iconColor="var(--colorBlack400)"
                 href="/contribute"
                 direction="left"
                 small={true}
@@ -257,7 +257,7 @@ Thank you very much`;
             <nav>
               <LinkIcon
                 className={s.backButton}
-                iconColor="#999999"
+                iconColor="var(--colorBlack400)"
                 href="/contribute"
                 direction="left"
                 small={true}
