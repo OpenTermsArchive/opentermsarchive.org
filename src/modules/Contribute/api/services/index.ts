@@ -122,7 +122,7 @@ const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResp
             ...existingJson.documents[documentType],
             validUntil: dayjs(lastCommitDate || new Date()).format(),
           },
-          ...historyJson[documentType],
+          ...(historyJson[documentType] || []),
         ],
       };
       fs.writeFileSync(historyFullPath, JSON.stringify(newHistoryJson, null, 2));
