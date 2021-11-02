@@ -59,9 +59,7 @@ export const downloadUrl = async (
     const buffer = await response.buffer();
     const { pathname: newUrlPathname, search: newUrlSearch } = new URL(response.url());
     const newUrl = `${newUrlPathname}${newUrlSearch}`;
-    if (newUrl.endsWith('/')) {
-      return;
-    }
+    const relativeUrl = newUrl.replace(parsedUrl.pathname, '');
 
     // sometimes the url is relative to the root of the domain, so we need to remove both
     // and in order to prevent string to be replaced twice, we need to replace it along with the surrounding quotes
@@ -79,6 +77,17 @@ export const downloadUrl = async (
       waitUntil: ['domcontentloaded', 'networkidle0', 'networkidle2'],
       timeout: DOWNLOAD_TIMEOUT,
     });
+    if (parsedUrl.hash) {
+      try {
+        const hashLinkSelector = `[href="${parsedUrl.hash}"]`;
+
+        await page.waitForSelector(hashLinkSelector, { timeout: 1000 });
+        await page.click(hashLinkSelector);
+      } catch (e) {
+        // no link found, do nothing
+      }
+    }
+
     await removeCookieBanners(page, hostname);
 
     const html = await page.content();

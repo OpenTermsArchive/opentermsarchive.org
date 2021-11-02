@@ -73,7 +73,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
 
   // const data = { url: 'http://localhost:3000/contribute' };
   const { data } = useSWR<GetContributeServiceResponse>(
-    isPdf ? null : `/api/contribute/services?url=${url}`,
+    isPdf ? null : `/api/contribute/services?url=${encodeURIComponent(url)}`,
     {
       initialData: {
         status: 'ko',
