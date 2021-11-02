@@ -66,6 +66,10 @@ export const downloadUrl = async (
     assets.push({ from: `"${newUrl}"`, to: `"${newUrlPath}${pathname}"` });
     assets.push({ from: `'${newUrl}'`, to: `'${newUrlPath}${pathname}'` });
 
+    // in case a relative link is present such as "libs/style.min.css" when url is "https://www.tchap.gouv.fr/faq/#_Toc4344724_04"
+    assets.push({ from: `"${relativeUrl}"`, to: `"${newUrlPath}${pathname}"` });
+    assets.push({ from: `'${relativeUrl}'`, to: `'${newUrlPath}${pathname}'` });
+
     assets.push({ from: response.url(), to: `${newUrlPath}${pathname}` });
 
     fse.outputFile(`${folderPath}${pathname}`, buffer, 'base64');
