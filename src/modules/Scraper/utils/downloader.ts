@@ -1,11 +1,6 @@
 import 'ts-replace-all';
 
-import {
-  getHostlevels,
-  getHostname,
-  interceptCookieUrls,
-  removeCookieBanners,
-} from '../i-dont-care-about-cookies';
+import { getHostname, removeCookieBanners } from '../i-dont-care-about-cookies';
 
 import RecaptchaPlugin from 'puppeteer-extra-plugin-recaptcha';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
@@ -14,6 +9,7 @@ import debug from 'debug';
 import fse from 'fs-extra';
 import puppeteer from 'puppeteer-extra';
 
+const DOWNLOAD_TIMEOUT = 30 * 1000;
 const logDebug = debug('ota.org:debug');
 
 export const downloadUrl = async (
@@ -44,41 +40,35 @@ export const downloadUrl = async (
   page.on('console', (consoleObj: any) => logDebug('>> in page', consoleObj.text()));
 
   const hostname = getHostname(url, true);
-  const hostLevels = getHostlevels(hostname);
-
-  // Intercept not wanted requests
-  await page.setRequestInterception(true);
-
-  page.on('request', (req) => {
-    const reqUrl = req.url();
-
-    if (
-      interceptCookieUrls(reqUrl, hostLevels) ||
-      (req.isNavigationRequest() && req.frame() === page.mainFrame() && reqUrl !== url)
-    ) {
-      // FIXME Here we should abort but it makes the script break
-      return req.continue();
-    }
-    return req.continue();
-  });
 
   let assets: { from: string; to: string }[] = [];
 
   page.on('response', async (response) => {
     const resourceType = response.request().resourceType();
+    const status = response.status();
+
     const { hostname, pathname } = new URL(response.url());
 
-    if (!hostname.includes(domainname) || !['image', 'stylesheet'].includes(resourceType)) {
+    if (
+      (status >= 300 && status <= 399) ||
+      !hostname.includes(domainname) ||
+      !['image', 'stylesheet'].includes(resourceType)
+    ) {
       return;
     }
     const buffer = await response.buffer();
     const { pathname: newUrlPathname, search: newUrlSearch } = new URL(response.url());
     const newUrl = `${newUrlPathname}${newUrlSearch}`;
+    const relativeUrl = newUrl.replace(parsedUrl.pathname, '');
 
     // sometimes the url is relative to the root of the domain, so we need to remove both
     // and in order to prevent string to be replaced twice, we need to replace it along with the surrounding quotes
     assets.push({ from: `"${newUrl}"`, to: `"${newUrlPath}${pathname}"` });
     assets.push({ from: `'${newUrl}'`, to: `'${newUrlPath}${pathname}'` });
+
+    // in case a relative link is present such as "libs/style.min.css" when url is "https://www.tchap.gouv.fr/faq/#_Toc4344724_04"
+    assets.push({ from: `"${relativeUrl}"`, to: `"${newUrlPath}${pathname}"` });
+    assets.push({ from: `'${relativeUrl}'`, to: `'${newUrlPath}${pathname}'` });
 
     assets.push({ from: response.url(), to: `${newUrlPath}${pathname}` });
 
@@ -87,7 +77,21 @@ export const downloadUrl = async (
 
   let message: any;
   try {
-    await page.goto(url, { waitUntil: ['domcontentloaded', 'networkidle0', 'networkidle2'] });
+    await page.goto(url, {
+      waitUntil: ['domcontentloaded', 'networkidle0', 'networkidle2'],
+      timeout: DOWNLOAD_TIMEOUT,
+    });
+    if (parsedUrl.hash) {
+      try {
+        const hashLinkSelector = `[href="${parsedUrl.hash}"]`;
+
+        await page.waitForSelector(hashLinkSelector, { timeout: 1000 });
+        await page.click(hashLinkSelector);
+      } catch (e) {
+        // no link found, do nothing
+      }
+    }
+
     await removeCookieBanners(page, hostname);
 
     const html = await page.content();
