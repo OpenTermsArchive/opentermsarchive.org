@@ -265,18 +265,18 @@ const HomePage = ({ services }: any) => {
             iconName="FiDatabase"
             iconColor="var(--colorPrimary)"
           >
-            <Link href="https://opentermsarchive.org/data/api">
-              <a
-                title={t(
-                  'common:home_page.contribute.buttonblock3.link.title',
-                  'Read the documentation for use the API'
-                )}
-              >
-                <Button>
-                  {t('common:home_page.contribute.buttonblock3.button.label', 'Discover the API')}
-                </Button>
-              </a>
-            </Link>
+            <a
+              href="https://opentermsarchive.org/data/api"
+              title={t(
+                'common:home_page.contribute.buttonblock3.link.title',
+                'Read the documentation for use the API'
+              )}
+              target="_blank"
+            >
+              <Button>
+                {t('common:home_page.contribute.buttonblock3.button.label', 'Discover the API')}
+              </Button>
+            </a>
             <LinkIcon
               iconColor="var(--colorBlack400)"
               href="https://github.com/ambanum/OpenTermsArchive-versions/releases"
