@@ -5,8 +5,8 @@
       'translation': /public/locales/%two_letters_code%/%original_file_name%,
     },
     {
-      'source': '/public/src/pages/**/*.mdx',
-      'translation': '/public/src/pages/**/%file_name%%two_letters_code%.mdx',
+      'source': '/src/pages/**/*.en.mdx',
+      'translation': '/src/pages/**/%file_name%.%two_letters_code%.mdx',
       'translation_replace': { '.en': '' },
     },
   ]
