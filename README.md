@@ -51,13 +51,7 @@ Run `npm run dev -H YOUR.LOCAL.IP.ADRESS`
 
 Note : on MacOS, get your local IP with `ipconfig getifaddr en0`
 
-## Modules documentation
-
-- [I18n](./src/modules/I18n/README.md)
-- [Analytics](./src/modules/Analytics/README.md)
-- [Scraper](./src/modules/Scraper/README.md)
-
-## MDX
+### MDX
 
 As we use MDX ([mdxjs.com](https://mdxjs.com/)), we can use JSX in Markdown content with the `<MDXRemote />` component. This one takes a `components` parameter that lists React components that can be instantiated `.mdx` corresponding file.
 
@@ -74,6 +68,12 @@ In `my-page.mdx`:
 ```mdx
 <Button type="secondary">Read</Button>
 ```
+
+## Modules documentation
+
+- [I18n](./src/modules/I18n/README.md)
+- [Analytics](./src/modules/Analytics/README.md)
+- [Scraper](./src/modules/Scraper/README.md)
 
 ## Contributing
 
