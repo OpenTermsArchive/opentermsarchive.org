@@ -1,7 +1,5 @@
 # OpenTermsArchive.org
 
-WORK IN PROGRESS
-
 ## Development
 
 Copy `.env.example` to `.env` file at the root of the project
