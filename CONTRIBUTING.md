@@ -1,6 +1,6 @@
 # CONTRIBUTING
 
-## Markdown Guidlines
+## Markdown Guidelines
 
 Although we use the MDX format which sometimes allows the instantiation of React components in mdx files (see the [Readme section on this subject](/README.md#MDX)), it is recommended to avoid doing so to facilitate the contribution.
 
