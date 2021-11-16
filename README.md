@@ -49,15 +49,23 @@ This way, in "Expert Mode", a button `Save on local` will appear and will add th
 
 The contribution interface, located at `/contribute` will help the user to create new services easily
 
-Clicking on `Validate` can automatically create an issue un a github repository.
+Clicking on `Validate` can automatically create an issue in a github repository.
 
-For this, you need to setup some config files in your `.env.local`
+For this, you need to setup some [Environment variables](#environment-variables) config files in your `.env.local`
 
-```
-GITHUB_TOKEN_CREATE_ISSUE= #create one with repo privileges here https://github.com/settings/tokens
-GITHUB_OTA_OWNER=ambanum
-GITHUB_OTA_REPO=test-repo# or OpenTermsArchive
-```
+## Environment variables
+
+These environment variables can be provided in a `.env` file at the root of the repository. See `.env.example` for an example of such a file.
+
+##### `GITHUB_TOKEN`, `GITHUB_REPO` and `GITHUB_LABEL_ADD`
+
+In order for the service to automatically create issues in Github when a service is failing, you need to provide:
+
+- `GITHUB_TOKEN`: A token with repository privileges which allow access to the [GitHub API](https://github.com/settings/tokens).
+- `GITHUB_REPO`: A repository which will be used to create the issues. For example `OpenTermsArchive/services-all`
+- `GITHUB_LABEL_ADD`: The name of the label used on the repo to categorize issues corresponding to a service that needs to be added (default is `add`)
+
+**Note**: OTA.org will automatically create issues with a label defined by `GITHUB_LABEL_ADD`. **This specific label has to exist in the corresponding repository for the automatic issue creation works.**
 
 In case this automatic creation does not work, a fallback on the previous email system will occur, opening a `mailto` link with prepopulated data.
 
