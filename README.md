@@ -4,7 +4,7 @@ WORK IN PROGRESS
 
 ## Development
 
-Copy `.env.local.example` to `.env.local` file at the root of the project
+Copy `.env.example` to `.env` file at the root of the project
 
 ```
 NODE_PATH="src"
