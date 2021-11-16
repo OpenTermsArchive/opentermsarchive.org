@@ -51,7 +51,7 @@
       - '{{ app_port }}:3000'
     env:
       SENDINBLUE_API_KEY: "{{ SENDINBLUE_API_KEY if SENDINBLUE_API_KEY is defined else '' }}"
-      GITHUB_TOKEN_CREATE_ISSUE: "{{ GITHUB_TOKEN_CREATE_ISSUE if GITHUB_TOKEN_CREATE_ISSUE is defined else '' }}"
+      GITHUB_TOKEN: "{{ GITHUB_TOKEN if GITHUB_TOKEN is defined else '' }}"
 
 - name: Prune containers and images
   become: yes

@@ -136,7 +136,7 @@ const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResp
       message: `File saved`,
       path: fullPath,
     });
-  } catch (e) {
+  } catch (e: any) {
     res.statusCode = HttpStatusCode.METHOD_FAILURE;
     res.json({
       status: 'ko',
@@ -151,7 +151,7 @@ const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResp
 
 const addNewService =
   (body: any) => async (_: NextApiRequest, res: NextApiResponse<PostContributeServiceResponse>) => {
-    const service = await addService({
+    const service: any = await addService({
       name: body?.name,
       documentType: body?.documentType,
       json: body?.json,
