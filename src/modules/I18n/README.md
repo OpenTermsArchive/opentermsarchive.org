@@ -7,8 +7,8 @@
 and run
 
 ```
-    npm run add next-i18nnext
-    npm run add -D i18next-scanner i18next-scanner-typescript
+    npm run install next-i18nnext
+    npm run install -D i18next-scanner i18next-scanner-typescript
 ```
 
 2. Create the config file

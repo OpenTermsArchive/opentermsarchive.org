@@ -7,7 +7,7 @@ For now, we support matomo through the library [@socialgouv/matomo-next](https:/
 copy the whole module to your nextjs app and launch
 
 ```
-  npm run add @socialgouv/matomo-next
+  npm run install @socialgouv/matomo-next
 ```
 
 ## usage
