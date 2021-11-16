@@ -14,7 +14,7 @@ In order to have the latest code of the extension, you need to manually download
 and then launch
 
 ```
-yarn run update-cookie-extension
+npm run update-cookie-extension
 git add ./src/modules/Scraper/i-dont-care-about-cookies
 git commit -m "chore: update i-dont-care-about-cookies definitions"
 ```

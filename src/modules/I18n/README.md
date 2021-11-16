@@ -7,8 +7,8 @@
 and run
 
 ```
-    yarn add next-i18nnext
-    yarn add -D i18next-scanner i18next-scanner-typescript
+    npm run add next-i18nnext
+    npm run add -D i18next-scanner i18next-scanner-typescript
 ```
 
 2. Create the config file
@@ -38,7 +38,7 @@ module.exports = {
 4. add tools to your script to generate translations
 
 ```
-    "i18n": "yarn i18n:extract && yarn i18n:clean && echo '\n⚠️  You may need to restart your dev server\n'",
+    "i18n": "npm run i18n:extract && npm run i18n:clean && echo '\n⚠️  You may need to restart your dev server\n'",
     "i18n:extract": "NODE_ENV=development i18next-scanner --config 'src/modules/I18n/i18next-scanner.config.js'",
     "i18n:clean": "find public/locales -size 3c -delete && rm -Rf public/locales/catchAll",
 ```
@@ -137,7 +137,7 @@ export const getStaticProps = withI18n({ load: 'mdx' })();
 ## generate translation files
 
 ```
-yarn i18n
+npm run i18n
 ```
 
 ## VSCode snippets
