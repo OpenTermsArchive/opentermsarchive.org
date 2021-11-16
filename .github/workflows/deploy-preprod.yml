@@ -6,10 +6,10 @@ on:
 
 jobs:
   typescript-check:
-    # CAREFUL: The part after the @ is the commit number of the first addition of this file to GIT
+    # CAREFUL: The part after the @ is the branch on which the file is located
     # IF you ever wish to change something in .github/workflows/typescript-check.yml, You will need to change this reference too
     # I did not find a way to consider the one within the current branch but I believe it would be the way to go
-    uses: 'ambanum/OpenTermsArchive/.github/workflows/typescript-check.yml@85eeb6a'
+    uses: 'ambanum/OpenTermsArchive/.github/workflows/typescript-check.yml@develop'
 
   on-branch-check:
     runs-on: ubuntu-latest

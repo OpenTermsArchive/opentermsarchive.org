@@ -17,6 +17,6 @@ jobs:
         with:
           node-version: 14.x
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
       - name: Typecheck
         uses: andoshin11/typescript-error-reporter-action@v1.0.2
