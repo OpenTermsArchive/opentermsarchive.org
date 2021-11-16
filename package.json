@@ -24,7 +24,6 @@
     "i18n:extract": "NODE_ENV=development i18next-scanner --config 'src/modules/I18n/i18next-scanner.config.js'",
     "i18n:clean": "find public/locales -size 3c -delete",
     "test": "jest",
-    "prepare": "husky install",
     "prettier": "prettier --write ."
   },
   "dependencies": {
@@ -95,7 +94,6 @@
     "@types/react-window": "1.8.5",
     "@types/user-agents": "^1.0.2",
     "fast-glob": "^3.2.5",
-    "husky": "7.0.2",
     "i18next-scanner": "^3.0.0",
     "i18next-scanner-typescript": "^1.0.6",
     "jest": "27.0.6",
