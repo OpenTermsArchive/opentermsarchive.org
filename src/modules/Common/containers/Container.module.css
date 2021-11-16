@@ -79,6 +79,7 @@
   }
 
   &.container__isDark {
+    background-color: var(--colorBlack900);
     color: var(--colorWhite);
 
     & h1,
