@@ -8,7 +8,7 @@ Prefer Markdown over strings for translations, as soon as there are multiple par
 
 ## Local creation of services from contribution interface
 
-If you are interested in setting up a local instance where you can directly save the result of the contribution interface (`/contribute`) in the corresponding folder in Open Terms Archive project you can add the following constant to your `.env.local`
+If you are interested in setting up a local instance where you can directly save the result of the contribution interface (`/contribute`) in the corresponding folder in Open Terms Archive project you have to specify the path with the following constant in `.env.local` file:
 
 ```
 NEXT_PUBLIC_OTA_SERVICES_PATH="/Users/username/Workspace/ambanum/OpenTermsArchive/services"

@@ -31,7 +31,7 @@ For this, you need to setup some constants in your `.env`
 ```
 GITHUB_TOKEN_CREATE_ISSUE= #create one with repo privileges here https://github.com/settings/tokens
 GITHUB_OTA_OWNER=ambanum
-GITHUB_OTA_REPO=test-repo# or OpenTermsArchive
+GITHUB_OTA_REPO=OpenTermsArchive
 ```
 
 In case this automatic creation does not work, a fallback on the previous email system will occur, opening a `mailto` link with prepopulated data.
