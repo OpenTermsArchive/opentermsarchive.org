@@ -61,7 +61,7 @@
   "footer.link.showcase": "Built with",
   "footer.link.api": "API",
   "footer.link.dataset": "Dataset",
-  "footer.link.tos": "Terms of service",
+  "footer.link.tos": "Legal notice",
   "footer.link.privacy": "Privacy policy",
   "footer.link.github": "GitHub",
   "footer.link.home": "Home",
@@ -70,7 +70,6 @@
   "home_page.seo.title": "Open Terms Archive",
   "home_page.seo.desc": "Follow the changes to the terms of service.",
   "privacy-policy.seo.title": "Privacy Policy",
-  "terms-of-service.seo.title": "Terms of Service",
   "home_page.how.feature2.defaultTitle": "Many documents",
   "home_page.how.feature2.dynamicTitle": "{{count}} document",
   "home_page.how.feature2.dynamicTitle_plural": "{{count}} documents",
@@ -83,7 +82,7 @@
   "header.link.how.title": "How does OTA work?",
   "footer.link.api.title": "Use the API",
   "footer.link.dataset.title": "Download the dataset",
-  "footer.link.tos.title": "Read the TOS of Open Terms Archive website",
+  "footer.link.tos.title": "Read the legal notice of Open Terms Archive website",
   "footer.link.privacy.title": "Read the privacy policy of Open Terms Archive website",
   "footer.link.github.title": "View the source code",
   "home_page.contribute.buttonblock1.link.title": "Add a document to Open Terms Archive now",
@@ -164,5 +163,6 @@
   "dashboard.latestversionscommits.buttonblock.label": "Explore now",
   "dashboard.serviceslist.title": "Services list",
   "dashboard.serviceslist.subtitle": "{{count}} services",
-  "dashboard.serviceslist.subtitle_plural": "{{count}} services"
+  "dashboard.serviceslist.subtitle_plural": "{{count}} services",
+  "legal-notice.seo.title": "Legal Notice"
 }

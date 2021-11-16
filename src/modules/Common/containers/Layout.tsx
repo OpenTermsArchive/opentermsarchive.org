@@ -264,14 +264,14 @@ const Layout = ({
                   </Link>
                 </li>
                 <li>
-                  <Link href="/terms-of-service">
+                  <Link href="/legal-notice">
                     <a
                       title={t(
                         'common:footer.link.tos.title',
-                        'Read the TOS of Open Terms Archive website'
+                        'Read the legal notice of Open Terms Archive website'
                       )}
                     >
-                      {t('common:footer.link.tos', 'Terms of service')}
+                      {t('common:footer.link.tos', 'Legal notice')}
                     </a>
                   </Link>
                 </li>

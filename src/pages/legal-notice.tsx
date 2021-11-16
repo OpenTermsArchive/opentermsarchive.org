@@ -8,11 +8,11 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
 
-export default function TermsOfServicePage({ mdxContent }: WithI18nResult) {
+export default function LegalNoticePage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation('common');
 
   return (
-    <Layout title={t('common:terms-of-service.seo.title', 'Terms of Service')}>
+    <Layout title={t('common:legal-notice.seo.title', 'Legal Notice')}>
       <Container gridCols="10" gridGutters="9" paddingX={false}>
         <TextContent>
           <MDXRemote {...(mdxContent as any)} components={{ Button }} />
@@ -22,4 +22,4 @@ export default function TermsOfServicePage({ mdxContent }: WithI18nResult) {
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx', filename: 'terms-of-service' })();
+export const getStaticProps = withI18n({ load: 'mdx', filename: 'legal-notice' })();

@@ -68,7 +68,6 @@
   "home_page.seo.title": "Open Terms Archive",
   "home_page.seo.desc": "Follow the changes to the terms of service.",
   "privacy-policy.seo.title": "Privacy Policy",
-  "terms-of-service.seo.title": "Terms of Service",
   "home_page.how.feature2.defaultTitle": "Many documents",
   "home_page.how.feature3.title": "Open Source",
   "case-studies.seo.title": "Case Studies",
@@ -156,5 +155,6 @@
   "dashboard.latestversionscommits.buttonblock.desc": "And it continues every day, explore them on GitHub.",
   "dashboard.latestversionscommits.buttonblock.link.title": "Explore the documents versions",
   "dashboard.latestversionscommits.buttonblock.label": "Explore now",
-  "dashboard.serviceslist.title": "Services list"
+  "dashboard.serviceslist.title": "Services list",
+  "legal-notice.seo.title": "Legal Notice"
 }
