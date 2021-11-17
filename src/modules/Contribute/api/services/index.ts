@@ -1,7 +1,7 @@
 import { GetContributeServiceResponse, PostContributeServiceResponse } from '../../interfaces';
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
-
+import getConfig from 'next/config';
 import HttpStatusCode from 'http-status-codes';
 import { addService } from '../../managers/ServiceManager';
 import axios from 'axios';
@@ -11,6 +11,7 @@ import fs from 'fs';
 import { getLatestCommit } from 'modules/Github/api';
 import merge from 'lodash/merge';
 import path from 'path';
+const { serverRuntimeConfig } = getConfig();
 
 const isPdf = async (url: string) => {
   try {
@@ -36,9 +37,9 @@ const get =
 
     const folderName = url.replace(/[^\p{L}\d_]/gimu, '_');
 
-    const folderPath = path.join(process.env.TMP_SCRAPED_SERVICES_FOLDER || '', folderName);
+    const folderPath = path.join(serverRuntimeConfig.scrapedFilesFolder, folderName);
     const newUrlPath = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${
-      process.env.TMP_SCRAPED_SERVICES_URL || ''
+      serverRuntimeConfig.scrapedIframeUrl
     }/${folderName}`;
 
     const newUrl = `${newUrlPath}/index.html`;
