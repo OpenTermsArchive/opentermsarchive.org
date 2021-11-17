@@ -57,7 +57,7 @@ RUN npm run build
 RUN rm -Rf node_modules
 RUN npm install --production
 
-RUN npm cache clean
+RUN npm cache clean --force
 
 EXPOSE 3000
 CMD [ "npm", "start" ]
