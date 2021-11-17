@@ -10,7 +10,23 @@ Build on [Next.js](https://nextjs.org) react framework, using [TypeScript](https
 
 Copy `.env.example` to `.env` file at the root of the project and fill in the values of the constants.
 
-##### `GITHUB_TOKEN`, `GITHUB_REPO` and `GITHUB_LABEL_ADD`
+Note that you can use [Nextjs Documentation](https://nextjs.org/docs/basic-features/environment-variables#loading-environment-variables) if you wish to add more environment variables
+
+### `PORT`
+
+Port on which the website will run.
+
+Example `PORT=5000`
+Default is `3000`
+
+### `NEXT_PUBLIC_BASE_PATH`
+
+To deploy the website under a sub-path of a domain you can use this env variable config option.
+
+Example `NEXT_PUBLIC_BASE_PATH="/prefix"`
+Default is empty
+
+### `GITHUB_TOKEN`, `GITHUB_REPO` and `GITHUB_LABEL_ADD`
 
 In order for the service to automatically create issues in Github when a service is failing, you need to provide:
 
@@ -20,7 +36,23 @@ In order for the service to automatically create issues in Github when a service
 
 **Note**: OTA.org will automatically create issues with a label defined by `GITHUB_LABEL_ADD`. **This specific label has to exist in the corresponding repository for the automatic issue creation works.**
 
-### Contribution interface
+### `NEXT_PUBLIC_MATOMO_URL`, `NEXT_PUBLIC_MATOMO_SITE_ID`
+
+You can easily set up analytics with [Matomo](https://matomo.org/) by providing those 2 values.
+
+### `NEXT_PUBLIC_OTA_SERVICES_PATH`
+
+This variable enables the ability to save the result of the contributing tool directly on a directory on your file system.
+
+More details on [Contributing Guide](./CONTRIBUTING#local-creation-of-services-from-contribution-interface)
+
+### `SENDINBLUE_API_KEY`
+
+In order for users to be able to subscribe to services alerts, a mailling lists has been put in place with SendInBlue.
+
+An API Key is thus needed
+
+## Contribution interface
 
 The contribution interface, located at `/contribute` will help the user to create new services easily.
 
@@ -28,11 +60,7 @@ Clicking on `Validate` can automatically create an issue un a github repository.
 
 For this, you need to setup some constants in your `.env`
 
-```
-GITHUB_TOKEN_CREATE_ISSUE= #create one with repo privileges here https://github.com/settings/tokens
-GITHUB_OTA_OWNER=ambanum
-GITHUB_OTA_REPO=OpenTermsArchive
-```
+See [Configuration](#Configuration)
 
 In case this automatic creation does not work, a fallback on the previous email system will occur, opening a `mailto` link with prepopulated data.
 
