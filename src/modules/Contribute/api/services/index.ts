@@ -128,8 +128,9 @@ const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResp
       fs.writeFileSync(historyFullPath, JSON.stringify(newHistoryJson, null, 2));
 
       json = merge(existingJson, json);
-      fs.writeFileSync(fullPath, JSON.stringify(json, null, 2));
     }
+
+    fs.writeFileSync(fullPath, JSON.stringify(json, null, 2));
 
     res.json({
       status: 'ok',
