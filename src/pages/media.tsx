@@ -12,16 +12,16 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
 
-export default function PressPage({ mdxContent }: WithI18nResult) {
+export default function MediaPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation('common');
   return (
-    <Layout title={t('common:press.seo.title', 'Press')}>
+    <Layout title={t('common:media.seo.title', 'Media')}>
       {/* Hero with title and subtitle, without image background, no darked */}
       <Container layout="wide" paddingY={false} gray={true}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
-            title={t('common:press.hero.title', 'Press')}
-            subtitle={t('common:press.hero.subtitle', 'They talk about the Open Terms Archive')}
+            title={t('common:media.hero.title', 'Media')}
+            subtitle={t('common:media.hero.subtitle', 'They talk about the Open Terms Archive')}
           ></Hero>
         </Container>
       </Container>
@@ -36,22 +36,22 @@ export default function PressPage({ mdxContent }: WithI18nResult) {
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
           <Column
             width={100}
-            title={t('common:press.getintouch.title', 'Would you like to get in touch with us?')}
-            subtitle={t('common:press.getintouch.subtitle', 'You are journalist')}
+            title={t('common:media.getintouch.title', 'Would you like to get in touch with us?')}
+            subtitle={t('common:media.getintouch.subtitle', 'You are journalist')}
             className="tcenter"
           >
             <TextContent>
               <p>
-                {t('common:press.getintouch.p1', 'Contact us by email:')}{' '}
+                {t('common:media.getintouch.p1', 'Contact us by email:')}{' '}
                 <Link href="mailto:contact@opentermsarchive.org">
                   <a className="a__darked">contact@opentermsarchive.org</a>
                 </Link>
               </p>
               <p>
-                {t('common:press.getintouch.p2', 'Be free to')}{' '}
+                {t('common:media.getintouch.p2', 'Be free to')}{' '}
                 <Link href="/download/press-kit/20210719-open-terms-archive-press-kit.zip">
                   <a download className="a__darked">
-                    {t('common:press.getintouch.presskitlink.label', 'download the press kit')}
+                    {t('common:media.getintouch.presskitlink.label', 'download the press kit')}
                   </a>
                 </Link>
               </p>
@@ -63,4 +63,4 @@ export default function PressPage({ mdxContent }: WithI18nResult) {
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx', filename: 'press' })();
+export const getStaticProps = withI18n({ load: 'mdx', filename: 'media' })();
