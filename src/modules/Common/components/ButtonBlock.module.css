@@ -17,6 +17,10 @@
     & h3 {
       color: var(--colorWhite);
     }
+
+    & a:hover {
+      color: var(--colorWhite);
+    }
   }
   &.buttonBlock__isWhite {
     background-color: var(--colorWhite);

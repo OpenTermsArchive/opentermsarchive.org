@@ -29,6 +29,7 @@ const LinkIcon: React.FC<LinkIconProps & React.AnchorHTMLAttributes<HTMLAnchorEl
 
   const { href, as, replace, scroll, shallow, passHref, prefetch, locale, ...props } = allProps;
   const linkProps = { href, as, replace, scroll, shallow, passHref, prefetch, locale };
+
   return (
     <Link {...linkProps}>
       <a

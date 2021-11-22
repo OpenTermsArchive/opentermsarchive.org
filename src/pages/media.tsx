@@ -7,6 +7,7 @@ import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
+import LinkIcon from 'modules/Common/components/LinkIcon';
 import Logo from 'modules/Common/components/Logo';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
@@ -31,17 +32,17 @@ export default function MediaPage({ mdxContent }: WithI18nResult) {
               <ButtonBlock
                 fillParent={true}
                 white={true}
-                desc={t(
-                  'common:media.logo.white.background.desc',
-                  'PNG file in high definition for white background'
-                )}
+                desc={t('common:media.logo.white.background.desc', 'For white background')}
               >
-                <Logo />
+                <Logo size="full" />
                 <Button>
                   <a download href="/images/logo/logo-open-terms-archive-black.png">
-                    {t('common:media.logo.cta.label', 'Download now')}
+                    {t('common:media.logo.cta.label', 'Download the .png')}
                   </a>
                 </Button>
+                <a download href="/images/logo/logo-open-terms-archive-black.svg">
+                  {t('common:media.logo.cta.svg.label', 'or the .svg')}
+                </a>
               </ButtonBlock>
             </Column>
             <Column width={50}>
@@ -53,12 +54,15 @@ export default function MediaPage({ mdxContent }: WithI18nResult) {
                 )}
                 dark={true}
               >
-                <Logo backgroundType={'black'} />
+                <Logo backgroundType="black" size="full" />
                 <Button>
                   <a download href="/images/logo/logo-open-terms-archive-white.png">
-                    {t('common:media.logo.cta.label', 'Download now')}
+                    {t('common:media.logo.cta.label', 'Download the .png')}
                   </a>
                 </Button>
+                <a download href="/images/logo/logo-open-terms-archive-white.svg">
+                  {t('common:media.logo.cta.svg.label', 'or the .svg')}
+                </a>
               </ButtonBlock>
             </Column>
           </Container>

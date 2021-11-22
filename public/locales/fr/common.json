@@ -160,9 +160,10 @@
   "home_page.press.title": "Presse",
   "home_page.press.subtitle": "Ils parlent d'Open Terms Archive",
   "media.logo.title": "Logo",
-  "media.logo.white.background.desc": "Fichier PNG en haute définition pour fond blanc",
-  "media.logo.cta.label": "Télécharger",
+  "media.logo.white.background.desc": "Pour fond blanc",
+  "media.logo.cta.label": "Télécharger le .png",
   "media.press.title": "Revues de presse",
-  "media.logo.black.background.desc": "Fichier PNG en haute définition pour fond sombre",
-  "media.press.subtitle": "Ils parlent d'Open Terms Archive"
+  "media.logo.black.background.desc": "Pour fond sombre",
+  "media.press.subtitle": "Ils parlent d'Open Terms Archive",
+  "media.logo.cta.svg.label": "ou le .svg"
 }

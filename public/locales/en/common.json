@@ -160,9 +160,10 @@
   "home_page.press.title": "Press",
   "home_page.press.subtitle": "They talk about Open Terms Archive",
   "media.logo.title": "Logo",
-  "media.logo.white.background.desc": "PNG file in high definition for white background",
-  "media.logo.cta.label": "Download now",
+  "media.logo.white.background.desc": "For white background",
+  "media.logo.cta.label": "Download the .png",
   "media.press.title": "Press reviews",
-  "media.logo.black.background.desc": "PNG file in high definition for dark background",
-  "media.press.subtitle": "They talk about the Open Terms Archive"
+  "media.logo.black.background.desc": "For dark background",
+  "media.press.subtitle": "They talk about the Open Terms Archive",
+  "media.logo.cta.svg.label": "or the .svg"
 }
