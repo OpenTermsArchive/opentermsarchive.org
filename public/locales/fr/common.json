@@ -106,10 +106,6 @@
   "home_page.how.button.href": "/how-it-works",
   "home_page.how.button.title": "  OTA fonctionne ?",
   "home_page.how.button.label": "En savoir plus",
-  "media.getintouch.title": "Vous souhaitez entrer en relation avec nous ?",
-  "media.getintouch.p1": "Contactez-nous par mail :",
-  "media.getintouch.p2": "N'hésitez pas à",
-  "media.getintouch.subtitle": "Vous êtes journaliste",
   "subscribe_form.success": "Merci pour votre abonnement.",
   "subscribe_form.error": "Désolé, mais il y a eu un problème, veuillez réessayer.",
   "subscribe_form.p1": "Comme la fréquence de changement d'un document peut varier d'un document à l'autre, il est difficile d'estimer la fréquence des e-mails que vous recevrez. Cependant, nous avons observé que les grands services numériques apportent des modifications à leurs documents contractuels environ une fois tous les quinze jours.",
@@ -163,6 +159,5 @@
   "footer.link.media.title": "They talk about Open Terms Archive",
   "footer.link.media": "Media",
   "home_page.press.title": "Press",
-  "home_page.press.subtitle": "They talk about Open Terms Archive",
-  "media.getintouch.presskitlink.label": "download the press kit"
+  "home_page.press.subtitle": "They talk about Open Terms Archive"
 }

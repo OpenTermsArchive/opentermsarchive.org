@@ -106,10 +106,6 @@
   "home_page.how.button.href": "/how-it-works",
   "home_page.how.button.title": "How OTA works",
   "home_page.how.button.label": "Know more",
-  "media.getintouch.title": "Would you like to get in touch with us?",
-  "media.getintouch.p1": "Contact us by email:",
-  "media.getintouch.p2": "Be free to",
-  "media.getintouch.subtitle": "You are journalist",
   "subscribe_form.success": "Thanks for subscribing",
   "subscribe_form.error": "Sorry, but there was a problem, please try again",
   "subscribe_form.p1": "As the frequency of change of a document can vary from one document to another it is difficult to estimate the frequency of emails you will receive. However, we have observed that large digital services change their documents approximately once every fortnight.",
@@ -163,6 +159,5 @@
   "footer.link.media.title": "They talk about Open Terms Archive",
   "footer.link.media": "Media",
   "home_page.press.title": "Press",
-  "home_page.press.subtitle": "They talk about Open Terms Archive",
-  "media.getintouch.presskitlink.label": "download the press kit"
+  "home_page.press.subtitle": "They talk about Open Terms Archive"
 }
