@@ -7,7 +7,6 @@ import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
-import LinkIcon from 'modules/Common/components/LinkIcon';
 import Logo from 'modules/Common/components/Logo';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
@@ -69,12 +68,12 @@ export default function MediaPage({ mdxContent }: WithI18nResult) {
         </Container>
       </Container>
 
-      <Container gridCols="10" gridGutters="9" flex={true}>
+      <Container gridCols="8" gridGutters="7" flex={true}>
         <Article
           title={t('common:media.press.title', 'Press review')}
           subtitle={t('common:media.press.subtitle', 'They talk about the Open Terms Archive')}
         >
-          <TextContent>
+          <TextContent marginTopLarge={true}>
             <MDXRemote {...(mdxContent as any)} components={{ Button: Button }} />
           </TextContent>
         </Article>
