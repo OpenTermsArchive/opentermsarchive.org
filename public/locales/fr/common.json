@@ -92,7 +92,6 @@
   "home_page.showcase.buttonblock.link.title": "Envoyer nous un courriel",
   "media.seo.title": "Media",
   "media.hero.title": "Media",
-  "media.hero.subtitle": "Ils parlent d'Open Terms Archive.",
   "footer.link.case-studies.title": "Que nous a appris Open Terms Archive jusqu’à présent ?",
   "footer.link.case-studies": "Études de cas",
   "header.link.twitter.title": "Suivez-nous sur Twitter",
@@ -156,8 +155,14 @@
   "dashboard.serviceslist.subtitle": "{{count}} services et documents associés",
   "dashboard.serviceslist.subtitle_plural": "{{count}} services et documents associés",
   "legal-notice.seo.title": "Mentions légales",
-  "footer.link.media.title": "They talk about Open Terms Archive",
+  "footer.link.media.title": "Ils parlent d'Open Terms Archive",
   "footer.link.media": "Media",
-  "home_page.press.title": "Press",
-  "home_page.press.subtitle": "They talk about Open Terms Archive"
+  "home_page.press.title": "Presse",
+  "home_page.press.subtitle": "Ils parlent d'Open Terms Archive",
+  "media.logo.title": "Logo",
+  "media.logo.white.background.desc": "Fichier PNG en haute définition pour fond blanc",
+  "media.logo.cta.label": "Télécharger",
+  "media.press.title": "Revues de presse",
+  "media.logo.black.background.desc": "Fichier PNG en haute définition pour fond sombre",
+  "media.press.subtitle": "Ils parlent d'Open Terms Archive"
 }

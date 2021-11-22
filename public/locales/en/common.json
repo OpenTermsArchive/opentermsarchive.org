@@ -92,7 +92,6 @@
   "home_page.showcase.buttonblock.link.title": "Send us a mail",
   "media.seo.title": "Media",
   "media.hero.title": "Media",
-  "media.hero.subtitle": "They talk about the Open Terms Archive",
   "footer.link.case-studies.title": "So far, Open Terms Archive taught us a lot.",
   "footer.link.case-studies": "Case studies",
   "header.link.twitter.title": "Follow us on Twitter",
@@ -159,5 +158,11 @@
   "footer.link.media.title": "They talk about Open Terms Archive",
   "footer.link.media": "Media",
   "home_page.press.title": "Press",
-  "home_page.press.subtitle": "They talk about Open Terms Archive"
+  "home_page.press.subtitle": "They talk about Open Terms Archive",
+  "media.logo.title": "Logo",
+  "media.logo.white.background.desc": "PNG file in high definition for white background",
+  "media.logo.cta.label": "Download now",
+  "media.press.title": "Press reviews",
+  "media.logo.black.background.desc": "PNG file in high definition for dark background",
+  "media.press.subtitle": "They talk about the Open Terms Archive"
 }

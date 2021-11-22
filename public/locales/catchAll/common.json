@@ -149,7 +149,12 @@
   "legal-notice.seo.title": "Legal Notice",
   "media.seo.title": "Media",
   "media.hero.title": "Media",
-  "media.hero.subtitle": "They talk about the Open Terms Archive",
   "footer.link.media.title": "They talk about Open Terms Archive",
-  "footer.link.media": "Media"
+  "footer.link.media": "Media",
+  "media.logo.title": "Logo",
+  "media.logo.white.background.desc": "PNG file in high definition for white background",
+  "media.logo.cta.label": "Download now",
+  "media.press.title": "Press review",
+  "media.logo.black.background.desc": "PNG file in high definition for dark background",
+  "media.press.subtitle": "They talk about the Open Terms Archive"
 }
