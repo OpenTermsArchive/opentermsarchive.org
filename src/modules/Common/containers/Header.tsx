@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ children, className, ...props }) => {
       <div className={s.header_logo}>
         <Link href="/">
           <a>
-            <Logo />
+            <Logo fill="#010613" />
           </a>
         </Link>
       </div>
