@@ -42,21 +42,19 @@ export const withI18n =
       };
 
       if ((options as WithI18nOptionsMdx)?.load === 'mdx') {
-        const pagesDir = `${process.env.PWD}/src/pages`;
+        const pagesDir = `${process.env.PWD}/src/translations`;
         let content = '';
         try {
           content = fs
             .readFileSync(
-              `${pagesDir}/${(options as WithI18nOptionsMdx)?.filename}.${props.locale}.mdx`
+              `${pagesDir}/${props.locale}/${(options as WithI18nOptionsMdx)?.filename}.mdx`
             )
             .toString();
         } catch (e) {
           try {
             content = fs
               .readFileSync(
-                `${pagesDir}/${(options as WithI18nOptionsMdx)?.filename}.${
-                  props.defaultLocale
-                }.mdx`
+                `${pagesDir}/${props.defaultLocale}/${(options as WithI18nOptionsMdx)?.filename}.mdx`
               )
               .toString();
           } catch (e) {
