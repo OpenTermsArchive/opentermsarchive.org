@@ -86,42 +86,6 @@ const Layout = ({
                         </a>
                       </Link>
                     </li>
-                    {/* <li>
-                      <Link href={'/#'.concat(t('common:home_page.values.id'))}>
-                        <a
-                          title={t('common:header.link.values.title', 'What we believe in')}
-                          onClick={toggleExtended}
-                        >
-                          {t('common:header.link.values', 'Values')}
-                        </a>
-                      </Link>
-                    </li> */}
-                    {/* <li>
-                      <Link href={'/#'.concat(t('common:home_page.contribute.id'))}>
-                        <a
-                          title={t(
-                            'common:header.link.contribute.title',
-                            'Help us appreciate the loyalty of the services.'
-                          )}
-                          onClick={toggleExtended}
-                        >
-                          {t('common:header.link.contribute', 'Contribute')}
-                        </a>
-                      </Link>
-                    </li> */}
-                    {/* <li>
-                      <Link href={'/#'.concat(t('common:home_page.showcase.id'))}>
-                        <a
-                          title={t(
-                            'common:header.link.showcase.title',
-                            'Applications built with Open Terms Archive'
-                          )}
-                          onClick={toggleExtended}
-                        >
-                          {t('common:header.link.showcase', 'Built with')}
-                        </a>
-                      </Link>
-                    </li> */}
                     <li>
                       <Link href={'/case-studies'}>
                         <a
@@ -252,14 +216,14 @@ const Layout = ({
             <FooterMenu small={true} align={'right'}>
               <ul>
                 <li>
-                  <Link href="/press">
+                  <Link href="/media">
                     <a
                       title={t(
-                        'common:footer.link.press.title',
+                        'common:footer.link.media.title',
                         'They talk about Open Terms Archive'
                       )}
                     >
-                      {t('common:footer.link.press', 'Press')}
+                      {t('common:footer.link.media', 'Media')}
                     </a>
                   </Link>
                 </li>

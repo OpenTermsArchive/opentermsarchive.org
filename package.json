@@ -30,6 +30,7 @@
     "@nivo/core": "^0.74.0",
     "@nivo/line": "^0.74.0",
     "@socialgouv/matomo-next": "^1.2.1",
+    "@svgr/webpack": "^5.5.0",
     "@types/lodash": "^4.14.171",
     "@welldone-software/why-did-you-render": "6.2.1",
     "autoprefixer": "^10.2.6",

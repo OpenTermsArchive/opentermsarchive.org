@@ -11,6 +11,8 @@ type ButtonBlocProps = {
   iconName?: keyof typeof FeatherIcons;
   iconColor?: string;
   fillParent?: boolean;
+  dark?: boolean;
+  white?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const ButtonBloc: React.FC<ButtonBlocProps> = ({
@@ -20,6 +22,8 @@ const ButtonBloc: React.FC<ButtonBlocProps> = ({
   fillParent = false,
   title,
   desc,
+  dark = false,
+  white = false,
   className,
   ...props
 }) => {
@@ -32,6 +36,8 @@ const ButtonBloc: React.FC<ButtonBlocProps> = ({
       className={classNames(
         s.buttonBlock,
         { [s.buttonBlock__fillParent]: fillParent === true },
+        { [s.buttonBlock__isDark]: dark === true },
+        { [s.buttonBlock__isWhite]: white === true },
         className
       )}
       {...props}
