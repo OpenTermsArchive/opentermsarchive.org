@@ -17,7 +17,7 @@ const TextContent: React.FC<TextContentProps> = ({
     <div
       className={classNames(
         s.textContent,
-        marginTopLarge ? s.textContent__marginTopLarge : null,
+        { [s.textContent__marginTopLarge]: !!marginTopLarge },
         className
       )}
       {...props}
