@@ -9,18 +9,18 @@ import { useTranslation } from 'next-i18next';
 const EMAIL_SUPPORT = 'contact@opentermsarchive.org';
 
 const SorryPage = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['contribute/sorry', 'contribute', 'common']);
   return (
     <Layout
-      title={t('contribute:sorry_page.seo.title', 'Sorry')}
-      desc={t('contribute:sorry_page.seo.desc', 'You cannot access this page')}
+      title={t('seo.title', 'Sorry', { ns: 'contribute/sorry' })}
+      desc={t('seo.desc', 'You cannot access this page', { ns: 'contribute/sorry' })}
     >
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
-            title={t('contribute:sorry_page.title', 'Sorry 😿')}
-            subtitle={t('contribute:sorry_page.subtitle', 'You cannot access this page')}
+            title={t('title', 'Sorry 😿', { ns: 'contribute/sorry' })}
+            subtitle={t('subtitle', 'You cannot access this page', { ns: 'contribute/sorry' })}
           ></Hero>
         </Container>
       </Container>
@@ -30,24 +30,26 @@ const SorryPage = () => {
           <Column width={100}>
             <Breadcrumb
               items={[
-                { name: 'Open Terms Archive', url: 'https://www.opentermsarchive.org' },
                 {
-                  name: 'Contribute',
-                  url: './../#' + t('common:home_page.contribute.id', 'contribute'),
+                  name: t('breadcrumb.homepage.name', { ns: 'contribute' }),
+                  url: 'https://www.opentermsarchive.org',
                 },
-                { name: 'Contribute', url: '/contribute' },
-                { name: t('contribute:sorry_page.title') },
+                {
+                  name: t('breadcrumb.contribute.name', { ns: 'contribute' }),
+                  url: './../#' + t('contribute.id', { ns: 'common' }),
+                },
+                {
+                  name: t('breadcrumb.adddocument.name', { ns: 'contribute' }),
+                  url: '/contribute',
+                },
+                { name: t('breadcrumb.sorry.name', 'Sorry', { ns: 'contribute' }) },
               ]}
             />
             <TextContent>
+              <p>{t('explanation', { ns: 'contribute/sorry' })}</p>
               <p>
-                {t(
-                  'contribute:sorry_page.explanation',
-                  'Because we use the "hover" functionnality to highlight the parts of the document we want to track, we need you to have a computer and a mouse.'
-                )}
-              </p>
-              <p>
-                Contact us for any question <a href={`mailto:${EMAIL_SUPPORT}`}>{EMAIL_SUPPORT}</a>
+                {t('contact.email.text', { ns: 'contribute/sorry' })}
+                <a href={`mailto:${EMAIL_SUPPORT}`}>{EMAIL_SUPPORT}</a>
               </p>
             </TextContent>
           </Column>

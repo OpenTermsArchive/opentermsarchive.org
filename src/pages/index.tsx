@@ -30,24 +30,26 @@ import useUrl from 'hooks/useUrl';
 import { withI18n } from 'modules/I18n';
 
 const HomePage = ({ services }: any) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation(['common', 'homepage']);
   const [subscribing, toggleSubscribing] = useToggle(false);
   const { queryParams, pushQueryParams } = useUrl();
   const { notify } = useNotifier();
 
   // Format services and docs feature item title
-  let nbServicesTitle = t('common:home_page.how.feature1.defaultTitle', 'Many services');
-  let nbDocsTitle = t('common:home_page.how.feature2.defaultTitle', 'Many documents');
+  let nbServicesTitle = t('how.feature1.defaultTitle', { ns: 'homepage' });
+  let nbDocsTitle = t('how.feature2.defaultTitle', { ns: 'homepage' });
 
   if (services) {
     const nbServices = Object.keys(services).length;
-    nbServicesTitle = t('common:home_page.how.feature1.dynamicTitle', '{{count}} services', {
+    nbServicesTitle = t('how.feature1.dynamicTitle', {
       count: nbServices,
+      ns: 'homepage',
     });
 
     const nbDocuments = Object.values(services).flat().length;
-    nbDocsTitle = t('common:home_page.how.feature2.dynamicTitle', '{{count}} documents', {
+    nbDocsTitle = t('how.feature2.dynamicTitle', {
       count: nbDocuments,
+      ns: 'homepage',
     });
   }
 
@@ -61,13 +63,10 @@ const HomePage = ({ services }: any) => {
         service: data.service,
         documentType: data.documentType,
       });
-      notify('success', t('common:subscribe_form.success', 'Thanks for subscribing'));
+      notify('success', t('subscribe_form.success', { ns: 'common' }));
       success = true;
     } catch (err) {
-      notify(
-        'error',
-        t('common:subscribe_form.error', 'Sorry, but there was a problem, please try again')
-      );
+      notify('error', t('subscribe_form.error', { ns: 'common' }));
       success = false;
     }
     toggleSubscribing(false);
@@ -75,22 +74,13 @@ const HomePage = ({ services }: any) => {
   };
 
   return (
-    <Layout
-      title={t('common:home_page.seo.title', 'Follow the changes to the terms of service')}
-      desc={t(
-        'common:home_page.seo.desc',
-        'Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms.'
-      )}
-    >
+    <Layout title={t('seo.title', { ns: 'homepage' })} desc={t('seo.desc', { ns: 'homepage' })}>
       {/* Hero */}
       <Container layout="wide" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
-            title={t('common:home_page.title', 'Follow the changes to the terms of service')}
-            subtitle={t(
-              'common:home_page.subtitle',
-              'Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms.'
-            )}
+            title={t('title', { ns: 'homepage' })}
+            subtitle={t('subtitle', { ns: 'homepage' })}
           ></Hero>
         </Container>
       </Container>
@@ -130,37 +120,20 @@ const HomePage = ({ services }: any) => {
           gridGutters="11"
           flex={true}
           paddingY={false}
-          id={t('common:home_page.how.id', 'how')}
+          id={t('how.id', { ns: 'homepage' })}
         >
           <Article
-            subtitle={t('common:home_page.how.subtitle', 'How ?')}
-            title={t('common:home_page.how.title', 'How does OTA work?')}
+            subtitle={t('how.subtitle', { ns: 'homepage' })}
+            title={t('how.title', { ns: 'homepage' })}
             titleLevel="h2"
           >
             <TextContent>
-              <p>
-                {t(
-                  'common:home_page.how.desc.p1',
-                  'Services are declared within Open Terms Archive with a declaration file listing all the documents that, together, constitute the terms under which this service can be used. These documents all have a type, such as “terms and conditions”, “privacy policy”, “developer agreement”…'
-                )}
-              </p>
-              <p>
-                {t(
-                  'common:home_page.how.desc.p2',
-                  'In order to track their changes, documents are periodically obtained by fetching a web location and selecting content within the web page to remove the noise (ads, navigation menu, login fields…). Beyond selecting a subset of a page, some documents have additional noise (hashes in links, CSRF tokens…) that would be false for changes. Open Terms Archive thus supports specific filters for each document.'
-                )}
-              </p>
-              <p>
-                {t(
-                  'common:home_page.how.desc.p3',
-                  'However, the shape of that noise can change over time. In order to recover in case of information loss during the noise filtering step, a snapshot is recorded every there is a change. After the noise is filtered out from the snapshot, if there are changes in the resulting document, a new version of the document is recorded.'
-                )}
-              </p>
-              <Link href={t('common:home_page.how.button.href', '/how-it-works')}>
-                <a title={t('common:home_page.how.button.title', 'How OTA works ?')}>
-                  <Button type="secondary">
-                    {t('common:home_page.how.button.label', 'Know more')}
-                  </Button>
+              <p>{t('how.desc.p1', { ns: 'homepage' })}</p>
+              <p>{t('how.desc.p2', { ns: 'homepage' })}</p>
+              <p>{t('how.desc.p3', { ns: 'homepage' })}</p>
+              <Link href="/how-it-works">
+                <a title={t('how.button.title', { ns: 'homepage' })}>
+                  <Button type="secondary">{t('how.button.label', { ns: 'homepage' })}</Button>
                 </a>
               </Link>
             </TextContent>
@@ -170,26 +143,17 @@ const HomePage = ({ services }: any) => {
               <FeatureItem
                 iconName="FiBox"
                 title={nbServicesTitle}
-                desc={t(
-                  'common:home_page.how.feature1.desc',
-                  'Google, Amazon, Apple, AirBnB, Facebook, Twitter, Instagram, Bing, Microsoft, Reddit, Youtube, TikTok...'
-                )}
+                desc={t('how.feature1.desc', { ns: 'homepage' })}
               />
               <FeatureItem
                 iconName="FiFile"
                 title={nbDocsTitle}
-                desc={t(
-                  'common:home_page.how.feature2.desc',
-                  'Terms of Service, Privacy Policy, Trackers Policy, Developer Terms, Community Guidelines...'
-                )}
+                desc={t('how.feature2.desc', { ns: 'homepage' })}
               />
               <FeatureItem
                 iconName="FiSmile"
-                title={t('common:home_page.how.feature3.title', 'Open Source')}
-                desc={t(
-                  'common:home_page.how.feature3.desc',
-                  'Free and collaborative software, any entity can contribute to improve it.'
-                )}
+                title={t('how.feature3.title', { ns: 'homepage' })}
+                desc={t('how.feature3.desc', { ns: 'homepage' })}
               />
             </FeatureList>
           </Aside>
@@ -197,11 +161,7 @@ const HomePage = ({ services }: any) => {
       </Container>
 
       {/* Contribute */}
-      <Container
-        gridCols="12"
-        gridGutters="11"
-        id={t('common:home_page.contribute.id', 'contribute')}
-      >
+      <Container gridCols="12" gridGutters="11" id={t('contribute.id', { ns: 'homepage' })}>
         <Container gridCols="8" gridGutters="7" paddingY={false}>
           <Column width={100} alignX="center">
             <img src="/images/contribute.jpg" loading="lazy" />
@@ -209,151 +169,93 @@ const HomePage = ({ services }: any) => {
         </Container>
         <ButtonBlockList
           className="mt__XL"
-          title={t('common:home_page.contribute.title', 'Want to help us build a digital common ?')}
-          subtitle={t('common:home_page.contribute.subtitle', 'Contribute')}
+          title={t('contribute.title', {
+            ns: 'homepage',
+          })}
+          subtitle={t('contribute.subtitle', { ns: 'homepage' })}
         >
           <ButtonBlock
-            title={t('common:home_page.contribute.buttonblock1.title', 'Add documents')}
-            desc={t(
-              'common:home_page.contribute.buttonblock1.desc',
-              'Easily and quickly add documents to follow.'
-            )}
+            title={t('contribute.buttonblock1.title', { ns: 'homepage' })}
+            desc={t('contribute.buttonblock1.desc', {
+              ns: 'homepage',
+            })}
             iconName="FiPlus"
             iconColor="var(--colorPrimary)"
           >
-            <Link href={t('common:home_page.contribute.buttonblock1.button.href', '/contribute')}>
-              <a
-                title={t(
-                  'common:home_page.contribute.buttonblock1.link.title',
-                  'Add a document now'
-                )}
-              >
-                <Button>
-                  {t('common:home_page.contribute.buttonblock1.button.label', 'Add now')}
-                </Button>
+            <Link href="/contribute">
+              <a title={t('contribute.buttonblock1.link.title', { ns: 'homepage' })}>
+                <Button>{t('contribute.buttonblock1.button.label', { ns: 'homepage' })}</Button>
               </a>
             </Link>
           </ButtonBlock>
           <ButtonBlock
-            title={t('common:home_page.contribute.buttonblock2.title', 'Improve source code')}
-            desc={t(
-              'common:home_page.contribute.buttonblock2.desc',
-              'Add features, write tests, fix bugs, help us make better code.'
-            )}
+            title={t('contribute.buttonblock2.title', { ns: 'homepage' })}
+            desc={t('contribute.buttonblock2.desc', { ns: 'homepage' })}
             iconName="FiGithub"
             iconColor="var(--colorPrimary)"
           >
             <Link href="https://github.com/ambanum/OpenTermsArchive">
-              <a
-                title={t(
-                  'common:home_page.contribute.buttonblock2.link.title',
-                  'Go to the GitHub repository'
-                )}
-              >
-                <Button>
-                  {t('common:home_page.contribute.buttonblock2.button.label', 'View source code')}
-                </Button>
+              <a title={t('contribute.buttonblock2.link.title', { ns: 'homepage' })}>
+                <Button>{t('contribute.buttonblock2.button.label', { ns: 'homepage' })}</Button>
               </a>
             </Link>
           </ButtonBlock>
           <ButtonBlock
-            title={t('common:home_page.contribute.buttonblock3.title', 'Use the data')}
-            desc={t(
-              'common:home_page.contribute.buttonblock3.desc',
-              'Design your use cases using the data via the API.'
-            )}
+            title={t('contribute.buttonblock3.title', 'Use the data', { ns: 'homepage' })}
+            desc={t('contribute.buttonblock3.desc', { ns: 'homepage' })}
             iconName="FiDatabase"
             iconColor="var(--colorPrimary)"
           >
             <a
               href="https://opentermsarchive.org/data/api"
-              title={t(
-                'common:home_page.contribute.buttonblock3.link.title',
-                'Read the documentation for use the API'
-              )}
+              title={t('contribute.buttonblock3.link.title', { ns: 'homepage' })}
               target="_blank"
             >
-              <Button>
-                {t('common:home_page.contribute.buttonblock3.button.label', 'Discover the API')}
-              </Button>
+              <Button>{t('contribute.buttonblock3.button.label', { ns: 'homepage' })}</Button>
             </a>
             <LinkIcon
               iconColor="var(--colorBlack400)"
               href="https://github.com/ambanum/OpenTermsArchive-versions/releases"
               small={true}
             >
-              <a
-                title={t(
-                  'common:home_page.contribute.buttonblock3.sublink.title',
-                  'Download a dataset'
-                )}
-              >
-                {t(
-                  'common:home_page.contribute.buttonblock3.sublink.label',
-                  'or download a dataset'
-                )}
+              <a title={t('contribute.buttonblock3.sublink.title', { ns: 'homepage' })}>
+                {t('contribute.buttonblock3.sublink.label', { ns: 'homepage' })}
               </a>
             </LinkIcon>
           </ButtonBlock>
         </ButtonBlockList>
         <Container gridCols="6" gridGutters="5" paddingYSmall={true}>
-          <Contributors subtitle={t('common:home_page.contributors.subtitle', 'Thanks 🙏')} />
+          <Contributors subtitle={t('contributors.subtitle', { ns: 'homepage' })} />
         </Container>
       </Container>
 
       {/* Values */}
-      <Container
-        layout="wide"
-        dark={true}
-        paddingY={false}
-        id={t('common:home_page.values.id', 'values')}
-      >
+      <Container layout="wide" dark={true} paddingY={false} id={t('values.id', { ns: 'homepage' })}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
           <Column width={50} alignX="center" alignY="center">
             <img src="/images/values.png" loading="lazy" />
           </Column>
           <Column
             width={50}
-            title={t('common:home_page.values.title', 'What we believe in')}
-            subtitle={t('common:home_page.values.subtitle', 'values')}
+            title={t('values.title', { ns: 'homepage' })}
+            subtitle={t('values.subtitle', { ns: 'homepage' })}
           >
             <TextContent>
-              <p>
-                {t(
-                  'common:home_page.values.desc.p1',
-                  'Large digital companies today occupy a central position which, through the ToS, allows them to transform their practices and values ​​into de facto which are at the heart of many aspects of our existence and our economies.'
-                )}
-              </p>
-              <p>
-                {t(
-                  'common:home_page.values.desc.p2',
-                  'However, they communicate in an insufficiently clear, readable and continuous manner on these ToS, whereas rigorously understanding the ToS and how they have evolved over time has become essential to appreciate the practices and loyalty of these digital players.'
-                )}
-              </p>
-              <p>
-                {t('common:home_page.values.desc.p3', ' This understanding is also necessary to:')}
-              </p>
+              <p>{t('values.desc.p1', { ns: 'homepage' })}</p>
+              <p>{t('values.desc.p2', { ns: 'homepage' })}</p>
+              <p>{t('values.desc.p3', { ns: 'homepage' })}</p>
               <ul>
                 <li>
                   <FiArrowRightCircle color="#0496FF" />
-                  {t(
-                    'common:home_page.values.desc.list.item1',
-                    'each user so that he can identify precisely what he has agreed upon, the data he has shared, the rights he has yielded to the services and the rights he has retained;'
-                  )}
+                  {t('values.desc.list.item1', { ns: 'homepage' })}
                 </li>
                 <li>
                   <FiArrowRightCircle color="#0496FF" />
-                  {t(
-                    'common:home_page.values.desc.list.item2',
-                    'the authorities in order to verify the compatibility of these contractual frameworks with national and supranational law, in particular when the latter evolve;'
-                  )}
+                  {t('values.desc.list.item2', { ns: 'homepage' })}
                 </li>
                 <li>
                   <FiArrowRightCircle color="#0496FF" />
-                  {t(
-                    'common:home_page.values.desc.list.item3',
-                    'regulators so that they can assess the efforts of the platforms, but also to make sure that they say what they do and that they do what they say. It creates transparency in the practices of digital players, in line with the first recommendations discussed within the framework of the DSA and the DMA.'
-                  )}
+                  {t('values.desc.list.item3', { ns: 'homepage' })}
                 </li>
               </ul>
             </TextContent>
@@ -366,61 +268,39 @@ const HomePage = ({ services }: any) => {
         gridCols="10"
         gridGutters="11"
         flex={true}
-        id={t('common:home_page.showcase.id', 'built-with')}
+        id={t('showcase.id', { ns: 'homepage' })}
       >
         <Column
           width={50}
-          title={t('common:home_page.showcase.title', 'Built with')}
-          subtitle={t('common:home_page.showcase.title', 'Showcase')}
+          title={t('showcase.title', { ns: 'homepage' })}
+          subtitle={t('showcase.title', { ns: 'homepage' })}
         >
           <ShowcaseList>
             <ShowcaseItem
-              title={t('common:home_page.showcase.item1.title', 'Scripta Manent')}
-              desc={t(
-                'common:home_page.showcase.item1.desc',
-                'Explore the contractual documents of the main online service providers and compare their evolution through time.'
-              )}
-              author={t(
-                'common:home_page.showcase.item1.author',
-                'By the team of the French Ambassador for Digital Affairs'
-              )}
+              title={t('showcase.item1.title', { ns: 'homepage' })}
+              desc={t('showcase.item1.desc', { ns: 'homepage' })}
+              author={t('showcase.item1.author', { ns: 'homepage' })}
             >
               <LinkIcon
                 iconColor="var(--colorBlack400)"
                 href="https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent"
               >
-                <a
-                  title={t(
-                    'common:home_page.showcase.item1.link.title',
-                    'Try Scripta Manent on Disinfo website now'
-                  )}
-                >
-                  {t('common:home_page.showcase.item1.link.label', 'Try')}
+                <a title={t('showcase.item1.link.title', { ns: 'homepage' })}>
+                  {t('showcase.item1.link.label', { ns: 'homepage' })}
                 </a>
               </LinkIcon>
             </ShowcaseItem>
             <ShowcaseItem
-              title={t('common:home_page.showcase.item2.title', 'Disinfo experiments')}
-              desc={t(
-                'common:home_page.showcase.item2.desc',
-                'Experiments are ongoing so as to produce use cases using Open Terms Archive data.'
-              )}
-              author={t(
-                'common:home_page.showcase.item2.author',
-                'By the team of the French Ambassador for Digital Affairs'
-              )}
+              title={t('showcase.item2.title', { ns: 'homepage' })}
+              desc={t('showcase.item2.desc', { ns: 'homepage' })}
+              author={t('showcase.item2.author', { ns: 'homepage' })}
             >
               <LinkIcon
                 iconColor="var(--colorPrimary)"
                 href="https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments"
               >
-                <a
-                  title={t(
-                    'common:home_page.showcase.item2.link.title',
-                    'See Disinfo experiments with Open Terms Archive data'
-                  )}
-                >
-                  {t('common:home_page.showcase.item2.link.label', 'See')}
+                <a title={t('showcase.item2.link.title', { ns: 'homepage' })}>
+                  {t('showcase.item2.link.label', { ns: 'homepage' })}
                 </a>
               </LinkIcon>
             </ShowcaseItem>
@@ -428,24 +308,17 @@ const HomePage = ({ services }: any) => {
         </Column>
         <Column width={50} alignX="center" alignY="center">
           <ButtonBlock
-            title={t(
-              'common:home_page.showcase.buttonblock.title',
-              'Have you developed an Open Terms Archive based tool?'
-            )}
-            desc={t(
-              'common:home_page.showcase.buttonblock.desc',
-              'Let the community know about it here'
-            )}
+            title={t('showcase.buttonblock.title', { ns: 'homepage' })}
+            desc={t('showcase.buttonblock.desc', { ns: 'homepage' })}
             fillParent={true}
           >
             <Link
-              href={t(
-                'common:home_page.showcase.buttonblock.href',
-                'mailto:contact@opentermsarchive.org'
-              )}
+              href={
+                `mailto:` + t('contact.email', 'contact@opentermsarchive.org', { ns: 'common' })
+              }
             >
-              <a title={t('common:home_page.showcase.buttonblock.link.title', 'Send us a mail')}>
-                <Button>{t('common:home_page.showcase.buttonblock.label', 'Contact us')}</Button>
+              <a title={t('showcase.buttonblock.link.title', { ns: 'homepage' })}>
+                <Button>{t('showcase.buttonblock.label', { ns: 'homepage' })}</Button>
               </a>
             </Link>
           </ButtonBlock>
@@ -455,11 +328,8 @@ const HomePage = ({ services }: any) => {
       {/* Partners */}
       <Container layout="fluid" gridCols="12" gridGutters="11" flex={true} paddingX={false}>
         <ThumbGalery
-          title={t('common:home_page.partners.title', 'Our Partners')}
-          subtitle={t(
-            'common:home_page.partners.subtitle',
-            'They make Open Terms Archive existing'
-          )}
+          title={t('partners.title', { ns: 'homepage' })}
+          subtitle={t('partners.subtitle', { ns: 'homepage' })}
           titleLevel="h3"
         >
           <Link href="https://disinfo.quaidorsay.fr">
@@ -494,8 +364,8 @@ const HomePage = ({ services }: any) => {
         paddingYSmall={true}
       >
         <ThumbGalery
-          title={t('common:home_page.press.title', 'Press')}
-          subtitle={t('common:home_page.press.subtitle', 'They talk about Open Terms Archive')}
+          title={t('press.title', { ns: 'homepage' })}
+          subtitle={t('press.subtitle', { ns: 'homepage' })}
           titleLevel="h4"
           small={true}
         >

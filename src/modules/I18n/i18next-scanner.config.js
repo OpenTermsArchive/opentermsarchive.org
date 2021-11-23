@@ -18,7 +18,9 @@ const pagesNamespaces = fg
   .map((o) => o.replace('.tsx', ''))
   .map((o) => o.replace('/index', ''));
 
-const namespaces = [...moduleNamespaces, ...pagesNamespaces, 'common'];
+const namespaces = [...moduleNamespaces, ...pagesNamespaces, 'common', 'homepage'];
+
+console.log(namespaces);
 /*
  * Doc: https://github.com/i18next/i18next-scanner
  */

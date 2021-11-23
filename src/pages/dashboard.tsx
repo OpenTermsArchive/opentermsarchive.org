@@ -140,22 +140,16 @@ const DashboardPage = React.memo(
       });
     }
 
-    const documentsVersionsLegend: string = t(
-      'activity.chart.legend.documentsversions',
+    const documentsVersionsLegend: string = t('activity.chart.legend.documentsversions', {
+      ns: 'dashboard',
+    });
 
-      { ns: 'dashboard' }
-    );
-
-    const trackedServicesLegend: string = t(
-      'activity.chart.legend.trackedservices',
-
-      { ns: 'dashboard' }
-    );
-    const activeServicesLegend: string = t(
-      'activity.chart.legend.activeservices',
-
-      { ns: 'dashboard' }
-    );
+    const trackedServicesLegend: string = t('activity.chart.legend.trackedservices', {
+      ns: 'dashboard',
+    });
+    const activeServicesLegend: string = t('activity.chart.legend.activeservices', {
+      ns: 'dashboard',
+    });
     const servicesAxisBottomLegend: string = t('activity.chart.axis.bottom.legend', {
       ns: 'dashboard',
     });
@@ -169,9 +163,7 @@ const DashboardPage = React.memo(
           <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
             <Hero
               title={t('hero.title', 'Dashboard', { ns: 'dashboard' })}
-              subtitle={t('hero.subtitle', {
-                ns: 'dashboard',
-              })}
+              subtitle={t('hero.subtitle', { ns: 'dashboard' })}
             ></Hero>
           </Container>
         </Container>
@@ -227,9 +219,7 @@ const DashboardPage = React.memo(
           <Column
             width={60}
             title={t('latestversionscommits.title', { ns: 'dashboard' })}
-            subtitle={t('latestversionscommits.subtitle', {
-              ns: 'dashboard',
-            })}
+            subtitle={t('latestversionscommits.subtitle', { ns: 'dashboard' })}
           >
             <TextContent>
               <ul>
@@ -261,9 +251,7 @@ const DashboardPage = React.memo(
               <Link href="https://github.com/ambanum/OpenTermsArchive-versions/">
                 <a title={t('latestversionscommits.buttonblock.link.title', { ns: 'dashboard' })}>
                   <Button>
-                    {t('latestversionscommits.buttonblock.label', {
-                      ns: 'dashboard',
-                    })}
+                    {t('latestversionscommits.buttonblock.label', { ns: 'dashboard' })}
                   </Button>
                 </a>
               </Link>

@@ -14,19 +14,19 @@ import { useTranslation } from 'react-i18next';
 import useUrl from 'hooks/useUrl';
 
 export default function ThanksPage({ mdxContent }: WithI18nResult) {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['contribute/thanks', 'contribute', 'common']);
   const {
     queryParams: { url },
   } = useUrl();
   return (
     <Layout
-      title={t('contribute:thanks_page.seo.title', 'Thanks')}
-      desc={t('contribute:thanks_page.seo.desc', 'Thanks for contributing')}
+      title={t('seo.title', { ns: 'contribute/thanks' })}
+      desc={t('seo.desc', { ns: 'contribute/thanks' })}
     >
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Hero title={t('contribute:thanks_page.title', 'Thanks')}></Hero>
+          <Hero title={t('title', { ns: 'contribute/thanks' })}></Hero>
         </Container>
       </Container>
 
@@ -34,18 +34,18 @@ export default function ThanksPage({ mdxContent }: WithI18nResult) {
         <Breadcrumb
           items={[
             {
-              name: t('contribute:breadcrumb.home_page.name', 'Home'),
+              name: t('breadcrumb.homepage.name', { ns: 'contribute' }),
               url: 'https://www.opentermsarchive.org',
             },
             {
-              name: t('contribute:breadcrumb.contribute.name', 'Contribute'),
-              url: './../#' + t('common:home_page.contribute.id', 'contribute'),
+              name: t('breadcrumb.contribute.name', { ns: 'contribute' }),
+              url: './../#' + t('contribute.id', { ns: 'common' }),
             },
             {
-              name: t('contribute:breadcrumb.adddocument.name', 'Add a document'),
+              name: t('breadcrumb.adddocument.name', { ns: 'contribute' }),
               url: '/contribute',
             },
-            { name: t('contribute:breadcrumb.thanks.name', 'Thanks') },
+            { name: t('breadcrumb.thanks.name', { ns: 'contribute' }) },
           ]}
         />
       </Container>
@@ -57,14 +57,14 @@ export default function ThanksPage({ mdxContent }: WithI18nResult) {
       </Container>
 
       <Container gridCols="6" gridGutters="5">
-        <Contributors subtitle={t('contribute:contributors.subtitle', 'Contributors')} />
+        <Contributors subtitle={t('contributors.subtitle', { ns: 'contribute/thanks' })} />
       </Container>
 
       <Container gridCols="9" gridGutters="8" paddingTop={false}>
         <TextContent className="text__center">
           <hr />
           <Link href="/contribute">
-            <Button>{t('contribute:thanks_page.cta')}</Button>
+            <Button>{t('thanks_page.cta', { ns: 'contribute/thanks' })}</Button>
           </Link>
         </TextContent>
       </Container>
