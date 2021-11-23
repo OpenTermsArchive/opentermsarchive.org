@@ -1,0 +1,23 @@
+{
+  "activity.chart.legend.documentsversions": "Documents versions",
+  "activity.chart.legend.trackedservices": "Tracked services",
+  "activity.chart.legend.activeservices": "Active services",
+  "activity.chart.axis.bottom.legend": "year-month",
+  "activity.chart.axis.left.legend": "number",
+  "seo.title": "Dashboard",
+  "hero.title": "Dashboard",
+  "hero.subtitle": "A set of activity metrics for Open Terms Archive",
+  "activity.title": "Activity",
+  "activity.subtitle": "Last 12 months activity",
+  "activity.desc": "Evolution of services and documents versions over the last 12 months",
+  "latestversionscommits.title": "Latest changes recorded",
+  "latestversionscommits.subtitle": "on the tracked documents",
+  "latestversionscommits.buttonblock.title": "We recorded {{count}} documents versions",
+  "latestversionscommits.buttonblock.title_plural": "We recorded {{count}} documents versions",
+  "latestversionscommits.buttonblock.desc": "And it continues every day, explore them on GitHub.",
+  "latestversionscommits.buttonblock.link.title": "Explore the documents versions",
+  "latestversionscommits.buttonblock.label": "Explore now",
+  "serviceslist.title": "Services list",
+  "serviceslist.subtitle": "{{count}} services and related documents",
+  "serviceslist.subtitle_plural": "{{count}} services and related documents"
+}

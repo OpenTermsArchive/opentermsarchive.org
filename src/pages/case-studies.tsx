@@ -11,18 +11,16 @@ import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
 
 export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation(['common', 'case-studies']);
+
   return (
-    <Layout title={t('common:case-studies.seo.title', 'Case Studies')}>
+    <Layout title={t('seo.title', { ns: 'case-studies' })}>
       <Container layout="wide" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={50} alignY="center">
             <Hero
-              title={t('common:case-studies.hero.title', 'Case Studies')}
-              subtitle={t(
-                'common:case-studies.hero.subtitle',
-                'So far, Open Terms Archive taught us a lot.'
-              )}
+              title={t('hero.title', { ns: 'case-studies' })}
+              subtitle={t('hero.subtitle', { ns: 'case-studies' })}
             ></Hero>
           </Column>
           <Column width={50} alignX="center">

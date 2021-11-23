@@ -1,8 +1,12 @@
+const path = require('path');
+
 module.exports = {
   defaultNS: 'common',
   i18n: {
     defaultLocale: 'catchAll',
     locales: ['en', 'fr', 'catchAll'],
+    localePath: path.resolve('./src/translations'), //'./public/locales'
+    localeStructure: '{{lng}}/{{ns}}', //{{lng}}/{{ns}}
   },
   // https://github.com/vercel/next.js/discussions/18419
   // TO BE REMOVED alog with catchAll when this feature request is done

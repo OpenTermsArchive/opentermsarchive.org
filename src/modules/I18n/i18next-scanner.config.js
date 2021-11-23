@@ -4,14 +4,21 @@ const {
 const fg = require('fast-glob');
 const typescriptTransform = require('i18next-scanner-typescript');
 
-const namespaces = fg
+const moduleNamespaces = fg
   .sync(['src/modules/*', 'src/modulesAdmin/*', 'src/api/modules/*'], {
     onlyDirectories: true,
     deep: 1,
   })
   .filter((o) => !o.includes('__tests__'))
-  .map((o) => o.toLowerCase().replace('src/modules/', ''));
+  .map((o) => o.toLowerCase().replace('src/modules/', 'modules/'));
 
+const pagesNamespaces = fg
+  .sync(['src/pages/**/*.tsx'], { onlyFiles: true, ignore: ['src/pages/_app.tsx'] })
+  .map((o) => o.toLowerCase().replace('src/pages/', ''))
+  .map((o) => o.replace('.tsx', ''))
+  .map((o) => o.replace('/index', ''));
+
+const namespaces = [...moduleNamespaces, ...pagesNamespaces, 'common'];
 /*
  * Doc: https://github.com/i18next/i18next-scanner
  */
@@ -44,8 +51,8 @@ module.exports = {
     defaultNs: 'missing-namespace',
     defaultValue: '__STRING_NOT_TRANSLATED__',
     resource: {
-      loadPath: 'public/locales/{{lng}}/{{ns}}.json',
-      savePath: 'public/locales/{{lng}}/{{ns}}.json',
+      loadPath: 'src/translations/{{lng}}/{{ns}}.json',
+      savePath: 'src/translations/{{lng}}/{{ns}}.json',
     },
     nsSeparator: ':', // namespace separator
     keySeparator: false, // key separator

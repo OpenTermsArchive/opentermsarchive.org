@@ -41,7 +41,7 @@ const DashboardPage = React.memo(
     latestVersionsCommits: Commits;
     services: Services;
   }) => {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation(['common', 'dashboard']);
 
     const { data: services } = useSWR<Services>('/api/ota/services/all', {
       initialData: defaultServices,
@@ -141,37 +141,37 @@ const DashboardPage = React.memo(
     }
 
     const documentsVersionsLegend: string = t(
-      'common:dashboard.activity.chart.legend.documentsversions',
-      'Documents versions'
+      'activity.chart.legend.documentsversions',
+
+      { ns: 'dashboard' }
     );
 
     const trackedServicesLegend: string = t(
-      'common:dashboard.activity.chart.legend.trackedservices',
-      'Tracked services'
+      'activity.chart.legend.trackedservices',
+
+      { ns: 'dashboard' }
     );
     const activeServicesLegend: string = t(
-      'common:dashboard.activity.chart.legend.activeservices',
-      'Active services'
+      'activity.chart.legend.activeservices',
+
+      { ns: 'dashboard' }
     );
-    const servicesAxisBottomLegend: string = t(
-      'common:dashboard.activity.chart.axis.bottom.legend',
-      'year-month'
-    );
-    const servicesAxisLeftLegend: string = t(
-      'common:dashboard.activity.chart.axis.left.legend',
-      'number'
-    );
+    const servicesAxisBottomLegend: string = t('activity.chart.axis.bottom.legend', {
+      ns: 'dashboard',
+    });
+    const servicesAxisLeftLegend: string = t('activity.chart.axis.left.legend', {
+      ns: 'dashboard',
+    });
 
     return (
-      <Layout title={t('common:dashboard.seo.title', 'Dashboard')}>
+      <Layout title={t('seo.title', 'Dashboard', { ns: 'dashboard' })}>
         <Container layout="wide" paddingY={false} gray={true}>
           <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
             <Hero
-              title={t('common:dashboard.hero.title', 'Dashboard')}
-              subtitle={t(
-                'common:dashboard.hero.subtitle',
-                'A set of activity metrics for Open Terms Archive'
-              )}
+              title={t('hero.title', 'Dashboard', { ns: 'dashboard' })}
+              subtitle={t('hero.subtitle', {
+                ns: 'dashboard',
+              })}
             ></Hero>
           </Container>
         </Container>
@@ -179,16 +179,11 @@ const DashboardPage = React.memo(
         <Container gridCols="12" gridGutters="11">
           <Column
             width={100}
-            title={t('common:dashboard.activity.title', 'Activity')}
-            subtitle={t('common:dashboard.activity.subtitle', `Last 12 months activity`)}
+            title={t('activity.title', 'Activity', { ns: 'dashboard' })}
+            subtitle={t('activity.subtitle', { ns: 'dashboard' })}
           >
             <TextContent>
-              <p>
-                {t(
-                  'common:dashboard.activity.desc',
-                  `Evolution of services and documents versions over the last 12 months`
-                )}
-              </p>
+              <p>{t('activity.desc', { ns: 'dashboard' })}</p>
             </TextContent>
             {versionsCommitsData && trackedServicesData && activeServicesData && (
               <LineChart
@@ -231,11 +226,10 @@ const DashboardPage = React.memo(
         <Container gridCols="12" gridGutters="11" flex={true}>
           <Column
             width={60}
-            title={t('common:dashboard.latestversionscommits.title', 'Latest changes recorded')}
-            subtitle={t(
-              'common:dashboard.latestversionscommits.subtitle',
-              'on the tracked documents'
-            )}
+            title={t('latestversionscommits.title', { ns: 'dashboard' })}
+            subtitle={t('latestversionscommits.subtitle', {
+              ns: 'dashboard',
+            })}
           >
             <TextContent>
               <ul>
@@ -257,26 +251,19 @@ const DashboardPage = React.memo(
           </Column>
           <Column width={40} alignX="center" alignY="center">
             <ButtonBlock
-              title={t(
-                'common:dashboard.latestversionscommits.buttonblock.title',
-                'We recorded {{count}} documents versions',
-                { count: totalVersionsCommits }
-              )}
-              desc={t(
-                'common:dashboard.latestversionscommits.buttonblock.desc',
-                'And it continues every day, explore them on GitHub.'
-              )}
+              title={t('latestversionscommits.buttonblock.title', {
+                ns: 'dashboard',
+                count: totalVersionsCommits,
+              })}
+              desc={t('latestversionscommits.buttonblock.desc', { ns: 'dashboard' })}
               fillParent={true}
             >
               <Link href="https://github.com/ambanum/OpenTermsArchive-versions/">
-                <a
-                  title={t(
-                    'common:dashboard.latestversionscommits.buttonblock.link.title',
-                    'Explore the documents versions'
-                  )}
-                >
+                <a title={t('latestversionscommits.buttonblock.link.title', { ns: 'dashboard' })}>
                   <Button>
-                    {t('common:dashboard.latestversionscommits.buttonblock.label', 'Explore now')}
+                    {t('latestversionscommits.buttonblock.label', {
+                      ns: 'dashboard',
+                    })}
                   </Button>
                 </a>
               </Link>
@@ -285,14 +272,11 @@ const DashboardPage = React.memo(
         </Container>
         <ServicesList
           services={services || {}}
-          title={t('common:dashboard.serviceslist.title', 'Services list')}
-          subtitle={t(
-            'common:dashboard.serviceslist.subtitle',
-            '{{count}} services and related documents',
-            {
-              count: nbServices,
-            }
-          )}
+          title={t('serviceslist.title', { ns: 'dashboard' })}
+          subtitle={t('serviceslist.subtitle', {
+            count: nbServices,
+            ns: 'dashboard',
+          })}
         />
       </Layout>
     );
