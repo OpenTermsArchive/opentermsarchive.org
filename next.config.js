@@ -35,4 +35,18 @@ module.exports = {
     });
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: '/fr/press',
+        destination: '/fr/media',
+        permanent: true,
+      },
+      {
+        source: '/en/press',
+        destination: '/en/media',
+        permanent: true,
+      },
+    ];
+  },
 };
