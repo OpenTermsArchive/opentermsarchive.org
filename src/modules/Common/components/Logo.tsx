@@ -21,10 +21,10 @@ const Logo: React.FC<LogoProps> = ({
     <div
       className={classNames(
         s.logo,
-        size === 'small' ? s.logo__small : null,
-        size === 'medium' ? s.logo__medium : null,
-        size === 'large' ? s.logo__large : null,
-        size === 'full' ? s.logo__full : null
+        { [s.logo__small]: size === 'small' },
+        { [s.logo__medium]: size === 'medium' },
+        { [s.logo__large]: size === 'large' },
+        { [s.logo__full]: size === 'full' }
       )}
     >
       {backgroundType === 'white' && <LogoSVGBlack {...props} />}
