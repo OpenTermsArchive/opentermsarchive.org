@@ -47,6 +47,11 @@ module.exports = {
         destination: '/en/media',
         permanent: true,
       },
+      {
+        source: '/homepage',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 };
