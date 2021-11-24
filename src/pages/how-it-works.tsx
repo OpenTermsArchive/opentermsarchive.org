@@ -14,7 +14,10 @@ import { useTranslation } from 'next-i18next';
 export default function HowItWorksPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation(['common', 'how-it-works']);
   return (
-    <Layout title={t('seo.title', { ns: 'how-it-works' })}>
+    <Layout
+      title={t('seo.title', { ns: 'how-it-works' })}
+      desc={t('seo.desc', { ns: 'how-it-works' })}
+    >
       <Container layout="wide" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={70}>

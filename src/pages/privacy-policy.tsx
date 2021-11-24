@@ -11,7 +11,10 @@ import { useTranslation } from 'next-i18next';
 export default function PrivacyPolicyPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation(['common', 'privacy-policy']);
   return (
-    <Layout title={t('seo.title', { ns: 'privacy-policy' })}>
+    <Layout
+      title={t('seo.title', { ns: 'privacy-policy' })}
+      desc={t('seo.desc', { ns: 'privacy-policy' })}
+    >
       <Container gridCols="10" gridGutters="9" paddingX={false}>
         <TextContent>
           <MDXRemote {...(mdxContent as any)} components={{ Button: Button }} />

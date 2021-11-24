@@ -14,7 +14,10 @@ export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation(['common', 'case-studies']);
 
   return (
-    <Layout title={t('seo.title', { ns: 'case-studies' })}>
+    <Layout
+      title={t('seo.title', { ns: 'case-studies' })}
+      desc={t('seo.desc', { ns: 'case-studies' })}
+    >
       <Container layout="wide" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={50} alignY="center">

@@ -6,21 +6,20 @@ import Layout from 'modules/Common/containers/Layout';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
-const EMAIL_SUPPORT = 'contact@opentermsarchive.org';
 
 const SorryPage = () => {
   const { t } = useTranslation(['contribute/sorry', 'contribute', 'common']);
   return (
     <Layout
-      title={t('seo.title', 'Sorry', { ns: 'contribute/sorry' })}
-      desc={t('seo.desc', 'You cannot access this page', { ns: 'contribute/sorry' })}
+      title={t('seo.title', { ns: 'contribute/sorry' })}
+      desc={t('seo.desc', { ns: 'contribute/sorry' })}
     >
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
-            title={t('title', 'Sorry 😿', { ns: 'contribute/sorry' })}
-            subtitle={t('subtitle', 'You cannot access this page', { ns: 'contribute/sorry' })}
+            title={t('title', { ns: 'contribute/sorry' })}
+            subtitle={t('subtitle', { ns: 'contribute/sorry' })}
           ></Hero>
         </Container>
       </Container>
@@ -49,7 +48,9 @@ const SorryPage = () => {
               <p>{t('explanation', { ns: 'contribute/sorry' })}</p>
               <p>
                 {t('contact.email.text', { ns: 'contribute/sorry' })}
-                <a href={`mailto:${EMAIL_SUPPORT}`}>{EMAIL_SUPPORT}</a>
+                <a href={'mailto:' + t('contact.email', { ns: 'common' })}>
+                  {t('contact.email', { ns: 'common' })}
+                </a>
               </p>
             </TextContent>
           </Column>

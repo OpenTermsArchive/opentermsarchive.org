@@ -16,7 +16,7 @@ import { useTranslation } from 'next-i18next';
 export default function MediaPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation(['common', 'media']);
   return (
-    <Layout title={t('seo.title', { ns: 'media' })}>
+    <Layout title={t('seo.title', { ns: 'media' })} desc={t('seo.desc', { ns: 'media' })}>
       <Container layout="wide" paddingY={false} dark={true}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero title={t('hero.title', { ns: 'media' })}></Hero>
@@ -25,7 +25,7 @@ export default function MediaPage({ mdxContent }: WithI18nResult) {
 
       <Container gray={true} layout={'fluid'} paddingY={false}>
         <Container gridCols="10" gridGutters="9">
-          <h2>{t('logo.title', 'Logo', { ns: 'media' })}</h2>
+          <h2>{t('logo.title', { ns: 'media' })}</h2>
           <Container flex={true} paddingYSmall={true}>
             <Column width={50}>
               <ButtonBlock

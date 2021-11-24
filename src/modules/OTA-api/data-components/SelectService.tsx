@@ -53,7 +53,7 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
       <>
         <div className={classNames('formfield')}>
           <label htmlFor="services">
-            {t('common:subscribe_form.fields.service.label', 'Select a service')}
+            {t('subscribe_form.fields.service.label', { ns: 'common' })}
           </label>
           <div className={classNames('select')}>
             {
@@ -69,13 +69,12 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
                   {...serviceProps}
                 >
                   <option value="">
-                    {t('common:subscribe_form.fields.service.default', 'Select...')}
+                    {t('subscribe_form.fields.service.default', { ns: 'common' })}
                   </option>
                   <optgroup
-                    label={t(
-                      'common:subscribe_form.fields.service.optgroup.gatekeepers',
-                      'Gatekeepers'
-                    )}
+                    label={t('subscribe_form.fields.service.optgroup.gatekeepers', {
+                      ns: 'common',
+                    })}
                   >
                     {dmaServices.map((service) => (
                       <option
@@ -88,10 +87,9 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
                     ))}
                   </optgroup>
                   <optgroup
-                    label={t(
-                      'common:subscribe_form.fields.service.optgroup.otherservices',
-                      'Other services'
-                    )}
+                    label={t('subscribe_form.fields.service.optgroup.otherservices', {
+                      ns: 'common',
+                    })}
                   >
                     {Object.keys(services || {}).map((service) => (
                       <option
@@ -111,7 +109,7 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
         </div>
         <div className={classNames('formfield')}>
           <label htmlFor="documentTypes">
-            {t('common:subscribe_form.fields.document.label', 'Select a document type')}
+            {t('subscribe_form.fields.document.label', { ns: 'common' })}
           </label>
           <div className={classNames('select')}>
             {
@@ -127,7 +125,7 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
                   {...documentTypeProps}
                 >
                   <option value="">
-                    {t('common:subscribe_form.fields.document.default', 'Select...')}
+                    {t('subscribe_form.fields.document.default', { ns: 'common' })}
                   </option>
                   {documentTypes.map((documentType) => (
                     <option key={`${selectedService}_${documentType}`} value={documentType}>

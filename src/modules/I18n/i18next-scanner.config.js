@@ -16,9 +16,10 @@ const pagesNamespaces = fg
   .sync(['src/pages/**/*.tsx'], { onlyFiles: true, ignore: ['src/pages/_app.tsx'] })
   .map((o) => o.toLowerCase().replace('src/pages/', ''))
   .map((o) => o.replace('.tsx', ''))
-  .map((o) => o.replace('/index', ''));
+  .map((o) => o.replace('/index', ''))
+  .filter((o) => o !== 'index');
 
-const namespaces = [...moduleNamespaces, ...pagesNamespaces, 'common', 'homepage'];
+const namespaces = [...moduleNamespaces, ...pagesNamespaces, 'common'];
 
 console.log('The available namespaces are :');
 namespaces.forEach((o) => console.log(` ‣ ${o}`));

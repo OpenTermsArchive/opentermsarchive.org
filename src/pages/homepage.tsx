@@ -120,7 +120,7 @@ const HomePage = ({ services }: any) => {
           gridGutters="11"
           flex={true}
           paddingY={false}
-          id={t('how.id', { ns: 'homepage' })}
+          id={t('how.id', { ns: 'common' })}
         >
           <Article
             subtitle={t('how.subtitle', { ns: 'homepage' })}
@@ -161,7 +161,7 @@ const HomePage = ({ services }: any) => {
       </Container>
 
       {/* Contribute */}
-      <Container gridCols="12" gridGutters="11" id={t('contribute.id', { ns: 'homepage' })}>
+      <Container gridCols="12" gridGutters="11" id={t('contribute.id', { ns: 'common' })}>
         <Container gridCols="8" gridGutters="7" paddingY={false}>
           <Column width={100} alignX="center">
             <img src="/images/contribute.jpg" loading="lazy" />
@@ -201,7 +201,7 @@ const HomePage = ({ services }: any) => {
             </Link>
           </ButtonBlock>
           <ButtonBlock
-            title={t('contribute.buttonblock3.title', 'Use the data', { ns: 'homepage' })}
+            title={t('contribute.buttonblock3.title', { ns: 'homepage' })}
             desc={t('contribute.buttonblock3.desc', { ns: 'homepage' })}
             iconName="FiDatabase"
             iconColor="var(--colorPrimary)"
@@ -230,7 +230,7 @@ const HomePage = ({ services }: any) => {
       </Container>
 
       {/* Values */}
-      <Container layout="wide" dark={true} paddingY={false} id={t('values.id', { ns: 'homepage' })}>
+      <Container layout="wide" dark={true} paddingY={false} id={t('values.id', { ns: 'common' })}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
           <Column width={50} alignX="center" alignY="center">
             <img src="/images/values.png" loading="lazy" />
@@ -264,12 +264,7 @@ const HomePage = ({ services }: any) => {
       </Container>
 
       {/* Showcase */}
-      <Container
-        gridCols="10"
-        gridGutters="11"
-        flex={true}
-        id={t('showcase.id', { ns: 'homepage' })}
-      >
+      <Container gridCols="10" gridGutters="11" flex={true} id={t('showcase.id', { ns: 'common' })}>
         <Column
           width={50}
           title={t('showcase.title', { ns: 'homepage' })}
@@ -312,11 +307,7 @@ const HomePage = ({ services }: any) => {
             desc={t('showcase.buttonblock.desc', { ns: 'homepage' })}
             fillParent={true}
           >
-            <Link
-              href={
-                `mailto:` + t('contact.email', 'contact@opentermsarchive.org', { ns: 'common' })
-              }
-            >
+            <Link href={`mailto:` + t('contact.email', { ns: 'common' })}>
               <a title={t('showcase.buttonblock.link.title', { ns: 'homepage' })}>
                 <Button>{t('showcase.buttonblock.label', { ns: 'homepage' })}</Button>
               </a>

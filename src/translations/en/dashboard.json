@@ -19,5 +19,6 @@
   "latestversionscommits.buttonblock.label": "Explore now",
   "serviceslist.title": "Services list",
   "serviceslist.subtitle": "{{count}} services and related documents",
-  "serviceslist.subtitle_plural": "{{count}} services and related documents"
+  "serviceslist.subtitle_plural": "{{count}} services and related documents",
+  "seo.desc": "__STRING_NOT_TRANSLATED__"
 }

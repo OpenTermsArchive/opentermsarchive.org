@@ -24,7 +24,7 @@ const Layout = ({
   title = 'This is the default title',
   desc = 'This is the default desc',
 }: Props) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('common');
   return (
     <>
       <Head>
@@ -53,36 +53,30 @@ const Layout = ({
                     <li>
                       <Link href="/">
                         <a
-                          title={t('common:header.link.home.title', 'Back to home page')}
+                          title={t('header.link.home.title', { ns: 'common' })}
                           onClick={toggleExtended}
                         >
-                          {t('common:header.link.home', 'Home')}
+                          {t('header.link.home', { ns: 'common' })}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/how-it-works">
                         <a
-                          title={t(
-                            'common:header.link.how.title',
-                            'How does Open Terms Archive work?'
-                          )}
+                          title={t('header.link.how.title', { ns: 'common' })}
                           onClick={toggleExtended}
                         >
-                          {t('common:header.link.how', 'How it works?')}
+                          {t('header.link.how', { ns: 'common' })}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/contribute">
                         <a
-                          title={t(
-                            'common:header.link.adddocument.title',
-                            'Add a document to Open Terms Archive'
-                          )}
+                          title={t('header.link.adddocument.title', { ns: 'common' })}
                           onClick={toggleExtended}
                         >
-                          {t('common:header.link.adddocument', 'Add a document')}
+                          {t('header.link.adddocument', { ns: 'common' })}
                         </a>
                       </Link>
                     </li>
@@ -90,12 +84,9 @@ const Layout = ({
                       <Link href={'/case-studies'}>
                         <a
                           onClick={toggleExtended}
-                          title={t(
-                            'common:header.link.case-studies.title',
-                            'So far, Open Terms Archive taught us a lot.'
-                          )}
+                          title={t('header.link.case-studies.title', { ns: 'common' })}
                         >
-                          {t('common:header.link.case-studies', 'Case studies')}
+                          {t('header.link.case-studies', { ns: 'common' })}
                         </a>
                       </Link>
                     </li>
@@ -109,7 +100,7 @@ const Layout = ({
                         <a
                           className={classNames('icon_circle')}
                           target="_blank"
-                          title={t('common:header.link.twitter.title', 'Follow us')}
+                          title={t('header.link.twitter.title', { ns: 'common' })}
                         >
                           <FiTwitter color="#fefffd" />
                         </a>
@@ -120,7 +111,7 @@ const Layout = ({
                         <a
                           className={classNames('icon_circle')}
                           target="_blank"
-                          title={t('common:header.link.github.title', 'See the source code')}
+                          title={t('header.link.github.title', { ns: 'common' })}
                         >
                           <FiGithub color="#fefffd" />
                         </a>
@@ -150,35 +141,30 @@ const Layout = ({
             <FooterMenu>
               <ul>
                 <li>
-                  <Link href="/">{t('common:footer.link.home', 'Home')}</Link>
+                  <Link href="/">{t('footer.link.home', { ns: 'common' })}</Link>
                 </li>
                 <li>
-                  <Link href="how-it-works">{t('common:footer.link.how', 'How')}</Link>
+                  <Link href="how-it-works">{t('footer.link.how', { ns: 'common' })}</Link>
                 </li>
                 <li>
-                  <Link href={'/#'.concat(t('common:home_page.values.id'))}>
-                    {t('common:footer.link.values', 'Values')}
+                  <Link href={'/#'.concat(t('values.id', { ns: 'common' }))}>
+                    {t('footer.link.values', { ns: 'common' })}
                   </Link>
                 </li>
                 <li>
-                  <Link href={'/#'.concat(t('common:home_page.contribute.id'))}>
-                    {t('common:footer.link.contribute', 'Contribute')}
+                  <Link href={'/#'.concat(t('contribute.id', { ns: 'common' }))}>
+                    {t('footer.link.contribute', { ns: 'common' })}
                   </Link>
                 </li>
                 <li>
-                  <Link href={'/#'.concat(t('common:home_page.showcase.id'))}>
-                    {t('common:footer.link.showcase', 'Built with')}
+                  <Link href={'/#'.concat(t('showcase.id', { ns: 'common' }))}>
+                    {t('footer.link.showcase', { ns: 'common' })}
                   </Link>
                 </li>
                 <li>
                   <Link href={'/case-studies'}>
-                    <a
-                      title={t(
-                        'common:footer.link.case-studies.title',
-                        'So far, Open Terms Archive taught us a lot.'
-                      )}
-                    >
-                      {t('common:footer.link.case-studies', 'Case studies')}
+                    <a title={t('footer.link.case-studies.title', { ns: 'common' })}>
+                      {t('footer.link.case-studies', { ns: 'common' })}
                     </a>
                   </Link>
                 </li>
@@ -188,26 +174,26 @@ const Layout = ({
                   <Link href="https://twitter.com/OpenTerms">
                     <a
                       target="_blank"
-                      title={t('common:footer.link.twitter.title', 'Follow us on Twitter')}
+                      title={t('footer.link.twitter.title', { ns: 'common' })}
                       className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
                     >
                       <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
                         <FiTwitter color="#fefffd" />
                       </span>
-                      <span>{t('common:footer.link.twitter', 'Follow us')}</span>
+                      <span>{t('footer.link.twitter', { ns: 'common' })}</span>
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="mailto:contact@opentermsarchive.org">
+                  <Link href={'mailto:' + t('contact.email', { ns: 'common' })}>
                     <a
-                      title={t('common:footer.link.contact.title', 'Contact us by mail')}
+                      title={t('footer.link.contact.title', { ns: 'common' })}
                       className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
                     >
                       <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
                         <FiMail color="#fefffd" />
                       </span>
-                      <span>{t('common:footer.link.contact', 'Contact us')}</span>
+                      <span>{t('footer.link.contact', { ns: 'common' })}</span>
                     </a>
                   </Link>
                 </li>
@@ -217,37 +203,22 @@ const Layout = ({
               <ul>
                 <li>
                   <Link href="/media">
-                    <a
-                      title={t(
-                        'common:footer.link.media.title',
-                        'They talk about Open Terms Archive'
-                      )}
-                    >
-                      {t('common:footer.link.media', 'Media')}
+                    <a title={t('footer.link.media.title', { ns: 'common' })}>
+                      {t('footer.link.media', { ns: 'common' })}
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/legal-notice">
-                    <a
-                      title={t(
-                        'common:footer.link.tos.title',
-                        'Read the legal notice of Open Terms Archive website'
-                      )}
-                    >
-                      {t('common:footer.link.tos', 'Legal notice')}
+                    <a title={t('footer.link.tos.title', { ns: 'common' })}>
+                      {t('footer.link.tos', { ns: 'common' })}
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/privacy-policy">
-                    <a
-                      title={t(
-                        'common:footer.link.privacy.title',
-                        'Read the privacy policy of Open Terms Archive website'
-                      )}
-                    >
-                      {t('common:footer.link.privacy', 'Privacy policy')}
+                    <a title={t('footer.link.privacy.title', { ns: 'common' })}>
+                      {t('footer.link.privacy', { ns: 'common' })}
                     </a>
                   </Link>
                 </li>
@@ -255,35 +226,29 @@ const Layout = ({
               <ul>
                 <li>
                   <Link href="/dashboard">
-                    <a title={t('common:footer.link.dashboard.title', 'A set of activity metrics')}>
-                      {t('common:footer.link.dashboard', 'Dashboard')}
+                    <a title={t('footer.link.dashboard.title', { ns: 'common' })}>
+                      {t('footer.link.dashboard', { ns: 'common' })}
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://opentermsarchive.org/data/api">
-                    <a title={t('common:footer.link.api.title', 'Use the API')}>
-                      {t('common:footer.link.api', 'API')}
+                    <a title={t('footer.link.api.title', { ns: 'common' })}>
+                      {t('footer.link.api', { ns: 'common' })}
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
-                    <a
-                      title={t('common:footer.link.dataset.title', 'Download the dataset')}
-                      target="_blank"
-                    >
-                      {t('common:footer.link.dataset', 'Dataset')}
+                    <a title={t('footer.link.dataset.title', { ns: 'common' })} target="_blank">
+                      {t('footer.link.dataset', { ns: 'common' })}
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://github.com/ambanum/OpenTermsArchive">
-                    <a
-                      title={t('common:footer.link.github.title', 'Go to the GitHub repository')}
-                      target="_blank"
-                    >
-                      {t('common:footer.link.github', 'GitHub')}
+                    <a title={t('footer.link.github.title', { ns: 'common' })} target="_blank">
+                      {t('footer.link.github', { ns: 'common' })}
                     </a>
                   </Link>
                 </li>

@@ -158,11 +158,11 @@ const DashboardPage = React.memo(
     });
 
     return (
-      <Layout title={t('seo.title', 'Dashboard', { ns: 'dashboard' })}>
+      <Layout title={t('seo.title', { ns: 'dashboard' })} desc={t('seo.desc', { ns: 'dashboard' })}>
         <Container layout="wide" paddingY={false} gray={true}>
           <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
             <Hero
-              title={t('hero.title', 'Dashboard', { ns: 'dashboard' })}
+              title={t('hero.title', { ns: 'dashboard' })}
               subtitle={t('hero.subtitle', { ns: 'dashboard' })}
             ></Hero>
           </Container>
@@ -171,7 +171,7 @@ const DashboardPage = React.memo(
         <Container gridCols="12" gridGutters="11">
           <Column
             width={100}
-            title={t('activity.title', 'Activity', { ns: 'dashboard' })}
+            title={t('activity.title', { ns: 'dashboard' })}
             subtitle={t('activity.subtitle', { ns: 'dashboard' })}
           >
             <TextContent>

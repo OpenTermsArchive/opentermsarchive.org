@@ -64,7 +64,7 @@ const ContributePage = () => {
             </TextContent>
             <Search
               label={t('search.label', { ns: 'contribute' })}
-              buttonLabel={t('search.button', 'Next', { ns: 'contribute' })}
+              buttonLabel={t('search.button', { ns: 'contribute' })}
               placeholder="https://www.amazon.com/gp/help/customer/display.html?nodeId=13819201"
               onSearchSubmit={onSubmit}
             />
