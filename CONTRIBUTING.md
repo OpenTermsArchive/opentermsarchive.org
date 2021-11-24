@@ -1,5 +1,22 @@
 # CONTRIBUTING
 
+## Translations
+
+Every translations files are located in the `src/translations` directory, where you can find one folder for each translation language.
+
+```
+- src
+	- translations
+		- en
+		- fr
+		- ...
+```
+
+Each locale folder contains `.json` files which contain translations of pages with the same name.
+Exemple: `privacy-policy.json` contains translations of the `privacy-policy.tsx` page accessible in the `/privacy-policy` route.
+
+It is possible that the content of a page is translated into a markdown file (for example a blog post), in this case you will find a `${page}.mdx` file in the `/src/translations/${locale}` directory.
+
 ## Markdown Guidelines
 
 Although we use the MDX format which sometimes allows the instantiation of React components in mdx files (see the [Readme section on this subject](/README.md#MDX)), it is recommended to avoid doing so to facilitate the contribution.
