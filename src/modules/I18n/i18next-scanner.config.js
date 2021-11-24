@@ -20,7 +20,9 @@ const pagesNamespaces = fg
 
 const namespaces = [...moduleNamespaces, ...pagesNamespaces, 'common', 'homepage'];
 
-console.log(namespaces);
+console.log('The available namespaces are :');
+namespaces.forEach((o) => console.log(` ‣ ${o}`));
+
 /*
  * Doc: https://github.com/i18next/i18next-scanner
  */
