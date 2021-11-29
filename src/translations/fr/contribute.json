@@ -1,15 +1,15 @@
 {
-  "breadcrumb.contribute.name": "Contribuer",
   "breadcrumb.adddocument.name": "Ajouter un document",
-  "breadcrumb.thanks.name": "Merci",
+  "breadcrumb.contribute.name": "Contribuer",
   "breadcrumb.homepage.name": "Accueil",
-  "breadcrumb.sorry.name": "Désolé",
-  "seo.title": "Contribuer à Open Terms Archive",
-  "seo.desc": "En ajoutant des documents à suivre",
-  "title": "Contribuez",
-  "subtitle": "En en ajoutant des documents à suivre",
   "breadcrumb.index.name": "Ajouter un document",
+  "breadcrumb.sorry.name": "Désolé",
+  "breadcrumb.thanks.name": "Merci",
   "content.p1": "Grâce à un processus en trois étapes, vous pouvez ajouter un document rapidement (cela ne devrait vous prendre que quelques minutes).",
+  "search.button": "Suivant",
   "search.label": "Première étape, veuillez saisir l'URL à suivre",
-  "search.button": "Suivant"
+  "seo.desc": "En ajoutant des documents à suivre",
+  "seo.title": "Contribuer à Open Terms Archive",
+  "subtitle": "En en ajoutant des documents à suivre",
+  "title": "Contribuez"
 }

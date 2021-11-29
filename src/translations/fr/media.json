@@ -1,12 +1,12 @@
 {
-  "seo.title": "Media",
   "hero.title": "Media",
-  "seo.desc": "Ils parlent d'Open Terms Archive.",
+  "logo.black.background.desc": "Pour fond sombre",
+  "logo.cta.label": "Télécharger le .png",
+  "logo.cta.svg.label": "ou le .svg",
   "logo.title": "Logo",
   "logo.white.background.desc": "Pour fond blanc",
-  "logo.cta.label": "Télécharger le .png",
-  "press.title": "Revues de presse",
-  "logo.black.background.desc": "Pour fond sombre",
   "press.subtitle": "Ils parlent d'Open Terms Archive",
-  "logo.cta.svg.label": "ou le .svg"
+  "press.title": "Revues de presse",
+  "seo.desc": "Ils parlent d'Open Terms Archive.",
+  "seo.title": "Media"
 }

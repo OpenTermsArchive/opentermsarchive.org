@@ -1,7 +1,7 @@
 {
-  "seo.title": "Thanks",
-  "seo.desc": "Thanks for contributing",
-  "title": "Thanks",
   "contributors.subtitle": "Contributors",
-  "thanks_page.cta": "Ajouter un autre document"
+  "seo.desc": "Thanks for contributing",
+  "seo.title": "Thanks",
+  "thanks_page.cta": "Ajouter un autre document",
+  "title": "Thanks"
 }

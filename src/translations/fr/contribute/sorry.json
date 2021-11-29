@@ -1,8 +1,8 @@
 {
-  "seo.title": "Sorry",
-  "seo.desc": "You cannot access this page",
-  "title": "Sorry 😿",
-  "subtitle": "You cannot access this page",
+  "contact.email.text": "Contact us for any question",
   "explanation": "Because we use the \"hover\" functionnality to highlight the parts of the document we want to track, we need you to have a computer and a mouse.",
-  "contact.email.text": "Contact us for any question"
+  "seo.desc": "You cannot access this page",
+  "seo.title": "Sorry",
+  "subtitle": "You cannot access this page",
+  "title": "Sorry 😿"
 }

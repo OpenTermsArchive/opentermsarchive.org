@@ -1,15 +1,15 @@
 {
-  "breadcrumb.contribute.name": "Contribute",
   "breadcrumb.adddocument.name": "Add a document",
-  "breadcrumb.thanks.name": "Thanks",
+  "breadcrumb.contribute.name": "Contribute",
   "breadcrumb.homepage.name": "Home",
-  "breadcrumb.sorry.name": "Sorry",
-  "seo.title": "Contributing to Open Terms Archive",
-  "seo.desc": "Thanks for helping",
-  "title": "Contributing to Open Terms Archive",
-  "subtitle": "Thanks for helping",
   "breadcrumb.index.name": "Add a document",
+  "breadcrumb.sorry.name": "Sorry",
+  "breadcrumb.thanks.name": "Thanks",
   "content.p1": "With 3-step process, you can add a document quickly (it should only take you a few minutes)",
+  "search.button": "Next",
   "search.label": "First step, please fill the URL to track",
-  "search.button": "Next"
+  "seo.desc": "Thanks for helping",
+  "seo.title": "Contributing to Open Terms Archive",
+  "subtitle": "Thanks for helping",
+  "title": "Contributing to Open Terms Archive"
 }
