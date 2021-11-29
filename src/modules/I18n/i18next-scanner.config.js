@@ -5,7 +5,7 @@ const fg = require('fast-glob');
 const typescriptTransform = require('i18next-scanner-typescript');
 
 const moduleNamespaces = fg
-  .sync(['src/modules/*', 'src/modulesAdmin/*', 'src/api/modules/*'], {
+  .sync(['src/modules/*', 'src/api/modules/*'], {
     onlyDirectories: true,
     deep: 1,
   })
