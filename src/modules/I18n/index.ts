@@ -42,19 +42,19 @@ export const withI18n =
       };
 
       if ((options as WithI18nOptionsMdx)?.load === 'mdx') {
-        const pagesDir = `${process.env.PWD}/src/translations`;
+        const translationsDir = `${process.env.PWD}/src/translations`;
         let content = '';
         try {
           content = fs
             .readFileSync(
-              `${pagesDir}/${props.locale}/${(options as WithI18nOptionsMdx)?.filename}.mdx`
+              `${translationsDir}/${props.locale}/${(options as WithI18nOptionsMdx)?.filename}.mdx`
             )
             .toString();
         } catch (e) {
           try {
             content = fs
               .readFileSync(
-                `${pagesDir}/${props.defaultLocale}/${(options as WithI18nOptionsMdx)?.filename}.mdx`
+                `${translationsDir}/${props.defaultLocale}/${(options as WithI18nOptionsMdx)?.filename}.mdx`
               )
               .toString();
           } catch (e) {
