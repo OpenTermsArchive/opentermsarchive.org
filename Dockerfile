@@ -1,4 +1,4 @@
-FROM node:16-alpine3.11
+FROM node:14-alpine3.12
 
 # install debug packages
 RUN apk add nano
