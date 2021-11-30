@@ -44,8 +44,8 @@ module.exports = {
     defaultNs: 'missing-namespace',
     defaultValue: '__STRING_NOT_TRANSLATED__',
     resource: {
-      loadPath: 'public/locales/{{lng}}/{{ns}}.json',
-      savePath: 'public/locales/{{lng}}/{{ns}}.json',
+      loadPath: 'src/translations/{{lng}}/{{ns}}.json',
+      savePath: 'src/translations/{{lng}}/{{ns}}.json',
     },
     nsSeparator: ':', // namespace separator
     keySeparator: false, // key separator
