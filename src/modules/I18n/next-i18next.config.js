@@ -3,6 +3,7 @@ module.exports = {
   i18n: {
     defaultLocale: 'catchAll',
     locales: ['en', 'fr', 'catchAll'],
+    localePath: 'src/translations',
   },
   // https://github.com/vercel/next.js/discussions/18419
   // TO BE REMOVED alog with catchAll when this feature request is done
