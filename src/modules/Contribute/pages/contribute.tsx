@@ -28,7 +28,7 @@ const ContributePage = () => {
 
   return (
     <Layout
-      title={t('contribute:home_page.seo.title', 'Contributing to Open Terms Archive')}
+      title={t('contribute/home:home_page.seo.title', 'Contributing to Open Terms Archive')}
       desc={t('contribute:home_page.seo.desc', 'Thanks for helping')}
     >
       {/* Hero */}

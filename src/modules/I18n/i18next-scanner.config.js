@@ -12,6 +12,17 @@ const namespaces = fg
   .filter((o) => !o.includes('__tests__'))
   .map((o) => o.toLowerCase().replace('src/modules/', ''));
 
+  const pagesNamespaces = fg
+  .sync(['src/pages/**/*.tsx','src/**/pages/**/*.tsx'], { onlyFiles: true, ignore: ['src/pages/_app.tsx'] })
+  .map((o) => o.toLowerCase().replace('src/pages/', '').replace('src/modules/', '').replace('/pages/', '/'))
+  .map((o) => o.replace('.tsx', ''))
+  .map((o) => o.replace('/index', ''))
+  .filter((o) => o !== 'index');
+
+const allNameSpaces = [...namespaces,...pagesNamespaces]
+
+  console.log('The available namespaces are :');
+  allNameSpaces.forEach((o) => console.log(` ‣ ${o}`));
 /*
  * Doc: https://github.com/i18next/i18next-scanner
  */
@@ -40,7 +51,7 @@ module.exports = {
       },
     },
     lngs: locales,
-    ns: [...namespaces],
+    ns: allNameSpaces,
     defaultNs: 'missing-namespace',
     defaultValue: '__STRING_NOT_TRANSLATED__',
     resource: {
