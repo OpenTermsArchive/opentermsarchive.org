@@ -9,7 +9,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositorie
     && echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
     && echo "http://dl-cdn.alpinelinux.org/alpine/v3.12/main" >> /etc/apk/repositories \
     && apk upgrade -U -a \
-    && apk add \
+    && apk add --no-cache --virtual .build-deps \
     nano \
     libstdc++ \
     chromium \
@@ -20,7 +20,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositorie
     font-noto-emoji \
     wqy-zenhei \
     && rm -rf /var/cache/* \
-    && mkdir /var/cache/apk
+    && mkdir /var/cache/apk && apk del .build-deps
 
 ENV CHROME_BIN=/usr/bin/chromium-browser \
     CHROME_PATH=/usr/lib/chromium/ \
@@ -57,7 +57,8 @@ RUN npm run build
 RUN rm -Rf node_modules
 RUN npm install --production
 
-RUN npm cache clean --force
+RUN npm cache clean --force \
+    && rm -rf /var/lib/{apt,dpkg,cache,log}
 
 EXPOSE 3000
 CMD [ "npm", "start" ]
