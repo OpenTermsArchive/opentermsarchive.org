@@ -137,7 +137,7 @@ export const getContributors = async () => {
     return data;
   } catch (e) {
     console.error(e);
-    return {};
+    return [];
   }
 };
 
@@ -149,7 +149,7 @@ export const getAllVersionsContributorCommitActivity = async () => {
     return data;
   } catch (e) {
     console.error(e);
-    return {};
+    return [];
   }
 };
 
@@ -162,7 +162,7 @@ export const getLastVersionsCommits = async () => {
     return data;
   } catch (e) {
     console.error(e);
-    return {};
+    return [];
   }
 };
 
