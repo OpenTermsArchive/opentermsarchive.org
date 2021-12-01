@@ -3,7 +3,6 @@ import { GetStaticProps, GetStaticPropsContext } from 'next';
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { SSRConfig } from 'next-i18next';
 import fs from 'fs';
-import fg from 'fast-glob';
 import { serialize } from 'next-mdx-remote/serialize';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import i18nConfig from './next-i18next.config';
@@ -28,20 +27,13 @@ interface WithI18nOptionsResult {
 
 export type WithI18nResult = GetStaticPropsContext & SSRConfig & WithI18nOptionsResult;
 
-// serverSideTranslations current implementation will only use namespaces
-// at the root of the folder
-// so we read them ourselves and pass it
-const allNamespaces = fg
-  .sync('**/*.json', { cwd: `${i18nConfig.i18n.localePath}/en` })
-  .map((f) => f.replace('.json', ''));
-
 export const withI18n =
   (options: WithI18nOptions = {}) =>
   (callback?: GetStaticProps<WithI18nResult>) => {
     const getResponseWithI18nProps: HasCallback<typeof callback> = async (props) => {
       const i18nProps = await serverSideTranslations(
         props.locale || 'en' || '',
-        options.namespaces || allNamespaces,
+        options.namespaces || i18nConfig.ns,
         {
           ...i18nConfig,
           i18n: {

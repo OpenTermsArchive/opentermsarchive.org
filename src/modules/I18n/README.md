@@ -23,19 +23,32 @@ We will keep the config file in the module but next-i18nnext requires the file t
 
 3. import the config file
 
-modify you `next.config.js` with
+modify your `next.config.js` with
 
 ```
 const { i18n } = require('./src/modules/I18n/next-i18next.config');
 
 module.exports = {
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  ...
   i18n,
+  ...
 };
 
 ```
 
-4. add tools to your script to generate translations
+4. Add provide to `_app.tsx`
+
+```
+import { appWithTranslation } from 'next-i18next';
+
+function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+
+export default appWithTranslation(App);
+```
+
+5. add tools to your script to generate translations
 
 ```
     "i18n": "npm run i18n:extract && npm run i18n:clean && echo '\n⚠️  You may need to restart your dev server\n'",
@@ -43,7 +56,7 @@ module.exports = {
     "i18n:clean": "find src/translations -size 3c -delete",
 ```
 
-5. replace build script
+6. replace build script
 
 Because next will create all pages on build, it will complain of not having the default route which we do not want to keep using
 So we simply temporarily copy it and remove it after generation
@@ -79,7 +92,7 @@ export const getStaticProps = withI18n()(async (props: any) => {
 });
 ```
 
-instead of the documented feature whicj I found too verbose and not typescript proof
+The above solution has been developed instead of the documented feature which I found too verbose and not typescript proof
 
 ```
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'

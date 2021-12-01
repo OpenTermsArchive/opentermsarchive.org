@@ -1,28 +1,12 @@
-"use strict";
+const namespaces = require('./namespaces.json');
 module.exports = {
     defaultNS: 'common',
     i18n: {
-        defaultLocale: 'catchAll',
-        locales: ['en', 'fr', 'catchAll'],
+        defaultLocale: 'default',
+        locales: ['en', 'fr', 'default'],
+        localePath: 'src/translations',
     },
-    // https://github.com/vercel/next.js/discussions/18419
-    // TO BE REMOVED alog with catchAll when this feature request is done
-    async redirects() {
-        return JSON.parse(JSON.stringify([
-            {
-                source: '/catchAll',
-                destination: '/en',
-                locale: false,
-                permanent: false,
-            },
-            {
-                source: '/catchAll/(!api/):slug*',
-                destination: '/en/:slug*',
-                locale: false,
-                permanent: false,
-            },
-        ]));
-    },
+    ns: namespaces,
     // https://github.com/vercel/next.js/issues/22508
     react: {
         useSuspense: false,
