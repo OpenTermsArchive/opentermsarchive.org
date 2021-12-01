@@ -16,31 +16,31 @@ import { useTranslation } from 'next-i18next';
 export default function MediaPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation('common');
   return (
-    <Layout title={t('common:media.seo.title', 'Media')}>
+    <Layout title={t('media:seo.title', 'Media')}>
       <Container layout="wide" paddingY={false} dark={true}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Hero title={t('common:media.hero.title', 'Media')}></Hero>
+          <Hero title={t('media:hero.title', 'Media')}></Hero>
         </Container>
       </Container>
 
       <Container gray={true} layout={'fluid'} paddingY={false}>
         <Container gridCols="10" gridGutters="9">
-          <h2>{t('common:media.logo.title', 'Logo')}</h2>
+          <h2>{t('media:logo.title', 'Logo')}</h2>
           <Container flex={true} paddingYSmall={true}>
             <Column width={50}>
               <ButtonBlock
                 fillParent={true}
                 white={true}
-                desc={t('common:media.logo.white.background.desc', 'For white background')}
+                desc={t('media:logo.white.background.desc', 'For white background')}
               >
                 <Logo size="full" />
                 <Button>
                   <a download href="/images/logo/logo-open-terms-archive-black.png">
-                    {t('common:media.logo.cta.label', 'Download the .png')}
+                    {t('media:logo.cta.label', 'Download the .png')}
                   </a>
                 </Button>
                 <a download href="/images/logo/logo-open-terms-archive-black.svg">
-                  {t('common:media.logo.cta.svg.label', 'or the .svg')}
+                  {t('media:logo.cta.svg.label', 'or the .svg')}
                 </a>
               </ButtonBlock>
             </Column>
@@ -48,7 +48,7 @@ export default function MediaPage({ mdxContent }: WithI18nResult) {
               <ButtonBlock
                 fillParent={true}
                 desc={t(
-                  'common:media.logo.black.background.desc',
+                  'media:logo.black.background.desc',
                   'PNG file in high definition for dark background'
                 )}
                 dark={true}
@@ -56,11 +56,11 @@ export default function MediaPage({ mdxContent }: WithI18nResult) {
                 <Logo backgroundType="black" size="full" />
                 <Button>
                   <a download href="/images/logo/logo-open-terms-archive-white.png">
-                    {t('common:media.logo.cta.label', 'Download the .png')}
+                    {t('media:logo.cta.label', 'Download the .png')}
                   </a>
                 </Button>
                 <a download href="/images/logo/logo-open-terms-archive-white.svg">
-                  {t('common:media.logo.cta.svg.label', 'or the .svg')}
+                  {t('media:logo.cta.svg.label', 'or the .svg')}
                 </a>
               </ButtonBlock>
             </Column>
@@ -70,8 +70,8 @@ export default function MediaPage({ mdxContent }: WithI18nResult) {
 
       <Container gridCols="8" gridGutters="7" flex={true}>
         <Article
-          title={t('common:media.press.title', 'Press review')}
-          subtitle={t('common:media.press.subtitle', 'They talk about the Open Terms Archive')}
+          title={t('media:press.title', 'Press review')}
+          subtitle={t('media:press.subtitle', 'They talk about the Open Terms Archive')}
         >
           <TextContent marginTopLarge={true}>
             <MDXRemote {...(mdxContent as any)} components={{ Button: Button }} />
