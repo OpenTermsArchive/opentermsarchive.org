@@ -141,35 +141,32 @@ const DashboardPage = React.memo(
     }
 
     const documentsVersionsLegend: string = t(
-      'common:dashboard.activity.chart.legend.documentsversions',
+      'dashboard:activity.chart.legend.documentsversions',
       'Documents versions'
     );
 
     const trackedServicesLegend: string = t(
-      'common:dashboard.activity.chart.legend.trackedservices',
+      'dashboard:activity.chart.legend.trackedservices',
       'Tracked services'
     );
     const activeServicesLegend: string = t(
-      'common:dashboard.activity.chart.legend.activeservices',
+      'dashboard:activity.chart.legend.activeservices',
       'Active services'
     );
     const servicesAxisBottomLegend: string = t(
-      'common:dashboard.activity.chart.axis.bottom.legend',
+      'dashboard:activity.chart.axis.bottom.legend',
       'year-month'
     );
-    const servicesAxisLeftLegend: string = t(
-      'common:dashboard.activity.chart.axis.left.legend',
-      'number'
-    );
+    const servicesAxisLeftLegend: string = t('dashboard:activity.chart.axis.left.legend', 'number');
 
     return (
-      <Layout title={t('common:dashboard.seo.title', 'Dashboard')}>
+      <Layout title={t('dashboard:seo.title', 'Dashboard')}>
         <Container layout="wide" paddingY={false} gray={true}>
           <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
             <Hero
-              title={t('common:dashboard.hero.title', 'Dashboard')}
+              title={t('dashboard:hero.title', 'Dashboard')}
               subtitle={t(
-                'common:dashboard.hero.subtitle',
+                'dashboard:hero.subtitle',
                 'A set of activity metrics for Open Terms Archive'
               )}
             ></Hero>
@@ -179,13 +176,13 @@ const DashboardPage = React.memo(
         <Container gridCols="12" gridGutters="11">
           <Column
             width={100}
-            title={t('common:dashboard.activity.title', 'Activity')}
-            subtitle={t('common:dashboard.activity.subtitle', `Last 12 months activity`)}
+            title={t('dashboard:activity.title', 'Activity')}
+            subtitle={t('dashboard:activity.subtitle', `Last 12 months activity`)}
           >
             <TextContent>
               <p>
                 {t(
-                  'common:dashboard.activity.desc',
+                  'dashboard:activity.desc',
                   `Evolution of services and documents versions over the last 12 months`
                 )}
               </p>
@@ -231,11 +228,8 @@ const DashboardPage = React.memo(
         <Container gridCols="12" gridGutters="11" flex={true}>
           <Column
             width={60}
-            title={t('common:dashboard.latestversionscommits.title', 'Latest changes recorded')}
-            subtitle={t(
-              'common:dashboard.latestversionscommits.subtitle',
-              'on the tracked documents'
-            )}
+            title={t('dashboard:latestversionscommits.title', 'Latest changes recorded')}
+            subtitle={t('dashboard:latestversionscommits.subtitle', 'on the tracked documents')}
           >
             <TextContent>
               <ul>
@@ -258,12 +252,12 @@ const DashboardPage = React.memo(
           <Column width={40} alignX="center" alignY="center">
             <ButtonBlock
               title={t(
-                'common:dashboard.latestversionscommits.buttonblock.title',
+                'dashboard:latestversionscommits.buttonblock.title',
                 'We recorded {{count}} documents versions',
                 { count: totalVersionsCommits }
               )}
               desc={t(
-                'common:dashboard.latestversionscommits.buttonblock.desc',
+                'dashboard:latestversionscommits.buttonblock.desc',
                 'And it continues every day, explore them on GitHub.'
               )}
               fillParent={true}
@@ -271,12 +265,12 @@ const DashboardPage = React.memo(
               <Link href="https://github.com/ambanum/OpenTermsArchive-versions/">
                 <a
                   title={t(
-                    'common:dashboard.latestversionscommits.buttonblock.link.title',
+                    'dashboard:latestversionscommits.buttonblock.link.title',
                     'Explore the documents versions'
                   )}
                 >
                   <Button>
-                    {t('common:dashboard.latestversionscommits.buttonblock.label', 'Explore now')}
+                    {t('dashboard:latestversionscommits.buttonblock.label', 'Explore now')}
                   </Button>
                 </a>
               </Link>
@@ -285,9 +279,9 @@ const DashboardPage = React.memo(
         </Container>
         <ServicesList
           services={services || {}}
-          title={t('common:dashboard.serviceslist.title', 'Services list')}
+          title={t('dashboard:serviceslist.title', 'Services list')}
           subtitle={t(
-            'common:dashboard.serviceslist.subtitle',
+            'dashboard:serviceslist.subtitle',
             '{{count}} services and related documents',
             {
               count: nbServices,

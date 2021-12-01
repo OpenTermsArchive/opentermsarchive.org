@@ -13,14 +13,14 @@ import { useTranslation } from 'next-i18next';
 export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation('common');
   return (
-    <Layout title={t('common:case-studies.seo.title', 'Case Studies')}>
+    <Layout title={t('case-studies:seo.title', 'Case Studies')}>
       <Container layout="wide" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={50} alignY="center">
             <Hero
-              title={t('common:case-studies.hero.title', 'Case Studies')}
+              title={t('case-studies:hero.title', 'Case Studies')}
               subtitle={t(
-                'common:case-studies.hero.subtitle',
+                'case-studies:hero.subtitle',
                 'So far, Open Terms Archive taught us a lot.'
               )}
             ></Hero>

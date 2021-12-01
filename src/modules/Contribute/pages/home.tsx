@@ -28,16 +28,16 @@ const ContributeHomePage = () => {
 
   return (
     <Layout
-      title={t('contribute:home_page.seo.title', 'Contributing to Open Terms Archive')}
-      desc={t('contribute:home_page.seo.desc', 'Thanks for helping')}
+      title={t('contribute/home:seo.title', 'Contributing to Open Terms Archive')}
+      desc={t('contribute/home:seo.desc', 'Thanks for helping')}
     >
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={70}>
             <Hero
-              title={t('contribute:home_page.title', 'Contributing to Open Terms Archive')}
-              subtitle={t('contribute:home_page.subtitle', 'Thanks for helping')}
+              title={t('contribute/home:title', 'Contributing to Open Terms Archive')}
+              subtitle={t('contribute/home:subtitle', 'Thanks for helping')}
             ></Hero>
           </Column>
           <Column width={30}>
@@ -54,25 +54,22 @@ const ContributeHomePage = () => {
                 { name: 'Open Terms Archive', url: 'https://www.opentermsarchive.org' },
                 {
                   name: 'Contribute',
-                  url: './#' + t('common:home_page.contribute.id', 'contribute'),
+                  url: './#' + t('contribute/home:contribute.id', 'contribute'),
                 },
-                { name: t('contribute:home_page.title') },
+                { name: t('contribute/home:title') },
               ]}
             />
             <TextContent>
               <p>
                 {t(
-                  'contribute:home_page.content.p1',
+                  'contribute/home:content.p1',
                   'With 3-step process, you can add a document quickly (it should only take you a few minutes)'
                 )}
               </p>
             </TextContent>
             <Search
-              label={t(
-                'contribute:home_page.search.label',
-                'First step, please fill the URL to track'
-              )}
-              buttonLabel={t('contribute:home_page.search.button', 'Next')}
+              label={t('contribute/home:search.label', 'First step, please fill the URL to track')}
+              buttonLabel={t('contribute/home:search.button', 'Next')}
               placeholder="https://www.amazon.com/gp/help/customer/display.html?nodeId=13819201"
               onSearchSubmit={onSubmit}
             />

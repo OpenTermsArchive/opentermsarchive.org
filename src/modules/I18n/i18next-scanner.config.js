@@ -31,7 +31,7 @@ module.exports = {
   options: {
     debug: false,
     removeUnusedKeys: true,
-    sort: false,
+    sort: true,
     func: {
       list: ['t', 'i18next.t', 'translate'],
       extensions: ['.js', '.jsx'],
