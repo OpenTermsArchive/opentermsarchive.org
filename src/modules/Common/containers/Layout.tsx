@@ -53,23 +53,20 @@ const Layout = ({
                     <li>
                       <Link href="/">
                         <a
-                          title={t('common:header.link.home.title', 'Back to home page')}
+                          title={t('header:link.home.title', 'Back to home page')}
                           onClick={toggleExtended}
                         >
-                          {t('common:header.link.home', 'Home')}
+                          {t('header:link.home', 'Home')}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href="/how-it-works">
                         <a
-                          title={t(
-                            'common:header.link.how.title',
-                            'How does Open Terms Archive work?'
-                          )}
+                          title={t('header:link.how.title', 'How does Open Terms Archive work?')}
                           onClick={toggleExtended}
                         >
-                          {t('common:header.link.how', 'How it works?')}
+                          {t('header:link.how', 'How it works?')}
                         </a>
                       </Link>
                     </li>
@@ -77,12 +74,12 @@ const Layout = ({
                       <Link href="/contribute">
                         <a
                           title={t(
-                            'common:header.link.adddocument.title',
+                            'header:link.adddocument.title',
                             'Add a document to Open Terms Archive'
                           )}
                           onClick={toggleExtended}
                         >
-                          {t('common:header.link.adddocument', 'Add a document')}
+                          {t('header:link.adddocument', 'Add a document')}
                         </a>
                       </Link>
                     </li>
@@ -91,11 +88,11 @@ const Layout = ({
                         <a
                           onClick={toggleExtended}
                           title={t(
-                            'common:header.link.case-studies.title',
+                            'header:link.case-studies.title',
                             'So far, Open Terms Archive taught us a lot.'
                           )}
                         >
-                          {t('common:header.link.case-studies', 'Case studies')}
+                          {t('header:link.case-studies', 'Case studies')}
                         </a>
                       </Link>
                     </li>
@@ -109,7 +106,7 @@ const Layout = ({
                         <a
                           className={classNames('icon_circle')}
                           target="_blank"
-                          title={t('common:header.link.twitter.title', 'Follow us')}
+                          title={t('header:link.twitter.title', 'Follow us')}
                         >
                           <FiTwitter color="#fefffd" />
                         </a>
@@ -120,7 +117,7 @@ const Layout = ({
                         <a
                           className={classNames('icon_circle')}
                           target="_blank"
-                          title={t('common:header.link.github.title', 'See the source code')}
+                          title={t('header:link.github.title', 'See the source code')}
                         >
                           <FiGithub color="#fefffd" />
                         </a>

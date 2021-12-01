@@ -19,7 +19,7 @@ const namespaces = fg
   .map((o) => o.replace('/index', ''))
   .filter((o) => o !== 'index');
 
-const allNameSpaces = [...namespaces,...pagesNamespaces, 'footer']
+const allNameSpaces = [...namespaces,...pagesNamespaces, 'footer', 'header']
 
   console.log('The available namespaces are :');
   allNameSpaces.forEach((o) => console.log(` ‣ ${o}`));
