@@ -69,15 +69,53 @@ So we simply temporarily copy it and remove it after generation
 
 See https://github.com/isaachinman/next-i18next
 
-There are also some new wrappers to ease the use on `pages`
+### main concept
 
-You can use it with
+When coding, translations key strings should be of type `<namespace>:key`.
+The namespace should reflect the page you're in, of if it's a component, the module you're in.
+
+Example:
+
+- `contribute/service:seo.title`
+- `contribute/home:title`
+- `contribute:subscribe_form.email.placeholder`
+
+You should use the `useTranslation` hook provided by [next-i18next](https://github.com/isaachinman/next-i18next)
+
+Example:
+
+```
+import { useTranslation } from 'next-i18next';
+
+const SubscribeForm = () => {
+  const { t } = useTranslation();
+
+  return <div>{t("contribute:subscribe_form.email.placeholder")}<div>
+}
+```
+
+Once your code is clear, you need to generate the translation files by using the command `npm run i18n`.
+
+It will inspect your code and create one file per namespace in the `src/translations` folder (and copy all namespaces in a static file in `modules/I18n` [See here for why](#why-do-we-need-a-namespaces-json-file))
+
+All pages must load the translations server side so that it does not impact the page load.
+
+In order to do this, you can
+
+### wrap your page in an simple HOC
 
 ```
 import { withI18n } from 'modules/I18n';
 
 export const getStaticProps = withI18n()();
 ```
+
+The `withI18n` can take some options such as
+
+- `namespaces: if you wish to load only some namespaces (This is not necesary)
+- `load: 'mdx' filename: 'home'` to load the content of a translation mdx file located in the `src/translations` folder
+
+### wrap your page in a HOC and extend it for your own purposes
 
 or if you need some more treatment
 
@@ -92,6 +130,8 @@ export const getStaticProps = withI18n()(async (props: any) => {
 });
 ```
 
+### Use the default way of next-i18next
+
 The above solution has been developed instead of the documented feature which I found too verbose and not typescript proof
 
 ```
@@ -104,13 +144,13 @@ export const getStaticProps = async ({ locale }) => ({
 })
 ```
 
-### translate simple strings
+## translate simple strings
 
 ```
 {t('contribute:service_page.title', 'What is expected from you')}
 ```
 
-### translate html
+## translate html
 
 ```
 <Trans i18nKey="contribute:service_page.description1">
@@ -120,7 +160,7 @@ export const getStaticProps = async ({ locale }) => ({
 </Trans>
 ```
 
-### translate complete files with mdx
+## translate complete files with mdx
 
 You can use the helper `withI18n` to ask for content of mdx files that are located in the same folder and with the name structure `<filename>.<lang>.mdx`
 
@@ -146,6 +186,15 @@ export default function TermsOfServicePage({ mdxContent }: WithI18nResult) {
 
 export const getStaticProps = withI18n({ load: 'mdx' })();
 ```
+
+## Why do we need a namespaces json file
+
+`next-i18nnext` is willing to be used in a very declarative way, always telling for each page which module it should be loading (through the `namespaces` options).
+Problem is that if you happen to not load a namespace file used by a descendant component, you can end up with not translated data on your page and not a lot of clues on why it is so.
+
+I thus made a choice to load all namespaces at once in memory so that it's available everywhere.
+
+Loading them dynamically through a `glob` request was causing errors as i18n config is loaded client side and server side, so I made the choice to generate this static file when generating the translation files.
 
 ## generate translation files
 
