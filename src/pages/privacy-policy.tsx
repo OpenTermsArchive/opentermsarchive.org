@@ -9,7 +9,7 @@ import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
 
 export default function PrivacyPolicyPage({ mdxContent }: WithI18nResult) {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation();
   return (
     <Layout title={t('privacy-policy:seo.title', 'Privacy Policy')}>
       <Container gridCols="10" gridGutters="9" paddingX={false}>

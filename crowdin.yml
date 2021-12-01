@@ -1,5 +1,5 @@
 files:
   - source: /src/translations/en/*.json
     ignore:
-      - /src/translations/catchAll
+      - /src/translations/default
     translation: /src/translations/%two_letters_code%/%original_file_name%

@@ -3,8 +3,10 @@ import { GetStaticProps, GetStaticPropsContext } from 'next';
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { SSRConfig } from 'next-i18next';
 import fs from 'fs';
+import fg from 'fast-glob';
 import { serialize } from 'next-mdx-remote/serialize';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import i18nConfig from './next-i18next.config';
 
 type HasCallback<T> = T extends undefined
   ? GetStaticProps<SSRConfig & WithI18nOptionsResult>
@@ -26,23 +28,36 @@ interface WithI18nOptionsResult {
 
 export type WithI18nResult = GetStaticPropsContext & SSRConfig & WithI18nOptionsResult;
 
+// serverSideTranslations current implementation will only use namespaces
+// at the root of the folder
+// so we read them ourselves and pass it
+const allNamespaces = fg
+  .sync('**/*.json', { cwd: `${i18nConfig.i18n.localePath}/en` })
+  .map((f) => f.replace('.json', ''));
+
 export const withI18n =
   (options: WithI18nOptions = {}) =>
   (callback?: GetStaticProps<WithI18nResult>) => {
     const getResponseWithI18nProps: HasCallback<typeof callback> = async (props) => {
       const i18nProps = await serverSideTranslations(
-        props.locale || props.defaultLocale || '',
-        options.namespaces || []
+        props.locale || 'en' || '',
+        options.namespaces || allNamespaces,
+        {
+          ...i18nConfig,
+          i18n: {
+            ...i18nConfig.i18n,
+            locales: i18nConfig.i18n.locales.filter((locale: string) => locale !== 'default'),
+            defaultLocale: 'en',
+          },
+        }
       );
-
       const computedProps: WithI18nResult = {
         ...props,
         ...i18nProps,
-        defaultLocale: 'en',
       };
 
       if ((options as WithI18nOptionsMdx)?.load === 'mdx') {
-        const translationsDir = `${process.env.PWD}/src/translations`;
+        const translationsDir = `${process.env.PWD}/${i18nConfig.i18n.localePath}`;
         let content = '';
         try {
           content = fs

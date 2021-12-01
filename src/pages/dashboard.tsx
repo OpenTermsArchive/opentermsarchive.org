@@ -41,7 +41,7 @@ const DashboardPage = React.memo(
     latestVersionsCommits: Commits;
     services: Services;
   }) => {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation();
 
     const { data: services } = useSWR<Services>('/api/ota/services/all', {
       initialData: defaultServices,

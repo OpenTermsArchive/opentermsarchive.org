@@ -4,7 +4,7 @@
   "prettier": "prettier-config-ambanum",
   "scripts": {
     "dev": "NODE_OPTIONS=\"--insecure-http-parser --max-http-header-size=3276\" ts-node --project tsconfig.server.json src/server/index.ts",
-    "build": "next build --debug && tsc --project tsconfig.server.json",
+    "build": "cp -R translations/en translations/default && next build --debug && tsc --project tsconfig.server.json && rm -Rf translations/default",
     "start": "NODE_ENV=production node dist/src/server/index.js",
     "type-check": "tsc",
     "update-cookie-extension": "src/modules/Scraper/i-dont-care-about-cookies/tools/copy-to-folder.sh",
@@ -33,6 +33,7 @@
     "@svgr/webpack": "^5.5.0",
     "@types/lodash": "^4.14.171",
     "@welldone-software/why-did-you-render": "6.2.1",
+    "accept-language": "^3.0.18",
     "autoprefixer": "^10.2.6",
     "axios": "^0.21.1",
     "classnames": "^2.3.1",

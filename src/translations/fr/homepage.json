@@ -20,7 +20,7 @@
   "contributors.subtitle": "Merci 🙏",
   "how.button.href": "/how-it-works",
   "how.button.label": "En savoir plus",
-  "how.button.title": "  OTA fonctionne ?",
+  "how.button.title": "Comment OTA fonctionne ?",
   "how.desc.p1": "Tout fournisseur de services en ligne dispose de conditions d’utilisation définies dans un ensemble de documents contractuels qui régissent les modalités d’interaction avec ses utilisateurs, comme les politiques de modération des contenus, la responsabilité de l’éditeur ou encore la juridiction compétente en cas de litige.",
   "how.desc.p2": "La plateforme entreprend d’agréger, de manière centralisée, le plus grand nombre de documents contractuels dans la plus grande variété de langues possible.",
   "how.desc.p3": "Afin de suivre leurs modifications, les documents sont périodiquement obtenus via une URL et un instantané est enregistré chaque fois qu'il y a un changement. La partie signifiante du document (sans le bruit: publicités, menu de navigation, champs de connexion...) est extraite pour être enregistrée à part.",

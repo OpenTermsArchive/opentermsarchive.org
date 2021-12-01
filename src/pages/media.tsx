@@ -14,7 +14,7 @@ import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
 
 export default function MediaPage({ mdxContent }: WithI18nResult) {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation();
   return (
     <Layout title={t('media:seo.title', 'Media')}>
       <Container layout="wide" paddingY={false} dark={true}>

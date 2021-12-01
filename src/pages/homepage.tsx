@@ -30,7 +30,7 @@ import useUrl from 'hooks/useUrl';
 import { withI18n } from 'modules/I18n';
 
 const HomePage = ({ services }: any) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation();
   const [subscribing, toggleSubscribing] = useToggle(false);
   const { queryParams, pushQueryParams } = useUrl();
   const { notify } = useNotifier();

@@ -14,7 +14,7 @@ type HeaderProps = {
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const Header: React.FC<HeaderProps> = ({ children, className, ...props }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation();
 
   const [open, toggleExtended] = useToggle(false);
   const { width } = useWindowSize();

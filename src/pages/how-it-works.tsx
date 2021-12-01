@@ -12,7 +12,7 @@ import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
 
 export default function HowItWorksPage({ mdxContent }: WithI18nResult) {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation();
   return (
     <Layout title={t('how-it-works:seo.title', 'How Open Terms Archive works ?')}>
       <Container layout="wide" dark={true} paddingY={false}>
