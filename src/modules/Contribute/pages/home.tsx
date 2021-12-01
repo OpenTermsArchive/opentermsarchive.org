@@ -10,7 +10,7 @@ import { useEvent } from 'react-use';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
-const ContributePage = () => {
+const ContributeHomePage = () => {
   const { t } = useTranslation();
   const router = useRouter();
 
@@ -28,7 +28,7 @@ const ContributePage = () => {
 
   return (
     <Layout
-      title={t('contribute/home:home_page.seo.title', 'Contributing to Open Terms Archive')}
+      title={t('contribute:home_page.seo.title', 'Contributing to Open Terms Archive')}
       desc={t('contribute:home_page.seo.desc', 'Thanks for helping')}
     >
       {/* Hero */}
@@ -83,4 +83,4 @@ const ContributePage = () => {
   );
 };
 
-export default ContributePage;
+export default ContributeHomePage;
