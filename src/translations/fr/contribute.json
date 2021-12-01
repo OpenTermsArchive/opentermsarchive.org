@@ -25,10 +25,5 @@
   "service_page.step3.form.significantPart.cta": "Ajouter une partie",
   "service_page.step3.title": "Étape 3 : sélection d'une partie significative du document",
   "service_page.submit": "Envoyer",
-  "service_page.title": "Quelques points d'attention 🤗",
-  "sorry_page.explanation": "Parce que nous utilisons la fonctionnalité \"hover\" pour mettre en évidence les parties du document que nous voulons suivre, nous avons besoin que vous ayez un ordinateur et une souris",
-  "sorry_page.seo.desc": "Nous ne pouvons pas accéder à cette page",
-  "sorry_page.seo.title": "Désolé 😭",
-  "sorry_page.subtitle": "Nous avons besoin de vous sur un vrai ordinateur",
-  "sorry_page.title": "Désolé"
+  "service_page.title": "Quelques points d'attention 🤗"
 }

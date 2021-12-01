@@ -25,10 +25,5 @@
   "service_page.step3.form.significantPart.cta": "Add part",
   "service_page.step3.title": "Step 3: selecting significant part of the document",
   "service_page.submit": "Submit",
-  "service_page.title": "What is expected from you",
-  "sorry_page.explanation": "Because we use the \"hover\" functionnality to highlight the parts of the document we want to track, we need you to have a computer and a mouse.",
-  "sorry_page.seo.desc": "You cannot access this page",
-  "sorry_page.seo.title": "Sorry 😭",
-  "sorry_page.subtitle": "We need you on a real computer",
-  "sorry_page.title": "Sorry"
+  "service_page.title": "What is expected from you"
 }

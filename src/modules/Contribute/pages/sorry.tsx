@@ -12,15 +12,15 @@ const SorryPage = () => {
   const { t } = useTranslation();
   return (
     <Layout
-      title={t('contribute:sorry_page.seo.title', 'Sorry')}
-      desc={t('contribute:sorry_page.seo.desc', 'You cannot access this page')}
+      title={t('contribute/sorry:seo.title', 'Sorry')}
+      desc={t('contribute/sorry:seo.desc', 'You cannot access this page')}
     >
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
-            title={t('contribute:sorry_page.title', 'Sorry 😿')}
-            subtitle={t('contribute:sorry_page.subtitle', 'You cannot access this page')}
+            title={t('contribute/sorry:title', 'Sorry 😿')}
+            subtitle={t('contribute/sorry:subtitle', 'You cannot access this page')}
           ></Hero>
         </Container>
       </Container>
@@ -36,13 +36,13 @@ const SorryPage = () => {
                   url: './../#' + t('common:home_page.contribute.id', 'contribute'),
                 },
                 { name: 'Contribute', url: '/contribute' },
-                { name: t('contribute:sorry_page.title') },
+                { name: t('contribute/sorry:title') },
               ]}
             />
             <TextContent>
               <p>
                 {t(
-                  'contribute:sorry_page.explanation',
+                  'contribute/sorry:explanation',
                   'Because we use the "hover" functionnality to highlight the parts of the document we want to track, we need you to have a computer and a mouse.'
                 )}
               </p>
