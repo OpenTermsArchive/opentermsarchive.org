@@ -1,3 +1,4 @@
+"use strict";
 const namespaces = require('./namespaces.json');
 module.exports = {
     defaultNS: 'common',

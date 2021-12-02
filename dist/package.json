@@ -1,11 +1,11 @@
 {
     "name": "OpenTermsArchive.org",
-    "version": "1.22.0",
+    "version": "1.22.2",
     "prettier": "prettier-config-ambanum",
     "scripts": {
         "dev": "NODE_OPTIONS=\"--insecure-http-parser --max-http-header-size=3276\" ts-node --project tsconfig.server.json src/server/index.ts",
         "build": "cp -R src/translations/en src/translations/default && next build --debug && tsc --project tsconfig.server.json && rm -Rf src/translations/default",
-        "start": "NODE_ENV=production node dist/index.js",
+        "start": "NODE_ENV=production node dist/src/server/index.js",
         "type-check": "tsc",
         "update-cookie-extension": "src/modules/Scraper/i-dont-care-about-cookies/tools/copy-to-folder.sh",
         "precommit": "echo \"No need for precommit yet\"",
