@@ -1,7 +1,6 @@
 import { addCommentToIssue, createIssue, searchIssue } from 'modules/Github/api';
 
-const GITHUB_OTA_OWNER = process.env.GITHUB_OTA_OWNER || '';
-const GITHUB_OTA_REPO = process.env.GITHUB_OTA_REPO || '';
+const [GITHUB_OTA_OWNER, GITHUB_OTA_REPO] = (process.env.GITHUB_REPO || '')?.split('/');
 
 const commonParams = {
   owner: GITHUB_OTA_OWNER,
@@ -20,6 +19,10 @@ export const addService = async ({
   json: any;
   url: string;
 }) => {
+  if (!process.env.GITHUB_REPO) {
+    return {};
+  }
+
   const issueTitle = `Add ${name} - ${documentType}`;
   const issueBodyCommon = `
 You can see the work done by the awesome contributor here:
@@ -37,7 +40,7 @@ You will need to create the following file in the root of the project: \`service
   let existingIssue = await searchIssue({
     ...commonParams,
     // baseUrl should be the way to go but it goes with a 404 using octokit
-    // baseUrl: `https://api.github.com/${GITHUB_OTA_OWNER}/${GITHUB_OTA_REPO}`,
+    // baseUrl: `https://api.github.com/${GITHUB_REPO}`,
     q: `is:issue "${issueTitle}"`,
   });
 
@@ -60,7 +63,7 @@ New service addition requested through the contribution tool
 
 ${issueBodyCommon}
 `,
-      labels: ['add-document', 'add-service'],
+      labels: [process.env.GITHUB_REPO || 'add'],
     });
   }
 

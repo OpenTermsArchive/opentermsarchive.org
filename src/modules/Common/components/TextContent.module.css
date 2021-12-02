@@ -52,7 +52,7 @@
   }
 
   & blockquote {
-    margin-bottom: var(--mL);
+    margin-bottom: var(--mM);
   }
 
   & code {
@@ -63,4 +63,8 @@
   & button {
     margin-bottom: var(--mXL);
   }
+}
+
+.textContent__marginTopLarge {
+  margin-top: var(--m2XL);
 }

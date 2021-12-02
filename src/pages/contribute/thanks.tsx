@@ -20,13 +20,13 @@ export default function ThanksPage({ mdxContent }: WithI18nResult) {
   } = useUrl();
   return (
     <Layout
-      title={t('contribute:thanks_page.seo.title', 'Thanks')}
-      desc={t('contribute:thanks_page.seo.desc', 'Thanks for contributing')}
+      title={t('contribute/thanks:seo.title', 'Thanks')}
+      desc={t('contribute/thanks:seo.desc', 'Thanks for contributing')}
     >
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Hero title={t('contribute:thanks_page.title', 'Thanks')}></Hero>
+          <Hero title={t('contribute/thanks:title', 'Thanks')}></Hero>
         </Container>
       </Container>
 
@@ -64,7 +64,7 @@ export default function ThanksPage({ mdxContent }: WithI18nResult) {
         <TextContent className="text__center">
           <hr />
           <Link href="/contribute">
-            <Button>{t('contribute:thanks_page.cta')}</Button>
+            <Button>{t('contribute/thanks:cta')}</Button>
           </Link>
         </TextContent>
       </Container>

@@ -9,7 +9,7 @@ export const LAST_VERSIONS_COMMITS =
 import { Octokit } from 'octokit';
 import axios from 'axios';
 
-const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN_CREATE_ISSUE });
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
 export interface GitHubAuthor {
   login: string;
@@ -110,7 +110,7 @@ export const searchIssue = async (
     // baseUrl should be the way to go instead of this ugly filter
     // that may not work in case there are too many issues
     // but it goes with a 404 using octokit
-    // baseUrl: `https://api.github.com/${GITHUB_OTA_OWNER}/${GITHUB_OTA_REPO}`,
+    // baseUrl: `https://api.github.com/${GITHUB_REPO}`,
     return (data?.items || []).filter((item) =>
       item.repository_url.endsWith(`${params.owner}/${params.repo}`)
     )[0];
@@ -137,7 +137,7 @@ export const getContributors = async () => {
     return data;
   } catch (e) {
     console.error(e);
-    return {};
+    return [];
   }
 };
 
@@ -149,7 +149,7 @@ export const getAllVersionsContributorCommitActivity = async () => {
     return data;
   } catch (e) {
     console.error(e);
-    return {};
+    return [];
   }
 };
 
@@ -162,7 +162,7 @@ export const getLastVersionsCommits = async () => {
     return data;
   } catch (e) {
     console.error(e);
-    return {};
+    return [];
   }
 };
 

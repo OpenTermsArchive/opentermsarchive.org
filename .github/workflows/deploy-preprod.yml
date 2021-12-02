@@ -3,7 +3,14 @@ on:
   push:
     tags:
       - '*'
+
 jobs:
+  typescript-check:
+    # CAREFUL: The part after the @ is the branch on which the file is located
+    # IF you ever wish to change something in .github/workflows/typescript-check.yml, You will need to change this reference too
+    # I did not find a way to consider the one within the current branch but I believe it would be the way to go
+    uses: 'ambanum/OpenTermsArchive.org/.github/workflows/typescript-check.yml@develop'
+
   on-branch-check:
     runs-on: ubuntu-latest
     outputs:
@@ -19,7 +26,7 @@ jobs:
           tag: '${{ github.ref }}'
 
   deploy:
-    needs: on-branch-check
+    needs: [on-branch-check, typescript-check]
     if: ${{ needs.on-branch-check.outputs.on_branch == 'true' }}
     runs-on: ubuntu-latest
     steps:

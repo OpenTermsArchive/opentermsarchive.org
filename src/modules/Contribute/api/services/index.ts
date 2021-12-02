@@ -1,7 +1,7 @@
 import { GetContributeServiceResponse, PostContributeServiceResponse } from '../../interfaces';
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
-
+import getConfig from 'next/config';
 import HttpStatusCode from 'http-status-codes';
 import { addService } from '../../managers/ServiceManager';
 import axios from 'axios';
@@ -11,6 +11,7 @@ import fs from 'fs';
 import { getLatestCommit } from 'modules/Github/api';
 import merge from 'lodash/merge';
 import path from 'path';
+const { serverRuntimeConfig } = getConfig();
 
 const isPdf = async (url: string) => {
   try {
@@ -36,9 +37,9 @@ const get =
 
     const folderName = url.replace(/[^\p{L}\d_]/gimu, '_');
 
-    const folderPath = path.join(process.env.TMP_SCRAPED_SERVICES_FOLDER || '', folderName);
+    const folderPath = path.join(serverRuntimeConfig.scrapedFilesFolder, folderName);
     const newUrlPath = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${
-      process.env.TMP_SCRAPED_SERVICES_URL || ''
+      serverRuntimeConfig.scrapedIframeUrl
     }/${folderName}`;
 
     const newUrl = `${newUrlPath}/index.html`;
@@ -128,15 +129,16 @@ const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResp
       fs.writeFileSync(historyFullPath, JSON.stringify(newHistoryJson, null, 2));
 
       json = merge(existingJson, json);
-      fs.writeFileSync(fullPath, JSON.stringify(json, null, 2));
     }
+
+    fs.writeFileSync(fullPath, JSON.stringify(json, null, 2));
 
     res.json({
       status: 'ok',
       message: `File saved`,
       path: fullPath,
     });
-  } catch (e) {
+  } catch (e: any) {
     res.statusCode = HttpStatusCode.METHOD_FAILURE;
     res.json({
       status: 'ko',
@@ -151,7 +153,7 @@ const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResp
 
 const addNewService =
   (body: any) => async (_: NextApiRequest, res: NextApiResponse<PostContributeServiceResponse>) => {
-    const service = await addService({
+    const service: any = await addService({
       name: body?.name,
       documentType: body?.documentType,
       json: body?.json,

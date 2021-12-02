@@ -1,4 +1,4 @@
-FROM node:16-alpine3.11
+FROM node:14-alpine3.12
 
 # install debug packages
 RUN apk add nano
@@ -9,7 +9,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositorie
     && echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
     && echo "http://dl-cdn.alpinelinux.org/alpine/v3.12/main" >> /etc/apk/repositories \
     && apk upgrade -U -a \
-    && apk add \
+    && apk add --no-cache --virtual .build-deps \
     nano \
     libstdc++ \
     chromium \
@@ -20,7 +20,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositorie
     font-noto-emoji \
     wqy-zenhei \
     && rm -rf /var/cache/* \
-    && mkdir /var/cache/apk
+    && mkdir /var/cache/apk && apk del .build-deps
 
 ENV CHROME_BIN=/usr/bin/chromium-browser \
     CHROME_PATH=/usr/lib/chromium/ \
@@ -37,13 +37,13 @@ ARG ENV_FILE=".env.production"
 WORKDIR /usr/src/app
 
 COPY package.json /usr/src/app
-COPY yarn.lock /usr/src/app
+COPY package-lock.json /usr/src/app
 
 # Production use node instead of root
 # USER node
 
 # Run install before setting NODE_ENV to install all development modules
-RUN yarn
+RUN npm install
 
 COPY . /usr/src/app
 RUN rm .env.*
@@ -52,12 +52,13 @@ COPY ./docker/$ENV_FILE /usr/src/app/.env.production
 ENV NODE_ENV=production
 ENV NODE_OPTIONS='--max_old_space_size=8192'
 
-RUN yarn build
+RUN npm run build
 
 RUN rm -Rf node_modules
-RUN yarn --production
+RUN npm install --production
 
-RUN yarn cache clean
+RUN npm cache clean --force \
+    && rm -rf /var/lib/{apt,dpkg,cache,log}
 
 EXPOSE 3000
-CMD [ "yarn", "start" ]
+CMD [ "npm", "start" ]
