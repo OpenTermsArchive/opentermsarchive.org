@@ -12,12 +12,12 @@ type ContributorsProps = {
 
 const outsideContributors = [
   {
-    html_url: 'https://github.com/trujilloelsa',
+    html_url: 'https://twitter.com/Elsa_Trujillo_',
     avatar_url: 'https://avatars.githubusercontent.com/u/86837188?v=4',
     login: 'Elsa Trujillo',
   },
   {
-    html_url: 'https://twitter.com/marineguillaum?lang=en',
+    html_url: 'https://twitter.com/marineguillaum',
     avatar_url:
       'https://pbs.twimg.com/profile_images/815851313758085121/oNANphLi_reasonably_small.jpg',
     login: 'Marine Guillaume',
@@ -33,6 +33,12 @@ const outsideContributors = [
     avatar_url:
       'https://pbs.twimg.com/profile_images/1359173368436686848/1GNqcMOf_reasonably_small.jpg',
     login: 'Henri Verdier',
+  },
+  {
+    html_url: 'https://twitter.com/hureaux',
+    avatar_url:
+      'https://pbs.twimg.com/profile_images/1784831840/politique-twitter_reasonably_small.jpg',
+    login: 'Jeremy Hureaux',
   },
 ];
 
