@@ -41,5 +41,10 @@ module.exports = Object.assign(Object.assign({ basePath: process.env.NEXT_PUBLIC
                 destination: '/en/media',
                 permanent: true,
             },
+            {
+                source: '/homepage',
+                destination: '/',
+                permanent: true,
+            },
         ];
     } });

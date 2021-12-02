@@ -34,7 +34,7 @@ const SubscribeForm = ({
   const {
     t,
     i18n: { language },
-  } = useTranslation('common');
+  } = useTranslation();
 
   const { register, handleSubmit, watch, reset } = useForm<SubscribeFormFields>({
     reValidateMode: 'onChange',

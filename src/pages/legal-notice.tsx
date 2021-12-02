@@ -9,10 +9,10 @@ import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
 
 export default function LegalNoticePage({ mdxContent }: WithI18nResult) {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation();
 
   return (
-    <Layout title={t('common:legal-notice.seo.title', 'Legal Notice')}>
+    <Layout title={t('legal-notice:seo.title', 'Legal Notice')}>
       <Container gridCols="10" gridGutters="9" paddingX={false}>
         <TextContent>
           <MDXRemote {...(mdxContent as any)} components={{ Button }} />

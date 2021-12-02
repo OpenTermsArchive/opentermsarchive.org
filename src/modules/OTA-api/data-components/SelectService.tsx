@@ -35,7 +35,7 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
     documentType: selectedDocumentType,
     defaultServices = {},
   }) => {
-    const { t } = useTranslation('common');
+    const { t } = useTranslation();
     const { data: services } = useSWR<Services>('/api/ota/services/all', {
       initialData: defaultServices,
       revalidateOnMount: true,

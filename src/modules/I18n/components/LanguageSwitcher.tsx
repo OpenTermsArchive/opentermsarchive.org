@@ -33,8 +33,8 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps & React.HTMLAttributes<HT
       <div className={s.languageSwitcher_items}>
         {router.locales
           // https://github.com/vercel/next.js/discussions/18419
-          // TO BE REMOVED alog with catchAll when this feature request is done
-          ?.filter((locale) => locale !== 'catchAll' && locale !== router.locale)
+          // TO BE REMOVED alog with default when this feature request is done
+          ?.filter((locale) => locale !== 'default' && locale !== router.locale)
           ?.map((locale) => (
             <React.Fragment key={locale}>
               <div className={s.languageSwitcher_item} onClick={toggleExtended}>

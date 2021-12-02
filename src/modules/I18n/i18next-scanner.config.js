@@ -1,7 +1,13 @@
 const {
-  i18n: { locales },
+  i18n: {
+    locales,
+    localePath
+  },
 } = require('./next-i18next.config');
+const fs = require('fs');
+const path = require('path');
 const fg = require('fast-glob');
+const uniq = require('lodash/fp/uniq')
 const typescriptTransform = require('i18next-scanner-typescript');
 
 const namespaces = fg
@@ -12,6 +18,22 @@ const namespaces = fg
   .filter((o) => !o.includes('__tests__'))
   .map((o) => o.toLowerCase().replace('src/modules/', ''));
 
+const pagesNamespaces = fg
+  .sync(['src/pages/**/*.tsx', 'src/**/pages/**/*.tsx'], {
+    onlyFiles: true,
+    ignore: ['src/pages/_app.tsx']
+  })
+  .map((o) => o.toLowerCase().replace('src/pages/', '').replace('src/modules/', '').replace('/pages/', '/'))
+  .map((o) => o.replace('.tsx', ''))
+  .map((o) => o.replace('/index', ''))
+  .filter((o) => o !== 'index');
+
+const allNamespaces = uniq([...namespaces, ...pagesNamespaces, 'footer', 'header']).sort((a, b) => a.localeCompare(b));
+
+console.log('The available namespaces are :');
+allNamespaces.forEach((o) => console.log(` ‣ ${o}`));
+
+fs.writeFileSync(path.join(__dirname, 'namespaces.json'), JSON.stringify(allNamespaces, null, 2));
 /*
  * Doc: https://github.com/i18next/i18next-scanner
  */
@@ -20,7 +42,7 @@ module.exports = {
   options: {
     debug: false,
     removeUnusedKeys: true,
-    sort: false,
+    sort: true,
     func: {
       list: ['t', 'i18next.t', 'translate'],
       extensions: ['.js', '.jsx'],
@@ -39,13 +61,13 @@ module.exports = {
         // Check out https://github.com/acornjs/acorn/tree/master/acorn#interface for additional options
       },
     },
-    lngs: locales,
-    ns: [...namespaces],
+    lngs: locales.filter(locale => locale !== "default"),
+    ns: allNamespaces,
     defaultNs: 'missing-namespace',
     defaultValue: '__STRING_NOT_TRANSLATED__',
     resource: {
-      loadPath: 'public/locales/{{lng}}/{{ns}}.json',
-      savePath: 'public/locales/{{lng}}/{{ns}}.json',
+      loadPath: 'src/translations/{{lng}}/{{ns}}.json',
+      savePath: 'src/translations/{{lng}}/{{ns}}.json',
     },
     nsSeparator: ':', // namespace separator
     keySeparator: false, // key separator
