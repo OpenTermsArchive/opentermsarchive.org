@@ -46,6 +46,10 @@ h3,
   line-height: 1.25;
 }
 
+.h3__light {
+  font-weight: normal;
+}
+
 h3,
 .h3 {
   @media (--gridPlus) {

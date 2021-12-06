@@ -35,6 +35,7 @@
   "how.id": "how",
   "how.subtitle": "How ?",
   "how.title": "How does OTA work?",
+  "mission_statement": "__STRING_NOT_TRANSLATED__",
   "partners.subtitle": "They make Open Terms Archive existing",
   "partners.title": "Our Partners",
   "press.subtitle": "They talk about Open Terms Archive",
@@ -58,8 +59,6 @@
   "showcase.item2.link.title": "See Disinfo experiments with Open Terms Archive data",
   "showcase.item2.title": "Disinfo experiments",
   "showcase.title": "Built with",
-  "subtitle": "Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms.",
-  "title": "Follow the changes to the terms of service",
   "values.desc.list.item1": "each user so that he can identify precisely what he has agreed upon, the data he has shared, the rights he has yielded to the services and the rights he has retained;",
   "values.desc.list.item2": "the authorities in order to verify the compatibility of these contractual frameworks with national and supranational law, in particular when the latter evolve;",
   "values.desc.list.item3": "regulators so that they can assess the efforts of the platforms, but also to make sure that they say what they do and that they do what they say. It creates transparency in the practices of digital players, in line with the first recommendations discussed within the framework of the DSA and the DMA.",
@@ -68,5 +67,6 @@
   "values.desc.p3": " This understanding is also necessary to:",
   "values.id": "values",
   "values.subtitle": "values",
-  "values.title": "What we believe in"
+  "values.title": "What we believe in",
+  "what_it_is": "__STRING_NOT_TRANSLATED__"
 }

@@ -35,6 +35,7 @@
   "how.id": "fonctionnement",
   "how.subtitle": "Fonctionnement",
   "how.title": "Comment fonctionne OTA ?",
+  "mission_statement": "Rééquilibrer le rapport de force face aux grandes plateformes numériques",
   "partners.subtitle": "Open Terms Archive existe grâce à eux.",
   "partners.title": "Nos partenaires",
   "press.subtitle": "Ils parlent d'Open Terms Archive",
@@ -58,8 +59,6 @@
   "showcase.item2.link.title": "Voir les expérimentations de l'équipe de Disinfo avec les données d'Open Terms Archive",
   "showcase.item2.title": "Expériences de disinfo",
   "showcase.title": "Cas d'usage",
-  "subtitle": "Les services en ligne (Amazon, Google, Apple...) ont des conditions qui peuvent changer au fil du temps. Open Terms Archive permet aux défenseurs des droits des utilisateurs, aux organismes de réglementation et à tout citoyen intéressé par l’évolution de ses droits de suivre les modifications apportées à ces documents.",
-  "title": "Suivre les modifications des conditions de service",
   "values.desc.list.item1": "chaque utilisateur afin qu'il puisse identifier précisément ce qu'il a accepté, les données qu'il a partagées, les droits qu'il a cédés aux services et ceux qu'il a conservés ;",
   "values.desc.list.item2": "les autorités afin de vérifier la compatibilité de ces cadres contractuels avec le droit national et supranational, notamment lorsque celui-ci évolue ;",
   "values.desc.list.item3": "les régulateurs afin qu'ils puissent évaluer les efforts des plateformes, mais aussi pour s'assurer qu'elles disent ce qu'elles font et qu'elles font ce qu'elles disent. Elle crée de la transparence dans les pratiques des acteurs du numérique, dans la lignée des premières recommandations discutées dans le cadre de la DSA et de la DMA.",
@@ -68,5 +67,6 @@
   "values.desc.p3": "Cette compréhension est également nécessaire pour :",
   "values.id": "valeurs",
   "values.subtitle": "valeurs",
-  "values.title": "Ce en quoi nous croyons"
+  "values.title": "Ce en quoi nous croyons",
+  "what_it_is": "Open Terms Archive enregistre chaque modification des conditions d'utilisation des services numériques. Cette base de données permet aux utilisateurs et régulateurs d'évaluer la loyauté de ces entreprises."
 }

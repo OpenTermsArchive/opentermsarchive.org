@@ -82,49 +82,244 @@ const HomePage = ({ services }: any) => {
         'Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms.'
       )}
     >
-      {/* Hero */}
+      {/* Mission statement + What is it ? */}
       <Container layout="wide" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Hero
-            title={t('homepage:title', 'Follow the changes to the terms of service')}
-            subtitle={t(
-              'homepage:subtitle',
-              'Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms.'
-            )}
-          ></Hero>
+          <Hero title={t('homepage:mission_statement')} subtitle={t('homepage:what_it_is')}></Hero>
         </Container>
       </Container>
 
-      {/* Subscribe form */}
-      <Container layout="wide">
-        <Container
-          gridCols="12"
-          gridGutters="11"
-          flex={true}
-          paddingX={false}
-          paddingTop={false}
-          paddingBottom={false}
+      {/* How it works -  3 steps */}
+      {/* 
+        1 étape : Identification - Identification des documents contractuels d'un service
+        2 étape : Archivage - Téléchargement de chaque modification de document
+        3 étape : Publication - ...
+      */}
+
+      <Container layout="wide" paddingY={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+          <Column width={50} alignX="center" alignY="center">
+            image
+          </Column>
+          <Column width={50}>
+            <TextContent>
+              <h3 className="">1. Identification</h3>
+              <h3 className="mt__M h3__light">
+                Les documents contractuels d'un service à suivre sont listés par des contributeurs
+                bénévoles.
+              </h3>
+            </TextContent>
+          </Column>
+        </Container>
+      </Container>
+
+      <Container layout="wide" paddingY={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+          <Column width={50}>
+            <TextContent>
+              <h3 className="">2. Archivage</h3>
+              <h3 className="mt__M h3__light">
+                Plusieurs fois par jour, nos robots téléchargent et archivent publiquement les
+                documents listés.
+              </h3>
+            </TextContent>
+          </Column>
+          <Column width={50} alignX="center" alignY="center">
+            image
+          </Column>
+        </Container>
+      </Container>
+
+      <Container layout="wide" paddingY={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+          <Column width={50} alignX="center" alignY="center">
+            image de diff
+          </Column>
+          <Column width={50}>
+            <TextContent>
+              <h3 className="">3. Détection</h3>
+              <h3 className="mt__M h3__light">
+                Lorsque des modifications sont repérées, elles sont enregistrées et exposées.
+              </h3>
+            </TextContent>
+          </Column>
+        </Container>
+      </Container>
+
+      <Container layout="wide" paddingY={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+          <Column width={50}>
+            <TextContent>
+              <h3 className="">4. Publication</h3>
+              <h3 className="mt__M h3__light">
+                L'ensemble de toutes les versions enregistrées est publié dans un jeu de données.
+              </h3>
+              {/* <Link href="/test">
+                <a title="">
+                  <Button type="secondary">Télécharger pour analyser</Button>
+                </a>
+              </Link> */}
+
+              <Link href="/...">
+                <a title="">
+                  <Button>Télécharger pour analyser</Button>
+                </a>
+              </Link>
+            </TextContent>
+          </Column>
+          <Column width={50} alignX="center" alignY="center">
+            image du sytème de fichier
+          </Column>
+        </Container>
+      </Container>
+
+      <Container layout="wide" gray={true} paddingY={false}>
+        <Container gridCols="12" gridGutters="11" paddingX={false} gray={true}>
+          <ButtonBlockList title="Quand les services que nous utilisons au quotidien changent leurs règles, nous sommes les premiers concernés. ">
+            <ButtonBlock
+              title="Découvrez des modifications intéressantes"
+              iconName="FiTwitter"
+              iconColor="var(--colorPrimary)"
+            >
+              <Link href="/contribute">
+                <a title="/...">
+                  <Button>Suivre @OpenTerms</Button>
+                </a>
+              </Link>
+              <LinkIcon iconColor="var(--colorBlack400)" href="/.." small={true}>
+                <a title="/...">ou lire nos études de cas </a>
+              </LinkIcon>
+            </ButtonBlock>
+            <ButtonBlock
+              title="Suivez les modifications d'un document donné"
+              iconName="FiMail"
+              iconColor="var(--colorPrimary)"
+            >
+              <Link href="https://github.com/ambanum/OpenTermsArchive">
+                <a title="">
+                  <Button>S'abonner par mail</Button>
+                </a>
+              </Link>
+              <LinkIcon iconColor="var(--colorBlack400)" href="/.." small={true}>
+                <a title="/...">ou par RSS</a>
+              </LinkIcon>
+            </ButtonBlock>
+            <ButtonBlock
+              title="Explorez l'historique de chaque document"
+              iconName="FiGithub"
+              iconColor="var(--colorPrimary)"
+            >
+              <a href="https://opentermsarchive.org/data/api" title="/.." target="_blank">
+                <Button>Naviguer sur GitHub</Button>
+              </a>
+              <LinkIcon
+                iconColor="var(--colorBlack400)"
+                href="https://github.com/ambanum/OpenTermsArchive-versions/releases"
+                small={true}
+              >
+                <a title="">ou télécharger le jeu de données</a>
+              </LinkIcon>
+            </ButtonBlock>
+          </ButtonBlockList>
+        </Container>
+      </Container>
+
+      {/* Showcase */}
+      {/* TODO : changer l'ui pour des cards avec screenshot */}
+      {/* TODO : réduire l'importance graphique de "vous avez developpé un outil..." */}
+      <Container
+        gridCols="10"
+        gridGutters="11"
+        flex={true}
+        id={t('homepage:showcase.id', 'built-with')}
+      >
+        <Column
+          width={50}
+          title="Réutilisations"
+          subtitle="Ces outils s'appuient sur Open Terms Archive pour rééquilibrer le rapport de force face aux grandes plateformes numériques "
         >
-          <Column width={60}>
-            <SubscribeForm
-              defaultServices={services}
-              onSubmit={onSubscription}
-              loading={subscribing}
-              onChange={(data) => pushQueryParams(data, undefined, { shallow: true })}
-              defaultValues={{
-                service: queryParams.service,
-                documentType: queryParams.documentType,
-              }}
-            />
-          </Column>
-          <Column width={40} alignX="center">
-            <img src="/images/form-subscribe.jpg" alt="" loading="lazy" />
-          </Column>
-        </Container>
+          <ShowcaseList>
+            <ShowcaseItem
+              title={t('homepage:showcase.item1.title', 'Scripta Manent')}
+              desc={t(
+                'homepage:showcase.item1.desc',
+                'Explore the contractual documents of the main online service providers and compare their evolution through time.'
+              )}
+              author={t(
+                'homepage:showcase.item1.author',
+                'By the team of the French Ambassador for Digital Affairs'
+              )}
+            >
+              <LinkIcon
+                iconColor="var(--colorBlack400)"
+                href="https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent"
+              >
+                <a
+                  title={t(
+                    'homepage:showcase.item1.link.title',
+                    'Try Scripta Manent on Disinfo website now'
+                  )}
+                >
+                  {t('homepage:showcase.item1.link.label', 'Try')}
+                </a>
+              </LinkIcon>
+            </ShowcaseItem>
+            <ShowcaseItem
+              title={t('homepage:showcase.item2.title', 'Disinfo experiments')}
+              desc={t(
+                'homepage:showcase.item2.desc',
+                'Experiments are ongoing so as to produce use cases using Open Terms Archive data.'
+              )}
+              author={t(
+                'homepage:showcase.item2.author',
+                'By the team of the French Ambassador for Digital Affairs'
+              )}
+            >
+              <LinkIcon
+                iconColor="var(--colorPrimary)"
+                href="https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments"
+              >
+                <a
+                  title={t(
+                    'homepage:showcase.item2.link.title',
+                    'See Disinfo experiments with Open Terms Archive data'
+                  )}
+                >
+                  {t('homepage:showcase.item2.link.label', 'See')}
+                </a>
+              </LinkIcon>
+            </ShowcaseItem>
+          </ShowcaseList>
+        </Column>
+        <Column width={50} alignX="center" alignY="center">
+          <ButtonBlock
+            title={t(
+              'homepage:showcase.buttonblock.title',
+              'Have you developed an Open Terms Archive based tool?'
+            )}
+            desc={t('homepage:showcase.buttonblock.desc', 'Let the community know about it here')}
+            fillParent={true}
+          >
+            <Link
+              href={t('homepage:showcase.buttonblock.href', 'mailto:contact@opentermsarchive.org')}
+            >
+              <a title={t('homepage:showcase.buttonblock.link.title', 'Send us a mail')}>
+                <Button>{t('homepage:showcase.buttonblock.label', 'Contact us')}</Button>
+              </a>
+            </Link>
+          </ButtonBlock>
+        </Column>
       </Container>
 
-      {/* How section */}
-      <Container layout="wide" gray={true}>
+      {/* CTA pro - DATASET - API (beta) */}
+      {/* CTA public (suscribre mail): Twitter, Contact mail, GitHub */}
+      {/* Reuses */}
+      {/* Stats */}
+      {/* FOSS & Contributors */}
+      {/* Partners */}
+      {/* Press */}
+
+      {/* <Container layout="wide" gray={true}>
         <Container
           gridCols="10"
           gridGutters="11"
@@ -191,6 +386,34 @@ const HomePage = ({ services }: any) => {
               />
             </FeatureList>
           </Aside>
+        </Container>
+      </Container> */}
+
+      {/* Subscribe form */}
+      <Container layout="wide">
+        <Container
+          gridCols="12"
+          gridGutters="11"
+          flex={true}
+          paddingX={false}
+          paddingTop={false}
+          paddingBottom={false}
+        >
+          <Column width={60}>
+            <SubscribeForm
+              defaultServices={services}
+              onSubmit={onSubscription}
+              loading={subscribing}
+              onChange={(data) => pushQueryParams(data, undefined, { shallow: true })}
+              defaultValues={{
+                service: queryParams.service,
+                documentType: queryParams.documentType,
+              }}
+            />
+          </Column>
+          <Column width={40} alignX="center">
+            <img src="/images/form-subscribe.jpg" alt="" loading="lazy" />
+          </Column>
         </Container>
       </Container>
 
@@ -331,91 +554,6 @@ const HomePage = ({ services }: any) => {
             </TextContent>
           </Column>
         </Container>
-      </Container>
-
-      {/* Showcase */}
-      <Container
-        gridCols="10"
-        gridGutters="11"
-        flex={true}
-        id={t('homepage:showcase.id', 'built-with')}
-      >
-        <Column
-          width={50}
-          title={t('homepage:showcase.title', 'Built with')}
-          subtitle={t('homepage:showcase.title', 'Showcase')}
-        >
-          <ShowcaseList>
-            <ShowcaseItem
-              title={t('homepage:showcase.item1.title', 'Scripta Manent')}
-              desc={t(
-                'homepage:showcase.item1.desc',
-                'Explore the contractual documents of the main online service providers and compare their evolution through time.'
-              )}
-              author={t(
-                'homepage:showcase.item1.author',
-                'By the team of the French Ambassador for Digital Affairs'
-              )}
-            >
-              <LinkIcon
-                iconColor="var(--colorBlack400)"
-                href="https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent"
-              >
-                <a
-                  title={t(
-                    'homepage:showcase.item1.link.title',
-                    'Try Scripta Manent on Disinfo website now'
-                  )}
-                >
-                  {t('homepage:showcase.item1.link.label', 'Try')}
-                </a>
-              </LinkIcon>
-            </ShowcaseItem>
-            <ShowcaseItem
-              title={t('homepage:showcase.item2.title', 'Disinfo experiments')}
-              desc={t(
-                'homepage:showcase.item2.desc',
-                'Experiments are ongoing so as to produce use cases using Open Terms Archive data.'
-              )}
-              author={t(
-                'homepage:showcase.item2.author',
-                'By the team of the French Ambassador for Digital Affairs'
-              )}
-            >
-              <LinkIcon
-                iconColor="var(--colorPrimary)"
-                href="https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments"
-              >
-                <a
-                  title={t(
-                    'homepage:showcase.item2.link.title',
-                    'See Disinfo experiments with Open Terms Archive data'
-                  )}
-                >
-                  {t('homepage:showcase.item2.link.label', 'See')}
-                </a>
-              </LinkIcon>
-            </ShowcaseItem>
-          </ShowcaseList>
-        </Column>
-        <Column width={50} alignX="center" alignY="center">
-          <ButtonBlock
-            title={t(
-              'homepage:showcase.buttonblock.title',
-              'Have you developed an Open Terms Archive based tool?'
-            )}
-            desc={t('homepage:showcase.buttonblock.desc', 'Let the community know about it here')}
-            fillParent={true}
-          >
-            <Link
-              href={t('homepage:showcase.buttonblock.href', 'mailto:contact@opentermsarchive.org')}
-            >
-              <a title={t('homepage:showcase.buttonblock.link.title', 'Send us a mail')}>
-                <Button>{t('homepage:showcase.buttonblock.label', 'Contact us')}</Button>
-              </a>
-            </Link>
-          </ButtonBlock>
-        </Column>
       </Container>
 
       {/* Partners */}

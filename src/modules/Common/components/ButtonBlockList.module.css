@@ -3,7 +3,7 @@
 
 .buttonBlockList_header {
   text-align: center;
-  @mixin grid 6, 5;
+  @mixin grid 7, 6;
   margin: 0 auto;
 }
 
@@ -14,9 +14,9 @@
 }
 
 .buttonBlockList_items {
-  @mixin grid 10, 9;
+  @mixin grid 12, 11;
   margin: 0 auto;
-  margin-top: var(--m2XL);
+  margin-top: var(--m3XL);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
