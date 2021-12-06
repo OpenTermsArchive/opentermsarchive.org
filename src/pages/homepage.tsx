@@ -1,16 +1,11 @@
 import SubscribeForm, { SubscribeFormProps } from 'modules/Common/components/SubscribeForm';
 
-import Article from 'modules/Common/components/Article';
-import Aside from 'modules/Common/components/Aside';
 import Button from 'modules/Common/components/Button';
 import ButtonBlock from 'modules/Common/components/ButtonBlock';
 import ButtonBlockList from 'modules/Common/components/ButtonBlockList';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Contributors from 'modules/OTA-api/data-components/Contributors';
-import FeatureItem from 'modules/Common/components/FeatureItem';
-import FeatureList from 'modules/Common/components/FeatureList';
-import { FiArrowRightCircle } from 'react-icons/fi';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
@@ -195,7 +190,7 @@ const HomePage = ({ services }: any) => {
               iconName="FiMail"
               iconColor="var(--colorPrimary)"
             >
-              <Link href="https://github.com/ambanum/OpenTermsArchive">
+              <Link href="/subscribe">
                 <a title="">
                   <Button>S'abonner par mail</Button>
                 </a>
@@ -318,104 +313,6 @@ const HomePage = ({ services }: any) => {
       {/* FOSS & Contributors */}
       {/* Partners */}
       {/* Press */}
-
-      {/* <Container layout="wide" gray={true}>
-        <Container
-          gridCols="10"
-          gridGutters="11"
-          flex={true}
-          paddingY={false}
-          id={t('homepage:how.id', 'how')}
-        >
-          <Article
-            subtitle={t('homepage:how.subtitle', 'How ?')}
-            title={t('homepage:how.title', 'How does OTA work?')}
-            titleLevel="h2"
-          >
-            <TextContent>
-              <p>
-                {t(
-                  'homepage:how.desc.p1',
-                  'Services are declared within Open Terms Archive with a declaration file listing all the documents that, together, constitute the terms under which this service can be used. These documents all have a type, such as “terms and conditions”, “privacy policy”, “developer agreement”…'
-                )}
-              </p>
-              <p>
-                {t(
-                  'homepage:how.desc.p2',
-                  'In order to track their changes, documents are periodically obtained by fetching a web location and selecting content within the web page to remove the noise (ads, navigation menu, login fields…). Beyond selecting a subset of a page, some documents have additional noise (hashes in links, CSRF tokens…) that would be false for changes. Open Terms Archive thus supports specific filters for each document.'
-                )}
-              </p>
-              <p>
-                {t(
-                  'homepage:how.desc.p3',
-                  'However, the shape of that noise can change over time. In order to recover in case of information loss during the noise filtering step, a snapshot is recorded every there is a change. After the noise is filtered out from the snapshot, if there are changes in the resulting document, a new version of the document is recorded.'
-                )}
-              </p>
-              <Link href="/how-it-works">
-                <a title={t('homepage:how.button.title', 'How OTA works ?')}>
-                  <Button type="secondary">{t('homepage:how.button.label', 'Know more')}</Button>
-                </a>
-              </Link>
-            </TextContent>
-          </Article>
-          <Aside>
-            <FeatureList>
-              <FeatureItem
-                iconName="FiBox"
-                title={nbServicesTitle}
-                desc={t(
-                  'homepage:how.feature1.desc',
-                  'Google, Amazon, Apple, AirBnB, Facebook, Twitter, Instagram, Bing, Microsoft, Reddit, Youtube, TikTok...'
-                )}
-              />
-              <FeatureItem
-                iconName="FiFile"
-                title={nbDocsTitle}
-                desc={t(
-                  'homepage:how.feature2.desc',
-                  'Terms of Service, Privacy Policy, Trackers Policy, Developer Terms, Community Guidelines...'
-                )}
-              />
-              <FeatureItem
-                iconName="FiSmile"
-                title={t('homepage:how.feature3.title', 'Open Source')}
-                desc={t(
-                  'homepage:how.feature3.desc',
-                  'Free and collaborative software, any entity can contribute to improve it.'
-                )}
-              />
-            </FeatureList>
-          </Aside>
-        </Container>
-      </Container> */}
-
-      {/* Subscribe form */}
-      <Container layout="wide">
-        <Container
-          gridCols="12"
-          gridGutters="11"
-          flex={true}
-          paddingX={false}
-          paddingTop={false}
-          paddingBottom={false}
-        >
-          <Column width={60}>
-            <SubscribeForm
-              defaultServices={services}
-              onSubmit={onSubscription}
-              loading={subscribing}
-              onChange={(data) => pushQueryParams(data, undefined, { shallow: true })}
-              defaultValues={{
-                service: queryParams.service,
-                documentType: queryParams.documentType,
-              }}
-            />
-          </Column>
-          <Column width={40} alignX="center">
-            <img src="/images/form-subscribe.jpg" alt="" loading="lazy" />
-          </Column>
-        </Container>
-      </Container>
 
       {/* Contributors */}
       <Container gridCols="12" gridGutters="11" id={t('homepage:contribute.id', 'contribute')}>
