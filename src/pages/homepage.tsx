@@ -417,142 +417,15 @@ const HomePage = ({ services }: any) => {
         </Container>
       </Container>
 
-      {/* Contribute */}
+      {/* Contributors */}
       <Container gridCols="12" gridGutters="11" id={t('homepage:contribute.id', 'contribute')}>
         <Container gridCols="8" gridGutters="7" paddingY={false}>
           <Column width={100} alignX="center">
             <img src="/images/contribute.jpg" loading="lazy" />
           </Column>
         </Container>
-        <ButtonBlockList
-          className="mt__XL"
-          title={t('homepage:contribute.title', 'Want to help us build a digital common ?')}
-          subtitle={t('homepage:contribute.subtitle', 'Contribute')}
-        >
-          <ButtonBlock
-            title={t('homepage:contribute.buttonblock1.title', 'Add documents')}
-            desc={t(
-              'homepage:contribute.buttonblock1.desc',
-              'Easily and quickly add documents to follow.'
-            )}
-            iconName="FiPlus"
-            iconColor="var(--colorPrimary)"
-          >
-            <Link href="/contribute">
-              <a title={t('homepage:contribute.buttonblock1.link.title', 'Add a document now')}>
-                <Button>{t('homepage:contribute.buttonblock1.button.label', 'Add now')}</Button>
-              </a>
-            </Link>
-          </ButtonBlock>
-          <ButtonBlock
-            title={t('homepage:contribute.buttonblock2.title', 'Improve source code')}
-            desc={t(
-              'homepage:contribute.buttonblock2.desc',
-              'Add features, write tests, fix bugs, help us make better code.'
-            )}
-            iconName="FiGithub"
-            iconColor="var(--colorPrimary)"
-          >
-            <Link href="https://github.com/ambanum/OpenTermsArchive">
-              <a
-                title={t(
-                  'homepage:contribute.buttonblock2.link.title',
-                  'Go to the GitHub repository'
-                )}
-              >
-                <Button>
-                  {t('homepage:contribute.buttonblock2.button.label', 'View source code')}
-                </Button>
-              </a>
-            </Link>
-          </ButtonBlock>
-          <ButtonBlock
-            title={t('homepage:contribute.buttonblock3.title', 'Use the data')}
-            desc={t(
-              'homepage:contribute.buttonblock3.desc',
-              'Design your use cases using the data via the API.'
-            )}
-            iconName="FiDatabase"
-            iconColor="var(--colorPrimary)"
-          >
-            <a
-              href="https://opentermsarchive.org/data/api"
-              title={t(
-                'homepage:contribute.buttonblock3.link.title',
-                'Read the documentation for use the API'
-              )}
-              target="_blank"
-            >
-              <Button>
-                {t('homepage:contribute.buttonblock3.button.label', 'Discover the API')}
-              </Button>
-            </a>
-            <LinkIcon
-              iconColor="var(--colorBlack400)"
-              href="https://github.com/ambanum/OpenTermsArchive-versions/releases"
-              small={true}
-            >
-              <a title={t('homepage:contribute.buttonblock3.sublink.title', 'Download a dataset')}>
-                {t('homepage:contribute.buttonblock3.sublink.label', 'or download a dataset')}
-              </a>
-            </LinkIcon>
-          </ButtonBlock>
-        </ButtonBlockList>
         <Container gridCols="6" gridGutters="5" paddingYSmall={true}>
           <Contributors subtitle={t('homepage:contributors.subtitle', 'Thanks 🙏')} />
-        </Container>
-      </Container>
-
-      {/* Values */}
-      <Container layout="wide" dark={true} paddingY={false} id={t('homepage:values.id', 'values')}>
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
-          <Column width={50} alignX="center" alignY="center">
-            <img src="/images/values.png" loading="lazy" />
-          </Column>
-          <Column
-            width={50}
-            title={t('homepage:values.title', 'What we believe in')}
-            subtitle={t('homepage:values.subtitle', 'values')}
-          >
-            <TextContent>
-              <p>
-                {t(
-                  'homepage:values.desc.p1',
-                  'Large digital companies today occupy a central position which, through the ToS, allows them to transform their practices and values ​​into de facto which are at the heart of many aspects of our existence and our economies.'
-                )}
-              </p>
-              <p>
-                {t(
-                  'homepage:values.desc.p2',
-                  'However, they communicate in an insufficiently clear, readable and continuous manner on these ToS, whereas rigorously understanding the ToS and how they have evolved over time has become essential to appreciate the practices and loyalty of these digital players.'
-                )}
-              </p>
-              <p>{t('homepage:values.desc.p3', ' This understanding is also necessary to:')}</p>
-              <ul>
-                <li>
-                  <FiArrowRightCircle color="#0496FF" />
-                  {t(
-                    'homepage:values.desc.list.item1',
-                    'each user so that he can identify precisely what he has agreed upon, the data he has shared, the rights he has yielded to the services and the rights he has retained;'
-                  )}
-                </li>
-                <li>
-                  <FiArrowRightCircle color="#0496FF" />
-                  {t(
-                    'homepage:values.desc.list.item2',
-                    'the authorities in order to verify the compatibility of these contractual frameworks with national and supranational law, in particular when the latter evolve;'
-                  )}
-                </li>
-                <li>
-                  <FiArrowRightCircle color="#0496FF" />
-                  {t(
-                    'homepage:values.desc.list.item3',
-                    'regulators so that they can assess the efforts of the platforms, but also to make sure that they say what they do and that they do what they say. It creates transparency in the practices of digital players, in line with the first recommendations discussed within the framework of the DSA and the DMA.'
-                  )}
-                </li>
-              </ul>
-            </TextContent>
-          </Column>
         </Container>
       </Container>
 
