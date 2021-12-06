@@ -9,7 +9,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositorie
     && echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
     && echo "http://dl-cdn.alpinelinux.org/alpine/v3.12/main" >> /etc/apk/repositories \
     && apk upgrade -U -a \
-    && apk add --no-cache --virtual .build-deps \
+    && apk add --no-cache \
     nano \
     libstdc++ \
     chromium \
@@ -20,11 +20,11 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositorie
     font-noto-emoji \
     wqy-zenhei \
     && rm -rf /var/cache/* \
-    && mkdir /var/cache/apk && apk del .build-deps
+    && mkdir /var/cache/apk
 
 ENV CHROME_BIN=/usr/bin/chromium-browser \
     CHROME_PATH=/usr/lib/chromium/ \
-    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
 
 
 # install app
