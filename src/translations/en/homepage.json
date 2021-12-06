@@ -1,5 +1,4 @@
 {
-  "contribute.buttonblock1.button.href": "/contribute",
   "contribute.buttonblock1.button.label": "Add now",
   "contribute.buttonblock1.desc": "Easily and quickly add documents to follow.",
   "contribute.buttonblock1.link.title": "Add a document now",
@@ -18,7 +17,6 @@
   "contribute.subtitle": "Contribute",
   "contribute.title": "Want to help us build a digital common ?",
   "contributors.subtitle": "Thanks 🙏",
-  "how.button.href": "/how-it-works",
   "how.button.label": "Know more",
   "how.button.title": "How OTA works ?",
   "how.desc.p1": "Services are declared within Open Terms Archive with a declaration file listing all the documents that, together, constitute the terms under which this service can be used. These documents all have a type, such as “terms and conditions”, “privacy policy”, “developer agreement”…",

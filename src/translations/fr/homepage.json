@@ -1,5 +1,4 @@
 {
-  "contribute.buttonblock1.button.href": "/contribute",
   "contribute.buttonblock1.button.label": "Ajouter maintenant",
   "contribute.buttonblock1.desc": "Ajoutez facilement et rapidement des documents à suivre via une interface dédiée.",
   "contribute.buttonblock1.link.title": "Ajouter un document à suivre dans Open Terms Archive",
@@ -18,7 +17,6 @@
   "contribute.subtitle": "Contribuer",
   "contribute.title": "Aidez nous à apprécier la loyauté des services.",
   "contributors.subtitle": "Merci 🙏",
-  "how.button.href": "/how-it-works",
   "how.button.label": "En savoir plus",
   "how.button.title": "Comment OTA fonctionne ?",
   "how.desc.p1": "Tout fournisseur de services en ligne dispose de conditions d’utilisation définies dans un ensemble de documents contractuels qui régissent les modalités d’interaction avec ses utilisateurs, comme les politiques de modération des contenus, la responsabilité de l’éditeur ou encore la juridiction compétente en cas de litige.",
