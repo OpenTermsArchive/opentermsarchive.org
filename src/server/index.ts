@@ -15,7 +15,7 @@ const port = process.env.PORT || 3000;
     const server = express();
 
     server.use(
-      `${process.env.NEXT_PUBLIC_BASE_PATH}${serverRuntimeConfig.scrapedIframeUrl}`,
+      `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${serverRuntimeConfig.scrapedIframeUrl}`,
       express.static(serverRuntimeConfig.scrapedFilesFolder)
     );
 
