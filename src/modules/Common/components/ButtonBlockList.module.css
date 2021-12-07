@@ -23,7 +23,7 @@
   align-items: flex-start;
 
   & > div {
-    margin: 0 calc(var(--gridGutterWidth)) var(--gridGutterWidth);
+    margin: 0 var(--gridGutterWidth) var(--gridGutterWidth);
   }
 }
 

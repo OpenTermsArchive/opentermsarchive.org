@@ -1,0 +1,49 @@
+.card {
+  border: 1px solid var(--colorBlack200);
+  @mixin grid 4, 3;
+  flex-shrink: 0;
+}
+
+.card_header {
+  position: relative;
+  height: 180px;
+}
+
+.card_body {
+  padding: var(--pL) var(--pM) var(--pM) var(--pM);
+}
+
+.card_title {
+}
+
+.card_subtitle {
+  margin-top: var(--mXS);
+}
+
+.card_children {
+  margin-top: var(--mM);
+
+  & p:not(:last-child) {
+    margin-bottom: var(--mM);
+  }
+
+  & button:not(:last-child) {
+    margin-bottom: var(--mXL);
+  }
+}
+
+.card_author {
+  border-top: 1px solid var(--colorBlack200);
+  padding: var(--pS);
+  margin-top: var(--mS);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.card_author_icon {
+  margin-right: var(--mXS);
+}
+.card_author_desc {
+}
