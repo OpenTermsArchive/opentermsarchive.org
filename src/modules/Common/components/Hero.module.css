@@ -6,15 +6,12 @@
 
 .hero_title {
   @mixin grid 10, 10;
-  font-weight: 300;
 }
 
 .hero_subtitle {
   @mixin grid 12, 11;
-  font-size: 3.4rem;
-  font-weight: bold;
 }
 
 .hero_title + .hero_subtitle {
-  margin-top: var(--mL);
+  margin-top: var(--mXL);
 }

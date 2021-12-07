@@ -1,5 +1,3 @@
-import SubscribeForm, { SubscribeFormProps } from 'modules/Common/components/SubscribeForm';
-
 import Button from 'modules/Common/components/Button';
 import ButtonBlock from 'modules/Common/components/ButtonBlock';
 import ButtonBlockList from 'modules/Common/components/ButtonBlockList';
@@ -16,19 +14,12 @@ import ShowcaseList from 'modules/Common/components/ShowcaseList';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
-import api from 'utils/api';
 import { getServices } from 'modules/OTA-api/api';
-import useNotifier from 'hooks/useNotifier';
-import { useToggle } from 'react-use';
 import { useTranslation } from 'next-i18next';
-import useUrl from 'hooks/useUrl';
 import { withI18n } from 'modules/I18n';
 
 const HomePage = ({ services }: any) => {
   const { t } = useTranslation();
-  const [subscribing, toggleSubscribing] = useToggle(false);
-  const { queryParams, pushQueryParams } = useUrl();
-  const { notify } = useNotifier();
 
   // Format services and docs feature item title
   let nbServicesTitle = t('homepage:how.feature1.defaultTitle', 'Many services');
@@ -46,37 +37,8 @@ const HomePage = ({ services }: any) => {
     });
   }
 
-  const onSubscription: SubscribeFormProps['onSubmit'] = async (data) => {
-    let success;
-    toggleSubscribing(true);
-
-    try {
-      await api.post(`/api/subscribe`, {
-        email: data.email,
-        service: data.service,
-        documentType: data.documentType,
-      });
-      notify('success', t('common:subscribe_form.success', 'Thanks for subscribing'));
-      success = true;
-    } catch (err) {
-      notify(
-        'error',
-        t('common:subscribe_form.error', 'Sorry, but there was a problem, please try again')
-      );
-      success = false;
-    }
-    toggleSubscribing(false);
-    return success;
-  };
-
   return (
-    <Layout
-      title={t('homepage:seo.title', 'Follow the changes to the terms of service')}
-      desc={t(
-        'homepage:seo.desc',
-        'Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms.'
-      )}
-    >
+    <Layout title={t('homepage:seo.title')} desc={t('homepage:seo.desc')}>
       {/* Mission statement + What is it ? */}
       <Container layout="wide" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
@@ -85,12 +47,6 @@ const HomePage = ({ services }: any) => {
       </Container>
 
       {/* How it works -  3 steps */}
-      {/* 
-        1 étape : Identification - Identification des documents contractuels d'un service
-        2 étape : Archivage - Téléchargement de chaque modification de document
-        3 étape : Publication - ...
-      */}
-
       <Container layout="wide" paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={50} alignX="center" alignY="center">
