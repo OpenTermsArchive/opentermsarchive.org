@@ -12,8 +12,9 @@ const Hero: React.FC<HeroProps> = ({ children, className, title, subtitle, ...pr
   return (
     <div className={classNames(s.hero, className)} {...props}>
       {title ? <h1 className={s.hero_title}>{title}</h1> : undefined}
-      {subtitle ? <h2 className={classNames(s.hero_subtitle)}>{subtitle}</h2> : undefined}
-
+      {subtitle ? (
+        <h2 className={classNames(s.hero_subtitle, 'h2__thin')}>{subtitle}</h2>
+      ) : undefined}
       {children}
     </div>
   );

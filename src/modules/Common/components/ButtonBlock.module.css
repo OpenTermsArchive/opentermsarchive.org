@@ -1,8 +1,8 @@
 .buttonBlock {
-  border: 1px solid var(--colorBlack200);
+  border: 1px solid var(--colorWhite);
   @mixin grid 3, 3;
   text-align: center;
-  padding: var(--p2XL) var(--pL) var(--pXL) var(--pL);
+  padding: var(--p2XL) var(--pM) var(--pXL) var(--pM);
   position: relative;
   flex-shrink: 0;
 

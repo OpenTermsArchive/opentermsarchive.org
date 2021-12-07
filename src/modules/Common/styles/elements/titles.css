@@ -20,11 +20,15 @@ h2,
 .h2 {
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 300;
+  font-weight: bold;
   font-size: 3.8rem;
   letter-spacing: -0.2px;
   color: var(--colorBlack900);
   line-height: 1.4;
+
+  &.h2__thin {
+    font-weight: 300;
+  }
 }
 @media (--gridPlus) {
   h2,
@@ -43,10 +47,13 @@ h3,
   letter-spacing: -1.5px;
   color: var(--colorBlack900);
   line-height: 1.4;
-}
 
-.h3__light {
-  font-weight: normal;
+  &.h3__light {
+    font-weight: normal;
+  }
+  &.h3__ultralight {
+    font-weight: 300;
+  }
 }
 
 h3,

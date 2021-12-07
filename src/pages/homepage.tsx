@@ -49,7 +49,7 @@ const HomePage = ({ services }: any) => {
         </Container>
       </Container>
 
-      {/* How it works -  3 ste ps */}
+      {/* How it works -  1 step */}
       <Container layout="wide" paddingBottom={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={50} alignX="center">
@@ -64,6 +64,7 @@ const HomePage = ({ services }: any) => {
         </Container>
       </Container>
 
+      {/* How it works -  2 step */}
       <Container layout="wide" paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={50} mobileOrder={2}>
@@ -78,6 +79,7 @@ const HomePage = ({ services }: any) => {
         </Container>
       </Container>
 
+      {/* How it works -  3 step */}
       <Container layout="wide" paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={50} alignX="center">
@@ -92,6 +94,7 @@ const HomePage = ({ services }: any) => {
         </Container>
       </Container>
 
+      {/* How it works -  4 step */}
       <Container layout="wide" paddingTop={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={50} mobileOrder={2}>
@@ -113,51 +116,52 @@ const HomePage = ({ services }: any) => {
         </Container>
       </Container>
 
+      {/* CTA public */}
       <Container layout="wide" gray={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" paddingX={false} gray={true}>
-          <ButtonBlockList title="Quand les services que nous utilisons au quotidien changent leurs règles, nous sommes les premiers concernés. ">
+          <ButtonBlockList title={t('homepage:cta_public.title')}>
             <ButtonBlock
-              title="Découvrez des modifications intéressantes"
+              title={t('homepage:cta_public.bloc1.title')}
               iconName="FiTwitter"
               iconColor="var(--colorPrimary)"
             >
               <Link href="/contribute">
-                <a title="/...">
-                  <Button>Suivre @OpenTerms</Button>
-                </a>
+                <Button>{t('homepage:cta_public.bloc1.button.label')}</Button>
               </Link>
-              <LinkIcon iconColor="var(--colorBlack400)" href="/.." small={true}>
-                <a title="/...">ou lire nos études de cas </a>
+              <LinkIcon iconColor="var(--colorBlack400)" href="/case-studies" small={true}>
+                {t('homepage:cta_public.bloc1.link.label')}
               </LinkIcon>
             </ButtonBlock>
             <ButtonBlock
-              title="Suivez les modifications d'un document donné"
+              title={t('homepage:cta_public.bloc2.title')}
               iconName="FiMail"
               iconColor="var(--colorPrimary)"
             >
               <Link href="/subscribe">
-                <a title="">
-                  <Button>S'abonner par mail</Button>
-                </a>
+                <Button>{t('homepage:cta_public.bloc2.button.label')}</Button>
               </Link>
-              <LinkIcon iconColor="var(--colorBlack400)" href="/.." small={true}>
-                <a title="/...">ou par RSS</a>
+              <LinkIcon
+                iconColor="var(--colorBlack400)"
+                href="https://github.com/ambanum/OpenTermsArchive#by-rss"
+                small={true}
+              >
+                {t('homepage:cta_public.bloc2.link.label')}
               </LinkIcon>
             </ButtonBlock>
             <ButtonBlock
-              title="Explorez l'historique de chaque document"
+              title={t('homepage:cta_public.bloc3.title')}
               iconName="FiGithub"
               iconColor="var(--colorPrimary)"
             >
-              <a href="https://opentermsarchive.org/data/api" title="/.." target="_blank">
-                <Button>Naviguer sur GitHub</Button>
-              </a>
+              <Link href="https://opentermsarchive.org/data/api">
+                <Button>{t('homepage:cta_public.bloc3.button.label')}</Button>
+              </Link>
               <LinkIcon
                 iconColor="var(--colorBlack400)"
                 href="https://github.com/ambanum/OpenTermsArchive-versions/releases"
                 small={true}
               >
-                <a title="">ou télécharger le jeu de données</a>
+                {t('homepage:cta_public.bloc3.link.label')}
               </LinkIcon>
             </ButtonBlock>
           </ButtonBlockList>

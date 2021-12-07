@@ -3,7 +3,7 @@
 
 .buttonBlockList_header {
   text-align: center;
-  @mixin grid 7, 6;
+  @mixin grid 9, 8;
   margin: 0 auto;
 }
 
@@ -16,13 +16,19 @@
 .buttonBlockList_items {
   @mixin grid 12, 11;
   margin: 0 auto;
-  margin-top: var(--m3XL);
+  margin-top: var(--m4XL);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
 
   & > div {
-    margin: 0 calc(var(--gridGutterWidth) / 2) var(--gridGutterWidth);
+    margin: 0 calc(var(--gridGutterWidth)) var(--gridGutterWidth);
+  }
+}
+
+@media (--tabletSmall) {
+  .buttonBlockList_items {
+    margin-top: var(--m3XL);
   }
 }
