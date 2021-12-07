@@ -5,13 +5,16 @@ import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Contributors from 'modules/OTA-api/data-components/Contributors';
 import Hero from 'modules/Common/components/Hero';
+import ImageArchive from '../../public/images/archive.svg';
+import ImageDection from '../../public/images/detection.svg';
+import ImageIdentify from '../../public/images/identify.svg';
+import ImagePublication from '../../public/images/publication.svg';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
 import ShowcaseList from 'modules/Common/components/ShowcaseList';
-import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
 import { getServices } from 'modules/OTA-api/api';
@@ -46,80 +49,66 @@ const HomePage = ({ services }: any) => {
         </Container>
       </Container>
 
-      {/* How it works -  3 steps */}
-      <Container layout="wide" paddingY={false}>
+      {/* How it works -  3 ste ps */}
+      <Container layout="wide" paddingBottom={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Column width={50} alignX="center" alignY="center">
-            image
+          <Column width={50} alignX="center">
+            <div style={{ maxWidth: '460px' }}>
+              <ImageIdentify />
+            </div>
           </Column>
           <Column width={50}>
-            <TextContent>
-              <h3 className="">1. Identification</h3>
-              <h3 className="mt__M h3__light">
-                Les documents contractuels d'un service à suivre sont listés par des contributeurs
-                bénévoles.
-              </h3>
-            </TextContent>
+            <h3>{t('homepage:how.bloc1.title')}</h3>
+            <p className="mt__M h3 h3__light">{t('homepage:how.bloc1.desc')}</p>
           </Column>
         </Container>
       </Container>
 
       <Container layout="wide" paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Column width={50}>
-            <TextContent>
-              <h3 className="">2. Archivage</h3>
-              <h3 className="mt__M h3__light">
-                Plusieurs fois par jour, nos robots téléchargent et archivent publiquement les
-                documents listés.
-              </h3>
-            </TextContent>
+          <Column width={50} mobileOrder={2}>
+            <h3>{t('homepage:how.bloc2.title')}</h3>
+            <p className="mt__M h3 h3__light">{t('homepage:how.bloc2.desc')}</p>
           </Column>
-          <Column width={50} alignX="center" alignY="center">
-            image
+          <Column width={50} alignX="center" mobileOrder={1}>
+            <div style={{ maxWidth: '420px' }}>
+              <ImageArchive />
+            </div>
           </Column>
         </Container>
       </Container>
 
       <Container layout="wide" paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Column width={50} alignX="center" alignY="center">
-            image de diff
+          <Column width={50} alignX="center">
+            <div style={{ maxWidth: '440px' }}>
+              <ImageDection />
+            </div>
           </Column>
           <Column width={50}>
-            <TextContent>
-              <h3 className="">3. Détection</h3>
-              <h3 className="mt__M h3__light">
-                Lorsque des modifications sont repérées, elles sont enregistrées et exposées.
-              </h3>
-            </TextContent>
+            <h3>{t('homepage:how.bloc3.title')}</h3>
+            <p className="mt__M h3 h3__light">{t('homepage:how.bloc3.desc')}</p>
           </Column>
         </Container>
       </Container>
 
-      <Container layout="wide" paddingY={false}>
+      <Container layout="wide" paddingTop={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Column width={50}>
-            <TextContent>
-              <h3 className="">4. Publication</h3>
-              <h3 className="mt__M h3__light">
-                L'ensemble de toutes les versions enregistrées est publié dans un jeu de données.
-              </h3>
-              {/* <Link href="/test">
-                <a title="">
-                  <Button type="secondary">Télécharger pour analyser</Button>
-                </a>
-              </Link> */}
-
-              <Link href="/...">
-                <a title="">
-                  <Button>Télécharger pour analyser</Button>
+          <Column width={50} mobileOrder={2}>
+            <h3>{t('homepage:how.bloc4.title')}</h3>
+            <p className="mt__M h3 h3__light">{t('homepage:how.bloc4.desc')}</p>
+            <p className="mt__L">
+              <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
+                <a target="_blank">
+                  <Button>{t('homepage:how.bloc4.cta.label')}</Button>
                 </a>
               </Link>
-            </TextContent>
+            </p>
           </Column>
-          <Column width={50} alignX="center" alignY="center">
-            image du sytème de fichier
+          <Column width={50} alignX="center" alignY="center" mobileOrder={1}>
+            <div style={{ maxWidth: '280px' }}>
+              <ImagePublication />
+            </div>
           </Column>
         </Container>
       </Container>
