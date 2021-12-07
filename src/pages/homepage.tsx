@@ -15,6 +15,7 @@ import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
+import TextContent from 'modules/Common/components/TextContent';
 import ThumbGalery from 'modules/Common/components/ThumbGalery';
 import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
 import { getServices } from 'modules/OTA-api/api';
@@ -169,7 +170,7 @@ const HomePage = ({ services }: any) => {
       </Container>
 
       {/* Reuses */}
-      <Container gridCols="12" gridGutters="11" flex={true}>
+      <Container gridCols="12" gridGutters="11">
         <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
           <Card
             image="/images/scripta-manent.jpg"
@@ -208,16 +209,17 @@ const HomePage = ({ services }: any) => {
       </Container>
 
       {/* Stats */}
-      {/* FOSS & Contributors */}
-      {/* Partners */}
-      {/* Press */}
 
-      {/* Contributors */}
+      {/* FOSS & Contributors */}
       <Container gridCols="12" gridGutters="11" id={t('homepage:contribute.id', 'contribute')}>
         <Container gridCols="8" gridGutters="7" paddingY={false}>
-          <Column width={100} alignX="center">
-            <img src="/images/contribute.jpg" loading="lazy" />
-          </Column>
+          <TextContent className="text__center">
+            <h2>Free Open Source Software</h2>
+            <h3 className="h3__light">
+              Open Terms Archive est un logiciel libre et collaboratif, toute entité peut contribuer
+              à l'améliorer.
+            </h3>
+          </TextContent>
         </Container>
         <Container gridCols="6" gridGutters="5" paddingYSmall={true}>
           <Contributors subtitle={t('homepage:contributors.subtitle', 'Thanks 🙏')} />

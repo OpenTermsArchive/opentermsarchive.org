@@ -57,7 +57,7 @@ const Contributors: React.FC<ContributorsProps> = React.memo(({ subtitle }) => {
 
   return (
     <div className={s.contributors}>
-      <div className="text__smallcaps text__center">{subtitle}</div>
+      <h4 className="text__center">{subtitle}</h4>
       <div className={s.contributors_items}>
         {contributors.map((contributor: Contributor) => {
           if (contributor.type !== 'Bot') {
