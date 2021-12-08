@@ -61,25 +61,16 @@ const Layout = ({
                       </Link>
                     </li>
                     <li>
-                      <Link href="/how-it-works">
-                        <a
-                          title={t('header:link.how.title', 'How does Open Terms Archive work?')}
-                          onClick={toggleExtended}
-                        >
-                          {t('header:link.how', 'How it works?')}
+                      <Link href={'/case-studies'}>
+                        <a onClick={toggleExtended} title={t('header:link.case-studies.title')}>
+                          {t('header:link.case-studies', 'Case studies')}
                         </a>
                       </Link>
                     </li>
                     <li>
-                      <Link href={'/case-studies'}>
-                        <a
-                          onClick={toggleExtended}
-                          title={t(
-                            'header:link.case-studies.title',
-                            'So far, Open Terms Archive taught us a lot.'
-                          )}
-                        >
-                          {t('header:link.case-studies', 'Case studies')}
+                      <Link href={'/about'}>
+                        <a onClick={toggleExtended} title={t('header:link.about.title')}>
+                          {t('header:link.about', 'About')}
                         </a>
                       </Link>
                     </li>
@@ -137,27 +128,20 @@ const Layout = ({
                   <Link href="/">{t('footer:link.home', 'Home')}</Link>
                 </li>
                 <li>
-                  <Link href="how-it-works">{t('footer:link.how', 'How')}</Link>
-                </li>
-                <li>
                   <Link href={'/contribute'}>{t('footer:link.contribute', 'Contribute')}</Link>
                 </li>
                 <li>
-                  <Link href={'/#'.concat(t('common:home_page.showcase.id'))}>
-                    {t('footer:link.showcase', 'Built with')}
+                  <Link href={'/case-studies'}>
+                    <a title={t('footer:link.case-studies.title')}>
+                      {t('footer:link.case-studies')}
+                    </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href={'/case-studies'}>
-                    <a
-                      title={t(
-                        'footer:link.case-studies.title',
-                        'So far, Open Terms Archive taught us a lot.'
-                      )}
-                    >
-                      {t('footer:link.case-studies', 'Case studies')}
-                    </a>
-                  </Link>
+                  <Link href={'/about'}>À propos</Link>
+                </li>
+                <li>
+                  <Link href={'/media'}>Média</Link>
                 </li>
               </ul>
               <ul>
@@ -192,13 +176,6 @@ const Layout = ({
             </FooterMenu>
             <FooterMenu small={true} align={'right'}>
               <ul>
-                <li>
-                  <Link href="/media">
-                    <a title={t('footer:link.media.title', 'They talk about Open Terms Archive')}>
-                      {t('footer:link.media', 'Media')}
-                    </a>
-                  </Link>
-                </li>
                 <li>
                   <Link href="/legal-notice">
                     <a
@@ -245,7 +222,7 @@ const Layout = ({
                       title={t('footer:link.dataset.title', 'Download the dataset')}
                       target="_blank"
                     >
-                      {t('footer:link.dataset', 'Dataset')}
+                      Jeu de donnée
                     </a>
                   </Link>
                 </li>
@@ -255,7 +232,7 @@ const Layout = ({
                       title={t('footer:link.github.title', 'Go to the GitHub repository')}
                       target="_blank"
                     >
-                      {t('footer:link.github', 'GitHub')}
+                      Code Source
                     </a>
                   </Link>
                 </li>

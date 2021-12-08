@@ -16,23 +16,23 @@
   }
 
   & h2 {
-    margin-bottom: var(--mL);
+    margin-bottom: var(--mXL);
   }
 
   & h3 {
-    margin-bottom: var(--mM);
+    margin-bottom: var(--mL);
   }
 
   & h4 {
-    margin-bottom: var(--mS);
+    margin-bottom: var(--mM);
   }
 
   & h5 {
-    margin-bottom: var(--mXS);
+    margin-bottom: var(--mS);
   }
 
   & h6 {
-    margin-bottom: var(--m2XS);
+    margin-bottom: var(--mXS);
   }
 
   & ul {
@@ -43,8 +43,19 @@
     }
   }
 
-  & p + h2 {
+  & p + h2,
+  & ul + h2 {
     margin-top: var(--m3XL);
+  }
+
+  & p + h3,
+  & ul + h3 {
+    margin-top: var(--m2XL);
+  }
+
+  & p + h4,
+  & ul + h4 {
+    margin-top: var(--mXL);
   }
 
   & iframe {

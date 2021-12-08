@@ -1,6 +1,5 @@
 import { WithI18nResult, withI18n } from 'modules/I18n';
 
-import Button from 'modules/Common/components/Button';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';

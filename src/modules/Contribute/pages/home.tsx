@@ -34,15 +34,10 @@ const ContributeHomePage = () => {
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Column width={70}>
-            <Hero
-              title={t('contribute/home:title', 'Contributing to Open Terms Archive')}
-              subtitle={t('contribute/home:subtitle', 'Thanks for helping')}
-            ></Hero>
-          </Column>
-          <Column width={30}>
-            <img src="/images/add-document.png" />
-          </Column>
+          <Hero
+            title={t('contribute/home:title', 'Contributing to Open Terms Archive')}
+            subtitle={t('contribute/home:subtitle', 'Thanks for helping')}
+          ></Hero>
         </Container>
       </Container>
 

@@ -39,7 +39,7 @@ h3,
   font-style: normal;
   font-weight: bold;
   font-size: 3rem;
-  letter-spacing: -1.5px;
+  letter-spacing: -1.2px;
   color: var(--colorBlack900);
   line-height: 1.4;
 
@@ -83,7 +83,7 @@ h5,
   font-style: normal;
   font-weight: bold;
   font-size: 2rem;
-  letter-spacing: 0;
+  letter-spacing: -0.2px;
   color: var(--colorBlack900);
   line-height: 1.4;
 

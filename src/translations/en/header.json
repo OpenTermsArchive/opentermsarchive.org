@@ -1,12 +1,12 @@
 {
   "close": "Close",
+  "link.about": "About",
+  "link.about.title": "__STRING_NOT_TRANSLATED__",
   "link.case-studies": "Case studies",
   "link.case-studies.title": "So far, Open Terms Archive taught us a lot.",
   "link.github.title": "See the source code",
   "link.home": "Home",
   "link.home.title": "Back to home page",
-  "link.how": "How it works?",
-  "link.how.title": "How does Open Terms Archive work?",
   "link.twitter.title": "Follow us",
   "open": "Menu"
 }

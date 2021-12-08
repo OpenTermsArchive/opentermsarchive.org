@@ -5,6 +5,7 @@
   padding: var(--p2XL) var(--pM) var(--pXL) var(--pM);
   position: relative;
   flex-shrink: 0;
+  border-radius: 4px;
 
   &.buttonBlock__fillParent {
     width: 100%;

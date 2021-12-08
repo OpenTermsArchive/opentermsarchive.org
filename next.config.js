@@ -13,7 +13,7 @@ module.exports = {
     version,
   },
   images: {
-    domains: ['avatars.githubusercontent.com'],
+    domains: ['avatars.githubusercontent.com', 'pbs.twimg.com'],
   },
   webpack(config) {
     config.module.rules.push({
