@@ -4,7 +4,9 @@ import Button from 'modules/Common/components/Button';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
+import ImageCasestudies from '../../public/images/casestudies.svg';
 import Layout from 'modules/Common/containers/Layout';
+import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
@@ -26,13 +28,13 @@ export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
             ></Hero>
           </Column>
           <Column width={50} alignX="center">
-            <img src="/images/case-studies.png" loading="lazy" />
+            <ImageCasestudies />
           </Column>
         </Container>
       </Container>
       <Container gridCols="9" gridGutters="8">
         <TextContent>
-          <MDXRemote {...(mdxContent as any)} components={{ Button: Button }} />
+          <MDXRemote {...(mdxContent as any)} components={{ LinkIcon: LinkIcon }} />
         </TextContent>
       </Container>
     </Layout>
