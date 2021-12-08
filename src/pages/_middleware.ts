@@ -6,11 +6,15 @@ const PUBLIC_FILE = /\.([a-zA-Z]+$)/;
 
 export function middleware(request: NextRequest) {
   const { pathname, search, locale } = request.nextUrl;
-  const shouldHandleLocale =
-    !PUBLIC_FILE.test(pathname) && !pathname.includes('/api/') && locale === 'default';
+
+  if (pathname.includes('/api/') || pathname.includes('/fonts/')) {
+    return;
+  }
+
+  const shouldHandleLocale = !PUBLIC_FILE.test(pathname) && locale === 'default';
 
   acceptLanguage.languages(i18n.locales?.filter((locale) => locale !== 'default'));
   const detectedLocale = acceptLanguage.get(request.headers.get('accept-language'));
 
-  return shouldHandleLocale && NextResponse.redirect(`/${detectedLocale}/en${pathname}${search}`);
+  return shouldHandleLocale && NextResponse.redirect(`/${detectedLocale}${pathname}${search}`);
 }
