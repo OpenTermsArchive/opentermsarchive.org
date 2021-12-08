@@ -3,6 +3,7 @@ import SubscribeForm, { SubscribeFormProps } from 'modules/Common/components/Sub
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
+import ImageSubscribe from '../../public/images/subscribe.svg';
 import Layout from 'modules/Common/containers/Layout';
 import React from 'react';
 import api from 'utils/api';
@@ -29,13 +30,10 @@ export default function SubscribePage({ services }: any) {
         service: data.service,
         documentType: data.documentType,
       });
-      notify('success', t('common:subscribe_form.success', 'Thanks for subscribing'));
+      notify('success', t('common:subscribe_form.success'));
       success = true;
     } catch (err) {
-      notify(
-        'error',
-        t('common:subscribe_form.error', 'Sorry, but there was a problem, please try again')
-      );
+      notify('error', t('common:subscribe_form.error'));
       success = false;
     }
     toggleSubscribing(false);
@@ -43,14 +41,14 @@ export default function SubscribePage({ services }: any) {
   };
 
   return (
-    <Layout title={t('subscribe:seo.title')}>
+    <Layout title={t('subscribe:seo.title')} desc={t('subscribe:seo.desc')}>
       <Container layout="wide" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Column width={50} alignY="center">
+          <Column width={60}>
             <Hero title={t('subscribe:hero.title')} subtitle={t('subscribe:hero.subtitle')}></Hero>
           </Column>
-          <Column width={50} alignX="center">
-            <img src="/images/form-subscribe.jpg" loading="lazy" />
+          <Column width={30} hideOnTablet={true}>
+            <ImageSubscribe />
           </Column>
         </Container>
       </Container>

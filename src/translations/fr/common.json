@@ -1,7 +1,6 @@
 {
   "home_page.contribute.id": "contribuer",
   "home_page.showcase.id": "cas-d-usage",
-  "home_page.values.id": "valeurs",
   "subscribe_form.changes.before": "Pour ce document vous pourriez être intéressé part ",
   "subscribe_form.changes.changes.separator": "ou ",
   "subscribe_form.changes.github": "voir les dernières modifications sur Github ",
@@ -20,6 +19,5 @@
   "subscribe_form.p2": "Si vous souhaitez suivre plusieurs documents, il vous suffit de remplir ce formulaire autant de fois que nécessaire. Si vous souhaitez vous abonner à tous les documents, veuillez nous contacter.",
   "subscribe_form.p3": "Vous pouvez vous désinscrire à tout moment à partir du lien fourni dans l'e-mail. N’hésitez pas à jeter un œil à notre politique de confidentialité.",
   "subscribe_form.submit": "S'inscrire",
-  "subscribe_form.success": "Merci pour votre abonnement.",
-  "subscribe_form.title": "Soyez informé par e-mail des changements sur les documents de votre choix."
+  "subscribe_form.success": "Merci pour votre abonnement."
 }

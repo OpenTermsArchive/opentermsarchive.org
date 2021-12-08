@@ -1,7 +1,6 @@
 {
   "home_page.contribute.id": "contribute",
   "home_page.showcase.id": "built-with",
-  "home_page.values.id": "values",
   "subscribe_form.changes.before": "For this document you may be interested to ",
   "subscribe_form.changes.changes.separator": "or ",
   "subscribe_form.changes.github": "see the latest changes on Github ",
@@ -20,6 +19,5 @@
   "subscribe_form.p2": "If you wish to track several documents, simply complete this form as many times as necessary. If you want to subscribe to all documents please contact us.",
   "subscribe_form.p3": "You can unsubscribe at any time from the link provided in the email. Please check our privacy policy for further information.",
   "subscribe_form.submit": "Subscribe",
-  "subscribe_form.success": "Thanks for subscribing",
-  "subscribe_form.title": "Be informed by email of the changes on the documents of your choice."
+  "subscribe_form.success": "Thanks for subscribing"
 }

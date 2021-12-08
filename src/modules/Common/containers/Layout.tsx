@@ -71,19 +71,6 @@ const Layout = ({
                       </Link>
                     </li>
                     <li>
-                      <Link href="/contribute">
-                        <a
-                          title={t(
-                            'header:link.adddocument.title',
-                            'Add a document to Open Terms Archive'
-                          )}
-                          onClick={toggleExtended}
-                        >
-                          {t('header:link.adddocument', 'Add a document')}
-                        </a>
-                      </Link>
-                    </li>
-                    <li>
                       <Link href={'/case-studies'}>
                         <a
                           onClick={toggleExtended}
@@ -153,14 +140,7 @@ const Layout = ({
                   <Link href="how-it-works">{t('footer:link.how', 'How')}</Link>
                 </li>
                 <li>
-                  <Link href={'/#'.concat(t('common:home_page.values.id'))}>
-                    {t('footer:link.values', 'Values')}
-                  </Link>
-                </li>
-                <li>
-                  <Link href={'/#'.concat(t('common:home_page.contribute.id'))}>
-                    {t('footer:link.contribute', 'Contribute')}
-                  </Link>
+                  <Link href={'/contribute'}>{t('footer:link.contribute', 'Contribute')}</Link>
                 </li>
                 <li>
                   <Link href={'/#'.concat(t('common:home_page.showcase.id'))}>
