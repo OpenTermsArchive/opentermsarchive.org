@@ -2,8 +2,20 @@
   margin: 0 auto;
 
   &.thumbGalery__isSmall {
-    &.thumbGalery_items {
+    & > .thumbGalery_items {
       margin-top: var(--mL);
+    }
+  }
+
+  &.thumbGalery__left {
+    & > .thumbGalery_items {
+      justify-content: flex-start;
+    }
+  }
+
+  &.thumbGalery__right {
+    & > .thumbGalery_items {
+      justify-content: flex-end;
     }
   }
 }

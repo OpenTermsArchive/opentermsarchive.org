@@ -92,10 +92,10 @@
 
   &.container__isGray {
     background-color: var(--colorBlack200);
-
+    /* 
     & hr {
       border-color: var(--colorWhite);
-    }
+    } */
 
     & blockquote {
       &:before {
@@ -133,6 +133,10 @@
   &.container__hasPaddingYSmall {
     padding-top: var(--p2XL);
     padding-bottom: var(--pL);
+  }
+
+  &.container__alignXleft {
+    margin-left: 0;
   }
 }
 

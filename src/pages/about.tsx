@@ -18,8 +18,10 @@ export default function AboutPage({ mdxContent }: WithI18nResult) {
   return (
     <Layout title={t('about:seo.title')} desc={t('about:seo.desc')}>
       <Container layout="wide" paddingY={false} dark={true}>
-        <Container gridCols="10" gridGutters="9" flex={true} paddingX={false}>
-          <Hero title={t('about:hero.title')} subtitle={t('about:hero.subtitle')}></Hero>
+        <Container gridCols="12" gridGutters="11" paddingX={false} paddingY={false}>
+          <Container gridCols="9" gridGutters="8" flex={true} paddingX={false} alignX="left">
+            <Hero title={t('about:hero.title')} subtitle={t('about:hero.subtitle')}></Hero>
+          </Container>
         </Container>
       </Container>
       <Container gridCols="10" gridGutters="9" paddingX={false}>
@@ -43,11 +45,9 @@ export default function AboutPage({ mdxContent }: WithI18nResult) {
               <ThumbGaleryItem src="/images/logo-gdi.png" width="150" height="32" />
             </a>
           </Link>
-          {/* <ThumbGaleryItem src="/images/nextgen.png" width="191" height="48" />
-          <ThumbGaleryItem src="/images/france-relance.png" width="77" height="77" /> */}
           <Link href="https://www.peren.gouv.fr/">
             <a target="_blank">
-              <ThumbGaleryItem src="/images/logo-peren.png" width="150" height="121" />
+              <ThumbGaleryItem src="/images/logo-peren.png" width="190" height="126" />
             </a>
           </Link>
         </ThumbGalery>

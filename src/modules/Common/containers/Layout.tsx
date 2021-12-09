@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react';
 
 import { Analytics } from 'modules/Analytics';
 import Container from './Container';
+import Divider from '../components/Divider';
 import Footer from './Footer';
 import FooterMenu from '../components/FooterMenu';
 import Head from 'next/head';
@@ -112,7 +113,8 @@ const Layout = ({
       {children}
 
       {/* Footer */}
-      <Container paddingY={false} gray={true} layout="fluid">
+      <Container paddingY={false} gray={true} layout="fluid" paddingX={false}>
+        <Divider />
         <Container
           gridCols="12"
           gridGutters="11"

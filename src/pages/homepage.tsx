@@ -5,6 +5,7 @@ import Card from 'modules/Common/components/Card';
 import CardList from 'modules/Common/components/CardList';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
+import Divider from 'modules/Common/components/Divider';
 import Hero from 'modules/Common/components/Hero';
 import ImageArchive from '../../public/images/archive.svg';
 import ImageDection from '../../public/images/detection.svg';
@@ -195,7 +196,7 @@ const HomePage = () => {
               <Button type="secondary">En savoir plus</Button>
             </Link>
           </TextContent>
-          <ThumbGalery>
+          <ThumbGalery align="left" small={true}>
             <Link href="https://disinfo.quaidorsay.fr">
               <a target="_blank">
                 <ThumbGaleryItem src="/images/logo-ambnum.png" width="158" height="80" />
@@ -208,7 +209,7 @@ const HomePage = () => {
             </Link>
             <Link href="https://www.peren.gouv.fr/">
               <a target="_blank">
-                <ThumbGaleryItem src="/images/logo-peren.png" width="150" height="121" />
+                <ThumbGaleryItem src="/images/logo-peren.png" width="190" height="126" />
               </a>
             </Link>
           </ThumbGalery>
