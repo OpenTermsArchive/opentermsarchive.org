@@ -26,7 +26,14 @@ export default function AboutPage({ mdxContent }: WithI18nResult) {
       </Container>
       <Container gridCols="10" gridGutters="9" paddingX={false}>
         <TextContent>
-          <MDXRemote {...(mdxContent as any)} components={{ Image: Image }} />
+          <MDXRemote
+            {...(mdxContent as any)}
+            components={{
+              Image: Image,
+              ThumbGalery: ThumbGalery,
+              ThumbGaleryItem: ThumbGaleryItem,
+            }}
+          />
         </TextContent>
       </Container>
       <Container gridCols="6" gridGutters="5" paddingTop={false}>

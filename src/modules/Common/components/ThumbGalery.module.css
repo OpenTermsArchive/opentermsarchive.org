@@ -7,13 +7,21 @@
     }
   }
 
-  &.thumbGalery__left {
+  &.thumbGalery__alignXleft {
+    & > .thumbGalery_header {
+      margin-left: 0;
+      text-align: left;
+    }
     & > .thumbGalery_items {
       justify-content: flex-start;
     }
   }
 
-  &.thumbGalery__right {
+  &.thumbGalery__alignXright {
+    & > .thumbGalery_header {
+      text-align: right;
+      margin-right: 0;
+    }
     & > .thumbGalery_items {
       justify-content: flex-end;
     }
