@@ -26,7 +26,7 @@ export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
               )}
             ></Hero>
           </Column>
-          <Column width={50} alignX="center">
+          <Column width={50} alignX="center" hideOnTablet={true}>
             <ImageCasestudies />
           </Column>
         </Container>
