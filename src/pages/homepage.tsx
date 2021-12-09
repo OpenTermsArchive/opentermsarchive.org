@@ -170,14 +170,13 @@ const HomePage = () => {
             center={true}
           ></Card>
           <Card
+            image="/images/unknow.jpg"
             className="text__center"
             title={t('homepage:reuses.card3.title')}
             subtitle={t('homepage:reuses.card3.subtitle')}
             link="mailto:contact@opentermsarchive.org"
             center={true}
-          >
-            Ajouter une illu à cette card
-          </Card>
+          ></Card>
         </CardList>
       </Container>
 

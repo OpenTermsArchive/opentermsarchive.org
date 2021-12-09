@@ -3,6 +3,7 @@
   border-radius: 4px;
   @mixin grid 4, 3;
   flex-shrink: 0;
+  position: relative;
 
   &.card__center {
     text-align: center;
@@ -14,7 +15,6 @@
 }
 
 .card__isLink {
-  position: relative;
   cursor: pointer;
 
   &:hover {
@@ -25,15 +25,10 @@
 
 .card_link {
   position: absolute;
-  font-size: 0;
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .card_header {
