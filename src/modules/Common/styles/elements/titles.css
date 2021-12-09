@@ -71,6 +71,13 @@ h4,
     color: var(--colorWhite);
   }
 
+  &.h4__light {
+    font-weight: normal;
+  }
+  &.h4__ultralight {
+    font-weight: 300;
+  }
+
   @media (--gridPlus) {
     font-size: 2rem;
     line-height: 1.3;
