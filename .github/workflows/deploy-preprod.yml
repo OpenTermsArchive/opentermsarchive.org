@@ -1,33 +1,17 @@
 name: Deploy on preproduction
 on:
   push:
-    tags:
-      - '*'
+    branches: [develop]
 
 jobs:
   typescript-check:
     # CAREFUL: The part after the @ is the branch on which the file is located
     # IF you ever wish to change something in .github/workflows/typescript-check.yml, You will need to change this reference too
     # I did not find a way to consider the one within the current branch but I believe it would be the way to go
-    uses: 'ambanum/OpenTermsArchive.org/.github/workflows/typescript-check.yml@develop'
-
-  on-branch-check:
-    runs-on: ubuntu-latest
-    outputs:
-      on_branch: ${{ steps.contains_tag.outputs.retval }}
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - uses: rickstaa/action-contains-tag@v1
-        id: contains_tag
-        with:
-          reference: 'develop'
-          tag: '${{ github.ref }}'
+    uses: 'ambanum/OpenTermsArchive.org/.github/workflows/typescript-check.yml@main'
 
   deploy:
-    needs: [on-branch-check, typescript-check]
-    if: ${{ needs.on-branch-check.outputs.on_branch == 'true' }}
+    needs: [typescript-check]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
