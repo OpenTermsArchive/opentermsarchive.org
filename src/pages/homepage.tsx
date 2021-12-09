@@ -5,12 +5,7 @@ import Card from 'modules/Common/components/Card';
 import CardList from 'modules/Common/components/CardList';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
-import Divider from 'modules/Common/components/Divider';
 import Hero from 'modules/Common/components/Hero';
-import ImageArchive from '../../public/images/archive.svg';
-import ImageDection from '../../public/images/detection.svg';
-import ImageIdentify from '../../public/images/identify.svg';
-import ImagePublication from '../../public/images/publication.svg';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
@@ -36,9 +31,8 @@ const HomePage = () => {
       <Container layout="wide" paddingBottom={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={50} alignX="center">
-            <div style={{ maxWidth: '460px' }}>
-              <ImageIdentify />
-              Facebook déclaration de service sans le filter, avec TOS et privacy policy
+            <div style={{ maxWidth: '480px' }}>
+              <img src="/images/step-1.png" />
             </div>
           </Column>
           <Column width={50}>
@@ -55,9 +49,8 @@ const HomePage = () => {
             <p className="mt__M h3 h3__light">{t('homepage:how.bloc2.desc')}</p>
           </Column>
           <Column width={50} alignX="center" mobileOrder={1}>
-            <div style={{ maxWidth: '420px' }}>
-              <ImageArchive />
-              Log de la console 'Facebook updated ...'
+            <div style={{ maxWidth: '480px' }}>
+              <img src="/images/step-2.png" />
             </div>
           </Column>
         </Container>
@@ -66,10 +59,8 @@ const HomePage = () => {
       <Container layout="wide" paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={50} alignX="center">
-            <div style={{ maxWidth: '440px' }}>
-              <ImageDection />
-              https://github.com/ambanum/OpenTermsArchive-versions/commit/80d0a20ba6f01994cf9637ca315113e13c717e4f?short_path=e43a595#diff-e43a59590f4f051a818725f7b8453d6db4b26ce8ad524d71bc8d8293d72bc28c
-              Passage sur la reco faciale, diff unifié
+            <div style={{ maxWidth: '480px' }}>
+              <img src="/images/step-3.png" />
             </div>
           </Column>
           <Column width={50}>
@@ -93,9 +84,8 @@ const HomePage = () => {
             </p>
           </Column>
           <Column width={50} alignX="center" alignY="center" mobileOrder={1}>
-            <div style={{ maxWidth: '280px' }}>
-              <ImagePublication />
-              Screnshot du système de fichier du dataset, garder facebook privacy policy
+            <div style={{ maxWidth: '480px' }}>
+              <img src="/images/step-4.png" />
             </div>
           </Column>
         </Container>
