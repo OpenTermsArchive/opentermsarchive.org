@@ -156,7 +156,7 @@ const HomePage = ({ services }: any) => {
                   'However, the shape of that noise can change over time. In order to recover in case of information loss during the noise filtering step, a snapshot is recorded every there is a change. After the noise is filtered out from the snapshot, if there are changes in the resulting document, a new version of the document is recorded.'
                 )}
               </p>
-              <Link href={t('homepage:how.button.href', '/how-it-works')}>
+              <Link href="/how-it-works">
                 <a title={t('homepage:how.button.title', 'How OTA works ?')}>
                   <Button type="secondary">{t('homepage:how.button.label', 'Know more')}</Button>
                 </a>
@@ -215,7 +215,7 @@ const HomePage = ({ services }: any) => {
             iconName="FiPlus"
             iconColor="var(--colorPrimary)"
           >
-            <Link href={t('homepage:contribute.buttonblock1.button.href', '/contribute')}>
+            <Link href="/contribute">
               <a title={t('homepage:contribute.buttonblock1.link.title', 'Add a document now')}>
                 <Button>{t('homepage:contribute.buttonblock1.button.label', 'Add now')}</Button>
               </a>

@@ -41,11 +41,13 @@ module.exports = {
         source: '/fr/press',
         destination: '/fr/media',
         permanent: true,
+        locale: false,
       },
       {
         source: '/en/press',
         destination: '/en/media',
         permanent: true,
+        locale: false,
       },
       {
         source: '/homepage',
