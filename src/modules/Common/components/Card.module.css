@@ -4,6 +4,8 @@
   @mixin grid 4, 3;
   flex-shrink: 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
 
   &.card__center {
     text-align: center;
@@ -62,11 +64,11 @@
 .card_author {
   border-top: 1px solid var(--colorBlack200);
   padding: var(--pM);
-  margin-top: var(--mS);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: flex-start;
+  margin-top: auto;
 }
 
 .card_author_icon {
