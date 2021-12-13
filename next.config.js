@@ -38,19 +38,17 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/fr/press',
-        destination: '/fr/media',
+        source: '/press',
+        destination: '/media',
         permanent: true,
-        locale: false,
-      },
-      {
-        source: '/en/press',
-        destination: '/en/media',
-        permanent: true,
-        locale: false,
       },
       {
         source: '/homepage',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/how-it-works',
         destination: '/',
         permanent: true,
       },
