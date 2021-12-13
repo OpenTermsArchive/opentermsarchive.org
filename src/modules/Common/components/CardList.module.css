@@ -3,7 +3,7 @@
 }
 
 .cardList_header {
-  @mixin grid 8, 7;
+  @mixin grid 9, 8;
 }
 .cardList_title {
 }

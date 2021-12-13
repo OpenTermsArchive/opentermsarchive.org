@@ -1,5 +1,6 @@
 .thumbGalery {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 
   &.thumbGalery__isSmall {
     & > .thumbGalery_items {

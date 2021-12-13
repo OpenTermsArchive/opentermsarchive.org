@@ -189,11 +189,6 @@ const Layout = ({
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://opentermsarchive.org/data/api">
-                    <a title={t('footer:link.api.title')}>{t('footer:link.api')}</a>
-                  </Link>
-                </li>
-                <li>
                   <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
                     <a title={t('footer:link.dataset.title')} target="_blank">
                       {t('footer:link.dataset')}

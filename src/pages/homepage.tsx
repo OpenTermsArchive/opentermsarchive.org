@@ -11,8 +11,6 @@ import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import ThumbGalery from 'modules/Common/components/ThumbGalery';
-import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
 import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
 
@@ -29,21 +27,24 @@ const HomePage = () => {
       </Container>
       {/* How it works -  1 step */}
       <Container layout="wide" paddingBottom={false}>
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+        <Container gridCols="11" gridGutters="10" paddingX={false}>
+          <h2 className="text__center">{t('homepage:how.title')}</h2>
+        </Container>
+        <Container gridCols="11" gridGutters="10" flex={true} paddingX={false} paddingYSmall={true}>
+          <Column width={50}>
+            <h3>{t('homepage:how.bloc1.title')}</h3>
+            <p className="mt__M h3 h3__light">{t('homepage:how.bloc1.desc')}</p>
+          </Column>
           <Column width={50} alignX="center">
             <div style={{ maxWidth: '480px' }}>
               <img src="/images/step-1.png" />
             </div>
           </Column>
-          <Column width={50}>
-            <h3>{t('homepage:how.bloc1.title')}</h3>
-            <p className="mt__M h3 h3__light">{t('homepage:how.bloc1.desc')}</p>
-          </Column>
         </Container>
       </Container>
       {/* How it works -  2 step */}
       <Container layout="wide" paddingY={false}>
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+        <Container gridCols="11" gridGutters="10" flex={true} paddingX={false}>
           <Column width={50} mobileOrder={2}>
             <h3>{t('homepage:how.bloc2.title')}</h3>
             <p className="mt__M h3 h3__light">{t('homepage:how.bloc2.desc')}</p>
@@ -57,21 +58,21 @@ const HomePage = () => {
       </Container>
       {/* How it works -  3 step */}
       <Container layout="wide" paddingY={false}>
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+        <Container gridCols="11" gridGutters="10" flex={true} paddingX={false}>
+          <Column width={50}>
+            <h3>{t('homepage:how.bloc3.title')}</h3>
+            <p className="mt__M h3 h3__light">{t('homepage:how.bloc3.desc')}</p>
+          </Column>
           <Column width={50} alignX="center">
             <div style={{ maxWidth: '480px' }}>
               <img src="/images/step-3.png" />
             </div>
           </Column>
-          <Column width={50}>
-            <h3>{t('homepage:how.bloc3.title')}</h3>
-            <p className="mt__M h3 h3__light">{t('homepage:how.bloc3.desc')}</p>
-          </Column>
         </Container>
       </Container>
       {/* How it works -  4 step */}
       <Container layout="wide" paddingTop={false}>
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+        <Container gridCols="11" gridGutters="10" flex={true} paddingX={false}>
           <Column width={50} mobileOrder={2}>
             <h3>{t('homepage:how.bloc4.title')}</h3>
             <p className="mt__M h3 h3__light">{t('homepage:how.bloc4.desc')}</p>
@@ -97,7 +98,7 @@ const HomePage = () => {
             <ButtonBlock
               title={t('homepage:cta_public.bloc1.title')}
               iconName="FiTwitter"
-              iconColor="var(--colorPrimary)"
+              iconColor="var(--colorBlack400)"
             >
               <Link href="/contribute">
                 <Button>{t('homepage:cta_public.bloc1.button.label')}</Button>
@@ -109,7 +110,7 @@ const HomePage = () => {
             <ButtonBlock
               title={t('homepage:cta_public.bloc2.title')}
               iconName="FiMail"
-              iconColor="var(--colorPrimary)"
+              iconColor="var(--colorBlack400)"
             >
               <Link href="/subscribe">
                 <Button>{t('homepage:cta_public.bloc2.button.label')}</Button>
@@ -125,7 +126,7 @@ const HomePage = () => {
             <ButtonBlock
               title={t('homepage:cta_public.bloc3.title')}
               iconName="FiGithub"
-              iconColor="var(--colorPrimary)"
+              iconColor="var(--colorBlack400)"
             >
               <Link href="https://opentermsarchive.org/data/api">
                 <Button>{t('homepage:cta_public.bloc3.button.label')}</Button>
@@ -145,11 +146,11 @@ const HomePage = () => {
       <Container gridCols="12" gridGutters="11">
         <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
           <Card
-            image="/images/scripta-manent.jpg"
-            title={t('homepage:reuses.card1.title')}
-            subtitle={t('homepage:reuses.card1.subtitle')}
-            author={t('homepage:reuses.card1.author')}
-            link="https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent"
+            image="/images/tosdr.jpg"
+            title="Terms of Service; Didn’t Read"
+            subtitle="Permet aux utilisateurs de donner collaborativement une note aux conditions d’utilisation selon le respect de leurs droits."
+            author="ToS;DR"
+            link="https://tosdr.org"
             center={true}
           ></Card>
           <Card
@@ -158,6 +159,23 @@ const HomePage = () => {
             subtitle={t('homepage:reuses.card2.subtitle')}
             author={t('homepage:reuses.card2.author')}
             link="https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments"
+            center={true}
+          ></Card>
+          <Card
+            image="/images/scripta-manent.jpg"
+            title={t('homepage:reuses.card1.title')}
+            subtitle={t('homepage:reuses.card1.subtitle')}
+            author={t('homepage:reuses.card1.author')}
+            link="https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent"
+            center={true}
+          ></Card>
+
+          <Card
+            image="/images/tosback.jpg"
+            title="TOSback"
+            subtitle="L’ancêtre d’Open Terms Archive ! Depuis octobre 2020, les changements affichés sont fournis par une instance dédiée d’Open Terms Archive."
+            author="ToS;DR & Electronic Frontier Foundation"
+            link="https://tosback.org/"
             center={true}
           ></Card>
           <Card
@@ -181,23 +199,6 @@ const HomePage = () => {
               <Button type="secondary">{t('homepage:foss.button.label')}</Button>
             </Link>
           </TextContent>
-          <ThumbGalery align="left" small={true}>
-            <Link href="https://disinfo.quaidorsay.fr">
-              <a target="_blank">
-                <ThumbGaleryItem src="/images/logo-ambnum.png" width="158" height="80" />
-              </a>
-            </Link>
-            <Link href="https://disinformationindex.org/">
-              <a target="_blank">
-                <ThumbGaleryItem src="/images/logo-gdi.png" width="150" height="32" />
-              </a>
-            </Link>
-            <Link href="https://www.peren.gouv.fr/">
-              <a target="_blank">
-                <ThumbGaleryItem src="/images/logo-peren.png" width="190" height="126" />
-              </a>
-            </Link>
-          </ThumbGalery>
         </Container>
       </Container>
     </Layout>

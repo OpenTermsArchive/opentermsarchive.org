@@ -43,7 +43,7 @@ const ButtonBloc: React.FC<ButtonBlocProps> = ({
       {...props}
     >
       {icon ? <div className={classNames(s.buttonBlock_icon)}>{icon}</div> : undefined}
-      {title ? <h3 className={classNames(s.buttonBlock_title)}>{title}</h3> : undefined}
+      {title ? <h4 className={classNames(s.buttonBlock_title)}>{title}</h4> : undefined}
       {desc ? <p className={classNames(s.buttonBlock_desc)}>{desc}</p> : undefined}
       <div className={classNames(s.buttonBlock_actions)}>{children}</div>
     </div>
