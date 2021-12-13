@@ -19,14 +19,11 @@ export default function ThanksPage({ mdxContent }: WithI18nResult) {
     queryParams: { url },
   } = useUrl();
   return (
-    <Layout
-      title={t('contribute/thanks:seo.title', 'Thanks')}
-      desc={t('contribute/thanks:seo.desc', 'Thanks for contributing')}
-    >
+    <Layout title={t('contribute/thanks:seo.title')} desc={t('contribute/thanks:seo.desc')}>
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Hero title={t('contribute/thanks:title', 'Thanks')}></Hero>
+          <Hero title={t('contribute/thanks:title')}></Hero>
         </Container>
       </Container>
 
@@ -34,18 +31,11 @@ export default function ThanksPage({ mdxContent }: WithI18nResult) {
         <Breadcrumb
           items={[
             {
-              name: t('contribute:breadcrumb.home_page.name', 'Home'),
+              name: t('contribute:breadcrumb.home_page.name'),
               url: 'https://www.opentermsarchive.org',
             },
-            {
-              name: t('contribute:breadcrumb.contribute.name', 'Contribute'),
-              url: './../#' + t('common:home_page.contribute.id', 'contribute'),
-            },
-            {
-              name: t('contribute:breadcrumb.adddocument.name', 'Add a document'),
-              url: '/contribute',
-            },
-            { name: t('contribute:breadcrumb.thanks.name', 'Thanks') },
+            { name: t('contribute/home:title'), url: '/contribute' },
+            { name: t('contribute:breadcrumb.thanks.name') },
           ]}
         />
       </Container>
@@ -57,7 +47,7 @@ export default function ThanksPage({ mdxContent }: WithI18nResult) {
       </Container>
 
       <Container gridCols="6" gridGutters="5">
-        <Contributors subtitle={t('contribute:contributors.subtitle', 'Contributors')} />
+        <Contributors subtitle={t('contribute:contributors.subtitle')} />
       </Container>
 
       <Container gridCols="9" gridGutters="8" paddingTop={false}>

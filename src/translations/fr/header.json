@@ -1,7 +1,7 @@
 {
-  "close": "Close",
-  "link.about": "About",
-  "link.about.title": "__STRING_NOT_TRANSLATED__",
+  "close": "Fermer",
+  "link.about": "À propos",
+  "link.about.title": "À propos d'Open Terms Archive",
   "link.case-studies": "Études de cas",
   "link.case-studies.title": "Que nous a appris Open Terms Archive jusqu’à présent ?",
   "link.github.title": "Voir le code source",

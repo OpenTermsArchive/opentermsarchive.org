@@ -11,16 +11,13 @@ const EMAIL_SUPPORT = 'contact@opentermsarchive.org';
 const SorryPage = () => {
   const { t } = useTranslation();
   return (
-    <Layout
-      title={t('contribute/sorry:seo.title', 'Sorry')}
-      desc={t('contribute/sorry:seo.desc', 'You cannot access this page')}
-    >
+    <Layout title={t('contribute/sorry:seo.title')}>
       {/* Hero */}
       <Container layout="wide" paddingY={false} dark={true} bgColor="#010613">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
-            title={t('contribute/sorry:title', 'Sorry 😿')}
-            subtitle={t('contribute/sorry:subtitle', 'You cannot access this page')}
+            title={t('contribute/sorry:title')}
+            subtitle={t('contribute/sorry:subtitle')}
           ></Hero>
         </Container>
       </Container>
@@ -30,24 +27,19 @@ const SorryPage = () => {
           <Column width={100}>
             <Breadcrumb
               items={[
-                { name: 'Open Terms Archive', url: 'https://www.opentermsarchive.org' },
                 {
-                  name: 'Contribute',
-                  url: './../#' + t('common:home_page.contribute.id', 'contribute'),
+                  name: t('contribute:breadcrumb.home_page.name'),
+                  url: 'https://www.opentermsarchive.org',
                 },
-                { name: 'Contribute', url: '/contribute' },
+                { name: t('contribute/home:title'), url: '/contribute' },
                 { name: t('contribute/sorry:title') },
               ]}
             />
             <TextContent>
+              <p>{t('contribute/sorry:explanation')}</p>
               <p>
-                {t(
-                  'contribute/sorry:explanation',
-                  'Because we use the "hover" functionnality to highlight the parts of the document we want to track, we need you to have a computer and a mouse.'
-                )}
-              </p>
-              <p>
-                Contact us for any question <a href={`mailto:${EMAIL_SUPPORT}`}>{EMAIL_SUPPORT}</a>
+                {t('contribute/sorry:explanation.contact')}{' '}
+                <a href={`mailto:${EMAIL_SUPPORT}`}>{EMAIL_SUPPORT}</a>
               </p>
             </TextContent>
           </Column>

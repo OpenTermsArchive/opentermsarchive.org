@@ -53,25 +53,22 @@ const Layout = ({
                   <ul>
                     <li>
                       <Link href="/">
-                        <a
-                          title={t('header:link.home.title', 'Back to home page')}
-                          onClick={toggleExtended}
-                        >
-                          {t('header:link.home', 'Home')}
+                        <a title={t('header:link.home.title')} onClick={toggleExtended}>
+                          {t('header:link.home')}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href={'/case-studies'}>
                         <a onClick={toggleExtended} title={t('header:link.case-studies.title')}>
-                          {t('header:link.case-studies', 'Case studies')}
+                          {t('header:link.case-studies')}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href={'/about'}>
                         <a onClick={toggleExtended} title={t('header:link.about.title')}>
-                          {t('header:link.about', 'About')}
+                          {t('header:link.about')}
                         </a>
                       </Link>
                     </li>
@@ -85,7 +82,7 @@ const Layout = ({
                         <a
                           className={classNames('icon_circle')}
                           target="_blank"
-                          title={t('header:link.twitter.title', 'Follow us')}
+                          title={t('header:link.twitter.title')}
                         >
                           <FiTwitter color="#fefffd" />
                         </a>
@@ -96,7 +93,7 @@ const Layout = ({
                         <a
                           className={classNames('icon_circle')}
                           target="_blank"
-                          title={t('header:link.github.title', 'See the source code')}
+                          title={t('header:link.github.title')}
                         >
                           <FiGithub color="#fefffd" />
                         </a>
@@ -127,23 +124,19 @@ const Layout = ({
             <FooterMenu>
               <ul>
                 <li>
-                  <Link href="/">{t('footer:link.home', 'Home')}</Link>
+                  <Link href="/">{t('footer:link.home')}</Link>
                 </li>
                 <li>
-                  <Link href={'/contribute'}>{t('footer:link.contribute', 'Contribute')}</Link>
+                  <Link href={'/contribute'}>{t('footer:link.contribute')}</Link>
                 </li>
                 <li>
-                  <Link href={'/case-studies'}>
-                    <a title={t('footer:link.case-studies.title')}>
-                      {t('footer:link.case-studies')}
-                    </a>
-                  </Link>
+                  <Link href={'/case-studies'}>{t('footer:link.case-studies')}</Link>
                 </li>
                 <li>
-                  <Link href={'/about'}>À propos</Link>
+                  <Link href={'/about'}>{t('footer:link.about')}</Link>
                 </li>
                 <li>
-                  <Link href={'/media'}>Média</Link>
+                  <Link href={'/media'}>{t('footer:link.media')}</Link>
                 </li>
               </ul>
               <ul>
@@ -151,26 +144,26 @@ const Layout = ({
                   <Link href="https://twitter.com/OpenTerms">
                     <a
                       target="_blank"
-                      title={t('footer:link.twitter.title', 'Follow us on Twitter')}
+                      title={t('footer:link.twitter.title')}
                       className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
                     >
                       <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
                         <FiTwitter color="#fefffd" />
                       </span>
-                      <span>{t('footer:link.twitter', 'Follow us')}</span>
+                      <span>{t('footer:link.twitter')}</span>
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="mailto:contact@opentermsarchive.org">
                     <a
-                      title={t('footer:link.contact.title', 'Contact us by mail')}
+                      title={t('footer:link.contact.title')}
                       className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
                     >
                       <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
                         <FiMail color="#fefffd" />
                       </span>
-                      <span>{t('footer:link.contact', 'Contact us')}</span>
+                      <span>{t('footer:link.contact')}</span>
                     </a>
                   </Link>
                 </li>
@@ -180,61 +173,37 @@ const Layout = ({
               <ul>
                 <li>
                   <Link href="/legal-notice">
-                    <a
-                      title={t(
-                        'footer:link.tos.title',
-                        'Read the legal notice of Open Terms Archive website'
-                      )}
-                    >
-                      {t('footer:link.tos', 'Legal notice')}
-                    </a>
+                    <a title={t('footer:link.tos.title')}>{t('footer:link.tos')}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/privacy-policy">
-                    <a
-                      title={t(
-                        'footer:link.privacy.title',
-                        'Read the privacy policy of Open Terms Archive website'
-                      )}
-                    >
-                      {t('footer:link.privacy', 'Privacy policy')}
-                    </a>
+                    <a title={t('footer:link.privacy.title')}>{t('footer:link.privacy')}</a>
                   </Link>
                 </li>
               </ul>
               <ul>
                 <li>
                   <Link href="/dashboard">
-                    <a title={t('footer:link.dashboard.title', 'A set of activity metrics')}>
-                      {t('footer:link.dashboard', 'Dashboard')}
-                    </a>
+                    <a title={t('footer:link.dashboard.title')}>{t('footer:link.dashboard')}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://opentermsarchive.org/data/api">
-                    <a title={t('footer:link.api.title', 'Use the API')}>
-                      {t('footer:link.api', 'API')}
-                    </a>
+                    <a title={t('footer:link.api.title')}>{t('footer:link.api')}</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
-                    <a
-                      title={t('footer:link.dataset.title', 'Download the dataset')}
-                      target="_blank"
-                    >
-                      Jeu de donnée
+                    <a title={t('footer:link.dataset.title')} target="_blank">
+                      {t('footer:link.dataset')}
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://github.com/ambanum/OpenTermsArchive">
-                    <a
-                      title={t('footer:link.github.title', 'Go to the GitHub repository')}
-                      target="_blank"
-                    >
-                      Code Source
+                    <a title={t('footer:link.github.title')} target="_blank">
+                      {t('footer:link.github')}
                     </a>
                   </Link>
                 </li>

@@ -175,15 +175,10 @@ const HomePage = () => {
       <Container gray={true} layout="wide">
         <Container gridCols="12" gridGutters="11" paddingY={false}>
           <TextContent className="">
-            <h2>Commun contributif</h2>
-            <h3 className="h3__light">
-              Open Terms Archive est un logiciel libre et ouvert. Toute entité peut le réutiliser et
-              le modifier librement, sous seule condition de partager ses améliorations avec la
-              communauté qui le construit. Le produit est construit collaborativement par toutes les
-              entités qui l'utilisent et y contribuent.
-            </h3>
+            <h2>{t('homepage:foss.title')}</h2>
+            <h3 className="h3__light">{t('homepage:foss.subtitle')}</h3>
             <Link href="/about">
-              <Button type="secondary">En savoir plus</Button>
+              <Button type="secondary">{t('homepage:foss.button.label')}</Button>
             </Link>
           </TextContent>
           <ThumbGalery align="left" small={true}>
