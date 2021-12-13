@@ -17,13 +17,13 @@ export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
     <Layout title={t('case-studies:seo.title')}>
       <Container layout="wide" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Column width={50} alignY="center">
+          <Column width={60} alignY="center" mobileOrder={2}>
             <Hero
               title={t('case-studies:hero.title')}
               subtitle={t('case-studies:hero.subtitle')}
             ></Hero>
           </Column>
-          <Column width={50} alignX="center" hideOnTablet={true}>
+          <Column width={40} alignX="center" mobileOrder={1}>
             <ImageCasestudies />
           </Column>
         </Container>
