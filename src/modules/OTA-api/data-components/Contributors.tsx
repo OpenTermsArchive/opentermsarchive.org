@@ -118,7 +118,7 @@ const Contributors: React.FC<ContributorsProps> = React.memo(({ subtitle }) => {
       <div className={s.contributors_items}>
         {contributors.map(({ login, avatar_url, html_url }) => {
           return (
-            <div className={s.contributor}>
+            <div className={s.contributor} key={`${login}${Date.now()}`}>
               <Link href={html_url}>
                 <a target="_blank" rel="nofollow" className={s.contributor_link} title={login}>
                   <img
