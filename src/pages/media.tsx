@@ -24,16 +24,17 @@ export default function MediaPage({ mdxContent }: WithI18nResult) {
       </Container>
 
       <Container gray={true} layout={'fluid'} paddingY={false}>
-        <Container gridCols="10" gridGutters="9">
+        <Container gridCols="9" gridGutters="8">
           <h2>{t('media:logo.title')}</h2>
-          <Container flex={true} paddingYSmall={true}>
+          <h4 className="mt__3XL mb__M">{t('media:logo.mainversion.title')}</h4>
+          <Container flex={true} paddingTop={false}>
             <Column width={50}>
               <ButtonBlock
                 fillParent={true}
                 white={true}
                 desc={t('media:logo.white.background.desc')}
               >
-                <Logo size="full" />
+                <Logo className="mb__L" />
                 <Button>
                   <a download href="/images/logo/logo-open-terms-archive-black.png">
                     {t('media:logo.cta.label')}
@@ -50,13 +51,50 @@ export default function MediaPage({ mdxContent }: WithI18nResult) {
                 desc={t('media:logo.black.background.desc')}
                 dark={true}
               >
-                <Logo backgroundType="black" size="full" />
+                <Logo backgroundType="black" className="mb__L" />
                 <Button>
                   <a download href="/images/logo/logo-open-terms-archive-white.png">
                     {t('media:logo.cta.label')}
                   </a>
                 </Button>
                 <a download href="/images/logo/logo-open-terms-archive-white.svg">
+                  {t('media:logo.cta.svg.label')}
+                </a>
+              </ButtonBlock>
+            </Column>
+          </Container>
+          <h4 className="mt__L mb__M">{t('media:logo.alternativeversion.title')}</h4>
+          <Container flex={true} paddingTop={false}>
+            <Column width={50}>
+              <ButtonBlock
+                fillParent={true}
+                white={true}
+                desc={t('media:logo.white.background.desc')}
+              >
+                <Logo className="mb__L" type="alternative" />
+                <Button>
+                  <a download href="/images/logo/logo-open-terms-archive-black-alternative.png">
+                    {t('media:logo.cta.label')}
+                  </a>
+                </Button>
+                <a download href="/images/logo/logo-open-terms-archive-black-alternative.svg">
+                  {t('media:logo.cta.svg.label')}
+                </a>
+              </ButtonBlock>
+            </Column>
+            <Column width={50}>
+              <ButtonBlock
+                fillParent={true}
+                desc={t('media:logo.black.background.desc')}
+                dark={true}
+              >
+                <Logo backgroundType="black" className="mb__L" type="alternative" />
+                <Button>
+                  <a download href="/images/logo/logo-open-terms-archive-white-alternative.png">
+                    {t('media:logo.cta.label')}
+                  </a>
+                </Button>
+                <a download href="/images/logo/logo-open-terms-archive-white-alternative.svg">
                   {t('media:logo.cta.svg.label')}
                 </a>
               </ButtonBlock>

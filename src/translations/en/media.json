@@ -1,8 +1,10 @@
 {
   "hero.title": "Media",
+  "logo.alternativeversion.title": "__STRING_NOT_TRANSLATED__",
   "logo.black.background.desc": "PNG file in high definition for dark background",
   "logo.cta.label": "Download the .png",
   "logo.cta.svg.label": "or the .svg",
+  "logo.mainversion.title": "__STRING_NOT_TRANSLATED__",
   "logo.title": "Logo",
   "logo.white.background.desc": "For white background",
   "press.subtitle": "They talk about the Open Terms Archive",
