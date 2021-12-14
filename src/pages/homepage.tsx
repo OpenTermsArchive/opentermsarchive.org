@@ -154,10 +154,10 @@ const HomePage = () => {
             center={true}
           ></Card>
           <Card
-            image="/images/reuses/disinfo-experiments.jpg"
-            title={t('homepage:reuses.disinfo_expermiments.title')}
-            subtitle={t('homepage:reuses.disinfo_expermiments.subtitle')}
-            author={t('homepage:reuses.disinfo_expermiments.author')}
+            image="/images/reuses/readability.jpg"
+            title={t('homepage:reuses.readability.title')}
+            subtitle={t('homepage:reuses.readability.subtitle')}
+            author={t('homepage:reuses.readability.author')}
             link="https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments"
             center={true}
           ></Card>
