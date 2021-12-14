@@ -14,7 +14,7 @@ type ContributorsProps = {
 const coreContributors = [
   {
     login: 'Matti Schneider',
-    avatar_url: 'https://avatars.githubusercontent.com/u/222463?v=4',
+    avatar_url: 'https://www.gravatar.com/avatar/81ee62724136cc42065a0af37aa0edc1',
     html_url: 'https://mattischneider.fr',
   },
   {
