@@ -79,7 +79,7 @@ const HomePage = () => {
             <p className="mt__L">
               <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
                 <a target="_blank">
-                  <Button>{t('homepage:how.bloc4.cta.label')}</Button>
+                  <Button type="secondary">{t('homepage:how.bloc4.cta.label')}</Button>
                 </a>
               </Link>
             </p>
