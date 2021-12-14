@@ -137,6 +137,12 @@ const contributorsList = [
     avatar_url: 'https://avatars.githubusercontent.com/u/3402969?s=200&v=4',
     html_url: 'https://github.com/tosdr',
   },
+  {
+    login: 'Antoine Vernois',
+    type: 'contributors',
+    avatar_url: 'https://avatars.githubusercontent.com/u/765477?v=4',
+    html_url: 'https://github.com/avernois',
+  },
 ];
 
 const getContributorsByType = (type: ContributorsProps['type']) => {
