@@ -13,9 +13,9 @@ type ContributorsProps = {
 
 const coreContributors = [
   {
-    html_url: 'https://twitter.com/Elsa_Trujillo_',
-    avatar_url: 'https://avatars.githubusercontent.com/u/86837188?v=4',
-    login: 'Elsa Trujillo',
+    login: 'Matti Schneider',
+    avatar_url: 'https://avatars.githubusercontent.com/u/222463?v=4',
+    html_url: 'https://mattischneider.fr',
   },
   {
     login: 'Nicolas Dupont',
@@ -23,19 +23,19 @@ const coreContributors = [
     html_url: 'https://github.com/Ndpnt',
   },
   {
-    login: 'Martin Ratinaud',
-    avatar_url: 'https://avatars.githubusercontent.com/u/4191809?v=4',
-    html_url: 'https://github.com/martinratinaud',
-  },
-  {
     login: 'Clément Biron',
     avatar_url: 'https://avatars.githubusercontent.com/u/364319?v=4',
     html_url: 'https://clementbiron.com',
   },
   {
-    login: 'Matti Schneider',
-    avatar_url: 'https://avatars.githubusercontent.com/u/222463?v=4',
-    html_url: 'https://mattischneider.fr',
+    login: 'Martin Ratinaud',
+    avatar_url: 'https://avatars.githubusercontent.com/u/4191809?v=4',
+    html_url: 'https://github.com/martinratinaud',
+  },
+  {
+    html_url: 'https://twitter.com/Elsa_Trujillo_',
+    avatar_url: 'https://avatars.githubusercontent.com/u/86837188?v=4',
+    login: 'Elsa Trujillo',
   },
 ];
 
@@ -49,10 +49,41 @@ const alumnisContributors = [
 
 const contributors = [
   {
+    html_url: 'https://twitter.com/henriverdier',
+    avatar_url:
+      'https://pbs.twimg.com/profile_images/1359173368436686848/1GNqcMOf_reasonably_small.jpg',
+    login: 'Henri Verdier',
+  },
+  {
     html_url: 'https://twitter.com/marineguillaum',
     avatar_url:
       'https://pbs.twimg.com/profile_images/815851313758085121/oNANphLi_reasonably_small.jpg',
     login: 'Marine Guillaume',
+  },
+  {
+    login: 'Adrien Fines',
+    avatar_url: 'https://avatars.githubusercontent.com/u/41912392?v=4',
+    html_url: 'https://github.com/AdrienFines',
+  },
+  {
+    login: 'Michiel de Jong',
+    avatar_url: 'https://avatars.githubusercontent.com/u/408412?v=4',
+    html_url: 'https://github.com/michielbdejong',
+  },
+  {
+    login: 'Lucas Verney',
+    avatar_url: 'https://avatars.githubusercontent.com/u/58298410?v=4',
+    html_url: 'https://github.com/LVerneyPEReN',
+  },
+  {
+    login: 'Tom Houriez',
+    avatar_url: 'https://avatars.githubusercontent.com/u/70654947?v=4',
+    html_url: 'https://github.com/THouriezPEReN',
+  },
+  {
+    login: 'Antoine Vernois',
+    avatar_url: 'https://avatars.githubusercontent.com/u/765477?v=4',
+    html_url: 'https://github.com/avernois',
   },
   {
     html_url: 'https://twitter.com/lvdefranssu',
@@ -61,26 +92,10 @@ const contributors = [
     login: 'Louis-Victor de Franssu',
   },
   {
-    html_url: 'https://twitter.com/henriverdier',
-    avatar_url:
-      'https://pbs.twimg.com/profile_images/1359173368436686848/1GNqcMOf_reasonably_small.jpg',
-    login: 'Henri Verdier',
-  },
-  {
     html_url: 'https://twitter.com/hureaux',
     avatar_url:
       'https://pbs.twimg.com/profile_images/1784831840/politique-twitter_reasonably_small.jpg',
     login: 'Jeremy Hureaux',
-  },
-  {
-    login: 'Adrien Fines',
-    avatar_url: 'https://avatars.githubusercontent.com/u/41912392?v=4',
-    html_url: 'https://github.com/AdrienFines',
-  },
-  {
-    login: 'Lucas Verney',
-    avatar_url: 'https://avatars.githubusercontent.com/u/58298410?v=4',
-    html_url: 'https://github.com/LVerneyPEReN',
   },
   {
     login: 'Vincent Viers',
@@ -88,9 +103,9 @@ const contributors = [
     html_url: 'https://github.com/vviers',
   },
   {
-    login: 'Tom Houriez',
-    avatar_url: 'https://avatars.githubusercontent.com/u/70654947?v=4',
-    html_url: 'https://github.com/THouriezPEReN',
+    login: 'Christian Quest',
+    avatar_url: 'https://avatars.githubusercontent.com/u/1202668?v=4',
+    html_url: 'https://github.com/cquest',
   },
   {
     login: 'Aaronj Sugarman',
@@ -98,29 +113,14 @@ const contributors = [
     html_url: 'https://github.com/AaronjSugarman',
   },
   {
-    login: 'GatienH',
-    avatar_url: 'https://avatars.githubusercontent.com/u/6501059?v=4',
-    html_url: 'https://github.com/GatienH',
-  },
-  {
-    login: 'Michiel de Jong',
-    avatar_url: 'https://avatars.githubusercontent.com/u/408412?v=4',
-    html_url: 'https://github.com/michielbdejong',
-  },
-  {
-    login: 'Christian Quest',
-    avatar_url: 'https://avatars.githubusercontent.com/u/1202668?v=4',
-    html_url: 'https://github.com/cquest',
-  },
-  {
     login: 'Marius Karnauskas',
     avatar_url: 'https://avatars.githubusercontent.com/u/1094012?v=4',
     html_url: 'https://github.com/karnauskas',
   },
   {
-    login: 'Antoine Vernois',
-    avatar_url: 'https://avatars.githubusercontent.com/u/765477?v=4',
-    html_url: 'https://github.com/avernois',
+    login: 'GatienH',
+    avatar_url: 'https://avatars.githubusercontent.com/u/6501059?v=4',
+    html_url: 'https://github.com/GatienH',
   },
 ];
 
