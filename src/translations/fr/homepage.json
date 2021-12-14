@@ -8,7 +8,7 @@
   "cta_public.bloc3.button.label": "Naviguer sur GitHub",
   "cta_public.bloc3.link.label": "ou télécharger le jeu de données",
   "cta_public.bloc3.title": "Explorez l'historique de chaque document",
-  "cta_public.title": "Quand les services que nous utilisons au quotidien changent leurs règles, nous sommes les premiers concernés.",
+  "cta_public.title": "Rééquilibrer le rapport de force face aux grandes plateformes numériques",
   "foss.button.label": "En savoir plus",
   "foss.subtitle": "Open Terms Archive est un logiciel libre et ouvert. Toute entité peut le réutiliser et le modifier librement, sous seule condition de partager ses améliorations avec la communauté qui le construit. Le produit est construit collaborativement par toutes les entités qui l'utilisent et y contribuent.",
   "foss.title": "Commun contributif",
@@ -22,7 +22,7 @@
   "how.bloc4.desc": "L'ensemble de toutes les versions enregistrées est publié dans un jeu de données.  ",
   "how.bloc4.title": "4. Publication",
   "how.title": "Fonctionnement",
-  "mission_statement": "Rééquilibrer le rapport de force face aux grandes plateformes numériques",
+  "mission_statement": "Quand les services que nous utilisons au quotidien changent leurs règles du jeu, nous sommes les premiers concernés.",
   "reuses.card1.author": "Équipe de l'Ambassadeur français pour le numérique",
   "reuses.card1.subtitle": "Consolide l'intégralité des modifications d'un document contractuel entre deux dates arbitraires.",
   "reuses.card1.title": "Scripta Manent",
@@ -35,5 +35,5 @@
   "reuses.title": "Réutilisations",
   "seo.desc": "Suivre les engagements contractuels des principaux fournisseurs de services en ligne",
   "seo.title": "Open Terms Archive",
-  "what_it_is": "Open Terms Archive enregistre chaque modification des conditions d'utilisation des services numériques. Cette base de données permet aux utilisateurs et régulateurs d'évaluer la loyauté de ces entreprises."
+  "what_it_is": "Open Terms Archive enregistre chaque modification des conditions d'utilisation des services numériques. Une communauté analyse ces changements et rééquilibre ainsi le rapport de force avec les grandes plateformes."
 }

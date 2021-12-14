@@ -35,7 +35,7 @@ const HomePage = () => {
             <h3>{t('homepage:how.bloc1.title')}</h3>
             <p className="mt__M h3 h3__light">{t('homepage:how.bloc1.desc')}</p>
           </Column>
-          <Column width={50} alignX="center">
+          <Column width={50} alignX="right">
             <div style={{ maxWidth: '480px' }}>
               <img src="/images/step-1.png" />
             </div>
@@ -45,11 +45,11 @@ const HomePage = () => {
       {/* How it works -  2 step */}
       <Container layout="wide" paddingY={false}>
         <Container gridCols="11" gridGutters="10" flex={true} paddingX={false}>
-          <Column width={50} mobileOrder={2}>
+          <Column width={50}>
             <h3>{t('homepage:how.bloc2.title')}</h3>
             <p className="mt__M h3 h3__light">{t('homepage:how.bloc2.desc')}</p>
           </Column>
-          <Column width={50} alignX="center" mobileOrder={1}>
+          <Column width={50} alignX="right">
             <div style={{ maxWidth: '480px' }}>
               <img src="/images/step-2.png" />
             </div>
@@ -63,8 +63,8 @@ const HomePage = () => {
             <h3>{t('homepage:how.bloc3.title')}</h3>
             <p className="mt__M h3 h3__light">{t('homepage:how.bloc3.desc')}</p>
           </Column>
-          <Column width={50} alignX="center">
-            <div style={{ maxWidth: '480px' }}>
+          <Column width={50} alignX="right">
+            <div style={{ maxWidth: '430px' }}>
               <img src="/images/step-3.png" />
             </div>
           </Column>
@@ -73,7 +73,7 @@ const HomePage = () => {
       {/* How it works -  4 step */}
       <Container layout="wide" paddingTop={false}>
         <Container gridCols="11" gridGutters="10" flex={true} paddingX={false}>
-          <Column width={50} mobileOrder={2}>
+          <Column width={50}>
             <h3>{t('homepage:how.bloc4.title')}</h3>
             <p className="mt__M h3 h3__light">{t('homepage:how.bloc4.desc')}</p>
             <p className="mt__L">
@@ -84,8 +84,8 @@ const HomePage = () => {
               </Link>
             </p>
           </Column>
-          <Column width={50} alignX="center" alignY="center" mobileOrder={1}>
-            <div style={{ maxWidth: '480px' }}>
+          <Column width={50} alignX="right" alignY="center">
+            <div style={{ maxWidth: '350px' }}>
               <img src="/images/step-4.png" />
             </div>
           </Column>
