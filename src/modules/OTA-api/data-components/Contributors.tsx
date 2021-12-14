@@ -80,7 +80,7 @@ const contributors = [
   },
   {
     login: 'Lucas Verney',
-    avtar_url: 'https://avatars.githubusercontent.com/u/58298410?v=4',
+    avatar_url: 'https://avatars.githubusercontent.com/u/58298410?v=4',
     html_url: 'https://github.com/LVerneyPEReN',
   },
   {
