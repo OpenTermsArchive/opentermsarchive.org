@@ -179,7 +179,7 @@ const HomePage = () => {
             center={true}
           ></Card>
           <Card
-            image="/images/unknow.jpg"
+            image="/images/new-reuse.jpg"
             className="text__center"
             title={t('homepage:reuses.card3.title')}
             subtitle={t('homepage:reuses.card3.subtitle')}
