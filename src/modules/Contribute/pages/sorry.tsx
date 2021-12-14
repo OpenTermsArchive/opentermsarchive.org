@@ -29,7 +29,7 @@ const SorryPage = () => {
               items={[
                 {
                   name: t('contribute:breadcrumb.home_page.name'),
-                  url: 'https://www.opentermsarchive.org',
+                  url: 'https://opentermsarchive.org',
                 },
                 { name: t('contribute/home:title'), url: '/contribute' },
                 { name: t('contribute/sorry:title') },

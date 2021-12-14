@@ -32,7 +32,7 @@ export default function ThanksPage({ mdxContent }: WithI18nResult) {
           items={[
             {
               name: t('contribute:breadcrumb.home_page.name'),
-              url: 'https://www.opentermsarchive.org',
+              url: 'https://opentermsarchive.org',
             },
             { name: t('contribute/home:title'), url: '/contribute' },
             { name: t('contribute:breadcrumb.thanks.name') },
