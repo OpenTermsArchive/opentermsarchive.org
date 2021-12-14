@@ -109,12 +109,6 @@ const contributors = [
     html_url: 'https://github.com/michielbdejong',
   },
   {
-    login: 'Siegrid Henry',
-    type: 'alumnis',
-    avatar_url: 'https://avatars.githubusercontent.com/u/49791551?v=4',
-    html_url: 'https://github.com/SiegridHenry',
-  },
-  {
     login: 'Christian Quest',
     avatar_url: 'https://avatars.githubusercontent.com/u/1202668?v=4',
     html_url: 'https://github.com/cquest',
