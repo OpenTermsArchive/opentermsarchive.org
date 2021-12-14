@@ -120,7 +120,7 @@ const contributorsList = [
     html_url: 'https://github.com/SiegridHenry',
   },
   {
-    login: 'Chirsitan Quest',
+    login: 'Christian Quest',
     type: 'contributors',
     avatar_url: 'https://avatars.githubusercontent.com/u/1202668?v=4',
     html_url: 'https://github.com/cquest',
