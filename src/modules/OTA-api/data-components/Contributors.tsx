@@ -63,13 +63,13 @@ const contributorsList = [
     login: 'Clément Biron',
     type: 'core',
     avatar_url: 'https://avatars.githubusercontent.com/u/364319?v=4',
-    html_url: 'https://github.com/clementbiron',
+    html_url: 'https://clementbiron.com',
   },
   {
     login: 'Matti Schneider',
     type: 'core',
     avatar_url: 'https://avatars.githubusercontent.com/u/222463?v=4',
-    html_url: 'https://github.com/MattiSG',
+    html_url: 'https://mattischneider.fr',
   },
   {
     login: 'Adrien Fines',
