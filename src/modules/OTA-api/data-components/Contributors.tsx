@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 import classNames from 'classnames';
 import s from './Contributors.module.css';
-import shuffle from 'lodash/fp/shuffle';
 
 type ContributorsProps = {
   subtitle?: string;
@@ -134,13 +133,14 @@ const getContributorsByType = (type: ContributorsProps['type']) => {
     case 'contributors':
       return contributors;
     case 'all':
+    default:
       return [...coreContributors, ...alumnisContributors, ...contributors];
   }
 };
 
 const Contributors: React.FC<ContributorsProps> = React.memo(
   ({ subtitle, type = 'all', alignX = 'center', showInfo = false, className, ...props }) => {
-    const contributors = shuffle(getContributorsByType(type));
+    const contributors = getContributorsByType(type);
 
     return (
       <div
@@ -156,9 +156,15 @@ const Contributors: React.FC<ContributorsProps> = React.memo(
         <div className={s.contributors_items}>
           {contributors.map(({ login, avatar_url, html_url }) => {
             return (
-              <div className={s.contributor} key={`${login}${Date.now()}`}>
+              <div className={s.contributor} key={`${login}`}>
                 <Link href={html_url}>
-                  <a target="_blank" rel="nofollow" className={s.contributor_link} title={login}>
+                  <a
+                    target="_blank"
+                    rel="nofollow"
+                    className={s.contributor_link}
+                    title={login}
+                    key={`${login}_link`}
+                  >
                     <img
                       className={s.contributor_image}
                       src={avatar_url}
