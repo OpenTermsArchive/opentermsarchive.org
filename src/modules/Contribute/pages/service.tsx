@@ -149,7 +149,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
 
       if (!url) {
         notify('error', t('contribute/service:could_not_create_issue'));
-        const subject = 'Here is a new service to track in Open Terms Archive';
+        const subject = 'Here is a new service to track in Open Terms Archive';
         const body = `Hi,
 
   I need you to track "${initialDocumentType}" of "${initialName}" for me.

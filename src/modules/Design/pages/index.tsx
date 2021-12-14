@@ -84,7 +84,7 @@ const DesignPage = () => {
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
             title="Hero with background, dark, title and subtitle"
-            subtitle="Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms."
+            subtitle="Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms."
           ></Hero>
         </Container>
       </Container>
@@ -311,7 +311,7 @@ const DesignPage = () => {
         </Column>
         <Column width={50} alignX="center" alignY="center">
           <ButtonBlock
-            title="Have you developed an Open Terms Archive based tool?"
+            title="Have you developed an Open Terms Archive based tool?"
             desc="Let the community know about it here"
             fillParent={true}
           >
@@ -326,7 +326,7 @@ const DesignPage = () => {
           <ThumbGalery
             title="Our Partners"
             titleLevel="h3"
-            subtitle="They make Open Terms Archive existing"
+            subtitle="They make Open Terms Archive existing"
           >
             <ThumbGaleryItem src="/images/logo-ambnum.png" width="158" height="80" />
             <ThumbGaleryItem src="/images/logo-gdi.png" width="150" height="32" />
@@ -341,7 +341,7 @@ const DesignPage = () => {
           <ThumbGalery
             title="Press"
             titleLevel="h4"
-            subtitle="They talk about Open Terms Archive"
+            subtitle="They talk about Open Terms Archive"
             small={true}
           >
             <ThumbGaleryItem src="/images/01net.png" width="75" height="32" small={true} />
