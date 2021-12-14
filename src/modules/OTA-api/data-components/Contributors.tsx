@@ -119,11 +119,6 @@ const contributors = [
     html_url: 'https://github.com/karnauskas',
   },
   {
-    login: 'TOSDR',
-    avatar_url: 'https://avatars.githubusercontent.com/u/3402969?s=200&v=4',
-    html_url: 'https://github.com/tosdr',
-  },
-  {
     login: 'Antoine Vernois',
     avatar_url: 'https://avatars.githubusercontent.com/u/765477?v=4',
     html_url: 'https://github.com/avernois',
