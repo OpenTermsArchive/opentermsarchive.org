@@ -147,42 +147,41 @@ const HomePage = () => {
         <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
           <Card
             image="/images/reuses/tosdr.jpg"
-            title="Terms of Service; Didn’t Read"
-            subtitle="Permet aux utilisateurs de donner collaborativement une note aux conditions d’utilisation selon le respect de leurs droits."
-            author="ToS;DR"
+            title={t('homepage:reuses.tosdr.title')}
+            subtitle={t('homepage:reuses.tosdr.subtitle')}
+            author={t('homepage:reuses.tosdr.author')}
             link="https://tosdr.org"
             center={true}
           ></Card>
           <Card
             image="/images/reuses/disinfo-experiments.jpg"
-            title={t('homepage:reuses.card2.title')}
-            subtitle={t('homepage:reuses.card2.subtitle')}
-            author={t('homepage:reuses.card2.author')}
+            title={t('homepage:reuses.disinfo_expermiments.title')}
+            subtitle={t('homepage:reuses.disinfo_expermiments.subtitle')}
+            author={t('homepage:reuses.disinfo_expermiments.author')}
             link="https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments"
             center={true}
           ></Card>
           <Card
             image="/images/reuses/scripta-manent.jpg"
-            title={t('homepage:reuses.card1.title')}
-            subtitle={t('homepage:reuses.card1.subtitle')}
-            author={t('homepage:reuses.card1.author')}
+            title={t('homepage:reuses.scripta_manent.title')}
+            subtitle={t('homepage:reuses.scripta_manent.subtitle')}
+            author={t('homepage:reuses.scripta_manent.author')}
             link="https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent"
             center={true}
           ></Card>
-
           <Card
             image="/images/reuses/tosback.jpg"
-            title="TOSback"
-            subtitle="L’ancêtre d’Open Terms Archive ! Depuis octobre 2020, les changements affichés sont fournis par une instance dédiée d’Open Terms Archive."
-            author="ToS;DR & Electronic Frontier Foundation"
+            title={t('homepage:reuses.tosback.title')}
+            subtitle={t('homepage:reuses.tosback.subtitle')}
+            author={t('homepage:reuses.tosback.author')}
             link="https://tosback.org/"
             center={true}
           ></Card>
           <Card
             image="/images/reuses/new-reuse.jpg"
             className="text__center"
-            title={t('homepage:reuses.card3.title')}
-            subtitle={t('homepage:reuses.card3.subtitle')}
+            title={t('homepage:reuses.new_reuse.title')}
+            subtitle={t('homepage:reuses.new_reuse.subtitle')}
             link="mailto:contact@opentermsarchive.org"
             center={true}
           ></Card>
