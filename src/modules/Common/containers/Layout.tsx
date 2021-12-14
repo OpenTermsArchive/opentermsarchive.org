@@ -2,11 +2,11 @@ import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
 import React, { ReactNode } from 'react';
 
 import { Analytics } from 'modules/Analytics';
+import CommonHead from './CommonHead';
 import Container from './Container';
 import Divider from '../components/Divider';
 import Footer from './Footer';
 import FooterMenu from '../components/FooterMenu';
-import Head from 'next/head';
 import Header from './Header';
 import HeaderMenu from '../components/HeaderMenu';
 import LanguageSwitcher from 'modules/I18n/components/LanguageSwitcher';
@@ -28,20 +28,8 @@ const Layout = ({
   const { t } = useTranslation();
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={desc} />
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <CommonHead title={title} description={desc} twitterCard="/images/twitter-card.jpg" />
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="theme-color" content="#ffffff" />
-      </Head>
       <Analytics />
 
       {/* Header */}
