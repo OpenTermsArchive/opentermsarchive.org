@@ -15,7 +15,7 @@ const port = process.env.PORT || 3000;
     try {
         await app.prepare();
         const server = express_1.default();
-        server.use(`${process.env.NEXT_PUBLIC_BASE_PATH}${next_config_1.serverRuntimeConfig.scrapedIframeUrl}`, express_1.default.static(next_config_1.serverRuntimeConfig.scrapedFilesFolder));
+        server.use(`${process.env.NEXT_PUBLIC_BASE_PATH || ''}${next_config_1.serverRuntimeConfig.scrapedIframeUrl}`, express_1.default.static(next_config_1.serverRuntimeConfig.scrapedFilesFolder));
         server.all('*', (req, res) => {
             return handle(req, res);
         });

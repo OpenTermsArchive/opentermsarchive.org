@@ -293,7 +293,6 @@ const DesignPage = () => {
           <ShowcaseList>
             <ShowcaseItem
               title="Scripta Manent"
-              desc="Explore the contractual documents of the main online service providers and compare their evolution through time."
               author="By the team of the French Ambassador for Digital Affairs"
             >
               <LinkIcon iconColor="var(--colorPrimary)" href="https://www.google.fr">
@@ -302,7 +301,6 @@ const DesignPage = () => {
             </ShowcaseItem>
             <ShowcaseItem
               title="Disinfo experiments"
-              desc="Experiments are ongoing so as to produce use cases using Open Terms Archive data."
               author="By the team of the French Ambassador for Digital Affairs"
             >
               <LinkIcon iconColor="var(--colorPrimary)" href="https://www.google.fr">

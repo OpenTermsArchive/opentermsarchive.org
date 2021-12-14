@@ -8,7 +8,7 @@ module.exports = Object.assign(Object.assign({ basePath: process.env.NEXT_PUBLIC
     }, publicRuntimeConfig: {
         version,
     }, images: {
-        domains: ['avatars.githubusercontent.com'],
+        domains: ['avatars.githubusercontent.com', 'pbs.twimg.com'],
     }, webpack(config) {
         config.module.rules.push({
             test: /\.svg$/i,
@@ -32,17 +32,17 @@ module.exports = Object.assign(Object.assign({ basePath: process.env.NEXT_PUBLIC
     async redirects() {
         return [
             {
-                source: '/fr/press',
-                destination: '/fr/media',
-                permanent: true,
-            },
-            {
-                source: '/en/press',
-                destination: '/en/media',
+                source: '/press',
+                destination: '/media',
                 permanent: true,
             },
             {
                 source: '/homepage',
+                destination: '/',
+                permanent: true,
+            },
+            {
+                source: '/how-it-works',
                 destination: '/',
                 permanent: true,
             },
