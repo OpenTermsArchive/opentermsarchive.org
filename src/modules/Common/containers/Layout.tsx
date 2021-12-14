@@ -49,14 +49,14 @@ const Layout = ({
                     </li>
                     <li>
                       <Link href={'/case-studies'}>
-                        <a onClick={toggleExtended} title={t('header:link.case-studies.title')}>
+                        <a onClick={toggleExtended} title={t('case-studies:hero.subtitle')}>
                           {t('header:link.case-studies')}
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link href={'/about'}>
-                        <a onClick={toggleExtended} title={t('header:link.about.title')}>
+                        <a onClick={toggleExtended} title={t('about:hero.subtitle')}>
                           {t('header:link.about')}
                         </a>
                       </Link>
