@@ -37,7 +37,7 @@ const HomePage = () => {
           </Column>
           <Column width={50} alignX="right">
             <div style={{ maxWidth: '480px' }}>
-              <img src="/images/step-1.png" />
+              <img src="/images/how-it-works/step-1.png" />
             </div>
           </Column>
         </Container>
@@ -51,7 +51,7 @@ const HomePage = () => {
           </Column>
           <Column width={50} alignX="right">
             <div style={{ maxWidth: '480px' }}>
-              <img src="/images/step-2.png" />
+              <img src="/images/how-it-works/step-2.png" />
             </div>
           </Column>
         </Container>
@@ -65,7 +65,7 @@ const HomePage = () => {
           </Column>
           <Column width={50} alignX="right">
             <div style={{ maxWidth: '430px' }}>
-              <img src="/images/step-3.png" />
+              <img src="/images/how-it-works/step-3.png" />
             </div>
           </Column>
         </Container>
@@ -86,7 +86,7 @@ const HomePage = () => {
           </Column>
           <Column width={50} alignX="right" alignY="center">
             <div style={{ maxWidth: '350px' }}>
-              <img src="/images/step-4.png" />
+              <img src="/images/how-it-works/step-4.png" />
             </div>
           </Column>
         </Container>
@@ -146,7 +146,7 @@ const HomePage = () => {
       <Container gridCols="12" gridGutters="11">
         <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
           <Card
-            image="/images/tosdr.jpg"
+            image="/images/reuses/tosdr.jpg"
             title="Terms of Service; Didn’t Read"
             subtitle="Permet aux utilisateurs de donner collaborativement une note aux conditions d’utilisation selon le respect de leurs droits."
             author="ToS;DR"
@@ -154,7 +154,7 @@ const HomePage = () => {
             center={true}
           ></Card>
           <Card
-            image="/images/disinfo-experiments.jpg"
+            image="/images/reuses/disinfo-experiments.jpg"
             title={t('homepage:reuses.card2.title')}
             subtitle={t('homepage:reuses.card2.subtitle')}
             author={t('homepage:reuses.card2.author')}
@@ -162,7 +162,7 @@ const HomePage = () => {
             center={true}
           ></Card>
           <Card
-            image="/images/scripta-manent.jpg"
+            image="/images/reuses/scripta-manent.jpg"
             title={t('homepage:reuses.card1.title')}
             subtitle={t('homepage:reuses.card1.subtitle')}
             author={t('homepage:reuses.card1.author')}
@@ -171,7 +171,7 @@ const HomePage = () => {
           ></Card>
 
           <Card
-            image="/images/tosback.jpg"
+            image="/images/reuses/tosback.jpg"
             title="TOSback"
             subtitle="L’ancêtre d’Open Terms Archive ! Depuis octobre 2020, les changements affichés sont fournis par une instance dédiée d’Open Terms Archive."
             author="ToS;DR & Electronic Frontier Foundation"
@@ -179,7 +179,7 @@ const HomePage = () => {
             center={true}
           ></Card>
           <Card
-            image="/images/new-reuse.jpg"
+            image="/images/reuses/new-reuse.jpg"
             className="text__center"
             title={t('homepage:reuses.card3.title')}
             subtitle={t('homepage:reuses.card3.subtitle')}
