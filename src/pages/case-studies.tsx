@@ -31,7 +31,7 @@ export default function CaseStudiesPage({ mdxContent }: WithI18nResult) {
 
       <Container gridCols="9" gridGutters="8">
         <TextContent>
-          <MDXRemote {...(mdxContent as any)} components={{ LinkIcon: LinkIcon }} />
+          <MDXRemote {...(mdxContent as any)} components={{ LinkIcon }} />
         </TextContent>
       </Container>
     </Layout>
