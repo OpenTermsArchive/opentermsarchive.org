@@ -2,9 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import s from './Divider.module.css';
 
-type DividerProps = {
-  className?: string;
-} & React.HTMLAttributes<HTMLDivElement>;
+type DividerProps = React.HTMLAttributes<HTMLDivElement>;
 
 const Divider: React.FC<DividerProps> = ({ children, className, ...props }) => {
   return (
