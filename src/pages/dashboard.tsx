@@ -212,7 +212,7 @@ const DashboardPage = React.memo(
                 {(latestVersionsCommits || []).map((versionCommit: Commit) => {
                   return (
                     <li key={`latest_versions_commits_${versionCommit.sha}`}>
-                      <LinkIcon target="_blank" href={versionCommit.html_url}>
+                      <LinkIcon target="_blank" rel="noopener" href={versionCommit.html_url}>
                         {versionCommit.commit.message.split('\n\n')[0]}
                       </LinkIcon>
                       {' - '}

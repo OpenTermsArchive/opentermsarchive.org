@@ -362,7 +362,7 @@ Thank you very much`;
                           {t('contribute/service:expertMode.button.label')}
                         </Button>
                       )}
-                      <a href={url} target="_blank" title={url}>
+                      <a href={url} target="_blank" rel="noopener" title={url}>
                         <FiExternalLink />
                       </a>
                     </div>

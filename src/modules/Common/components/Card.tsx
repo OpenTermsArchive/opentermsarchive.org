@@ -53,7 +53,7 @@ const Card: React.FC<CardProps> = ({
           <div className={classNames(s.card_author_desc, 'text__light')}>{author}</div>
         </div>
       )}
-      <a className={s.card_link} href={link} target="_blank"></a>
+      <a className={s.card_link} href={link} target="_blank" rel="noopener"></a>
     </div>
   );
 };

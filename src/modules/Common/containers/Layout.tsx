@@ -71,6 +71,7 @@ const Layout = ({
                         <a
                           className={classNames('icon_circle')}
                           target="_blank"
+                          rel="noopener"
                           title={t('header:link.twitter.title')}
                         >
                           <FiTwitter color="#fefffd" />
@@ -82,6 +83,7 @@ const Layout = ({
                         <a
                           className={classNames('icon_circle')}
                           target="_blank"
+                          rel="noopener"
                           title={t('header:link.github.title')}
                         >
                           <FiGithub color="#fefffd" />
@@ -133,6 +135,7 @@ const Layout = ({
                   <Link href="https://twitter.com/OpenTerms">
                     <a
                       target="_blank"
+                      rel="noopener"
                       title={t('footer:link.twitter.title')}
                       className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
                     >
@@ -179,14 +182,14 @@ const Layout = ({
                 </li>
                 <li>
                   <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
-                    <a title={t('footer:link.dataset.title')} target="_blank">
+                    <a title={t('footer:link.dataset.title')} target="_blank" rel="noopener">
                       {t('footer:link.dataset')}
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href="https://github.com/ambanum/OpenTermsArchive">
-                    <a title={t('footer:link.github.title')} target="_blank">
+                    <a title={t('footer:link.github.title')} target="_blank" rel="noopener">
                       {t('footer:link.github')}
                     </a>
                   </Link>

@@ -78,7 +78,7 @@ const HomePage = () => {
             <p className="mt__M h3 h3__light">{t('homepage:how.bloc4.desc')}</p>
             <p className="mt__L">
               <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
-                <a target="_blank">
+                <a target="_blank" rel="noopener">
                   <Button type="secondary">{t('homepage:how.bloc4.cta.label')}</Button>
                 </a>
               </Link>
@@ -103,11 +103,7 @@ const HomePage = () => {
               <Link href="https://twitter.com/OpenTerms">
                 <Button>{t('homepage:cta_public.case_studies.button.label')}</Button>
               </Link>
-              <LinkIcon
-                iconColor="var(--colorBlack400)"
-                href="/case-studies"
-                small={true}
-              >
+              <LinkIcon iconColor="var(--colorBlack400)" href="/case-studies" small={true}>
                 {t('homepage:cta_public.case_studies.link.label')}
               </LinkIcon>
             </ButtonBlock>

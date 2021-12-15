@@ -97,7 +97,7 @@ const SubscribeForm = ({
                   service
                 )}/${encodeURIComponent(documentType)}.md`}
               >
-                <a target="_blank" className="a__darked">
+                <a target="_blank" rel="noopener" className="a__darked">
                   {t('common:subscribe_form.changes.github')}
                 </a>
               </Link>
@@ -107,7 +107,7 @@ const SubscribeForm = ({
                   service
                 )}&typeofdocument=${encodeURIComponent(documentType)}`}
               >
-                <a target="_blank" className="a__darked">
+                <a target="_blank" rel="noopener" className="a__darked">
                   {t('common:subscribe_form.changes.scripta-manent')}
                 </a>
               </Link>
