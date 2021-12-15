@@ -3,7 +3,7 @@
 
 .buttonBlockList_header {
   text-align: center;
-  @mixin grid 6, 5;
+  @mixin grid 9, 8;
   margin: 0 auto;
 }
 
@@ -14,15 +14,21 @@
 }
 
 .buttonBlockList_items {
-  @mixin grid 10, 9;
+  @mixin grid 12, 11;
   margin: 0 auto;
-  margin-top: var(--m2XL);
+  margin-top: var(--m4XL);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 
   & > div {
-    margin: 0 calc(var(--gridGutterWidth) / 2) var(--gridGutterWidth);
+    margin: 0 var(--gridGutterWidth) var(--gridGutterWidth);
+  }
+}
+
+@media (--tabletSmall) {
+  .buttonBlockList_items {
+    margin-top: var(--m3XL);
   }
 }

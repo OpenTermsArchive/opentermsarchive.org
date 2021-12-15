@@ -5,13 +5,13 @@
 }
 
 .hero_title {
-  @mixin grid 9, 9;
+  @mixin grid 10, 10;
 }
 
 .hero_subtitle {
-  @mixin grid 11, 10;
+  @mixin grid 12, 11;
 }
 
 .hero_title + .hero_subtitle {
-  margin-top: var(--mXS);
+  margin-top: var(--mXL);
 }

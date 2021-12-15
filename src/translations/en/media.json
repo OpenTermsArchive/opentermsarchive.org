@@ -1,11 +1,13 @@
 {
   "hero.title": "Media",
-  "logo.black.background.desc": "PNG file in high definition for dark background",
-  "logo.cta.label": "Download the .png",
-  "logo.cta.svg.label": "or the .svg",
+  "logo.alternativeversion.title": "Alternative version",
+  "logo.black.background.desc": "For dark background",
+  "logo.cta.label": "Download in PNG",
+  "logo.cta.svg.label": "or in SVG",
+  "logo.mainversion.title": "Main version",
   "logo.title": "Logo",
   "logo.white.background.desc": "For white background",
-  "press.subtitle": "They talk about the Open Terms Archive",
+  "press.subtitle": "They talk about Open Terms Archive",
   "press.title": "Press review",
   "seo.title": "Media"
 }

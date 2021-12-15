@@ -35,10 +35,10 @@ const Header: React.FC<HeaderProps> = ({ children, className, ...props }) => {
       </div>
 
       <button type="button" className={classNames(s.header_openLink)} onClick={toggleExtended}>
-        {t('header:open', 'Menu')}
+        {t('header:open')}
       </button>
       <button type="button" className={classNames(s.header_closeLink)} onClick={toggleExtended}>
-        {t('header:close', 'Close')}
+        {t('header:close')}
         <FiX color="#fefffd" />
       </button>
     </header>

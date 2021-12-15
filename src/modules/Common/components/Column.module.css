@@ -123,6 +123,16 @@
     &.column__alignXright {
       justify-content: flex-start;
     }
+
+    &.column__mobile__order1 {
+      order: 1;
+      margin-top: 0;
+    }
+
+    &.column__mobile__order2 {
+      order: 2;
+      margin-top: var(--mXL);
+    }
   }
 }
 

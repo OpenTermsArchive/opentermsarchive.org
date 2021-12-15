@@ -148,14 +148,8 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
       });
 
       if (!url) {
-        notify(
-          'error',
-          t(
-            'contribute/service:could_not_create_issue',
-            `We're truly sorry but the automatic creation of this new service failed, we will need you to send us an email`
-          )
-        );
-        const subject = 'Here is a new service to track in Open Terms Archive';
+        notify('error', t('contribute/service:could_not_create_issue'));
+        const subject = 'Here is a new service to track in Open Terms Archive';
         const body = `Hi,
 
   I need you to track "${initialDocumentType}" of "${initialName}" for me.
@@ -228,11 +222,11 @@ Thank you very much`;
                 direction="left"
                 small={true}
               >
-                {t('contribute/service:back', 'Go back')}
+                {t('contribute/service:back')}
               </LinkIcon>
             </nav>
             <div>
-              <h2>{t('contribute/service:title', 'What is expected from you')}</h2>
+              <h2>{t('contribute/service:title')}</h2>
               <p>
                 <Trans i18nKey="contribute/service:description1">
                   Most of the time, contractual documents contains a header, a footer, navigation
@@ -248,7 +242,7 @@ Thank you very much`;
               </p>
             </div>
             <nav>
-              <Button onClick={passToStep(2)}>{t('contribute/service:cta', 'OK')}</Button>
+              <Button onClick={passToStep(2)}>{t('contribute/service:cta')}</Button>
             </nav>
           </>
         )}
@@ -262,28 +256,24 @@ Thank you very much`;
                 direction="left"
                 small={true}
               >
-                {t('contribute/service:back', 'Go back')}
+                {t('contribute/service:back')}
               </LinkIcon>
               <a className="a__small" onClick={passToStep(1)}>
-                {t('contribute/service:help', 'Need help?')}
+                {t('contribute/service:help')}
               </a>
             </nav>
             <div>
               <form>
                 <div>
-                  <h3>{t('contribute/service:step2.title', 'Step 2: defining this document')}</h3>
+                  <h3>{t('contribute/service:step2.title')}</h3>
                   <div className={classNames('formfield')}>
-                    <label>
-                      {t('contribute/service:step2.form.documentType', 'Type of document')}
-                    </label>
+                    <label>{t('contribute/service:step2.form.documentType')}</label>
                     <div className={classNames('select')}>
                       <select
                         onChange={onInputChange('documentType')}
                         defaultValue={initialDocumentType}
                       >
-                        <option value="">
-                          {t('contribute/service:step2.form.select', 'Select...')}
-                        </option>
+                        <option value="">{t('contribute/service:step2.form.select')}</option>
                         {documentTypes.map((documentType) => (
                           <option key={documentType} value={documentType}>
                             {documentType}
@@ -295,27 +285,15 @@ Thank you very much`;
                   </div>
 
                   <div className={classNames('formfield')}>
-                    <label>
-                      {t('contribute/service:step2.form.serviceName', 'Name of the service')}
-                    </label>
+                    <label>{t('contribute/service:step2.form.serviceName')}</label>
                     <input defaultValue={initialName} onChange={onInputChange('name')} />
                   </div>
                   {!isPdf && (
                     <>
-                      <h3>
-                        {t(
-                          'contribute/service:step3.title',
-                          'Step 3: selecting significant part of the document'
-                        )}
-                      </h3>
+                      <h3>{t('contribute/service:step3.title')}</h3>
 
                       <div className={classNames('formfield')}>
-                        <label>
-                          {t(
-                            'contribute/service:step3.form.significantPart',
-                            'Significant part(s)'
-                          )}
-                        </label>
+                        <label>{t('contribute/service:step3.form.significantPart')}</label>
                         {selectedCss.map((selected, i) => (
                           <div key={selected} className={s.selectionItem}>
                             <input
@@ -337,17 +315,12 @@ Thank you very much`;
                           disabled={!!selectable || !iframeReady}
                           type="secondary"
                         >
-                          {t('contribute/service:step3.form.significantPart.cta', 'Add part')}
+                          {t('contribute/service:step3.form.significantPart.cta')}
                         </Button>
                       </div>
 
                       <div className={classNames('formfield')}>
-                        <label>
-                          {t(
-                            'contribute/service:step3.form.insignificantPart',
-                            'Insignificant part(s)'
-                          )}
-                        </label>
+                        <label>{t('contribute/service:step3.form.insignificantPart')}</label>
                         {removedCss.map((selected, i) => (
                           <div key={selected} className={s.selectionItem}>
                             <input
@@ -369,7 +342,7 @@ Thank you very much`;
                           disabled={!!selectable || !iframeReady}
                           type="secondary"
                         >
-                          {t('contribute/service:step3.form.insignificantPart.cta', 'Remove part')}
+                          {t('contribute/service:step3.form.insignificantPart.cta')}
                         </Button>
                       </div>
                     </>
@@ -386,10 +359,10 @@ Thank you very much`;
                           type="secondary"
                           title={`Save on ${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}`}
                         >
-                          Save on local
+                          {t('contribute/service:expertMode.button.label')}
                         </Button>
                       )}
-                      <a href={url} target="_blank" title={url}>
+                      <a href={url} target="_blank" rel="noopener" title={url}>
                         <FiExternalLink />
                       </a>
                     </div>
@@ -399,10 +372,10 @@ Thank you very much`;
             </div>
             <nav>
               <a className="a__small" onClick={toggleExpertMode}>
-                {t('contribute/service:expertMode', 'Expert Mode')}
+                {t('contribute/service:expertMode')}
               </a>
               <Button disabled={submitDisabled} onClick={onValidate}>
-                {loading ? '...' : t('contribute/service:submit', 'Submit')}
+                {loading ? '...' : t('contribute/service:submit')}
               </Button>
             </nav>
           </>
@@ -410,11 +383,9 @@ Thank you very much`;
       </Drawer>
       {data?.error && (
         <div className={s.fullPage}>
-          <h1>{t('contribute/service:error.title', "We're sorry, an error occured")}</h1>
+          <h1>{t('contribute/service:error.title')}</h1>
           <p>{data?.error}</p>
-          <Button onClick={onErrorClick}>
-            {t('contribute/service:error.cta', 'Let us know!')}
-          </Button>
+          <Button onClick={onErrorClick}>{t('contribute/service:error.cta')}</Button>
         </div>
       )}
       {!data?.error && (
@@ -434,10 +405,8 @@ Thank you very much`;
             )
           ) : (
             <div className={s.fullPage}>
-              <h1>{t('contribute/service:loading.title', "We're preparing the website")}</h1>
-              <p>
-                {t('contribute/service:loading.subtitle', 'It usually takes between 5s and 30s')}
-              </p>
+              <h1>{t('contribute/service:loading.title')}</h1>
+              <p>{t('contribute/service:loading.subtitle')}</p>
               <Loading />
             </div>
           )}

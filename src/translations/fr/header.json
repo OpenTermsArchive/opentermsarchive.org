@@ -1,14 +1,10 @@
 {
-  "close": "Close",
-  "link.adddocument": "Ajouter un document",
-  "link.adddocument.title": "Ajouter un document à Open Terms Archive maintenant",
+  "close": "Fermer",
+  "link.about": "À propos",
   "link.case-studies": "Études de cas",
-  "link.case-studies.title": "Que nous a appris Open Terms Archive jusqu’à présent ?",
   "link.github.title": "Voir le code source",
   "link.home": "Accueil",
   "link.home.title": "Revenir à la page d'accueil",
-  "link.how": "Comment ça fonctionne ?",
-  "link.how.title": "Comment fonctionne Open Terms Archives ?",
   "link.twitter.title": "Suivez-nous sur Twitter",
   "open": "Menu"
 }

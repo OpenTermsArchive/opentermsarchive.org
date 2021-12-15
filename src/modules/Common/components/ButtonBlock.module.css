@@ -1,10 +1,13 @@
 .buttonBlock {
-  border: 1px solid var(--colorBlack200);
+  border: 1px solid var(--colorWhite);
   @mixin grid 3, 3;
   text-align: center;
-  padding: var(--p2XL) var(--pL) var(--pXL) var(--pL);
+  padding: var(--p2XL) var(--pM) var(--pXL) var(--pM);
   position: relative;
   flex-shrink: 0;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
 
   &.buttonBlock__fillParent {
     width: 100%;
@@ -54,7 +57,8 @@
 }
 
 .buttonBlock_actions {
-  margin-top: var(--mL);
+  margin-top: auto;
+  padding-top: var(--pM);
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,20 +1,57 @@
-import { Contributor } from 'modules/Github/api';
 import Link from 'next/link';
-import Loading from 'components/Loading';
 import React from 'react';
+import classNames from 'classnames';
 import s from './Contributors.module.css';
-import shuffle from 'lodash/fp/shuffle';
-import useSWR from 'swr';
 
 type ContributorsProps = {
-  subtitle: string;
+  subtitle?: string;
+  type?: 'core' | 'alumnis' | 'contributors' | 'all';
+  alignX?: 'left' | 'center' | 'right';
+  showInfo?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-const outsideContributors = [
+const coreContributors = [
+  {
+    login: 'Matti Schneider',
+    avatar_url: 'https://www.gravatar.com/avatar/81ee62724136cc42065a0af37aa0edc1',
+    html_url: 'https://mattischneider.fr',
+  },
+  {
+    login: 'Nicolas Dupont',
+    avatar_url: 'https://avatars.githubusercontent.com/u/1098708?v=4',
+    html_url: 'https://github.com/Ndpnt',
+  },
+  {
+    login: 'Clément Biron',
+    avatar_url: 'https://avatars.githubusercontent.com/u/364319?v=4',
+    html_url: 'https://clementbiron.com',
+  },
+  {
+    login: 'Martin Ratinaud',
+    avatar_url: 'https://avatars.githubusercontent.com/u/4191809?v=4',
+    html_url: 'https://github.com/martinratinaud',
+  },
   {
     html_url: 'https://twitter.com/Elsa_Trujillo_',
     avatar_url: 'https://avatars.githubusercontent.com/u/86837188?v=4',
     login: 'Elsa Trujillo',
+  },
+];
+
+const alumnisContributors = [
+  {
+    login: 'Siegrid Henry',
+    avatar_url: 'https://avatars.githubusercontent.com/u/49791551?v=4',
+    html_url: 'https://github.com/SiegridHenry',
+  },
+];
+
+const contributors = [
+  {
+    html_url: 'https://twitter.com/henriverdier',
+    avatar_url:
+      'https://pbs.twimg.com/profile_images/1359173368436686848/1GNqcMOf_reasonably_small.jpg',
+    login: 'Henri Verdier',
   },
   {
     html_url: 'https://twitter.com/marineguillaum',
@@ -23,16 +60,35 @@ const outsideContributors = [
     login: 'Marine Guillaume',
   },
   {
+    login: 'Adrien Fines',
+    avatar_url: 'https://avatars.githubusercontent.com/u/41912392?v=4',
+    html_url: 'https://github.com/AdrienFines',
+  },
+  {
+    login: 'Michiel de Jong',
+    avatar_url: 'https://avatars.githubusercontent.com/u/408412?v=4',
+    html_url: 'https://github.com/michielbdejong',
+  },
+  {
+    login: 'Lucas Verney',
+    avatar_url: 'https://avatars.githubusercontent.com/u/58298410?v=4',
+    html_url: 'https://github.com/LVerneyPEReN',
+  },
+  {
+    login: 'Tom Houriez',
+    avatar_url: 'https://avatars.githubusercontent.com/u/70654947?v=4',
+    html_url: 'https://github.com/THouriezPEReN',
+  },
+  {
+    login: 'Antoine Vernois',
+    avatar_url: 'https://avatars.githubusercontent.com/u/765477?v=4',
+    html_url: 'https://github.com/avernois',
+  },
+  {
     html_url: 'https://twitter.com/lvdefranssu',
     avatar_url:
       'https://pbs.twimg.com/profile_images/1435510938979942405/GZUnqvtH_reasonably_small.jpg',
     login: 'Louis-Victor de Franssu',
-  },
-  {
-    html_url: 'https://twitter.com/henriverdier',
-    avatar_url:
-      'https://pbs.twimg.com/profile_images/1359173368436686848/1GNqcMOf_reasonably_small.jpg',
-    login: 'Henri Verdier',
   },
   {
     html_url: 'https://twitter.com/hureaux',
@@ -40,52 +96,91 @@ const outsideContributors = [
       'https://pbs.twimg.com/profile_images/1784831840/politique-twitter_reasonably_small.jpg',
     login: 'Jeremy Hureaux',
   },
+  {
+    login: 'Vincent Viers',
+    avatar_url: 'https://avatars.githubusercontent.com/u/30295971?v=4',
+    html_url: 'https://github.com/vviers',
+  },
+  {
+    login: 'Christian Quest',
+    avatar_url: 'https://avatars.githubusercontent.com/u/1202668?v=4',
+    html_url: 'https://github.com/cquest',
+  },
+  {
+    login: 'Aaronj Sugarman',
+    avatar_url: 'https://avatars.githubusercontent.com/u/82889095?v=4',
+    html_url: 'https://github.com/AaronjSugarman',
+  },
+  {
+    login: 'Marius Karnauskas',
+    avatar_url: 'https://avatars.githubusercontent.com/u/1094012?v=4',
+    html_url: 'https://github.com/karnauskas',
+  },
+  {
+    login: 'GatienH',
+    avatar_url: 'https://avatars.githubusercontent.com/u/6501059?v=4',
+    html_url: 'https://github.com/GatienH',
+  },
 ];
 
-const Contributors: React.FC<ContributorsProps> = React.memo(({ subtitle }) => {
-  const { data } = useSWR('/api/ota/contributors/all', {
-    revalidateOnMount: true,
-  });
-
-  const loading = !data;
-
-  if (loading) {
-    return <Loading />;
+const getContributorsByType = (type: ContributorsProps['type']) => {
+  switch (type) {
+    case 'core':
+      return coreContributors;
+    case 'alumnis':
+      return alumnisContributors;
+    case 'contributors':
+      return contributors;
+    case 'all':
+    default:
+      return [...coreContributors, ...alumnisContributors, ...contributors];
   }
+};
 
-  const contributors = shuffle([...outsideContributors, ...data]);
+const Contributors: React.FC<ContributorsProps> = React.memo(
+  ({ subtitle, type = 'all', alignX = 'center', showInfo = false, className, ...props }) => {
+    const contributors = getContributorsByType(type);
 
-  return (
-    <div className={s.contributors}>
-      <div className="text__smallcaps text__center">{subtitle}</div>
-      <div className={s.contributors_items}>
-        {contributors.map((contributor: Contributor) => {
-          if (contributor.type !== 'Bot') {
+    return (
+      <div
+        className={classNames(
+          s.contributors,
+          s[`contributors__alignX${alignX}`],
+          showInfo ? s.contributors__showInfos : null,
+          className
+        )}
+        {...props}
+      >
+        {subtitle && <h4 className={classNames(s.contributors_subtitle)}>{subtitle}</h4>}
+        <div className={s.contributors_items}>
+          {contributors.map(({ login, avatar_url, html_url }) => {
             return (
-              <div className={s.contributor}>
-                <Link href={contributor.html_url}>
+              <div className={s.contributor} key={`${login}`}>
+                <Link href={html_url}>
                   <a
                     target="_blank"
-                    rel="nofollow"
+                    rel="nofollow noopener"
                     className={s.contributor_link}
-                    title={contributor.login}
+                    title={login}
+                    key={`${login}_link`}
                   >
                     <img
                       className={s.contributor_image}
-                      src={contributor.avatar_url}
-                      alt={contributor.login}
-                      width="64"
-                      height="64"
+                      src={avatar_url}
+                      alt={login}
+                      width={64}
+                      height={64}
                     />
+                    {showInfo && <div className={s.contributor_info}>{login}</div>}
                   </a>
                 </Link>
               </div>
             );
-          }
-        })}
+          })}
+        </div>
       </div>
-    </div>
-  );
-});
+    );
+  }
+);
 
 export default Contributors;

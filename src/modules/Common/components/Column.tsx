@@ -10,6 +10,7 @@ type ColumnProps = {
   alignX?: 'center' | 'right'; //Default positionning is left
   alignY?: 'center' | 'bottom'; //Default positionning is top
   hideOnTablet?: boolean;
+  mobileOrder?: number;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const Column: React.FC<ColumnProps> = ({
@@ -20,6 +21,7 @@ const Column: React.FC<ColumnProps> = ({
   alignX,
   alignY,
   hideOnTablet = false,
+  mobileOrder = 0,
   className,
   ...props
 }) => {
@@ -32,15 +34,14 @@ const Column: React.FC<ColumnProps> = ({
         s[`column__alignX${alignX}`],
         s[`column__alignY${alignY}`],
         { [s.column__hideOnTablet]: hideOnTablet === true },
+        s[`column__mobile__order${mobileOrder}`],
         className
       )}
       {...props}
     >
       <div className={s.column_header}>
-        {subtitle ? (
-          <div className={classNames('text__smallcaps', s.column_subtitle)}>{subtitle}</div>
-        ) : undefined}
-        {title ? <h2 className={s.column_title}>{title}</h2> : undefined}
+        {title && <h2 className={s.column_title}>{title}</h2>}
+        {subtitle && <h3 className={classNames(s.column_subtitle, 'h3__light')}>{subtitle}</h3>}
       </div>
       <div className={s.column_desc}>{children}</div>
     </div>

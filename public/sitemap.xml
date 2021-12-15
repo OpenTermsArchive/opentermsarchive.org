@@ -7,22 +7,12 @@
 		<priority>1.00</priority>
 	</url>
 	<url>
-		<loc>https://opentermsarchive.org/en/how-it-works</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
 		<loc>https://opentermsarchive.org/en/case-studies</loc>
 		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
 	<url>
 		<loc>https://opentermsarchive.org/en/contribute</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://opentermsarchive.org/how-it-works</loc>
 		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
 		<priority>0.80</priority>
 	</url>
@@ -40,11 +30,6 @@
 		<loc>https://opentermsarchive.org/en/privacy-policy</loc>
 		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
 		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://opentermsarchive.org/fr/how-it-works</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>https://opentermsarchive.org/fr/case-studies</loc>
