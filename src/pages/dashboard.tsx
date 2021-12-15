@@ -23,6 +23,7 @@ import ServicesList from 'modules/Common/components/ServicesList';
 import TextContent from 'modules/Common/components/TextContent';
 import dayjs from 'dayjs';
 import localizedFormat from 'dayjs/plugin/localizedFormat';
+import st from '../modules/Common/components/TextContent.module.css';
 import useSWR from 'swr';
 import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
@@ -208,7 +209,7 @@ const DashboardPage = React.memo(
             subtitle={t('dashboard:latestversionscommits.subtitle')}
           >
             <TextContent>
-              <ul>
+              <ul className={st.textContent__noListStyle}>
                 {(latestVersionsCommits || []).map((versionCommit: Commit) => {
                   return (
                     <li key={`latest_versions_commits_${versionCommit.sha}`}>
