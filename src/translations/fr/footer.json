@@ -1,8 +1,6 @@
 {
-  "link.api": "API",
-  "link.api.title": "Utiliser l'API",
+  "link.about": "About",
   "link.case-studies": "Études de cas",
-  "link.case-studies.title": "Que nous a appris Open Terms Archive jusqu’à présent ?",
   "link.contact": "Contactez-nous",
   "link.contact.title": "Contactez nous par email",
   "link.contribute": "Contribuer",
@@ -10,18 +8,14 @@
   "link.dashboard.title": "Des données pour mesurer l'activité",
   "link.dataset": "Dataset",
   "link.dataset.title": "Télécharger un jeu de données",
-  "link.github": "GitHub",
+  "link.github": "Source code",
   "link.github.title": "Voir le code source",
   "link.home": "Accueil",
-  "link.how": "Fonctionnement",
   "link.media": "Média",
-  "link.media.title": "Ils parlent d'Open Terms Archive",
   "link.privacy": "Politique de confidentialité",
-  "link.privacy.title": "Lire la politique de confidentialité du site d'Open Terms Archive",
-  "link.showcase": "Cas d'usage",
+  "link.privacy.title": "Read the privacy policy of Open Terms Archive website",
   "link.tos": "Mentions légales",
-  "link.tos.title": "Lire les mentions légales du site d'Open Terms Archive",
+  "link.tos.title": "Read the legal notice of Open Terms Archive website",
   "link.twitter": "Suivez-nous",
-  "link.twitter.title": "Suivez-nous sur Twitter",
-  "link.values": "Valeurs"
+  "link.twitter.title": "Suivez-nous sur Twitter"
 }
