@@ -133,8 +133,8 @@ const SubscribeForm = ({
       {!!consent && (
         <div className={classNames('formfield')}>
           <TextContent>
-            <p className="text__light">{t('common:subscribe_form.p3')}</p>
             <p className="text__light">{t('common:subscribe_form.p1')}</p>
+            <p className="text__light">{t('common:subscribe_form.p2')}</p>
             <p className="text__light">{t('common:subscribe_form.p3')}</p>
           </TextContent>
         </div>
