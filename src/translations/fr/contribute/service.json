@@ -7,6 +7,7 @@
   "error.cta": "Faites-nous savoir !",
   "error.title": "Nous sommes désolés, une erreur est survenue",
   "expertMode": "Mode expert",
+  "expertMode.button.label": "Save on local",
   "help": "Besoin d'aide ?",
   "loading.subtitle": "Cela prend généralement entre 5s et 30s",
   "loading.title": "Nous préparons le site Web",
