@@ -7,7 +7,6 @@ type ContributorsProps = {
   subtitle?: string;
   type?: 'core' | 'alumnis' | 'contributors' | 'all';
   alignX?: 'left' | 'center' | 'right';
-  className?: string;
   showInfo?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
