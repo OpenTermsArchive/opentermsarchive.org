@@ -1,9 +1,9 @@
 // import Image from 'next/image';
 import React from 'react';
 import classNames from 'classnames';
-import s from './ThumbGaleryItem.module.css';
+import s from './ThumbGalleryItem.module.css';
 
-type ThumbGaleryItemProps = {
+type ThumbGalleryItemProps = {
   width: string;
   height: string;
   src: string;
@@ -11,7 +11,7 @@ type ThumbGaleryItemProps = {
   className?: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-const ThumbGaleryItem: React.FC<ThumbGaleryItemProps> = ({
+const ThumbGalleryItem: React.FC<ThumbGalleryItemProps> = ({
   children,
   width,
   height,
@@ -35,4 +35,4 @@ const ThumbGaleryItem: React.FC<ThumbGaleryItemProps> = ({
   );
 };
 
-export default ThumbGaleryItem;
+export default ThumbGalleryItem;

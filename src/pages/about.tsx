@@ -8,8 +8,8 @@ import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import ThumbGalery from 'modules/Common/components/ThumbGalery';
-import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
+import ThumbGallery from 'modules/Common/components/ThumbGallery';
+import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
 import { useTranslation } from 'next-i18next';
 
 export default function AboutPage({ mdxContent }: WithI18nResult) {
@@ -30,8 +30,8 @@ export default function AboutPage({ mdxContent }: WithI18nResult) {
             components={{
               Contributors: Contributors,
               Link: Link,
-              ThumbGalery: ThumbGalery,
-              ThumbGaleryItem: ThumbGaleryItem,
+              ThumbGallery: ThumbGallery,
+              ThumbGalleryItem: ThumbGalleryItem,
             }}
           />
         </TextContent>

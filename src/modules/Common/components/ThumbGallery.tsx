@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import s from './ThumbGalery.module.css';
+import s from './ThumbGallery.module.css';
 
-type ThumbGaleryProps = {
+type ThumbGalleryProps = {
   title?: string;
   subtitle?: string;
   titleLevel?: 'h2' | 'h3' | 'h4';
@@ -11,7 +11,7 @@ type ThumbGaleryProps = {
   className?: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-const ThumbGalery: React.FC<ThumbGaleryProps> = ({
+const ThumbGallery: React.FC<ThumbGalleryProps> = ({
   children,
   title,
   subtitle,
@@ -45,4 +45,4 @@ const ThumbGalery: React.FC<ThumbGaleryProps> = ({
   );
 };
 
-export default ThumbGalery;
+export default ThumbGallery;
