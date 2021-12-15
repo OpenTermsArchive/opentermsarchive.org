@@ -19,7 +19,7 @@ h2,
   font-style: normal;
   font-weight: bold;
   font-size: 3.8rem;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.4px;
   color: var(--colorBlack900);
   line-height: 1.4;
 
@@ -39,7 +39,7 @@ h3,
   font-style: normal;
   font-weight: bold;
   font-size: 3rem;
-  letter-spacing: -1.2px;
+  letter-spacing: -0.4px;
   color: var(--colorBlack900);
   line-height: 1.4;
 
@@ -63,7 +63,7 @@ h4,
   font-style: normal;
   font-weight: bold;
   font-size: 2.4rem;
-  letter-spacing: 0;
+  letter-spacing: -0.4px;
   color: var(--colorBlack900);
   line-height: 1.4;
 
