@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import s from './CardList.module.css';
 
 type CardListProps = {
-  className?: string;
   title?: string;
   subtitle?: string;
 } & React.HTMLAttributes<HTMLDivElement>;
