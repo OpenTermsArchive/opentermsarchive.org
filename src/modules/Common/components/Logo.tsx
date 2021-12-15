@@ -7,7 +7,6 @@ import classNames from 'classnames';
 import s from './Logo.module.css';
 
 type LogoProps = {
-  className?: string;
   backgroundType?: 'white' | 'black';
   size?: 'small' | 'medium' | 'large' | 'full';
   type?: 'normal' | 'alternative';
