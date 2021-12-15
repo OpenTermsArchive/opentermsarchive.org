@@ -37,7 +37,7 @@ export default function CommonHead({
 
       <link rel="alternate" href={`${currentUrl}`} hrefLang="x-default" />
       {(router?.locales || [])
-        .filter((locale) => locale !== '__default')
+        .filter((locale) => locale !== 'default')
         .map((locale) => (
           <link
             key={`alternate_${locale}`}
