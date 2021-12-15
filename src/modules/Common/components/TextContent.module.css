@@ -75,6 +75,10 @@
     }
   }
 
+  & .textContent__noListStyle {
+    list-style-type: none;
+  }
+
   & blockquote {
     margin-bottom: var(--mM);
   }
