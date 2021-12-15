@@ -52,9 +52,7 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
     return (
       <>
         <div className={classNames('formfield')}>
-          <label htmlFor="services">
-            {t('common:subscribe_form.fields.service.label', 'Select a service')}
-          </label>
+          <label htmlFor="services">{t('common:subscribe_form.fields.service.label')}</label>
           <div className={classNames('select')}>
             {
               // This is done in order for default values to be selected correctly
@@ -68,15 +66,8 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
                   defaultValue={selectedService}
                   {...serviceProps}
                 >
-                  <option value="">
-                    {t('common:subscribe_form.fields.service.default', 'Select...')}
-                  </option>
-                  <optgroup
-                    label={t(
-                      'common:subscribe_form.fields.service.optgroup.gatekeepers',
-                      'Gatekeepers'
-                    )}
-                  >
+                  <option value="">{t('common:subscribe_form.fields.service.default')}</option>
+                  <optgroup label={t('common:subscribe_form.fields.service.optgroup.gatekeepers')}>
                     {dmaServices.map((service) => (
                       <option
                         key={`dma_${selectedService}_${service}`}
@@ -88,10 +79,7 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
                     ))}
                   </optgroup>
                   <optgroup
-                    label={t(
-                      'common:subscribe_form.fields.service.optgroup.otherservices',
-                      'Other services'
-                    )}
+                    label={t('common:subscribe_form.fields.service.optgroup.otherservices')}
                   >
                     {Object.keys(services || {}).map((service) => (
                       <option
@@ -110,9 +98,7 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
           </div>
         </div>
         <div className={classNames('formfield')}>
-          <label htmlFor="documentTypes">
-            {t('common:subscribe_form.fields.document.label', 'Select a document type')}
-          </label>
+          <label htmlFor="documentTypes">{t('common:subscribe_form.fields.document.label')}</label>
           <div className={classNames('select')}>
             {
               // This is done in order for default values to be selected correctly
@@ -126,9 +112,7 @@ const SelectService: React.FC<SelectServiceProps> = React.memo(
                   defaultValue={selectedDocumentType}
                   {...documentTypeProps}
                 >
-                  <option value="">
-                    {t('common:subscribe_form.fields.document.default', 'Select...')}
-                  </option>
+                  <option value="">{t('common:subscribe_form.fields.document.default')}</option>
                   {documentTypes.map((documentType) => (
                     <option key={`${selectedService}_${documentType}`} value={documentType}>
                       {documentType}

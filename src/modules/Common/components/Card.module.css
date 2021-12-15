@@ -1,0 +1,78 @@
+.card {
+  border: 1px solid var(--colorBlack200);
+  border-radius: 4px;
+  @mixin grid 4, 3;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &.card__center {
+    text-align: center;
+
+    & > .card_author {
+      text-align: left;
+    }
+  }
+}
+
+.card__isLink {
+  cursor: pointer;
+
+  &:hover {
+    color: var(--colorSecondary);
+    border: 1px solid var(--colorSecondary);
+  }
+}
+
+.card_link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card_header {
+  position: relative;
+  height: 180px;
+}
+
+.card_body {
+  padding: var(--pL) var(--pM) var(--pM) var(--pM);
+}
+
+.card_title {
+}
+
+.card_subtitle {
+  margin-top: var(--mXS);
+}
+
+.card_children {
+  margin-top: var(--mM);
+
+  & p:not(:last-child) {
+    margin-bottom: var(--mM);
+  }
+
+  & button:not(:last-child) {
+    margin-bottom: var(--mXL);
+  }
+}
+
+.card_author {
+  border-top: 1px solid var(--colorBlack200);
+  padding: var(--pM);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  margin-top: auto;
+}
+
+.card_author_icon {
+  margin-right: var(--mXS);
+}
+.card_author_desc {
+}

@@ -12,7 +12,7 @@ export default function LegalNoticePage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();
 
   return (
-    <Layout title={t('legal-notice:seo.title', 'Legal Notice')}>
+    <Layout title={t('legal-notice:seo.title')}>
       <Container gridCols="10" gridGutters="9" paddingX={false}>
         <TextContent>
           <MDXRemote {...(mdxContent as any)} components={{ Button }} />

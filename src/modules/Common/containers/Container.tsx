@@ -19,6 +19,7 @@ type ContainerProps = {
   gridCols?: string;
   gridGutters?: string;
   backgroundImage?: string;
+  alignX?: 'left' | 'center' | 'right';
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const Container: React.FC<ContainerProps> = ({
@@ -39,6 +40,7 @@ const Container: React.FC<ContainerProps> = ({
   gridCols = '12',
   gridGutters = '11',
   backgroundImage,
+  alignX = 'center',
   ...props
 }: ContainerProps) => {
   let additionnalStyle: any = {};
@@ -68,6 +70,7 @@ const Container: React.FC<ContainerProps> = ({
         { [s.container__hasNoPaddingBottom]: paddingBottom === false },
         { [s.container__hasPaddingYSmall]: paddingYSmall === true },
         s[`container__${gridCols}${gridGutters}`],
+        s[`container__alignX${alignX}`],
         className
       )}
       style={additionnalStyle}

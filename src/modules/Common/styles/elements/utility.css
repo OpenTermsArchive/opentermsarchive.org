@@ -18,6 +18,11 @@
   text-align: left;
 }
 
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* padding left utility */
 .pl__0 {
   padding-left: 0;

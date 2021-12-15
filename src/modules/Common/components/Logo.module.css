@@ -1,7 +1,12 @@
 .logo {
   & svg {
-    width: 276px;
-    height: 37px;
+    height: 40px;
+  }
+
+  &.logo__alternative {
+    & svg {
+      height: 76px;
+    }
   }
 }
 
@@ -11,8 +16,10 @@
 }
 .logo__large {
 }
+
 .logo__full {
   width: 100%;
+
   & svg {
     height: auto;
     width: 100%;
@@ -23,8 +30,7 @@
   .logo {
     margin-top: 8px;
     & svg {
-      width: 200px;
-      height: 27px;
+      height: 32px;
     }
   }
 }

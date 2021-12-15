@@ -14,11 +14,11 @@ import Layout from 'modules/Common/containers/Layout';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import Logo from 'modules/Common/components/Logo';
 import React from 'react';
-import ShowcaseItem from 'modules/Common/components/ShowcaseItem';
-import ShowcaseList from 'modules/Common/components/ShowcaseList';
+import ShowcaseItem from 'modules/Common/components/Card';
+import ShowcaseList from 'modules/Common/components/CardList';
 import TextContent from 'modules/Common/components/TextContent';
-import ThumbGalery from 'modules/Common/components/ThumbGalery';
-import ThumbGaleryItem from 'modules/Common/components/ThumbGaleryItem';
+import ThumbGallery from 'modules/Common/components/ThumbGallery';
+import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
 import classNames from 'classnames';
 
 const DesignPage = () => {
@@ -84,7 +84,7 @@ const DesignPage = () => {
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero
             title="Hero with background, dark, title and subtitle"
-            subtitle="Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms."
+            subtitle="Services have terms that can change over time. Open Terms Archive enables users rights advocates, regulatory bodies and any interested citizen to follow the changes to these terms."
           ></Hero>
         </Container>
       </Container>
@@ -293,7 +293,6 @@ const DesignPage = () => {
           <ShowcaseList>
             <ShowcaseItem
               title="Scripta Manent"
-              desc="Explore the contractual documents of the main online service providers and compare their evolution through time."
               author="By the team of the French Ambassador for Digital Affairs"
             >
               <LinkIcon iconColor="var(--colorPrimary)" href="https://www.google.fr">
@@ -302,7 +301,6 @@ const DesignPage = () => {
             </ShowcaseItem>
             <ShowcaseItem
               title="Disinfo experiments"
-              desc="Experiments are ongoing so as to produce use cases using Open Terms Archive data."
               author="By the team of the French Ambassador for Digital Affairs"
             >
               <LinkIcon iconColor="var(--colorPrimary)" href="https://www.google.fr">
@@ -313,7 +311,7 @@ const DesignPage = () => {
         </Column>
         <Column width={50} alignX="center" alignY="center">
           <ButtonBlock
-            title="Have you developed an Open Terms Archive based tool?"
+            title="Have you developed an Open Terms Archive based tool?"
             desc="Let the community know about it here"
             fillParent={true}
           >
@@ -325,34 +323,34 @@ const DesignPage = () => {
       {/* Partners */}
       <Container paddingY={false} layout="fluid">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <ThumbGalery
+          <ThumbGallery
             title="Our Partners"
             titleLevel="h3"
-            subtitle="They make Open Terms Archive existing"
+            subtitle="They make Open Terms Archive existing"
           >
-            <ThumbGaleryItem src="/images/logo-ambnum.png" width="158" height="80" />
-            <ThumbGaleryItem src="/images/logo-gdi.png" width="150" height="32" />
-            <ThumbGaleryItem src="/images/logo-peren.png" width="110" height="84" />
-          </ThumbGalery>
+            <ThumbGalleryItem src="/images/logo-ambnum.png" width="158" height="80" />
+            <ThumbGalleryItem src="/images/logo-gdi.png" width="150" height="32" />
+            <ThumbGalleryItem src="/images/logo-peren.png" width="110" height="84" />
+          </ThumbGallery>
         </Container>
       </Container>
 
       {/* Press */}
       <Container paddingY={false} gray={true} layout="fluid">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingYSmall={true}>
-          <ThumbGalery
+          <ThumbGallery
             title="Press"
             titleLevel="h4"
-            subtitle="They talk about Open Terms Archive"
+            subtitle="They talk about Open Terms Archive"
             small={true}
           >
-            <ThumbGaleryItem src="/images/01net.png" width="75" height="32" small={true} />
-            <ThumbGaleryItem src="/images/labofnac.png" width="125" height="18" small={true} />
-            <ThumbGaleryItem src="/images/nextimpact.png" width="122" height="30" small={true} />
-            <ThumbGaleryItem src="/images/numerama.png" width="119" height="24" small={true} />
-            <ThumbGaleryItem src="/images/zdnet.png" width="76" height="50" small={true} />
-            <ThumbGaleryItem src="/images/wired.png" width="112" height="20" small={true} />
-          </ThumbGalery>
+            <ThumbGalleryItem src="/images/01net.png" width="75" height="32" small={true} />
+            <ThumbGalleryItem src="/images/labofnac.png" width="125" height="18" small={true} />
+            <ThumbGalleryItem src="/images/nextimpact.png" width="122" height="30" small={true} />
+            <ThumbGalleryItem src="/images/numerama.png" width="119" height="24" small={true} />
+            <ThumbGalleryItem src="/images/zdnet.png" width="76" height="50" small={true} />
+            <ThumbGalleryItem src="/images/wired.png" width="112" height="20" small={true} />
+          </ThumbGallery>
         </Container>
       </Container>
     </Layout>
