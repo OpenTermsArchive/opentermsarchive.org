@@ -28,10 +28,10 @@ export default function AboutPage({ mdxContent }: WithI18nResult) {
           <MDXRemote
             {...(mdxContent as any)}
             components={{
-              Contributors: Contributors,
-              Link: Link,
-              ThumbGallery: ThumbGallery,
-              ThumbGalleryItem: ThumbGalleryItem,
+              Contributors,
+              Link,
+              ThumbGallery,
+              ThumbGalleryItem,
             }}
           />
         </TextContent>
