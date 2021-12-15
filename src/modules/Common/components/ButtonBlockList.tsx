@@ -18,11 +18,11 @@ const ButtonBlocList: React.FC<ButtonBlocListProps> = ({
   return (
     <div className={classNames(s.buttonBlockList, className)} {...props}>
       <div className={classNames(s.buttonBlockList_header)}>
-        {subTitle ? (
+        {subTitle && (
           <div className={classNames(s.buttonBlockList_subtitle, 'text__smallcaps')}>
             {subTitle}
           </div>
-        ) : undefined}
+        )}
         <h2 className={classNames(s.buttonBlockList_title)}>{title}</h2>
       </div>
       <div className={classNames(s.buttonBlockList_items)}>{children}</div>

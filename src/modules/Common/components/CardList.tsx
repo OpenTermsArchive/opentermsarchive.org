@@ -12,10 +12,8 @@ const CardList: React.FC<CardListProps> = ({ title, subtitle, children, classNam
   return (
     <div className={classNames(s.cardList, className)} {...props}>
       <div className={s.cardList_header}>
-        {title ? <h2 className={s.cardList_title}>{title}</h2> : undefined}
-        {subtitle ? (
-          <h3 className={classNames(s.cardList_subtitle, 'h3__light')}>{subtitle}</h3>
-        ) : undefined}
+        {title && <h2 className={s.cardList_title}>{title}</h2>}
+        {subtitle && <h3 className={classNames(s.cardList_subtitle, 'h3__light')}>{subtitle}</h3>}
       </div>
       <div className={classNames(s.cardList_items)}>{children}</div>
     </div>

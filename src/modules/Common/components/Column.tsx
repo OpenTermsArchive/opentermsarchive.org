@@ -40,10 +40,8 @@ const Column: React.FC<ColumnProps> = ({
       {...props}
     >
       <div className={s.column_header}>
-        {title ? <h2 className={s.column_title}>{title}</h2> : undefined}
-        {subtitle ? (
-          <h3 className={classNames(s.column_subtitle, 'h3__light')}>{subtitle}</h3>
-        ) : undefined}
+        {title && <h2 className={s.column_title}>{title}</h2>}
+        {subtitle && <h3 className={classNames(s.column_subtitle, 'h3__light')}>{subtitle}</h3>}
       </div>
       <div className={s.column_desc}>{children}</div>
     </div>
