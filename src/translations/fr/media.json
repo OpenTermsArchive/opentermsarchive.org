@@ -1,13 +1,13 @@
 {
   "hero.title": "Média",
-  "logo.alternativeversion.title": "Alternative version",
-  "logo.black.background.desc": "For dark background",
-  "logo.cta.label": "Download in PNG",
-  "logo.cta.svg.label": "or in SVG",
-  "logo.mainversion.title": "Main version",
+  "logo.alternativeversion.title": "Version alternative",
+  "logo.black.background.desc": "Pour fond sombre",
+  "logo.cta.label": "Télécharger en PNG",
+  "logo.cta.svg.label": "ou en SVG",
+  "logo.mainversion.title": "Version principale",
   "logo.title": "Logo",
   "logo.white.background.desc": "Pour fond blanc",
-  "press.subtitle": "They talk about Open Terms Archive",
-  "press.title": "Revues de presse",
+  "press.subtitle": "Ces articles mentionnent Open Terms Archive",
+  "press.title": "Revue de presse",
   "seo.title": "Média"
 }
