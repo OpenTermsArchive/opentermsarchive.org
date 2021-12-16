@@ -1,10 +1,10 @@
 {
-  "close": "Close",
-  "link.about": "About",
-  "link.case-studies": "Case studies",
-  "link.github.title": "See the source code",
-  "link.home": "Home",
-  "link.home.title": "Back to home page",
-  "link.twitter.title": "Follow us",
-  "open": "Menu"
+  "close": "Cerrar",
+  "link.about": "Acerca de",
+  "link.case-studies": "Casos de estudio",
+  "link.github.title": "Obtener el código",
+  "link.home": "Inicio",
+  "link.home.title": "Volver al inicio",
+  "link.twitter.title": "Síguenos",
+  "open": "Menú"
 }
