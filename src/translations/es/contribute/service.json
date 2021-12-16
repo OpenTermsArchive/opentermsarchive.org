@@ -1,8 +1,8 @@
 {
-  "back": "Go back",
-  "could_not_create_issue": "We're truly sorry but the automatic creation of this new service failed, we will need you to send us an email",
-  "cta": "OK",
-  "description1": "Most of the time, contractual documents contains a header, a footer, navigation menus, possibly ads… We aim at tracking only <2>the significant parts of the document</2>",
+  "back": "Volver atrás",
+  "could_not_create_issue": "Lo sentimos mucho, pero la creación automática de este nuevo servicio falló, necesitaremos que nos envíes un correo electrónico",
+  "cta": "Acepto",
+  "description1": "La mayoría de las veces, los documentos contractuales contienen los encabezados y pies de página, menús de navegación y posiblemente anuncios que se vinculan por separado… Solo nos interesa apuntar <2>las partes significativas de un documento</2>",
   "description2": "In order to achieve that, you will have to select the part of the documents that contains the relevant part and remove the insignificant parts.",
   "error.cta": "Let us know!",
   "error.title": "We're sorry, an error occured",
