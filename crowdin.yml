@@ -3,3 +3,7 @@ files:
     ignore:
       - /src/translations/default
     translation: /src/translations/%two_letters_code%/**/%original_file_name%
+  - source: /src/translations/en/**/*.mdx
+    ignore:
+      - /src/translations/default
+    translation: /src/translations/%two_letters_code%/**/%original_file_name%
