@@ -1,13 +1,13 @@
 {
   "hero.title": "Documentación",
   "logo.alternativeversion.title": "Versiones alternativas",
-  "logo.black.background.desc": "For dark background",
-  "logo.cta.label": "Download in PNG",
-  "logo.cta.svg.label": "or in SVG",
-  "logo.mainversion.title": "Main version",
-  "logo.title": "Logo",
-  "logo.white.background.desc": "For white background",
-  "press.subtitle": "They talk about Open Terms Archive",
+  "logo.black.background.desc": "Usar el tema oscuro",
+  "logo.cta.label": "Guardar imagen con formato PNG",
+  "logo.cta.svg.label": "otramente en formato de archivo SVG",
+  "logo.mainversion.title": "Versión principal",
+  "logo.title": "Diseño gráfico",
+  "logo.white.background.desc": "Usar sobre fondo blanco",
+  "press.subtitle": "Testimonios de los resultados de haber utilizado Open Terms Archive",
   "press.title": "Press review",
   "seo.title": "Media"
 }
