@@ -17,7 +17,7 @@
   "latestversionscommits.subtitle": "on the tracked documents",
   "latestversionscommits.title": "Últimos cambios registrados",
   "seo.title": "Pantalla principal",
-  "serviceslist.subtitle": "{{count}} services and related documents",
-  "serviceslist.subtitle_plural": "{{count}} services and related documents",
+  "serviceslist.subtitle": "{{count}} servicios y documentos relacionados",
+  "serviceslist.subtitle_plural": "{{count}} servicios y documentos relacionados",
   "serviceslist.title": "Registro de servicios"
 }
