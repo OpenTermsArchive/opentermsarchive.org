@@ -25,11 +25,11 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   const router = useRouter();
   const { t } = useTranslation();
   const { notify } = useNotifier();
-  useEvent('touchstart', () => {
-    router.push('/contribute/sorry');
-  });
   const {
     queryParams: {
+      destination,
+      localPath,
+      versionsRepo,
       url,
       step: initialStep,
       selectedCss: initialSelectedCss,
@@ -40,6 +40,17 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     },
     pushQueryParam,
   } = useUrl();
+  const commonUrlParams = `destination=${destination}${localPath ? `&localPath=${localPath}` : ''}${
+    versionsRepo ? `&versionsRepo=${versionsRepo}` : ''
+  }`;
+  useEvent('touchstart', () => {
+    router.push(`/contribute/sorry?${commonUrlParams}`);
+  });
+
+  if (!destination && typeof window !== 'undefined') {
+    // This is here as previously created issues still point at a url that has no `destination` param
+    pushQueryParam('destination')('OpenTermsArchive/services-all');
+  }
 
   const json = {
     name: initialName || '???',
@@ -141,6 +152,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
       const {
         data: { url },
       } = await api.post<PostContributeServiceResponse>('/api/contribute/services', {
+        destination,
         json,
         name: initialName,
         documentType: initialDocumentType,
@@ -162,11 +174,11 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
           `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
           '_blank'
         );
-        router.push(`/contribute/thanks?email`);
+        router.push(`/contribute/thanks?${commonUrlParams}&email=true`);
         return;
       }
-      router.push(`/contribute/thanks?url=${encodeURIComponent(url)}`);
-    } catch (e) {
+      router.push(`/contribute/thanks?${commonUrlParams}&url=${encodeURIComponent(url)}`);
+    } catch (e: any) {
       notify('error', e.toString());
       toggleLoading(false);
     }
@@ -191,12 +203,13 @@ Thank you very much`;
       '_blank'
     );
 
-    router.push('/contribute/thanks');
+    router.push(`/contribute/thanks?${commonUrlParams}`);
   };
 
   const saveOnLocal = async () => {
     await api.post('/api/contribute/services', {
-      path: process.env.NEXT_PUBLIC_OTA_SERVICES_PATH,
+      versionsRepo,
+      path: localPath,
       data: JSON.stringify(json),
     });
   };
@@ -218,7 +231,7 @@ Thank you very much`;
               <LinkIcon
                 className={s.backButton}
                 iconColor="var(--colorBlack400)"
-                href="/contribute"
+                href={`/contribute?${commonUrlParams}`}
                 direction="left"
                 small={true}
               >
@@ -252,7 +265,7 @@ Thank you very much`;
               <LinkIcon
                 className={s.backButton}
                 iconColor="var(--colorBlack400)"
-                href="/contribute"
+                href={`/contribute?${commonUrlParams}`}
                 direction="left"
                 small={true}
               >
@@ -352,12 +365,12 @@ Thank you very much`;
                   <>
                     <pre className={classNames(s.json)}>{JSON.stringify(json, null, 2)}</pre>
                     <div className={classNames(s.expertButtons)}>
-                      {process.env.NEXT_PUBLIC_OTA_SERVICES_PATH && (
+                      {localPath && (
                         <Button
                           onClick={saveOnLocal}
                           size="sm"
                           type="secondary"
-                          title={`Save on ${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}`}
+                          title={`Save on ${localPath}`}
                         >
                           {t('contribute/service:expertMode.button.label')}
                         </Button>

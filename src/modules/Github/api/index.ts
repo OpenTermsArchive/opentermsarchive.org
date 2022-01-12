@@ -1,6 +1,7 @@
 const DOCUMENT_TYPES_URL = 'https://opentermsarchive.org/data/api/list_documentTypes/v1/';
 export const CONTRIBUTORS_URL =
   'https://api.github.com/repos/ambanum/OpenTermsArchive/contributors';
+export const VERSIONS_BASE_URL = 'https://api.github.com/repos/ambanum/OpenTermsArchive-versions';
 export const VERSIONS_CONTRIBUTOR_COMMITS_ACTIVITY =
   'https://api.github.com/repos/ambanum/OpenTermsArchive-versions/stats/contributors';
 export const LAST_VERSIONS_COMMITS =
@@ -98,27 +99,29 @@ export const createIssue: any = async (
   }
 };
 
-export const searchIssue = async (
-  params: Parameters<typeof octokit.rest.search.issuesAndPullRequests>[0] & {
-    owner: string;
-    repo: string;
-  }
-) => {
+export const searchIssue = async ({ title, ...searchParams }: any) => {
   try {
-    const { data } = await octokit.rest.search.issuesAndPullRequests(params);
+    const request = {
+      per_page: 100,
+      ...searchParams,
+    };
 
-    // baseUrl should be the way to go instead of this ugly filter
-    // that may not work in case there are too many issues
-    // but it goes with a 404 using octokit
-    // baseUrl: `https://api.github.com/${GITHUB_REPO}`,
-    return (data?.items || []).filter((item) =>
-      item.repository_url.endsWith(`${params.owner}/${params.repo}`)
-    )[0];
-  } catch (e) {
-    console.error(e);
+    const issues = await octokit.paginate(
+      octokit.rest.issues.listForRepo,
+      request,
+      (response) => response.data
+    );
+
+    const issuesWithSameTitle = issues.filter((item) => item.title === title);
+
+    return issuesWithSameTitle[0];
+  } catch (e: any) {
+    console.error('Could not search issue');
+    console.error(e.toString());
     return null;
   }
 };
+
 export const addCommentToIssue = async (
   params: Parameters<typeof octokit.rest.issues.createComment>[0]
 ) => {
@@ -146,7 +149,7 @@ export const getAllVersionsContributorCommitActivity = async () => {
     const { data }: { data: ContributorsActivity } = await octokit.request(
       `GET ${VERSIONS_CONTRIBUTOR_COMMITS_ACTIVITY}`
     );
-    return data;
+    return data || [];
   } catch (e) {
     console.error(e);
     return [];
@@ -166,10 +169,12 @@ export const getLastVersionsCommits = async () => {
   }
 };
 
-export const getLatestCommit = async (params: { path: string }) => {
+export const getLatestCommit = async (params: { repo: string; path: string }) => {
+  const repoUrl = `https://api.github.com/repos/${params.repo}/commits`;
+
   try {
     const { data }: { data: Commits } = await octokit.request(
-      `GET ${LAST_VERSIONS_COMMITS}?path=${params.path}`,
+      `GET ${repoUrl}?path=${params.path}`,
       {
         page: 1,
         per_page: 1,

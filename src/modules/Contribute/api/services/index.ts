@@ -92,68 +92,94 @@ const get =
     }
   };
 
-const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResponse<any>) => {
-  try {
-    let json = JSON.parse(data);
-
-    const documentType = Object.keys(json.documents)[0];
-    const sanitizedName = json.name.replace(/[^\p{L}\.\s\d]/gimu, '');
-    const fullPath = `${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}/${sanitizedName}.json`;
-    const historyFullPath = `${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}/${sanitizedName}.history.json`;
-
-    if (fs.existsSync(fullPath)) {
-      const existingJson = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
-
-      if (!fs.existsSync(historyFullPath)) {
-        fs.writeFileSync(historyFullPath, '{}');
-      }
-
-      let historyJson = JSON.parse(fs.readFileSync(historyFullPath, 'utf8'));
-
-      const latestCommit = await getLatestCommit({
-        path: `${encodeURIComponent(sanitizedName)}/${encodeURIComponent(documentType)}.md`,
-      });
-
-      const lastCommitDate = latestCommit?.commit?.author.date;
-
-      const newHistoryJson = {
-        ...historyJson,
-        [documentType]: [
-          {
-            ...existingJson.documents[documentType],
-            validUntil: dayjs(lastCommitDate || new Date()).format(),
-          },
-          ...(historyJson[documentType] || []),
-        ],
-      };
-      fs.writeFileSync(historyFullPath, JSON.stringify(newHistoryJson, null, 2));
-
-      json = merge(existingJson, json);
-    }
-
-    fs.writeFileSync(fullPath, JSON.stringify(json, null, 2));
-
-    res.json({
-      status: 'ok',
-      message: `File saved`,
-      path: fullPath,
-    });
-  } catch (e: any) {
-    res.statusCode = HttpStatusCode.METHOD_FAILURE;
-    res.json({
-      status: 'ko',
-      message: 'Could not download url',
-      error: e.toString(),
-    });
-    return res;
+const saveHistoryFile = async ({
+  historyFullPath,
+  serviceName,
+  versionsRepo,
+  documentType,
+  existingJson,
+}: {
+  historyFullPath: string;
+  serviceName: string;
+  existingJson: any;
+  versionsRepo: string;
+  documentType: string;
+}) => {
+  if (!fs.existsSync(historyFullPath)) {
+    fs.writeFileSync(historyFullPath, '{}');
   }
 
-  return res;
+  let historyJson = JSON.parse(fs.readFileSync(historyFullPath, 'utf8'));
+
+  const latestCommit = await getLatestCommit({
+    repo: versionsRepo,
+    path: `${encodeURIComponent(serviceName)}/${encodeURIComponent(documentType)}.md`,
+  });
+
+  const lastCommitDate = latestCommit?.commit?.author.date;
+
+  const newHistoryJson = {
+    ...historyJson,
+    [documentType]: [
+      {
+        ...existingJson.documents[documentType],
+        validUntil: dayjs(lastCommitDate || new Date()).format(),
+      },
+      ...(historyJson[documentType] || []),
+    ],
+  };
+  fs.writeFileSync(historyFullPath, JSON.stringify(newHistoryJson, null, 2));
 };
+
+const saveOnLocal =
+  (data: string, path: string, versionsRepo: string) =>
+  async (_: NextApiRequest, res: NextApiResponse<any>) => {
+    try {
+      let json = JSON.parse(data);
+
+      const documentType = Object.keys(json.documents)[0];
+      const sanitizedName = json.name.replace(/[^\p{L}\.\s\d]/gimu, '');
+      const fullPath = `${path}/${sanitizedName}.json`;
+      const historyFullPath = `${path}/${sanitizedName}.history.json`;
+
+      if (fs.existsSync(fullPath)) {
+        const existingJson = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
+        if (versionsRepo) {
+          await saveHistoryFile({
+            serviceName: sanitizedName,
+            versionsRepo,
+            documentType,
+            historyFullPath,
+            existingJson,
+          });
+        }
+        json = merge(existingJson, json);
+      }
+
+      fs.writeFileSync(fullPath, JSON.stringify(json, null, 2));
+
+      res.json({
+        status: 'ok',
+        message: `File saved`,
+        path: fullPath,
+      });
+    } catch (e: any) {
+      res.statusCode = HttpStatusCode.METHOD_FAILURE;
+      res.json({
+        status: 'ko',
+        message: 'Could not download url',
+        error: e.toString(),
+      });
+      return res;
+    }
+
+    return res;
+  };
 
 const addNewService =
   (body: any) => async (_: NextApiRequest, res: NextApiResponse<PostContributeServiceResponse>) => {
     const service: any = await addService({
+      destination: body?.destination,
       name: body?.name,
       documentType: body?.documentType,
       json: body?.json,
@@ -177,8 +203,12 @@ const services = async (req: NextApiRequest, res: NextApiResponse) => {
     return addNewService(body)(req, res);
   }
 
-  if (req.method === 'POST' && req?.body?.data) {
-    return saveOnLocal(req?.body?.data as string)(req, res);
+  if (req.method === 'POST' && body?.data) {
+    return saveOnLocal(
+      body?.data as string,
+      body?.path as string,
+      body?.versionsRepo as string
+    )(req, res);
   }
 
   res.statusCode = HttpStatusCode.FORBIDDEN;

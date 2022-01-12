@@ -13,14 +13,18 @@ import { useTranslation } from 'next-i18next';
 const ContributeHomePage = () => {
   const { t } = useTranslation();
   const router = useRouter();
+  const { localPath, destination, versionsRepo } = router.query;
+  const commonUrlParams = `destination=${destination}${localPath ? `&localPath=${localPath}` : ''}${
+    versionsRepo ? `&versionsRepo=${versionsRepo}` : ''
+  }`;
 
   useEvent('touchstart', () => {
-    router.push('/contribute/sorry');
+    router.push(`/contribute/sorry?${commonUrlParams}`);
   });
 
   const onSubmit: SearchProps['onSearchSubmit'] = async (url) => {
     try {
-      router.push(`/contribute/service?url=${encodeURIComponent(url)}`);
+      router.push(`/contribute/service?${commonUrlParams}&url=${encodeURIComponent(url)}`);
     } catch (e) {
       console.error(e);
     }
@@ -38,24 +42,29 @@ const ContributeHomePage = () => {
       <Container paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Column width={100}>
-            <Breadcrumb
-              items={[
-                {
-                  name: t('contribute:breadcrumb.home_page.name'),
-                  url: 'https://opentermsarchive.org',
-                },
-                { name: t('contribute/home:title') },
-              ]}
-            />
-            <TextContent>
-              <p>{t('contribute/home:content.p1')}</p>
-            </TextContent>
-            <Search
-              label={t('contribute/home:search.label')}
-              buttonLabel={t('contribute/home:search.button')}
-              placeholder="https://www.amazon.com/gp/help/customer/display.html?nodeId=13819201"
-              onSearchSubmit={onSubmit}
-            />
+            {!destination && <TextContent>{t('contribute/home:no-destination')}</TextContent>}
+            {destination && (
+              <>
+                <Breadcrumb
+                  items={[
+                    {
+                      name: t('contribute:breadcrumb.home_page.name'),
+                      url: 'https://opentermsarchive.org',
+                    },
+                    { name: t('contribute/home:title') },
+                  ]}
+                />
+                <TextContent>
+                  <p>{t('contribute/home:content.p1')}</p>
+                </TextContent>
+                <Search
+                  label={t('contribute/home:search.label')}
+                  buttonLabel={t('contribute/home:search.button')}
+                  placeholder="https://www.amazon.com/gp/help/customer/display.html?nodeId=13819201"
+                  onSearchSubmit={onSubmit}
+                />
+              </>
+            )}
           </Column>
         </Container>
       </Container>

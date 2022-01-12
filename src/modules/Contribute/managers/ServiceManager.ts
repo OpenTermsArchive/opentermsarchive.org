@@ -1,27 +1,28 @@
 import { addCommentToIssue, createIssue, searchIssue } from 'modules/Github/api';
 
-const [GITHUB_OTA_OWNER, GITHUB_OTA_REPO] = (process.env.GITHUB_REPO || '')?.split('/');
-
-const commonParams = {
-  owner: GITHUB_OTA_OWNER,
-  repo: GITHUB_OTA_REPO,
-  accept: 'application/vnd.github.v3+json',
-};
-
 export const addService = async ({
+  destination,
   name,
   documentType,
   json,
   url,
 }: {
+  destination: string;
   name: string;
   documentType: string;
   json: any;
   url: string;
 }) => {
-  if (!process.env.GITHUB_REPO) {
+  if (!destination) {
     return {};
   }
+  const [githubOrganization, githubRepository] = (destination || '')?.split('/');
+
+  const commonParams = {
+    owner: githubOrganization,
+    repo: githubRepository,
+    accept: 'application/vnd.github.v3+json',
+  };
 
   const issueTitle = `Add ${name} - ${documentType}`;
   const issueBodyCommon = `
@@ -36,12 +37,9 @@ ${JSON.stringify(json, null, 2)}
 You will need to create the following file in the root of the project: \`services/${name}.json\`
 
 `;
-
   let existingIssue = await searchIssue({
     ...commonParams,
-    // baseUrl should be the way to go but it goes with a 404 using octokit
-    // baseUrl: `https://api.github.com/${GITHUB_REPO}`,
-    q: `is:issue "${issueTitle}"`,
+    title: issueTitle,
   });
 
   if (existingIssue) {
@@ -63,7 +61,7 @@ New service addition requested through the contribution tool
 
 ${issueBodyCommon}
 `,
-      labels: [process.env.GITHUB_REPO || 'add'],
+      labels: [process.env.GITHUB_LABEL_ADD || 'add'],
     });
   }
 
