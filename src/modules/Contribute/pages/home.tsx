@@ -13,8 +13,10 @@ import { useTranslation } from 'next-i18next';
 const ContributeHomePage = () => {
   const { t } = useTranslation();
   const router = useRouter();
-  const { localPath, destination } = router.query;
-  const commonUrlParams = `destination=${destination}${localPath ? `&localPath=${localPath}` : ''}`;
+  const { localPath, destination, versionsRepo } = router.query;
+  const commonUrlParams = `destination=${destination}${localPath ? `&localPath=${localPath}` : ''}${
+    versionsRepo ? `&versionsRepo=${versionsRepo}` : ''
+  }`;
 
   useEvent('touchstart', () => {
     router.push(`/contribute/sorry?${commonUrlParams}`);

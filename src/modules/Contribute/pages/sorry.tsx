@@ -11,9 +11,10 @@ const EMAIL_SUPPORT = 'contact@opentermsarchive.org';
 
 const SorryPage = () => {
   const router = useRouter();
-  const { localPath, destination } = router.query;
-  const commonUrlParams = `destination=${destination}${localPath ? `&localPath=${localPath}` : ''}`;
-
+  const { localPath, destination, versionsRepo } = router.query;
+  const commonUrlParams = `destination=${destination}${localPath ? `&localPath=${localPath}` : ''}${
+    versionsRepo ? `&versionsRepo=${versionsRepo}` : ''
+  }`;
   const { t } = useTranslation();
   return (
     <Layout title={t('contribute/sorry:seo.title')}>

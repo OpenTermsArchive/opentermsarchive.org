@@ -29,6 +29,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     queryParams: {
       destination,
       localPath,
+      versionsRepo,
       url,
       step: initialStep,
       selectedCss: initialSelectedCss,
@@ -39,8 +40,9 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     },
     pushQueryParam,
   } = useUrl();
-  const commonUrlParams = `destination=${destination}${localPath ? `&localPath=${localPath}` : ''}`;
-
+  const commonUrlParams = `destination=${destination}${localPath ? `&localPath=${localPath}` : ''}${
+    versionsRepo ? `&versionsRepo=${versionsRepo}` : ''
+  }`;
   useEvent('touchstart', () => {
     router.push(`/contribute/sorry?${commonUrlParams}`);
   });
@@ -201,6 +203,7 @@ Thank you very much`;
 
   const saveOnLocal = async () => {
     await api.post('/api/contribute/services', {
+      versionsRepo,
       path: localPath,
       data: JSON.stringify(json),
     });

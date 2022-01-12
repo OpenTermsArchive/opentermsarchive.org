@@ -16,10 +16,11 @@ import useUrl from 'hooks/useUrl';
 export default function ThanksPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();
   const {
-    queryParams: { url, destination, email, localPath },
+    queryParams: { url, destination, email, localPath, versionsRepo },
   } = useUrl();
-
-  const commonUrlParams = `destination=${destination}${localPath ? `&localPath=${localPath}` : ''}`;
+  const commonUrlParams = `destination=${destination}${localPath ? `&localPath=${localPath}` : ''}${
+    versionsRepo ? `&versionsRepo=${versionsRepo}` : ''
+  }`;
 
   return (
     <Layout title={t('contribute/thanks:seo.title')} desc={t('contribute/thanks:seo.desc')}>
