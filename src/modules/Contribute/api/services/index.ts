@@ -92,8 +92,48 @@ const get =
     }
   };
 
+const saveHistoryFile = async ({
+  historyFullPath,
+  serviceName,
+  versionsRepo,
+  documentType,
+  existingJson,
+}: {
+  historyFullPath: string;
+  serviceName: string;
+  existingJson: any;
+  versionsRepo: string;
+  documentType: string;
+}) => {
+  if (!fs.existsSync(historyFullPath)) {
+    fs.writeFileSync(historyFullPath, '{}');
+  }
+
+  let historyJson = JSON.parse(fs.readFileSync(historyFullPath, 'utf8'));
+
+  const latestCommit = await getLatestCommit({
+    repo: versionsRepo,
+    path: `${encodeURIComponent(serviceName)}/${encodeURIComponent(documentType)}.md`,
+  });
+
+  const lastCommitDate = latestCommit?.commit?.author.date;
+
+  const newHistoryJson = {
+    ...historyJson,
+    [documentType]: [
+      {
+        ...existingJson.documents[documentType],
+        validUntil: dayjs(lastCommitDate || new Date()).format(),
+      },
+      ...(historyJson[documentType] || []),
+    ],
+  };
+  fs.writeFileSync(historyFullPath, JSON.stringify(newHistoryJson, null, 2));
+};
+
 const saveOnLocal =
-  (data: string, path: string) => async (_: NextApiRequest, res: NextApiResponse<any>) => {
+  (data: string, path: string, versionsRepo: string) =>
+  async (_: NextApiRequest, res: NextApiResponse<any>) => {
     try {
       let json = JSON.parse(data);
 
@@ -104,31 +144,15 @@ const saveOnLocal =
 
       if (fs.existsSync(fullPath)) {
         const existingJson = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
-
-        if (!fs.existsSync(historyFullPath)) {
-          fs.writeFileSync(historyFullPath, '{}');
+        if (versionsRepo) {
+          await saveHistoryFile({
+            serviceName: sanitizedName,
+            versionsRepo,
+            documentType,
+            historyFullPath,
+            existingJson,
+          });
         }
-
-        let historyJson = JSON.parse(fs.readFileSync(historyFullPath, 'utf8'));
-
-        const latestCommit = await getLatestCommit({
-          path: `${encodeURIComponent(sanitizedName)}/${encodeURIComponent(documentType)}.md`,
-        });
-
-        const lastCommitDate = latestCommit?.commit?.author.date;
-
-        const newHistoryJson = {
-          ...historyJson,
-          [documentType]: [
-            {
-              ...existingJson.documents[documentType],
-              validUntil: dayjs(lastCommitDate || new Date()).format(),
-            },
-            ...(historyJson[documentType] || []),
-          ],
-        };
-        fs.writeFileSync(historyFullPath, JSON.stringify(newHistoryJson, null, 2));
-
         json = merge(existingJson, json);
       }
 
@@ -180,7 +204,11 @@ const services = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   if (req.method === 'POST' && body?.data) {
-    return saveOnLocal(body?.data as string, body?.path as string)(req, res);
+    return saveOnLocal(
+      body?.data as string,
+      body?.path as string,
+      body?.versionsRepo as string
+    )(req, res);
   }
 
   res.statusCode = HttpStatusCode.FORBIDDEN;

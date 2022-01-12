@@ -1,6 +1,7 @@
 const DOCUMENT_TYPES_URL = 'https://opentermsarchive.org/data/api/list_documentTypes/v1/';
 export const CONTRIBUTORS_URL =
   'https://api.github.com/repos/ambanum/OpenTermsArchive/contributors';
+export const VERSIONS_BASE_URL = 'https://api.github.com/repos/ambanum/OpenTermsArchive-versions';
 export const VERSIONS_CONTRIBUTOR_COMMITS_ACTIVITY =
   'https://api.github.com/repos/ambanum/OpenTermsArchive-versions/stats/contributors';
 export const LAST_VERSIONS_COMMITS =
@@ -168,10 +169,12 @@ export const getLastVersionsCommits = async () => {
   }
 };
 
-export const getLatestCommit = async (params: { path: string }) => {
+export const getLatestCommit = async (params: { repo: string; path: string }) => {
+  const repoUrl = `https://api.github.com/repos/${params.repo}/commits`;
+
   try {
     const { data }: { data: Commits } = await octokit.request(
-      `GET ${LAST_VERSIONS_COMMITS}?path=${params.path}`,
+      `GET ${repoUrl}?path=${params.path}`,
       {
         page: 1,
         per_page: 1,
