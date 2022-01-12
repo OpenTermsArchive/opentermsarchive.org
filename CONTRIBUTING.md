@@ -6,16 +6,45 @@ Although we use the MDX format which sometimes allows the instantiation of React
 
 Prefer Markdown over strings for translations, as soon as there are multiple paragraphs.
 
+## Destination repository
+
+The contribution interface can be used against any repository on which ota@opentermsarchive.org github user has issue creation rights.
+
+This repo must be passed by an url parameter called `destination`
+
+Here are some examples for contributing to different projects using
+
+- /en/contribute?destination=OpenTermsArchive/services-all
+- /en/contribute?destination=OpenTermsArchive/services-dating
+- /en/contribute?destination=ambanum/test-repo (For tests)
+- /fr/contribute?destination=ambanum/test-repo2 (For tests)
+
 ## Local creation of services from contribution interface
 
-If you are interested in setting up a local instance where you can directly save the result of the contribution interface (`/en/contribute?destination=OpenTermsArchive/services-all`) in the corresponding folder in Open Terms Archive project you have to specify where the services json files resides in the url itself:
+If you are interested in setting up a local instance where you can locally save the result of the contribution interface, you have to specify where to save it.
+This can be done with a url parameter called `localPath`.
+
+It takes a full local path string and must point to the exact folder containing the declarations.
+See below examples:
 
 ```
 /en/contribute?destination=OpenTermsArchive/services-all&localPath=/Users/username/Workspace/ambanum/OpenTermsArchive/services-all/declarations
-/en/contribute?destination=OpenTermsArchive/services-dating&localPath=/Users/username/Workspace/OpenTermsArchive/services-dating/declarations
+/en/contribute?destination=OpenTermsArchive/services-dating&localPath=/Users/username/Workspace/somewhere-else/services-dating/declarations
 ```
 
-This way, a button `Save on local` will appear on the contribution interface. By clicking on it, it will add or modify the following service declaration (as a `.json` file) in the corresponding directory.
+This way, a `Save on local` button will appear on the contribution interface. By clicking on it, it will add or modify the service declaration (saved as a `.json` file) in the corresponding directory.
+
+### Automatically generating history file
+
+As we want to ensure we can retrace the whole history of selectors we used to retrieve the corresponding documents, a history file should be created **every time you change the service declaration** (See the corresponding [decision record](./decision-record/0002-service-history.md).
+As this is a very time consuming thing to do (retrieve the last version date, format it in ISO format and pasting it in a history file), you can use a new url parameter called `versionsRepo` which will fetch the date of the last commit successfully retrieved from Github and populate the history file accordingly and automatically.
+
+**CAUTION**: You need to have a `localPath` query param (described in the previous paragraph) in the url for this to happen.
+
+```
+/en/contribute?destination=OpenTermsArchive/services-all&localPath=/Users/username/Workspace/ambanum/OpenTermsArchive/services-all/declarations&versionsRepo=ambanum/OpenTermsArchive-versions
+/en/contribute?destination=OpenTermsArchive/services-dating&localPath=/Users/username/Workspace/OpenTermsArchive/services-dating/declarations&versionsRepo=ambanum/OpenTermsArchive/versions-dating
+```
 
 ## Copywriting
 
