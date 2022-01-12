@@ -61,7 +61,7 @@ New service addition requested through the contribution tool
 
 ${issueBodyCommon}
 `,
-      labels: [process.env.GITHUB_REPO || 'add'],
+      labels: [process.env.GITHUB_LABEL_ADD || 'add'],
     });
   }
 
