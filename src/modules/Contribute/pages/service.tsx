@@ -28,6 +28,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   const {
     queryParams: {
       destination,
+      localPath,
       url,
       step: initialStep,
       selectedCss: initialSelectedCss,
@@ -199,7 +200,7 @@ Thank you very much`;
 
   const saveOnLocal = async () => {
     await api.post('/api/contribute/services', {
-      path: process.env.NEXT_PUBLIC_OTA_SERVICES_PATH,
+      path: localPath,
       data: JSON.stringify(json),
     });
   };
@@ -355,12 +356,12 @@ Thank you very much`;
                   <>
                     <pre className={classNames(s.json)}>{JSON.stringify(json, null, 2)}</pre>
                     <div className={classNames(s.expertButtons)}>
-                      {process.env.NEXT_PUBLIC_OTA_SERVICES_PATH && (
+                      {localPath && (
                         <Button
                           onClick={saveOnLocal}
                           size="sm"
                           type="secondary"
-                          title={`Save on ${process.env.NEXT_PUBLIC_OTA_SERVICES_PATH}`}
+                          title={`Save on ${localPath}`}
                         >
                           {t('contribute/service:expertMode.button.label')}
                         </Button>

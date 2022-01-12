@@ -39,12 +39,6 @@ In order for the service to automatically create issues in Github when a service
 
 You can easily set up analytics with [Matomo](https://matomo.org/) by providing those 2 values.
 
-### `NEXT_PUBLIC_OTA_SERVICES_PATH`
-
-This variable enables the ability to save the result of the contributing tool directly on a directory on your file system.
-
-More details on [Contributing Guide](./CONTRIBUTING#local-creation-of-services-from-contribution-interface)
-
 ### `SENDINBLUE_API_KEY`
 
 In order for users to be able to subscribe to services alerts, a mailling lists has been put in place with SendInBlue.

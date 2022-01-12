@@ -8,13 +8,14 @@ Prefer Markdown over strings for translations, as soon as there are multiple par
 
 ## Local creation of services from contribution interface
 
-If you are interested in setting up a local instance where you can directly save the result of the contribution interface (`/contribute`) in the corresponding folder in Open Terms Archive project you have to specify where the services json files resides in the following constant in `.env` file:
+If you are interested in setting up a local instance where you can directly save the result of the contribution interface (`/en/contribute?destination=OpenTermsArchive/services-all`) in the corresponding folder in Open Terms Archive project you have to specify where the services json files resides in the url itself:
 
 ```
-NEXT_PUBLIC_OTA_SERVICES_PATH="/Users/username/Workspace/ambanum/OpenTermsArchive/services"
+/en/contribute?destination=OpenTermsArchive/services-all&localPath=/Users/username/Workspace/ambanum/OpenTermsArchive/services-all/declarations
+/en/contribute?destination=OpenTermsArchive/services-dating&localPath=/Users/username/Workspace/OpenTermsArchive/services-dating/declarations
 ```
 
-This way, a button `Save on local` will appear on the contribution interface. By clicking on it, it will add or modify the following service declaration (as a `.json` file) in the Open Terms Archive services directory.
+This way, a button `Save on local` will appear on the contribution interface. By clicking on it, it will add or modify the following service declaration (as a `.json` file) in the corresponding directory.
 
 ## Copywriting
 
