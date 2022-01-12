@@ -118,9 +118,6 @@ const Layout = ({
                   <Link href="/">{t('footer:link.home')}</Link>
                 </li>
                 <li>
-                  <Link href={'/contribute'}>{t('footer:link.contribute')}</Link>
-                </li>
-                <li>
                   <Link href={'/case-studies'}>{t('footer:link.case-studies')}</Link>
                 </li>
                 <li>
