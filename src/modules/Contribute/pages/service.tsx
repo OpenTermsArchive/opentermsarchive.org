@@ -47,6 +47,11 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     router.push(`/contribute/sorry?${commonUrlParams}`);
   });
 
+  if (!destination && typeof window !== 'undefined') {
+    // This is here as previously created issues still point at a url that has no `destination` param
+    pushQueryParam('destination')('OpenTermsArchive/services-all');
+  }
+
   const json = {
     name: initialName || '???',
     documents: {
