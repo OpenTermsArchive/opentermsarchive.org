@@ -16,7 +16,7 @@ import useUrl from 'hooks/useUrl';
 export default function ThanksPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();
   const {
-    queryParams: { url },
+    queryParams: { url, email },
   } = useUrl();
   return (
     <Layout title={t('contribute/thanks:seo.title')} desc={t('contribute/thanks:seo.desc')}>
@@ -40,11 +40,13 @@ export default function ThanksPage({ mdxContent }: WithI18nResult) {
         />
       </Container>
 
-      <Container gridCols="9" gridGutters="8" paddingY={false}>
-        <TextContent>
-          <MDXRemote {...(mdxContent as any)} scope={{ url }} />
-        </TextContent>
-      </Container>
+      {!email && (
+        <Container gridCols="9" gridGutters="8" paddingY={false}>
+          <TextContent>
+            <MDXRemote {...(mdxContent as any)} scope={{ url }} />
+          </TextContent>
+        </Container>
+      )}
 
       <Container gridCols="6" gridGutters="5">
         <Contributors subtitle={t('contribute:contributors.subtitle')} />

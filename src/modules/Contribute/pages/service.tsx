@@ -162,7 +162,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
           `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
           '_blank'
         );
-        router.push(`/contribute/thanks?email`);
+        router.push(`/contribute/thanks?email=true`);
         return;
       }
       router.push(`/contribute/thanks?url=${encodeURIComponent(url)}`);
