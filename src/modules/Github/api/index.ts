@@ -98,27 +98,29 @@ export const createIssue: any = async (
   }
 };
 
-export const searchIssue = async (
-  params: Parameters<typeof octokit.rest.search.issuesAndPullRequests>[0] & {
-    owner: string;
-    repo: string;
-  }
-) => {
+export const searchIssue = async ({ title, ...searchParams }: any) => {
   try {
-    const { data } = await octokit.rest.search.issuesAndPullRequests(params);
+    const request = {
+      per_page: 100,
+      ...searchParams,
+    };
 
-    // baseUrl should be the way to go instead of this ugly filter
-    // that may not work in case there are too many issues
-    // but it goes with a 404 using octokit
-    // baseUrl: `https://api.github.com/${GITHUB_REPO}`,
-    return (data?.items || []).filter((item) =>
-      item.repository_url.endsWith(`${params.owner}/${params.repo}`)
-    )[0];
-  } catch (e) {
-    console.error(e);
+    const issues = await octokit.paginate(
+      octokit.rest.issues.listForRepo,
+      request,
+      (response) => response.data
+    );
+
+    const issuesWithSameTitle = issues.filter((item) => item.title === title);
+
+    return issuesWithSameTitle[0];
+  } catch (e: any) {
+    console.error('Could not search issue');
+    console.error(e.toString());
     return null;
   }
 };
+
 export const addCommentToIssue = async (
   params: Parameters<typeof octokit.rest.issues.createComment>[0]
 ) => {

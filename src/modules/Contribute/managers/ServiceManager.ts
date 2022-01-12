@@ -39,9 +39,7 @@ You will need to create the following file in the root of the project: \`service
 
   let existingIssue = await searchIssue({
     ...commonParams,
-    // baseUrl should be the way to go but it goes with a 404 using octokit
-    // baseUrl: `https://api.github.com/${GITHUB_REPO}`,
-    q: `is:issue "${issueTitle}"`,
+    title: issueTitle,
   });
 
   if (existingIssue) {
