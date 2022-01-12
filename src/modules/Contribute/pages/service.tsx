@@ -39,9 +39,10 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     },
     pushQueryParam,
   } = useUrl();
+  const commonUrlParams = `destination=${destination}${localPath ? `&localPath=${localPath}` : ''}`;
 
   useEvent('touchstart', () => {
-    router.push(`/contribute/sorry?destination=${destination}`);
+    router.push(`/contribute/sorry?${commonUrlParams}`);
   });
 
   const json = {
@@ -166,10 +167,10 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
           `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
           '_blank'
         );
-        router.push(`/contribute/thanks?destination=${destination}&email=true`);
+        router.push(`/contribute/thanks?${commonUrlParams}&email=true`);
         return;
       }
-      router.push(`/contribute/thanks?destination=${destination}&url=${encodeURIComponent(url)}`);
+      router.push(`/contribute/thanks?${commonUrlParams}&url=${encodeURIComponent(url)}`);
     } catch (e: any) {
       notify('error', e.toString());
       toggleLoading(false);
@@ -195,7 +196,7 @@ Thank you very much`;
       '_blank'
     );
 
-    router.push(`/contribute/thanks?destination=${destination}`);
+    router.push(`/contribute/thanks?${commonUrlParams}`);
   };
 
   const saveOnLocal = async () => {
@@ -222,7 +223,7 @@ Thank you very much`;
               <LinkIcon
                 className={s.backButton}
                 iconColor="var(--colorBlack400)"
-                href={`/contribute?destination=${destination}`}
+                href={`/contribute?${commonUrlParams}`}
                 direction="left"
                 small={true}
               >
@@ -256,7 +257,7 @@ Thank you very much`;
               <LinkIcon
                 className={s.backButton}
                 iconColor="var(--colorBlack400)"
-                href={`/contribute?destination=${destination}`}
+                href={`/contribute?${commonUrlParams}`}
                 direction="left"
                 small={true}
               >

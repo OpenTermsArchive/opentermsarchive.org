@@ -13,15 +13,16 @@ import { useTranslation } from 'next-i18next';
 const ContributeHomePage = () => {
   const { t } = useTranslation();
   const router = useRouter();
-  const destination = router.query?.destination;
+  const { localPath, destination } = router.query;
+  const commonUrlParams = `destination=${destination}${localPath ? `&localPath=${localPath}` : ''}`;
 
   useEvent('touchstart', () => {
-    router.push(`/contribute/sorry?destination=${destination}`);
+    router.push(`/contribute/sorry?${commonUrlParams}`);
   });
 
   const onSubmit: SearchProps['onSearchSubmit'] = async (url) => {
     try {
-      router.push(`/contribute/service?destination=${destination}&url=${encodeURIComponent(url)}`);
+      router.push(`/contribute/service?${commonUrlParams}&url=${encodeURIComponent(url)}`);
     } catch (e) {
       console.error(e);
     }
