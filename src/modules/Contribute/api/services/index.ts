@@ -154,6 +154,7 @@ const saveOnLocal = (data: string) => async (_: NextApiRequest, res: NextApiResp
 const addNewService =
   (body: any) => async (_: NextApiRequest, res: NextApiResponse<PostContributeServiceResponse>) => {
     const service: any = await addService({
+      destination: body?.destination,
       name: body?.name,
       documentType: body?.documentType,
       json: body?.json,

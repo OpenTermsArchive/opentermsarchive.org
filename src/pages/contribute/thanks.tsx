@@ -16,7 +16,7 @@ import useUrl from 'hooks/useUrl';
 export default function ThanksPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();
   const {
-    queryParams: { url, email },
+    queryParams: { url, destination, email },
   } = useUrl();
   return (
     <Layout title={t('contribute/thanks:seo.title')} desc={t('contribute/thanks:seo.desc')}>
@@ -34,7 +34,7 @@ export default function ThanksPage({ mdxContent }: WithI18nResult) {
               name: t('contribute:breadcrumb.home_page.name'),
               url: 'https://opentermsarchive.org',
             },
-            { name: t('contribute/home:title'), url: '/contribute' },
+            { name: t('contribute/home:title'), url: `/contribute?destination=${destination}` },
             { name: t('contribute:breadcrumb.thanks.name') },
           ]}
         />
@@ -55,7 +55,7 @@ export default function ThanksPage({ mdxContent }: WithI18nResult) {
       <Container gridCols="9" gridGutters="8" paddingTop={false}>
         <TextContent className="text__center">
           <hr />
-          <Link href="/contribute">
+          <Link href={`/contribute?destination=${destination}`}>
             <Button>{t('contribute/thanks:cta')}</Button>
           </Link>
         </TextContent>

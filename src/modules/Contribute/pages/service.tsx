@@ -25,11 +25,9 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
   const router = useRouter();
   const { t } = useTranslation();
   const { notify } = useNotifier();
-  useEvent('touchstart', () => {
-    router.push('/contribute/sorry');
-  });
   const {
     queryParams: {
+      destination,
       url,
       step: initialStep,
       selectedCss: initialSelectedCss,
@@ -40,6 +38,10 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
     },
     pushQueryParam,
   } = useUrl();
+
+  useEvent('touchstart', () => {
+    router.push(`/contribute/sorry?destination=${destination}`);
+  });
 
   const json = {
     name: initialName || '???',
@@ -141,6 +143,7 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
       const {
         data: { url },
       } = await api.post<PostContributeServiceResponse>('/api/contribute/services', {
+        destination,
         json,
         name: initialName,
         documentType: initialDocumentType,
@@ -162,11 +165,11 @@ const ServicePage = ({ documentTypes }: { documentTypes: string[] }) => {
           `mailto:${EMAIL_SUPPORT}?subject=${subject}&body=${encodeURIComponent(body)}`,
           '_blank'
         );
-        router.push(`/contribute/thanks?email=true`);
+        router.push(`/contribute/thanks?destination=${destination}&email=true`);
         return;
       }
-      router.push(`/contribute/thanks?url=${encodeURIComponent(url)}`);
-    } catch (e) {
+      router.push(`/contribute/thanks?destination=${destination}&url=${encodeURIComponent(url)}`);
+    } catch (e: any) {
       notify('error', e.toString());
       toggleLoading(false);
     }
@@ -191,7 +194,7 @@ Thank you very much`;
       '_blank'
     );
 
-    router.push('/contribute/thanks');
+    router.push(`/contribute/thanks?destination=${destination}`);
   };
 
   const saveOnLocal = async () => {
@@ -218,7 +221,7 @@ Thank you very much`;
               <LinkIcon
                 className={s.backButton}
                 iconColor="var(--colorBlack400)"
-                href="/contribute"
+                href={`/contribute?destination=${destination}`}
                 direction="left"
                 small={true}
               >
@@ -252,7 +255,7 @@ Thank you very much`;
               <LinkIcon
                 className={s.backButton}
                 iconColor="var(--colorBlack400)"
-                href="/contribute"
+                href={`/contribute?destination=${destination}`}
                 direction="left"
                 small={true}
               >
