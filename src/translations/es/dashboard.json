@@ -1,7 +1,7 @@
 {
   "activity.chart.axis.bottom.legend": "año-mes",
   "activity.chart.axis.left.legend": "número",
-  "activity.chart.legend.activeservices": "Active services",
+  "activity.chart.legend.activeservices": "Servicios",
   "activity.chart.legend.documentsversions": "Versiones de documentos",
   "activity.chart.legend.trackedservices": "Servicios de seguimiento",
   "activity.desc": "Evolución de los servicios y de las versiones de documentos en los últimos 12 meses",
@@ -12,7 +12,7 @@
   "latestversionscommits.buttonblock.desc": "Y continúa cada día, explóralas en GitHub.",
   "latestversionscommits.buttonblock.label": "Explorar ahora",
   "latestversionscommits.buttonblock.link.title": "Explorar las versiones de documentos",
-  "latestversionscommits.buttonblock.title": "Hemos registrado {{count}} version de documento",
+  "latestversionscommits.buttonblock.title": "Hemos registrado {{count}} versiones de documentos",
   "latestversionscommits.buttonblock.title_plural": "Hemos registrado {{count}} versiones de documentos",
   "latestversionscommits.subtitle": "en los documentos rastreados",
   "latestversionscommits.title": "Últimos cambios registrados",
