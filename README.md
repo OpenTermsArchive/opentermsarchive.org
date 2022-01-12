@@ -31,7 +31,6 @@ Default is empty
 In order for the service to automatically create issues in Github when a service is failing, you need to provide:
 
 - `GITHUB_TOKEN`: A token with repository privileges which allow access to the [GitHub API](https://github.com/settings/tokens).
-- `GITHUB_REPO`: A repository which will be used to create the issues. For example `OpenTermsArchive/services-all`
 - `GITHUB_LABEL_ADD`: The name of the label used on the repo to categorize issues corresponding to a service that needs to be added (default is `add`)
 
 **Note**: OTA.org will automatically create issues with a label defined by `GITHUB_LABEL_ADD`. **This specific label has to exist in the corresponding repository for the automatic issue creation works.**
