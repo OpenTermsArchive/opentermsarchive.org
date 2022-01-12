@@ -149,7 +149,7 @@ export const getAllVersionsContributorCommitActivity = async () => {
     const { data }: { data: ContributorsActivity } = await octokit.request(
       `GET ${VERSIONS_CONTRIBUTOR_COMMITS_ACTIVITY}`
     );
-    return data;
+    return data || [];
   } catch (e) {
     console.error(e);
     return [];
