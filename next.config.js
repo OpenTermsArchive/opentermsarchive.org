@@ -44,6 +44,18 @@ module.exports = {
         destination: '/',
         permanent: true,
       },
+      {
+        source: '/en/contribute/:slug',
+        destination: 'https://contribute.opentermsarchive.org/en/:slug',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/fr/contribute/:slug',
+        destination: 'https://contribute.opentermsarchive.org/fr/:slug',
+        permanent: true,
+        locale: false,
+      },
     ];
   },
 };
