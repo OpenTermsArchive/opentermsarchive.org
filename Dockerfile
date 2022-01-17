@@ -8,7 +8,7 @@ RUN mkdir -p /usr/src/app
 
 ENV PORT 3000
 
-ARG ENV_FILE=".env.production"
+ARG ENV_FILE="./docker/.env.production"
 
 WORKDIR /usr/src/app
 
@@ -23,7 +23,7 @@ RUN npm install
 
 COPY . /usr/src/app
 RUN rm .env.*
-COPY ./docker/$ENV_FILE /usr/src/app/.env.production
+COPY $ENV_FILE /usr/src/app/.env.production
 
 ENV NODE_ENV=production
 
