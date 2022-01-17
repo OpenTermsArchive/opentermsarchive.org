@@ -26,14 +26,11 @@ To deploy the website under a sub-path of a domain you can use this env variable
 Example `NEXT_PUBLIC_BASE_PATH="/prefix"`
 Default is empty
 
-### `GITHUB_TOKEN`, `GITHUB_REPO` and `GITHUB_LABEL_ADD`
+### `GITHUB_TOKEN`
 
-In order for the service to automatically create issues in Github when a service is failing, you need to provide:
+In order for the service to retrieve Github contributors, you need to provide:
 
-- `GITHUB_TOKEN`: A token with repository privileges which allow access to the [GitHub API](https://github.com/settings/tokens).
-- `GITHUB_LABEL_ADD`: The name of the label used on the repo to categorize issues corresponding to a service that needs to be added (default is `add`)
-
-**Note**: OTA.org will automatically create issues with a label defined by `GITHUB_LABEL_ADD`. **This specific label has to exist in the corresponding repository for the automatic issue creation works.**
+- `GITHUB_TOKEN`: A token with repository read privileges which allow access to the [GitHub API](https://github.com/settings/tokens).
 
 ### `NEXT_PUBLIC_MATOMO_URL`, `NEXT_PUBLIC_MATOMO_SITE_ID`
 
@@ -44,18 +41,6 @@ You can easily set up analytics with [Matomo](https://matomo.org/) by providing 
 In order for users to be able to subscribe to services alerts, a mailling lists has been put in place with SendInBlue.
 
 An API Key is thus needed
-
-## Contribution interface
-
-The contribution interface, located at `/contribute` will help the user to create new services easily.
-
-Clicking on `Validate` can automatically create an issue un a github repository.
-
-For this, you need to setup some constants in your `.env`
-
-See [Configuration](#Configuration)
-
-In case this automatic creation does not work, a fallback on the previous email system will occur, opening a `mailto` link with prepopulated data.
 
 ## Development
 
@@ -90,7 +75,7 @@ In `my-page.mdx`:
 <Button type="secondary">Read</Button>
 ```
 
-## Modules documentation
+### Modules documentation
 
 - [I18n](./src/modules/I18n/README.md)
 - [Analytics](./src/modules/Analytics/README.md)
