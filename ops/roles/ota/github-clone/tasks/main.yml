@@ -1,10 +1,13 @@
 - name: Include vars
   include_vars: '{{ENV}}.yml'
 
+- name: Include secret vars
+  include_vars: '{{ENV}}.secrets.yml'
+
 - name: Clone Repo
   git:
     repo: '{{ repository }}'
-    dest: '/home/{{ ansible_user }}/{{ app }}'
+    dest: '/home/{{ ansible_user }}/{{ name }}'
     version: '{{ branch }}'
     force: yes
     accept_hostkey: yes
@@ -24,15 +27,15 @@
       pull: yes
       args:
         ENV_FILE: '{{ env_file }}'
-      path: '/home/{{ ansible_user }}/{{ app }}'
     name: '{{ app }}:{{ result_git_clone.before }}'
+      path: '/home/{{ ansible_user }}/{{ name }}'
     force_source: yes
 
 - name: Start the container
   become: yes
   community.general.docker_container:
-    name: '{{ app }}'
     image: '{{ app }}:{{ result_git_clone.before }}'
+    name: '{{ name }}'
     restart: yes
     state: started
     restart_policy: unless-stopped
