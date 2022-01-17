@@ -1,7 +1,7 @@
 {
   "activity.chart.axis.bottom.legend": "año-mes",
   "activity.chart.axis.left.legend": "número",
-  "activity.chart.legend.activeservices": "Servicios",
+  "activity.chart.legend.activeservices": "Servicios activos",
   "activity.chart.legend.documentsversions": "Versiones de documentos",
   "activity.chart.legend.trackedservices": "Servicios de seguimiento",
   "activity.desc": "Evolución de los servicios y de las versiones de documentos en los últimos 12 meses",
