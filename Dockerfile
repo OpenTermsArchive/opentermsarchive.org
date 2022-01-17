@@ -3,36 +3,12 @@ FROM node:14-alpine3.12
 # install debug packages
 RUN apk add nano
 
-# install puppeteer
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositories \
-    && echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
-    && echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
-    && echo "http://dl-cdn.alpinelinux.org/alpine/v3.12/main" >> /etc/apk/repositories \
-    && apk upgrade -U -a \
-    && apk add --no-cache \
-    nano \
-    libstdc++ \
-    chromium \
-    harfbuzz \
-    nss \
-    freetype \
-    ttf-freefont \
-    font-noto-emoji \
-    wqy-zenhei \
-    && rm -rf /var/cache/* \
-    && mkdir /var/cache/apk
-
-ENV CHROME_BIN=/usr/bin/chromium-browser \
-    CHROME_PATH=/usr/lib/chromium/ \
-    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD="true"
-
-
 # install app
 RUN mkdir -p /usr/src/app
 
 ENV PORT 3000
 
-ARG ENV_FILE=".env.production"
+ARG ENV_FILE="./docker/.env.production"
 
 WORKDIR /usr/src/app
 
@@ -47,10 +23,9 @@ RUN npm install
 
 COPY . /usr/src/app
 RUN rm .env.*
-COPY ./docker/$ENV_FILE /usr/src/app/.env.production
+COPY $ENV_FILE /usr/src/app/.env.production
 
 ENV NODE_ENV=production
-ENV NODE_OPTIONS='--max_old_space_size=8192'
 
 RUN npm run build
 
