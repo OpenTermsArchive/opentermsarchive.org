@@ -52,6 +52,13 @@
   }
 }
 
+@media (--gridPlus) {
+  .footer {
+    padding-left: var(--pL);
+    padding-right: var(--pL);
+  }
+}
+
 @media (--tabletLarge) {
   .footer_menus {
     justify-content: center;
