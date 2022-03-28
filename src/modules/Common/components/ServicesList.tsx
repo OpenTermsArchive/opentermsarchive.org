@@ -31,7 +31,7 @@ const ServicesList: React.FC<ServicesListProps> = ({
                 <div className={s.listServices_item_service}>{serviceName} :</div>
                 <div className={s.listServices_item_docs}>
                   {documentTypes.map((documentType: string) => {
-                    const target = `https://github.com/ambanum/OpenTermsArchive-versions/blob/master/${serviceName}/${documentType}.md`;
+                    const target = `https://github.com/OpenTermsArchive/contrib-versions/blob/master/${serviceName}/${documentType}.md`;
                     return (
                       <div
                         className={s.listServices_item_doc}
