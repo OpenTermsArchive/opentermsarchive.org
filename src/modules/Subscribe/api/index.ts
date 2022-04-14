@@ -13,7 +13,7 @@ if (!process.env.SENDINBLUE_API_KEY) {
 
 const notificationSubscription = new NotificationSubscription(process.env.SENDINBLUE_API_KEY);
 
-const SIB_SERVICE_PROVIDER_UPDATE_FOLDER_ID = 203;
+const SIB_SERVICE_PROVIDER_UPDATE_FOLDER_ID = 598;
 
 const createSubscription =
   ({ service, documentType, email }: { service: string; documentType: string; email: string }) =>
