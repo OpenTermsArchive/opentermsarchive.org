@@ -122,8 +122,8 @@ const contributors = [
     html_url: 'https://github.com/GatienH',
   },
   {
-    login: 'Stache Amustache',
-    avatar_url: 'https://avatars.githubusercontent.com/u/5108539?v=4',
+    login: 'Stache',
+    avatar_url: 'https://sibyll.in/projects/archives/pokemonpicker/img/hhueber.jpg',
     html_url: 'https://github.com/Amustache',
   },
 ];
