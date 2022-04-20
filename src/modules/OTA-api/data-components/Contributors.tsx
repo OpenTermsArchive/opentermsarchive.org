@@ -121,6 +121,12 @@ const contributors = [
     avatar_url: 'https://avatars.githubusercontent.com/u/6501059?v=4',
     html_url: 'https://github.com/GatienH',
   },
+  {
+    login: 'Laurie Liddell',
+    avatar_url:
+      'https://media-exp1.licdn.com/dms/image/C5603AQF-ny7khaPtPg/profile-displayphoto-shrink_200_200/0/1516048233339?e=1655942400&v=beta&t=fiMEvP6q0oDPQYn1rN7sgfhJpoVOnUoWGOQXvQS5oiU',
+    html_url: 'https://www.linkedin.com/in/laurie-liddell-bb4278b3/',
+  },
 ];
 
 const getContributorsByType = (type: ContributorsProps['type']) => {
