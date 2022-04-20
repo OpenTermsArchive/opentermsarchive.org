@@ -121,6 +121,11 @@ const contributors = [
     avatar_url: 'https://avatars.githubusercontent.com/u/6501059?v=4',
     html_url: 'https://github.com/GatienH',
   },
+  {
+    login: 'Alex Fisher',
+    avatar_url: 'https://avatars.githubusercontent.com/u/92438650?v=4',
+    html_url: 'https://github.com/afisher3578',
+  },
 ];
 
 const getContributorsByType = (type: ContributorsProps['type']) => {
