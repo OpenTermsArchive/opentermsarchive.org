@@ -131,6 +131,12 @@ const contributors = [
     avatar_url: 'https://sibyll.in/projects/archives/pokemonpicker/img/hhueber.jpg',
     html_url: 'https://github.com/Amustache',
   },
+  {
+    login: 'Mathilde Saliou',
+    avatar_url:
+      'https://media-exp1.licdn.com/dms/image/C4D03AQHrR4nDsjZNVQ/profile-displayphoto-shrink_800_800/0/1554215766240?e=1655942400&v=beta&t=XqkWC8ciR9Un7dL6hyk3ttVmWG2fup0ByDo1RT8XfMw',
+    html_url: 'https://twitter.com/mathildsl',
+  },
 ];
 
 const getContributorsByType = (type: ContributorsProps['type']) => {
