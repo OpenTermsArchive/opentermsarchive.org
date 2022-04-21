@@ -147,6 +147,18 @@ const contributors = [
     avatar_url: 'https://avatars.githubusercontent.com/u/16099301?v=4',
     html_url: 'https://github.com/streitlua',
   },
+  {
+    login: 'Laurie Liddell',
+    avatar_url:
+      'https://media-exp1.licdn.com/dms/image/C5603AQF-ny7khaPtPg/profile-displayphoto-shrink_200_200/0/1516048233339?e=1655942400&v=beta&t=fiMEvP6q0oDPQYn1rN7sgfhJpoVOnUoWGOQXvQS5oiU',
+    html_url: 'https://www.linkedin.com/in/laurie-liddell-bb4278b3/',
+  },
+  {
+    login: 'Raphael Bartlomé',
+    avatar_url:
+      'https://media-exp1.licdn.com/dms/image/C5603AQFGmLO1irjvdw/profile-displayphoto-shrink_200_200/0/1530358725198?e=1655942400&v=beta&t=L9fGZmXVbXm6HCMCGK4pdBEh23Zrhk6PB2F3sTTqzik',
+    html_url: 'https://www.linkedin.com/in/raphael-bartlome-840006164/',
+  },
 ];
 
 const getContributorsByType = (type: ContributorsProps['type']) => {
