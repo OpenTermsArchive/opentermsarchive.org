@@ -142,6 +142,11 @@ const contributors = [
     avatar_url: 'https://avatars.githubusercontent.com/u/92438650?v=4',
     html_url: 'https://github.com/afisher3578',
   },
+  {
+    login: 'Luã Streit',
+    avatar_url: 'https://avatars.githubusercontent.com/u/16099301?v=4',
+    html_url: 'https://github.com/streitlua',
+  },
 ];
 
 const getContributorsByType = (type: ContributorsProps['type']) => {
