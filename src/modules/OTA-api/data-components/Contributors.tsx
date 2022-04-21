@@ -126,6 +126,11 @@ const contributors = [
     avatar_url: 'https://avatars.githubusercontent.com/u/46820105?v=4',
     html_url: 'https://github.com/mvidonne',
   },
+  {
+    login: 'Stache',
+    avatar_url: 'https://sibyll.in/projects/archives/pokemonpicker/img/hhueber.jpg',
+    html_url: 'https://github.com/Amustache',
+  },
 ];
 
 const getContributorsByType = (type: ContributorsProps['type']) => {
