@@ -178,6 +178,15 @@ const HomePage = () => {
             center={true}
           ></Card>
           <Card
+            image="/images/reuses/reset.jpg"
+            className="text__center"
+            title={t('homepage:reuses.reset.title')}
+            subtitle={t('homepage:reuses.reset.subtitle')}
+            author={t('homepage:reuses.reset.author')}
+            link="/france-elections-platforms-tracking"
+            center={true}
+          ></Card>
+          <Card
             image="/images/reuses/new-reuse.jpg"
             className="text__center"
             title={t('homepage:reuses.new_reuse.title')}
