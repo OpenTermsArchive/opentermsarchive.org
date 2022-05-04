@@ -159,6 +159,12 @@ const contributors = [
       'https://media-exp1.licdn.com/dms/image/C5603AQFGmLO1irjvdw/profile-displayphoto-shrink_200_200/0/1530358725198?e=1655942400&v=beta&t=L9fGZmXVbXm6HCMCGK4pdBEh23Zrhk6PB2F3sTTqzik',
     html_url: 'https://www.linkedin.com/in/raphael-bartlome-840006164/',
   },
+  {
+    login: 'Chloé Legendre',
+    avatar_url:
+      'https://media-exp1.licdn.com/dms/image/C4E03AQFy7U2phf8qxw/profile-displayphoto-shrink_200_200/0/1650896362405?e=1657152000&v=beta&t=fZ01j3WCPWtyhLWcwxrAy2vInTxNd0_AORLkki4qljU',
+    html_url: 'https://www.linkedin.com/in/chlo%C3%A9-legendre-2b014a1a6/',
+  },
 ];
 
 const getContributorsByType = (type: ContributorsProps['type']) => {
