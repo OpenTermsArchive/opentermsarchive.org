@@ -165,6 +165,12 @@ const contributors = [
       'https://media-exp1.licdn.com/dms/image/C4E03AQFy7U2phf8qxw/profile-displayphoto-shrink_200_200/0/1650896362405?e=1657152000&v=beta&t=fZ01j3WCPWtyhLWcwxrAy2vInTxNd0_AORLkki4qljU',
     html_url: 'https://www.linkedin.com/in/chlo%C3%A9-legendre-2b014a1a6/',
   },
+  {
+    login: 'Constance Dauvergne',
+    avatar_url:
+      'https://media-exp1.licdn.com/dms/image/C4D03AQECxLzEKWKrXw/profile-displayphoto-shrink_200_200/0/1605219468099?e=1657152000&v=beta&t=VepazjcCCMNNjZwJgcGsxa1IjjPV2BfUpzEVmqQVTGI',
+    html_url: 'https://www.linkedin.com/in/constance-dauvergne-1811a5192/',
+  },
 ];
 
 const getContributorsByType = (type: ContributorsProps['type']) => {
