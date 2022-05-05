@@ -146,6 +146,15 @@ const HomePage = () => {
       <Container gridCols="12" gridGutters="11">
         <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
           <Card
+            image="/images/reuses/memos-elections-fr.jpg"
+            className="text__center"
+            title={t('homepage:reuses.memos-elections-fr.title')}
+            subtitle={t('homepage:reuses.memos-elections-fr.subtitle')}
+            author={t('homepage:reuses.memos-elections-fr.author')}
+            link="/memos-elections-fr"
+            center={true}
+          ></Card>
+          <Card
             image="/images/reuses/tosdr.jpg"
             title={t('homepage:reuses.tosdr.title')}
             subtitle={t('homepage:reuses.tosdr.subtitle')}
@@ -175,15 +184,6 @@ const HomePage = () => {
             subtitle={t('homepage:reuses.tosback.subtitle')}
             author={t('homepage:reuses.tosback.author')}
             link="https://tosback.org/"
-            center={true}
-          ></Card>
-          <Card
-            image="/images/reuses/reset.jpg"
-            className="text__center"
-            title={t('homepage:reuses.reset.title')}
-            subtitle={t('homepage:reuses.reset.subtitle')}
-            author={t('homepage:reuses.reset.author')}
-            link="/france-elections-platforms-tracking"
             center={true}
           ></Card>
           <Card

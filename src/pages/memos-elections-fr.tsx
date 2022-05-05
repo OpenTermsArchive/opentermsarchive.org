@@ -8,19 +8,16 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
 
-export default function franceElectionsPlatformsTrackingPage({ mdxContent }: WithI18nResult) {
+export default function memosElectionsFrPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();
   return (
-    <Layout
-      title={t('france-elections-platforms-tracking:seo.title')}
-      desc={t('france-elections-platforms-tracking:seo.desc')}
-    >
+    <Layout title={t('memos-elections-fr:seo.title')} desc={t('memos-elections-fr:seo.desc')}>
       <Container layout="wide" paddingY={false} dark={true}>
         <Container gridCols="12" gridGutters="11" paddingX={false} paddingY={false}>
           <Container gridCols="9" gridGutters="8" flex={true} paddingX={false} alignX="left">
             <Hero
-              title={t('france-elections-platforms-tracking:hero.title')}
-              subtitle={t('france-elections-platforms-tracking:hero.subtitle')}
+              title={t('memos-elections-fr:hero.title')}
+              subtitle={t('memos-elections-fr:hero.subtitle')}
             ></Hero>
           </Container>
         </Container>
@@ -36,5 +33,5 @@ export default function franceElectionsPlatformsTrackingPage({ mdxContent }: Wit
 
 export const getStaticProps = withI18n({
   load: 'mdx',
-  filename: 'france-elections-platforms-tracking',
+  filename: 'memos-elections-fr',
 })();
