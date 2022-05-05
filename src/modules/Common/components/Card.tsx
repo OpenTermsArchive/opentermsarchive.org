@@ -12,6 +12,7 @@ type CardProps = {
   className?: string;
   link?: string;
   center?: boolean;
+  target?: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const Card: React.FC<CardProps> = ({
@@ -22,6 +23,7 @@ const Card: React.FC<CardProps> = ({
   author,
   link,
   center = false,
+  target = '_blank',
   className,
   ...props
 }) => {
@@ -53,7 +55,7 @@ const Card: React.FC<CardProps> = ({
           <div className={classNames(s.card_author_desc, 'text__light')}>{author}</div>
         </div>
       )}
-      <a className={s.card_link} href={link} target="_blank" rel="noopener"></a>
+      <a className={s.card_link} href={link} target={target} rel="noopener"></a>
     </div>
   );
 };

@@ -152,6 +152,7 @@ const HomePage = () => {
             subtitle={t('homepage:reuses.memos-elections-fr.subtitle')}
             author={t('homepage:reuses.memos-elections-fr.author')}
             link="/memos-elections-fr"
+            target="_self"
             center={true}
           ></Card>
           <Card
