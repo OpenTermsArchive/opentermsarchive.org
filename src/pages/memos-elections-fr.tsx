@@ -1,8 +1,11 @@
 import { WithI18nResult, withI18n } from 'modules/I18n';
 
+import Button from 'modules/Common/components/Button';
+import ButtonBlock from 'modules/Common/components/ButtonBlock';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
+import Link from 'next/link';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
@@ -24,7 +27,10 @@ export default function memosElectionsFrPage({ mdxContent }: WithI18nResult) {
       </Container>
       <Container gridCols="10" gridGutters="9">
         <TextContent>
-          <MDXRemote {...(mdxContent as any)} />
+          <MDXRemote
+            {...(mdxContent as any)}
+            components={{ Button: Button, ButtonBlock: ButtonBlock, Link: Link }}
+          />
         </TextContent>
       </Container>
     </Layout>
