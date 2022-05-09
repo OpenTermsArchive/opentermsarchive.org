@@ -1,54 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	<url>
 		<loc>https://opentermsarchive.org/en</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>1.00</priority>
-	</url>
-	<url>
-		<loc>https://opentermsarchive.org/en/case-studies</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://opentermsarchive.org/en/media</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://opentermsarchive.org/en/legal-notice</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://opentermsarchive.org/en/privacy-policy</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>0.80</priority>
-	</url>
-	<url>
-		<loc>https://opentermsarchive.org/fr/case-studies</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>0.64</priority>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/en" />
 	</url>
 	<url>
 		<loc>https://opentermsarchive.org/fr</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>0.64</priority>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/en" />
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/en/case-studies</loc>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr/case-studies" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/en/case-studies" />
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/fr/case-studies</loc>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr/case-studies" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/en/case-studies" />
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/en/media</loc>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/en/media" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/media" />
 	</url>
 	<url>
 		<loc>https://opentermsarchive.org/fr/media</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>0.64</priority>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/en/media" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/media" />
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/en/legal-notice</loc>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/en/legal-notice" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/legal-notice" />
 	</url>
 	<url>
 		<loc>https://opentermsarchive.org/fr/legal-notice</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>0.64</priority>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/en/legal-notice" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/legal-notice" />
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/en/privacy-policy</loc>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/en/privacy-policy" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/privacy-policy" />
 	</url>
 	<url>
 		<loc>https://opentermsarchive.org/fr/privacy-policy</loc>
-		<lastmod>2021-09-13T07:19:56+00:00</lastmod>
-		<priority>0.64</priority>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/en/privacy-policy" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/privacy-policy" />
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/en/about</loc>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/en/about" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/about" />
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/fr/about</loc>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/en/about" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/about" />
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/en/dashboard</loc>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/en/dashboard" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/dashboard" />
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/fr/dashboard</loc>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/en/dashboard" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/dashboard" />
 	</url>
 </urlset>
