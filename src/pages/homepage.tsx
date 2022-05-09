@@ -146,6 +146,15 @@ const HomePage = () => {
       <Container gridCols="12" gridGutters="11">
         <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
           <Card
+            image="/images/reuses/memos-elections-fr.png"
+            className="text__center"
+            title={t('homepage:reuses.memos-elections-fr.title')}
+            subtitle={t('homepage:reuses.memos-elections-fr.subtitle')}
+            author={t('homepage:reuses.memos-elections-fr.author')}
+            link="https://www.reset.tech"
+            center={true}
+          ></Card>
+          <Card
             image="/images/reuses/tosdr.jpg"
             title={t('homepage:reuses.tosdr.title')}
             subtitle={t('homepage:reuses.tosdr.subtitle')}
