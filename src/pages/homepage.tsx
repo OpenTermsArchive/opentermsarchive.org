@@ -151,7 +151,7 @@ const HomePage = () => {
             title={t('homepage:reuses.memos-elections-fr.title')}
             subtitle={t('homepage:reuses.memos-elections-fr.subtitle')}
             author={t('homepage:reuses.memos-elections-fr.author')}
-            link="https://www.reset.tech"
+            link="https://www.reset.tech/resources/memos-on-platforms-behaviour-during-the-2022-french-elections/"
             center={true}
           ></Card>
           <Card
