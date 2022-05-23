@@ -8,11 +8,11 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
 
-export default function SubscribeConfirmPage({ mdxContent }: WithI18nResult) {
+export default function SubscribeDonePage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();
 
   return (
-    <Layout title={t('subscribe/confirm:seo.title')}>
+    <Layout title={t('subscribe/done:seo.title')}>
       <Container gridCols="8" gridGutters="7">
         <TextContent>
           <MDXRemote {...(mdxContent as any)} components={{ Button }} />
@@ -22,4 +22,4 @@ export default function SubscribeConfirmPage({ mdxContent }: WithI18nResult) {
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx', filename: 'subscribe/confirm' })();
+export const getStaticProps = withI18n({ load: 'mdx', filename: 'subscribe/done' })();
