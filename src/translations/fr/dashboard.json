@@ -13,6 +13,7 @@
   "latestversionscommits.buttonblock.label": "Explorer",
   "latestversionscommits.buttonblock.link.title": "Explorer les versions de documents",
   "latestversionscommits.buttonblock.title": "Nous avons enregistré {{count}} versions de documents",
+  "latestversionscommits.buttonblock.title_plural": "__STRING_NOT_TRANSLATED__",
   "latestversionscommits.subtitle": "sur les documents suivis",
   "latestversionscommits.title": "Derniers changements enregistrés",
   "seo.title": "Tableau de bord",
