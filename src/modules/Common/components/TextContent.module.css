@@ -13,45 +13,85 @@
 
   & h1 {
     margin-bottom: var(--m3XL);
+
+    @media (--tabletSmall) {
+      margin-bottom: var(--mXL);
+    }
   }
 
   & h2 {
     margin-bottom: var(--mXL);
+
+    @media (--tabletSmall) {
+      margin-bottom: var(--mL);
+    }
   }
 
   & h3 {
     margin-bottom: var(--mL);
+
+    @media (--tabletSmall) {
+      margin-bottom: var(--mM);
+    }
   }
 
   & h4 {
     margin-bottom: var(--mM);
+
+    @media (--tabletSmall) {
+      margin-bottom: var(--mS);
+    }
   }
 
   & h5 {
     margin-bottom: var(--mS);
+
+    @media (--tabletSmall) {
+      margin-bottom: var(--mXS);
+    }
   }
 
   & h6 {
     margin-bottom: var(--mXS);
+
+    @media (--tabletSmall) {
+      margin-bottom: var(--m2XS);
+    }
   }
 
   & p + h2,
   & ul + h2 {
     margin-top: var(--m3XL);
+
+    @media (--tabletSmall) {
+      margin-top: var(--m2XL);
+    }
   }
 
   & p + h3,
   & ul + h3 {
     margin-top: var(--m2XL);
+
+    @media (--tabletSmall) {
+      margin-top: var(--mXL);
+    }
   }
 
   & p + h4,
   & ul + h4 {
     margin-top: var(--mXL);
+
+    @media (--tabletSmall) {
+      margin-bottom: var(--mL);
+    }
   }
 
   & iframe {
     margin-bottom: var(--mXL);
+
+    @media (--tabletSmall) {
+      margin-bottom: var(--mL);
+    }
   }
 
   & ul {
@@ -90,6 +130,10 @@
 
   & button {
     margin-bottom: var(--mXL);
+
+    @media (--tabletSmall) {
+      margin-bottom: var(--mL);
+    }
   }
 }
 
