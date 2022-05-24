@@ -1,9 +1,7 @@
 import SubscribeForm, { SubscribeFormProps } from 'modules/Common/components/SubscribeForm';
 
-import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
-import ImageSubscribe from '../../public/images/subscribe.svg';
 import Layout from 'modules/Common/containers/Layout';
 import React from 'react';
 import api from 'utils/api';
