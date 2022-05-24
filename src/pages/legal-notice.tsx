@@ -13,7 +13,7 @@ export default function LegalNoticePage({ mdxContent }: WithI18nResult) {
 
   return (
     <Layout title={t('legal-notice:seo.title')}>
-      <Container gridCols="10" gridGutters="9" paddingX={false}>
+      <Container gridCols="10" gridGutters="9">
         <TextContent>
           <MDXRemote {...(mdxContent as any)} components={{ Button }} />
         </TextContent>
