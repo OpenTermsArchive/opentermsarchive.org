@@ -8,7 +8,7 @@
   border-radius: 4px;
   transition: all 0.3s easeOutExpo;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: var(--colorSecondary);
     color: var(--colorWhite);
     transition: all 0.25s easeOutCirc;
@@ -47,5 +47,6 @@
 
   &:disabled {
     opacity: 0.6;
+    cursor: not-allowed;
   }
 }

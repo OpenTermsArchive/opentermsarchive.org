@@ -26,11 +26,11 @@ const HomePage = () => {
         </Container>
       </Container>
       {/* How it works -  1 step */}
-      <Container layout="wide" paddingBottom={false}>
+      <Container layout="wide" paddingY={false}>
         <Container gridCols="11" gridGutters="10" paddingX={false}>
           <h2 className="text__center">{t('homepage:how.title')}</h2>
         </Container>
-        <Container gridCols="11" gridGutters="10" flex={true} paddingX={false} paddingYSmall={true}>
+        <Container gridCols="11" gridGutters="10" flex={true} paddingX={false}>
           <Column width={50}>
             <h3>{t('homepage:how.bloc1.title')}</h3>
             <p className="mt__M h3 h3__light">{t('homepage:how.bloc1.desc')}</p>
@@ -99,6 +99,7 @@ const HomePage = () => {
               title={t('homepage:cta_public.case_studies.title')}
               iconName="FiTwitter"
               iconColor="var(--colorBlack400)"
+              white={true}
             >
               <Link href="https://twitter.com/OpenTerms">
                 <Button>{t('homepage:cta_public.case_studies.button.label')}</Button>
@@ -111,6 +112,7 @@ const HomePage = () => {
               title={t('homepage:cta_public.subscribe.title')}
               iconName="FiMail"
               iconColor="var(--colorBlack400)"
+              white={true}
             >
               <Link href="/subscribe">
                 <Button>{t('homepage:cta_public.subscribe.button.label')}</Button>
@@ -127,6 +129,7 @@ const HomePage = () => {
               title={t('homepage:cta_public.explore.title')}
               iconName="FiGithub"
               iconColor="var(--colorBlack400)"
+              white={true}
             >
               <Link href="https://github.com/ambanum/OpenTermsArchive-versions/">
                 <Button>{t('homepage:cta_public.explore.button.label')}</Button>
