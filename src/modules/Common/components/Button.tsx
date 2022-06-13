@@ -7,6 +7,7 @@ type ButtonProps = {
   type?: 'primary' | 'secondary';
   size?: 'sm' | 'md';
   onlyIcon?: boolean;
+  submit?: boolean;
 } & Omit<React.HTMLProps<HTMLButtonElement>, 'size'>;
 
 const Button: React.FC<ButtonProps> = ({
@@ -15,11 +16,12 @@ const Button: React.FC<ButtonProps> = ({
   type = 'primary',
   size = 'md',
   onlyIcon = false,
+  submit = false,
   ...props
 }) => {
   return (
     <button
-      type="button"
+      type={submit === true ? 'submit' : 'button'}
       className={classNames(
         s.button,
         type === 'secondary' ? s.button__secondary : null,
