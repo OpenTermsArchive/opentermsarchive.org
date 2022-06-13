@@ -68,7 +68,7 @@
   }
 
   &.container__wide {
-    max-width: var(--desktopWide);
+    max-width: var(--bpDesktopWide);
     margin: 0 auto;
   }
 
