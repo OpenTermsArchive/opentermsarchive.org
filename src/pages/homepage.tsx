@@ -11,11 +11,13 @@ import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
 
 const HomePage = () => {
   const { t } = useTranslation();
+  const router = useRouter();
 
   return (
     <Layout title={t('homepage:seo.title')} desc={t('homepage:seo.desc')}>
@@ -148,6 +150,15 @@ const HomePage = () => {
       {/* Reuses */}
       <Container gridCols="12" gridGutters="11">
         <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
+          <Card
+            image={`/images/reuses/memos-elections-${router?.locale}.png`}
+            className="text__center"
+            title={t('homepage:reuses.memos-elections-fr.title')}
+            subtitle={t('homepage:reuses.memos-elections-fr.subtitle')}
+            author={t('homepage:reuses.memos-elections-fr.author')}
+            link="https://www.reset.tech/resources/memos-on-platforms-behaviour-during-the-2022-french-elections/"
+            center={true}
+          ></Card>
           <Card
             image="/images/reuses/tosdr.jpg"
             title={t('homepage:reuses.tosdr.title')}
