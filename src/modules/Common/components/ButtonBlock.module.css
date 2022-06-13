@@ -13,6 +13,7 @@
     width: 100%;
     max-width: 100%;
   }
+
   &.buttonBlock__isDark {
     background-color: var(--colorBlack900);
     color: var(--colorWhite);
@@ -25,6 +26,7 @@
       color: var(--colorWhite);
     }
   }
+
   &.buttonBlock__isWhite {
     background-color: var(--colorWhite);
   }

@@ -20,10 +20,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-items: flex-start; */
 
   & > div {
-    margin: 0 var(--gridGutterWidth) var(--gridGutterWidth);
+    margin-top: 0;
+    margin-bottom: var(--m2XL);
+    margin-left: var(--gridGutterWidth);
+    margin-right: var(--gridGutterWidth);
   }
 }
 

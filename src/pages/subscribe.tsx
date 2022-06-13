@@ -1,9 +1,7 @@
 import SubscribeForm, { SubscribeFormProps } from 'modules/Common/components/SubscribeForm';
 
-import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
-import ImageSubscribe from '../../public/images/subscribe.svg';
 import Layout from 'modules/Common/containers/Layout';
 import React from 'react';
 import api from 'utils/api';
@@ -44,12 +42,7 @@ export default function SubscribePage({ services }: any) {
     <Layout title={t('subscribe:seo.title')} desc={t('subscribe:seo.desc')}>
       <Container layout="wide" dark={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Column width={60} alignY="center">
-            <Hero title={t('subscribe:hero.title')} subtitle={t('subscribe:hero.subtitle')}></Hero>
-          </Column>
-          <Column width={40} alignX="right" hideOnTablet={true}>
-            <ImageSubscribe />
-          </Column>
+          <Hero title={t('subscribe:hero.title')} subtitle={t('subscribe:hero.subtitle')}></Hero>
         </Container>
       </Container>
 

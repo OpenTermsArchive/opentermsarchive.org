@@ -68,7 +68,7 @@
   }
 
   &.container__wide {
-    max-width: var(--desktopWide);
+    max-width: var(--bpDesktopWide);
     margin: 0 auto;
   }
 
@@ -147,5 +147,10 @@
   .container {
     padding-top: var(--p3XL);
     padding-bottom: var(--p2XL);
+
+    &.container__hasPaddingYSmall {
+      padding-top: var(--pXL);
+      padding-bottom: var(--pM);
+    }
   }
 }

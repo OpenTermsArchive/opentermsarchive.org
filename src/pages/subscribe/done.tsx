@@ -8,12 +8,12 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'next-i18next';
 
-export default function LegalNoticePage({ mdxContent }: WithI18nResult) {
+export default function SubscribeDonePage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();
 
   return (
-    <Layout title={t('legal-notice:seo.title')}>
-      <Container gridCols="10" gridGutters="9">
+    <Layout title={t('subscribe/done:seo.title')}>
+      <Container gridCols="9" gridGutters="8">
         <TextContent>
           <MDXRemote {...(mdxContent as any)} components={{ Button }} />
         </TextContent>
@@ -22,4 +22,4 @@ export default function LegalNoticePage({ mdxContent }: WithI18nResult) {
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx', filename: 'legal-notice' })();
+export const getStaticProps = withI18n({ load: 'mdx', filename: 'subscribe/done' })();
