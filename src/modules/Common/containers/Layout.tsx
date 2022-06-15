@@ -173,11 +173,6 @@ const Layout = ({
               </ul>
               <ul>
                 <li>
-                  <Link href="/dashboard">
-                    <a title={t('footer:link.dashboard.title')}>{t('footer:link.dashboard')}</a>
-                  </Link>
-                </li>
-                <li>
                   <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
                     <a title={t('footer:link.dataset.title')} target="_blank" rel="noopener">
                       {t('footer:link.dataset')}
