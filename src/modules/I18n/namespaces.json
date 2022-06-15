@@ -1,5 +1,6 @@
 [
   "about",
+  "accessibility",
   "analytics",
   "case-studies",
   "common",
@@ -16,8 +17,8 @@
   "ota-api",
   "privacy-policy",
   "subscribe",
-  "subscribe/french-elections",
   "subscribe/confirm",
   "subscribe/done",
+  "subscribe/french-elections",
   "wdyr"
 ]
