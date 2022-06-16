@@ -1,0 +1,21 @@
+{
+  "subscribe_form.changes.before": "Para este documento puede estar interesado en ",
+  "subscribe_form.changes.changes.separator": "o ",
+  "subscribe_form.changes.github": "ver los últimos cambios en Github ",
+  "subscribe_form.changes.scripta-manent": "Comparar las versiones por fecha con Scripta Manent",
+  "subscribe_form.consent": "Si habilita la casilla en blanco, usted podrá recibir correos electrónicos informándole de los cambios en un documento.",
+  "subscribe_form.error": "Ocurrió un problema, por favor inténtelo de nuevo.",
+  "subscribe_form.fields.document.default": "Seleccionar...",
+  "subscribe_form.fields.document.label": "Seleccionar un tipo de documento",
+  "subscribe_form.fields.email.input.placeholder": "Correo electrónico",
+  "subscribe_form.fields.email.label": "Introduzca su dirección de correo",
+  "subscribe_form.fields.service.default": "Seleccionar...",
+  "subscribe_form.fields.service.label": "Seleccione un servicio",
+  "subscribe_form.fields.service.optgroup.gatekeepers": "Gatekeepers",
+  "subscribe_form.fields.service.optgroup.otherservices": "Otros servicios",
+  "subscribe_form.p1": "Teniendo en cuenta que la frecuencia de cambio de un documento puede variar de un documento a otro, es difícil estimar la frecuencia de los correos electrónicos que usted recibirá. Sin embargo, hemos observado que los grandes servicios digitales cambian sus documentos aproximadamente una vez cada quince días.",
+  "subscribe_form.p2": "Si usted desea rastrear más de un documento a la vez, rellene este formulario tantas veces como sea necesario. Si deseas acumular varios documentos al mismo tiempo, contáctanos por favor.",
+  "subscribe_form.p3": "Si usted ha suscrito a un boletín del cual ya no quieres recibir mensajes, puedes solicitar su eliminación. Le recomendamos que consulte nuestra política de privacidad según las instrucciones que se describen allí. El botón de Cancelar Suscripción puede ser encontrado en la parte inferior.",
+  "subscribe_form.submit": "Suscríbase",
+  "subscribe_form.success": "Gracias por subscribirte"
+}
