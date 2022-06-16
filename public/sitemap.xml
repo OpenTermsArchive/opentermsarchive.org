@@ -61,16 +61,6 @@
 		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/about" />
 	</url>
 	<url>
-		<loc>https://opentermsarchive.org/en/dashboard</loc>
-		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/en/dashboard" />
-		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/dashboard" />
-	</url>
-	<url>
-		<loc>https://opentermsarchive.org/fr/dashboard</loc>
-		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/en/dashboard" />
-		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/fr/dashboard" />
-	</url>
-	<url>
 		<loc>https://opentermsarchive.org/fr/subscribe/french-elections</loc>
 		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr/subscribe/french-elections" />
 		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/en/subscribe/french-elections" />
@@ -79,5 +69,15 @@
 		<loc>https://opentermsarchive.org/en/subscribe/french-elections</loc>
 		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr/subscribe/french-elections" />
 		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/en/subscribe/french-elections" />
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/fr/accessibility</loc>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr/accessibility" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/en/accessibility" />
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/en/accessibility</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/en/accessibility" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr/accessibility" />
 	</url>
 </urlset>

@@ -1,6 +1,6 @@
 {
   "name": "OpenTermsArchive.org",
-  "version": "1.27.0",
+  "version": "1.28.0",
   "prettier": "prettier-config-ambanum",
   "scripts": {
     "dev": "next",

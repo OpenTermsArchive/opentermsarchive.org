@@ -173,8 +173,10 @@ const Layout = ({
               </ul>
               <ul>
                 <li>
-                  <Link href="/dashboard">
-                    <a title={t('footer:link.dashboard.title')}>{t('footer:link.dashboard')}</a>
+                  <Link href="/accessibility">
+                    <a title={t('footer:link.accessibility.title')}>
+                      {t('footer:link.accessibility')}
+                    </a>
                   </Link>
                 </li>
                 <li>
