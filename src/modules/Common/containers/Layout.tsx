@@ -170,6 +170,11 @@ const Layout = ({
                     <a title={t('footer:link.privacy.title')}>{t('footer:link.privacy')}</a>
                   </Link>
                 </li>
+                <li>
+                  <Link href="/stats">
+                    <a title={t('footer:link.stats.title')}>{t('footer:link.stats')}</a>
+                  </Link>
+                </li>
               </ul>
               <ul>
                 <li>
