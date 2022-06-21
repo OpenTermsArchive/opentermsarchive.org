@@ -73,7 +73,7 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
         </Container>
       </Container>
       <Container gridCols="12" gridGutters="11">
-        <CardList title="4 instances">
+        <CardList title="4 instances" small={true} centerTitle={true}>
           <Card
             className="text__center"
             title="Contrib"
@@ -90,9 +90,7 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
             subtitle="104 services et 206 documents"
             link="https://github.com/OpenTermsArchive/france-versions"
             center={true}
-            author="UFC Que Choisir & l'équipe de
-            l'Ambassadeur français pour le
-            numérique"
+            author="UFC Que Choisir"
           >
             Services variés en français et dans la juridiction française.
           </Card>
@@ -102,7 +100,7 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
             subtitle="5 services et 75 documents"
             link="https://github.com/OpenTermsArchive/contrib-versions/"
             center={true}
-            author="Open Terms Archive"
+            author="Reset"
           >
             Services en ligne des grands médias utilisés en France, en français et dans la
             juridiction française pendant l'élection présidentielle française de 2022.

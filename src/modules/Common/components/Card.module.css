@@ -20,7 +20,6 @@
   cursor: pointer;
 
   &:hover {
-    color: var(--colorSecondary);
     border: 1px solid var(--colorSecondary);
   }
 }
