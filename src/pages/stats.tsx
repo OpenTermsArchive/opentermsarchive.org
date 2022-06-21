@@ -1,6 +1,5 @@
 import { WithI18nResult, withI18n } from 'modules/I18n';
 
-import Button from 'modules/Common/components/Button';
 import ButtonBlock from 'modules/Common/components/ButtonBlock';
 import ButtonBlockList from 'modules/Common/components/ButtonBlockList';
 import Card from 'modules/Common/components/Card';
@@ -8,7 +7,6 @@ import CardList from 'modules/Common/components/CardList';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
-import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
@@ -33,38 +31,38 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
       </Container>
       <Container layout="wide" gray={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" paddingX={false}>
-          <ButtonBlockList title="Quelques chiffres">
+          <ButtonBlockList title={t('stats:numbers.title')}>
             <ButtonBlock
-              title="418 services"
-              desc="répartis sur plusieurs industries, langues et juridictions."
+              title={t('stats:numbers.block1.title')}
+              desc={t('stats:numbers.block1.desc')}
               iconName="FiFolder"
               iconColor="var(--colorBlack400)"
               white={true}
             ></ButtonBlock>
             <ButtonBlock
-              desc="qui utilise une ontologie d'une cinquantème de types."
-              title="956 documents"
+              title={t('stats:numbers.block2.title')}
+              desc={t('stats:numbers.block2.desc')}
               iconName="FiFile"
               iconColor="var(--colorBlack400)"
               white={true}
             ></ButtonBlock>
             <ButtonBlock
-              desc="publiées sous forme de brèves et de tweets."
-              title="370 analyses"
+              title={t('stats:numbers.block3.title')}
+              desc={t('stats:numbers.block3.desc')}
               iconName="FiEye"
               iconColor="var(--colorBlack400)"
               white={true}
             ></ButtonBlock>
             <ButtonBlock
-              desc="qui permettent à Open Terms Archive d'exister"
-              title="23 contributeurs"
+              title={t('stats:numbers.block4.title')}
+              desc={t('stats:numbers.block4.desc')}
               iconName="FiUsers"
               iconColor="var(--colorBlack400)"
               white={true}
             ></ButtonBlock>
             <ButtonBlock
-              desc="des outils et données produit par Open Terms Archive"
-              title="5 réutilisations"
+              title={t('stats:numbers.block5.title')}
+              desc={t('stats:numbers.block5.desc')}
               iconName="FiDatabase"
               iconColor="var(--colorBlack400)"
               white={true}
@@ -73,48 +71,46 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
         </Container>
       </Container>
       <Container gridCols="12" gridGutters="11">
-        <CardList title="4 instances" small={true} centerTitle={true}>
+        <CardList title={t('stats:instances.title')} small={true} centerTitle={true}>
           <Card
+            title={t('stats:instances.block1.title')}
+            subtitle={t('stats:instances.block1.subtitle')}
+            author={t('stats:instances.block1.author')}
             className="text__center"
-            title="Contrib"
-            subtitle="285 services et 612 documents"
             link="https://github.com/OpenTermsArchive/contrib-versions/"
             center={true}
-            author="Non maintenue"
           >
-            Services variés en anglais.
+            {t('stats:instances.block1.desc')}
           </Card>
           <Card
+            title={t('stats:instances.block2.title')}
+            subtitle={t('stats:instances.block2.subtitle')}
+            author={t('stats:instances.block2.author')}
             className="text__center"
-            title="France"
-            subtitle="104 services et 206 documents"
             link="https://github.com/OpenTermsArchive/france-versions"
             center={true}
-            author="UFC Que Choisir"
           >
-            Services variés en français et dans la juridiction française.
+            {t('stats:instances.block2.desc')}
           </Card>
           <Card
+            title={t('stats:instances.block3.title')}
+            subtitle={t('stats:instances.block3.subtitle')}
+            author={t('stats:instances.block3.author')}
             className="text__center"
-            title="France Élections"
-            subtitle="5 services et 75 documents"
             link="https://github.com/OpenTermsArchive/contrib-versions/"
             center={true}
-            author="Reset"
           >
-            Services en ligne des grands médias utilisés en France, en français et dans la
-            juridiction française pendant l'élection présidentielle française de 2022.
+            {t('stats:instances.block3.desc')}
           </Card>
           <Card
+            title={t('stats:instances.block4.title')}
+            subtitle={t('stats:instances.block4.subtitle')}
+            author={t('stats:instances.block4.author')}
             className="text__center"
-            title="Dating"
-            subtitle="24 services et 52 documents"
             link="https://github.com/OpenTermsArchive/dating-versions"
             center={true}
-            author="HestiaLabs"
           >
-            Services de rencontres utilisés en Europe, en anglais et dans les juridictions de
-            l'Union européenne et de la Suisse.
+            {t('stats:instances.block4.desc')}
           </Card>
         </CardList>
       </Container>
