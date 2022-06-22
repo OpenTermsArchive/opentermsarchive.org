@@ -79,6 +79,8 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
             className="text__center"
             link="https://github.com/OpenTermsArchive/contrib-versions/"
             center={true}
+            image="/images/instances/contrib.png"
+            small={true}
           >
             {t('stats:instances.block1.desc')}
           </Card>
@@ -89,6 +91,8 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
             className="text__center"
             link="https://github.com/OpenTermsArchive/france-versions"
             center={true}
+            image="/images/instances/france.png"
+            small={true}
           >
             {t('stats:instances.block2.desc')}
           </Card>
@@ -99,6 +103,8 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
             className="text__center"
             link="https://github.com/OpenTermsArchive/contrib-versions/"
             center={true}
+            image="/images/instances/france-elections.png"
+            small={true}
           >
             {t('stats:instances.block3.desc')}
           </Card>
@@ -109,6 +115,8 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
             className="text__center"
             link="https://github.com/OpenTermsArchive/dating-versions"
             center={true}
+            image="/images/instances/dating.png"
+            small={true}
           >
             {t('stats:instances.block4.desc')}
           </Card>

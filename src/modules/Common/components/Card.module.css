@@ -14,6 +14,12 @@
       text-align: left;
     }
   }
+
+  &.card__isSmall {
+    & > .card_header {
+      height: 140px;
+    }
+  }
 }
 
 .card__isLink {

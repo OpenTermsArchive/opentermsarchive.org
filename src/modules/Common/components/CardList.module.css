@@ -23,6 +23,7 @@
 .cardList_items {
   @mixin grid 12, 11;
   margin-top: var(--m3XL);
+  margin-bottom: var(--m2XL);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: var(--gridGutterWidth);
