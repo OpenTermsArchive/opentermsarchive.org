@@ -1,6 +1,4 @@
 {
-  "hero.subtitle": "Impact assessment",
-  "hero.title": "Statistics",
   "instances.block1.author": "Not maintained",
   "instances.block1.desc": "Various services in English.",
   "instances.block1.subtitle": "285 services and 612 documents",
@@ -28,6 +26,6 @@
   "numbers.block4.title": "23 contributors",
   "numbers.block5.desc": "tools and data produced by Open Terms Archive",
   "numbers.block5.title": "5 reuses",
-  "numbers.title": "Some numbers",
+  "numbers.title": "Some data",
   "seo.title": "Statistics"
 }

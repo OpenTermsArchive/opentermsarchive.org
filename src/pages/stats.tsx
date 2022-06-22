@@ -5,7 +5,6 @@ import ButtonBlockList from 'modules/Common/components/ButtonBlockList';
 import Card from 'modules/Common/components/Card';
 import CardList from 'modules/Common/components/CardList';
 import Container from 'modules/Common/containers/Container';
-import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
@@ -17,20 +16,13 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();
   return (
     <Layout title={t('stats:seo.title')}>
-      <Container layout="wide" paddingY={false} dark={true}>
-        <Container gridCols="12" gridGutters="11" paddingX={false} paddingY={false}>
-          <Container gridCols="9" gridGutters="8" flex={true} paddingX={false} alignX="left">
-            <Hero title={t('stats:hero.title')} subtitle={t('stats:hero.subtitle')}></Hero>
-          </Container>
-        </Container>
-      </Container>
       <Container gridCols="10" gridGutters="9">
         <TextContent>
           <MDXRemote {...(mdxContent as any)} components={{ LinkIcon }} />
         </TextContent>
       </Container>
       <Container layout="wide" gray={true} paddingY={false}>
-        <Container gridCols="12" gridGutters="11" paddingX={false}>
+        <Container gridCols="12" gridGutters="11" paddingX={false} paddingYSmall={true}>
           <ButtonBlockList title={t('stats:numbers.title')}>
             <ButtonBlock
               title={t('stats:numbers.block1.title')}
