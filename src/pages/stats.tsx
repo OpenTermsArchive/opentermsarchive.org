@@ -93,7 +93,7 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
             subtitle={t('stats:instances.block3.subtitle')}
             author={t('stats:instances.block3.author')}
             className="text__center"
-            link="https://github.com/OpenTermsArchive/contrib-versions/"
+            link="https://github.com/OpenTermsArchive/france-elections-versions/"
             center={true}
             image="/images/instances/france-elections.png"
             small={true}
