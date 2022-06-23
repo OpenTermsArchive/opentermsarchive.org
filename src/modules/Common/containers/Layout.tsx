@@ -161,27 +161,8 @@ const Layout = ({
             <FooterMenu small={true} align={'right'}>
               <ul>
                 <li>
-                  <Link href="/legal-notice">
-                    <a title={t('footer:link.tos.title')}>{t('footer:link.tos')}</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/privacy-policy">
-                    <a title={t('footer:link.privacy.title')}>{t('footer:link.privacy')}</a>
-                  </Link>
-                </li>
-                <li>
                   <Link href="/stats">
                     <a title={t('footer:link.stats.title')}>{t('footer:link.stats')}</a>
-                  </Link>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <Link href="/accessibility">
-                    <a title={t('footer:link.accessibility.title')}>
-                      {t('footer:link.accessibility')}
-                    </a>
                   </Link>
                 </li>
                 <li>
@@ -195,6 +176,25 @@ const Layout = ({
                   <Link href="https://github.com/ambanum/OpenTermsArchive">
                     <a title={t('footer:link.github.title')} target="_blank" rel="noopener">
                       {t('footer:link.github')}
+                    </a>
+                  </Link>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <Link href="/legal-notice">
+                    <a title={t('footer:link.tos.title')}>{t('footer:link.tos')}</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy-policy">
+                    <a title={t('footer:link.privacy.title')}>{t('footer:link.privacy')}</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/accessibility">
+                    <a title={t('footer:link.accessibility.title')}>
+                      {t('footer:link.accessibility')}
                     </a>
                   </Link>
                 </li>
