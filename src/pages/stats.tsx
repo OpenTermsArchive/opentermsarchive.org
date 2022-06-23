@@ -65,52 +65,52 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
       <Container gridCols="12" gridGutters="11">
         <CardList title={t('stats:instances.title')} small={true} centerTitle={true}>
           <Card
-            title={t('stats:instances.block1.title')}
-            subtitle={t('stats:instances.block1.subtitle')}
-            author={t('stats:instances.block1.author')}
+            title={t('stats:instances.contrib.title')}
+            subtitle={t('stats:instances.contrib.subtitle')}
+            author={t('stats:instances.contrib.author')}
             className="text__center"
             link="https://github.com/OpenTermsArchive/contrib-versions/"
             center={true}
             image="/images/instances/contrib.png"
             small={true}
           >
-            {t('stats:instances.block1.desc')}
+            {t('stats:instances.contrib.desc')}
           </Card>
           <Card
-            title={t('stats:instances.block2.title')}
-            subtitle={t('stats:instances.block2.subtitle')}
-            author={t('stats:instances.block2.author')}
+            title={t('stats:instances.france.title')}
+            subtitle={t('stats:instances.france.subtitle')}
+            author={t('stats:instances.france.author')}
             className="text__center"
             link="https://github.com/OpenTermsArchive/france-versions"
             center={true}
             image="/images/instances/france.png"
             small={true}
           >
-            {t('stats:instances.block2.desc')}
+            {t('stats:instances.france.desc')}
           </Card>
           <Card
-            title={t('stats:instances.block3.title')}
-            subtitle={t('stats:instances.block3.subtitle')}
-            author={t('stats:instances.block3.author')}
+            title={t('stats:instances.france-elections.title')}
+            subtitle={t('stats:instances.france-elections.subtitle')}
+            author={t('stats:instances.france-elections.author')}
             className="text__center"
             link="https://github.com/OpenTermsArchive/france-elections-versions/"
             center={true}
             image="/images/instances/france-elections.png"
             small={true}
           >
-            {t('stats:instances.block3.desc')}
+            {t('stats:instances.france-elections.desc')}
           </Card>
           <Card
-            title={t('stats:instances.block4.title')}
-            subtitle={t('stats:instances.block4.subtitle')}
-            author={t('stats:instances.block4.author')}
+            title={t('stats:instances.dating.title')}
+            subtitle={t('stats:instances.dating.subtitle')}
+            author={t('stats:instances.dating.author')}
             className="text__center"
             link="https://github.com/OpenTermsArchive/dating-versions"
             center={true}
             image="/images/instances/dating.png"
             small={true}
           >
-            {t('stats:instances.block4.desc')}
+            {t('stats:instances.dating.desc')}
           </Card>
         </CardList>
       </Container>
