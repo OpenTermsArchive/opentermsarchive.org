@@ -7,11 +7,12 @@ import s from './Card.module.css';
 type CardProps = {
   title?: string;
   image?: string;
-  subtitle?: string;
+  subtitle?: string | React.ReactElement;
   author?: string;
   className?: string;
   link?: string;
   center?: boolean;
+  small?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const Card: React.FC<CardProps> = ({
@@ -22,6 +23,7 @@ const Card: React.FC<CardProps> = ({
   author,
   link,
   center = false,
+  small,
   className,
   ...props
 }) => {
@@ -31,6 +33,7 @@ const Card: React.FC<CardProps> = ({
         s.card,
         link ? s.card__isLink : null,
         center ? s.card__center : null,
+        small ? s.card__isSmall : null,
         className
       )}
       {...props}
