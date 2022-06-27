@@ -14,13 +14,18 @@
       text-align: left;
     }
   }
+
+  &.card__isSmall {
+    & > .card_header {
+      height: 140px;
+    }
+  }
 }
 
 .card__isLink {
   cursor: pointer;
 
   &:hover {
-    color: var(--colorSecondary);
     border: 1px solid var(--colorSecondary);
   }
 }
