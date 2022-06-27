@@ -7,7 +7,7 @@ import s from './Card.module.css';
 type CardProps = {
   title?: string;
   image?: string;
-  subtitle?: string;
+  subtitle?: string | React.ReactElement;
   author?: string;
   className?: string;
   link?: string;

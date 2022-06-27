@@ -1,3 +1,4 @@
+import { Trans, useTranslation } from 'next-i18next';
 import { WithI18nResult, withI18n } from 'modules/I18n';
 
 import ButtonBlock from 'modules/Common/components/ButtonBlock';
@@ -10,7 +11,6 @@ import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import { useTranslation } from 'next-i18next';
 
 export default function StatsPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();
@@ -66,7 +66,7 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
         <CardList title={t('stats:instances.title')} small={true} centerTitle={true}>
           <Card
             title={t('stats:instances.contrib.title')}
-            subtitle={t('stats:instances.contrib.subtitle')}
+            subtitle={<Trans i18nKey={'stats:instances.contrib.subtitle'}></Trans>}
             author={t('stats:instances.contrib.author')}
             className="text__center"
             link="https://github.com/OpenTermsArchive/contrib-versions/"
@@ -78,7 +78,7 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
           </Card>
           <Card
             title={t('stats:instances.france.title')}
-            subtitle={t('stats:instances.france.subtitle')}
+            subtitle={<Trans i18nKey={'stats:instances.france.subtitle'}></Trans>}
             author={t('stats:instances.france.author')}
             className="text__center"
             link="https://github.com/OpenTermsArchive/france-versions"
@@ -90,7 +90,7 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
           </Card>
           <Card
             title={t('stats:instances.france-elections.title')}
-            subtitle={t('stats:instances.france-elections.subtitle')}
+            subtitle={<Trans i18nKey={'stats:instances.france-elections.subtitle'}></Trans>}
             author={t('stats:instances.france-elections.author')}
             className="text__center"
             link="https://github.com/OpenTermsArchive/france-elections-versions/"
@@ -102,7 +102,7 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
           </Card>
           <Card
             title={t('stats:instances.dating.title')}
-            subtitle={t('stats:instances.dating.subtitle')}
+            subtitle={<Trans i18nKey={'stats:instances.dating.subtitle'}></Trans>}
             author={t('stats:instances.dating.author')}
             className="text__center"
             link="https://github.com/OpenTermsArchive/dating-versions"
