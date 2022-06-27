@@ -27,7 +27,7 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
             <ButtonBlock
               title={t('stats:numbers.block1.title')}
               desc={t('stats:numbers.block1.desc')}
-              iconName="FiFolder"
+              iconName="FiGlobe"
               iconColor="var(--colorBlack400)"
               white={true}
             ></ButtonBlock>
@@ -55,7 +55,7 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
             <ButtonBlock
               title={t('stats:numbers.block5.title')}
               desc={t('stats:numbers.block5.desc')}
-              iconName="FiDatabase"
+              iconName="FiLayers"
               iconColor="var(--colorBlack400)"
               white={true}
             ></ButtonBlock>
