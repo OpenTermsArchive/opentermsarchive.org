@@ -2,9 +2,6 @@ name: Validate typescript
 
 on:
   push:
-    branches-ignore:
-      - main # Validation is already done on every push
-  workflow_call:
 
 jobs:
   test:
