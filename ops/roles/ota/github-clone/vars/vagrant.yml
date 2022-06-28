@@ -1,5 +1,0 @@
-name: 'ota-org-vagrant'
-repository: 'https://github.com/ambanum/OpenTermsArchive.org.git'
-branch: 'develop'
-app_port: '7022'
-env_file: './docker/.env.vagrant'
