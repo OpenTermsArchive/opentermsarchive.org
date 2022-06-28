@@ -1,6 +1,0 @@
----
-- name: Setup OpenTermArchive.org
-  hosts: all
-
-  roles:
-    - ota/github-clone

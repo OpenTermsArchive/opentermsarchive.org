@@ -1,5 +1,0 @@
-name: 'ota-org-production'
-repository: 'https://github.com/ambanum/OpenTermsArchive.org.git'
-branch: 'main'
-app_port: '7021'
-env_file: './docker/.env.production'
