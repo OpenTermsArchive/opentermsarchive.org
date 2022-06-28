@@ -58,4 +58,12 @@ module.exports = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: '/data/api/:slug*',
+        destination: 'http://51.75.169.235:7011/data/api/:slug*',
+      },
+    ];
+  },
 };
