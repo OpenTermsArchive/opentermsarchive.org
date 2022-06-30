@@ -24,9 +24,9 @@
     "prettier": "prettier --write ."
   },
   "dependencies": {
-    "@nivo/core": "^0.79.0",
-    "@nivo/line": "^0.79.1",
-    "@nivo/pie": "^0.79.1",
+    "@nivo/core": "^0.78.0",
+    "@nivo/line": "^0.78.0",
+    "@nivo/pie": "^0.78.0",
     "@socialgouv/matomo-next": "^1.2.1",
     "@svgr/webpack": "^5.5.0",
     "@types/lodash": "^4.14.171",
