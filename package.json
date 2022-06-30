@@ -65,6 +65,7 @@
     "react-use": "17.2.4",
     "react-virtualized-auto-sizer": "^1.0.5",
     "react-window": "^1.8.6",
+    "rehype-attr": "^2.0.8",
     "sib-api-v3-typescript": "^2.2.2",
     "swr": "0.5.6",
     "user-agents": "1.0.753"
