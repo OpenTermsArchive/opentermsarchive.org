@@ -67,19 +67,44 @@ module.exports = {
     ];
   },
   async headers() {
+    const securityPolicies = {
+      'default-src': ["'self'"],
+      'script-src': [
+        "'self'",
+        // next or one package is actually use `eval` or `new Function`
+        "'unsafe-eval'",
+        'https://stats.data.gouv.fr',
+      ],
+      // Recommended on https://csp-evaluator.withgoogle.com/
+      'object-src': ["'none'"],
+      'style-src': [
+        "'self'",
+        // nextjs inlines CSS
+        "'unsafe-inline'",
+      ],
+      'img-src': [
+        "'self'",
+        // next/image component inlines images with `src="data:..."`
+        'data:',
+        // all domains of images in contributors list
+        'https://media-exp1.licdn.com',
+        'https://www.gravatar.com',
+        'https://avatars.githubusercontent.com',
+        'https://pbs.twimg.com',
+        'https://sibyll.in',
+      ],
+      'frame-src': ["'self'", 'https://stats.data.gouv.fr'],
+    };
+
     return [
       {
         source: '/:path*',
         headers: [
           {
             key: 'Content-Security-Policy',
-            value:
-              // object-src 'none'. Recommended on https://csp-evaluator.withgoogle.com/
-              // style-src 'unsafe-inline'. because nextjs inlines CSS
-              // img-src data:. because next/image component inlines data images
-              // img-src http*. for all images in contributors list
-              // script-src 'unsafe-eval'. because next or one package needs it
-              "default-src 'self'; script-src 'self' 'unsafe-eval' https://stats.data.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self'  https://media-exp1.licdn.com data: https://www.gravatar.com https://avatars.githubusercontent.com https://pbs.twimg.com https://sibyll.in; frame-src 'self' https://stats.data.gouv.fr",
+            value: Object.entries(securityPolicies)
+              .map(([securityKey, values]) => `${securityKey} ${values.join(' ')}`)
+              .join('; '),
           },
           {
             key: 'X-Frame-Options',
