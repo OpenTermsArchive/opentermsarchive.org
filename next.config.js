@@ -82,6 +82,7 @@ module.exports = {
         // nextjs inlines CSS
         "'unsafe-inline'",
       ],
+      'connect-src': ["'self'", 'https://stats.data.gouv.fr'],
       'img-src': [
         "'self'",
         // next/image component inlines images with `src="data:..."`
