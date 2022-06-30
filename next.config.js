@@ -81,6 +81,10 @@ module.exports = {
               // script-src 'unsafe-eval'. because next or one package needs it
               "default-src 'self'; script-src 'self' 'unsafe-eval' https://stats.data.gouv.fr; object-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self'  https://media-exp1.licdn.com data: https://www.gravatar.com https://avatars.githubusercontent.com https://pbs.twimg.com https://sibyll.in; frame-src 'self' https://stats.data.gouv.fr",
           },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
         ],
       },
     ];
