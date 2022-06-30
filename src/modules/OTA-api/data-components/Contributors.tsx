@@ -134,7 +134,7 @@ const contributors = [
   {
     login: 'Mathilde Saliou',
     avatar_url:
-      'https://media-exp1.licdn.com/dms/image/C4D03AQHrR4nDsjZNVQ/profile-displayphoto-shrink_800_800/0/1554215766240?e=1655942400&v=beta&t=XqkWC8ciR9Un7dL6hyk3ttVmWG2fup0ByDo1RT8XfMw',
+      'https://media-exp1.licdn.com/dms/image/C4D03AQHrR4nDsjZNVQ/profile-displayphoto-shrink_400_400/0/1554215766240?e=1661990400&v=beta&t=EdM3LhTEh_TGi8D6RPQ7LaDrLUdx4NktPMyyXbmOpsA',
     html_url: 'https://twitter.com/mathildsl',
   },
   {
@@ -150,13 +150,13 @@ const contributors = [
   {
     login: 'Laurie Liddell',
     avatar_url:
-      'https://media-exp1.licdn.com/dms/image/C5603AQF-ny7khaPtPg/profile-displayphoto-shrink_200_200/0/1516048233339?e=1655942400&v=beta&t=fiMEvP6q0oDPQYn1rN7sgfhJpoVOnUoWGOQXvQS5oiU',
+      'https://media-exp1.licdn.com/dms/image/C5603AQF-ny7khaPtPg/profile-displayphoto-shrink_800_800/0/1516048233339?e=1661990400&v=beta&t=l9lxOjqOy7jnXlL6BWnGX1EfcU7hAeLQGBfi-na9D4g',
     html_url: 'https://www.linkedin.com/in/laurie-liddell-bb4278b3/',
   },
   {
     login: 'Raphael Bartlomé',
     avatar_url:
-      'https://media-exp1.licdn.com/dms/image/C5603AQFGmLO1irjvdw/profile-displayphoto-shrink_200_200/0/1530358725198?e=1655942400&v=beta&t=L9fGZmXVbXm6HCMCGK4pdBEh23Zrhk6PB2F3sTTqzik',
+      'https://media-exp1.licdn.com/dms/image/C5603AQFGmLO1irjvdw/profile-displayphoto-shrink_400_400/0/1530358725198?e=1661990400&v=beta&t=vl77fX_ilxbVodun5Z5ZEuh4wEmhhzyPd7OwoMU-L2g',
     html_url: 'https://www.linkedin.com/in/raphael-bartlome-840006164/',
   },
   {
