@@ -19,7 +19,7 @@
     }
   }
 
-  & h2 {
+  & h2:not('mb__0') {
     margin-bottom: var(--mXL);
 
     @media (--tabletSmall) {
