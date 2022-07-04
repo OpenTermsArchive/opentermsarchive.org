@@ -4,6 +4,8 @@ import { i18n } from './next-i18next.config';
 
 const PUBLIC_FILE = /\.([a-zA-Z]+$)/;
 
+const PERMANENT_REDIRECT_CODE = 301;
+
 export default function middleware(request: NextRequest) {
   const { pathname, search, locale } = request.nextUrl;
 
@@ -20,5 +22,5 @@ export default function middleware(request: NextRequest) {
   acceptLanguage.languages(i18n.locales?.filter((locale) => locale !== 'default'));
   const detectedLocale = acceptLanguage.get(request.headers.get('accept-language'));
 
-  return NextResponse.redirect(`/${detectedLocale}${pathname}${search}`);
+  return NextResponse.redirect(`/${detectedLocale}${pathname}${search}`, PERMANENT_REDIRECT_CODE);
 }
