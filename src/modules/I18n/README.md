@@ -36,7 +36,7 @@ module.exports = {
 
 ```
 
-4. Add provide to `_app.tsx`
+4. Add provider to `_app.tsx`
 
 ```
 import { appWithTranslation } from 'next-i18next';
@@ -48,7 +48,18 @@ function App({ Component, pageProps }: AppProps) {
 export default appWithTranslation(App);
 ```
 
-5. add tools to your script to generate translations
+5. Add middleware to `_middleware.tsx`
+
+```
+import { NextRequest } from 'next/server';
+import i18nMiddleware from 'modules/I18n/middleware';
+
+export function middleware(request: NextRequest) {
+  return i18nMiddleware(request);
+}
+```
+
+6. add tools to your script to generate translations
 
 ```
     "i18n": "npm run i18n:extract && npm run i18n:clean && echo '\n⚠️  You may need to restart your dev server\n'",
@@ -56,7 +67,7 @@ export default appWithTranslation(App);
     "i18n:clean": "find src/translations -size 3c -delete",
 ```
 
-6. replace build script
+7. replace build script
 
 Because next will create all pages on build, it will complain of not having the default route which we do not want to keep using
 So we simply temporarily copy it and remove it after generation
