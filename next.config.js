@@ -66,4 +66,65 @@ module.exports = {
       },
     ];
   },
+  async headers() {
+    const securityPolicies = {
+      'default-src': ["'self'"],
+      'script-src': [
+        "'self'",
+        // next or one package is actually use `eval` or `new Function`
+        "'unsafe-eval'",
+        'https://stats.data.gouv.fr',
+      ],
+      // Recommended on https://csp-evaluator.withgoogle.com/
+      'object-src': ["'none'"],
+      'style-src': [
+        "'self'",
+        // nextjs inlines CSS
+        "'unsafe-inline'",
+      ],
+      'connect-src': ["'self'", 'https://stats.data.gouv.fr'],
+      'img-src': [
+        "'self'",
+        // next/image component inlines images with `src="data:..."`
+        'data:',
+        // all domains of images in contributors list
+        'https://media-exp1.licdn.com',
+        'https://www.gravatar.com',
+        'https://avatars.githubusercontent.com',
+        'https://pbs.twimg.com',
+        'https://sibyll.in',
+      ],
+      'frame-src': ["'self'", 'https://stats.data.gouv.fr'],
+    };
+
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: Object.entries(securityPolicies)
+              .map(([securityKey, values]) => `${securityKey} ${values.join(' ')}`)
+              .join('; '),
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+        ],
+      },
+    ];
+  },
 };
