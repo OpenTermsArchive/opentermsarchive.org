@@ -13,7 +13,11 @@ import { SWRConfig } from 'swr';
 import { appWithTranslation } from 'next-i18next';
 import { fetcher } from 'utils/api';
 
+import useLocale from 'modules/I18n/hooks/useLocale';
+
 function App({ Component, pageProps }: AppProps) {
+  useLocale(pageProps.locale);
+
   return (
     <SWRConfig
       value={{
