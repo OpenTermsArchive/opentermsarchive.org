@@ -1,5 +1,3 @@
-import 'dayjs/locale/fr';
-
 import { WithI18nResult, withI18n } from 'modules/I18n';
 
 import Container from 'modules/Common/containers/Container';
@@ -11,14 +9,8 @@ import { ResponsivePie } from '@nivo/pie';
 import TextContent from 'modules/Common/components/TextContent';
 import classNames from 'classnames';
 import dayjs from 'dayjs';
-import localeData from 'dayjs/plugin/localeData';
-import localizedFormat from 'dayjs/plugin/localizedFormat';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-
-dayjs.extend(localizedFormat);
-dayjs.extend(localeData);
-dayjs().localeData();
 
 const graphLineTheme = {
   textColor: 'var(--colorBlack600)',
@@ -127,7 +119,6 @@ const totalFundingSources = fundingSources
 export default function BudgetPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();
   const router = useRouter();
-  dayjs.locale(router.locale);
 
   return (
     <Layout title={t('budget:seo.title')}>
