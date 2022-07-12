@@ -69,58 +69,6 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
           </ButtonBlockList>
         </Container>
       </Container>
-      <Container gridCols="12" gridGutters="11">
-        <CardList title={t('stats:instances.title')} small={true} centerTitle={true}>
-          <Card
-            title={t('stats:instances.contrib.title')}
-            subtitle={<Trans i18nKey={'stats:instances.contrib.subtitle'}></Trans>}
-            author={t('stats:instances.contrib.author')}
-            className="text__center"
-            link="https://github.com/OpenTermsArchive/contrib-versions/"
-            center={true}
-            image="/images/instances/contrib.png"
-            small={true}
-          >
-            {t('stats:instances.contrib.desc')}
-          </Card>
-          <Card
-            title={t('stats:instances.france.title')}
-            subtitle={<Trans i18nKey={'stats:instances.france.subtitle'}></Trans>}
-            author={t('stats:instances.france.author')}
-            className="text__center"
-            link="https://github.com/OpenTermsArchive/france-versions"
-            center={true}
-            image="/images/instances/france.png"
-            small={true}
-          >
-            {t('stats:instances.france.desc')}
-          </Card>
-          <Card
-            title={t('stats:instances.france-elections.title')}
-            subtitle={<Trans i18nKey={'stats:instances.france-elections.subtitle'}></Trans>}
-            author={t('stats:instances.france-elections.author')}
-            className="text__center"
-            link="https://github.com/OpenTermsArchive/france-elections-versions/"
-            center={true}
-            image="/images/instances/france-elections.png"
-            small={true}
-          >
-            {t('stats:instances.france-elections.desc')}
-          </Card>
-          <Card
-            title={t('stats:instances.dating.title')}
-            subtitle={<Trans i18nKey={'stats:instances.dating.subtitle'}></Trans>}
-            author={t('stats:instances.dating.author')}
-            className="text__center"
-            link="https://github.com/OpenTermsArchive/dating-versions"
-            center={true}
-            image="/images/instances/dating.png"
-            small={true}
-          >
-            {t('stats:instances.dating.desc')}
-          </Card>
-        </CardList>
-      </Container>
     </Layout>
   );
 }
