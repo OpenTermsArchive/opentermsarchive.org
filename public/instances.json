@@ -1,0 +1,95 @@
+{
+  "instances": [
+    {
+      "name": "contrib",
+      "versions": "https://github.com/OpenTermsArchive/contrib-versions/",
+      "snapshots": "https://github.com/OpenTermsArchive/contrib-snapshots/",
+      "declarations": "https://github.com/OpenTermsArchive/contrib-declarations/",
+      "industries": {
+        "standard": "",
+        "types": []
+      },
+      "languages": ["en", "fr"],
+      "countries": ["EU"],
+      "maintainers": [],
+      "stats": {
+        "services": "285",
+        "documents": "612"
+      }
+    },
+    {
+      "name": "France",
+      "versions": "https://github.com/OpenTermsArchive/france-versions/",
+      "snapshots": "https://github.com/OpenTermsArchive/france-snapshots/",
+      "declarations": "https://github.com/OpenTermsArchive/france-declarations/",
+      "industries": {
+        "standard": "",
+        "types": []
+      },
+      "languages": ["fr"],
+      "countries": ["FR"],
+      "maintainers": [
+        {
+          "name": "UFC Que Choisir",
+          "logo": "/images/contributors/ufc-que-choisir.png",
+          "url": "https://www.quechoisir.org"
+        },
+        {
+          "name": "Ambassadeur français pour le numérique",
+          "logo": "/images/contributors/ambnum.png",
+          "url": "https://disinfo.quaidorsay.fr/fr"
+        }
+      ],
+      "stats": {
+        "services": "24",
+        "documents": "52"
+      }
+    },
+    {
+      "name": "France Élections",
+      "versions": "https://github.com/OpenTermsArchive/france-elections-versions/",
+      "snapshots": "https://github.com/OpenTermsArchive/france-elections-snapshots/",
+      "declarations": "https://github.com/OpenTermsArchive/france-elections-declarations/",
+      "industries": {
+        "standard": "NACE",
+        "types": ["J"]
+      },
+      "languages": ["fr"],
+      "countries": ["FR"],
+      "maintainers": [
+        {
+          "name": "Reset",
+          "logo": "/images/contributors/reset.png",
+          "url": "https://www.reset.tech"
+        }
+      ],
+      "stats": {
+        "services": "5",
+        "documents": "75"
+      }
+    },
+    {
+      "name": "Dating",
+      "versions": "https://github.com/OpenTermsArchive/dating-versions/",
+      "snapshots": "https://github.com/OpenTermsArchive/dating-snapshots/",
+      "declarations": "https://github.com/OpenTermsArchive/dating-declarations/",
+      "industries": {
+        "standard": "NACE",
+        "types": ["96.09"]
+      },
+      "languages": ["en"],
+      "countries": ["EU", "CH"],
+      "maintainers": [
+        {
+          "name": "HestiaLabs",
+          "logo": "/images/contributors/hestialbas.png",
+          "url": "https://hestialabs.org"
+        }
+      ],
+      "stats": {
+        "services": "24",
+        "documents": "52"
+      }
+    }
+  ]
+}
