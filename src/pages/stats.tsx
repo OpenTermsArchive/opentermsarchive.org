@@ -59,6 +59,13 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
               iconColor="var(--colorBlack400)"
               white={true}
             ></ButtonBlock>
+            <ButtonBlock
+              title={t('stats:numbers.block6.title')}
+              desc={t('stats:numbers.block6.desc')}
+              iconName="FiFlag"
+              iconColor="var(--colorBlack400)"
+              white={true}
+            ></ButtonBlock>
           </ButtonBlockList>
         </Container>
       </Container>
