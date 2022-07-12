@@ -21,7 +21,7 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
           <MDXRemote {...(mdxContent as any)} components={{ LinkIcon }} />
         </TextContent>
       </Container>
-      <Container layout="wide" gray={true} paddingY={false}>
+      <Container layout="wide" paddingY={false}>
         <Container gridCols="12" gridGutters="11" paddingX={false} paddingYSmall={true}>
           <ButtonBlockList title={t('stats:numbers.title')}>
             <ButtonBlock
@@ -29,42 +29,36 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
               desc={t('stats:numbers.block1.desc')}
               iconName="FiGlobe"
               iconColor="var(--colorBlack400)"
-              white={true}
             ></ButtonBlock>
             <ButtonBlock
               title={t('stats:numbers.block2.title')}
               desc={t('stats:numbers.block2.desc')}
               iconName="FiFile"
               iconColor="var(--colorBlack400)"
-              white={true}
             ></ButtonBlock>
             <ButtonBlock
               title={t('stats:numbers.block3.title')}
               desc={t('stats:numbers.block3.desc')}
               iconName="FiEye"
               iconColor="var(--colorBlack400)"
-              white={true}
             ></ButtonBlock>
             <ButtonBlock
               title={t('stats:numbers.block4.title')}
               desc={t('stats:numbers.block4.desc')}
               iconName="FiUsers"
               iconColor="var(--colorBlack400)"
-              white={true}
             ></ButtonBlock>
             <ButtonBlock
               title={t('stats:numbers.block5.title')}
               desc={t('stats:numbers.block5.desc')}
               iconName="FiLayers"
               iconColor="var(--colorBlack400)"
-              white={true}
             ></ButtonBlock>
             <ButtonBlock
               title={t('stats:numbers.block6.title')}
               desc={t('stats:numbers.block6.desc')}
               iconName="FiFlag"
               iconColor="var(--colorBlack400)"
-              white={true}
             ></ButtonBlock>
           </ButtonBlockList>
         </Container>
