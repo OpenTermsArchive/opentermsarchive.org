@@ -7,6 +7,7 @@ type CardListProps = {
   centerTitle?: boolean;
   subtitle?: string;
   small?: boolean;
+  big?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const CardList: React.FC<CardListProps> = ({
@@ -14,6 +15,7 @@ const CardList: React.FC<CardListProps> = ({
   centerTitle,
   subtitle,
   small,
+  big,
   children,
   className,
   ...props
@@ -29,7 +31,10 @@ const CardList: React.FC<CardListProps> = ({
         {subtitle && <h3 className={classNames(s.cardList_subtitle, 'h3__light')}>{subtitle}</h3>}
       </div>
       <div
-        className={classNames(s.cardList_items, { [s.cardList_items__isSmall]: small === true })}
+        className={classNames(s.cardList_items, {
+          [s.cardList_items__isSmall]: small === true,
+          [s.cardList_items__isBig]: big === true,
+        })}
       >
         {children}
       </div>

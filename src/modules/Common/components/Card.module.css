@@ -15,6 +15,14 @@
     }
   }
 
+  &.card__isBig {
+    @mixin grid 6, 5;
+
+    & > .card_body {
+      padding-bottom: var(--p3XL);
+    }
+  }
+
   &.card__isSmall {
     & > .card_header {
       height: 140px;
@@ -74,6 +82,16 @@
   flex-wrap: nowrap;
   align-items: flex-start;
   margin-top: auto;
+
+  & img {
+    max-width: 144px;
+    max-height: 66px;
+    margin: 0 var(--pXS);
+  }
+
+  &.card_author__isCenter {
+    justify-content: center;
+  }
 }
 
 .card_author_icon {

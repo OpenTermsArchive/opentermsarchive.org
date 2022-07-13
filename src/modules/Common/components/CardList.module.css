@@ -33,6 +33,10 @@
   &.cardList_items__isSmall {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  &.cardList_items__isBig {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (--tabletLarge) {

@@ -1,3 +1,5 @@
+import { Trans, useTranslation } from 'next-i18next';
+
 import Button from 'modules/Common/components/Button';
 import ButtonBlock from 'modules/Common/components/ButtonBlock';
 import ButtonBlockList from 'modules/Common/components/ButtonBlockList';
@@ -10,14 +12,17 @@ import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
+import Slugify from 'slugify';
 import TextContent from 'modules/Common/components/TextContent';
+import instancesData from '../../public/instances.json';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
 
 const HomePage = () => {
   const { t } = useTranslation();
   const router = useRouter();
+  const languageName = new Intl.DisplayNames(router.locale, { type: 'language' });
+  const countryName = new Intl.DisplayNames(router.locale, { type: 'region' });
 
   return (
     <Layout title={t('homepage:seo.title')} desc={t('homepage:seo.desc')}>
@@ -92,6 +97,66 @@ const HomePage = () => {
             </div>
           </Column>
         </Container>
+      </Container>
+      {/* Instances */}
+      <Container gridCols="10" gridGutters="9">
+        <CardList title={t('instances:title')} centerTitle={true} big={true}>
+          {instancesData.instances.map((instance: any) => {
+            const slug = Slugify(instance.name, { lower: true });
+            const descKey = `instances:${slug}.desc`;
+            const authorIcon = instance.name === 'Contrib' ? true : false;
+            return (
+              <Card
+                key={instance.name}
+                title={instance.name}
+                subtitle={<Trans i18nKey={descKey}></Trans>}
+                author={
+                  instance.maintainers.length == 0
+                    ? t('instances:volunteer-contributors')
+                    : instance.maintainers.map((maintener: any, index: number) => {
+                        return <img src={maintener.logo} alt={maintener.name} />;
+                        // return index == instance.maintainers.length - 1
+                        //   ? maintener.name
+                        //   : maintener.name + ' - ';
+                      })
+                }
+                image={instance.image}
+                className="text__center"
+                center={true}
+                big={true}
+                authorCenter={true}
+                authorIcon={authorIcon}
+              >
+                <div>
+                  {t('instances:services')} {instance.stats.services}
+                </div>
+                <div>
+                  {t('instances:documents')} {instance.stats.documents}
+                </div>
+                <div>
+                  {t('instances:language', { count: instance.languages.length })}{' '}
+                  {instance.languages.length > 0
+                    ? instance.languages.map((language: any, index: number) => {
+                        let displayLang = languageName.of(language);
+                        displayLang += index == instance.languages.length - 1 ? '' : ', ';
+                        return displayLang;
+                      })
+                    : null}
+                </div>
+                <div>
+                  {t('instances:country', { count: instance.countries.length })}{' '}
+                  {instance.countries.length > 0
+                    ? instance.countries.map((country: any, index: number) => {
+                        let displayCountry = countryName.of(country);
+                        displayCountry += index == instance.countries.length - 1 ? '' : ', ';
+                        return displayCountry;
+                      })
+                    : null}
+                </div>
+              </Card>
+            );
+          })}
+        </CardList>
       </Container>
       {/* CTA public */}
       <Container layout="wide" gray={true} paddingY={false}>

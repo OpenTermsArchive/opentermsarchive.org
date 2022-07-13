@@ -1,7 +1,8 @@
 {
   "instances": [
     {
-      "name": "contrib",
+      "name": "Contrib",
+      "image": "/images/instances/contrib.png",
       "versions": "https://github.com/OpenTermsArchive/contrib-versions/",
       "snapshots": "https://github.com/OpenTermsArchive/contrib-snapshots/",
       "declarations": "https://github.com/OpenTermsArchive/contrib-declarations/",
@@ -19,6 +20,7 @@
     },
     {
       "name": "France",
+      "image": "/images/instances/france.png",
       "versions": "https://github.com/OpenTermsArchive/france-versions/",
       "snapshots": "https://github.com/OpenTermsArchive/france-snapshots/",
       "declarations": "https://github.com/OpenTermsArchive/france-declarations/",
@@ -47,6 +49,7 @@
     },
     {
       "name": "France Élections",
+      "image": "/images/instances/france-elections.png",
       "versions": "https://github.com/OpenTermsArchive/france-elections-versions/",
       "snapshots": "https://github.com/OpenTermsArchive/france-elections-snapshots/",
       "declarations": "https://github.com/OpenTermsArchive/france-elections-declarations/",
@@ -70,6 +73,7 @@
     },
     {
       "name": "Dating",
+      "image": "/images/instances/dating.png",
       "versions": "https://github.com/OpenTermsArchive/dating-versions/",
       "snapshots": "https://github.com/OpenTermsArchive/dating-snapshots/",
       "declarations": "https://github.com/OpenTermsArchive/dating-declarations/",

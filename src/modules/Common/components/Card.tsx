@@ -9,10 +9,13 @@ type CardProps = {
   image?: string;
   subtitle?: string | React.ReactElement;
   author?: string;
+  authorIcon?: boolean;
+  authorCenter?: boolean;
   className?: string;
   link?: string;
   center?: boolean;
   small?: boolean;
+  big?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const Card: React.FC<CardProps> = ({
@@ -21,9 +24,12 @@ const Card: React.FC<CardProps> = ({
   image,
   subtitle,
   author,
+  authorIcon = true,
+  authorCenter = false,
   link,
   center = false,
   small,
+  big,
   className,
   ...props
 }) => {
@@ -34,6 +40,7 @@ const Card: React.FC<CardProps> = ({
         link ? s.card__isLink : null,
         center ? s.card__center : null,
         small ? s.card__isSmall : null,
+        big ? s.card__isBig : null,
         className
       )}
       {...props}
@@ -49,10 +56,16 @@ const Card: React.FC<CardProps> = ({
         {children && <div className={s.card_children}>{children}</div>}
       </div>
       {author && (
-        <div className={s.card_author}>
-          <div className={s.card_author_icon}>
-            <FiUser color="#999999" />
-          </div>
+        <div
+          className={classNames(s.card_author, {
+            [s.card_author__isCenter]: authorCenter === true,
+          })}
+        >
+          {authorIcon && (
+            <div className={s.card_author_icon}>
+              <FiUser color="#999999" />
+            </div>
+          )}
           <div className={classNames(s.card_author_desc, 'text__light')}>{author}</div>
         </div>
       )}
