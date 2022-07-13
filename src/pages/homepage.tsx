@@ -151,6 +151,13 @@ const HomePage = () => {
                       })
                     : null}
                 </div>
+                <div className="mt__XL">
+                  <Link href={`https://github.com/openTermsArchive/${slug}-versions`}>
+                    <a target="_blank" rel="noopener">
+                      <Button>{t('instances:cta.versions')}</Button>
+                    </a>
+                  </Link>
+                </div>
               </Card>
             );
           })}
