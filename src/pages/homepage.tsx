@@ -194,60 +194,6 @@ const HomePage = () => {
         </Container>
       </Container>
 
-      {/* CTA public */}
-      <Container layout="wide" gray={true} paddingY={false}>
-        <Container gridCols="12" gridGutters="11" paddingX={false} gray={true}>
-          <ButtonBlockList title={t('homepage:cta_public.title')}>
-            <ButtonBlock
-              title={t('homepage:cta_public.case_studies.title')}
-              iconName="FiTwitter"
-              iconColor="var(--colorBlack400)"
-              white={true}
-            >
-              <Link href="https://twitter.com/OpenTerms">
-                <Button>{t('homepage:cta_public.case_studies.button.label')}</Button>
-              </Link>
-              <LinkIcon iconColor="var(--colorBlack400)" href="/case-studies" small={true}>
-                {t('homepage:cta_public.case_studies.link.label')}
-              </LinkIcon>
-            </ButtonBlock>
-            <ButtonBlock
-              title={t('homepage:cta_public.subscribe.title')}
-              iconName="FiMail"
-              iconColor="var(--colorBlack400)"
-              white={true}
-            >
-              <Link href="/subscribe">
-                <Button>{t('homepage:cta_public.subscribe.button.label')}</Button>
-              </Link>
-              <LinkIcon
-                iconColor="var(--colorBlack400)"
-                href="https://github.com/ambanum/OpenTermsArchive#by-rss"
-                small={true}
-              >
-                {t('homepage:cta_public.subscribe.link.label')}
-              </LinkIcon>
-            </ButtonBlock>
-            <ButtonBlock
-              title={t('homepage:cta_public.explore.title')}
-              iconName="FiGithub"
-              iconColor="var(--colorBlack400)"
-              white={true}
-            >
-              <Link href="https://github.com/ambanum/OpenTermsArchive-versions/">
-                <Button>{t('homepage:cta_public.explore.button.label')}</Button>
-              </Link>
-              <LinkIcon
-                iconColor="var(--colorBlack400)"
-                href="https://github.com/ambanum/OpenTermsArchive-versions/releases"
-                small={true}
-              >
-                {t('homepage:cta_public.explore.link.label')}
-              </LinkIcon>
-            </ButtonBlock>
-          </ButtonBlockList>
-        </Container>
-      </Container>
       {/* Reuses */}
       <Container gridCols="12" gridGutters="11">
         <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
