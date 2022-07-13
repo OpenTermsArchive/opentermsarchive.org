@@ -15,6 +15,7 @@ import React from 'react';
 import Slugify from 'slugify';
 import TextContent from 'modules/Common/components/TextContent';
 import instancesData from '../../public/instances.json';
+import { kebabCase } from 'lodash';
 import { useRouter } from 'next/router';
 import { withI18n } from 'modules/I18n';
 
@@ -102,22 +103,19 @@ const HomePage = () => {
       <Container gridCols="10" gridGutters="9">
         <CardList title={t('instances:title')} centerTitle={true} big={true}>
           {instancesData.instances.map((instance: any) => {
-            const slug = Slugify(instance.name, { lower: true });
+            const slug = kebabCase(instance.name);
             const descKey = `instances:${slug}.desc`;
             const authorIcon = instance.name === 'Contrib' ? true : false;
             return (
               <Card
                 key={instance.name}
                 title={instance.name}
-                subtitle={<Trans i18nKey={descKey}></Trans>}
+                subtitle={t(descKey)}
                 author={
                   instance.maintainers.length == 0
                     ? t('instances:volunteer-contributors')
-                    : instance.maintainers.map((maintener: any, index: number) => {
+                    : instance.maintainers.map((maintener: any) => {
                         return <img src={maintener.logo} alt={maintener.name} />;
-                        // return index == instance.maintainers.length - 1
-                        //   ? maintener.name
-                        //   : maintener.name + ' - ';
                       })
                 }
                 image={instance.image}
