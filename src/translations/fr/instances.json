@@ -3,6 +3,7 @@
   "country": "• Juridiction :",
   "country_other": "• Juridictions :",
   "country_plural": "__STRING_NOT_TRANSLATED__",
+  "cta.email": "S'abonner par courriel",
   "cta.versions": "Explorer l'historique",
   "dating.desc": "Services pouvant influencer les élections présidentielles et législatives françaises 2022, en français et dans la juridiction française.",
   "documents": "• Documents :",
@@ -13,6 +14,5 @@
   "language_plural": "__STRING_NOT_TRANSLATED__",
   "services": "• Services :",
   "title": "Nos données sont produites par des instances maintenues par divers partenaires pour couvrir différentes industries, langues et juridictions",
-  "volunteer-contributors": "Contributeurs bénévoles",
-  "cta.email": "S'abonner par courriel"
+  "volunteer-contributors": "Contributeurs bénévoles"
 }

@@ -100,7 +100,7 @@ const HomePage = () => {
         </Container>
       </Container>
       {/* Instances */}
-      <Container gridCols="10" gridGutters="9">
+      <Container gridCols="10" gridGutters="9" paddingTop={false}>
         <CardList title={t('instances:title')} centerTitle={true} big={true}>
           {instancesData.instances.map((instance: any) => {
             const slug = kebabCase(instance.name);
@@ -179,14 +179,12 @@ const HomePage = () => {
       <Container gray={true} layout="wide">
         <Container gridCols="12" gridGutters="11" paddingY={false}>
           <TextContent className="text__center">
-            <h2>Suivez nous sur Twitter</h2>
-            <h3 className="h3__light">Pour découvrir des modifications intéressantes</h3>
+            <h2>{t('homepage:followUs.title')}</h2>
+            <h3 className="h3__light">{t('homepage:followUs.subtitle')}</h3>
             <div className="mt__2XL">
               <Link href="https://twitter.com/OpenTerms">
                 <a target="_blank" rel="noopener">
-                  <Button type="secondary">
-                    {t('homepage:cta_public.case_studies.button.label')}
-                  </Button>
+                  <Button type="secondary">{t('homepage:followUs.button.label')}</Button>
                 </a>
               </Link>
             </div>

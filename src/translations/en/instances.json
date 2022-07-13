@@ -3,6 +3,7 @@
   "country": "• Jurisdiction :",
   "country_other": "• Jurisdictions :",
   "country_plural": "__STRING_NOT_TRANSLATED__",
+  "cta.email": "Subscribe over email",
   "cta.versions": "Explore history",
   "dating.desc": "Dating services used in Europe, in English and in the jurisdictions of the European Union and Switzerland.",
   "documents": "• Documents :",
@@ -13,6 +14,5 @@
   "language_plural": "__STRING_NOT_TRANSLATED__",
   "services": "• Services :",
   "title": "Our data is produced by instances maintained by various partners to cover different industries, languages and jurisdictions",
-  "volunteer-contributors": "Volunteer contributors",
-  "cta.email": "Subscribe over email"
+  "volunteer-contributors": "Volunteer contributors"
 }
