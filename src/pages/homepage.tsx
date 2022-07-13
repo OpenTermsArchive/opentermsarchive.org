@@ -15,6 +15,7 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import instancesData from '../../public/instances.json';
 import { kebabCase } from 'lodash';
+import { uniqueId } from 'lodash';
 import { useRouter } from 'next/router';
 import { withI18n } from 'modules/I18n';
 
@@ -103,18 +104,22 @@ const HomePage = () => {
         <CardList title={t('instances:title')} centerTitle={true} big={true}>
           {instancesData.instances.map((instance: any) => {
             const slug = kebabCase(instance.name);
-            const descKey = `instances:${slug}.desc`;
-            const authorIcon = instance.name === 'Contrib' ? true : false;
             return (
               <Card
-                key={instance.name}
+                key={uniqueId('instance_')}
                 title={instance.name}
-                subtitle={t(descKey)}
+                subtitle={t(`instances:${slug}.desc`)}
                 author={
                   instance.maintainers.length == 0
                     ? t('instances:volunteer-contributors')
                     : instance.maintainers.map((maintener: any) => {
-                        return <img src={maintener.logo} alt={maintener.name} />;
+                        return (
+                          <img
+                            key={uniqueId('maintener_')}
+                            src={maintener.logo}
+                            alt={maintener.name}
+                          />
+                        );
                       })
                 }
                 image={instance.image}
@@ -122,7 +127,7 @@ const HomePage = () => {
                 center={true}
                 big={true}
                 authorCenter={true}
-                authorIcon={authorIcon}
+                authorIcon={instance.name === 'Contrib' ? true : false}
               >
                 <div>
                   {t('instances:services')} {instance.stats.services}
@@ -169,6 +174,26 @@ const HomePage = () => {
           })}
         </CardList>
       </Container>
+
+      {/* Folllow us */}
+      <Container gray={true} layout="wide">
+        <Container gridCols="12" gridGutters="11" paddingY={false}>
+          <TextContent className="text__center">
+            <h2>Suivez nous sur Twitter</h2>
+            <h3 className="h3__light">Pour découvrir des modifications intéressantes</h3>
+            <div className="mt__2XL">
+              <Link href="https://twitter.com/OpenTerms">
+                <a target="_blank" rel="noopener">
+                  <Button type="secondary">
+                    {t('homepage:cta_public.case_studies.button.label')}
+                  </Button>
+                </a>
+              </Link>
+            </div>
+          </TextContent>
+        </Container>
+      </Container>
+
       {/* CTA public */}
       <Container layout="wide" gray={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" paddingX={false} gray={true}>
