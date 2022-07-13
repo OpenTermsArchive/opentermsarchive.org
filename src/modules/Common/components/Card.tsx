@@ -16,6 +16,7 @@ type CardProps = {
   center?: boolean;
   small?: boolean;
   big?: boolean;
+  white?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const Card: React.FC<CardProps> = ({
@@ -30,6 +31,7 @@ const Card: React.FC<CardProps> = ({
   center = false,
   small,
   big,
+  white = false,
   className,
   ...props
 }) => {
@@ -41,6 +43,7 @@ const Card: React.FC<CardProps> = ({
         center ? s.card__center : null,
         small ? s.card__isSmall : null,
         big ? s.card__isBig : null,
+        white ? s.card__isWhite : null,
         className
       )}
       {...props}

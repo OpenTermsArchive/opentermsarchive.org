@@ -99,84 +99,88 @@ const HomePage = () => {
           </Column>
         </Container>
       </Container>
+
       {/* Instances */}
-      <Container gridCols="10" gridGutters="9" paddingTop={false}>
-        <CardList title={t('instances:title')} centerTitle={true} big={true}>
-          {instancesData.instances.map((instance: any) => {
-            const slug = kebabCase(instance.name);
-            return (
-              <Card
-                key={uniqueId('instance_')}
-                title={instance.name}
-                subtitle={t(`instances:${slug}.desc`)}
-                author={
-                  instance.maintainers.length == 0
-                    ? t('instances:volunteer-contributors')
-                    : instance.maintainers.map((maintener: any) => {
-                        return (
-                          <img
-                            key={uniqueId('maintener_')}
-                            src={maintener.logo}
-                            alt={maintener.name}
-                          />
-                        );
-                      })
-                }
-                image={instance.image}
-                className="text__center"
-                center={true}
-                big={true}
-                authorCenter={true}
-                authorIcon={instance.name === 'Contrib' ? true : false}
-              >
-                <div>
-                  {t('instances:services')} {instance.stats.services}
-                </div>
-                <div>
-                  {t('instances:documents')} {instance.stats.documents}
-                </div>
-                <div>
-                  {t('instances:language', { count: instance.languages.length })}{' '}
-                  {instance.languages.length > 0
-                    ? instance.languages.map((language: any, index: number) => {
-                        let displayLang = languageName.of(language);
-                        displayLang += index == instance.languages.length - 1 ? '' : ', ';
-                        return displayLang;
-                      })
-                    : null}
-                </div>
-                <div>
-                  {t('instances:country', { count: instance.countries.length })}{' '}
-                  {instance.countries.length > 0
-                    ? instance.countries.map((country: any, index: number) => {
-                        let displayCountry = countryName.of(country);
-                        displayCountry += index == instance.countries.length - 1 ? '' : ', ';
-                        return displayCountry;
-                      })
-                    : null}
-                </div>
-                <div className="mt__XL">
-                  <Link href={`https://github.com/openTermsArchive/${slug}-versions`}>
-                    <a target="_blank" rel="noopener">
-                      <Button>{t('instances:cta.versions')}</Button>
-                    </a>
-                  </Link>
-                </div>
-                {instance.subscribeURL && (
-                  <div className="mt__M">
-                    <Link href="/subscribe">
-                      <Button type="secondary">{t('instances:cta.email')}</Button>
+      <Container gray={true} layout="wide" paddingX={false}>
+        <Container gridCols="10" gridGutters="9" paddingTop={false}>
+          <CardList title={t('instances:title')} centerTitle={true} big={true}>
+            {instancesData.instances.map((instance: any) => {
+              const slug = kebabCase(instance.name);
+              return (
+                <Card
+                  key={uniqueId('instance_')}
+                  title={instance.name}
+                  subtitle={t(`instances:${slug}.desc`)}
+                  author={
+                    instance.maintainers.length == 0
+                      ? t('instances:volunteer-contributors')
+                      : instance.maintainers.map((maintener: any) => {
+                          return (
+                            <img
+                              key={uniqueId('maintener_')}
+                              src={maintener.logo}
+                              alt={maintener.name}
+                            />
+                          );
+                        })
+                  }
+                  image={instance.image}
+                  className="text__center"
+                  center={true}
+                  big={true}
+                  authorCenter={true}
+                  white={true}
+                  authorIcon={instance.name === 'Contrib' ? true : false}
+                >
+                  <div>
+                    {t('instances:services')} {instance.stats.services}
+                  </div>
+                  <div>
+                    {t('instances:documents')} {instance.stats.documents}
+                  </div>
+                  <div>
+                    {t('instances:language', { count: instance.languages.length })}{' '}
+                    {instance.languages.length > 0
+                      ? instance.languages.map((language: any, index: number) => {
+                          let displayLang = languageName.of(language);
+                          displayLang += index == instance.languages.length - 1 ? '' : ', ';
+                          return displayLang;
+                        })
+                      : null}
+                  </div>
+                  <div>
+                    {t('instances:country', { count: instance.countries.length })}{' '}
+                    {instance.countries.length > 0
+                      ? instance.countries.map((country: any, index: number) => {
+                          let displayCountry = countryName.of(country);
+                          displayCountry += index == instance.countries.length - 1 ? '' : ', ';
+                          return displayCountry;
+                        })
+                      : null}
+                  </div>
+                  <div className="mt__XL">
+                    <Link href={`https://github.com/openTermsArchive/${slug}-versions`}>
+                      <a target="_blank" rel="noopener">
+                        <Button>{t('instances:cta.versions')}</Button>
+                      </a>
                     </Link>
                   </div>
-                )}
-              </Card>
-            );
-          })}
-        </CardList>
+                  {instance.subscribeURL && (
+                    <div className="mt__M">
+                      <Link href="/subscribe">
+                        <Button type="secondary">{t('instances:cta.email')}</Button>
+                      </Link>
+                    </div>
+                  )}
+                </Card>
+              );
+            })}
+          </CardList>
+        </Container>
       </Container>
 
       {/* Folllow us */}
-      <Container gray={true} layout="wide">
+      <Container layout="wide">
         <Container gridCols="12" gridGutters="11" paddingY={false}>
           <TextContent className="text__center">
             <h2>{t('homepage:followUs.title')}</h2>
@@ -193,62 +197,70 @@ const HomePage = () => {
       </Container>
 
       {/* Reuses */}
-      <Container gridCols="12" gridGutters="11">
-        <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
-          <Card
-            image={`/images/reuses/memos-elections-${router?.locale}.png`}
-            className="text__center"
-            title={t('homepage:reuses.memos-elections-fr.title')}
-            subtitle={t('homepage:reuses.memos-elections-fr.subtitle')}
-            author={t('homepage:reuses.memos-elections-fr.author')}
-            link="https://www.reset.tech/resources/memos-on-platforms-behaviour-during-the-2022-french-elections/"
-            center={true}
-          ></Card>
-          <Card
-            image="/images/reuses/tosdr.jpg"
-            title={t('homepage:reuses.tosdr.title')}
-            subtitle={t('homepage:reuses.tosdr.subtitle')}
-            author={t('homepage:reuses.tosdr.author')}
-            link="https://tosdr.org"
-            center={true}
-          ></Card>
-          <Card
-            image="/images/reuses/readability.jpg"
-            title={t('homepage:reuses.readability.title')}
-            subtitle={t('homepage:reuses.readability.subtitle')}
-            author={t('homepage:reuses.readability.author')}
-            link="https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments"
-            center={true}
-          ></Card>
-          <Card
-            image="/images/reuses/scripta-manent.jpg"
-            title={t('homepage:reuses.scripta_manent.title')}
-            subtitle={t('homepage:reuses.scripta_manent.subtitle')}
-            author={t('homepage:reuses.scripta_manent.author')}
-            link="https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent"
-            center={true}
-          ></Card>
-          <Card
-            image="/images/reuses/tosback.jpg"
-            title={t('homepage:reuses.tosback.title')}
-            subtitle={t('homepage:reuses.tosback.subtitle')}
-            author={t('homepage:reuses.tosback.author')}
-            link="https://tosback.org/"
-            center={true}
-          ></Card>
-          <Card
-            image="/images/reuses/new-reuse.jpg"
-            className="text__center"
-            title={t('homepage:reuses.new_reuse.title')}
-            subtitle={t('homepage:reuses.new_reuse.subtitle')}
-            link="mailto:contact@opentermsarchive.org"
-            center={true}
-          ></Card>
-        </CardList>
+      <Container gray={true} layout="wide" paddingX={false}>
+        <Container gridCols="12" gridGutters="11">
+          <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
+            <Card
+              image={`/images/reuses/memos-elections-${router?.locale}.png`}
+              className="text__center"
+              title={t('homepage:reuses.memos-elections-fr.title')}
+              subtitle={t('homepage:reuses.memos-elections-fr.subtitle')}
+              author={t('homepage:reuses.memos-elections-fr.author')}
+              link="https://www.reset.tech/resources/memos-on-platforms-behaviour-during-the-2022-french-elections/"
+              center={true}
+              white={true}
+            ></Card>
+            <Card
+              image="/images/reuses/tosdr.jpg"
+              title={t('homepage:reuses.tosdr.title')}
+              subtitle={t('homepage:reuses.tosdr.subtitle')}
+              author={t('homepage:reuses.tosdr.author')}
+              link="https://tosdr.org"
+              center={true}
+              white={true}
+            ></Card>
+            <Card
+              image="/images/reuses/readability.jpg"
+              title={t('homepage:reuses.readability.title')}
+              subtitle={t('homepage:reuses.readability.subtitle')}
+              author={t('homepage:reuses.readability.author')}
+              link="https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments"
+              center={true}
+              white={true}
+            ></Card>
+            <Card
+              image="/images/reuses/scripta-manent.jpg"
+              title={t('homepage:reuses.scripta_manent.title')}
+              subtitle={t('homepage:reuses.scripta_manent.subtitle')}
+              author={t('homepage:reuses.scripta_manent.author')}
+              link="https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent"
+              center={true}
+              white={true}
+            ></Card>
+            <Card
+              image="/images/reuses/tosback.jpg"
+              title={t('homepage:reuses.tosback.title')}
+              subtitle={t('homepage:reuses.tosback.subtitle')}
+              author={t('homepage:reuses.tosback.author')}
+              link="https://tosback.org/"
+              center={true}
+              white={true}
+            ></Card>
+            <Card
+              image="/images/reuses/new-reuse.png"
+              className="text__center"
+              title={t('homepage:reuses.new_reuse.title')}
+              subtitle={t('homepage:reuses.new_reuse.subtitle')}
+              link="mailto:contact@opentermsarchive.org"
+              center={true}
+              white={true}
+            ></Card>
+          </CardList>
+        </Container>
       </Container>
 
       {/* FOSS & Contributors */}
-      <Container gray={true} layout="wide">
+      <Container layout="wide">
         <Container gridCols="12" gridGutters="11" paddingY={false}>
           <TextContent className="">
             <h2>{t('homepage:foss.title')}</h2>
