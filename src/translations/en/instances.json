@@ -13,5 +13,6 @@
   "language_plural": "__STRING_NOT_TRANSLATED__",
   "services": "• Services :",
   "title": "Our data is produced by instances maintained by various partners to cover different industries, languages and jurisdictions",
-  "volunteer-contributors": "Volunteer contributors"
+  "volunteer-contributors": "Volunteer contributors",
+  "cta.email": "Subscribe over email"
 }

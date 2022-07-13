@@ -9,7 +9,8 @@
       "stats": {
         "services": "285",
         "documents": "612"
-      }
+      },
+      "subscribeURL": "https://opentermsarchive.org/subscribe"
     },
     {
       "name": "France",

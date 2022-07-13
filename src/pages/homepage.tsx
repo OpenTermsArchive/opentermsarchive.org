@@ -12,7 +12,6 @@ import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
-import Slugify from 'slugify';
 import TextContent from 'modules/Common/components/TextContent';
 import instancesData from '../../public/instances.json';
 import { kebabCase } from 'lodash';
@@ -158,6 +157,13 @@ const HomePage = () => {
                     </a>
                   </Link>
                 </div>
+                {instance.subscribeURL && (
+                  <div className="mt__M">
+                    <Link href="/subscribe">
+                      <Button type="secondary">{t('instances:cta.email')}</Button>
+                    </Link>
+                  </div>
+                )}
               </Card>
             );
           })}

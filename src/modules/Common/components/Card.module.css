@@ -84,8 +84,7 @@
   margin-top: auto;
 
   & img {
-    max-width: 144px;
-    max-height: 66px;
+    max-height: 58px;
     margin: 0 var(--pXS);
   }
 
