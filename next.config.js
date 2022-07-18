@@ -85,7 +85,7 @@ module.exports = {
       'connect-src': [
         "'self'",
         'https://stats.data.gouv.fr',
-        // Authorize webpack-hmr on local
+        // Allow webpack-hmr on local
         ...(process.env.NODE_ENV === 'development' ? ['ws://localhost:3000'] : []),
       ],
       'img-src': [
