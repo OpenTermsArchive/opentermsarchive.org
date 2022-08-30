@@ -87,23 +87,19 @@ Object.entries(expenses).forEach(([month, expenseThisMonth]) => {
 
 const fundingSources = [
   {
-    id: 'MEAE',
-    label: 'MEAE',
+    id: '🇫🇷🏛 Ministère de l’Europe et des Affaires Étrangères',
     value: 369383,
   },
   {
-    id: 'France Relance',
-    label: 'France Relance',
+    id: '🇪🇺🏛 France Relance',
     value: 136356,
   },
   {
-    id: 'Reset',
-    label: 'Reset',
+    id: '🇺🇸🏦 Reset.tech',
     value: 32187,
   },
   {
-    id: 'DINUM',
-    label: 'DINUM',
+    id: '🇫🇷🏛 Direction Interministérielle du Numérique',
     value: 18690,
   },
 ];
