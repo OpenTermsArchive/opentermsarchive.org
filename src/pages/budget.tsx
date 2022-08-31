@@ -74,14 +74,14 @@ const expenses = {
   '2022-06-01': 30765,
 };
 
-const accumulatedExpensesData: any = [];
-let accumulatedExpenses = 0;
+const totalExpendituresData: any = [];
+let accumulatedExpenditures = 0;
 
-Object.entries(expenses).forEach(([month, expenseThisMonth]) => {
-  accumulatedExpenses += expenseThisMonth;
-  accumulatedExpensesData.push({
+Object.entries(expenses).forEach(([month, expendituresThisMonth]) => {
+  accumulatedExpenditures += expendituresThisMonth;
+  totalExpendituresData.push({
     x: dayjs(month).toDate(),
-    y: accumulatedExpenses,
+    y: accumulatedExpenditures,
   });
 });
 
@@ -126,7 +126,7 @@ export default function BudgetPage({ mdxContent }: WithI18nResult) {
           <MDXRemote
             {...(mdxContent as any)}
             components={{
-              AccumulatedExpensesGraph: () => (
+              TotalExpendituresGraph: () => (
                 <ResponsiveLine
                   colors={graphLineColors}
                   theme={graphLineTheme}
@@ -135,7 +135,7 @@ export default function BudgetPage({ mdxContent }: WithI18nResult) {
                   data={[
                     {
                       id: 'cost per month',
-                      data: accumulatedExpensesData,
+                      data: totalExpendituresData,
                     },
                   ]}
                   xScale={{
@@ -145,7 +145,7 @@ export default function BudgetPage({ mdxContent }: WithI18nResult) {
                   yFormat={(datum) => datum.toLocaleString()}
                   axisLeft={{
                     format: (value) => value.toLocaleString(router.locale),
-                    legend: <>{t('budget:accumulatedGraph.axis.left.legend')}</>,
+                    legend: <>{t('budget:totalExpendituresGraph.axis.left.legend')}</>,
                     legendOffset: -78,
                     legendPosition: 'middle',
                     tickSize: 0,
@@ -187,7 +187,7 @@ export default function BudgetPage({ mdxContent }: WithI18nResult) {
                   arcLabelsTextColor="var(--colorBlack800)"
                 />
               ),
-              accumulatedExpenses: () => accumulatedExpenses.toLocaleString(router.locale),
+              accumulatedExpenditures: () => accumulatedExpenditures.toLocaleString(router.locale),
               months: () => (Object.entries(expenses).length - 1).toString(),
             }}
           />
