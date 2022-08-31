@@ -4,7 +4,6 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { SSRConfig } from 'next-i18next';
 import fs from 'fs';
 import i18nConfig from './next-i18next.config';
-import rehypeAttr from 'rehype-attr';
 import { serialize } from 'next-mdx-remote/serialize';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
@@ -72,17 +71,7 @@ export const withI18n =
           }
         }
 
-        computedProps.mdxContent = await serialize(content, {
-          mdxOptions: {
-            rehypePlugins: [
-              [
-                //@ts-ignore
-                rehypeAttr,
-                { properties: 'attr' },
-              ],
-            ],
-          },
-        });
+        computedProps.mdxContent = await serialize(content);
       }
 
       if (!callback) {
