@@ -85,36 +85,39 @@ Object.entries(expenses).forEach(([month, expenseThisMonth]) => {
   });
 });
 
-const fundingSources = [
-  {
-    id: '🇫🇷🏛 Ministère de l’Europe et des Affaires Étrangères',
-    value: 369383,
-  },
-  {
-    id: '🇪🇺🏛 France Relance',
-    value: 136356,
-  },
-  {
-    id: '🇺🇸🏦 Reset.tech',
-    value: 32187,
-  },
-  {
-    id: '🇫🇷🏛 Direction Interministérielle du Numérique',
-    value: 18690,
-  },
-];
-
-const totalFundingSources = fundingSources
-  .map(({ value }) => {
-    return value;
-  })
-  .reduce((previousValue, currentValue) => {
-    return previousValue + currentValue;
-  });
-
 export default function BudgetPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();
   const router = useRouter();
+
+  const fundingSources = [
+    {
+      id:
+        router?.locale === 'fr'
+          ? '🇫🇷🏛 Ministère de l’Europe et des Affaires Étrangères'
+          : '🇫🇷🏛 Ministry for Europe and Foreign Affairs ',
+      value: 369383,
+    },
+    {
+      id: '🇪🇺🏛 France Relance',
+      value: 136356,
+    },
+    {
+      id: '🇺🇸🏦 Reset.tech',
+      value: 32187,
+    },
+    {
+      id: '🇫🇷🏛 Direction Interministérielle du Numérique',
+      value: 18690,
+    },
+  ];
+
+  const totalFundingSources = fundingSources
+    .map(({ value }) => {
+      return value;
+    })
+    .reduce((previousValue, currentValue) => {
+      return previousValue + currentValue;
+    });
 
   return (
     <Layout title={t('budget:seo.title')}>
