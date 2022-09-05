@@ -94,19 +94,22 @@ export default function BudgetPage({ mdxContent }: WithI18nResult) {
       id:
         router?.locale === 'fr'
           ? '🇫🇷🏛 Ministère de l’Europe et des Affaires Étrangères'
-          : '🇫🇷🏛 Ministry for Europe and Foreign Affairs ',
+          : '🇫🇷🏛 French Ministry for Europe and Foreign Affairs ',
       value: 369383,
     },
     {
-      id: '🇪🇺🏛 France Relance',
+      id: router?.locale === 'fr' ? '🇪🇺🏛 France Relance' : '🇪🇺🏛 French Covid Recovery Fund',
       value: 136356,
     },
     {
-      id: '🇺🇸🏦 Reset.tech',
+      id: '🇺🇸🏦 Reset',
       value: 32187,
     },
     {
-      id: '🇫🇷🏛 Direction Interministérielle du Numérique',
+      id:
+        router?.locale === 'fr'
+          ? '🇫🇷🏛 Direction Interministérielle du Numérique'
+          : '🇫🇷🏛 Interministerial Directorate for Digital Affairs',
       value: 18690,
     },
   ];
