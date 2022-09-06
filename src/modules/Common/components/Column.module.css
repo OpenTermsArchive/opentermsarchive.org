@@ -70,6 +70,7 @@
 
   &.column__alignXright {
     justify-content: flex-end;
+    text-align: right;
   }
 
   &.column__alignYcenter {
@@ -81,7 +82,7 @@
   }
 
   &:not(:first-child) {
-    margin-left: var(--gridGutterWidth);
+    margin-left: var(--m2XL);
   }
 }
 
@@ -122,6 +123,7 @@
 
     &.column__alignXright {
       justify-content: flex-start;
+      text-align: left;
     }
 
     &.column__mobile__order1 {
