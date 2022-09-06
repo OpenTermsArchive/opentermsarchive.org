@@ -1,4 +1,8 @@
 {
+  "product-newsletter.title": "Stay informed of updates",
+  "product-newsletter.desc": "About twice a month, we send out a newsletter to inform those who want to know about product updates.",
+  "product-newsletter.button.label": "Subscribe",
+  "product-newsletter.input.email.placeholder": "Your email",
   "followUs.button.label": "Follow @OpenTerms",
   "followUs.title": "Find out about interesting document updates",
   "followUs.desc": "We regularly post tweets about changes to documents that affect users' rights and duties or about changes that are worth looking at.",

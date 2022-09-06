@@ -263,6 +263,49 @@ const HomePage = () => {
         </Container>
       </Container>
 
+      {/* Product newsletter */}
+      <Container layout="wide" dark={true} paddingY={false}>
+        <Container gridCols="9" gridGutters="8" flex={true}>
+          <Column width={40} alignX="center" alignY="center">
+            <IconMail size="128" color="var(--colorBlack400)" stroke-width="1" />
+          </Column>
+          <Column width={60} subtitle={t('homepage:product-newsletter.title')}>
+            <TextContent className="mt__0">
+              <p>{t('homepage:product-newsletter.desc')}</p>
+              <form
+                id="sib-form"
+                method="POST"
+                action={
+                  router.locale === 'fr'
+                    ? 'https://98bb6346.sibforms.com/serve/MUIEAMjUWLVIdeiQhwdN4AJo1SB8QMtDFKbp-JIARujMmZ9_feY8x0U6V84om-RPrHKu22mPwcozi9kjLI8gP1bMWgqFwsmw_7Y5rDuFHMGEGz5JqMhgYzcFoO78g8zvArqGLojk4L_6mm4cz3y9c3LkVMrrgs32BFinj1yIBdN5knTmlmbhsOYc2OhwVLFRkRTYg2luE4LwWHyV'
+                    : 'https://98bb6346.sibforms.com/serve/MUIEABuvRacGvFG5qloccLUI_5pWT2w-cVI7L5RogU08EvZ_-d1aTmfUQd-XrwdNYa4MSZbn09Yq-px0kkqKuzbQRjJs9KIzYPwHEbs-3YCnczbaQq4hQthHw0hKh2BcajLr98vsJni7IzUuQRjz1rb6vemMlGn1-raTiNiDxy5Ujm69CxV_wjMFTr4BiSiSAUBiLpOA0Vv3zYcG'
+                }
+                data-type="subscription"
+              >
+                <div className="formfield mb__L">
+                  <input
+                    type="text"
+                    id="EMAIL"
+                    name="EMAIL"
+                    autoComplete="off"
+                    placeholder={t('homepage:product-newsletter.input.email.placeholder')}
+                    data-required="true"
+                    required
+                  />
+                </div>
+
+                <div className="formfield formfield__alignRight">
+                  <Button form="sib-form" submit={true}>
+                    {t('homepage:product-newsletter.button.label')}
+                  </Button>
+                  <input type="hidden" name="locale" value={router.locale} />
+                </div>
+              </form>
+            </TextContent>
+          </Column>
+        </Container>
+      </Container>
+
       {/* FOSS & Contributors */}
       <Container layout="wide">
         <Container gridCols="12" gridGutters="11" paddingY={false}>
