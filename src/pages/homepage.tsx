@@ -8,6 +8,8 @@ import CardList from 'modules/Common/components/CardList';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
+import { FiMail as IconMail } from 'react-icons/fi';
+import { FiTwitter as IconTwitter } from 'react-icons/fi';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
@@ -179,20 +181,22 @@ const HomePage = () => {
         </Container>
       </Container>
 
-      {/* Folllow us */}
-      <Container layout="wide">
-        <Container gridCols="12" gridGutters="11" paddingY={false}>
-          <TextContent className="text__center">
-            <h2>{t('homepage:followUs.title')}</h2>
-            <h3 className="h3__light">{t('homepage:followUs.subtitle')}</h3>
-            <div className="mt__2XL">
+      {/* Follow us */}
+      <Container layout="wide" paddingY={false} dark={true}>
+        <Container gridCols="9" gridGutters="8" flex={true}>
+          <Column width={40} alignX="center" alignY="center">
+            <IconTwitter size="128" color="var(--colorBlack400)" stroke-width="1" />
+          </Column>
+          <Column width={60} subtitle={t('homepage:followUs.title')}>
+            <TextContent className="mt__0">
+              <p>{t('homepage:followUs.desc')}</p>
               <Link href="https://twitter.com/OpenTerms">
                 <a target="_blank" rel="noopener">
-                  <Button type="secondary">{t('homepage:followUs.button.label')}</Button>
+                  <Button className="mb__0">{t('homepage:followUs.button.label')}</Button>
                 </a>
               </Link>
-            </div>
-          </TextContent>
+            </TextContent>
+          </Column>
         </Container>
       </Container>
 
