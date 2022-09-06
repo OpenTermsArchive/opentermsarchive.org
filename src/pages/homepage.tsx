@@ -185,7 +185,7 @@ const HomePage = () => {
       <Container layout="wide" paddingY={false} dark={true}>
         <Container gridCols="9" gridGutters="8" flex={true}>
           <Column width={40} alignX="center" alignY="center">
-            <IconTwitter size="128" color="var(--colorBlack400)" stroke-width="1" />
+            <IconTwitter size="128" color="var(--colorBlack400)" strokeWidth="1px" />
           </Column>
           <Column width={60} subtitle={t('homepage:followUs.title')}>
             <TextContent className="mt__0">
@@ -267,7 +267,7 @@ const HomePage = () => {
       <Container layout="wide" dark={true} paddingY={false}>
         <Container gridCols="9" gridGutters="8" flex={true}>
           <Column width={40} alignX="center" alignY="center">
-            <IconMail size="128" color="var(--colorBlack400)" stroke-width="1" />
+            <IconMail size="128" color="var(--colorBlack400)" strokeWidth="1" />
           </Column>
           <Column width={60} subtitle={t('homepage:product-newsletter.title')}>
             <TextContent className="mt__0">
