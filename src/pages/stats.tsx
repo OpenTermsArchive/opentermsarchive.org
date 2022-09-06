@@ -1,16 +1,14 @@
-import { Trans, useTranslation } from 'next-i18next';
 import { WithI18nResult, withI18n } from 'modules/I18n';
 
 import ButtonBlock from 'modules/Common/components/ButtonBlock';
 import ButtonBlockList from 'modules/Common/components/ButtonBlockList';
-import Card from 'modules/Common/components/Card';
-import CardList from 'modules/Common/components/CardList';
 import Container from 'modules/Common/containers/Container';
 import Layout from 'modules/Common/containers/Layout';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
+import { useTranslation } from 'next-i18next';
 
 export default function StatsPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();

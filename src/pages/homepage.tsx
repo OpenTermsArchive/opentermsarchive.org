@@ -1,8 +1,4 @@
-import { Trans, useTranslation } from 'next-i18next';
-
 import Button from 'modules/Common/components/Button';
-import ButtonBlock from 'modules/Common/components/ButtonBlock';
-import ButtonBlockList from 'modules/Common/components/ButtonBlockList';
 import Card from 'modules/Common/components/Card';
 import CardList from 'modules/Common/components/CardList';
 import Column from 'modules/Common/components/Column';
@@ -12,19 +8,23 @@ import { FiMail as IconMail } from 'react-icons/fi';
 import { FiTwitter as IconTwitter } from 'react-icons/fi';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
-import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import instancesData from '../../public/instances.json';
 import { kebabCase } from 'lodash';
 import { uniqueId } from 'lodash';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
 
 const HomePage = () => {
   const { t } = useTranslation();
   const router = useRouter();
+
+  // @ts-ignore
+  // See https://github.com/microsoft/TypeScript/issues/41338
   const languageName = new Intl.DisplayNames(router.locale, { type: 'language' });
+  // @ts-ignore
   const countryName = new Intl.DisplayNames(router.locale, { type: 'region' });
 
   return (
