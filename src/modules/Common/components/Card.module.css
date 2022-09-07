@@ -108,6 +108,7 @@
 
   & img {
     max-height: 54px;
+    max-width: 96px;
     margin: 0 var(--pXS);
   }
 
