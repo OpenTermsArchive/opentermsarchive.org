@@ -1,8 +1,9 @@
 .linkIcon {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
 
   & svg {
+    margin-top: var(--m2XS);
     transition: stroke 0.3s easeOutCirc;
   }
 
@@ -37,4 +38,5 @@
 .linkIcon_content {
   transition: all 0.1s easeInCirc;
   margin-left: var(--m2XS);
+  text-align: left;
 }

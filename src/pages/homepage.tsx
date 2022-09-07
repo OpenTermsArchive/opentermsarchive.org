@@ -10,6 +10,7 @@ import { FiMail as IconMail } from 'react-icons/fi';
 import { FiTwitter as IconTwitter } from 'react-icons/fi';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
+import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import instancesData from '../../public/instances.json';
@@ -122,7 +123,6 @@ const HomePage = () => {
                         })
                   }
                   image={instance.image}
-                  className="text__center"
                   center={true}
                   big={true}
                   authorCenter={true}
@@ -167,19 +167,28 @@ const HomePage = () => {
                       }
                     ></CardTableItem>
                   </CardTable>
-
-                  <div className="mt__XL">
+                  <div className="mt__XL text__center">
                     <Link href={`https://github.com/openTermsArchive/${slug}-versions`}>
                       <a target="_blank" rel="noopener">
                         <Button>{t('instances:cta.versions')}</Button>
                       </a>
                     </Link>
                   </div>
+                  <div className="mt__M text__center">
+                    <LinkIcon
+                      iconColor="var(--colorBlack400)"
+                      href={`https://github.com/openTermsArchive/${slug}-versions/releases`}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      {t('instances:cta.download-dataset')}
+                    </LinkIcon>
+                  </div>
                   {instance.subscribeURL && (
-                    <div className="mt__M">
-                      <Link href="/subscribe">
-                        <Button type="secondary">{t('instances:cta.email')}</Button>
-                      </Link>
+                    <div className="text__center">
+                      <LinkIcon iconColor="var(--colorBlack400)" href="/subscribe">
+                        {t('instances:cta.email')}
+                      </LinkIcon>
                     </div>
                   )}
                 </Card>

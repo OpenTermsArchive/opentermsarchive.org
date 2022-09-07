@@ -11,7 +11,12 @@
   flex-direction: column;
 
   &.card__center {
-    text-align: center;
+    & > .card_body {
+      & > .card_title,
+      & > .card_subtitle {
+        text-align: center;
+      }
+    }
 
     & > .card_author {
       text-align: left;
