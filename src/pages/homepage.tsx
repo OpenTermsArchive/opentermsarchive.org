@@ -145,28 +145,12 @@ const HomePage = () => {
                     <CardTableItem
                       title={t('instances:language', { count: instance.languages.length })}
                       iconName="FiFlag"
-                      desc={
-                        instance.languages.length > 0
-                          ? instance.languages.map((language: any, index: number) => {
-                              let displayLang = languageName.of(language);
-                              displayLang += index == instance.languages.length - 1 ? '' : ', ';
-                              return displayLang;
-                            })
-                          : null
-                      }
+                      desc={instance.languages.map(languageCode => languageName.of(languageCode)).join(', ')}
                     ></CardTableItem>
                     <CardTableItem
                       title={t('instances:country', { count: instance.countries.length })}
                       iconName="FiBox"
-                      desc={
-                        instance.countries.length > 0
-                          ? instance.countries.map((country: any, index: number) => {
-                              let displayCountry = countryName.of(country);
-                              displayCountry += index == instance.countries.length - 1 ? '' : ', ';
-                              return displayCountry;
-                            })
-                          : null
-                      }
+                      desc={instance.countries.map(regionCode => countryName.of(regionCode)).join(', ')}
                     ></CardTableItem>
                   </CardTable>
                   <div className="mt__XL text__center">
