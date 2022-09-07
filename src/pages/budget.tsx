@@ -4,47 +4,19 @@ import Container from 'modules/Common/containers/Container';
 import Layout from 'modules/Common/containers/Layout';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
-import { ResponsiveLine } from '@nivo/line';
-import { ResponsivePie } from '@nivo/pie';
+import dynamic from 'next/dynamic';
 import TextContent from 'modules/Common/components/TextContent';
-import classNames from 'classnames';
 import dayjs from 'dayjs';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 
-const graphLineTheme = {
-  textColor: 'var(--colorBlack600)',
-  fontSize: 12,
-  axis: {
-    domain: {
-      line: {
-        stroke: 'var(--colorBlack400)',
-        strokeWidth: 1,
-      },
-    },
-    ticks: {
-      line: {
-        stroke: 'var(--colorBlack200)',
-        strokeWidth: 1,
-      },
-    },
-  },
-  grid: {
-    line: {
-      stroke: 'var(--colorBlack200)',
-      strokeWidth: 1,
-    },
-  },
-};
-
-const graphPieColors = [
-  'var(--colorPrimary)',
-  'hsl(205,80%,65%)',
-  'hsl(205,60%,70%)',
-  'hsl(205,40%,75%)',
-];
-
-const graphLineColors = ['var(--colorPrimary)'];
+const TotalExpendituresGraph = dynamic(
+  () => import('modules/Common/components/TotalExpendituresGraph'),
+  { ssr: false }
+);
+const FundingSourcesGraph = dynamic(() => import('modules/Common/components/FundingSourcesGraph'), {
+  ssr: false,
+});
 
 const expenses = {
   '2020-06-01': 20164,
@@ -89,39 +61,6 @@ export default function BudgetPage({ mdxContent }: WithI18nResult) {
   const { t } = useTranslation();
   const router = useRouter();
 
-  const fundingSources = [
-    {
-      id:
-        router?.locale === 'fr'
-          ? '🇫🇷🏛 Ministère de l’Europe et des Affaires Étrangères'
-          : '🇫🇷🏛 French Ministry for Europe and Foreign Affairs ',
-      value: 369383,
-    },
-    {
-      id: router?.locale === 'fr' ? '🇪🇺🏛 France Relance' : '🇪🇺🏛 French Covid Recovery Fund',
-      value: 136356,
-    },
-    {
-      id: '🇺🇸🏦 Reset',
-      value: 32187,
-    },
-    {
-      id:
-        router?.locale === 'fr'
-          ? '🇫🇷🏛 Direction Interministérielle du Numérique'
-          : '🇫🇷🏛 Interministerial Directorate for Digital Affairs',
-      value: 18690,
-    },
-  ];
-
-  const totalFundingSources = fundingSources
-    .map(({ value }) => {
-      return value;
-    })
-    .reduce((previousValue, currentValue) => {
-      return previousValue + currentValue;
-    });
-
   return (
     <Layout title={t('budget:seo.title')}>
       <Container gridCols="10" gridGutters="9">
@@ -130,66 +69,16 @@ export default function BudgetPage({ mdxContent }: WithI18nResult) {
             {...(mdxContent as any)}
             components={{
               TotalExpendituresGraph: () => (
-                <ResponsiveLine
-                  colors={graphLineColors}
-                  theme={graphLineTheme}
-                  curve="monotoneX"
-                  margin={{ top: 44, right: 4, bottom: 80, left: 84 }}
+                <TotalExpendituresGraph
                   data={[
                     {
                       id: 'cost per month',
                       data: totalExpendituresData,
                     },
                   ]}
-                  xScale={{
-                    type: 'time',
-                  }}
-                  xFormat={(datum) => dayjs(datum).format('MMMM YYYY')}
-                  yFormat={(datum) => datum.toLocaleString()}
-                  axisLeft={{
-                    format: (value) => value.toLocaleString(router.locale),
-                    legend: <>{t('budget:totalExpendituresGraph.axis.left.legend')}</>,
-                    legendOffset: -78,
-                    legendPosition: 'middle',
-                    tickSize: 0,
-                    tickPadding: 8,
-                    tickRotation: 0,
-                  }}
-                  axisBottom={{
-                    format: (value) => dayjs(value).format('MMMM YYYY'),
-                    tickRotation: -45,
-                    tickPadding: 8,
-                    tickSize: 8,
-                    tickValues: 'every month',
-                  }}
-                  axisTop={null}
-                  axisRight={null}
-                  pointSize={8}
-                  useMesh={true}
-                  enableArea={true}
-                  tooltip={(point) => {
-                    return (
-                      <div className={classNames('text__light', 'text__center', 'text__smallcaps')}>
-                        {point.point.data.xFormatted}
-                        <br />
-                        {point.point.data.yFormatted}€
-                      </div>
-                    );
-                  }}
                 />
               ),
-              FundingSourcesGraph: () => (
-                <ResponsivePie
-                  data={fundingSources}
-                  colors={graphPieColors}
-                  margin={{ top: 44, right: 44, bottom: 44, left: 44 }}
-                  arcLinkLabelsThickness={2}
-                  arcLabel={function (e) {
-                    return Math.round((100 * e.value) / totalFundingSources).toString() + '%';
-                  }}
-                  arcLabelsTextColor="var(--colorBlack800)"
-                />
-              ),
+              FundingSourcesGraph,
               accumulatedExpenditures: () => accumulatedExpenditures.toLocaleString(router.locale),
               months: () => (Object.entries(expenses).length - 1).toString(),
             }}
