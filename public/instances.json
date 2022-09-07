@@ -4,7 +4,7 @@
       "name": "Contrib",
       "image": "/images/instances/contrib.png",
       "languages": ["en", "fr"],
-      "countries": ["EU"],
+      "countries": ["EU", "US"],
       "maintainers": [],
       "stats": {
         "services": "285",
