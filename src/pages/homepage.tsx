@@ -203,8 +203,8 @@ const HomePage = () => {
             <IconTwitter size="128" color="var(--colorBlack400)" strokeWidth="1px" />
           </Column>
           <Column width={60} subtitle={t('homepage:follow-us.title')}>
-            <TextContent className="mt__0">
-              <p>{t('homepage:follow-us.desc')}</p>
+            <TextContent marginTop={false}>
+              <p className="mt__M">{t('homepage:follow-us.desc')}</p>
               <Link href="https://twitter.com/OpenTerms">
                 <a target="_blank" rel="noopener">
                   <Button className="mb__0">{t('homepage:follow-us.button.label')}</Button>
@@ -285,8 +285,8 @@ const HomePage = () => {
             <IconMail size="128" color="var(--colorBlack400)" strokeWidth="1" />
           </Column>
           <Column width={60} subtitle={t('homepage:product-newsletter.title')}>
-            <TextContent className="mt__0">
-              <p>{t('homepage:product-newsletter.desc')}</p>
+            <TextContent marginTop={false}>
+              <p className="mt__M">{t('homepage:product-newsletter.desc')}</p>
               <form
                 id="sib-form"
                 method="POST"

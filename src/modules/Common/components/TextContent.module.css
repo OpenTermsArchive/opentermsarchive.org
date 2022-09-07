@@ -140,3 +140,7 @@
 .textContent__marginTopLarge {
   margin-top: var(--m2XL);
 }
+
+.textContent__hasNoMarginTop {
+  margin-top: 0;
+}

@@ -5,10 +5,12 @@ import s from './TextContent.module.css';
 type TextContentProps = {
   className?: string;
   marginTopLarge?: boolean;
+  marginTop?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const TextContent: React.FC<TextContentProps> = ({
   marginTopLarge = false,
+  marginTop = true,
   children,
   className,
   ...props
@@ -18,6 +20,7 @@ const TextContent: React.FC<TextContentProps> = ({
       className={classNames(
         s.textContent,
         { [s.textContent__marginTopLarge]: !!marginTopLarge },
+        marginTop === false ? s.textContent__hasNoMarginTop : null,
         className
       )}
       {...props}
