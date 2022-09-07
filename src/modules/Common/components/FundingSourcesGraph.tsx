@@ -1,6 +1,6 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import { ResponsivePie } from '@nivo/pie';
+import { useTranslation } from 'next-i18next';
 
 type FundingSourcesGraphProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
@@ -12,28 +12,22 @@ const graphPieColors = [
 ];
 
 const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
-  const router = useRouter();
+  const { t } = useTranslation();
   const fundingSources = [
     {
-      id:
-        router?.locale === 'fr'
-          ? '🇫🇷🏛 Ministère de l’Europe et des Affaires Étrangères'
-          : '🇫🇷🏛 French Ministry for Europe and Foreign Affairs ',
+      id: t('budget:funding-sources.meae'),
       value: 369383,
     },
     {
-      id: router?.locale === 'fr' ? '🇪🇺🏛 France Relance' : '🇪🇺🏛 French Covid Recovery Fund',
+      id: t('budget:funding-sources.france-relance'),
       value: 136356,
     },
     {
-      id: '🇺🇸🏦 Reset',
+      id: t('budget:funding-sources.reset'),
       value: 32187,
     },
     {
-      id:
-        router?.locale === 'fr'
-          ? '🇫🇷🏛 Direction Interministérielle du Numérique'
-          : '🇫🇷🏛 Interministerial Directorate for Digital Affairs',
+      id: t('budget:funding-sources.dinum'),
       value: 18690,
     },
   ];
