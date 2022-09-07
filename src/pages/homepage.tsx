@@ -88,13 +88,6 @@ const HomePage = () => {
           <Column width={50}>
             <h3>{t('homepage:how.bloc4.title')}</h3>
             <p className="mt__M h3 h3__light">{t('homepage:how.bloc4.desc')}</p>
-            <p className="mt__L">
-              <Link href="https://github.com/ambanum/OpenTermsArchive-versions/releases">
-                <a target="_blank" rel="noopener">
-                  <Button type="secondary">{t('homepage:how.bloc4.cta.label')}</Button>
-                </a>
-              </Link>
-            </p>
           </Column>
           <Column width={50} alignX="right" alignY="center">
             <div style={{ maxWidth: '350px' }}>
