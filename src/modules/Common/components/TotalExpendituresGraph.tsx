@@ -48,6 +48,7 @@ const TotalExpendituresGraph: React.FC<TotalExpendituresGraphProps> = ({ data })
       margin={{ top: 44, right: 4, bottom: 80, left: 84 }}
       data={data}
       xScale={{
+        format: '%Y-%m-%dT%H:%M:%S.%L%Z',
         type: 'time',
       }}
       xFormat={(datum) => dayjs(datum).format('MMMM YYYY')}
