@@ -2,7 +2,6 @@
   "contrib.desc": "Various services in English.",
   "country": "• Jurisdiction:",
   "country_other": "• Jurisdictions:",
-  "country_plural": "__STRING_NOT_TRANSLATED__",
   "cta.email": "Subscribe over email",
   "cta.versions": "Explore history",
   "dating.desc": "Dating services used in Europe, in English and in the jurisdictions of the European Union and Switzerland.",
@@ -11,7 +10,6 @@
   "france.desc": "Various services in the French language and jurisdiction.",
   "language": "• Language:",
   "language_other": "• Languages:",
-  "language_plural": "__STRING_NOT_TRANSLATED__",
   "services": "• Services:",
   "title": "We create partnerships to cover different industries, languages and jurisdictions",
   "volunteer-contributors": "Volunteer contributors"

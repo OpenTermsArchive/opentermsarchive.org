@@ -75,6 +75,7 @@ module.exports = {
       prefix: '{{',
       suffix: '}}',
     },
+    plural: false
   },
   transform: typescriptTransform({
     extensions: ['.ts', '.tsx'],
