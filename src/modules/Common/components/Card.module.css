@@ -99,7 +99,7 @@
 
 .card_author {
   border-top: 1px solid var(--colorBlack200);
-  padding: var(--pM);
+  padding: var(--pS);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -107,7 +107,7 @@
   margin-top: auto;
 
   & img {
-    max-height: 58px;
+    max-height: 54px;
     margin: 0 var(--pXS);
   }
 

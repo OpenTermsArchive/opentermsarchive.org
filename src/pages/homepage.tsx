@@ -110,24 +110,26 @@ const HomePage = () => {
                   title={instance.name}
                   subtitle={t(`instances:${slug}.desc`)}
                   author={
-                    instance.maintainers.length == 0
-                      ? t('instances:volunteer-contributors')
-                      : instance.maintainers.map((maintener: any) => {
-                          return (
-                            <img
-                              key={uniqueId('maintener_')}
-                              src={maintener.logo}
-                              alt={maintener.name}
-                            />
-                          );
-                        })
+                    instance.maintainers.length == 0 ? (
+                      <img src={`/images/contributors/volunteer-${router?.locale}.png`}></img>
+                    ) : (
+                      instance.maintainers.map((maintener: any) => {
+                        return (
+                          <img
+                            key={uniqueId('maintener_')}
+                            src={maintener.logo}
+                            alt={maintener.name}
+                          />
+                        );
+                      })
+                    )
                   }
                   image={instance.image}
                   center={true}
                   big={true}
                   authorCenter={true}
                   white={true}
-                  authorIcon={instance.name === 'Contrib' ? true : false}
+                  authorIcon={false}
                 >
                   <CardTable>
                     <CardTableItem
