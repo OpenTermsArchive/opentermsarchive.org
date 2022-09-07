@@ -284,12 +284,11 @@ const HomePage = () => {
               >
                 <div className="formfield mb__L">
                   <input
-                    type="text"
+                    type="email"
                     id="EMAIL"
                     name="EMAIL"
-                    autoComplete="off"
+                    autoComplete="email"
                     placeholder={t('homepage:product-newsletter.input.email.placeholder')}
-                    data-required="true"
                     required
                   />
                 </div>
