@@ -1,0 +1,25 @@
+.cardTableItem {
+  display: flex;
+  align-items: flex-start;
+  padding-top: var(--m2XS);
+  padding-bottom: var(--m2XS);
+
+  &:not(:first-child) {
+    border-top: 1px solid var(--colorBlack200);
+  }
+}
+
+.cardTableItem_icon {
+  flex-shrink: 0;
+  margin-top: var(--m3eXS);
+}
+
+.cardTableItem_title {
+  margin-left: var(--m2XS);
+}
+
+.cardTableItem_desc {
+  margin-left: auto;
+  padding-left: var(--pS);
+  text-align: right;
+}

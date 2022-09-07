@@ -1,16 +1,16 @@
 {
   "contrib.desc": "Services divers en anglais.",
-  "country": "• Juridiction :",
-  "country_other": "• Juridictions :",
+  "country": "Juridiction",
+  "country_other": "Juridictions",
   "cta.email": "S'abonner par courriel",
   "cta.versions": "Explorer l'historique",
   "dating.desc": "Services pouvant influencer les élections présidentielles et législatives françaises 2022, en français et dans la juridiction française.",
-  "documents": "• Documents :",
+  "documents": "Documents :",
   "france-elections.desc": "Services pouvant influencer les élections présidentielles et législatives françaises 2022, en français et dans la juridiction française.",
   "france.desc": "Services divers en français et dans la juridiction française.",
-  "language": "• Langue :",
-  "language_other": "• Langues :",
-  "services": "• Services :",
+  "language": "Langue",
+  "language_other": "Langues",
+  "services": "Services",
   "title": "Nous créons des partenariats pour couvrir différentes industries, langues et juridictions",
   "volunteer-contributors": "Contributeurs bénévoles"
 }

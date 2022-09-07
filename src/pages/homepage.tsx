@@ -1,6 +1,8 @@
 import Button from 'modules/Common/components/Button';
 import Card from 'modules/Common/components/Card';
 import CardList from 'modules/Common/components/CardList';
+import CardTable from 'modules/Common/components/CardTable';
+import CardTableItem from 'modules/Common/components/CardTableItem';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
@@ -134,32 +136,45 @@ const HomePage = () => {
                   white={true}
                   authorIcon={instance.name === 'Contrib' ? true : false}
                 >
-                  <div>
-                    {t('instances:services')} {instance.stats.services}
-                  </div>
-                  <div>
-                    {t('instances:documents')} {instance.stats.documents}
-                  </div>
-                  <div>
-                    {t('instances:language', { count: instance.languages.length })}{' '}
-                    {instance.languages.length > 0
-                      ? instance.languages.map((language: any, index: number) => {
-                          let displayLang = languageName.of(language);
-                          displayLang += index == instance.languages.length - 1 ? '' : ', ';
-                          return displayLang;
-                        })
-                      : null}
-                  </div>
-                  <div>
-                    {t('instances:country', { count: instance.countries.length })}{' '}
-                    {instance.countries.length > 0
-                      ? instance.countries.map((country: any, index: number) => {
-                          let displayCountry = countryName.of(country);
-                          displayCountry += index == instance.countries.length - 1 ? '' : ', ';
-                          return displayCountry;
-                        })
-                      : null}
-                  </div>
+                  <CardTable>
+                    <CardTableItem
+                      title={t('instances:services')}
+                      iconName="FiGlobe"
+                      desc={instance.stats.services}
+                    ></CardTableItem>
+                    <CardTableItem
+                      title={t('instances:documents')}
+                      iconName="FiFile"
+                      desc={instance.stats.documents}
+                    ></CardTableItem>
+                    <CardTableItem
+                      title={t('instances:language', { count: instance.languages.length })}
+                      iconName="FiFlag"
+                      desc={
+                        instance.languages.length > 0
+                          ? instance.languages.map((language: any, index: number) => {
+                              let displayLang = languageName.of(language);
+                              displayLang += index == instance.languages.length - 1 ? '' : ', ';
+                              return displayLang;
+                            })
+                          : null
+                      }
+                    ></CardTableItem>
+                    <CardTableItem
+                      title={t('instances:country', { count: instance.countries.length })}
+                      iconName="FiBox"
+                      desc={
+                        instance.countries.length > 0
+                          ? instance.countries.map((country: any, index: number) => {
+                              let displayCountry = countryName.of(country);
+                              displayCountry += index == instance.countries.length - 1 ? '' : ', ';
+                              return displayCountry;
+                            })
+                          : null
+                      }
+                    ></CardTableItem>
+                  </CardTable>
+
                   <div className="mt__XL">
                     <Link href={`https://github.com/openTermsArchive/${slug}-versions`}>
                       <a target="_blank" rel="noopener">

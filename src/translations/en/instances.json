@@ -1,16 +1,16 @@
 {
   "contrib.desc": "Various services in English.",
-  "country": "• Jurisdiction:",
-  "country_other": "• Jurisdictions:",
+  "country": "Jurisdiction",
+  "country_other": "Jurisdictions",
   "cta.email": "Subscribe over email",
   "cta.versions": "Explore history",
   "dating.desc": "Dating services used in Europe, in English and in the jurisdictions of the European Union and Switzerland.",
-  "documents": "• Documents:",
+  "documents": "Documents",
   "france-elections.desc": "Most used social media in France that could have a systemic impact on the 2022 elections, in French and in the French jurisdiction.",
   "france.desc": "Various services in the French language and jurisdiction.",
-  "language": "• Language:",
-  "language_other": "• Languages:",
-  "services": "• Services:",
+  "language": "Language",
+  "language_other": "Languages",
+  "services": "Services",
   "title": "We create partnerships to cover different industries, languages and jurisdictions",
   "volunteer-contributors": "Volunteer contributors"
 }
