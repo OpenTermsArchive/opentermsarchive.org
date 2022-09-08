@@ -7,7 +7,6 @@ import CardList from 'modules/Common/components/CardList';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import instancesData from '../../../../public/instances.json';
 import { kebabCase } from 'lodash';
-import { uniqueId } from 'lodash';
 import Card from 'modules/Common/components/Card';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
@@ -34,13 +33,17 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
           ) : (
             <>
               {instance.maintainers.map((maintainer) => (
-                <img key={uniqueId('maintainer_')} src={maintainer.logo} alt={maintainer.name} />
+                <img
+                  key={`maintainer_${kebabCase(maintainer.name)}`}
+                  src={maintainer.logo}
+                  alt={maintainer.name}
+                />
               ))}
             </>
           );
         return (
           <Card
-            key={uniqueId('instance_')}
+            key={`instance_${slug}`}
             title={instance.name}
             subtitle={t(`instances:${slug}.desc`)}
             author={author}
