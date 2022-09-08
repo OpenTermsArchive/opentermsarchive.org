@@ -125,7 +125,7 @@ const HomePage = () => {
               link="https://www.reset.tech/resources/memos-on-platforms-behaviour-during-the-2022-french-elections/"
               center={true}
               white={true}
-            ></Card>
+            />
             <Card
               image="/images/reuses/tosdr.jpg"
               title={t('homepage:reuses.tosdr.title')}
@@ -134,7 +134,7 @@ const HomePage = () => {
               link="https://tosdr.org"
               center={true}
               white={true}
-            ></Card>
+            />
             <Card
               image="/images/reuses/readability.jpg"
               title={t('homepage:reuses.readability.title')}
@@ -143,7 +143,7 @@ const HomePage = () => {
               link="https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments"
               center={true}
               white={true}
-            ></Card>
+            />
             <Card
               image="/images/reuses/scripta-manent.jpg"
               title={t('homepage:reuses.scripta_manent.title')}
@@ -152,7 +152,7 @@ const HomePage = () => {
               link="https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent"
               center={true}
               white={true}
-            ></Card>
+            />
             <Card
               image="/images/reuses/tosback.jpg"
               title={t('homepage:reuses.tosback.title')}
@@ -161,7 +161,7 @@ const HomePage = () => {
               link="https://tosback.org/"
               center={true}
               white={true}
-            ></Card>
+            />
             <Card
               image="/images/reuses/new-reuse.png"
               className="text__center"
@@ -170,7 +170,7 @@ const HomePage = () => {
               link="mailto:contact@opentermsarchive.org"
               center={true}
               white={true}
-            ></Card>
+            />
           </CardList>
         </Container>
       </Container>

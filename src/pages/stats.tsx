@@ -27,31 +27,31 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
               desc={t('stats:numbers.block1.desc')}
               iconName="FiGlobe"
               iconColor="var(--colorBlack400)"
-            ></ButtonBlock>
+            />
             <ButtonBlock
               title={t('stats:numbers.block2.title')}
               desc={t('stats:numbers.block2.desc')}
               iconName="FiFile"
               iconColor="var(--colorBlack400)"
-            ></ButtonBlock>
+            />
             <ButtonBlock
               title={t('stats:numbers.block3.title')}
               desc={t('stats:numbers.block3.desc')}
               iconName="FiEye"
               iconColor="var(--colorBlack400)"
-            ></ButtonBlock>
+            />
             <ButtonBlock
               title={t('stats:numbers.block4.title')}
               desc={t('stats:numbers.block4.desc')}
               iconName="FiUsers"
               iconColor="var(--colorBlack400)"
-            ></ButtonBlock>
+            />
             <ButtonBlock
               title={t('stats:numbers.block5.title')}
               desc={t('stats:numbers.block5.desc')}
               iconName="FiLayers"
               iconColor="var(--colorBlack400)"
-            ></ButtonBlock>
+            />
             <ButtonBlock
               title={t('stats:numbers.block6.title')}
               desc={t('stats:numbers.block6.desc')}

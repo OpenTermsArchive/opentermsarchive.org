@@ -56,24 +56,24 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
                 title={t('instances:services')}
                 iconName="FiGlobe"
                 desc={instance.stats.services}
-              ></CardTableItem>
+              />
               <CardTableItem
                 title={t('instances:documents')}
                 iconName="FiFile"
                 desc={instance.stats.documents}
-              ></CardTableItem>
+              />
               <CardTableItem
                 title={t('instances:language', { count: instance.languages.length })}
                 iconName="FiFlag"
                 desc={instance.languages
                   .map((languageCode) => languageName.of(languageCode))
                   .join(', ')}
-              ></CardTableItem>
+              />
               <CardTableItem
                 title={t('instances:country', { count: instance.countries.length })}
                 iconName="FiBox"
                 desc={instance.countries.map((regionCode) => countryName.of(regionCode)).join(', ')}
-              ></CardTableItem>
+              />
             </CardTable>
             <div className="mt__XL text__center">
               <Link href={`https://github.com/openTermsArchive/${slug}-versions`}>
