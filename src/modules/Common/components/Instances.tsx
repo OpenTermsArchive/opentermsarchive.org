@@ -18,8 +18,8 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
   const { t } = useTranslation();
   const router = useRouter();
 
-  // @ts-ignore
   // See https://github.com/microsoft/TypeScript/issues/41338
+  // @ts-ignore
   const languageName = new Intl.DisplayNames(router.locale, { type: 'language' });
   // @ts-ignore
   const countryName = new Intl.DisplayNames(router.locale, { type: 'region' });
@@ -28,22 +28,22 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
     <CardList title={t('instances:title')} centerTitle={true} big={true} {...props}>
       {instancesData.instances.map((instance) => {
         const slug = kebabCase(instance.name);
+        const author =
+          instance.maintainers.length == 0 ? (
+            <img src={`/images/contributors/volunteer-${router?.locale}.png`} />
+          ) : (
+            <>
+              {instance.maintainers.map((maintainer) => (
+                <img key={uniqueId('maintainer_')} src={maintainer.logo} alt={maintainer.name} />
+              ))}
+            </>
+          );
         return (
           <Card
             key={uniqueId('instance_')}
             title={instance.name}
             subtitle={t(`instances:${slug}.desc`)}
-            author={
-              instance.maintainers.length == 0 ? (
-                <img src={`/images/contributors/volunteer-${router?.locale}.png`}></img>
-              ) : (
-                instance.maintainers.map((maintener) => {
-                  return (
-                    <img key={uniqueId('maintener_')} src={maintener.logo} alt={maintener.name} />
-                  );
-                })
-              )
-            }
+            author={author}
             image={instance.image}
             center={true}
             big={true}

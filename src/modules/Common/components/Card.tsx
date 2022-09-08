@@ -8,7 +8,7 @@ type CardProps = {
   title?: string;
   image?: string;
   subtitle?: string | React.ReactElement;
-  author?: string;
+  author?: string | React.ReactElement;
   authorIcon?: boolean;
   authorCenter?: boolean;
   className?: string;
