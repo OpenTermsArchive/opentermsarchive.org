@@ -26,7 +26,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
 
   return (
     <CardList title={t('instances:title')} centerTitle={true} big={true} {...props}>
-      {instancesData.instances.map((instance: any) => {
+      {instancesData.instances.map((instance) => {
         const slug = kebabCase(instance.name);
         return (
           <Card
@@ -37,7 +37,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
               instance.maintainers.length == 0 ? (
                 <img src={`/images/contributors/volunteer-${router?.locale}.png`}></img>
               ) : (
-                instance.maintainers.map((maintener: any) => {
+                instance.maintainers.map((maintener) => {
                   return (
                     <img key={uniqueId('maintener_')} src={maintener.logo} alt={maintener.name} />
                   );
