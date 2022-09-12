@@ -10,7 +10,6 @@
   &:hover {
     & .linkIcon_content {
       transition: transform 0.3s easeOutCirc;
-      transform: translateX(4px);
     }
 
     & svg {

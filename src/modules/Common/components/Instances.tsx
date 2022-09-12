@@ -3,6 +3,7 @@ import Card from 'modules/Common/components/Card';
 import CardList from 'modules/Common/components/CardList';
 import CardTable from 'modules/Common/components/CardTable';
 import CardTableItem from 'modules/Common/components/CardTableItem';
+import { FiSearch as IconSearch } from 'react-icons/fi';
 import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
@@ -106,12 +107,16 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
             <div className="mt__XL text__center">
               <Link href={`https://github.com/openTermsArchive/${instanceId}-versions`}>
                 <a target="_blank" rel="noopener">
-                  <Button>{t('instances:cta.versions')}</Button>
+                  <Button type="secondary">
+                    <IconSearch className="mr__2XS" />
+                    {t('instances:cta.versions')}
+                  </Button>
                 </a>
               </Link>
             </div>
             <div className="mt__M text__center">
               <LinkIcon
+                iconName="FiDownload"
                 iconColor="var(--colorBlack400)"
                 href={`https://github.com/openTermsArchive/${instanceId}-versions/releases`}
                 target="_blank"
@@ -121,8 +126,8 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
               </LinkIcon>
             </div>
             {subscribeURL && (
-              <div className="text__center">
-                <LinkIcon iconColor="var(--colorBlack400)" href="/subscribe">
+              <div className="mt__2XS text__center">
+                <LinkIcon iconColor="var(--colorBlack400)" iconName="FiMail" href="/subscribe">
                   {t('instances:cta.email')}
                 </LinkIcon>
               </div>
