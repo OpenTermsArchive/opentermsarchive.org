@@ -1,72 +1,61 @@
 {
-  "instances": [
-    {
-      "name": "Contrib",
-      "image": "/images/instances/contrib.png",
-      "languages": ["en", "fr"],
-      "countries": ["EU", "US"],
-      "maintainers": [],
-      "stats": {
-        "services": "285",
-        "documents": "612"
+  "Contrib": {
+    "languages": ["en", "fr"],
+    "jurisdictions": ["EU", "US"],
+    "stats": {
+      "services": "285",
+      "documents": "612"
+    },
+    "subscribeURL": "https://opentermsarchive.org/subscribe"
+  },
+  "France": {
+    "languages": ["fr"],
+    "jurisdictions": ["FR"],
+    "maintainers": [
+      {
+        "name": "UFC Que Choisir",
+        "logo": "/images/contributors/ufc-que-choisir.png",
+        "url": "https://www.quechoisir.org"
       },
-      "subscribeURL": "https://opentermsarchive.org/subscribe"
-    },
-    {
-      "name": "France",
-      "image": "/images/instances/france.png",
-      "languages": ["fr"],
-      "countries": ["FR"],
-      "maintainers": [
-        {
-          "name": "UFC Que Choisir",
-          "logo": "/images/contributors/ufc-que-choisir.png",
-          "url": "https://www.quechoisir.org"
-        },
-        {
-          "name": "Ambassadeur français pour le numérique",
-          "logo": "/images/contributors/ambnum.png",
-          "url": "https://disinfo.quaidorsay.fr/fr"
-        }
-      ],
-      "stats": {
-        "services": "24",
-        "documents": "52"
+      {
+        "name": "Ambassadeur français pour le numérique",
+        "logo": "/images/contributors/ambnum.png",
+        "url": "https://disinfo.quaidorsay.fr/fr"
       }
-    },
-    {
-      "name": "France Élections",
-      "image": "/images/instances/france-elections.png",
-      "languages": ["fr"],
-      "countries": ["FR"],
-      "maintainers": [
-        {
-          "name": "Reset",
-          "logo": "/images/contributors/reset.png",
-          "url": "https://www.reset.tech"
-        }
-      ],
-      "stats": {
-        "services": "5",
-        "documents": "75"
-      }
-    },
-    {
-      "name": "Dating",
-      "image": "/images/instances/dating.png",
-      "languages": ["en"],
-      "countries": ["EU", "CH"],
-      "maintainers": [
-        {
-          "name": "HestiaLabs",
-          "logo": "/images/contributors/hestialabs.png",
-          "url": "https://hestialabs.org"
-        }
-      ],
-      "stats": {
-        "services": "24",
-        "documents": "52"
-      }
+    ],
+    "stats": {
+      "services": "24",
+      "documents": "52"
     }
-  ]
+  },
+  "France Élections": {
+    "languages": ["fr"],
+    "jurisdictions": ["FR"],
+    "maintainers": [
+      {
+        "name": "Reset",
+        "logo": "/images/contributors/reset.png",
+        "url": "https://www.reset.tech"
+      }
+    ],
+    "stats": {
+      "services": "5",
+      "documents": "75"
+    }
+  },
+  "Dating": {
+    "languages": ["en"],
+    "jurisdictions": ["EU", "CH"],
+    "maintainers": [
+      {
+        "name": "HestiaLabs",
+        "logo": "/images/contributors/hestialabs.png",
+        "url": "https://hestialabs.org"
+      }
+    ],
+    "stats": {
+      "services": "24",
+      "documents": "52"
+    }
+  }
 }

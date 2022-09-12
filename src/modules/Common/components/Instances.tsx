@@ -13,6 +13,25 @@ import { useTranslation } from 'next-i18next';
 
 type InstancesProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
+interface Maintainer {
+  name: string;
+  logo: string;
+  url: string;
+}
+
+interface Stats {
+  services: string;
+  documents: string;
+}
+
+interface Instance {
+  maintainers?: Array<Maintainer>;
+  languages: Array<string>;
+  jurisdictions: Array<string>;
+  stats: Stats;
+  subscribeURL?: string;
+}
+
 const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
   const { t } = useTranslation();
   const router = useRouter();
@@ -25,14 +44,15 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
 
   return (
     <CardList title={t('instances:title')} centerTitle={true} big={true} {...props}>
-      {instancesData.instances.map((instance) => {
-        const instanceId = kebabCase(instance.name);
+      {Object.entries(instancesData).map(([name, instance]) => {
+        const { maintainers, languages, jurisdictions, stats, subscribeURL }: Instance = instance;
+        const instanceId = kebabCase(name);
         const author =
-          instance.maintainers.length == 0 ? (
+          maintainers == undefined ? (
             <img src={`/images/contributors/volunteer-${router?.locale}.png`} />
           ) : (
             <>
-              {instance.maintainers.map((maintainer) => (
+              {maintainers.map((maintainer) => (
                 <img
                   key={`maintainer_${kebabCase(maintainer.name)}`}
                   src={maintainer.logo}
@@ -44,10 +64,10 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
         return (
           <Card
             key={`instance_${instanceId}`}
-            title={instance.name}
+            title={name}
             subtitle={t(`instances:${instanceId}.desc`)}
             author={author}
-            image={instance.image}
+            image={`/images/instances/${instanceId}.png`}
             center={true}
             big={true}
             authorCenter={true}
@@ -58,24 +78,22 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
               <CardTableItem
                 title={t('instances:services')}
                 iconName="FiGlobe"
-                desc={instance.stats.services}
+                desc={stats.services}
               />
               <CardTableItem
                 title={t('instances:documents')}
                 iconName="FiFile"
-                desc={instance.stats.documents}
+                desc={stats.documents}
               />
               <CardTableItem
-                title={t('instances:language', { count: instance.languages.length })}
+                title={t('instances:language', { count: languages.length })}
                 iconName="FiFlag"
-                desc={instance.languages
-                  .map((languageCode) => languageName.of(languageCode))
-                  .join(', ')}
+                desc={languages.map((languageCode) => languageName.of(languageCode)).join(', ')}
               />
               <CardTableItem
-                title={t('instances:country', { count: instance.countries.length })}
+                title={t('instances:country', { count: jurisdictions.length })}
                 iconName="FiBox"
-                desc={instance.countries.map((regionCode) => countryName.of(regionCode)).join(', ')}
+                desc={jurisdictions.map((regionCode) => countryName.of(regionCode)).join(', ')}
               />
             </CardTable>
             <div className="mt__XL text__center">
@@ -95,7 +113,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
                 {t('instances:cta.download-dataset')}
               </LinkIcon>
             </div>
-            {instance.subscribeURL && (
+            {subscribeURL && (
               <div className="text__center">
                 <LinkIcon iconColor="var(--colorBlack400)" href="/subscribe">
                   {t('instances:cta.email')}
