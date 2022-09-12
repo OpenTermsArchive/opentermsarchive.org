@@ -72,7 +72,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
             big={true}
             authorCenter={true}
             white={true}
-            authorIcon={false}
+            hasAuthorIcon={false}
           >
             <CardTable>
               <CardTableItem

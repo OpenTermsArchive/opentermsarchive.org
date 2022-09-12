@@ -9,7 +9,7 @@ type CardProps = {
   image?: string;
   subtitle?: string | React.ReactElement;
   author?: string | React.ReactElement;
-  authorIcon?: boolean;
+  hasAuthorIcon?: boolean;
   authorCenter?: boolean;
   className?: string;
   link?: string;
@@ -25,7 +25,7 @@ const Card: React.FC<CardProps> = ({
   image,
   subtitle,
   author,
-  authorIcon = true,
+  hasAuthorIcon = true,
   authorCenter = false,
   link,
   center = false,
@@ -64,7 +64,7 @@ const Card: React.FC<CardProps> = ({
             [s.card_author__isCenter]: authorCenter === true,
           })}
         >
-          {authorIcon && (
+          {hasAuthorIcon && (
             <div className={s.card_author_icon}>
               <FiUser color="#999999" />
             </div>
