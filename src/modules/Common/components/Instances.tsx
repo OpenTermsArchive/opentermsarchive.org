@@ -24,12 +24,18 @@ interface Stats {
   documents: string;
 }
 
+interface Industries {
+  fr: string;
+  en: string;
+}
+
 interface Instance {
   maintainers?: Array<Maintainer>;
   languages: Array<string>;
   jurisdictions: Array<string>;
   stats: Stats;
   subscribeURL?: string;
+  industries?: Industries;
 }
 
 const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
@@ -45,7 +51,8 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
   return (
     <CardList title={t('instances:title')} centerTitle={true} big={true} {...props}>
       {Object.entries(instancesData).map(([name, instance]) => {
-        const { maintainers, languages, jurisdictions, stats, subscribeURL }: Instance = instance;
+        const { maintainers, languages, jurisdictions, stats, subscribeURL, industries }: Instance =
+          instance;
         const instanceId = kebabCase(name);
         const author =
           maintainers == undefined ? (
@@ -65,7 +72,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
           <Card
             key={`instance_${instanceId}`}
             title={name}
-            subtitle={t(`instances:${instanceId}.desc`)}
+            subtitle={!!industries ? industries[router?.locale as keyof Industries] : ''}
             author={author}
             image={`/images/instances/${instanceId}.png`}
             center={true}

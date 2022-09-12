@@ -41,6 +41,10 @@
     "stats": {
       "services": "5",
       "documents": "75"
+    },
+    "industries": {
+      "en": "Most used social media in France that could have a systemic impact on the 2022 elections",
+      "fr": "Médias sociaux pouvant influencer les élections présidentielles et législatives françaises 2022"
     }
   },
   "Dating": {
@@ -56,6 +60,10 @@
     "stats": {
       "services": "24",
       "documents": "52"
+    },
+    "industries": {
+      "en": "Online dating",
+      "fr": "Rencontre en ligne"
     }
   }
 }
