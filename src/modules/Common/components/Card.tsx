@@ -63,7 +63,7 @@ const Card: React.FC<CardProps> = ({
       {author && (
         <div
           className={classNames(s.card_author, {
-            [s.card_author__isCenter]: authorCenter === true,
+            [s.card_author__isCenter]: authorCenter,
           })}
         >
           {hasAuthorIcon && (
