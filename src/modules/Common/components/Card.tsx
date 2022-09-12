@@ -39,11 +39,13 @@ const Card: React.FC<CardProps> = ({
     <div
       className={classNames(
         s.card,
-        link ? s.card__isLink : null,
-        center ? s.card__center : null,
-        small ? s.card__isSmall : null,
-        big ? s.card__isBig : null,
-        white ? s.card__isWhite : null,
+        {
+          [s.card__isWhite]: !!white,
+          [s.card__isLink]: !!link,
+          [s.card__center]: !!center,
+          [s.card__isSmall]: !!small,
+          [s.card__isBig]: !!big,
+        },
         className
       )}
       {...props}
