@@ -11,7 +11,7 @@
 
 .cardTableItem_icon {
   flex-shrink: 0;
-  margin-top: var(--m3eXS);
+  margin-top: var(--m3XS);
 }
 
 .cardTableItem_title {
