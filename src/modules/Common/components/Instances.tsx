@@ -1,15 +1,15 @@
-import React from 'react';
-import Link from 'next/link';
 import Button from 'modules/Common/components/Button';
+import Card from 'modules/Common/components/Card';
+import CardList from 'modules/Common/components/CardList';
 import CardTable from 'modules/Common/components/CardTable';
 import CardTableItem from 'modules/Common/components/CardTableItem';
-import CardList from 'modules/Common/components/CardList';
+import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
+import React from 'react';
 import instancesData from '../../../../public/instances.json';
 import { kebabCase } from 'lodash';
-import Card from 'modules/Common/components/Card';
-import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 type InstancesProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
@@ -26,7 +26,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
   return (
     <CardList title={t('instances:title')} centerTitle={true} big={true} {...props}>
       {instancesData.instances.map((instance) => {
-        const slug = kebabCase(instance.name);
+        const instanceId = kebabCase(instance.name);
         const author =
           instance.maintainers.length == 0 ? (
             <img src={`/images/contributors/volunteer-${router?.locale}.png`} />
@@ -43,9 +43,9 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
           );
         return (
           <Card
-            key={`instance_${slug}`}
+            key={`instance_${instanceId}`}
             title={instance.name}
-            subtitle={t(`instances:${slug}.desc`)}
+            subtitle={t(`instances:${instanceId}.desc`)}
             author={author}
             image={instance.image}
             center={true}
@@ -79,7 +79,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
               />
             </CardTable>
             <div className="mt__XL text__center">
-              <Link href={`https://github.com/openTermsArchive/${slug}-versions`}>
+              <Link href={`https://github.com/openTermsArchive/${instanceId}-versions`}>
                 <a target="_blank" rel="noopener">
                   <Button>{t('instances:cta.versions')}</Button>
                 </a>
@@ -88,7 +88,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
             <div className="mt__M text__center">
               <LinkIcon
                 iconColor="var(--colorBlack400)"
-                href={`https://github.com/openTermsArchive/${slug}-versions/releases`}
+                href={`https://github.com/openTermsArchive/${instanceId}-versions/releases`}
                 target="_blank"
                 rel="noopener"
               >
