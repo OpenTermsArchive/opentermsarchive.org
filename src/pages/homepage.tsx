@@ -187,11 +187,7 @@ const HomePage = () => {
               <form
                 id="sib-form"
                 method="POST"
-                action={
-                  router.locale === 'fr'
-                    ? 'https://98bb6346.sibforms.com/serve/MUIEAMjUWLVIdeiQhwdN4AJo1SB8QMtDFKbp-JIARujMmZ9_feY8x0U6V84om-RPrHKu22mPwcozi9kjLI8gP1bMWgqFwsmw_7Y5rDuFHMGEGz5JqMhgYzcFoO78g8zvArqGLojk4L_6mm4cz3y9c3LkVMrrgs32BFinj1yIBdN5knTmlmbhsOYc2OhwVLFRkRTYg2luE4LwWHyV'
-                    : 'https://98bb6346.sibforms.com/serve/MUIEABuvRacGvFG5qloccLUI_5pWT2w-cVI7L5RogU08EvZ_-d1aTmfUQd-XrwdNYa4MSZbn09Yq-px0kkqKuzbQRjJs9KIzYPwHEbs-3YCnczbaQq4hQthHw0hKh2BcajLr98vsJni7IzUuQRjz1rb6vemMlGn1-raTiNiDxy5Ujm69CxV_wjMFTr4BiSiSAUBiLpOA0Vv3zYcG'
-                }
+                action={t('homepage:product-newsletter.form.action')}
                 data-type="subscription"
               >
                 <div className="formfield mb__L">
