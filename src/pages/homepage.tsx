@@ -1,15 +1,16 @@
+import { FiMail as IconMail, FiTwitter as IconTwitter } from 'react-icons/fi';
+
 import Button from 'modules/Common/components/Button';
 import Card from 'modules/Common/components/Card';
 import CardList from 'modules/Common/components/CardList';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
-import { FiMail as IconMail, FiTwitter as IconTwitter } from 'react-icons/fi';
+import Instances from 'modules/Common/components/Instances';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import Instances from 'modules/Common/components/Instances';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import { withI18n } from 'modules/I18n';
@@ -196,7 +197,7 @@ const HomePage = () => {
                 <div className="formfield mb__L">
                   <input
                     type="email"
-                    id="EMAIL"
+                    id="email"
                     name="EMAIL"
                     autoComplete="email"
                     placeholder={t('homepage:product-newsletter.input.email.placeholder')}
