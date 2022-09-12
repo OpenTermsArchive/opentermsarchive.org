@@ -84,7 +84,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
             <CardTable>
               <CardTableItem
                 title={t('instances:services')}
-                iconName="FiGlobe"
+                iconName="FiFolder"
                 desc={stats.services}
               />
               <CardTableItem
@@ -94,12 +94,12 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
               />
               <CardTableItem
                 title={t('instances:language', { count: languages.length })}
-                iconName="FiFlag"
+                iconName="FiMessageCircle"
                 desc={languages.map((languageCode) => languageName.of(languageCode)).join(', ')}
               />
               <CardTableItem
                 title={t('instances:country', { count: jurisdictions.length })}
-                iconName="FiBox"
+                iconName="FiMap"
                 desc={jurisdictions.map((regionCode) => countryName.of(regionCode)).join(', ')}
               />
             </CardTable>
