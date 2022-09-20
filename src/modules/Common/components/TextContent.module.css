@@ -128,7 +128,7 @@
     padding: 0 0.4rem;
   }
 
-  & button {
+  & button:not('mb__0') {
     margin-bottom: var(--mXL);
 
     @media (--tabletSmall) {
@@ -139,4 +139,8 @@
 
 .textContent__marginTopLarge {
   margin-top: var(--m2XL);
+}
+
+.textContent__hasNoMarginTop {
+  margin-top: 0;
 }

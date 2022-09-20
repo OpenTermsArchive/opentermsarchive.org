@@ -15,7 +15,7 @@ import { fetcher } from 'utils/api';
 
 import useLocale from 'modules/I18n/hooks/useLocale';
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps<any>) {
   useLocale(pageProps.locale);
 
   return (

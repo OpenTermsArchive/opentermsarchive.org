@@ -4,7 +4,7 @@ import React from 'react';
 import classNames from 'classnames';
 import s from './ButtonBlock.module.css';
 
-type ButtonBlocProps = {
+type ButtonBlockProps = {
   className?: string;
   title?: string;
   desc?: string;
@@ -15,7 +15,7 @@ type ButtonBlocProps = {
   white?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-const ButtonBloc: React.FC<ButtonBlocProps> = ({
+const ButtonBlock: React.FC<ButtonBlockProps> = ({
   children,
   iconName,
   iconColor = '#0496FF',
@@ -50,4 +50,4 @@ const ButtonBloc: React.FC<ButtonBlocProps> = ({
   );
 };
 
-export default ButtonBloc;
+export default ButtonBlock;

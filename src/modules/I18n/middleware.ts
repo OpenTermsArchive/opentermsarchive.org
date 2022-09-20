@@ -12,6 +12,7 @@ export default function middleware(request: NextRequest) {
   const shouldHandleLocale =
     !PUBLIC_FILE.test(pathname) &&
     locale === 'default' &&
+    !pathname.includes('/_next/') &&
     !pathname.includes('/api/') &&
     !pathname.includes('/fonts/');
 
