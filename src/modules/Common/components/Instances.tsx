@@ -7,6 +7,7 @@ import { FiSearch as IconSearch } from 'react-icons/fi';
 import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
+import Image from 'next/image';
 import instancesData from '../../../../public/instances.json';
 import { kebabCase } from 'lodash';
 import { useRouter } from 'next/router';
@@ -57,7 +58,11 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
         const instanceId = kebabCase(name);
         const author =
           maintainers == undefined ? (
-            <img src={`/images/contributors/volunteer-${router?.locale}.png`} />
+            <Image
+              src={`/images/contributors/volunteer-${router?.locale}.png`}
+              width={120}
+              height={96}
+            />
           ) : (
             <>
               {maintainers.map((maintainer) => (
@@ -69,6 +74,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
               ))}
             </>
           );
+
         return (
           <Card
             key={`instance_${instanceId}`}
