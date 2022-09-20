@@ -1,0 +1,30 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  & thead {
+    & tr {
+      & th {
+        padding: var(--pXS) var(--pM);
+        border-bottom: 1px solid var(--colorBlack300);
+        border-right: 1px solid var(--colorBlack300);
+        background-color: var(--colorBlack200);
+
+        &:last-child {
+          border-right: 1px solid var(--colorBlack200);
+        }
+        &:first-child {
+          border-left: 1px solid var(--colorBlack200);
+        }
+      }
+    }
+  }
+  & tbody {
+    & tr {
+      & td {
+        padding: var(--pXS) var(--pM);
+        border: 1px solid var(--colorBlack200);
+      }
+    }
+  }
+}

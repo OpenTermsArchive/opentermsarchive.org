@@ -7,11 +7,11 @@
     margin-bottom: var(--mXL);
   }
 
-  & p:not(:last-child) {
+  & p:not(:last-child):not(:global(.mb__0)):not(:global(.mb__3XL)) {
     margin-bottom: var(--mM);
   }
 
-  & h1 {
+  & h1:not(:global(.mb__0)) {
     margin-bottom: var(--m3XL);
 
     @media (--tabletSmall) {
@@ -19,7 +19,7 @@
     }
   }
 
-  & h2 {
+  & h2:not(:global(.mb__0)) {
     margin-bottom: var(--mXL);
 
     @media (--tabletSmall) {

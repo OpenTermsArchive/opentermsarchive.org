@@ -3,9 +3,9 @@ import { GetStaticProps, GetStaticPropsContext } from 'next';
 import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import { SSRConfig } from 'next-i18next';
 import fs from 'fs';
+import i18nConfig from './next-i18next.config';
 import { serialize } from 'next-mdx-remote/serialize';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import i18nConfig from './next-i18next.config';
 
 type HasCallback<T> = T extends undefined
   ? GetStaticProps<SSRConfig & WithI18nOptionsResult>
