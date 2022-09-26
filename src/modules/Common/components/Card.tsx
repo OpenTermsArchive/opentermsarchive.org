@@ -8,11 +8,15 @@ type CardProps = {
   title?: string;
   image?: string;
   subtitle?: string | React.ReactElement;
-  author?: string;
+  author?: string | React.ReactElement;
+  hasAuthorIcon?: boolean;
+  authorCenter?: boolean;
   className?: string;
   link?: string;
   center?: boolean;
   small?: boolean;
+  big?: boolean;
+  white?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const Card: React.FC<CardProps> = ({
@@ -21,9 +25,13 @@ const Card: React.FC<CardProps> = ({
   image,
   subtitle,
   author,
+  hasAuthorIcon = true,
+  authorCenter = false,
   link,
   center = false,
   small,
+  big,
+  white = false,
   className,
   ...props
 }) => {
@@ -31,9 +39,13 @@ const Card: React.FC<CardProps> = ({
     <div
       className={classNames(
         s.card,
-        link ? s.card__isLink : null,
-        center ? s.card__center : null,
-        small ? s.card__isSmall : null,
+        {
+          [s.card__isWhite]: !!white,
+          [s.card__isLink]: !!link,
+          [s.card__center]: !!center,
+          [s.card__isSmall]: !!small,
+          [s.card__isBig]: !!big,
+        },
         className
       )}
       {...props}
@@ -49,14 +61,20 @@ const Card: React.FC<CardProps> = ({
         {children && <div className={s.card_children}>{children}</div>}
       </div>
       {author && (
-        <div className={s.card_author}>
-          <div className={s.card_author_icon}>
-            <FiUser color="#999999" />
-          </div>
+        <div
+          className={classNames(s.card_author, {
+            [s.card_author__isCenter]: authorCenter,
+          })}
+        >
+          {hasAuthorIcon && (
+            <div className={s.card_author_icon}>
+              <FiUser color="#999999" />
+            </div>
+          )}
           <div className={classNames(s.card_author_desc, 'text__light')}>{author}</div>
         </div>
       )}
-      <a className={s.card_link} href={link} target="_blank" rel="noopener"></a>
+      {link && <a className={s.card_link} href={link} target="_blank" rel="noopener"></a>}
     </div>
   );
 };

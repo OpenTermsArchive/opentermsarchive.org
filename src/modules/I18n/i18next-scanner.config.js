@@ -41,7 +41,7 @@ module.exports = {
   input: ['src/**/*.{js,ts,tsx,jsx}'],
   options: {
     debug: false,
-    removeUnusedKeys: true,
+    removeUnusedKeys: false,
     sort: true,
     func: {
       list: ['t', 'i18next.t', 'translate'],
@@ -75,6 +75,7 @@ module.exports = {
       prefix: '{{',
       suffix: '}}',
     },
+    plural: false
   },
   transform: typescriptTransform({
     extensions: ['.ts', '.tsx'],

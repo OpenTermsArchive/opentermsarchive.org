@@ -1,5 +1,5 @@
 .buttonBlock {
-  border: 1px solid var(--colorWhite);
+  border: 1px solid var(--colorBlack200);
   @mixin grid 3, 3;
   text-align: center;
   padding: var(--p2XL) var(--pM) var(--pXL) var(--pM);
@@ -16,6 +16,7 @@
 
   &.buttonBlock__isDark {
     background-color: var(--colorBlack900);
+    border: 1px solid var(--colorBlack900);
     color: var(--colorWhite);
 
     & h3 {
@@ -28,6 +29,7 @@
   }
 
   &.buttonBlock__isWhite {
+    border: 1px solid var(--colorWhite);
     background-color: var(--colorWhite);
   }
 }
@@ -43,6 +45,7 @@
   transform: translateX(-50%);
   display: flex;
   align-items: center;
+  border: 1px solid var(--colorBlack200);
 
   & svg {
     margin: 0 auto;

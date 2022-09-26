@@ -1,6 +1,9 @@
 .card {
   border: 1px solid var(--colorBlack200);
-  border-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   @mixin grid 4, 3;
   flex-shrink: 0;
   position: relative;
@@ -8,10 +11,31 @@
   flex-direction: column;
 
   &.card__center {
-    text-align: center;
+    & > .card_body {
+      & > .card_title,
+      & > .card_subtitle {
+        text-align: center;
+      }
+    }
 
     & > .card_author {
       text-align: left;
+    }
+  }
+
+  &.card__isBig {
+    @mixin grid 6, 5;
+
+    & .card_body {
+      padding: var(--pXL) var(--pL) var(--p3XL) var(--pL);
+    }
+
+    & .card_subtitle {
+      margin-top: var(--mS);
+    }
+
+    & .card_children {
+      margin-top: var(--mL);
     }
   }
 
@@ -19,6 +43,10 @@
     & > .card_header {
       height: 140px;
     }
+  }
+
+  &.card__isWhite {
+    background-color: var(--colorWhite);
   }
 }
 
@@ -41,6 +69,9 @@
 .card_header {
   position: relative;
   height: 180px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  overflow: hidden;
 }
 
 .card_body {
@@ -68,12 +99,22 @@
 
 .card_author {
   border-top: 1px solid var(--colorBlack200);
-  padding: var(--pM);
+  padding: var(--pS);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: flex-start;
   margin-top: auto;
+
+  & img {
+    max-height: 54px;
+    max-width: 96px;
+    margin: 0 var(--pXS);
+  }
+
+  &.card_author__isCenter {
+    justify-content: center;
+  }
 }
 
 .card_author_icon {

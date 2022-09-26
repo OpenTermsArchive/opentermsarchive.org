@@ -1,0 +1,69 @@
+{
+  "Contrib": {
+    "languages": ["en", "fr"],
+    "jurisdictions": ["EU", "US"],
+    "stats": {
+      "services": "285",
+      "documents": "612"
+    },
+    "subscribeURL": "https://opentermsarchive.org/subscribe"
+  },
+  "France": {
+    "languages": ["fr"],
+    "jurisdictions": ["FR"],
+    "maintainers": [
+      {
+        "name": "UFC Que Choisir",
+        "logo": "/images/contributors/ufc-que-choisir.png",
+        "url": "https://www.quechoisir.org"
+      },
+      {
+        "name": "Ambassadeur français pour le numérique",
+        "logo": "/images/contributors/ambnum.png",
+        "url": "https://disinfo.quaidorsay.fr/fr"
+      }
+    ],
+    "stats": {
+      "services": "24",
+      "documents": "52"
+    }
+  },
+  "France Élections": {
+    "languages": ["fr"],
+    "jurisdictions": ["FR"],
+    "maintainers": [
+      {
+        "name": "Reset",
+        "logo": "/images/contributors/reset.png",
+        "url": "https://www.reset.tech"
+      }
+    ],
+    "stats": {
+      "services": "5",
+      "documents": "75"
+    },
+    "industries": {
+      "en": "Most used social media in France that could have a systemic impact on the 2022 elections",
+      "fr": "Médias sociaux pouvant influencer les élections présidentielles et législatives françaises 2022"
+    }
+  },
+  "Dating": {
+    "languages": ["en"],
+    "jurisdictions": ["EU", "CH"],
+    "maintainers": [
+      {
+        "name": "HestiaLabs",
+        "logo": "/images/contributors/hestialabs.png",
+        "url": "https://hestialabs.org"
+      }
+    ],
+    "stats": {
+      "services": "24",
+      "documents": "52"
+    },
+    "industries": {
+      "en": "Online dating",
+      "fr": "Rencontre en ligne"
+    }
+  }
+}

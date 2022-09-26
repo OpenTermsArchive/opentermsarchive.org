@@ -1,15 +1,15 @@
 .linkIcon {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
 
   & svg {
+    margin-top: var(--m2XS);
     transition: stroke 0.3s easeOutCirc;
   }
 
   &:hover {
     & .linkIcon_content {
       transition: transform 0.3s easeOutCirc;
-      transform: translateX(4px);
     }
 
     & svg {
@@ -37,4 +37,5 @@
 .linkIcon_content {
   transition: all 0.1s easeInCirc;
   margin-left: var(--m2XS);
+  text-align: left;
 }
