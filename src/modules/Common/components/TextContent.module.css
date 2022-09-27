@@ -27,7 +27,7 @@
     }
   }
 
-  & h3 {
+  & h3:not(:global(.mb__0)) {
     margin-bottom: var(--mL);
 
     @media (--tabletSmall) {
@@ -35,7 +35,7 @@
     }
   }
 
-  & h4 {
+  & h4:not(:global(.mb__0)) {
     margin-bottom: var(--mM);
 
     @media (--tabletSmall) {
@@ -43,7 +43,7 @@
     }
   }
 
-  & h5 {
+  & h5:not(:global(.mb__0)) {
     margin-bottom: var(--mS);
 
     @media (--tabletSmall) {
@@ -51,7 +51,7 @@
     }
   }
 
-  & h6 {
+  & h6:not(:global(.mb__0)) {
     margin-bottom: var(--mXS);
 
     @media (--tabletSmall) {
@@ -128,7 +128,7 @@
     padding: 0 0.4rem;
   }
 
-  & button:not('mb__0') {
+  & button:not(:global(.mb__0)) {
     margin-bottom: var(--mXL);
 
     @media (--tabletSmall) {
