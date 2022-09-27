@@ -99,12 +99,12 @@ const HomePage = () => {
           <Column width={40} alignX="center" alignY="center">
             <IconTwitter size="128" color="var(--colorBlack400)" strokeWidth="1px" />
           </Column>
-          <Column width={60} subtitle={t('homepage:follow-us.title')}>
+          <Column width={60} subtitle={t('follow-us:title')}>
             <TextContent marginTop={false}>
-              <p className="mt__M">{t('homepage:follow-us.desc')}</p>
+              <p className="mt__M">{t('follow-us:desc')}</p>
               <Link href="https://twitter.com/OpenTerms">
                 <a target="_blank" rel="noopener">
-                  <Button className="mb__0">{t('homepage:follow-us.button.label')}</Button>
+                  <Button className="mb__0">{t('follow-us:button.label')}</Button>
                 </a>
               </Link>
             </TextContent>
