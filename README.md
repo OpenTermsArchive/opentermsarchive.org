@@ -26,12 +26,6 @@ To deploy the website under a sub-path of a domain you can use this env variable
 Example `NEXT_PUBLIC_BASE_PATH="/prefix"`
 Default is empty
 
-### `GITHUB_TOKEN`
-
-In order for the service to retrieve Github contributors, you need to provide:
-
-- `GITHUB_TOKEN`: A token with repository read privileges which allow access to the [GitHub API](https://github.com/settings/tokens).
-
 ### `NEXT_PUBLIC_MATOMO_URL`, `NEXT_PUBLIC_MATOMO_SITE_ID`
 
 You can easily set up analytics with [Matomo](https://matomo.org/) by providing those 2 values.
