@@ -7,11 +7,12 @@ const PUBLIC_FILE = /\.([a-zA-Z]+$)/;
 const PERMANENT_REDIRECT_CODE = 301;
 
 export default function middleware(request: NextRequest) {
-  const { pathname, search, locale } = request.nextUrl;
+  const { pathname, search, locale, origin } = request.nextUrl;
 
   const shouldHandleLocale =
     !PUBLIC_FILE.test(pathname) &&
     locale === 'default' &&
+    !pathname.includes('/_next/') &&
     !pathname.includes('/api/') &&
     !pathname.includes('/fonts/');
 
@@ -22,5 +23,8 @@ export default function middleware(request: NextRequest) {
   acceptLanguage.languages(i18n.locales?.filter((locale) => locale !== 'default'));
   const detectedLocale = acceptLanguage.get(request.headers.get('accept-language'));
 
-  return NextResponse.redirect(`/${detectedLocale}${pathname}${search}`, PERMANENT_REDIRECT_CODE);
+  return NextResponse.redirect(
+    `${origin}/${detectedLocale}${pathname}${search}`,
+    PERMANENT_REDIRECT_CODE
+  );
 }

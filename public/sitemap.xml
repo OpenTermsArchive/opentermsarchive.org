@@ -80,4 +80,14 @@
 		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/en/accessibility" />
 		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr/accessibility" />
 	</url>
+	<url>
+		<loc>https://opentermsarchive.org/fr/budget</loc>
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr/budget" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/en/budget" />
+	</url>
+	<url>
+		<loc>https://opentermsarchive.org/en/budget</loc>
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/en/budget" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr/budget" />
+	</url>
 </urlset>
