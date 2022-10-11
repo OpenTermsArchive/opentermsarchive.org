@@ -82,6 +82,16 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
             </>
           );
 
+        const languagesList = languages
+          .map((languageCode) => {
+            if (languageCode === '*') {
+              return t('instances:language.various');
+            } else {
+              return languageName.of(languageCode);
+            }
+          })
+          .join(', ');
+
         return (
           <Card
             key={`collection_${collection.id}`}
@@ -106,9 +116,11 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
                 desc={stats.documents}
               />
               <CardTableItem
-                title={t('collections:language', { count: languages.length })}
+                title={t('collections:language', {
+                  count: languages[0] === '*' ? 2 : languages.length,
+                })}
                 iconName="FiMessageCircle"
-                desc={languages.map((languageCode) => languageName.of(languageCode)).join(', ')}
+                desc={languagesList}
               />
               <CardTableItem
                 title={t('collections:country', { count: jurisdictions.length })}
