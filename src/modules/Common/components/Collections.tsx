@@ -8,7 +8,7 @@ import { Link } from 'modules/I18n';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import collectionsData from '../../../../public/collections.json';
-import { kebabCase } from 'lodash';
+import slugify from 'slugify';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'modules/I18n';
 
@@ -67,6 +67,7 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
           subscribeURL,
           industries,
         }: Collection = collection;
+        const instanceSlug = slugify(name, { lower: true });
         const author =
           maintainers == undefined ? (
             <img src={`/images/contributors/volunteer-${router?.locale}.png`} alt="" />
@@ -74,7 +75,7 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
             <>
               {maintainers.map((maintainer) => (
                 <img
-                  key={`maintainer_${kebabCase(maintainer.name)}`}
+                  key={`maintainer_${slugify(maintainer.name)}`}
                   src={maintainer.logo}
                   alt={maintainer.name}
                 />
@@ -85,7 +86,7 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
         const languagesList = languages
           .map((languageCode) => {
             if (languageCode === '*') {
-              return t('instances:language.various');
+              return t('collections:language.various');
             } else {
               return languageName.of(languageCode);
             }
@@ -94,7 +95,7 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
 
         return (
           <Card
-            key={`collection_${collection.id}`}
+            key={`collections_${instanceSlug}`}
             title={name}
             subtitle={!!industries ? industries[router?.locale as keyof Industries] : ''}
             author={author}
