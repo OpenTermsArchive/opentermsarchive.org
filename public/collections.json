@@ -1,4 +1,27 @@
 {
+  "P2B Compliance": {
+    "id": "p2b-compliance",
+    "languages": ["*"],
+    "jurisdictions": ["EU"],
+    "stats": {
+      "services": "208",
+      "documents": "253"
+    },
+    "industries": {
+      "en": "Services covered by the Regulation (EU) on promoting fairness and transparency for business users of online intermediation services",
+      "fr": "Services révélant du règlement (UE) visant à promouvoir l'équité et la transparence pour les utilisateurs professionnels de services d'intermédiation en ligne"
+    },
+    "maintainers": [
+      {
+        "name": "Ambassadeur français pour le numérique",
+        "url": "https://disinfo.quaidorsay.fr/fr"
+      },
+      {
+        "name": "Open Evidence",
+        "url": "https://open-evidence.com/"
+      }
+    ]
+  },
   "Contrib": {
     "id": "contrib",
     "languages": ["en", "fr"],
