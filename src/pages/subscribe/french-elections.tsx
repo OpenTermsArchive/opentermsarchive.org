@@ -25,5 +25,5 @@ export default function FrenchElectionsFormPage({ mdxContent }: WithMdxResult) {
 export const getStaticProps = withMdx({
   load: 'mdx',
   filename: 'subscribe/french-elections',
-  folder: 'static',
+  folder: 'parts',
 })();

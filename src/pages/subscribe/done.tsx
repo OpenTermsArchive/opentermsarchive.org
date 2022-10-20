@@ -24,5 +24,5 @@ export default function SubscribeDonePage({ mdxContent }: WithMdxResult) {
 export const getStaticProps = withMdx({
   load: 'mdx',
   filename: 'subscribe/done',
-  folder: 'static',
+  folder: 'parts',
 })();

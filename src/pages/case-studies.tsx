@@ -33,5 +33,5 @@ export default function CaseStudiesPage({ mdxContent }: WithMdxResult) {
 export const getStaticProps = withMdx({
   load: 'mdx',
   filename: 'case-studies',
-  folder: 'static',
+  folder: 'parts',
 })();

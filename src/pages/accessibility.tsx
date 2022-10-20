@@ -24,5 +24,5 @@ export default function AccessibilityPage({ mdxContent }: WithMdxResult) {
 export const getStaticProps = withMdx({
   load: 'mdx',
   filename: 'accessibility',
-  folder: 'static',
+  folder: 'parts',
 })();

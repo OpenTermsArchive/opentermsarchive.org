@@ -54,7 +54,7 @@ export default function BudgetPage({
   );
 }
 
-export const getStaticProps = withMdx({ load: 'mdx', filename: 'budget', folder: 'static' })(
+export const getStaticProps = withMdx({ load: 'mdx', filename: 'budget', folder: 'parts' })(
   (props: any) => ({
     props: {
       ...props,

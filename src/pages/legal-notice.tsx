@@ -24,5 +24,5 @@ export default function LegalNoticePage({ mdxContent }: WithMdxResult) {
 export const getStaticProps = withMdx({
   load: 'mdx',
   filename: 'legal-notice',
-  folder: 'static',
+  folder: 'parts',
 })();

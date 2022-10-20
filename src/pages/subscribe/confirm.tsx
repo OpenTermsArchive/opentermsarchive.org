@@ -24,5 +24,5 @@ export default function SubscribeConfirmPage({ mdxContent }: WithMdxResult) {
 export const getStaticProps = withMdx({
   load: 'mdx',
   filename: 'subscribe/confirm',
-  folder: 'static',
+  folder: 'parts',
 })();
