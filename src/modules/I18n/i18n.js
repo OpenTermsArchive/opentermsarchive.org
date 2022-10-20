@@ -15,7 +15,6 @@ module.exports = {
     '/budget': ['budget'],
     '/media': ['media'],
     '/subscribe': ['subscribe'],
-    '/privacy-policy': ['privacy-policy'],
     '/legal-notice': ['legal-notice'],
   },
 };
