@@ -15,6 +15,5 @@ module.exports = {
     '/budget': ['budget'],
     '/media': ['media'],
     '/subscribe': ['subscribe'],
-    '/legal-notice': ['legal-notice'],
   },
 };
