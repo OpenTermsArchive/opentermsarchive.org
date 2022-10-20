@@ -1,13 +1,12 @@
-import { WithI18nResult, withI18n } from 'modules/I18n';
-
 import Container from 'modules/Common/containers/Container';
 import Layout from 'modules/Common/containers/Layout';
+import withMdx, { WithMdxResult } from 'modules/I18n/hoc/withMdx';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import dynamic from 'next/dynamic';
 import TextContent from 'modules/Common/components/TextContent';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 import { buildExpensesData, ExpensesData } from 'pages/api/ota/expenses';
 
 const TotalExpendituresGraph = dynamic(
@@ -23,7 +22,7 @@ export default function BudgetPage({
   expenses,
   totalExpendituresData,
   accumulatedExpenditures,
-}: WithI18nResult & ExpensesData) {
+}: WithMdxResult & ExpensesData) {
   const { t } = useTranslation();
   const router = useRouter();
 
@@ -55,9 +54,11 @@ export default function BudgetPage({
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx', filename: 'budget' })((props: any) => ({
-  props: {
-    ...props,
-    ...buildExpensesData(),
-  },
-}));
+export const getStaticProps = withMdx({ load: 'mdx', filename: 'budget', folder: 'static' })(
+  (props: any) => ({
+    props: {
+      ...props,
+      ...buildExpensesData(),
+    },
+  })
+);

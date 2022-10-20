@@ -6,7 +6,7 @@ import Logo from 'modules/Common/components/Logo';
 import React from 'react';
 import classNames from 'classnames';
 import s from './Header.module.css';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 
 type HeaderProps = {
   className?: string;

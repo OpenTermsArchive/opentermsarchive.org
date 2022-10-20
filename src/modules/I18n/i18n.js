@@ -5,5 +5,17 @@ module.exports = {
   logBuild: false,
   pages: {
     '*': ['common', 'header', 'footer'],
+    '/': ['homepage', 'instances'],
+    '/about': ['about'],
+    '/case-studies': ['case-studies'],
+    '/stats': ['stats'],
+    '/subscribe/done': ['subscribe/done'],
+    '/subscribe/confirm': ['subscribe/confirm'],
+    '/subscribe/french-elections': ['subscribe/french-elections'],
+    '/budget': ['budget'],
+    '/media': ['media'],
+    '/subscribe': ['subscribe'],
+    '/privacy-policy': ['privacy-policy'],
+    '/legal-notice': ['legal-notice'],
   },
 };

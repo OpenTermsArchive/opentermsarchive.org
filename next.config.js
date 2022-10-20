@@ -3,7 +3,6 @@ const nextTranslate = require('next-translate');
 
 module.exports = nextTranslate({
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  ...i18nConfig,
   images: {
     domains: ['avatars.githubusercontent.com', 'pbs.twimg.com'],
   },

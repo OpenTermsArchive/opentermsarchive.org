@@ -1,14 +1,13 @@
-import { WithI18nResult, withI18n } from 'modules/I18n';
-
+import withMdx, { WithMdxResult } from 'modules/I18n/hoc/withMdx';
 import Button from 'modules/Common/components/Button';
 import Container from 'modules/Common/containers/Container';
 import Layout from 'modules/Common/containers/Layout';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 
-export default function SubscribeDonePage({ mdxContent }: WithI18nResult) {
+export default function SubscribeDonePage({ mdxContent }: WithMdxResult) {
   const { t } = useTranslation();
 
   return (
@@ -22,4 +21,8 @@ export default function SubscribeDonePage({ mdxContent }: WithI18nResult) {
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx', filename: 'subscribe/done' })();
+export const getStaticProps = withMdx({
+  load: 'mdx',
+  filename: 'subscribe/done',
+  folder: 'static',
+})();

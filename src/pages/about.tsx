@@ -1,18 +1,17 @@
-import { WithI18nResult, withI18n } from 'modules/I18n';
-
 import Container from 'modules/Common/containers/Container';
 import Contributors from 'modules/OTA-api/data-components/Contributors';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
+import withMdx, { WithMdxResult } from 'modules/I18n/hoc/withMdx';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGallery from 'modules/Common/components/ThumbGallery';
 import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 
-export default function AboutPage({ mdxContent }: WithI18nResult) {
+export default function AboutPage({ mdxContent }: WithMdxResult) {
   const { t } = useTranslation();
   return (
     <Layout title={t('about:seo.title')} desc={t('about:seo.desc')}>
@@ -40,4 +39,4 @@ export default function AboutPage({ mdxContent }: WithI18nResult) {
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx', filename: 'about' })();
+export const getStaticProps = withMdx({ load: 'mdx', filename: 'about', folder: 'static' })();
