@@ -14,7 +14,7 @@ export default function SubscribeDonePage({ mdxContent }: WithMdxResult) {
     <Layout title={t('subscribe/done:seo.title')}>
       <Container gridCols="8" gridGutters="7">
         <TextContent>
-          <MDXRemote {...(mdxContent as any)} components={{ Button }} />
+          {mdxContent && <MDXRemote {...mdxContent} components={{ Button }} />}
         </TextContent>
       </Container>
     </Layout>

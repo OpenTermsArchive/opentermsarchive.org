@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage({ mdxContent }: WithMdxResult) {
     <Layout title={t('privacy-policy:seo.title')}>
       <Container gridCols="10" gridGutters="9">
         <TextContent>
-          <MDXRemote {...(mdxContent as any)} components={{ Button: Button }} />
+          {mdxContent && <MDXRemote {...mdxContent} components={{ Button: Button }} />}
         </TextContent>
       </Container>
     </Layout>

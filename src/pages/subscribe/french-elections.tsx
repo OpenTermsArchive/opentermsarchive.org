@@ -15,7 +15,7 @@ export default function FrenchElectionsFormPage({ mdxContent }: WithMdxResult) {
     <Layout title={t('subscribe/french-elections:seo.title')}>
       <Container gridCols="8" gridGutters="7">
         <TextContent>
-          <MDXRemote {...(mdxContent as any)} components={{ Button }} />
+          {mdxContent && <MDXRemote {...mdxContent} components={{ Button }} />}
         </TextContent>
       </Container>
     </Layout>

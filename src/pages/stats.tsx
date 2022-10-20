@@ -15,7 +15,7 @@ export default function StatsPage({ mdxContent }: WithMdxResult) {
     <Layout title={t('stats:seo.title')}>
       <Container gridCols="10" gridGutters="9">
         <TextContent>
-          <MDXRemote {...(mdxContent as any)} components={{ LinkIcon }} />
+          {mdxContent && <MDXRemote {...mdxContent} components={{ LinkIcon }} />}
         </TextContent>
       </Container>
       <Container layout="wide" paddingY={false}>

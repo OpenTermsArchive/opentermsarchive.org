@@ -14,7 +14,7 @@ export default function SubscribeConfirmPage({ mdxContent }: WithMdxResult) {
     <Layout title={t('subscribe/confirm:seo.title')}>
       <Container gridCols="8" gridGutters="7">
         <TextContent>
-          <MDXRemote {...(mdxContent as any)} components={{ Button }} />
+          {mdxContent && <MDXRemote {...mdxContent} components={{ Button }} />}
         </TextContent>
       </Container>
     </Layout>

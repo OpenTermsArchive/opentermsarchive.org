@@ -14,7 +14,7 @@ export default function AccessibilityPage({ mdxContent }: WithMdxResult) {
     <Layout title={t('accessibility:seo.title')}>
       <Container gridCols="10" gridGutters="9">
         <TextContent>
-          <MDXRemote {...(mdxContent as any)} components={{ Button }} />
+          {mdxContent && <MDXRemote {...mdxContent} components={{ Button }} />}
         </TextContent>
       </Container>
     </Layout>

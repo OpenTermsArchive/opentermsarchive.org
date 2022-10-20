@@ -105,7 +105,7 @@ export default function MediaPage({ mdxContent }: WithMdxResult) {
       <Container gridCols="8" gridGutters="7" flex={true}>
         <Article title={t('media:press.title')} subtitle={t('media:press.subtitle')}>
           <TextContent marginTopLarge={true}>
-            <MDXRemote {...(mdxContent as any)} components={{ Button: Button }} />
+            {mdxContent && <MDXRemote {...mdxContent} components={{ Button: Button }} />}
           </TextContent>
         </Article>
       </Container>

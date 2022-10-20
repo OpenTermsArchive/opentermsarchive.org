@@ -86,7 +86,7 @@ export default function TermsOfServicePage({ mdxContent }: WithI18nResult) {
   return (
     <Layout>
       <Container gridCols="12" gridGutters="11" paddingX={false}>
-        <MDXRemote {...(mdxContent as any)} components={{}} />
+        {mdxContent && <MDXRemote {...mdxContent} components={{}} />}
       </Container>
     </Layout>
   );
