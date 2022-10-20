@@ -23,6 +23,9 @@ export interface MdxPageProps {
 
 export type WithMdxResult = GetStaticPropsContext & MdxPageProps;
 
+export const getStaticFilesPaths = (folder: string, locale: string) =>
+  fs.readdirSync(path.join(process.cwd(), CONTENT_FOLDER, folder, locale));
+
 export const loadMdxFile = async (options: WithMdxOptions, locale?: string) => {
   const folder = path.join(process.cwd(), CONTENT_FOLDER, options.folder);
 
@@ -50,10 +53,10 @@ export const loadMdxFile = async (options: WithMdxOptions, locale?: string) => {
   }
 
   if (!fileContent) {
-    return {};
+    return undefined;
   }
 
-  const { frontmatter, ...mdxContent } = await serialize(fileContent, {
+  const mdxContent = await serialize(fileContent, {
     // Indicates whether or not to parse the frontmatter from the mdx source
     parseFrontmatter: true,
   });
