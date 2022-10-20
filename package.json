@@ -84,7 +84,7 @@
     "@types/user-agents": "^1.0.2",
     "fast-glob": "^3.2.5",
     "jest": "27.0.6",
-    "prettier": "^2.2.1",
+    "prettier": "^2.7.1",
     "prettier-config-ambanum": "^1.0.1",
     "ts-jest": "27.0.5",
     "ts-node": "10.2.1",
