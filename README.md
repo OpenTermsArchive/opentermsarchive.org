@@ -36,6 +36,44 @@ In order for users to be able to subscribe to services alerts, a mailling lists 
 
 An API Key is thus needed
 
+## Contribute
+
+### Create new simple page
+
+In order to create a simple page based on `markdown` syntax, just add a new file in the `content/static` folder.
+The path and name you give it will reflect the URL available on the website.
+
+Example:
+
+```
+content/
+└── static
+    ├── en
+    │   ├── accessibility.mdx
+    │   └── subscribe
+    │       ├── confirm.mdx
+    └── fr
+        ├── accessibility.mdx
+        └── subscribe
+            ├── confirm.mdx
+```
+
+will give 2 URLs
+
+- /accesibility
+- /subscribe/confirm
+
+with their i18n alternatives
+
+- /accesibility
+- /subscribe/confirm
+
+**NOTE**: for now, i18n slugs are not supported and files in different locale folder should have the same name.
+
+### Create new complex page
+
+if you need custom components, you will need to create your own in the `src/pages` folder and follow [NextJs documentation](https://nextjs.org)
+
 ## Development
 
 ```
