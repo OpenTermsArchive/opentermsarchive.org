@@ -60,7 +60,9 @@ Exemple to allow using a `Button` component in a `.mdx` file:
 In `my-page.tsx`:
 
 ```jsx
-<MDXRemote {...(mdxContent as any)} components={{ Button: Button }} />
+{
+  mdxContent && <MDXRemote {...mdxContent} components={{ Button: Button }} />;
+}
 ```
 
 In `my-page.mdx`:

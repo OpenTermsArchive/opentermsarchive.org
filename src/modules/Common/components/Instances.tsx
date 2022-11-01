@@ -11,7 +11,7 @@ import Image from 'next/image';
 import instancesData from '../../../../public/instances.json';
 import { kebabCase } from 'lodash';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 
 type InstancesProps = {} & React.HTMLAttributes<HTMLDivElement>;
 

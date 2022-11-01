@@ -1,5 +1,4 @@
-import { WithI18nResult, withI18n } from 'modules/I18n';
-
+import withMdx, { WithMdxResult } from 'modules/I18n/hoc/withMdx';
 import ButtonBlock from 'modules/Common/components/ButtonBlock';
 import ButtonBlockList from 'modules/Common/components/ButtonBlockList';
 import Container from 'modules/Common/containers/Container';
@@ -8,15 +7,15 @@ import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 
-export default function StatsPage({ mdxContent }: WithI18nResult) {
+export default function StatsPage({ mdxContent }: WithMdxResult) {
   const { t } = useTranslation();
   return (
     <Layout title={t('stats:seo.title')}>
       <Container gridCols="10" gridGutters="9">
         <TextContent>
-          <MDXRemote {...(mdxContent as any)} components={{ LinkIcon }} />
+          {mdxContent && <MDXRemote {...mdxContent} components={{ LinkIcon }} />}
         </TextContent>
       </Container>
       <Container layout="wide" paddingY={false}>
@@ -65,4 +64,4 @@ export default function StatsPage({ mdxContent }: WithI18nResult) {
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx', filename: 'stats' })();
+export const getStaticProps = withMdx({ load: 'mdx', filename: 'stats', folder: 'static' })();
