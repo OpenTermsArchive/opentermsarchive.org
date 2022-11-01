@@ -10,7 +10,6 @@ import 'modules/NProgress'; //nprogress module
 import { AppProps } from 'next/app';
 import { NotifierContainer } from 'hooks/useNotifier';
 import { SWRConfig } from 'swr';
-import { appWithTranslation } from 'next-i18next';
 import { fetcher } from 'utils/api';
 
 import useLocale from 'modules/I18n/hooks/useLocale';
@@ -24,11 +23,10 @@ function App({ Component, pageProps }: AppProps<any>) {
         fetcher,
       }}
     >
-      {' '}
       <NotifierContainer />
       <Component {...pageProps} />
     </SWRConfig>
   );
 }
 
-export default appWithTranslation(App);
+export default App;

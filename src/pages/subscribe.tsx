@@ -8,9 +8,8 @@ import api from 'utils/api';
 import { getServices } from 'modules/OTA-api/api';
 import useNotifier from 'hooks/useNotifier';
 import { useToggle } from 'react-use';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 import useUrl from 'hooks/useUrl';
-import { withI18n } from 'modules/I18n';
 
 export default function SubscribePage({ services }: any) {
   const { t } = useTranslation();
@@ -61,7 +60,7 @@ export default function SubscribePage({ services }: any) {
     </Layout>
   );
 }
-export const getStaticProps = withI18n()(async (props: any) => {
+export const getStaticProps = async (props: any) => {
   const services = await getServices();
   return JSON.parse(JSON.stringify({ props: { ...props, services }, revalidate: 10 }));
-});
+};

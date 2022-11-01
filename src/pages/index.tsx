@@ -1,4 +1,3 @@
-import Homepage, { getStaticProps as defaultGetStaticProps } from './homepage';
+import Homepage from './homepage';
 
-export const getStaticProps = defaultGetStaticProps;
 export default Homepage;

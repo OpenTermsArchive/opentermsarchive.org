@@ -1,5 +1,4 @@
-import { WithI18nResult, withI18n } from 'modules/I18n';
-
+import withMdx, { WithMdxResult } from 'modules/I18n/hoc/withMdx';
 import Article from 'modules/Common/components/Article';
 import Button from 'modules/Common/components/Button';
 import ButtonBlock from 'modules/Common/components/ButtonBlock';
@@ -11,9 +10,9 @@ import Logo from 'modules/Common/components/Logo';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 
-export default function MediaPage({ mdxContent }: WithI18nResult) {
+export default function MediaPage({ mdxContent }: WithMdxResult) {
   const { t } = useTranslation();
   return (
     <Layout title={t('media:seo.title')}>
@@ -106,7 +105,7 @@ export default function MediaPage({ mdxContent }: WithI18nResult) {
       <Container gridCols="8" gridGutters="7" flex={true}>
         <Article title={t('media:press.title')} subtitle={t('media:press.subtitle')}>
           <TextContent marginTopLarge={true}>
-            <MDXRemote {...(mdxContent as any)} components={{ Button: Button }} />
+            {mdxContent && <MDXRemote {...mdxContent} components={{ Button: Button }} />}
           </TextContent>
         </Article>
       </Container>
@@ -114,4 +113,4 @@ export default function MediaPage({ mdxContent }: WithI18nResult) {
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx', filename: 'media' })();
+export const getStaticProps = withMdx({ load: 'mdx', filename: 'media', folder: 'parts' })();

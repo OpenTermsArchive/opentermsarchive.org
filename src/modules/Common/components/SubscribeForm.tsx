@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import sButton from './Button.module.css';
 import { useForm } from 'react-hook-form';
 import { usePrevious } from 'react-use';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 
 export interface SubscribeFormFields {
   email: string;
@@ -31,10 +31,7 @@ const SubscribeForm = ({
   defaultValues,
   defaultServices,
 }: SubscribeFormProps) => {
-  const {
-    t,
-    i18n: { language },
-  } = useTranslation();
+  const { t, lang: language } = useTranslation();
 
   const { register, handleSubmit, watch, reset } = useForm<SubscribeFormFields>({
     reValidateMode: 'onChange',

@@ -12,7 +12,7 @@ import HeaderMenu from '../components/HeaderMenu';
 import LanguageSwitcher from 'modules/I18n/components/LanguageSwitcher';
 import Link from 'next/link';
 import classNames from 'classnames';
-import { useTranslation } from 'next-i18next';
+import useTranslation from 'next-translate/useTranslation';
 
 type Props = {
   children?: ReactNode;
