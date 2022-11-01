@@ -39,4 +39,4 @@ export default function AboutPage({ mdxContent }: WithMdxResult) {
   );
 }
 
-export const getStaticProps = withMdx({ load: 'mdx', filename: 'about', folder: 'static' })();
+export const getStaticProps = withMdx({ load: 'mdx', filename: 'about', folder: 'parts' })();

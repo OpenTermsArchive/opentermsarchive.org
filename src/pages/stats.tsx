@@ -64,4 +64,4 @@ export default function StatsPage({ mdxContent }: WithMdxResult) {
   );
 }
 
-export const getStaticProps = withMdx({ load: 'mdx', filename: 'stats', folder: 'static' })();
+export const getStaticProps = withMdx({ load: 'mdx', filename: 'stats', folder: 'parts' })();
