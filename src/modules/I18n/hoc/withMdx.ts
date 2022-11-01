@@ -23,8 +23,27 @@ export interface MdxPageProps {
 
 export type WithMdxResult = GetStaticPropsContext & MdxPageProps;
 
-export const getStaticFilesPaths = (folder: string, locale: string) =>
-  fs.readdirSync(path.join(process.cwd(), CONTENT_FOLDER, folder, locale));
+export const getStaticFilesPaths = (folder: string, locale: string, subfolder?: string) => {
+  let files: string[] = [];
+  const pathParts = [CONTENT_FOLDER, folder, locale];
+  if (subfolder) {
+    pathParts.push(subfolder);
+  }
+
+  const filesAndFolders = fs.readdirSync(path.join(process.cwd(), ...pathParts), {
+    withFileTypes: true,
+  });
+
+  for (const fileOrFolder of filesAndFolders) {
+    if (fileOrFolder.isDirectory()) {
+      files = [...files, ...getStaticFilesPaths(folder, locale, fileOrFolder.name)];
+    } else {
+      files.push(fileOrFolder.name);
+    }
+  }
+
+  return files;
+};
 
 export const loadMdxFile = async (options: WithMdxOptions, locale?: string) => {
   const folder = path.join(process.cwd(), CONTENT_FOLDER, options.folder);
