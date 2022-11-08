@@ -16,7 +16,6 @@ type CollectionsProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
 interface Maintainer {
   name: string;
-  logo: string;
   url: string;
 }
 
@@ -76,7 +75,7 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
               {maintainers.map((maintainer) => (
                 <img
                   key={`maintainer_${slugify(maintainer.name)}`}
-                  src={maintainer.logo}
+                  src={`/images/contributors/${slugify(maintainer.name, { lower: true })}.png`}
                   alt={maintainer.name}
                 />
               ))}

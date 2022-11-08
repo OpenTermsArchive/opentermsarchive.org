@@ -22,7 +22,6 @@
       },
       {
         "name": "European Commission",
-        "logo": "/images/contributors/european-commission.jpg",
         "url": "https://ec.europa.eu/info/departments/communications-networks-content-and-technology_en"
       }
     ]
@@ -43,12 +42,10 @@
     "maintainers": [
       {
         "name": "UFC Que Choisir",
-        "logo": "/images/contributors/ufc-que-choisir.png",
         "url": "https://www.quechoisir.org"
       },
       {
         "name": "Ambassadeur français pour le numérique",
-        "logo": "/images/contributors/ambnum.png",
         "url": "https://disinfo.quaidorsay.fr/fr"
       }
     ],
@@ -64,7 +61,6 @@
     "maintainers": [
       {
         "name": "Reset",
-        "logo": "/images/contributors/reset.png",
         "url": "https://www.reset.tech"
       }
     ],
@@ -84,7 +80,6 @@
     "maintainers": [
       {
         "name": "HestiaLabs",
-        "logo": "/images/contributors/hestialabs.png",
         "url": "https://hestialabs.org"
       }
     ],
@@ -104,12 +99,10 @@
     "maintainers": [
       {
         "name": "Centre for Media, Communication and Information Research (ZeMKI), University of Bremen",
-        "logo": "/images/contributors/university-of-bremen.png",
         "url": "https://www.uni-bremen.de/"
       },
       {
         "name": "Alexander von Humboldt Institute for Internet and Society (HIIG)",
-        "logo": "/images/contributors/hiig.png",
         "url": "https://hiig.de/"
       }
     ],
@@ -129,7 +122,6 @@
     "maintainers": [
       {
         "name": "Open Terms Archive",
-        "logo": "/images/logo/logo-open-terms-archive-black.png",
         "url": "https://opentermsarchive.org"
       }
     ],
