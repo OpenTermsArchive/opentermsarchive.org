@@ -7,23 +7,47 @@
     margin-bottom: var(--mXL);
   }
 
-  & p:not(:last-child):not(:global(.mb__0)):not(:global(.mb__3XL)) {
+  & p {
     margin-bottom: var(--mM);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:global(.mb__0) {
+      margin-bottom: 0;
+    }
+
+    &:global(.mb__3XL) {
+      margin-bottom: var(--m3XL);
+    }
   }
 
-  & h1:not(:global(.mb__0)) {
+  & p + hr {
+    margin-top: var(--m2XL);
+  }
+
+  & h1 {
     margin-bottom: var(--m3XL);
 
     @media (--tabletSmall) {
       margin-bottom: var(--mXL);
     }
+
+    &:global(.mb__0) {
+      margin-bottom: 0;
+    }
   }
 
-  & h2:not(:global(.mb__0)) {
+  & h2 {
     margin-bottom: var(--mXL);
 
     @media (--tabletSmall) {
       margin-bottom: var(--mL);
+    }
+
+    &:global(.mb__0) {
+      margin-bottom: 0;
     }
   }
 
@@ -32,6 +56,10 @@
 
     @media (--tabletSmall) {
       margin-bottom: var(--mM);
+    }
+
+    &:global(.mb__0) {
+      margin-bottom: 0;
     }
   }
 
@@ -49,6 +77,10 @@
     @media (--tabletSmall) {
       margin-bottom: var(--mXS);
     }
+
+    &:global(.mb__0) {
+      margin-bottom: 0;
+    }
   }
 
   & h6 {
@@ -56,6 +88,10 @@
 
     @media (--tabletSmall) {
       margin-bottom: var(--m2XS);
+    }
+
+    &:global(.mb__0) {
+      margin-bottom: 0;
     }
   }
 
@@ -128,11 +164,15 @@
     padding: 0 0.4rem;
   }
 
-  & button:not('mb__0') {
+  & button {
     margin-bottom: var(--mXL);
 
     @media (--tabletSmall) {
       margin-bottom: var(--mL);
+    }
+
+    &:global(.mb__0) {
+      margin-bottom: 0;
     }
   }
 }

@@ -5,9 +5,9 @@ module.exports = {
   logBuild: false,
   pages: {
     '*': ['common', 'header', 'footer'],
-    '/': ['homepage', 'instances'],
+    '/': ['homepage', 'instances', 'follow-us'],
     '/about': ['about'],
-    '/case-studies': ['case-studies'],
+    '/case-studies': ['case-studies', 'follow-us'],
     '/stats': ['stats'],
     '/budget': ['budget'],
     '/media': ['media'],
