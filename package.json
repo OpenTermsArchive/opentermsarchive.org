@@ -4,7 +4,7 @@
   "prettier": "prettier-config-ambanum",
   "scripts": {
     "dev": "next",
-    "build": "next build --debug &&  rm -Rf src/translations/default",
+    "build": "next build --debug",
     "start": "next start -p $PORT",
     "type-check": "tsc",
     "precommit": "echo \"No need for precommit yet\"",
