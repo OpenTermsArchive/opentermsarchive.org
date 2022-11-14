@@ -3,12 +3,16 @@ import { WithMdxResult, getStaticFilesPaths, loadMdxFile } from 'modules/I18n/ho
 
 import Button from 'modules/Common/components/Button';
 import Container from 'modules/Common/containers/Container';
+import Contributors from 'modules/OTA-api/data-components/Contributors';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
+import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
+import ThumbGallery from 'modules/Common/components/ThumbGallery';
+import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
 
 const FOLDER = 'pages';
 
@@ -27,7 +31,19 @@ export default function PrivacyPolicyPage({ mdxContent }: WithMdxResult) {
 
       <Container gridCols="10" gridGutters="9">
         <TextContent>
-          {mdxContent && <MDXRemote {...mdxContent} components={{ Button, LinkIcon }} />}
+          {mdxContent && (
+            <MDXRemote
+              {...mdxContent}
+              components={{
+                Button,
+                LinkIcon,
+                Contributors,
+                Link,
+                ThumbGallery,
+                ThumbGalleryItem,
+              }}
+            />
+          )}
         </TextContent>
       </Container>
     </Layout>
