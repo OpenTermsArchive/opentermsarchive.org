@@ -1,15 +1,16 @@
-import { WithMdxResult, loadMdxFile, getStaticFilesPaths } from 'modules/I18n/hoc/withMdx';
+import type { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next';
+import { WithMdxResult, getStaticFilesPaths, loadMdxFile } from 'modules/I18n/hoc/withMdx';
+
 import Button from 'modules/Common/components/Button';
 import Container from 'modules/Common/containers/Container';
+import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import LinkIcon from 'modules/Common/components/LinkIcon';
-import Hero from 'modules/Common/components/Hero';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
-import type { GetStaticPaths, GetStaticProps, GetStaticPathsResult } from 'next';
 import TextContent from 'modules/Common/components/TextContent';
 
-const FOLDER = 'static';
+const FOLDER = 'pages';
 
 export default function PrivacyPolicyPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
