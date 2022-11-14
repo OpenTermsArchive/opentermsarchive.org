@@ -6,6 +6,7 @@ module.exports = {
   pages: {
     '*': ['common', 'header', 'footer', 'follow-us'],
     '/': ['homepage', 'instances'],
+    '/case-studies': ['case-studies'],
     '/stats': ['stats'],
     '/budget': ['budget'],
     '/media': ['media'],

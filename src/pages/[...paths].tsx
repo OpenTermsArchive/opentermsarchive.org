@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next';
 import { WithMdxResult, getI18nContentFilePaths, loadMdxFile } from 'modules/I18n/hoc/withMdx';
 
+import Breadcrumb from 'components/BreadCrumb';
 import Button from 'modules/Common/components/Button';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
@@ -17,7 +18,7 @@ import ThumbGallery from 'modules/Common/components/ThumbGallery';
 import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
 import { useTranslation } from 'modules/I18n';
 
-export default function PrivacyPolicyPage({ mdxContent }: WithMdxResult) {
+export default function StaticPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
   const { t } = useTranslation();
 
@@ -30,11 +31,11 @@ export default function PrivacyPolicyPage({ mdxContent }: WithMdxResult) {
           </Container>
         </Container>
       )}
-
       <Container
         gridCols={frontmatter['grid.cols'] ? frontmatter['grid.cols'] : 10}
         gridGutters={frontmatter['grid.gutters'] ? frontmatter['grid.gutters'] : 9}
       >
+        {frontmatter['breadcrumb'] && <Breadcrumb items={frontmatter['breadcrumb']}></Breadcrumb>}
         <TextContent>
           {mdxContent && (
             <MDXRemote
@@ -51,7 +52,6 @@ export default function PrivacyPolicyPage({ mdxContent }: WithMdxResult) {
           )}
         </TextContent>
       </Container>
-
       {frontmatter['display_follow_us'] === true && (
         <Container layout="wide" paddingY={false} dark={true}>
           <Container gridCols="9" gridGutters="8" flex={true}>

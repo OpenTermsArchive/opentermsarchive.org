@@ -26,6 +26,11 @@ export type WithMdxResult = GetStaticPropsContext & MdxPageProps;
 export const loadMdxFile = async (options: WithMdxOptions, locale?: string) => {
   const folder = path.join(process.cwd(), CONTENT_FOLDER, options.folder);
 
+  console.log('--loadMdxFile---');
+  console.log('folder:', folder);
+  console.log('filePath:', filePath);
+  console.log('-----');
+
   // This is here to force copying those files on vercel
   // extrapolation of `options.folder` does not seem to be working
   fs.readdirSync(path.join(process.cwd(), 'content'));
