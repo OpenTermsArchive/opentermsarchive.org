@@ -1,18 +1,27 @@
-import { WithMdxResult, loadMdxFile, getStaticFilesPaths } from 'modules/I18n/hoc/withMdx';
+import type { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next';
+import { WithMdxResult, getStaticFilesPaths, loadMdxFile } from 'modules/I18n/hoc/withMdx';
+
 import Button from 'modules/Common/components/Button';
+import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
-import Layout from 'modules/Common/containers/Layout';
-import LinkIcon from 'modules/Common/components/LinkIcon';
+import Contributors from 'modules/OTA-api/data-components/Contributors';
 import Hero from 'modules/Common/components/Hero';
+import { FiTwitter as IconTwitter } from 'react-icons/fi';
+import Layout from 'modules/Common/containers/Layout';
+import Link from 'next/link';
+import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
-import type { GetStaticPaths, GetStaticProps, GetStaticPathsResult } from 'next';
 import TextContent from 'modules/Common/components/TextContent';
+import ThumbGallery from 'modules/Common/components/ThumbGallery';
+import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
+import useTranslation from 'next-translate/useTranslation';
 
-const FOLDER = 'static';
+const FOLDER = 'pages';
 
 export default function PrivacyPolicyPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
+  const { t } = useTranslation();
 
   return (
     <Layout title={frontmatter?.title} desc={frontmatter?.description}>
@@ -24,11 +33,46 @@ export default function PrivacyPolicyPage({ mdxContent }: WithMdxResult) {
         </Container>
       )}
 
-      <Container gridCols="10" gridGutters="9">
+      <Container
+        gridCols={frontmatter['grid.cols'] ? frontmatter['grid.cols'] : 10}
+        gridGutters={frontmatter['grid.gutters'] ? frontmatter['grid.gutters'] : 9}
+      >
         <TextContent>
-          {mdxContent && <MDXRemote {...mdxContent} components={{ Button, LinkIcon }} />}
+          {mdxContent && (
+            <MDXRemote
+              {...mdxContent}
+              components={{
+                Button,
+                LinkIcon,
+                Contributors,
+                Link,
+                ThumbGallery,
+                ThumbGalleryItem,
+              }}
+            />
+          )}
         </TextContent>
       </Container>
+
+      {frontmatter['display_follow_us'] === true && (
+        <Container layout="wide" paddingY={false} dark={true}>
+          <Container gridCols="9" gridGutters="8" flex={true}>
+            <Column width={40} alignX="center" alignY="center">
+              <IconTwitter size="128" color="var(--colorBlack400)" strokeWidth="1px" />
+            </Column>
+            <Column width={60} subtitle={t('follow-us:title')}>
+              <TextContent marginTop={false}>
+                <p className="mt__M">{t('follow-us:desc')}</p>
+                <Link href="https://twitter.com/OpenTerms">
+                  <a target="_blank" rel="noopener">
+                    <Button className="mb__0">{t('follow-us:button.label')}</Button>
+                  </a>
+                </Link>
+              </TextContent>
+            </Column>
+          </Container>
+        </Container>
+      )}
     </Layout>
   );
 }
