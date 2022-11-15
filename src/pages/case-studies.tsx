@@ -5,10 +5,9 @@ import type { GetStaticProps } from 'next';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import Link from 'next/link';
-import LinkIcon from 'modules/Common/components/LinkIcon';
-import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
+import dayjs from 'dayjs';
 import slugify from 'slugify';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
@@ -42,6 +41,30 @@ export default function CaseStudiesPage({ caseStudiesMdx }: any) {
               strict: true,
             });
             const href = `${router.locale}/case-studies/${slug}`;
+
+            //Map dates by years-months
+            let orderedDates = new Map();
+            mdxContent.frontmatter.dates.forEach((date: string) => {
+              const yearsMonths = dayjs(date).format('YYYY-MM');
+              const day = dayjs(date).format('DD');
+              let yearMonthsGroup = orderedDates.get(yearsMonths) ?? [];
+              yearMonthsGroup.push(day);
+              orderedDates.set(yearsMonths, yearMonthsGroup);
+            });
+
+            //Create dates to display
+            let displayDates = new Array();
+            orderedDates.forEach((days, yearsMonths) => {
+              const year = dayjs(yearsMonths.toString()).format('YYYY');
+              let month = dayjs(yearsMonths.toString()).format('MMMM');
+              let displayDate = `${month} ${days}, ${year}`;
+              if (router.locale === 'fr') {
+                month = dayjs(yearsMonths.toString()).locale('fr').format('MMMM');
+                displayDate = `${days} ${month} ${year}`;
+              }
+              displayDates.push(displayDate);
+            });
+
             return (
               <div key={mdxContent.frontmatter.title} className="mb__XL">
                 <h4 className="mb__0">
@@ -56,14 +79,11 @@ export default function CaseStudiesPage({ caseStudiesMdx }: any) {
                     return `${document}, `;
                   })}{' '}
                   ▪{' '}
-                  {mdxContent.frontmatter.dates.map((date: string, i: number) => {
-                    const formatedDate = new Intl.DateTimeFormat(router.locale, {
-                      dateStyle: 'long',
-                    }).format(Date.parse(date));
-                    if (i === mdxContent.frontmatter.dates.length - 1) {
-                      return formatedDate;
+                  {displayDates.map((displayDate: string, i: number) => {
+                    if (i === displayDates.length - 1) {
+                      return displayDate;
                     }
-                    return `${formatedDate}, `;
+                    return `${displayDate} - `;
                   })}
                 </div>
               </div>

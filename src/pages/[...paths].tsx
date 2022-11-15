@@ -16,6 +16,7 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGallery from 'modules/Common/components/ThumbGallery';
 import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
+import dayjs from 'dayjs';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 
@@ -29,6 +30,29 @@ export default function StaticPage({ mdxContent }: WithMdxResult) {
     frontmatter['breadcrumb'] && frontmatter.title
       ? [...frontmatter['breadcrumb'], { name: frontmatter.title }]
       : frontmatter['breadcrumb'];
+
+  //Map dates by years-months
+  let orderedDates = new Map();
+  frontmatter.dates.forEach((date: string) => {
+    const yearsMonths = dayjs(date).format('YYYY-MM');
+    const day = dayjs(date).format('DD');
+    let yearMonthsGroup = orderedDates.get(yearsMonths) ?? [];
+    yearMonthsGroup.push(day);
+    orderedDates.set(yearsMonths, yearMonthsGroup);
+  });
+
+  //Create dates to display
+  let displayDates = new Array();
+  orderedDates.forEach((days, yearsMonths) => {
+    const year = dayjs(yearsMonths.toString()).format('YYYY');
+    let month = dayjs(yearsMonths.toString()).format('MMMM');
+    let displayDate = `${month} ${days}, ${year}`;
+    if (router.locale === 'fr') {
+      month = dayjs(yearsMonths.toString()).locale('fr').format('MMMM');
+      displayDate = `${days} ${month} ${year}`;
+    }
+    displayDates.push(displayDate);
+  });
 
   return (
     <Layout
@@ -68,14 +92,11 @@ export default function StaticPage({ mdxContent }: WithMdxResult) {
                   return `${document}, `;
                 })}{' '}
                 ▪{' '}
-                {frontmatter.dates.map((date: string, i: number) => {
-                  const formatedDate = new Intl.DateTimeFormat(router.locale, {
-                    dateStyle: 'long',
-                  }).format(Date.parse(date));
-                  if (i === frontmatter.dates.length - 1) {
-                    return formatedDate;
+                {displayDates.map((displayDate: string, i: number) => {
+                  if (i === displayDates.length - 1) {
+                    return displayDate;
                   }
-                  return `${formatedDate}, `;
+                  return `${displayDate} - `;
                 })}
               </div>
             )}
