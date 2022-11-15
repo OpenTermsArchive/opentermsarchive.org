@@ -8,6 +8,7 @@ import Link from 'next/link';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
+import TextContent from 'modules/Common/components/TextContent';
 import slugify from 'slugify';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
@@ -34,18 +35,31 @@ export default function CaseStudiesPage({ caseStudiesMdx }: any) {
       </Container>
 
       <Container gridCols="9" gridGutters="8">
-        {caseStudiesMdx.map(({ mdxContent }) => {
-          const slug = slugify(mdxContent.frontmatter.title, {
-            lower: true,
-            strict: true,
-          });
-          const href = `${router.locale}/case-studies/${slug}`;
-          return (
-            <div key={mdxContent.frontmatter.title}>
-              <Link href={href}>{mdxContent.frontmatter.title}</Link>
-            </div>
-          );
-        })}
+        <TextContent>
+          {caseStudiesMdx.map(({ mdxContent }) => {
+            const slug = slugify(mdxContent.frontmatter.title, {
+              lower: true,
+              strict: true,
+            });
+            const href = `${router.locale}/case-studies/${slug}`;
+            return (
+              <div key={mdxContent.frontmatter.title} class="mb__XL">
+                <h5 class="mb__0">
+                  <Link href={href}>{mdxContent.frontmatter.title}</Link>
+                </h5>
+                <div class="text__smallcaps">
+                  {' '}
+                  ▪{' '}
+                  {mdxContent.frontmatter.dates.map((date) => {
+                    return new Intl.DateTimeFormat(router.locale, { dateStyle: 'long' }).format(
+                      Date.parse(date)
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+        </TextContent>
       </Container>
     </Layout>
   );
