@@ -9,7 +9,6 @@ import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import { copySync } from 'fs-extra';
 import slugify from 'slugify';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
@@ -35,7 +34,7 @@ export default function CaseStudiesPage({ caseStudiesMdx }: any) {
         </Container>
       </Container>
 
-      <Container gridCols="9" gridGutters="8">
+      <Container gridCols="10" gridGutters="9">
         <TextContent>
           {caseStudiesMdx.map(({ mdxContent }) => {
             const slug = slugify(mdxContent.frontmatter.title, {
@@ -44,11 +43,11 @@ export default function CaseStudiesPage({ caseStudiesMdx }: any) {
             });
             const href = `${router.locale}/case-studies/${slug}`;
             return (
-              <div key={mdxContent.frontmatter.title} class="mb__XL">
-                <h5 class="mb__0">
+              <div key={mdxContent.frontmatter.title} className="mb__XL">
+                <h4 className="mb__0">
                   <Link href={href}>{mdxContent.frontmatter.title}</Link>
-                </h5>
-                <div class="text__smallcaps">
+                </h4>
+                <div className="text__smallcaps mt__2XS">
                   {mdxContent.frontmatter.service} ▪{' '}
                   {mdxContent.frontmatter.documents.map((document: string, i: number) => {
                     if (i === mdxContent.frontmatter.documents.length - 1) {

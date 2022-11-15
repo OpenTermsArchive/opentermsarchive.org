@@ -127,7 +127,7 @@
   }
 
   &.container__hasPaddingYSmall {
-    padding-top: var(--p2XL);
+    padding-top: var(--pL);
     padding-bottom: var(--pL);
   }
 

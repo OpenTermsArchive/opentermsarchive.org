@@ -1,6 +1,4 @@
 .textContent {
-  margin-top: var(--mL);
-
   & hr {
     clear: both;
     border: 1px solid var(--colorBlack200);
@@ -68,6 +66,10 @@
 
     @media (--tabletSmall) {
       margin-bottom: var(--mS);
+    }
+
+    &:global(.mb__0) {
+      margin-bottom: 0;
     }
   }
 

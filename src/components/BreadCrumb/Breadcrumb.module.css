@@ -18,4 +18,8 @@
   & svg {
     display: flex;
   }
+
+  &:global(.mb__0) {
+    margin-bottom: 0;
+  }
 }

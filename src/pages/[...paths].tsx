@@ -37,55 +37,63 @@ export default function StaticPage({ mdxContent }: WithMdxResult) {
     >
       {frontmatter['hero.title'] && (
         <Container layout="wide" dark={true} paddingY={false}>
-          <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+          <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
             <Hero title={frontmatter['hero.title']} subtitle={frontmatter['hero.subtitle']}></Hero>
           </Container>
         </Container>
       )}
-      <Container
-        gridCols={frontmatter['grid.cols'] ? frontmatter['grid.cols'] : 10}
-        gridGutters={frontmatter['grid.gutters'] ? frontmatter['grid.gutters'] : 9}
-      >
-        {frontmatter['breadcrumb'] && <Breadcrumb items={breadcrumbItems}></Breadcrumb>}
-        <TextContent>
-          {frontmatter.title && (
-            <h1 className={frontmatter.dates && 'mb__0'}>{frontmatter.title}</h1>
-          )}
-          {frontmatter.service && frontmatter.documents && frontmatter.dates && (
-            <div className="mb__3XL mt__S text__smallcaps">
-              {frontmatter.service} ▪{' '}
-              {frontmatter.documents.map((document: string, i: number) => {
-                if (i === frontmatter.documents.length - 1) {
-                  return document;
-                }
-                return `${document}, `;
-              })}{' '}
-              ▪{' '}
-              {frontmatter.dates.map((date: string, i: number) => {
-                const formatedDate = new Intl.DateTimeFormat(router.locale, {
-                  dateStyle: 'long',
-                }).format(Date.parse(date));
-                if (i === frontmatter.dates.length - 1) {
-                  return formatedDate;
-                }
-                return `${formatedDate}, `;
-              })}
-            </div>
-          )}
-          {mdxContent && (
-            <MDXRemote
-              {...mdxContent}
-              components={{
-                Button,
-                LinkIcon,
-                Contributors,
-                Link,
-                ThumbGallery,
-                ThumbGalleryItem,
-              }}
-            />
-          )}
-        </TextContent>
+      {frontmatter['breadcrumb'] && (
+        <Container layout="wide" gray={true} paddingY={false}>
+          <Container gridCols="12" gridGutters="11" paddingYSmall={true}>
+            <Breadcrumb items={breadcrumbItems} className="mb__0"></Breadcrumb>
+          </Container>
+        </Container>
+      )}
+      <Container paddingTop={false}>
+        <Container
+          gridCols={frontmatter['grid.cols'] ? frontmatter['grid.cols'] : 10}
+          gridGutters={frontmatter['grid.gutters'] ? frontmatter['grid.gutters'] : 9}
+        >
+          <TextContent>
+            {frontmatter.title && (
+              <h1 className={frontmatter.dates && 'mb__0'}>{frontmatter.title}</h1>
+            )}
+            {frontmatter.service && frontmatter.documents && frontmatter.dates && (
+              <div className="mb__3XL mt__S text__smallcaps">
+                {frontmatter.service} ▪{' '}
+                {frontmatter.documents.map((document: string, i: number) => {
+                  if (i === frontmatter.documents.length - 1) {
+                    return document;
+                  }
+                  return `${document}, `;
+                })}{' '}
+                ▪{' '}
+                {frontmatter.dates.map((date: string, i: number) => {
+                  const formatedDate = new Intl.DateTimeFormat(router.locale, {
+                    dateStyle: 'long',
+                  }).format(Date.parse(date));
+                  if (i === frontmatter.dates.length - 1) {
+                    return formatedDate;
+                  }
+                  return `${formatedDate}, `;
+                })}
+              </div>
+            )}
+            {mdxContent && (
+              <MDXRemote
+                {...mdxContent}
+                components={{
+                  Button,
+                  LinkIcon,
+                  Contributors,
+                  Link,
+                  ThumbGallery,
+                  ThumbGalleryItem,
+                }}
+              />
+            )}
+          </TextContent>
+        </Container>
       </Container>
       {frontmatter['display_follow_us'] === true && (
         <Container layout="wide" paddingY={false} dark={true}>
