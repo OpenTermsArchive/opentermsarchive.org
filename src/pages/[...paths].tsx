@@ -16,14 +16,25 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGallery from 'modules/Common/components/ThumbGallery';
 import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
-import { useTranslation } from 'modules/I18n';
+import { useRouter } from 'next/router';
+import useTranslation from 'next-translate/useTranslation';
+
+const FOLDER = 'pages';
 
 export default function StaticPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
   const { t } = useTranslation();
+  const router = useRouter();
+  let breadcrumbItems =
+    frontmatter['breadcrumb'] && frontmatter.title
+      ? [...frontmatter['breadcrumb'], { name: frontmatter.title }]
+      : frontmatter['breadcrumb'];
 
   return (
-    <Layout title={frontmatter['title']} desc={frontmatter['description']}>
+    <Layout
+      title={frontmatter?.seo?.title ? frontmatter?.seo?.title : frontmatter['title']}
+      desc={frontmatter['description']}
+    >
       {frontmatter['hero.title'] && (
         <Container layout="wide" dark={true} paddingY={false}>
           <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
@@ -35,8 +46,20 @@ export default function StaticPage({ mdxContent }: WithMdxResult) {
         gridCols={frontmatter['grid.cols'] ? frontmatter['grid.cols'] : 10}
         gridGutters={frontmatter['grid.gutters'] ? frontmatter['grid.gutters'] : 9}
       >
-        {frontmatter['breadcrumb'] && <Breadcrumb items={frontmatter['breadcrumb']}></Breadcrumb>}
+        {frontmatter['breadcrumb'] && <Breadcrumb items={breadcrumbItems}></Breadcrumb>}
         <TextContent>
+          {frontmatter.title && (
+            <h1 className={frontmatter.dates && 'mb__0'}>{frontmatter.title}</h1>
+          )}
+          {frontmatter.dates && (
+            <div className="mb__3XL mt__S text__smallcaps">
+              {frontmatter.dates.map((date: string) => {
+                return new Intl.DateTimeFormat(router.locale, { dateStyle: 'long' }).format(
+                  Date.parse(date)
+                );
+              })}
+            </div>
+          )}
           {mdxContent && (
             <MDXRemote
               {...mdxContent}
@@ -80,7 +103,7 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     paths: (locales || []).reduce(
       (acc, locale) => [
         ...acc,
-        ...getI18nContentFilePaths('pages', locale, { extension: false }).files.map((filename) => ({
+        ...getI18nContentFilePaths(FOLDER, locale, { extension: false }).files.map((filename) => ({
           params: {
             paths: [filename],
           },
@@ -97,7 +120,7 @@ export const getStaticProps: GetStaticProps = async (props) => {
   const mdxContent = await loadMdxFile(
     {
       filename: (props?.params?.paths as string[]).join('/'),
-      folder: 'pages',
+      folder: FOLDER,
     },
     props.locale
   );
