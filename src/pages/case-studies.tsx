@@ -16,6 +16,12 @@ export default function CaseStudiesPage({ caseStudiesMdx }: any) {
   const { t } = useTranslation();
   const router = useRouter();
 
+  caseStudiesMdx.sort((a: any, b: any) => {
+    return (
+      Date.parse(b.mdxContent.frontmatter.dates[0]) - Date.parse(a.mdxContent.frontmatter.dates[0])
+    );
+  });
+
   return (
     <Layout title={t('case-studies:seo.title')} desc={t('case-studies:seo.desc')}>
       <Container layout="wide" dark={true} paddingY={false}>
