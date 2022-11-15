@@ -51,12 +51,24 @@ export default function StaticPage({ mdxContent }: WithMdxResult) {
           {frontmatter.title && (
             <h1 className={frontmatter.dates && 'mb__0'}>{frontmatter.title}</h1>
           )}
-          {frontmatter.dates && (
+          {frontmatter.service && frontmatter.documents && frontmatter.dates && (
             <div className="mb__3XL mt__S text__smallcaps">
-              {frontmatter.dates.map((date: string) => {
-                return new Intl.DateTimeFormat(router.locale, { dateStyle: 'long' }).format(
-                  Date.parse(date)
-                );
+              {frontmatter.service} ▪{' '}
+              {frontmatter.documents.map((document: string, i: number) => {
+                if (i === frontmatter.documents.length - 1) {
+                  return document;
+                }
+                return `${document}, `;
+              })}{' '}
+              ▪{' '}
+              {frontmatter.dates.map((date: string, i: number) => {
+                const formatedDate = new Intl.DateTimeFormat(router.locale, {
+                  dateStyle: 'long',
+                }).format(Date.parse(date));
+                if (i === frontmatter.dates.length - 1) {
+                  return formatedDate;
+                }
+                return `${formatedDate}, `;
               })}
             </div>
           )}

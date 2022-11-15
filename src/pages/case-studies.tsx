@@ -9,6 +9,7 @@ import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
+import { copySync } from 'fs-extra';
 import slugify from 'slugify';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
@@ -48,12 +49,22 @@ export default function CaseStudiesPage({ caseStudiesMdx }: any) {
                   <Link href={href}>{mdxContent.frontmatter.title}</Link>
                 </h5>
                 <div class="text__smallcaps">
-                  {' '}
+                  {mdxContent.frontmatter.service} ▪{' '}
+                  {mdxContent.frontmatter.documents.map((document: string, i: number) => {
+                    if (i === mdxContent.frontmatter.documents.length - 1) {
+                      return document;
+                    }
+                    return `${document}, `;
+                  })}{' '}
                   ▪{' '}
-                  {mdxContent.frontmatter.dates.map((date) => {
-                    return new Intl.DateTimeFormat(router.locale, { dateStyle: 'long' }).format(
-                      Date.parse(date)
-                    );
+                  {mdxContent.frontmatter.dates.map((date: string, i: number) => {
+                    const formatedDate = new Intl.DateTimeFormat(router.locale, {
+                      dateStyle: 'long',
+                    }).format(Date.parse(date));
+                    if (i === mdxContent.frontmatter.dates.length - 1) {
+                      return formatedDate;
+                    }
+                    return `${formatedDate}, `;
                   })}
                 </div>
               </div>
