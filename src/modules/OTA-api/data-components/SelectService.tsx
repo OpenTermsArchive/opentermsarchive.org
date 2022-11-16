@@ -3,7 +3,7 @@ import React from 'react';
 import { Services } from '../api';
 import classNames from 'classnames';
 import useSWR from 'swr';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from 'modules/I18n';
 
 type SelectServiceProps = {
   serviceProps: any;

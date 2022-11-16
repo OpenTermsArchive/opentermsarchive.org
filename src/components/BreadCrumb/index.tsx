@@ -1,5 +1,5 @@
 import { FiChevronRight as IconSeparator } from 'react-icons/fi';
-import Link from 'next/link';
+import { Link } from 'modules/I18n';
 import React from 'react';
 import s from './Breadcrumb.module.css';
 

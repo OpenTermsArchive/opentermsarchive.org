@@ -7,7 +7,7 @@ import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from 'modules/I18n';
 
 export default function StatsPage({ mdxContent }: WithMdxResult) {
   const { t } = useTranslation();

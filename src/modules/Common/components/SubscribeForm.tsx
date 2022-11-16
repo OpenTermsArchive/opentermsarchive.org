@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'modules/I18n';
 import React from 'react';
 import SelectService from 'modules/OTA-api/data-components/SelectService';
 import TextContent from './TextContent';
@@ -6,7 +6,7 @@ import classNames from 'classnames';
 import sButton from './Button.module.css';
 import { useForm } from 'react-hook-form';
 import { usePrevious } from 'react-use';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from 'modules/I18n';
 
 export interface SubscribeFormFields {
   email: string;

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { ResponsiveLine } from '@nivo/line';
 import { useRouter } from 'next/router';
 import dayjs from 'dayjs';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from 'modules/I18n';
 
 type TotalExpendituresGraphProps = {
   data: React.ComponentProps<typeof ResponsiveLine>['data'];

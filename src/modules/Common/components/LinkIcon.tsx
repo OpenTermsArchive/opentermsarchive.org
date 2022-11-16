@@ -1,6 +1,7 @@
 import * as FeatherIcons from 'react-icons/fi';
 
-import Link, { LinkProps } from 'next/link';
+import { LinkProps } from 'next/link';
+import { Link } from 'modules/I18n';
 
 import React from 'react';
 import classNames from 'classnames';

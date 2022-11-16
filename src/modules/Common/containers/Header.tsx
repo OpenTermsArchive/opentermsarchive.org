@@ -1,12 +1,11 @@
 import { useLockBodyScroll, useToggle, useWindowSize } from 'react-use';
 
 import { FiX } from 'react-icons/fi';
-import Link from 'next/link';
+import { Link, useTranslation } from 'modules/I18n';
 import Logo from 'modules/Common/components/Logo';
 import React from 'react';
 import classNames from 'classnames';
 import s from './Header.module.css';
-import useTranslation from 'next-translate/useTranslation';
 
 type HeaderProps = {
   className?: string;

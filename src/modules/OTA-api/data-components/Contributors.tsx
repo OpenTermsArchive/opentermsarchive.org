@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'modules/I18n';
 import React from 'react';
 import classNames from 'classnames';
 import contributorsData from '../../../../public/contributors.json';

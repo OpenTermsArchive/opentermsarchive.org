@@ -8,7 +8,7 @@ import api from 'utils/api';
 import { getServices } from 'modules/OTA-api/api';
 import useNotifier from 'hooks/useNotifier';
 import { useToggle } from 'react-use';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from 'modules/I18n';
 import useUrl from 'hooks/useUrl';
 
 export default function SubscribePage({ services }: any) {
