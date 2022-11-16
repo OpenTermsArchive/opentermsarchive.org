@@ -1,7 +1,7 @@
 const { version } = require('./package.json');
-const nextTranslate = require('next-translate');
+const nextI18nRoutes = require('./src/modules/I18n/next.config');
 
-module.exports = nextTranslate({
+module.exports = nextI18nRoutes({
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   images: {
     domains: ['avatars.githubusercontent.com', 'pbs.twimg.com'],
