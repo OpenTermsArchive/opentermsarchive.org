@@ -118,7 +118,7 @@ export const getStaticProps = withI18n({ load: 'mdx', folder: "static", filename
 
 This is kind of a tricky thing to do with nextJs so this is a basic implementation that aims at being automatized better.
 
-1. Create a `i18nSlugs.json` file in `modules/18n`
+1. Create a `permalinks.json` file in `modules/18n`
 
 ```
 {

@@ -1,10 +1,10 @@
 const nextTranslate = require('next-translate');
-const i18nSlugs = require('./i18nSlugs.json');
+const permalinks = require('./permalinks.json');
 
-const i18nRewrites = Object.entries(i18nSlugs).reduce(
-  (acc, [originalSlug, i18nSlugs]) => [
+const i18nRewrites = Object.entries(permalinks).reduce(
+  (acc, [originalSlug, permalinks]) => [
     ...acc,
-    ...Object.entries(i18nSlugs).reduce(
+    ...Object.entries(permalinks).reduce(
       (acc2, [locale, i18nSlug]) => [
         ...acc2,
         {
@@ -24,7 +24,7 @@ module.exports = (nextConfig) => {
     ...nextConfig,
     publicRuntimeConfig: {
       ...nextConfig.publicRuntimeConfig,
-      i18nSlugs,
+      permalinks,
     },
     async rewrites() {
       const existingRewrites = nextConfig.rewrites ? await nextConfig.rewrites() : [];

@@ -5,16 +5,17 @@ import { useRouter } from 'next/router';
 import getConfig from 'next/config';
 
 const { publicRuntimeConfig } = getConfig();
-const i18nSlugs: { [key: string]: { [key: string]: string } } = publicRuntimeConfig.i18nSlugs || {};
+const permalinks: { [key: string]: { [key: string]: string } } =
+  publicRuntimeConfig.permalinks || {};
 
-export const i18nMap: { [key: string]: string } = Object.entries(i18nSlugs).reduce(
-  (acc, [originalSlug, i18nSlugs]) => ({
+export const i18nMap: { [key: string]: string } = Object.entries(permalinks).reduce(
+  (acc, [originalSlug, permalinks]) => ({
     ...acc,
-    ...Object.entries(i18nSlugs || {}).reduce(
-      (acc2, [locale, i18nSlug]) => ({
+    ...Object.entries(permalinks || {}).reduce(
+      (acc2, [locale, permalink]) => ({
         ...acc2,
-        [`/${locale}${originalSlug}`]: `/${locale}${i18nSlug}`,
-        [`/en${i18nSlug}`]: originalSlug,
+        [`/${locale}${originalSlug}`]: `/${locale}${permalink}`,
+        [`/en${permalink}`]: originalSlug,
       }),
       {}
     ),

@@ -1,15 +1,16 @@
 import getConfig from 'next/config';
 
 const { publicRuntimeConfig } = getConfig();
-const i18nSlugs: { [key: string]: { [key: string]: string } } = publicRuntimeConfig.i18nSlugs || {};
+const permalinks: { [key: string]: { [key: string]: string } } =
+  publicRuntimeConfig.permalinks || {};
 
-export const i18nSlugsToOriginal: { [key: string]: string } = Object.entries(i18nSlugs).reduce(
-  (acc, [originalSlug, i18nSlugs]) => ({
+export const permalinksToOriginal: { [key: string]: string } = Object.entries(permalinks).reduce(
+  (acc, [originalSlug, permalinks]) => ({
     ...acc,
-    ...Object.entries(i18nSlugs || {}).reduce(
-      (acc2, [locale, i18nSlug]) => ({
+    ...Object.entries(permalinks || {}).reduce(
+      (acc2, [locale, permalink]) => ({
         ...acc2,
-        [`/${locale}${i18nSlug}`]: originalSlug,
+        [`/${locale}${permalink}`]: originalSlug,
       }),
       {}
     ),
@@ -26,9 +27,9 @@ export default function getLinkAlternates({
   locale: string;
   locales: string[];
 }) {
-  const baseUrl = i18nSlugsToOriginal[`/${locale}${url}`] || url;
+  const baseUrl = permalinksToOriginal[`/${locale}${url}`] || url;
 
-  const i18nSlugToOriginal = i18nSlugs[baseUrl] || {};
+  const permalinkToOriginal = permalinks[baseUrl] || {};
 
   const links = [
     {
@@ -42,7 +43,7 @@ export default function getLinkAlternates({
     links.push({
       key: `alternate_${locale}`,
       hrefLang: locale,
-      href: i18nSlugToOriginal[locale] ? `/${locale}${i18nSlugToOriginal[locale]}` : baseUrl,
+      href: permalinkToOriginal[locale] ? `/${locale}${permalinkToOriginal[locale]}` : baseUrl,
     });
   });
 
