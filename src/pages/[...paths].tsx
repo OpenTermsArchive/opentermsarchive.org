@@ -16,7 +16,7 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGallery from 'modules/Common/components/ThumbGallery';
 import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
-import dayjs from 'dayjs';
+import { getCaseStudieSubtitle } from 'pages/case-studies';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 
@@ -26,37 +26,27 @@ export default function StaticPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
   const { t } = useTranslation();
   const router = useRouter();
-  let breadcrumbItems =
-    frontmatter['breadcrumb'] && frontmatter.title
-      ? [...frontmatter['breadcrumb'], { name: frontmatter.title }]
-      : frontmatter['breadcrumb'];
 
-  //Map dates by years-months
-  let orderedDates = new Map();
-  frontmatter.dates.forEach((date: string) => {
-    const yearsMonths = dayjs(date).format('YYYY-MM');
-    const day = dayjs(date).format('DD');
-    let yearMonthsGroup = orderedDates.get(yearsMonths) ?? [];
-    yearMonthsGroup.push(day);
-    orderedDates.set(yearsMonths, yearMonthsGroup);
-  });
+  const isCaseStudie = router.query.paths?.includes('case-studies');
 
-  //Create dates to display
-  let displayDates = new Array();
-  orderedDates.forEach((days, yearsMonths) => {
-    const year = dayjs(yearsMonths.toString()).format('YYYY');
-    let month = dayjs(yearsMonths.toString()).format('MMMM');
-    let displayDate = `${month} ${days}, ${year}`;
-    if (router.locale === 'fr') {
-      month = dayjs(yearsMonths.toString()).locale('fr').format('MMMM');
-      displayDate = `${days} ${month} ${year}`;
-    }
-    displayDates.push(displayDate);
-  });
+  let breadcrumbItems = new Array();
+  if (isCaseStudie) {
+    //Breadcrumb items
+    breadcrumbItems.push({
+      name: t('case-studies:breadcrumb.title'),
+      url: router.locale === 'fr' ? '/fr/case-studies' : '/case-studies',
+    });
+    breadcrumbItems.push({
+      name: frontmatter.title,
+    });
+  }
+  if (frontmatter.breadcrumb) {
+    breadcrumbItems = frontmatter.breadcrumb;
+  }
 
   return (
     <Layout
-      title={frontmatter?.seo?.title ? frontmatter?.seo?.title : frontmatter['title']}
+      title={frontmatter?.seo?.title || frontmatter['title']}
       desc={frontmatter['description']}
     >
       {frontmatter['hero.title'] && (
@@ -66,39 +56,34 @@ export default function StaticPage({ mdxContent }: WithMdxResult) {
           </Container>
         </Container>
       )}
-      {frontmatter['breadcrumb'] && (
+      {(frontmatter.breadcrumb || isCaseStudie) && (
         <Container layout="wide" gray={true} paddingY={false}>
           <Container gridCols="12" gridGutters="11" paddingYSmall={true}>
             <Breadcrumb items={breadcrumbItems} className="mb__0"></Breadcrumb>
           </Container>
         </Container>
       )}
+
       <Container paddingTop={false}>
         <Container
-          gridCols={frontmatter['grid.cols'] ? frontmatter['grid.cols'] : 10}
-          gridGutters={frontmatter['grid.gutters'] ? frontmatter['grid.gutters'] : 9}
+          gridCols={frontmatter['grid.cols'] || 10}
+          gridGutters={frontmatter['grid.gutters'] || 9}
         >
           <TextContent>
-            {frontmatter.title && (
-              <h1 className={frontmatter.dates && 'mb__0'}>{frontmatter.title}</h1>
+            {frontmatter.title && isCaseStudie ? (
+              <h1 className="mb__S">{frontmatter.title}</h1>
+            ) : (
+              <h1>{frontmatter.title}</h1>
             )}
-            {frontmatter.service && frontmatter.documents && frontmatter.dates && (
-              <div className="mb__3XL mt__S text__smallcaps">
-                {frontmatter.service} ▪{' '}
-                {frontmatter.documents.map((document: string, i: number) => {
-                  if (i === frontmatter.documents.length - 1) {
-                    return document;
-                  }
-                  return `${document}, `;
-                })}{' '}
-                ▪{' '}
-                {displayDates.map((displayDate: string, i: number) => {
-                  if (i === displayDates.length - 1) {
-                    return displayDate;
-                  }
-                  return `${displayDate} - `;
-                })}
-              </div>
+
+            {isCaseStudie && (
+              <h4 className="h4__ultralight mb__3XL">
+                {getCaseStudieSubtitle(
+                  frontmatter.service,
+                  frontmatter.documents,
+                  frontmatter.dates
+                )}
+              </h4>
             )}
             {mdxContent && (
               <MDXRemote
@@ -116,7 +101,7 @@ export default function StaticPage({ mdxContent }: WithMdxResult) {
           </TextContent>
         </Container>
       </Container>
-      {frontmatter['display_follow_us'] === true && (
+      {frontmatter.display_follow_us === true && (
         <Container layout="wide" paddingY={false} dark={true}>
           <Container gridCols="9" gridGutters="8" flex={true}>
             <Column width={40} alignX="center" alignY="center">

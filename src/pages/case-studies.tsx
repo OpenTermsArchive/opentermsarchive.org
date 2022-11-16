@@ -16,6 +16,7 @@ export default function CaseStudiesPage({ caseStudiesMdx }: any) {
   const { t } = useTranslation();
   const router = useRouter();
 
+  //Sort by date
   caseStudiesMdx.sort((a: any, b: any) => {
     return (
       Date.parse(b.mdxContent.frontmatter.dates[0]) - Date.parse(a.mdxContent.frontmatter.dates[0])
@@ -33,63 +34,41 @@ export default function CaseStudiesPage({ caseStudiesMdx }: any) {
         </Container>
       </Container>
 
-      <Container gridCols="10" gridGutters="9">
-        <TextContent>
-          {caseStudiesMdx.map(({ mdxContent }) => {
-            const slug = slugify(mdxContent.frontmatter.title, {
-              lower: true,
-              strict: true,
-            });
-            const href = `${router.locale}/case-studies/${slug}`;
-
-            //Map dates by years-months
-            let orderedDates = new Map();
-            mdxContent.frontmatter.dates.forEach((date: string) => {
-              const yearsMonths = dayjs(date).format('YYYY-MM');
-              const day = dayjs(date).format('DD');
-              let yearMonthsGroup = orderedDates.get(yearsMonths) ?? [];
-              yearMonthsGroup.push(day);
-              orderedDates.set(yearsMonths, yearMonthsGroup);
-            });
-
-            //Create dates to display
-            let displayDates = new Array();
-            orderedDates.forEach((days, yearsMonths) => {
-              const year = dayjs(yearsMonths.toString()).format('YYYY');
-              let month = dayjs(yearsMonths.toString()).format('MMMM');
-              let displayDate = `${month} ${days}, ${year}`;
-              if (router.locale === 'fr') {
-                month = dayjs(yearsMonths.toString()).locale('fr').format('MMMM');
-                displayDate = `${days} ${month} ${year}`;
-              }
-              displayDates.push(displayDate);
-            });
-
-            return (
-              <div key={mdxContent.frontmatter.title} className="mb__XL">
+      <Container paddingY={false}>
+        <Container gridCols="10" gridGutters="9">
+          <TextContent>
+            {caseStudiesMdx.map(({ mdxContent }: any, i: number) => {
+              const slug = slugify(mdxContent.frontmatter.title, {
+                lower: true,
+                strict: true,
+              });
+              const href = `${router.locale}/case-studies/${slug}`;
+              const title = (
                 <h4 className="mb__0">
                   <Link href={href}>{mdxContent.frontmatter.title}</Link>
                 </h4>
+              );
+              const subtitle = (
                 <div className="text__smallcaps mt__2XS">
-                  {mdxContent.frontmatter.service} ▪{' '}
-                  {mdxContent.frontmatter.documents.map((document: string, i: number) => {
-                    if (i === mdxContent.frontmatter.documents.length - 1) {
-                      return document;
-                    }
-                    return `${document}, `;
-                  })}{' '}
-                  ▪{' '}
-                  {displayDates.map((displayDate: string, i: number) => {
-                    if (i === displayDates.length - 1) {
-                      return displayDate;
-                    }
-                    return `${displayDate} - `;
-                  })}
+                  {getCaseStudieSubtitle(
+                    mdxContent.frontmatter.service,
+                    mdxContent.frontmatter.documents,
+                    mdxContent.frontmatter.dates
+                  )}
                 </div>
-              </div>
-            );
-          })}
-        </TextContent>
+              );
+              const separator = caseStudiesMdx.length - 1 === i ? '' : <hr className="mt__XL" />;
+
+              return (
+                <div key={mdxContent.frontmatter.title} className="mb__XL">
+                  {title}
+                  {subtitle}
+                  {separator}
+                </div>
+              );
+            })}
+          </TextContent>
+        </Container>
       </Container>
     </Layout>
   );
@@ -119,3 +98,33 @@ export const getStaticProps: GetStaticProps = async (props) => {
     },
   };
 };
+
+export function getCaseStudieSubtitle(service: string, documents: [], dates: []) {
+  const router = useRouter();
+
+  //Map dates by years-months
+  let orderedDates = new Map();
+  dates.forEach((date: string) => {
+    const yearsMonths = dayjs(date).format('YYYY-MM');
+    const day = dayjs(date).format('DD');
+    let yearMonthsGroup = orderedDates.get(yearsMonths) ?? [];
+    yearMonthsGroup.push(day);
+    orderedDates.set(yearsMonths, yearMonthsGroup);
+  });
+
+  //Create dates to display
+  let displayDates = new Array();
+  orderedDates.forEach((days, yearsMonths) => {
+    const year = dayjs(yearsMonths.toString()).format('YYYY');
+    let month = dayjs(yearsMonths.toString()).format('MMMM');
+    let displayDate = `${month} ${days}, ${year}`;
+    if (router.locale === 'fr') {
+      month = dayjs(yearsMonths.toString()).locale('fr').format('MMMM');
+      displayDate = `${days} ${month} ${year}`;
+    }
+    displayDates.push(displayDate);
+  });
+
+  const separator = ` ▪ `;
+  return `${service}${separator}${documents.join(', ')}${separator}${displayDates}`;
+}

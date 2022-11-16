@@ -35,6 +35,14 @@
     &:global(.mb__0) {
       margin-bottom: 0;
     }
+
+    &:global(.mb__S) {
+      margin-bottom: var(--mS);
+    }
+
+    &:global(.mb__M) {
+      margin-bottom: var(--mM);
+    }
   }
 
   & h2 {
@@ -70,6 +78,14 @@
 
     &:global(.mb__0) {
       margin-bottom: 0;
+    }
+
+    &:global(.mb__XL) {
+      margin-bottom: var(--mXL);
+    }
+
+    &:global(.mb__3XL) {
+      margin-bottom: var(--m3XL);
     }
   }
 
