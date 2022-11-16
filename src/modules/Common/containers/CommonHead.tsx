@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import { useRouter } from 'next/router';
+import { getLinkAlternates } from 'modules/I18n';
 const twitterUser = 'OpenTerms';
 const websiteName = 'opentermsarchive.org';
 const type = 'website';
@@ -20,6 +21,11 @@ export default function CommonHead({
 }) {
   const router = useRouter();
   const currentUrl = url || router.asPath;
+  const alternateLinks = getLinkAlternates({
+    url: currentUrl,
+    locale: router.locale || 'en',
+    locales: router.locales || [],
+  });
 
   return (
     <Head>
@@ -35,17 +41,9 @@ export default function CommonHead({
       <meta name="msapplication-TileColor" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" />
 
-      <link rel="alternate" href={`${currentUrl}`} hrefLang="x-default" />
-      {(router?.locales || [])
-        .filter((locale) => locale !== 'default')
-        .map((locale) => (
-          <link
-            key={`alternate_${locale}`}
-            rel="alternate"
-            href={`${locale === router.defaultLocale ? '' : `/${locale}`}${currentUrl}`}
-            hrefLang={locale}
-          />
-        ))}
+      {alternateLinks.map((link) => (
+        <link rel="alternate" {...link} />
+      ))}
 
       {/* TWITTER https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary */}
       <meta name="twitter:card" content="summary_large_image" />
