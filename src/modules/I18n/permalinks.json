@@ -1,20 +1,5 @@
 {
-  "/about": {
-    "fr": "/a-propos"
-  },
-  "/case-studies": {
-    "fr": "/etudes-de-cas"
-  },
   "/subscribe": {
     "fr": "/souscrire"
-  },
-  "/legal-notice": {
-    "fr": "/mentions-legales"
-  },
-  "/privacy-policy": {
-    "fr": "/politique-de-confidentialite"
-  },
-  "/accessibility": {
-    "fr": "/accessibilite"
   }
 }
