@@ -80,7 +80,7 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     paths: (locales || []).reduce(
       (acc, locale) => [
         ...acc,
-        ...getI18nContentFilePaths('pages', locale, { extension: false }).map((filename) => ({
+        ...getI18nContentFilePaths('pages', locale, { extension: false }).files.map((filename) => ({
           params: {
             paths: [filename],
           },
