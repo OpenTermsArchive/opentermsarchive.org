@@ -94,18 +94,17 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (props) => {
-  const mdxFile = await loadMdxFile(
+  const mdxContent = await loadMdxFile(
     {
-      load: 'mdx',
       filename: (props?.params?.paths as string[]).join('/'),
       folder: 'pages',
     },
     props.locale
   );
 
-  if (!mdxFile) {
+  if (!mdxContent) {
     return { notFound: true };
   }
 
-  return { props: { ...mdxFile } };
+  return { props: { mdxContent } };
 };

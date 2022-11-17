@@ -113,4 +113,4 @@ export default function MediaPage({ mdxContent }: WithMdxResult) {
   );
 }
 
-export const getStaticProps = withMdx({ load: 'mdx', filename: 'media', folder: 'parts' })();
+export const getStaticProps = withMdx({ filename: 'media', folder: 'parts' })();
