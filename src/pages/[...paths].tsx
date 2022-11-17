@@ -1,5 +1,5 @@
 import type { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next';
-import { WithMdxResult, getStaticFilesPaths, loadMdxFile } from 'modules/I18n/hoc/withMdx';
+import { WithMdxResult, getI18nContentFilePaths, loadMdxFile } from 'modules/I18n/hoc/withMdx';
 
 import Button from 'modules/Common/components/Button';
 import Column from 'modules/Common/components/Column';
@@ -16,8 +16,6 @@ import TextContent from 'modules/Common/components/TextContent';
 import ThumbGallery from 'modules/Common/components/ThumbGallery';
 import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
 import { useTranslation } from 'modules/I18n';
-
-const FOLDER = 'pages';
 
 export default function PrivacyPolicyPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
@@ -82,9 +80,9 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     paths: (locales || []).reduce(
       (acc, locale) => [
         ...acc,
-        ...getStaticFilesPaths(FOLDER, locale).map((filename) => ({
+        ...getI18nContentFilePaths('pages', locale, { extension: false }).map((filename) => ({
           params: {
-            paths: [filename.replace('.mdx', '')],
+            paths: [filename],
           },
           locale,
         })),
@@ -100,7 +98,7 @@ export const getStaticProps: GetStaticProps = async (props) => {
     {
       load: 'mdx',
       filename: (props?.params?.paths as string[]).join('/'),
-      folder: FOLDER,
+      folder: 'pages',
     },
     props.locale
   );
