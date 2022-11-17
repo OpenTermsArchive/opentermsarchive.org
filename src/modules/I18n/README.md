@@ -111,14 +111,14 @@ export default function TermsOfServicePage({ mdxContent }: WithI18nResult) {
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx', folder: "static", filename: "terms-of-service" })();
+export const getStaticProps = withI18n({ folder: "static", filename: "terms-of-service" })();
 ```
 
 ### Translate slugs
 
 This is kind of a tricky thing to do with nextJs so this is a basic implementation that aims at being automatized better.
 
-1. Create a `permalinks.json` file in `modules/18n`
+1. Create a `permalinks.json` file in `modules/18n` for translating slugs of pages in `src/pages` folder
 
 ```
 {
@@ -130,7 +130,7 @@ This is kind of a tricky thing to do with nextJs so this is a basic implementati
 }
 ```
 
-2. Use the next config plugin provided in `next.config.js`
+2. Use the next config plugin provided in this modules's `next.config.js`
 
 ```
 const nextI18nRoutes = require('./src/modules/I18n/next.config');
@@ -146,6 +146,8 @@ import Link from 'next/link';
 # becomes
 import { Link } from 'modules/I18n';
 ```
+
+4. Use `permalink` frontmatter value in `content/pages/*.mdx` files
 
 ## VSCode snippets
 
