@@ -25,7 +25,7 @@ const useUrl = () => {
       ? queryString.parse(window.location.search, { arrayFormat: 'bracket' })
       : {};
 
-  const pathname = router.pathname;
+  const pathname = router.locale !== router.defaultLocale ? router.asPath : router.pathname;
 
   const setQueryParameter = React.useCallback(
     ({ url, param, value }: IParams) => {
