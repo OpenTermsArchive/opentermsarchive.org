@@ -54,36 +54,6 @@ module.exports = nextI18nRoutes({
         destination: 'https://contribute.opentermsarchive.org/fr/:slug',
         permanent: true,
         locale: false,
-      },
-      {
-        source: '/fr/case-studies/instagram-blocks-data-retrieval-and-clarifies-what-information-it-retrieves',
-        destination: '/fr/case-studies/instagram-bloque-la-recuperation-de-donnees-et-precise-les-informations-quelle-recupere',
-        permanent: true,
-        locale: false,
-      },
-      {
-        source: '/fr/case-studies/qwant-details-data-shared-with-microsoft',
-        destination: '/fr/case-studies/qwant-detaille-les-donnees-partagees-avec-microsoft',
-        permanent: true,
-        locale: false,
-      },
-      {
-        source: '/fr/case-studies/protonmail-clarifies-its-privacy-policies',
-        destination: '/fr/case-studies/protonmail-clarifie-ses-politiques-de-confidentialite',
-        permanent: true,
-        locale: false,
-      },
-      {
-        source: '/fr/case-studies/pinterest-removes-privacy-shield-notice-without-updating-its-modification-date',
-        destination: '/fr/case-studies/pinterest-retire-les-mentions-du-privacy-shield-sans-mettre-a-jour-la-date-de-modification',
-        permanent: true,
-        locale: false,
-      },
-      {
-        source: '/fr/case-studies/alibaba-adds-disease-outbreaks-to-its-disclaimer',
-        destination: '/fr/case-studies/alibaba-ajoute-les-epidemies-a-ses-clauses-dexclusion-de-responsabilite',
-        permanent: true,
-        locale: false,
       }
     ];
   },
@@ -92,31 +62,6 @@ module.exports = nextI18nRoutes({
       {
         source: '/data/api/:slug*',
         destination: 'http://51.89.227.200:7011/data/api/:slug*',
-      },
-      {
-        source: '/fr/case-studies/instagram-blocks-data-retrieval-and-clarifies-what-information-it-retrieves',
-        destination: '/fr/case-studies/instagram-bloque-la-recuperation-de-donnees-et-precise-les-informations-quelle-recupere',
-        locale: false,
-      },
-      {
-        source: '/fr/case-studies/qwant-details-data-shared-with-microsoft',
-        destination: '/fr/case-studies/qwant-detaille-les-donnees-partagees-avec-microsoft',
-        locale: false,
-      },
-      {
-        source: '/fr/case-studies/protonmail-clarifies-its-privacy-policies',
-        destination: '/fr/case-studies/protonmail-clarifie-ses-politiques-de-confidentialite',
-        locale: false,
-      },
-      {
-        source: '/fr/case-studies/pinterest-removes-privacy-shield-notice-without-updating-its-modification-date',
-        destination: '/fr/case-studies/pinterest-retire-les-mentions-du-privacy-shield-sans-mettre-a-jour-la-date-de-modification',
-        locale: false,
-      },
-      {
-        source: '/fr/case-studies/alibaba-adds-disease-outbreaks-to-its-disclaimer',
-        destination: '/fr/case-studies/alibaba-ajoute-les-epidemies-a-ses-clauses-dexclusion-de-responsabilite',
-        locale: false,
       }
     ];
   },
