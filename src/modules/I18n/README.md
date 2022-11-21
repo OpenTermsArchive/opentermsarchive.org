@@ -118,7 +118,7 @@ export const getStaticProps = withI18n({ folder: "static", filename: "terms-of-s
 
 This is kind of a tricky thing to do with nextJs so this is a basic implementation that aims at being automatized better.
 
-1. Create a `permalinks.json` file in `modules/18n` for translating slugs of pages in `src/pages` folder
+1. Create a `permalinks.json` file in `modules/i18n` for translating slugs of pages in `src/pages` folder
 
 ```
 {
@@ -148,6 +148,18 @@ import { Link } from 'modules/I18n';
 ```
 
 4. Use `permalink` frontmatter value in `content/pages/*.mdx` files
+
+**Note**: this will only work in translated files, as for the default language, the file name will be taken into account
+
+```
+---
+title: Page Title
+permalink: /a-propos
+---
+
+Markdown text
+...
+```
 
 ## VSCode snippets
 
