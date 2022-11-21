@@ -1,5 +1,5 @@
 import type { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next';
-import { WithMdxResult, getStaticFilesPaths, loadMdxFile } from 'modules/I18n/hoc/withMdx';
+import { WithMdxResult, getI18nContentFilePaths, loadMdxFile } from 'modules/I18n/hoc/withMdx';
 
 import Breadcrumb from 'components/BreadCrumb';
 import Button from 'modules/Common/components/Button';
@@ -7,14 +7,14 @@ import Container from 'modules/Common/containers/Container';
 import Contributors from 'modules/OTA-api/data-components/Contributors';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
-import Link from 'next/link';
+import { Link } from 'modules/I18n';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGallery from 'modules/Common/components/ThumbGallery';
 import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
-import { getCaseStudieSubtitle } from 'pages/case-studies';
+import { getCaseStudySubtitle } from 'pages/case-studies';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 
@@ -63,7 +63,7 @@ export default function CaseStudyPage({ mdxContent }: WithMdxResult) {
             <h1 className="mb__S">{frontmatter.title}</h1>
 
             <h4 className="h4__ultralight mb__3XL">
-              {getCaseStudieSubtitle(frontmatter.service, frontmatter.documents, frontmatter.dates)}
+              {getCaseStudySubtitle(frontmatter.service, frontmatter.documents, frontmatter.dates)}
             </h4>
 
             {mdxContent && (
@@ -91,9 +91,12 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     paths: (locales || []).reduce(
       (acc, locale) => [
         ...acc,
-        ...getStaticFilesPaths(FOLDER, locale, 'case-studies').map((filename) => ({
+        ...getI18nContentFilePaths(FOLDER, locale, {
+          subfolder: 'case-studies',
+          extension: false,
+        }).files.map((filename) => ({
           params: {
-            paths: [filename.replace('.mdx', '')],
+            paths: [filename.replace('case-studies/', '')],
           },
           locale,
         })),
@@ -107,10 +110,8 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 export const getStaticProps: GetStaticProps = async (props) => {
   const mdxFile = await loadMdxFile(
     {
-      load: 'mdx',
-      filename: (props?.params?.paths as string[]).join('/'),
+      filename: `case-studies/${(props?.params?.paths as string[]).join('/')}`,
       folder: FOLDER,
-      subfolder: 'case-studies',
     },
     props.locale
   );
@@ -119,5 +120,5 @@ export const getStaticProps: GetStaticProps = async (props) => {
     return { notFound: true };
   }
 
-  return { props: { ...mdxFile } };
+  return { props: { mdxContent: mdxFile } };
 };

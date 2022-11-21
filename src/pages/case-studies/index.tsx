@@ -1,26 +1,27 @@
-import { getStaticFilesPaths, loadMdxFile } from 'modules/I18n/hoc/withMdx';
+import { loadMdxFile, getI18nContentFilePaths } from 'modules/I18n/hoc/withMdx';
 
 import Container from 'modules/Common/containers/Container';
 import type { GetStaticProps } from 'next';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
-import Link from 'next/link';
+import { Link } from 'modules/I18n';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import dayjs from 'dayjs';
-import slugify from 'slugify';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 
-export default function CaseStudiesPage({ caseStudiesMdx }: any) {
-  const { t } = useTranslation();
-  const router = useRouter();
+interface CaseStudy {
+  uri: string;
+  frontmatter: any;
+}
 
-  //Sort by date
+export default function CaseStudiesPage({ caseStudiesMdx }: { caseStudiesMdx: CaseStudy[] }) {
+  const { t } = useTranslation();
+
+  // Sort by date
   caseStudiesMdx.sort((a: any, b: any) => {
-    return (
-      Date.parse(b.mdxContent.frontmatter.dates[0]) - Date.parse(a.mdxContent.frontmatter.dates[0])
-    );
+    return Date.parse(b.frontmatter.dates[0]) - Date.parse(a.frontmatter.dates[0]);
   });
 
   return (
@@ -37,30 +38,25 @@ export default function CaseStudiesPage({ caseStudiesMdx }: any) {
       <Container paddingY={false}>
         <Container gridCols="10" gridGutters="9">
           <TextContent>
-            {caseStudiesMdx.map(({ mdxContent }: any, i: number) => {
-              const slug = slugify(mdxContent.frontmatter.title, {
-                lower: true,
-                strict: true,
-              });
-              const href = `${router.locale}/case-studies/${slug}`;
+            {caseStudiesMdx.map(({ uri, frontmatter }, i: number) => {
               const title = (
                 <h4 className="mb__0">
-                  <Link href={href}>{mdxContent.frontmatter.title}</Link>
+                  <Link href={uri}>{frontmatter.title}</Link>
                 </h4>
               );
               const subtitle = (
                 <div className="text__smallcaps mt__2XS">
-                  {getCaseStudieSubtitle(
-                    mdxContent.frontmatter.service,
-                    mdxContent.frontmatter.documents,
-                    mdxContent.frontmatter.dates
+                  {getCaseStudySubtitle(
+                    frontmatter.service,
+                    frontmatter.documents,
+                    frontmatter.dates
                   )}
                 </div>
               );
               const separator = caseStudiesMdx.length - 1 === i ? '' : <hr className="mt__XL" />;
 
               return (
-                <div key={mdxContent.frontmatter.title} className="mb__XL">
+                <div key={frontmatter.title} className="mb__XL">
                   {title}
                   {subtitle}
                   {separator}
@@ -76,20 +72,25 @@ export default function CaseStudiesPage({ caseStudiesMdx }: any) {
 
 export const getStaticProps: GetStaticProps = async (props) => {
   const locale = props.locale || 'en';
-  const casestudiesFilesPath = getStaticFilesPaths('pages', locale, 'case-studies');
-
-  const caseStudiesMdx: any = [];
-  casestudiesFilesPath.map(async (filename) => {
-    const mdxFile = await loadMdxFile(
-      {
-        load: 'mdx',
-        filename: `case-studies/${filename.replace('.mdx', '')}`,
-        folder: `pages`,
-      },
-      locale
-    );
-    caseStudiesMdx.push(mdxFile);
+  const { files: caseStudiesFilesPath } = getI18nContentFilePaths('pages', locale, {
+    subfolder: 'case-studies',
+    extension: false,
   });
+
+  const caseStudiesMdx: CaseStudy[] = [];
+
+  await Promise.all(
+    caseStudiesFilesPath.map(async (filename) => {
+      const mdxContent = await loadMdxFile(
+        {
+          filename,
+          folder: `pages`,
+        },
+        locale
+      );
+      caseStudiesMdx.push({ uri: `/${filename}`, frontmatter: mdxContent?.frontmatter || {} });
+    })
+  );
 
   return {
     props: {
@@ -99,7 +100,7 @@ export const getStaticProps: GetStaticProps = async (props) => {
   };
 };
 
-export function getCaseStudieSubtitle(service: string, documents: [], dates: []) {
+export function getCaseStudySubtitle(service: string, documents: [], dates: []) {
   const router = useRouter();
 
   //Map dates by years-months

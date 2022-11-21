@@ -1,5 +1,8 @@
 {
   "/subscribe": {
     "fr": "/souscrire"
+  },
+  "/case-studies": {
+    "fr": "/etudes-de-cas"
   }
 }
