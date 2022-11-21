@@ -1,7 +1,7 @@
 import Column from './Column';
 import Container from 'modules/Common/containers/Container';
 import { FiFileText as IconDocument } from 'react-icons/fi';
-import Link from 'next/link';
+import { Link } from 'modules/I18n';
 import React from 'react';
 import { Services } from 'modules/OTA-api/api';
 import s from './ServicesList.module.css';

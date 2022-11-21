@@ -8,11 +8,11 @@ import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
 import Instances from 'modules/Common/components/Instances';
 import Layout from 'modules/Common/containers/Layout';
-import Link from 'next/link';
+import { Link } from 'modules/I18n';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useRouter } from 'next/router';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from 'modules/I18n';
 
 const HomePage = () => {
   const { t } = useTranslation();

@@ -1,5 +1,5 @@
 import { FiChevronDown } from 'react-icons/fi';
-import Link from 'next/link';
+import Link from './Link';
 import React from 'react';
 import classNames from 'classnames';
 import s from './LanguageSwitcher.module.css';

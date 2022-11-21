@@ -4,14 +4,14 @@ import CardList from 'modules/Common/components/CardList';
 import CardTable from 'modules/Common/components/CardTable';
 import CardTableItem from 'modules/Common/components/CardTableItem';
 import { FiSearch as IconSearch } from 'react-icons/fi';
-import Link from 'next/link';
+import { Link } from 'modules/I18n';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import Image from 'next/image';
 import instancesData from '../../../../public/instances.json';
 import { kebabCase } from 'lodash';
 import { useRouter } from 'next/router';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from 'modules/I18n';
 
 type InstancesProps = {} & React.HTMLAttributes<HTMLDivElement>;
 

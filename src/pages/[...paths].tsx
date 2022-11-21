@@ -1,5 +1,5 @@
 import type { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next';
-import { WithMdxResult, getStaticFilesPaths, loadMdxFile } from 'modules/I18n/hoc/withMdx';
+import { WithMdxResult, getI18nContentFilePaths, loadMdxFile } from 'modules/I18n/hoc/withMdx';
 
 import Button from 'modules/Common/components/Button';
 import Column from 'modules/Common/components/Column';
@@ -8,16 +8,14 @@ import Contributors from 'modules/OTA-api/data-components/Contributors';
 import Hero from 'modules/Common/components/Hero';
 import { FiTwitter as IconTwitter } from 'react-icons/fi';
 import Layout from 'modules/Common/containers/Layout';
-import Link from 'next/link';
+import { Link } from 'modules/I18n';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import ThumbGallery from 'modules/Common/components/ThumbGallery';
 import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
-import useTranslation from 'next-translate/useTranslation';
-
-const FOLDER = 'pages';
+import { useTranslation } from 'modules/I18n';
 
 export default function PrivacyPolicyPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
@@ -82,9 +80,9 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     paths: (locales || []).reduce(
       (acc, locale) => [
         ...acc,
-        ...getStaticFilesPaths(FOLDER, locale).map((filename) => ({
+        ...getI18nContentFilePaths('pages', locale, { extension: false }).files.map((filename) => ({
           params: {
-            paths: [filename.replace('.mdx', '')],
+            paths: [filename],
           },
           locale,
         })),
@@ -96,18 +94,17 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (props) => {
-  const mdxFile = await loadMdxFile(
+  const mdxContent = await loadMdxFile(
     {
-      load: 'mdx',
       filename: (props?.params?.paths as string[]).join('/'),
-      folder: FOLDER,
+      folder: 'pages',
     },
     props.locale
   );
 
-  if (!mdxFile) {
+  if (!mdxContent) {
     return { notFound: true };
   }
 
-  return { props: { ...mdxFile } };
+  return { props: { mdxContent } };
 };

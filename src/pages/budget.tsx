@@ -6,7 +6,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import TextContent from 'modules/Common/components/TextContent';
 import { useRouter } from 'next/router';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from 'modules/I18n';
 import { buildExpensesData, ExpensesData } from 'pages/api/ota/expenses';
 
 const TotalExpendituresGraph = dynamic(
@@ -54,11 +54,9 @@ export default function BudgetPage({
   );
 }
 
-export const getStaticProps = withMdx({ load: 'mdx', filename: 'budget', folder: 'parts' })(
-  (props: any) => ({
-    props: {
-      ...props,
-      ...buildExpensesData(),
-    },
-  })
-);
+export const getStaticProps = withMdx({ filename: 'budget', folder: 'parts' })((props: any) => ({
+  props: {
+    ...props,
+    ...buildExpensesData(),
+  },
+}));

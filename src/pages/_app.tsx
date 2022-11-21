@@ -12,7 +12,7 @@ import { NotifierContainer } from 'hooks/useNotifier';
 import { SWRConfig } from 'swr';
 import { fetcher } from 'utils/api';
 
-import useLocale from 'modules/I18n/hooks/useLocale';
+import { useLocale } from 'modules/I18n';
 
 function App({ Component, pageProps }: AppProps<any>) {
   useLocale(pageProps.locale);

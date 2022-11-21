@@ -10,7 +10,7 @@ import Logo from 'modules/Common/components/Logo';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from 'modules/I18n';
 
 export default function MediaPage({ mdxContent }: WithMdxResult) {
   const { t } = useTranslation();
@@ -113,4 +113,4 @@ export default function MediaPage({ mdxContent }: WithMdxResult) {
   );
 }
 
-export const getStaticProps = withMdx({ load: 'mdx', filename: 'media', folder: 'parts' })();
+export const getStaticProps = withMdx({ filename: 'media', folder: 'parts' })();

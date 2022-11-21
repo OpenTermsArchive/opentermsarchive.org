@@ -10,9 +10,9 @@ import FooterMenu from '../components/FooterMenu';
 import Header from './Header';
 import HeaderMenu from '../components/HeaderMenu';
 import LanguageSwitcher from 'modules/I18n/components/LanguageSwitcher';
-import Link from 'next/link';
+import { Link } from 'modules/I18n';
 import classNames from 'classnames';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from 'modules/I18n';
 
 type Props = {
   children?: ReactNode;

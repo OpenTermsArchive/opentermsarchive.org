@@ -1,6 +1,8 @@
 # i18n module
 
-## install
+Caution: This module is based on next-translate but does not have the same signature for calls.
+
+## Install
 
 1. Copy this module
 
@@ -32,11 +34,9 @@ module.exports = nextTranslate({
 
 ```
 
-## usage
+## Usage
 
-See https://github.com/aralroca/next-translate#readme
-
-### main concept
+### Main concept
 
 Translations are located in
 
@@ -52,23 +52,42 @@ Example:
 - `home:title`
 - `contribute:subscribe_form.email.placeholder`
 
-### translate simple strings
+### Import
 
 ```
-{t('contribute:service_page.title', 'What is expected from you')}
+import { useTranslation } from 'modules/I18n';
+
+export default () => {
+  const { t, tC } = useTranslation();
+}
+
 ```
 
-### translate html
+### Language Switching
+
+A component called `LanguageSwitcher` is available in the `components` folder.
+
+### Translate simple strings
+
+This will return a `string`
 
 ```
-<Trans i18nKey="contribute:service_page.description1">
-  Most of the time, contractual documents contains a header, a footer, navigation
-  menus, possibly ads… We aim at tracking only{' '}
-  <strong>the significant parts of the document</strong>
-</Trans>
+{t('contribute:service_page.title')}
+{t('contribute:service_page.title-with-value', { value: 'Dynamic value' })}
+{t('contribute:service_page.title-with-value', { dynamicValue: 'Dynamic value' }, { fallback: "A title with {{dynamicValue}}" })}
 ```
 
-### translate complete files with mdx
+### Translate html
+
+This will return a `React Component`
+
+```
+{tC('contribute:service_page.title')}
+{tC('contribute:service_page.title-with-value', { value: 'Dynamic value' })}
+{tC('contribute:service_page.title-with-value', { dynamicValue: 'Dynamic value' }, { fallback: "A title with {{dynamicValue}}" })}
+```
+
+### Translate complete files with mdx
 
 You can use the helper `withMdx` to ask for content of mdx files that are located in the `content` folder and with the name structure `<folder>/<filename>.<lang>.mdx`
 
@@ -92,7 +111,54 @@ export default function TermsOfServicePage({ mdxContent }: WithI18nResult) {
   );
 }
 
-export const getStaticProps = withI18n({ load: 'mdx', folder: "static", filename: "terms-of-service" })();
+export const getStaticProps = withI18n({ folder: "static", filename: "terms-of-service" })();
+```
+
+### Translate slugs
+
+This is kind of a tricky thing to do with nextJs so this is a basic implementation that aims at being automatized better.
+
+1. Create a `permalinks.json` file in `modules/i18n` for translating slugs of pages in `src/pages` folder
+
+```
+{
+  "/about": {
+    "fr": "/a-propos",
+    ...
+  },
+  ...
+}
+```
+
+2. Use the next config plugin provided in this modules's `next.config.js`
+
+```
+const nextI18nRoutes = require('./src/modules/I18n/next.config');
+module.exports = nextI18nRoutes({
+  ...
+})
+```
+
+3. Replace all links with I18n Link
+
+```
+import Link from 'next/link';
+# becomes
+import { Link } from 'modules/I18n';
+```
+
+4. Use `permalink` frontmatter value in `content/pages/*.mdx` files
+
+**Note**: this will only work in translated files, as for the default language, the file name will be taken into account
+
+```
+---
+title: Page Title
+permalink: /a-propos
+---
+
+Markdown text
+...
 ```
 
 ## VSCode snippets
@@ -103,8 +169,8 @@ Get fast with these snippets
   "snippet-t": {
     "prefix": "t",
     "body": [
-      "import useTranslation from 'next-translate/useTranslation'",
-      "const { t } = useTranslation();"
+      "import { useTranslation } from 'modules/I18n'",
+      "const { t, tC } = useTranslation();"
     ],
     "description": "use translation hook"
   },

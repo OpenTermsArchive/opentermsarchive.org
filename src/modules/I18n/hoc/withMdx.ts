@@ -4,13 +4,13 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote';
 import fs from 'fs';
 import { serialize } from 'next-mdx-remote/serialize';
 import path from 'path';
+export { getI18nContentFilePaths } from '../utils';
 
 type HasCallback<T> = T extends undefined
   ? GetStaticProps<MdxPageProps>
   : Promise<GetStaticPropsContext & MdxPageProps>;
 
 interface WithMdxOptions {
-  load: 'mdx';
   filename: string;
   folder: string;
 }
@@ -23,28 +23,6 @@ export interface MdxPageProps {
 
 export type WithMdxResult = GetStaticPropsContext & MdxPageProps;
 
-export const getStaticFilesPaths = (folder: string, locale: string, subfolder?: string) => {
-  let files: string[] = [];
-  const pathParts = [CONTENT_FOLDER, folder, locale];
-  if (subfolder) {
-    pathParts.push(subfolder);
-  }
-
-  const filesAndFolders = fs.readdirSync(path.join(process.cwd(), ...pathParts), {
-    withFileTypes: true,
-  });
-
-  for (const fileOrFolder of filesAndFolders) {
-    if (fileOrFolder.isDirectory()) {
-      files = [...files, ...getStaticFilesPaths(folder, locale, fileOrFolder.name)];
-    } else {
-      files.push(fileOrFolder.name);
-    }
-  }
-
-  return files;
-};
-
 export const loadMdxFile = async (options: WithMdxOptions, locale?: string) => {
   const folder = path.join(process.cwd(), CONTENT_FOLDER, options.folder);
 
@@ -55,17 +33,13 @@ export const loadMdxFile = async (options: WithMdxOptions, locale?: string) => {
   let fileContent = '';
 
   try {
-    fileContent = fs
-      .readFileSync(`${folder}/${locale}/${options?.filename}.${options?.load}`)
-      .toString();
+    fileContent = fs.readFileSync(`${folder}/${locale}/${options?.filename}.mdx`).toString();
   } catch (e) {
     try {
-      fileContent = fs
-        .readFileSync(`${folder}/${'en'}/${options?.filename}.${options?.load}`)
-        .toString();
+      fileContent = fs.readFileSync(`${folder}/${'en'}/${options?.filename}.mdx`).toString();
     } catch (e) {
       if (options?.filename.includes('home')) {
-        console.error(`Could not find ${folder}/${'en'}/${options?.filename}.${options?.load}`);
+        console.error(`Could not find ${folder}/${'en'}/${options?.filename}.mdx`);
       }
       fileContent = '';
     }
@@ -75,14 +49,10 @@ export const loadMdxFile = async (options: WithMdxOptions, locale?: string) => {
     return undefined;
   }
 
-  const mdxContent = await serialize(fileContent, {
+  return await serialize(fileContent, {
     // Indicates whether or not to parse the frontmatter from the mdx source
     parseFrontmatter: true,
   });
-
-  return {
-    mdxContent,
-  };
 };
 
 const withMdx =
@@ -90,7 +60,7 @@ const withMdx =
     const getResponseWithMdxProps: HasCallback<typeof callback> = async (props) => {
       const computedProps: WithMdxResult = {
         ...props,
-        ...(options && options?.load === 'mdx' ? await loadMdxFile(options, props.locale) : {}),
+        ...(options ? { mdxContent: await loadMdxFile(options, props.locale) } : {}),
       };
 
       if (!callback) {

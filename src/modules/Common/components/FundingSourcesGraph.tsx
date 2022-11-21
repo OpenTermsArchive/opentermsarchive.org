@@ -1,6 +1,6 @@
 import React from 'react';
 import { ResponsivePie } from '@nivo/pie';
-import useTranslation from 'next-translate/useTranslation';
+import { useTranslation } from 'modules/I18n';
 
 type FundingSourcesGraphProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
