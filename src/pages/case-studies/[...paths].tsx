@@ -1,7 +1,7 @@
 import type { GetStaticPaths, GetStaticPathsResult, GetStaticProps } from 'next';
 import { WithMdxResult, getI18nContentFilePaths, loadMdxFile } from 'modules/I18n/hoc/withMdx';
 
-import Breadcrumb from 'components/BreadCrumb';
+import BreadCrumb from 'components/BreadCrumb';
 import Button from 'modules/Common/components/Button';
 import Container from 'modules/Common/containers/Container';
 import Contributors from 'modules/OTA-api/data-components/Contributors';
@@ -25,7 +25,7 @@ export default function CaseStudyPage({ mdxContent }: WithMdxResult) {
   const { t } = useTranslation();
   const router = useRouter();
 
-  //Breadcrumb items
+  //BreadCrumb items
   let breadcrumbItems = new Array();
   breadcrumbItems.push({
     name: t('case-studies:breadcrumb.title'),
@@ -47,7 +47,7 @@ export default function CaseStudyPage({ mdxContent }: WithMdxResult) {
 
       <Container layout="wide" gray={true} paddingY={false}>
         <Container gridCols="12" gridGutters="11" paddingYSmall={true}>
-          <Breadcrumb items={breadcrumbItems} className="mb__0"></Breadcrumb>
+          <BreadCrumb items={breadcrumbItems} className="mb__0"></BreadCrumb>
         </Container>
       </Container>
 
