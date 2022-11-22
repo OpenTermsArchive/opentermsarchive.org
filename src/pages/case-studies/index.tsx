@@ -7,7 +7,6 @@ import Layout from 'modules/Common/containers/Layout';
 import { Link } from 'modules/I18n';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
-import dayjs from 'dayjs';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 
@@ -102,30 +101,10 @@ export const getStaticProps: GetStaticProps = async (props) => {
 
 export function getCaseStudySubtitle(service: string, termsTypes: [], dates: []) {
   const router = useRouter();
-
-  //Map dates by years-months
-  let orderedDates = new Map();
-  dates.forEach((date: string) => {
-    const yearsMonths = dayjs(date).format('YYYY-MM');
-    const day = dayjs(date).format('DD');
-    let yearMonthsGroup = orderedDates.get(yearsMonths) ?? [];
-    yearMonthsGroup.push(day);
-    orderedDates.set(yearsMonths, yearMonthsGroup);
-  });
-
-  //Create dates to display
-  let displayDates = new Array();
-  orderedDates.forEach((days, yearsMonths) => {
-    const year = dayjs(yearsMonths.toString()).format('YYYY');
-    let month = dayjs(yearsMonths.toString()).format('MMMM');
-    let displayDate = `${month} ${days}, ${year}`;
-    if (router.locale === 'fr') {
-      month = dayjs(yearsMonths.toString()).locale('fr').format('MMMM');
-      displayDate = `${days} ${month} ${year}`;
-    }
-    displayDates.push(displayDate);
-  });
-
+  dates.sort((date1, date2) => date1 - date2);
+  // @ts-ignore
+  const formatter = new Intl.DateTimeFormat(router.locale, { dateStyle: 'long' });
+  const displayDates = dates.map((date) => formatter.format(new Date(date))).join(' - ');
   const separator = ` ▪ `;
   return `${service}${separator}${termsTypes.join(', ')}${separator}${displayDates}`;
 }
