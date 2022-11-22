@@ -12,7 +12,7 @@ import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 
 interface CaseStudy {
-  uri: string;
+  url: string;
   frontmatter: any;
 }
 
@@ -38,10 +38,10 @@ export default function CaseStudiesPage({ caseStudiesMdx }: { caseStudiesMdx: Ca
       <Container paddingY={false}>
         <Container gridCols="10" gridGutters="9">
           <TextContent>
-            {caseStudiesMdx.map(({ uri, frontmatter }, i: number) => {
+            {caseStudiesMdx.map(({ url, frontmatter }, i: number) => {
               const title = (
                 <h4 className="mb__0">
-                  <Link href={uri}>{frontmatter.title}</Link>
+                  <Link href={url}>{frontmatter.title}</Link>
                 </h4>
               );
               const subtitle = (
@@ -88,7 +88,7 @@ export const getStaticProps: GetStaticProps = async (props) => {
         },
         locale
       );
-      caseStudiesMdx.push({ uri: `/${filename}`, frontmatter: mdxContent?.frontmatter || {} });
+      caseStudiesMdx.push({ url: `/${filename}`, frontmatter: mdxContent?.frontmatter || {} });
     })
   );
 
