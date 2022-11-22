@@ -1,4 +1,4 @@
-import { loadMdxFile, getI18nContentFilePaths } from 'modules/I18n/hoc/withMdx';
+import { getI18nContentFilePaths, loadMdxFile } from 'modules/I18n/hoc/withMdx';
 
 import Container from 'modules/Common/containers/Container';
 import type { GetStaticProps } from 'next';
@@ -48,7 +48,7 @@ export default function CaseStudiesPage({ caseStudiesMdx }: { caseStudiesMdx: Ca
                 <div className="text__smallcaps mt__2XS">
                   {getCaseStudySubtitle(
                     frontmatter.service,
-                    frontmatter.documents,
+                    frontmatter.terms_types,
                     frontmatter.dates
                   )}
                 </div>
@@ -100,7 +100,7 @@ export const getStaticProps: GetStaticProps = async (props) => {
   };
 };
 
-export function getCaseStudySubtitle(service: string, documents: [], dates: []) {
+export function getCaseStudySubtitle(service: string, termsTypes: [], dates: []) {
   const router = useRouter();
 
   //Map dates by years-months
@@ -127,5 +127,5 @@ export function getCaseStudySubtitle(service: string, documents: [], dates: []) 
   });
 
   const separator = ` ▪ `;
-  return `${service}${separator}${documents.join(', ')}${separator}${displayDates}`;
+  return `${service}${separator}${termsTypes.join(', ')}${separator}${displayDates}`;
 }

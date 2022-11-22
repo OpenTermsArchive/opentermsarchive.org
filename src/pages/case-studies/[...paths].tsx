@@ -63,7 +63,11 @@ export default function CaseStudyPage({ mdxContent }: WithMdxResult) {
             <h1 className="mb__S">{frontmatter.title}</h1>
 
             <h4 className="h4__ultralight mb__3XL">
-              {getCaseStudySubtitle(frontmatter.service, frontmatter.documents, frontmatter.dates)}
+              {getCaseStudySubtitle(
+                frontmatter.service,
+                frontmatter.terms_types,
+                frontmatter.dates
+              )}
             </h4>
 
             {mdxContent && (
