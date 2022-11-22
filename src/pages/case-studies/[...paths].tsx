@@ -18,7 +18,7 @@ import { getCaseStudySubtitle } from 'pages/case-studies';
 import { useRouter } from 'next/router';
 import useTranslation from 'next-translate/useTranslation';
 
-const FOLDER = 'pages';
+const STATIC_PAGES_PATH = 'pages';
 
 export default function CaseStudyPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
@@ -95,7 +95,7 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     paths: (locales || []).reduce(
       (acc, locale) => [
         ...acc,
-        ...getI18nContentFilePaths(FOLDER, locale, {
+        ...getI18nContentFilePaths(STATIC_PAGES_PATH, locale, {
           subfolder: 'case-studies',
           extension: false,
         }).files.map((filename) => ({
@@ -115,7 +115,7 @@ export const getStaticProps: GetStaticProps = async (props) => {
   const mdxFile = await loadMdxFile(
     {
       filename: `case-studies/${(props?.params?.paths as string[]).join('/')}`,
-      folder: FOLDER,
+      folder: STATIC_PAGES_PATH,
     },
     props.locale
   );

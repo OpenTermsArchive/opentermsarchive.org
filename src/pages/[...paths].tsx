@@ -18,7 +18,7 @@ import ThumbGallery from 'modules/Common/components/ThumbGallery';
 import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
 import useTranslation from 'next-translate/useTranslation';
 
-const FOLDER = 'pages';
+const STATIC_PAGES_PATH = 'pages';
 
 export default function StaticPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
@@ -96,12 +96,14 @@ export const getStaticPaths: GetStaticPaths = async ({ locales }) => {
     paths: (locales || []).reduce(
       (acc, locale) => [
         ...acc,
-        ...getI18nContentFilePaths(FOLDER, locale, { extension: false }).files.map((filename) => ({
-          params: {
-            paths: [filename],
-          },
-          locale,
-        })),
+        ...getI18nContentFilePaths(STATIC_PAGES_PATH, locale, { extension: false }).files.map(
+          (filename) => ({
+            params: {
+              paths: [filename],
+            },
+            locale,
+          })
+        ),
       ],
       [] as GetStaticPathsResult['paths']
     ),
@@ -113,7 +115,7 @@ export const getStaticProps: GetStaticProps = async (props) => {
   const mdxContent = await loadMdxFile(
     {
       filename: (props?.params?.paths as string[]).join('/'),
-      folder: FOLDER,
+      folder: STATIC_PAGES_PATH,
     },
     props.locale
   );
