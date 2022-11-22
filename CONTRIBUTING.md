@@ -6,37 +6,6 @@ Although we use the MDX format which sometimes allows the instantiation of React
 
 Prefer Markdown over strings for translations, as soon as there are multiple paragraphs.
 
-## Copywriting
-
-### Common to all languages
-
-- The name of the product is “Open Terms Archive”.
-- Open Terms Archive is a brand name, not a common noun. It does not have a determiner.
-- It is singular. It is not “Open Terms Archives”.
-- It has spaces. It is not “OpenTermsArchive”.
-- As often as possible, non-breakable spaces should be used to separate the three words, in order to avoid line breaks in the middle of the name.
-- While the “OTA” abbreviation can be used in internal documents and discussions, it is not used publicly (at least not by us).
-
-### English examples
-
-```diff
-- OTA enables activists to identify misleading terms.
-- The Open Terms Archive enables activists to identify misleading terms.
-- OpenTermsArchive enables activists to identify misleading terms.
-+ Open Terms Archive enables activists to identify misleading terms.
-```
-
-### Exemples en français
-
-- Open Terms Archive est un nom féminin, car il s'agit de l'archive, la base de données.
-
-```diff
-- OTA permet aux parlementaires de suivre l'application de leurs lois.
-- L’Open Terms Archive permet aux parlementaires de suivre l'application de leurs lois.
-- OpenTermsArchive permet aux parlementaires de suivre l'application de leurs lois.
-+ Open Terms Archive permet aux parlementaires de suivre l'application de leurs lois.
-```
-
 ## Contributing code
 
 ### Pull requests

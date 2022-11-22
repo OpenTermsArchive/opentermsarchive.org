@@ -3,6 +3,10 @@
     clear: both;
     border: 1px solid var(--colorBlack200);
     margin-bottom: var(--mXL);
+
+    &:global(.mb__3XL) {
+      margin-bottom: var(--m3XL);
+    }
   }
 
   & p {
@@ -178,6 +182,10 @@
   }
 
   & blockquote {
+    margin-bottom: var(--mM);
+  }
+
+  & pre {
     margin-bottom: var(--mM);
   }
 
