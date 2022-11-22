@@ -54,7 +54,7 @@ module.exports = nextI18nRoutes({
         destination: 'https://contribute.opentermsarchive.org/fr/:slug',
         permanent: true,
         locale: false,
-      },
+      }
     ];
   },
   async rewrites() {
@@ -62,7 +62,7 @@ module.exports = nextI18nRoutes({
       {
         source: '/data/api/:slug*',
         destination: 'http://51.89.227.200:7011/data/api/:slug*',
-      },
+      }
     ];
   },
   async headers() {

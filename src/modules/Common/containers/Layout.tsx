@@ -56,9 +56,7 @@ const Layout = ({
                     </li>
                     <li>
                       <Link href={'/about'}>
-                        <a onClick={toggleExtended} title={t('about:hero.subtitle')}>
-                          {t('header:link.about')}
-                        </a>
+                        <a onClick={toggleExtended}>{t('header:link.about')}</a>
                       </Link>
                     </li>
                   </ul>

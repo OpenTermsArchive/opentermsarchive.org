@@ -1,10 +1,12 @@
 import Head from 'next/head';
 import React from 'react';
-import { useRouter } from 'next/router';
 import { getLinkAlternates } from 'modules/I18n';
+import { useRouter } from 'next/router';
+import { words } from 'lodash';
 const twitterUser = 'OpenTerms';
 const websiteName = 'opentermsarchive.org';
 const type = 'website';
+const MAX_DESC_WORDS = 25;
 
 export default function CommonHead({
   title = 'Open Terms Archive',
@@ -27,10 +29,16 @@ export default function CommonHead({
     locales: router.locales || [],
   });
 
+  let shortenedDescription = `${words(description).slice(0, MAX_DESC_WORDS).join(' ')}`;
+  shortenedDescription =
+    words(description).length >= MAX_DESC_WORDS
+      ? `${shortenedDescription}${'…'}`
+      : `${shortenedDescription}${'.'}`;
+
   return (
     <Head>
       <title>{title}</title>
-      <meta name="description" content={description} />
+      <meta name="description" content={shortenedDescription} />
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
