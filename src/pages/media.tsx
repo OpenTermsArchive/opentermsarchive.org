@@ -1,4 +1,5 @@
 import withMdx, { WithMdxResult } from 'modules/I18n/hoc/withMdx';
+
 import Article from 'modules/Common/components/Article';
 import Button from 'modules/Common/components/Button';
 import ButtonBlock from 'modules/Common/components/ButtonBlock';
@@ -102,12 +103,12 @@ export default function MediaPage({ mdxContent }: WithMdxResult) {
         </Container>
       </Container>
 
-      <Container gridCols="8" gridGutters="7" flex={true}>
-        <Article title={t('media:press.title')} subtitle={t('media:press.subtitle')}>
-          <TextContent marginTopLarge={true}>
+      <Container paddingTop={false}>
+        <Container gridCols="9" gridGutters="8">
+          <TextContent>
             {mdxContent && <MDXRemote {...mdxContent} components={{ Button: Button }} />}
           </TextContent>
-        </Article>
+        </Container>
       </Container>
     </Layout>
   );

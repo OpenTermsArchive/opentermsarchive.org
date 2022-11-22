@@ -84,6 +84,10 @@
       margin-bottom: var(--mXL);
     }
 
+    &:global(.mb__2XL) {
+      margin-bottom: var(--m2XL);
+    }
+
     &:global(.mb__3XL) {
       margin-bottom: var(--m3XL);
     }
