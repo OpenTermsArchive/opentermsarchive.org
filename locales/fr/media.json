@@ -1,11 +1,9 @@
 {
-  "hero.title": "Média",
   "logo.alternativeversion.title": "Version alternative",
   "logo.black.background.desc": "Pour fond sombre",
   "logo.cta.label": "Télécharger en PNG",
   "logo.cta.svg.label": "ou en SVG",
   "logo.mainversion.title": "Version principale",
   "logo.title": "Logo",
-  "logo.white.background.desc": "Pour fond blanc",
-  "seo.title": "Media"
+  "logo.white.background.desc": "Pour fond blanc"
 }

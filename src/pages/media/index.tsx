@@ -1,10 +1,10 @@
-import withMdx, { WithMdxResult } from 'modules/I18n/hoc/withMdx';
+import { WithMdxResult, loadMdxFile } from 'modules/I18n/hoc/withMdx';
 
-import Article from 'modules/Common/components/Article';
 import Button from 'modules/Common/components/Button';
 import ButtonBlock from 'modules/Common/components/ButtonBlock';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
+import type { GetStaticProps } from 'next';
 import Hero from 'modules/Common/components/Hero';
 import Layout from 'modules/Common/containers/Layout';
 import Logo from 'modules/Common/components/Logo';
@@ -13,13 +13,17 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'modules/I18n';
 
+const STATIC_PAGES_PATH = 'pages';
+
 export default function MediaPage({ mdxContent }: WithMdxResult) {
+  const { frontmatter = {} } = mdxContent || {};
   const { t } = useTranslation();
+
   return (
-    <Layout title={t('media:seo.title')}>
+    <Layout title={frontmatter['title']} desc={frontmatter['description']}>
       <Container layout="wide" paddingY={false} dark={true}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Hero title={t('media:hero.title')}></Hero>
+          <Hero title={frontmatter['title']}></Hero>
         </Container>
       </Container>
 
@@ -114,4 +118,18 @@ export default function MediaPage({ mdxContent }: WithMdxResult) {
   );
 }
 
-export const getStaticProps = withMdx({ filename: 'media', folder: 'parts' })();
+export const getStaticProps: GetStaticProps = async (props) => {
+  const mdxContent = await loadMdxFile(
+    {
+      filename: 'media',
+      folder: STATIC_PAGES_PATH,
+    },
+    props.locale
+  );
+
+  if (!mdxContent) {
+    return { notFound: true };
+  }
+
+  return { props: { mdxContent } };
+};
