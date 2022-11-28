@@ -6,9 +6,11 @@ type FundingSourcesGraphProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
 const graphPieColors = [
   'var(--colorPrimary)',
-  'hsl(205,80%,65%)',
-  'hsl(205,60%,70%)',
-  'hsl(205,40%,75%)',
+  'hsl(205,80%,40%)',
+  'hsl(205,60%,50%)',
+  'hsl(205,40%,60%)',
+  'hsl(205,40%,70%)',
+  'hsl(205,40%,80%)',
 ];
 
 const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
@@ -16,11 +18,11 @@ const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
   const fundingSources = [
     {
       id: t('budget:funding-sources.meae'),
-      value: 369383,
+      value: 476988,
     },
     {
       id: t('budget:funding-sources.france-relance'),
-      value: 136356,
+      value: 145695,
     },
     {
       id: t('budget:funding-sources.reset'),
@@ -28,7 +30,15 @@ const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
     },
     {
       id: t('budget:funding-sources.dinum'),
-      value: 18690,
+      value: 18750,
+    },
+    {
+      id: t('budget:funding-sources.comeu'),
+      value: 12000,
+    },
+    {
+      id: t('budget:funding-sources.ubremen'),
+      value: 11537,
     },
   ];
 
