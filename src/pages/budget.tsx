@@ -1,13 +1,14 @@
+import { ExpensesData, buildExpensesData } from 'pages/api/ota/expenses';
+import withMdx, { WithMdxResult } from 'modules/I18n/hoc/withMdx';
+
 import Container from 'modules/Common/containers/Container';
 import Layout from 'modules/Common/containers/Layout';
-import withMdx, { WithMdxResult } from 'modules/I18n/hoc/withMdx';
 import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
-import dynamic from 'next/dynamic';
 import TextContent from 'modules/Common/components/TextContent';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'modules/I18n';
-import { buildExpensesData, ExpensesData } from 'pages/api/ota/expenses';
 
 const TotalExpendituresGraph = dynamic(
   () => import('modules/Common/components/TotalExpendituresGraph'),
@@ -28,7 +29,7 @@ export default function BudgetPage({
 
   return (
     <Layout title={t('budget:seo.title')}>
-      <Container gridCols="10" gridGutters="9">
+      <Container gridCols="12" gridGutters="11">
         <TextContent>
           <MDXRemote
             {...(mdxContent as any)}
