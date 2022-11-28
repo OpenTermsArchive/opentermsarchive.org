@@ -7,10 +7,10 @@ type FundingSourcesGraphProps = {} & React.HTMLAttributes<HTMLDivElement>;
 const graphPieColors = [
   'var(--colorPrimary)',
   'hsl(205,80%,40%)',
-  'hsl(205,60%,50%)',
-  'hsl(205,40%,60%)',
-  'hsl(205,40%,70%)',
-  'hsl(205,40%,80%)',
+  'hsl(205,60%,30%)',
+  'hsl(205,40%,25%)',
+  'hsl(205,40%,20%)',
+  'hsl(205,40%,10%)',
 ];
 
 const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
@@ -50,12 +50,33 @@ const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
     <ResponsivePie
       data={fundingSources}
       colors={graphPieColors}
-      margin={{ top: 44, right: 44, bottom: 44, left: 44 }}
-      arcLinkLabelsThickness={2}
-      arcLabel={function (e) {
+      margin={{ top: 44, right: 44, bottom: 200, left: 44 }}
+      innerRadius={0.6}
+      enableArcLabels={false}
+      arcLinkLabel={function (e) {
         return Math.round((100 * e.value) / totalFundingSources).toString() + '%';
       }}
-      arcLabelsTextColor="var(--colorBlack800)"
+      arcLinkLabelsTextColor="var(--colorBlack600)"
+      arcLinkLabelsStraightLength={4}
+      arcLinkLabelsTextOffset={4}
+      theme={{ legends: { text: { fontSize: 16 } } }}
+      legends={[
+        {
+          anchor: 'bottom',
+          direction: 'column',
+          justify: false,
+          translateX: 0,
+          translateY: 200,
+          itemsSpacing: 0,
+          itemWidth: 240,
+          itemHeight: 24,
+          itemTextColor: 'var(--colorBlack800)',
+          itemDirection: 'left-to-right',
+          itemOpacity: 1,
+          symbolSize: 18,
+          symbolShape: 'circle',
+        },
+      ]}
     />
   );
 };
