@@ -1,7 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import dayjs from 'dayjs';
-import HttpStatusCode from 'http-status-codes';
+
 import { CommonResponse } from 'interfaces';
+import HttpStatusCode from 'http-status-codes';
+import dayjs from 'dayjs';
 
 export interface ExpensesData {
   expenses: typeof expenses;
@@ -29,15 +30,21 @@ const expenses = {
   '2021-07-01': 10803,
   '2021-08-01': 12390,
   '2021-09-01': 14839,
-  '2021-10-01': 42231,
+  '2021-10-01': 42477,
   '2021-11-01': 32106,
   '2021-12-01': 13784,
-  '2022-01-01': 914,
-  '2022-02-01': 10946,
-  '2022-03-01': 45202,
-  '2022-04-01': 25530,
-  '2022-05-01': 37457,
-  '2022-06-01': 30765,
+  '2022-01-01': 1174,
+  '2022-02-01': 11206,
+  '2022-03-01': 46724,
+  '2022-04-01': 29928,
+  '2022-05-01': 41109,
+  '2022-06-01': 40104,
+  '2022-07-01': 38179,
+  '2022-08-01': 21016,
+  '2022-09-01': 37269,
+  '2022-10-01': 28765,
+  '2022-11-01': 46915,
+  '2022-12-01': 14278,
 };
 
 export const buildExpensesData = (): ExpensesData => {
