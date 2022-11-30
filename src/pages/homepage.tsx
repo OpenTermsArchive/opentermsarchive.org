@@ -26,7 +26,7 @@ const HomePage = () => {
         </Container>
       </Container>
       {/* How it works -  1 step */}
-      <Container layout="wide" paddingY={false} id="howitworks">
+      <Container layout="wide" paddingY={false} id="how-it-works">
         <Container gridCols="11" gridGutters="10" paddingX={false}>
           <h2 className="text__center">{t('homepage:how.title')}</h2>
         </Container>
@@ -175,7 +175,7 @@ const HomePage = () => {
       </Container>
 
       {/* Product newsletter */}
-      <Container layout="wide" dark={true} paddingY={false} id="product-newsletter">
+      <Container layout="wide" dark={true} paddingY={false} id="newsletter">
         <Container gridCols="9" gridGutters="8" flex={true}>
           <Column width={40} alignX="center" alignY="center">
             <IconMail size="128" color="var(--colorBlack400)" strokeWidth="1" />
