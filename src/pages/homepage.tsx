@@ -20,13 +20,13 @@ const HomePage = () => {
   return (
     <Layout title={t('homepage:seo.title')} desc={t('homepage:seo.desc')}>
       {/* Mission statement + What is it ? */}
-      <Container layout="wide" dark={true} paddingY={false}>
+      <Container layout="wide" dark={true} paddingY={false} id="mission-statement">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero title={t('homepage:mission_statement')} subtitle={t('homepage:what_it_is')}></Hero>
         </Container>
       </Container>
       {/* How it works -  1 step */}
-      <Container layout="wide" paddingY={false}>
+      <Container layout="wide" paddingY={false} id="how-it-works">
         <Container gridCols="11" gridGutters="10" paddingX={false}>
           <h2 className="text__center">{t('homepage:how.title')}</h2>
         </Container>
@@ -43,7 +43,7 @@ const HomePage = () => {
         </Container>
       </Container>
       {/* How it works -  2 step */}
-      <Container layout="wide" paddingY={false}>
+      <Container layout="wide" paddingY={false} id="archival">
         <Container gridCols="11" gridGutters="10" flex={true} paddingX={false}>
           <Column width={50}>
             <h3>{t('homepage:how.bloc2.title')}</h3>
@@ -57,7 +57,7 @@ const HomePage = () => {
         </Container>
       </Container>
       {/* How it works -  3 step */}
-      <Container layout="wide" paddingY={false}>
+      <Container layout="wide" paddingY={false} id="detection">
         <Container gridCols="11" gridGutters="10" flex={true} paddingX={false}>
           <Column width={50}>
             <h3>{t('homepage:how.bloc3.title')}</h3>
@@ -71,7 +71,7 @@ const HomePage = () => {
         </Container>
       </Container>
       {/* How it works -  4 step */}
-      <Container layout="wide" paddingTop={false}>
+      <Container layout="wide" paddingTop={false} id="publishing">
         <Container gridCols="11" gridGutters="10" flex={true} paddingX={false}>
           <Column width={50}>
             <h3>{t('homepage:how.bloc4.title')}</h3>
@@ -86,14 +86,14 @@ const HomePage = () => {
       </Container>
 
       {/* Instances */}
-      <Container gray={true} layout="wide" paddingX={false}>
+      <Container gray={true} layout="wide" paddingX={false} id="instances">
         <Container gridCols="10" gridGutters="9" paddingTop={false}>
           <Instances />
         </Container>
       </Container>
 
       {/* Follow us */}
-      <Container layout="wide" paddingY={false} dark={true}>
+      <Container layout="wide" paddingY={false} dark={true} id="follow-us">
         <Container gridCols="9" gridGutters="8" flex={true}>
           <Column width={40} alignX="center" alignY="center">
             <IconTwitter size="128" color="var(--colorBlack400)" strokeWidth="1px" />
@@ -112,7 +112,7 @@ const HomePage = () => {
       </Container>
 
       {/* Reuses */}
-      <Container gray={true} layout="wide" paddingX={false}>
+      <Container gray={true} layout="wide" paddingX={false} id="reuses">
         <Container gridCols="12" gridGutters="11">
           <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
             <Card
@@ -175,7 +175,7 @@ const HomePage = () => {
       </Container>
 
       {/* Product newsletter */}
-      <Container layout="wide" dark={true} paddingY={false}>
+      <Container layout="wide" dark={true} paddingY={false} id="newsletter">
         <Container gridCols="9" gridGutters="8" flex={true}>
           <Column width={40} alignX="center" alignY="center">
             <IconMail size="128" color="var(--colorBlack400)" strokeWidth="1" />
@@ -213,7 +213,7 @@ const HomePage = () => {
       </Container>
 
       {/* FOSS & Contributors */}
-      <Container layout="wide">
+      <Container layout="wide" id="foss">
         <Container gridCols="12" gridGutters="11" paddingY={false}>
           <TextContent className="">
             <h2>{t('homepage:foss.title')}</h2>
