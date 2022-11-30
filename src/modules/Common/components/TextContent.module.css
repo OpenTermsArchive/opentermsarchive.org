@@ -189,11 +189,6 @@
     margin-bottom: var(--mM);
   }
 
-  & code {
-    background-color: var(--colorBlack200);
-    padding: 0 0.4rem;
-  }
-
   & button {
     margin-bottom: var(--mXL);
 
