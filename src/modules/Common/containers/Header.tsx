@@ -1,7 +1,7 @@
+import { Link, useTranslation } from 'modules/I18n';
 import { useLockBodyScroll, useToggle, useWindowSize } from 'react-use';
 
 import { FiX } from 'react-icons/fi';
-import { Link, useTranslation } from 'modules/I18n';
 import Logo from 'modules/Common/components/Logo';
 import React from 'react';
 import classNames from 'classnames';
@@ -23,9 +23,7 @@ const Header: React.FC<HeaderProps> = ({ children, className, ...props }) => {
     <header className={classNames(s.header, { [s.header__isOpen]: open })} {...props}>
       <div className={s.header_logo}>
         <Link href="/">
-          <a>
-            <Logo />
-          </a>
+          <Logo />
         </Link>
       </div>
 

@@ -38,10 +38,8 @@ const ServicesList: React.FC<ServicesListProps> = ({
                         key={`service_list_${serviceName}_${documentType}`}
                       >
                         <IconDocument color="#999999" size={14} />
-                        <Link href={target}>
-                          <a className="a__small" target="_blank" rel="noopener">
-                            {documentType}
-                          </a>
+                        <Link href={target} className="a__small" target="_blank" rel="noopener">
+                          {documentType}
                         </Link>
                       </div>
                     );

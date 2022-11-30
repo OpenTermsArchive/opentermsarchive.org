@@ -28,7 +28,7 @@ const Breadcrumb: React.FC<IProps & React.HTMLAttributes<HTMLDivElement>> = ({
           <li key={name}>
             {url && (
               <Link href={url} passHref={!url.startsWith('/')}>
-                <a>{name}</a>
+                {name}
               </Link>
             )}
             {!url && <span>{name}</span>}

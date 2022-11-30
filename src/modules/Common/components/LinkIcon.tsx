@@ -1,8 +1,7 @@
 import * as FeatherIcons from 'react-icons/fi';
 
-import { LinkProps } from 'next/link';
 import { Link } from 'modules/I18n';
-
+import { LinkProps } from 'next/link';
 import React from 'react';
 import classNames from 'classnames';
 import s from './LinkIcon.module.css';
@@ -32,19 +31,18 @@ const LinkIcon: React.FC<LinkIconProps & React.AnchorHTMLAttributes<HTMLAnchorEl
   const linkProps = { href, as, replace, scroll, shallow, passHref, prefetch, locale };
 
   return (
-    <Link {...linkProps}>
-      <a
-        className={classNames(
-          s.linkIcon,
-          small ? s.linkIcon__isSmall : null,
-          direction === 'left' ? s.linkIcon__isLeft : null,
-          className
-        )}
-        {...props}
-      >
-        {icon}
-        <span className={s.linkIcon_content}>{children}</span>
-      </a>
+    <Link
+      {...linkProps}
+      className={classNames(
+        s.linkIcon,
+        small ? s.linkIcon__isSmall : null,
+        direction === 'left' ? s.linkIcon__isLeft : null,
+        className
+      )}
+      {...props}
+    >
+      {icon}
+      <span className={s.linkIcon_content}>{children}</span>
     </Link>
   );
 };
