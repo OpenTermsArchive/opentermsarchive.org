@@ -62,6 +62,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
               src={`/images/contributors/volunteer-${router?.locale}.png`}
               width={120}
               height={96}
+              alt=""
             />
           ) : (
             <>
