@@ -52,7 +52,7 @@ const Card: React.FC<CardProps> = ({
     >
       {image && (
         <div className={s.card_header}>
-          <Image src={image} layout="fill" objectFit="cover" objectPosition="top" />
+          <Image src={image} layout="fill" objectFit="cover" objectPosition="top" alt="" />
         </div>
       )}
       <div className={s.card_body}>

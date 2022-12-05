@@ -45,23 +45,22 @@ const Contributors: React.FC<ContributorsProps> = React.memo(
           {Object.entries(contributors).map(([name, url]) => {
             return (
               <div className={s.contributor} key={`${name}`}>
-                <Link href={url}>
-                  <a
-                    target="_blank"
-                    rel="nofollow noopener"
-                    className={s.contributor_link}
-                    title={url}
-                    key={`${url}_link`}
-                  >
-                    <img
-                      className={s.contributor_image}
-                      src={`/images/contributors/${kebabCase(name)}.jpg`}
-                      alt={name}
-                      width={64}
-                      height={64}
-                    />
-                    {showInfo && <div className={s.contributor_info}>{name}</div>}
-                  </a>
+                <Link
+                  href={url}
+                  target="_blank"
+                  rel="nofollow noopener"
+                  className={s.contributor_link}
+                  title={url}
+                  key={`${url}_link`}
+                >
+                  <img
+                    className={s.contributor_image}
+                    src={`/images/contributors/${kebabCase(name)}.jpg`}
+                    alt={name}
+                    width={64}
+                    height={64}
+                  />
+                  {showInfo && <div className={s.contributor_info}>{name}</div>}
                 </Link>
               </div>
             );

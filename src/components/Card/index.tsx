@@ -58,8 +58,8 @@ const Card = ({
 
         <h4 className="rf-card__title">
           {href && !href.startsWith('http') && (
-            <Link href={href}>
-              <a className="rf-card__link">{title}</a>
+            <Link href={href} className="rf-card__link">
+              {title}
             </Link>
           )}
           {href && href.startsWith('http') && (

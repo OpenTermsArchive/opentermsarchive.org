@@ -45,7 +45,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps & React.HTMLAttributes<HT
                   </>
                 ) : (
                   <Link href={router.asPath} locale={locale} passHref={true}>
-                    <a>{locale.toUpperCase()}</a>
+                    {locale.toUpperCase()}
                   </Link>
                 )}
               </div>

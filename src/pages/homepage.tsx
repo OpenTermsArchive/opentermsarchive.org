@@ -101,10 +101,8 @@ const HomePage = () => {
           <Column width={60} subtitle={t('follow-us:title')}>
             <TextContent marginTop={false}>
               <p className="mt__M">{t('follow-us:desc')}</p>
-              <Link href="https://twitter.com/OpenTerms">
-                <a target="_blank" rel="noopener">
-                  <Button className="mb__0">{t('follow-us:button.label')}</Button>
-                </a>
+              <Link href="https://twitter.com/OpenTerms" target="_blank" rel="noopener">
+                <Button className="mb__0">{t('follow-us:button.label')}</Button>
               </Link>
             </TextContent>
           </Column>

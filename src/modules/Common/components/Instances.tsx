@@ -4,10 +4,10 @@ import CardList from 'modules/Common/components/CardList';
 import CardTable from 'modules/Common/components/CardTable';
 import CardTableItem from 'modules/Common/components/CardTableItem';
 import { FiSearch as IconSearch } from 'react-icons/fi';
+import Image from 'next/image';
 import { Link } from 'modules/I18n';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
-import Image from 'next/image';
 import instancesData from '../../../../public/instances.json';
 import { kebabCase } from 'lodash';
 import { useRouter } from 'next/router';
@@ -62,6 +62,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
               src={`/images/contributors/volunteer-${router?.locale}.png`}
               width={120}
               height={96}
+              alt=""
             />
           ) : (
             <>
@@ -111,13 +112,15 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
               />
             </CardTable>
             <div className="mt__XL text__center">
-              <Link href={`https://github.com/openTermsArchive/${instanceId}-versions`}>
-                <a target="_blank" rel="noopener">
-                  <Button type="secondary">
-                    <IconSearch className="mr__2XS" />
-                    {t('instances:cta.versions')}
-                  </Button>
-                </a>
+              <Link
+                href={`https://github.com/openTermsArchive/${instanceId}-versions`}
+                target="_blank"
+                rel="noopener"
+              >
+                <Button type="secondary">
+                  <IconSearch className="mr__2XS" />
+                  {t('instances:cta.versions')}
+                </Button>
               </Link>
             </div>
             <div className="mt__M text__center">

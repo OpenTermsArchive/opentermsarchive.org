@@ -93,20 +93,22 @@ const SubscribeForm = ({
                 href={`https://github.com/ambanum/OpenTermsArchive-versions/commits/master/${encodeURIComponent(
                   service
                 )}/${encodeURIComponent(documentType)}.md`}
+                target="_blank"
+                rel="noopener"
+                className="a__darked"
               >
-                <a target="_blank" rel="noopener" className="a__darked">
-                  {t('common:subscribe_form.changes.github')}
-                </a>
+                {t('common:subscribe_form.changes.github')}
               </Link>
               {t('common:subscribe_form.changes.changes.separator')}
               <Link
                 href={`https://disinfo.quaidorsay.fr/${language}/open-terms-archive/scripta-manent?service=${encodeURIComponent(
                   service
                 )}&typeofdocument=${encodeURIComponent(documentType)}`}
+                target="_blank"
+                rel="noopener"
+                className="a__darked"
               >
-                <a target="_blank" rel="noopener" className="a__darked">
-                  {t('common:subscribe_form.changes.scripta-manent')}
-                </a>
+                {t('common:subscribe_form.changes.scripta-manent')}
               </Link>
             </p>
             <p className="text__light">{t('common:subscribe_form.p2')}</p>
