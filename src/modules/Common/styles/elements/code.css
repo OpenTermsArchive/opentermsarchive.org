@@ -1,0 +1,14 @@
+code {
+  background-color: var(--colorBlack200);
+  padding: 0.4rem;
+  border-radius: 4px;
+  display: inline-block;
+
+  &.language-success {
+    border: 2px solid var(--colorSuccess);
+  }
+
+  &.language-error {
+    border: 2px solid var(--colorError);
+  }
+}
