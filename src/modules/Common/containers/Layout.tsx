@@ -59,6 +59,15 @@ const Layout = ({
                         {t('header:link.about')}
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        href="https://docs.opentermsarchive.org"
+                        onClick={toggleExtended}
+                        title={t('header:link.docs.title')}
+                      >
+                        {t('header:link.docs')}
+                      </Link>
+                    </li>
                   </ul>
                 </HeaderMenu>
                 <HeaderMenu type="secondary">
@@ -118,6 +127,12 @@ const Layout = ({
                 </li>
                 <li>
                   <Link href={'/about'}>{t('footer:link.about')}</Link>
+                </li>
+                <li>
+                  <Link href={'/media'}>{t('footer:link.media')}</Link>
+                </li>
+                <li>
+                  <Link href="https://docs.opentermsarchive.org">{t('footer:link.docs')}</Link>
                 </li>
               </ul>
               <ul>
