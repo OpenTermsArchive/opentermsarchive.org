@@ -119,9 +119,6 @@ const Layout = ({
                 <li>
                   <Link href={'/about'}>{t('footer:link.about')}</Link>
                 </li>
-                <li>
-                  <Link href={'/media'}>{t('footer:link.media')}</Link>
-                </li>
               </ul>
               <ul>
                 <li>
@@ -160,14 +157,7 @@ const Layout = ({
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="https://github.com/OpenTermsArchive/contrib-versions/releases"
-                    title={t('footer:link.dataset.title')}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    {t('footer:link.dataset')}
-                  </Link>
+                  <Link href="/media">{t('footer:link.media')}</Link>
                 </li>
                 <li>
                   <Link
