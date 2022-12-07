@@ -13,7 +13,7 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useTranslation } from 'modules/I18n';
 
-const STATIC_PAGES_PATH = 'pages';
+const STATIC_PAGES_PATH = 'parts';
 
 export default function MediaPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
