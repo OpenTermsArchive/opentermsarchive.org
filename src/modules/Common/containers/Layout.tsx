@@ -124,6 +124,9 @@ const Layout = ({
                 <li>
                   <Link href={'/about'}>{t('footer:link.about')}</Link>
                 </li>
+                <li>
+                  <Link href="https://docs.opentermsarchive.org">{t('footer:link.doc')}</Link>
+                </li>
               </ul>
               <ul>
                 <li>
