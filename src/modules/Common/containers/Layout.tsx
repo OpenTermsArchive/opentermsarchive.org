@@ -59,6 +59,11 @@ const Layout = ({
                         {t('header:link.about')}
                       </Link>
                     </li>
+                    <li>
+                      <Link href="https://docs.opentermsarchive.org" onClick={toggleExtended}>
+                        {t('header:link.doc')}
+                      </Link>
+                    </li>
                   </ul>
                 </HeaderMenu>
                 <HeaderMenu type="secondary">
