@@ -1,10 +1,9 @@
 const DOCUMENT_TYPES_URL = 'https://opentermsarchive.org/data/api/list_documentTypes/v1/';
-export const CONTRIBUTORS_URL =
-  'https://api.github.com/repos/ambanum/OpenTermsArchive/contributors';
+export const CONTRIBUTORS_URL = 'https://api.github.com/repos/OpenTermsArchive/engine/contributors';
 export const VERSIONS_CONTRIBUTOR_COMMITS_ACTIVITY =
-  'https://api.github.com/repos/ambanum/OpenTermsArchive-versions/stats/contributors';
+  'https://api.github.com/repos/OpenTermsArchive/contrib-versions/stats/contributors';
 export const LAST_VERSIONS_COMMITS =
-  'https://api.github.com/repos/ambanum/OpenTermsArchive-versions/commits';
+  'https://api.github.com/repos/OpenTermsArchive/contrib-versions/commits';
 
 import { Octokit } from 'octokit';
 import axios from 'axios';

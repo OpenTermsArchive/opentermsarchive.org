@@ -90,7 +90,7 @@ const SubscribeForm = ({
             <p>
               {t('common:subscribe_form.changes.before')}
               <Link
-                href={`https://github.com/ambanum/OpenTermsArchive-versions/commits/master/${encodeURIComponent(
+                href={`https://github.com/OpenTermsArchive/contrib-versions/commits/main/${encodeURIComponent(
                   service
                 )}/${encodeURIComponent(documentType)}.md`}
                 target="_blank"
