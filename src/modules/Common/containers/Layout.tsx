@@ -77,7 +77,7 @@ const Layout = ({
                     </li>
                     <li>
                       <Link
-                        href="https://github.com/ambanum/OpenTermsArchive/"
+                        href="https://github.com/OpenTermsArchive/engine/"
                         className={classNames('icon_circle')}
                         target="_blank"
                         rel="noopener"
@@ -161,7 +161,7 @@ const Layout = ({
                 </li>
                 <li>
                   <Link
-                    href="https://github.com/ambanum/OpenTermsArchive"
+                    href="https://github.com/OpenTermsArchive/engine"
                     title={t('footer:link.github.title')}
                     target="_blank"
                     rel="noopener"
