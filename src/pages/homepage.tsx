@@ -27,8 +27,8 @@ const HomePage = () => {
       </Container>
 
       {/* Instances */}
-      <Container gray={true} layout="wide" paddingX={false} id="instances">
-        <Container gridCols="12" gridGutters="11" paddingTop={false}>
+      <Container gray={true} layout="wide" paddingX={false} paddingTop={false} id="instances">
+        <Container gridCols="12" gridGutters="11">
           <Instances />
         </Container>
       </Container>
@@ -111,7 +111,7 @@ const HomePage = () => {
       </Container>
 
       {/* Reuses */}
-      <Container gray={true} layout="wide" paddingX={false} id="reuses">
+      <Container gray={true} layout="wide" paddingX={false} paddingTop={false} id="reuses">
         <Container gridCols="12" gridGutters="11">
           <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
             <Card
