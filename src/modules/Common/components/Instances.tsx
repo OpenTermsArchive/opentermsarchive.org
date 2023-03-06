@@ -4,7 +4,6 @@ import CardList from 'modules/Common/components/CardList';
 import CardTable from 'modules/Common/components/CardTable';
 import CardTableItem from 'modules/Common/components/CardTableItem';
 import { FiSearch as IconSearch } from 'react-icons/fi';
-import Image from 'next/image';
 import { Link } from 'modules/I18n';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
