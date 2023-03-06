@@ -63,12 +63,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
         const instanceId = kebabCase(name);
         const author =
           maintainers == undefined ? (
-            <Image
-              src={`/images/contributors/volunteer-${router?.locale}.png`}
-              width={120}
-              height={96}
-              alt=""
-            />
+            <img src={`/images/contributors/volunteer-${router?.locale}.png`} alt="" />
           ) : (
             <>
               {maintainers.map((maintainer) => (
