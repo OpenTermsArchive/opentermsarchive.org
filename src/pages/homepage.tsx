@@ -25,6 +25,14 @@ const HomePage = () => {
           <Hero title={t('homepage:mission_statement')} subtitle={t('homepage:what_it_is')}></Hero>
         </Container>
       </Container>
+
+      {/* Instances */}
+      <Container gray={true} layout="wide" paddingX={false} id="instances">
+        <Container gridCols="10" gridGutters="9" paddingTop={false}>
+          <Instances />
+        </Container>
+      </Container>
+
       {/* How it works -  1 step */}
       <Container layout="wide" paddingY={false} id="how-it-works">
         <Container gridCols="11" gridGutters="10" paddingX={false}>
@@ -82,13 +90,6 @@ const HomePage = () => {
               <img src="/images/how-it-works/step-4.png" />
             </div>
           </Column>
-        </Container>
-      </Container>
-
-      {/* Instances */}
-      <Container gray={true} layout="wide" paddingX={false} id="instances">
-        <Container gridCols="10" gridGutters="9" paddingTop={false}>
-          <Instances />
         </Container>
       </Container>
 
