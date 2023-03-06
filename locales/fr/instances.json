@@ -8,6 +8,7 @@
   "language_other": "Langues",
   "services": "Services",
   "title": "Nous créons des partenariats pour couvrir différentes industries, langues et juridictions",
+  "subtitle": "Nous sommes constamment à la recherche de nouveaux partenaires pour suivre plus de services. <a href=\"mailto:{{ contactEmail }}?subject=Partnership&body=Bonjour%0A%0AJe%20souhaiterais%20%C3%A9tablir%20un%20partenariat%20pour%20suivre%20des%20documents%20qui%20ciblent%20%3A%20%0A-%20ce%20secteur%20d%27activit%C3%A9%20%3A%20%5Bveuillez%20compl%C3%A9ter%5D%0A-%20dans%20cette%20langue%20%3A%20%5Bveuillez%20compl%C3%A9ter%5D%0A-%20et%20cette%20juridiction%20%3A%20%5Bveuillez%20compl%C3%A9ter%5D%0A%0AMerci%20beaucoup.\">Contactez nous</a> pour commencer à collaborer !",
   "volunteer-contributors": "Contributeurs bénévoles",
   "cta.download-dataset": "Télécharger le jeu de données"
 }

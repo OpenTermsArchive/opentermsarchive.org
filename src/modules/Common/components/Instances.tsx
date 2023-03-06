@@ -51,7 +51,12 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
   const countryName = new Intl.DisplayNames(router.locale, { type: 'region' });
 
   return (
-    <CardList title={t('instances:title')} centerTitle={true} {...props}>
+    <CardList
+      title={t('instances:title')}
+      subtitle={t('instances:subtitle', { contactEmail: 'contact@opentermsarchive.org' })}
+      centerTitle={true}
+      {...props}
+    >
       {Object.entries(instancesData).map(([name, instance]) => {
         const { maintainers, languages, jurisdictions, stats, subscribeURL, industries }: Instance =
           instance;

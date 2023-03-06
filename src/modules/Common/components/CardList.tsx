@@ -28,7 +28,12 @@ const CardList: React.FC<CardListProps> = ({
         })}
       >
         {title && <h2 className={classNames(s.cardList_title)}>{title}</h2>}
-        {subtitle && <h3 className={classNames(s.cardList_subtitle, 'h3__light')}>{subtitle}</h3>}
+        {subtitle && (
+          <h3
+            className={classNames(s.cardList_subtitle, 'h3__light')}
+            dangerouslySetInnerHTML={{ __html: subtitle }}
+          />
+        )}
       </div>
       <div
         className={classNames(s.cardList_items, {
