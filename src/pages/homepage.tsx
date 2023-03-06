@@ -28,7 +28,7 @@ const HomePage = () => {
 
       {/* Instances */}
       <Container gray={true} layout="wide" paddingX={false} id="instances">
-        <Container gridCols="10" gridGutters="9" paddingTop={false}>
+        <Container gridCols="12" gridGutters="11" paddingTop={false}>
           <Instances />
         </Container>
       </Container>

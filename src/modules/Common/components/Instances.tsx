@@ -51,7 +51,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
   const countryName = new Intl.DisplayNames(router.locale, { type: 'region' });
 
   return (
-    <CardList title={t('instances:title')} centerTitle={true} big={true} {...props}>
+    <CardList title={t('instances:title')} centerTitle={true} {...props}>
       {Object.entries(instancesData).map(([name, instance]) => {
         const { maintainers, languages, jurisdictions, stats, subscribeURL, industries }: Instance =
           instance;
@@ -84,7 +84,6 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
             author={author}
             image={`/images/instances/${instanceId}.png`}
             center={true}
-            big={true}
             authorCenter={true}
             white={true}
             hasAuthorIcon={false}
