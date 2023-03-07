@@ -25,6 +25,31 @@ const HomePage = () => {
           <Hero title={t('homepage:mission_statement')} subtitle={t('homepage:what_it_is')}></Hero>
         </Container>
       </Container>
+
+      {/* Instances */}
+      <Container gray={true} layout="wide" paddingX={false} paddingTop={false} id="instances">
+        <Container gridCols="12" gridGutters="11">
+          <Instances />
+        </Container>
+      </Container>
+
+      {/* Follow us */}
+      <Container layout="wide" paddingY={false} dark={true} id="follow-us">
+        <Container gridCols="9" gridGutters="8" flex={true}>
+          <Column width={40} alignX="center" alignY="center">
+            <IconTwitter size="128" color="var(--colorBlack400)" strokeWidth="1px" />
+          </Column>
+          <Column width={60} subtitle={t('follow-us:title')}>
+            <TextContent marginTop={false}>
+              <p className="mt__M">{t('follow-us:desc')}</p>
+              <Link href="https://twitter.com/OpenTerms" target="_blank" rel="noopener">
+                <Button className="mb__0">{t('follow-us:button.label')}</Button>
+              </Link>
+            </TextContent>
+          </Column>
+        </Container>
+      </Container>
+
       {/* How it works -  1 step */}
       <Container layout="wide" paddingY={false} id="how-it-works">
         <Container gridCols="11" gridGutters="10" paddingX={false}>
@@ -85,32 +110,8 @@ const HomePage = () => {
         </Container>
       </Container>
 
-      {/* Instances */}
-      <Container gray={true} layout="wide" paddingX={false} id="instances">
-        <Container gridCols="10" gridGutters="9" paddingTop={false}>
-          <Instances />
-        </Container>
-      </Container>
-
-      {/* Follow us */}
-      <Container layout="wide" paddingY={false} dark={true} id="follow-us">
-        <Container gridCols="9" gridGutters="8" flex={true}>
-          <Column width={40} alignX="center" alignY="center">
-            <IconTwitter size="128" color="var(--colorBlack400)" strokeWidth="1px" />
-          </Column>
-          <Column width={60} subtitle={t('follow-us:title')}>
-            <TextContent marginTop={false}>
-              <p className="mt__M">{t('follow-us:desc')}</p>
-              <Link href="https://twitter.com/OpenTerms" target="_blank" rel="noopener">
-                <Button className="mb__0">{t('follow-us:button.label')}</Button>
-              </Link>
-            </TextContent>
-          </Column>
-        </Container>
-      </Container>
-
       {/* Reuses */}
-      <Container gray={true} layout="wide" paddingX={false} id="reuses">
+      <Container gray={true} layout="wide" paddingX={false} paddingTop={false} id="reuses">
         <Container gridCols="12" gridGutters="11">
           <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
             <Card

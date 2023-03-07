@@ -4,7 +4,6 @@ import CardList from 'modules/Common/components/CardList';
 import CardTable from 'modules/Common/components/CardTable';
 import CardTableItem from 'modules/Common/components/CardTableItem';
 import { FiSearch as IconSearch } from 'react-icons/fi';
-import Image from 'next/image';
 import { Link } from 'modules/I18n';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
@@ -51,19 +50,20 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
   const countryName = new Intl.DisplayNames(router.locale, { type: 'region' });
 
   return (
-    <CardList title={t('instances:title')} centerTitle={true} big={true} {...props}>
+    <CardList
+      title={t('instances:title')}
+      subtitle={t('instances:subtitle', { contactEmail: 'contact@opentermsarchive.org' })}
+      subtitleLevel="h5"
+      centerTitle={true}
+      {...props}
+    >
       {Object.entries(instancesData).map(([name, instance]) => {
         const { maintainers, languages, jurisdictions, stats, subscribeURL, industries }: Instance =
           instance;
         const instanceId = kebabCase(name);
         const author =
           maintainers == undefined ? (
-            <Image
-              src={`/images/contributors/volunteer-${router?.locale}.png`}
-              width={120}
-              height={96}
-              alt=""
-            />
+            <img src={`/images/contributors/volunteer-${router?.locale}.png`} alt="" />
           ) : (
             <>
               {maintainers.map((maintainer) => (
@@ -84,7 +84,6 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
             author={author}
             image={`/images/instances/${instanceId}.png`}
             center={true}
-            big={true}
             authorCenter={true}
             white={true}
             hasAuthorIcon={false}

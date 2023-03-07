@@ -6,6 +6,7 @@ type CardListProps = {
   title?: string;
   centerTitle?: boolean;
   subtitle?: string;
+  subtitleLevel?: 'h3' | 'h4' | 'h5';
   small?: boolean;
   big?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
@@ -14,12 +15,15 @@ const CardList: React.FC<CardListProps> = ({
   title,
   centerTitle,
   subtitle,
+  subtitleLevel = 'h3',
   small,
   big,
   children,
   className,
   ...props
 }) => {
+  const SubTitleComponent = subtitleLevel;
+
   return (
     <div className={classNames(s.cardList, className)} {...props}>
       <div
@@ -28,7 +32,12 @@ const CardList: React.FC<CardListProps> = ({
         })}
       >
         {title && <h2 className={classNames(s.cardList_title)}>{title}</h2>}
-        {subtitle && <h3 className={classNames(s.cardList_subtitle, 'h3__light')}>{subtitle}</h3>}
+        {subtitle && (
+          <SubTitleComponent
+            className={classNames(s.cardList_subtitle, `${subtitleLevel}__light`)}
+            dangerouslySetInnerHTML={{ __html: subtitle }}
+          ></SubTitleComponent>
+        )}
       </div>
       <div
         className={classNames(s.cardList_items, {
