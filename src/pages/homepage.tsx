@@ -33,6 +33,23 @@ const HomePage = () => {
         </Container>
       </Container>
 
+      {/* Follow us */}
+      <Container layout="wide" paddingY={false} dark={true} id="follow-us">
+        <Container gridCols="9" gridGutters="8" flex={true}>
+          <Column width={40} alignX="center" alignY="center">
+            <IconTwitter size="128" color="var(--colorBlack400)" strokeWidth="1px" />
+          </Column>
+          <Column width={60} subtitle={t('follow-us:title')}>
+            <TextContent marginTop={false}>
+              <p className="mt__M">{t('follow-us:desc')}</p>
+              <Link href="https://twitter.com/OpenTerms" target="_blank" rel="noopener">
+                <Button className="mb__0">{t('follow-us:button.label')}</Button>
+              </Link>
+            </TextContent>
+          </Column>
+        </Container>
+      </Container>
+
       {/* How it works -  1 step */}
       <Container layout="wide" paddingY={false} id="how-it-works">
         <Container gridCols="11" gridGutters="10" paddingX={false}>
@@ -89,23 +106,6 @@ const HomePage = () => {
             <div style={{ maxWidth: '350px' }}>
               <img src="/images/how-it-works/step-4.png" />
             </div>
-          </Column>
-        </Container>
-      </Container>
-
-      {/* Follow us */}
-      <Container layout="wide" paddingY={false} dark={true} id="follow-us">
-        <Container gridCols="9" gridGutters="8" flex={true}>
-          <Column width={40} alignX="center" alignY="center">
-            <IconTwitter size="128" color="var(--colorBlack400)" strokeWidth="1px" />
-          </Column>
-          <Column width={60} subtitle={t('follow-us:title')}>
-            <TextContent marginTop={false}>
-              <p className="mt__M">{t('follow-us:desc')}</p>
-              <Link href="https://twitter.com/OpenTerms" target="_blank" rel="noopener">
-                <Button className="mb__0">{t('follow-us:button.label')}</Button>
-              </Link>
-            </TextContent>
           </Column>
         </Container>
       </Container>
