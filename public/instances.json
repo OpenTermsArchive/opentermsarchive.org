@@ -5,8 +5,7 @@
     "stats": {
       "services": "295",
       "documents": "648"
-    },
-    "subscribeURL": "https://opentermsarchive.org/subscribe"
+    }
   },
   "France": {
     "languages": ["fr"],
