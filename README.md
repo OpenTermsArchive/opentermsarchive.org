@@ -1,6 +1,6 @@
 # OpenTermsArchive.org
 
-This is the repository for `opentermsarchive.org`, the website that presents the [Open Terms Archive](https://github.com/OpenTermsArchive/) project.
+The website that presents Open Terms Archive to the general public.
 
 ## Introduction
 
