@@ -53,6 +53,7 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
     <CardList
       title={t('instances:title')}
       subtitle={t('instances:subtitle', { contactEmail: 'contact@opentermsarchive.org' })}
+      subtitleLevel="h5"
       centerTitle={true}
       {...props}
     >
