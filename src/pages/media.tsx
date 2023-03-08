@@ -20,10 +20,13 @@ export default function MediaPage({ mdxContent }: WithMdxResult) {
   const { t } = useTranslation();
 
   return (
-    <Layout title={frontmatter['title']} desc={frontmatter['description']}>
+    <Layout
+      title={frontmatter['html_title'] ?? frontmatter['title'] ?? frontmatter['hero.title']}
+      desc={frontmatter['html_description'] ?? frontmatter['hero.subtitle']}
+    >
       <Container layout="wide" paddingY={false} dark={true}>
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Hero title={frontmatter['title']}></Hero>
+          <Hero title={frontmatter['hero.title']}></Hero>
         </Container>
       </Container>
 
