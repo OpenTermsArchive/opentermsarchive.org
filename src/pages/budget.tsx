@@ -8,7 +8,6 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'modules/I18n';
 
 const TotalExpendituresGraph = dynamic(
   () => import('modules/Common/components/TotalExpendituresGraph'),
