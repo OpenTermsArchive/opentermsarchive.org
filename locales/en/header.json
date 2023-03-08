@@ -6,5 +6,7 @@
   "link.home": "Home",
   "link.home.title": "Back to home page",
   "link.twitter.title": "Follow us",
+  "link.docs": "Documentation",
+  "link.docs.title": "Read the documentation",
   "open": "Menu"
 }
