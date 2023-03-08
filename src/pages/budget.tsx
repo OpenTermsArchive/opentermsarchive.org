@@ -24,13 +24,17 @@ export default function BudgetPage({
   totalExpendituresData,
   accumulatedExpenditures,
 }: WithMdxResult & ExpensesData) {
-  const { t } = useTranslation();
+  const { frontmatter = {} } = mdxContent || {};
   const router = useRouter();
 
   return (
-    <Layout title={t('budget:seo.title')}>
+    <Layout
+      title={frontmatter['html_title'] ?? frontmatter['title'] ?? frontmatter['hero.title']}
+      desc={frontmatter['html_description'] ?? frontmatter['hero.subtitle']}
+    >
       <Container gridCols="12" gridGutters="11">
         <TextContent>
+          {frontmatter.title && <h1 className="mb__0">{frontmatter.title}</h1>}
           <MDXRemote
             {...(mdxContent as any)}
             components={{
