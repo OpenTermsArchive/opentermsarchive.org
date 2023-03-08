@@ -11,10 +11,15 @@ import { useTranslation } from 'modules/I18n';
 
 export default function StatsPage({ mdxContent }: WithMdxResult) {
   const { t } = useTranslation();
+  const { frontmatter = {} } = mdxContent || {};
   return (
-    <Layout title={t('stats:seo.title')}>
+    <Layout
+      title={frontmatter['html_title'] ?? frontmatter['title'] ?? frontmatter['hero.title']}
+      desc={frontmatter['html_description'] ?? frontmatter['hero.subtitle']}
+    >
       <Container gridCols="10" gridGutters="9">
         <TextContent>
+          {frontmatter.title && <h1>{frontmatter.title}</h1>}
           {mdxContent && <MDXRemote {...mdxContent} components={{ LinkIcon }} />}
         </TextContent>
       </Container>
