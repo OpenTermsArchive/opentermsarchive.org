@@ -3,8 +3,8 @@
     "languages": ["en", "fr"],
     "jurisdictions": ["EU", "US"],
     "stats": {
-      "services": "285",
-      "documents": "624"
+      "services": "295",
+      "documents": "648"
     },
     "subscribeURL": "https://opentermsarchive.org/subscribe"
   },
