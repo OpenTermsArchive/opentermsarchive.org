@@ -6,7 +6,7 @@ import CardList from 'modules/Common/components/CardList';
 import Column from 'modules/Common/components/Column';
 import Container from 'modules/Common/containers/Container';
 import Hero from 'modules/Common/components/Hero';
-import Instances from 'modules/Common/components/Instances';
+import Collections from 'modules/Common/components/Collections';
 import Layout from 'modules/Common/containers/Layout';
 import { Link } from 'modules/I18n';
 import React from 'react';
@@ -26,10 +26,10 @@ const HomePage = () => {
         </Container>
       </Container>
 
-      {/* Instances */}
-      <Container gray={true} layout="wide" paddingX={false} paddingTop={false} id="instances">
+      {/* Collections */}
+      <Container gray={true} layout="wide" paddingX={false} paddingTop={false} id="collections">
         <Container gridCols="12" gridGutters="11">
-          <Instances />
+          <Collections />
         </Container>
       </Container>
 
