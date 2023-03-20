@@ -37,7 +37,7 @@ export default function CaseStudyPage({ mdxContent }: WithMdxResult) {
 
   return (
     <Layout
-      title={frontmatter['html_title'] ?? frontmatter['title']}
+      title={frontmatter['html_title'] ?? frontmatter['title'] ?? frontmatter['hero.title']}
       desc={frontmatter['html_description']}
     >
       {frontmatter['hero.title'] && (
