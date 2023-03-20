@@ -25,7 +25,10 @@ export default function StaticPage({ mdxContent }: WithMdxResult) {
   const { t } = useTranslation();
 
   return (
-    <Layout title={frontmatter['title']} desc={frontmatter['description']}>
+    <Layout
+      title={frontmatter['html_title'] ?? frontmatter['title'] ?? frontmatter['hero.title']}
+      desc={frontmatter['html_description'] ?? frontmatter['hero.subtitle']}
+    >
       {frontmatter['hero.title'] && (
         <Container layout="wide" dark={true} paddingY={false}>
           <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
