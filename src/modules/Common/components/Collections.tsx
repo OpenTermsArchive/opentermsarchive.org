@@ -7,12 +7,12 @@ import { FiSearch as IconSearch } from 'react-icons/fi';
 import { Link } from 'modules/I18n';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
-import instancesData from '../../../../public/instances.json';
+import collectionsData from '../../../../public/collections.json';
 import { kebabCase } from 'lodash';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'modules/I18n';
 
-type InstancesProps = {} & React.HTMLAttributes<HTMLDivElement>;
+type CollectionsProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
 interface Maintainer {
   name: string;
@@ -30,7 +30,7 @@ interface Industries {
   en: string;
 }
 
-interface Instance {
+interface Collection {
   maintainers?: Array<Maintainer>;
   languages: Array<string>;
   jurisdictions: Array<string>;
@@ -39,7 +39,7 @@ interface Instance {
   industries?: Industries;
 }
 
-const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
+const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
   const { t } = useTranslation();
   const router = useRouter();
 
@@ -51,16 +51,22 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
 
   return (
     <CardList
-      title={t('instances:title')}
-      subtitle={t('instances:subtitle', { contactEmail: 'contact@opentermsarchive.org' })}
+      title={t('collections:title')}
+      subtitle={t('collections:subtitle', { contactEmail: 'contact@opentermsarchive.org' })}
       subtitleLevel="h5"
       centerTitle={true}
       {...props}
     >
-      {Object.entries(instancesData).map(([name, instance]) => {
-        const { maintainers, languages, jurisdictions, stats, subscribeURL, industries }: Instance =
-          instance;
-        const instanceId = kebabCase(name);
+      {Object.entries(collectionsData).map(([name, collection]) => {
+        const {
+          maintainers,
+          languages,
+          jurisdictions,
+          stats,
+          subscribeURL,
+          industries,
+        }: Collection = collection;
+        const collectionId = kebabCase(name);
         const author =
           maintainers == undefined ? (
             <img src={`/images/contributors/volunteer-${router?.locale}.png`} alt="" />
@@ -78,11 +84,11 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
 
         return (
           <Card
-            key={`instance_${instanceId}`}
+            key={`collection_${collectionId}`}
             title={name}
             subtitle={!!industries ? industries[router?.locale as keyof Industries] : ''}
             author={author}
-            image={`/images/instances/${instanceId}.png`}
+            image={`/images/collections/${collectionId}.png`}
             center={true}
             authorCenter={true}
             white={true}
@@ -90,35 +96,35 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
           >
             <CardTable>
               <CardTableItem
-                title={t('instances:services')}
+                title={t('collections:services')}
                 iconName="FiFolder"
                 desc={stats.services}
               />
               <CardTableItem
-                title={t('instances:documents')}
+                title={t('collections:documents')}
                 iconName="FiFile"
                 desc={stats.documents}
               />
               <CardTableItem
-                title={t('instances:language', { count: languages.length })}
+                title={t('collections:language', { count: languages.length })}
                 iconName="FiMessageCircle"
                 desc={languages.map((languageCode) => languageName.of(languageCode)).join(', ')}
               />
               <CardTableItem
-                title={t('instances:country', { count: jurisdictions.length })}
+                title={t('collections:country', { count: jurisdictions.length })}
                 iconName="FiMap"
                 desc={jurisdictions.map((regionCode) => countryName.of(regionCode)).join(', ')}
               />
             </CardTable>
             <div className="mt__XL text__center">
               <Link
-                href={`https://github.com/openTermsArchive/${instanceId}-versions`}
+                href={`https://github.com/openTermsArchive/${collectionId}-versions`}
                 target="_blank"
                 rel="noopener"
               >
                 <Button type="secondary">
                   <IconSearch className="mr__2XS" />
-                  {t('instances:cta.versions')}
+                  {t('collections:cta.versions')}
                 </Button>
               </Link>
             </div>
@@ -126,17 +132,17 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
               <LinkIcon
                 iconName="FiDownload"
                 iconColor="var(--colorBlack400)"
-                href={`https://github.com/openTermsArchive/${instanceId}-versions/releases`}
+                href={`https://github.com/openTermsArchive/${collectionId}-versions/releases`}
                 target="_blank"
                 rel="noopener"
               >
-                {t('instances:cta.download-dataset')}
+                {t('collections:cta.download-dataset')}
               </LinkIcon>
             </div>
             {subscribeURL && (
               <div className="mt__2XS text__center">
                 <LinkIcon iconColor="var(--colorBlack400)" iconName="FiMail" href="/subscribe">
-                  {t('instances:cta.email')}
+                  {t('collections:cta.email')}
                 </LinkIcon>
               </div>
             )}
@@ -147,4 +153,4 @@ const Instances: React.FC<InstancesProps> = ({ children, ...props }) => {
   );
 };
 
-export default Instances;
+export default Collections;

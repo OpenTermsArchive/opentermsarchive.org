@@ -1,4 +1,4 @@
-const DOCUMENT_TYPES_URL = 'https://opentermsarchive.org/data/api/list_documentTypes/v1/';
+const TERMS_TYPES_URL = 'https://opentermsarchive.org/data/api/list_documentTypes/v1/';
 export const CONTRIBUTORS_URL = 'https://api.github.com/repos/OpenTermsArchive/engine/contributors';
 export const VERSIONS_CONTRIBUTOR_COMMITS_ACTIVITY =
   'https://api.github.com/repos/OpenTermsArchive/contrib-versions/stats/contributors';
@@ -75,10 +75,10 @@ export interface Contributor {
 
 export type Contributors = Contributor[];
 
-export const getDocumentTypes: any = async () => {
+export const getTermsTypes: any = async () => {
   try {
-    const { data: documentTypes } = await axios.get(DOCUMENT_TYPES_URL);
-    return [...new Set(Object.keys(documentTypes))].sort();
+    const { data: termsTypes } = await axios.get(TERMS_TYPES_URL);
+    return [...new Set(Object.keys(termsTypes))].sort();
   } catch (e) {
     console.error(e);
     return [];

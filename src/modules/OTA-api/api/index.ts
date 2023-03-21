@@ -6,11 +6,10 @@ export const GRAPH_SERVICES_URL = 'https://opentermsarchive.org/data/api/graph_s
 import axios from 'axios';
 
 export type Service = string;
-export type DocumentType = string;
-
+export type TermsType = string;
 
 export interface Services {
-  [key: string]: DocumentType[];
+  [key: string]: TermsType[];
 }
 
 export interface GraphService{
