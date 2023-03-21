@@ -64,5 +64,24 @@
       "en": "Online dating",
       "fr": "Rencontre en ligne"
     }
+  },
+  "PGA": {
+    "languages": ["en"],
+    "jurisdictions": ["EU"],
+    "maintainers": [
+      {
+        "name": "Platform Governance Archive",
+        "logo": "/images/contributors/university-of-bremen.png",
+        "url": "https://pga.hiig.de/"
+      }
+    ],
+    "stats": {
+      "services": "20",
+      "documents": "80"
+    },
+    "industries": {
+      "en": "Online European major social media services",
+      "fr": "Principaux services de médias sociaux européens en ligne"
+    }
   }
 }
