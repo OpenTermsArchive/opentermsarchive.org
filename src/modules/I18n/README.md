@@ -50,7 +50,7 @@ Example:
 
 - `service:seo.title`
 - `home:title`
-- `contribute:subscribe_form.email.placeholder`
+- `contribute:contributors.subtitle`
 
 ### Import
 
