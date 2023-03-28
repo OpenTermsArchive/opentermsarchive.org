@@ -72,7 +72,12 @@
       {
         "name": "Centre for Media, Communication and Information Research (ZeMKI), University of Bremen",
         "logo": "/images/contributors/university-of-bremen.png",
-        "url": "https://pga.hiig.de/"
+        "url": "https://www.uni-bremen.de/"
+      },
+      {
+        "name": "Alexander von Humboldt Institute for Internet and Society (HIIG)",
+        "logo": "/images/contributors/hiig.png",
+        "url": "https://hiig.de/"
       }
     ],
     "stats": {
