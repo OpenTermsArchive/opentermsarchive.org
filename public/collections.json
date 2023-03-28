@@ -65,12 +65,12 @@
       "fr": "Rencontre en ligne"
     }
   },
-  "PGA": {
+  "Platform Governance Archive": {
     "languages": ["en"],
     "jurisdictions": ["EU"],
     "maintainers": [
       {
-        "name": "Platform Governance Archive",
+        "name": "Zentrum für Medien-, Kommunikations- & Informationsforschung, Universität Bremen",
         "logo": "/images/contributors/university-of-bremen.png",
         "url": "https://pga.hiig.de/"
       }
@@ -80,8 +80,8 @@
       "documents": "80"
     },
     "industries": {
-      "en": "Online European major social media services",
-      "fr": "Principaux services de médias sociaux européens en ligne"
+      "en": "Major global social media services",
+      "fr": "Médias sociaux mondiaux majeurs"
     }
   }
 }
