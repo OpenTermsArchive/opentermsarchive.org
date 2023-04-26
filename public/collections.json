@@ -93,5 +93,25 @@
       "en": "Major global social media services",
       "fr": "Médias sociaux mondiaux majeurs"
     }
+  },
+  "Demo": {
+    "id": "demo",
+    "languages": ["en"],
+    "jurisdictions": ["EU"],
+    "maintainers": [
+      {
+        "name": "Open Terms Archive",
+        "logo": "/images/logo/logo-open-terms-archive-black.png",
+        "url": "https://opentermsarchive.org"
+      }
+    ],
+    "stats": {
+      "services": "2",
+      "documents": "6"
+    },
+    "industries": {
+      "en": "Services needed to operate the Open Terms Archive engine",
+      "fr": "Services nécessaires au fonctionnement du moteur d'Open Terms Archive"
+    }
   }
 }
