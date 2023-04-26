@@ -95,6 +95,7 @@
     }
   },
   "Demo": {
+    "id": "demo",
     "languages": ["en"],
     "jurisdictions": ["EU"],
     "maintainers": [
