@@ -64,5 +64,29 @@
       "en": "Online dating",
       "fr": "Rencontre en ligne"
     }
+  },
+  "Platform Governance Archive": {
+    "languages": ["en"],
+    "jurisdictions": ["EU"],
+    "maintainers": [
+      {
+        "name": "Centre for Media, Communication and Information Research (ZeMKI), University of Bremen",
+        "logo": "/images/contributors/university-of-bremen.png",
+        "url": "https://www.uni-bremen.de/"
+      },
+      {
+        "name": "Alexander von Humboldt Institute for Internet and Society (HIIG)",
+        "logo": "/images/contributors/hiig.png",
+        "url": "https://hiig.de/"
+      }
+    ],
+    "stats": {
+      "services": "20",
+      "documents": "80"
+    },
+    "industries": {
+      "en": "Major global social media services",
+      "fr": "Médias sociaux mondiaux majeurs"
+    }
   }
 }
