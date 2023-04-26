@@ -22,7 +22,9 @@ const HomePage = () => {
       {/* Mission statement + What is it ? */}
       <Container layout="wide" dark={true} paddingY={false} id="mission-statement">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Hero title={t('homepage:mission_statement')} subtitle={t('homepage:what_it_is')}></Hero>
+          <Hero title={t('homepage:mission_statement')} subtitle={t('homepage:what_it_is')}>
+            <Link href="/impact">{t('homepage:learn_more_theory_of_change')}</Link>
+          </Hero>
         </Container>
       </Container>
 
