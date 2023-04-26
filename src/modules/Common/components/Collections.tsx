@@ -31,6 +31,7 @@ interface Industries {
 }
 
 interface Collection {
+  id: string;
   maintainers?: Array<Maintainer>;
   languages: Array<string>;
   jurisdictions: Array<string>;
@@ -66,7 +67,6 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
           subscribeURL,
           industries,
         }: Collection = collection;
-        const collectionId = kebabCase(name);
         const author =
           maintainers == undefined ? (
             <img src={`/images/contributors/volunteer-${router?.locale}.png`} alt="" />
@@ -84,11 +84,11 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
 
         return (
           <Card
-            key={`collection_${collectionId}`}
+            key={`collection_${collection.id}`}
             title={name}
             subtitle={!!industries ? industries[router?.locale as keyof Industries] : ''}
             author={author}
-            image={`/images/collections/${collectionId}.png`}
+            image={`/images/collections/${collection.id}.png`}
             center={true}
             authorCenter={true}
             white={true}
@@ -118,7 +118,7 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
             </CardTable>
             <div className="mt__XL text__center">
               <Link
-                href={`https://github.com/openTermsArchive/${collectionId}-versions`}
+                href={`https://github.com/openTermsArchive/${collection.id}-versions`}
                 target="_blank"
                 rel="noopener"
               >
@@ -132,7 +132,7 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
               <LinkIcon
                 iconName="FiDownload"
                 iconColor="var(--colorBlack400)"
-                href={`https://github.com/openTermsArchive/${collectionId}-versions/releases`}
+                href={`https://github.com/openTermsArchive/${collection.id}-versions/releases`}
                 target="_blank"
                 rel="noopener"
               >
