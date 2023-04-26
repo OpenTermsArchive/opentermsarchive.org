@@ -1,5 +1,6 @@
 {
   "Contrib": {
+    "id": "contrib",
     "languages": ["en", "fr"],
     "jurisdictions": ["EU", "US"],
     "stats": {
@@ -8,6 +9,7 @@
     }
   },
   "France": {
+    "id": "france",
     "languages": ["fr"],
     "jurisdictions": ["FR"],
     "maintainers": [
@@ -28,6 +30,7 @@
     }
   },
   "France Élections": {
+    "id": "france-elections",
     "languages": ["fr"],
     "jurisdictions": ["FR"],
     "maintainers": [
@@ -47,6 +50,7 @@
     }
   },
   "Dating": {
+    "id": "dating",
     "languages": ["en"],
     "jurisdictions": ["EU", "CH"],
     "maintainers": [
@@ -66,6 +70,7 @@
     }
   },
   "Platform Governance Archive": {
+    "id": "pga",
     "languages": ["en"],
     "jurisdictions": ["EU"],
     "maintainers": [
