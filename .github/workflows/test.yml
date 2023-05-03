@@ -15,3 +15,7 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Start server
+        run: npm run start 3000 &
+      - name: Test broken links
+        run: npm run test:links
