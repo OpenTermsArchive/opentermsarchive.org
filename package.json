@@ -6,6 +6,7 @@
     "dev": "next",
     "build": "next build --debug",
     "start": "next start -p $PORT",
+    "build-and-start": "rm -rf .next && npm run build && npm run kill-port-3000 && (npm run start 3000 &)",
     "type-check": "tsc",
     "precommit": "echo \"No need for precommit yet\"",
     "precommit2": "(git diff --diff-filter=AM --name-only --staged | grep ops/roles/ota/github-clone/vars/ | xargs grep -rL \"ANSIBLE\") && echo \"some vault files are not encrypted\" && exit",
