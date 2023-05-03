@@ -109,6 +109,16 @@ In `my-page.mdx`:
 <Button type="secondary">Read</Button>
 ```
 
+### Test
+
+To test the links of the website:
+
+```sh
+npm run build-and-start && npm run test:links
+```
+
+This will build the application, start the server on port 3000 and run the test checking the links.
+
 ### Modules documentation
 
 - [I18n](./src/modules/I18n/README.md)
