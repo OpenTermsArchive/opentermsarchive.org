@@ -19,6 +19,7 @@
     "docker:ssh": "docker exec -it opentermsarchive.org /bin/sh",
     "kill-port-3000": "(lsof -ti:3000 | xargs kill)",
     "test": "jest",
+    "test:links": "npx linkinator http://localhost:3000 --recurse --skip https://www.linkedin.com/.* --verbosity 'error'",
     "prettier": "prettier --write ."
   },
   "dependencies": {
