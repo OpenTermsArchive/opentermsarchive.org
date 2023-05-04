@@ -2,11 +2,14 @@
   "name": "OpenTermsArchive.org",
   "version": "1.29.0",
   "prettier": "prettier-config-ambanum",
+  "config": {
+    "port": "3000"
+  },
   "scripts": {
     "dev": "next",
     "build": "next build --debug",
-    "start": "next start -p $PORT",
-    "build-and-start": "rm -rf .next && npm run build && npm run kill-port-3000 && (npm run start 3000 &)",
+    "start": "next start -p $npm_package_config_port",
+    "build-and-start": "rm -rf .next && npm run build && npm run kill-port-3000 && (npm run start -p $npm_package_config_port &)",
     "type-check": "tsc",
     "precommit": "echo \"No need for precommit yet\"",
     "precommit2": "(git diff --diff-filter=AM --name-only --staged | grep ops/roles/ota/github-clone/vars/ | xargs grep -rL \"ANSIBLE\") && echo \"some vault files are not encrypted\" && exit",
@@ -18,9 +21,9 @@
     "docker:build": "docker build -t opentermsarchive.org . --build-arg ENV_FILE=.env",
     "docker:run": "(docker rm opentermsarchive.org || true) && docker run --rm -p 3000:3000 --name opentermsarchive.org -it opentermsarchive.org",
     "docker:ssh": "docker exec -it opentermsarchive.org /bin/sh",
-    "kill-port-3000": "(lsof -ti:3000 | xargs kill)",
+    "kill-port-3000": "(lsof -ti:$npm_package_config_port | xargs kill)",
     "test": "jest",
-    "test:links": "npx linkinator http://localhost:3000 --recurse --skip https://www.linkedin.com/.* --verbosity error",
+    "test:links": "npx linkinator http://localhost:$npm_package_config_port --recurse --skip https://www.linkedin.com/.* --verbosity error",
     "prettier": "prettier --write ."
   },
   "dependencies": {
