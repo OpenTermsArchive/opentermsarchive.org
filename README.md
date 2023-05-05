@@ -109,15 +109,17 @@ In `my-page.mdx`:
 <Button type="secondary">Read</Button>
 ```
 
-### Test
+### Check the broken links
 
-To test the links of the website:
+1. Build the app : `rm -rf .next && npm run build`
+2. Start the app in background (production mode): `npm run start &`
+3. Launch the test `npm run test:links`
 
-```sh
-npm run build-and-start && npm run test:links
-```
+#### Common errors
 
-This will build the application, start the server on port 3000 and run the test checking the links.
+`  [0] http://localhost:<PORT>/. ERROR: Detected 1 broken links. Scanned 1 links in 0.013 seconds.` is triggered if you do not have started the app.
+
+`Error: listen EADDRINUSE: address already in use 0.0.0.0:<PORT>` is triggered if you have already an app started in background. You can stop all processes running on the configured port with the command `npm run stop`. To close only the desired process you have to get the PID with `lsof -i :<PORT>` and kill it with `kill -p <PID>`.
 
 ### Modules documentation
 
