@@ -16,6 +16,6 @@ jobs:
       - name: Build
         run: npm run build
       - name: Start server
-        run: npm run start 3000 &
+        run: npm run start &
       - name: Check for broken links
         run: npm run test:links
