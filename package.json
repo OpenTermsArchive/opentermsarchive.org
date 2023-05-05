@@ -10,7 +10,6 @@
     "build": "next build --debug",
     "start": "next start -p $npm_package_config_port",
     "stop": "(lsof -ti:$npm_package_config_port | xargs kill)",
-    "build-and-start": "rm -rf .next && npm run build && npm run stop && (npm run start -p $npm_package_config_port &)",
     "type-check": "tsc",
     "precommit": "echo \"No need for precommit yet\"",
     "precommit2": "(git diff --diff-filter=AM --name-only --staged | grep ops/roles/ota/github-clone/vars/ | xargs grep -rL \"ANSIBLE\") && echo \"some vault files are not encrypted\" && exit",
