@@ -1,12 +1,11 @@
-name: Test Build
+name: Test
 
 on:
   push:
 
 jobs:
-  test-build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -16,3 +15,7 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Start server
+        run: npm run start &
+      - name: Check for broken links
+        run: npm run test:links
