@@ -22,7 +22,7 @@
     "docker:run": "(docker rm opentermsarchive.org || true) && docker run --rm -p 3000:3000 --name opentermsarchive.org -it opentermsarchive.org",
     "docker:ssh": "docker exec -it opentermsarchive.org /bin/sh",
     "test": "jest",
-    "test:links": "npx linkinator http://localhost:$npm_package_config_port --recurse --skip https://www.linkedin.com/.* --verbosity error",
+    "test:links": "linkinator http://localhost:$npm_package_config_port --recurse --skip https://www.linkedin.com/.* --verbosity error",
     "prettier": "prettier --write ."
   },
   "dependencies": {
