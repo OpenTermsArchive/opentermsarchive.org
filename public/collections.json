@@ -43,7 +43,8 @@
         "name": "European Commission",
         "url": "https://ec.europa.eu/info/departments/communications-networks-content-and-technology_en"
       }
-    ]
+    ],
+    "endpoint": "http://vps-463f0baf.vps.ovh.net/api/v1/docs/"
   },
   "France Élections": {
     "id": "france-elections",
@@ -81,7 +82,8 @@
     "industries": {
       "en": "Online dating",
       "fr": "Rencontre en ligne"
-    }
+    },
+    "endpoint": "http://vps-99ae1d89.vps.ovh.net/api/v1/docs/"
   },
   "France": {
     "id": "france",
@@ -104,7 +106,8 @@
     "stats": {
       "services": "108",
       "documents": "216"
-    }
+    },
+    "endpoint": "http://198.244.142.9/api/v1/docs/"
   },
   "Contrib": {
     "id": "contrib",
@@ -117,7 +120,8 @@
     "stats": {
       "services": "299",
       "documents": "660"
-    }
+    },
+    "endpoint": "http://198.244.153.104/api/v1/docs/"
   },
   "Demo": {
     "id": "demo",
@@ -136,6 +140,7 @@
     "industries": {
       "en": "Services needed to operate the Open Terms Archive engine",
       "fr": "Services nécessaires au fonctionnement du moteur d'Open Terms Archive"
-    }
+    },
+    "endpoint": "http://162.19.74.224/api/v1/docs/"
   }
 }
