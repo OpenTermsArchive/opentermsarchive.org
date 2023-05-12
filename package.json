@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build --debug",
-    "start": "next start -p $npm_package_config_port",
+    "start": "next start -p $PORT",
     "stop": "(lsof -ti:$npm_package_config_port | xargs kill)",
     "type-check": "tsc",
     "precommit": "echo \"No need for precommit yet\"",
