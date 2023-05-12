@@ -16,6 +16,6 @@ jobs:
       - name: Build
         run: npm run build
       - name: Start server
-        run: npm run start &
+        run: PORT=3000 npm run start &
       - name: Check for broken links
-        run: npm run test:links
+        run: PORT=3000 npm run test:links

@@ -112,8 +112,8 @@ In `my-page.mdx`:
 ### Check the broken links
 
 1. Build the app : `rm -rf .next && npm run build`
-2. Start the app in background (production mode): `npm run start &`
-3. Launch the test `npm run test:links`
+2. Start the app in background (production mode): `PORT=<PORT> npm run start &`
+3. Launch the test `PORT=<PORT> npm run test:links`
 
 #### Common errors
 
