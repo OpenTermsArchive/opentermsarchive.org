@@ -18,7 +18,7 @@
     "docker:build": "docker build -t opentermsarchive.org . --build-arg ENV_FILE=.env",
     "docker:run": "(docker rm opentermsarchive.org || true) && docker run --rm -p 3000:3000 --name opentermsarchive.org -it opentermsarchive.org",
     "docker:ssh": "docker exec -it opentermsarchive.org /bin/sh",
-    "test:links": "linkinator http://0.0.0.0:$PORT --recurse --skip '^(https://www.linkedin.com/.*|https://twitter.com/.*)' --verbosity error",
+    "test:links": "linkinator http://0.0.0.0:$PORT --recurse --skip '^(https://www.linkedin.com/.*|https://twitter.com/.*|https://www.neonmag.fr/.*)' --verbosity error",
     "prettier": "prettier --write ."
   },
   "dependencies": {
