@@ -87,6 +87,10 @@
     "id": "france",
     "languages": ["fr"],
     "jurisdictions": ["FR"],
+    "industries": {
+      "en": "Largest digital services used in France",
+      "fr": "Principaux services numériques utilisés en France"
+    },
     "maintainers": [
       {
         "name": "UFC Que Choisir",
@@ -106,6 +110,10 @@
     "id": "contrib",
     "languages": ["en", "fr"],
     "jurisdictions": ["EU", "US"],
+    "industries": {
+      "en": "Documents added by volunteer contributors and historically imported from TOSBack.org",
+      "fr": "Documents ajoutés par des contributeurs bénévoles et importés historiquement de TOSBack.org"
+    },
     "stats": {
       "services": "295",
       "documents": "648"
