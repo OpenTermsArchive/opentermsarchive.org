@@ -15,7 +15,6 @@
 .hero_title {
   @mixin grid 10, 10;
 
-  font-size: 5rem;
   & span {
     font-weight: 200;
   }
