@@ -1,4 +1,27 @@
 {
+  "Platform Governance Archive": {
+    "id": "pga",
+    "languages": ["en"],
+    "jurisdictions": ["EU"],
+    "maintainers": [
+      {
+        "name": "Centre for Media, Communication and Information Research (ZeMKI), University of Bremen",
+        "url": "https://www.uni-bremen.de/"
+      },
+      {
+        "name": "Alexander von Humboldt Institute for Internet and Society (HIIG)",
+        "url": "https://hiig.de/"
+      }
+    ],
+    "stats": {
+      "services": "20",
+      "documents": "80"
+    },
+    "industries": {
+      "en": "Major global social media services",
+      "fr": "Médias sociaux mondiaux majeurs"
+    }
+  },
   "P2B Compliance": {
     "id": "p2b-compliance",
     "languages": ["*eu"],
@@ -21,34 +44,6 @@
         "url": "https://ec.europa.eu/info/departments/communications-networks-content-and-technology_en"
       }
     ]
-  },
-  "Contrib": {
-    "id": "contrib",
-    "languages": ["en", "fr"],
-    "jurisdictions": ["EU", "US"],
-    "stats": {
-      "services": "295",
-      "documents": "648"
-    }
-  },
-  "France": {
-    "id": "france",
-    "languages": ["fr"],
-    "jurisdictions": ["FR"],
-    "maintainers": [
-      {
-        "name": "UFC Que Choisir",
-        "url": "https://www.quechoisir.org"
-      },
-      {
-        "name": "Ambassadeur français pour le numérique",
-        "url": "https://disinfo.quaidorsay.fr/fr"
-      }
-    ],
-    "stats": {
-      "services": "105",
-      "documents": "213"
-    }
   },
   "France Élections": {
     "id": "france-elections",
@@ -88,27 +83,32 @@
       "fr": "Rencontre en ligne"
     }
   },
-  "Platform Governance Archive": {
-    "id": "pga",
-    "languages": ["en"],
-    "jurisdictions": ["EU"],
+  "France": {
+    "id": "france",
+    "languages": ["fr"],
+    "jurisdictions": ["FR"],
     "maintainers": [
       {
-        "name": "Centre for Media, Communication and Information Research (ZeMKI), University of Bremen",
-        "url": "https://www.uni-bremen.de/"
+        "name": "UFC Que Choisir",
+        "url": "https://www.quechoisir.org"
       },
       {
-        "name": "Alexander von Humboldt Institute for Internet and Society (HIIG)",
-        "url": "https://hiig.de/"
+        "name": "Ambassadeur français pour le numérique",
+        "url": "https://disinfo.quaidorsay.fr/fr"
       }
     ],
     "stats": {
-      "services": "20",
-      "documents": "80"
-    },
-    "industries": {
-      "en": "Major global social media services",
-      "fr": "Médias sociaux mondiaux majeurs"
+      "services": "105",
+      "documents": "213"
+    }
+  },
+  "Contrib": {
+    "id": "contrib",
+    "languages": ["en", "fr"],
+    "jurisdictions": ["EU", "US"],
+    "stats": {
+      "services": "295",
+      "documents": "648"
     }
   },
   "Demo": {
