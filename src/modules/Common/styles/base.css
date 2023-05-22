@@ -14,7 +14,7 @@ body {
   font-family: var(--defaultFontFamily);
   font-size: var(--defaultFontSize);
   color: var(--colorBlack900);
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: -0.2px;
   font-weight: normal;
 }
