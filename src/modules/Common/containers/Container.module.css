@@ -1,7 +1,7 @@
 .container {
   margin: 0 auto;
   padding-top: var(--p4XL);
-  padding-bottom: var(--p3XL);
+  padding-bottom: var(--p4XL);
 
   &.container__1211 {
     @mixin grid 12, 11;

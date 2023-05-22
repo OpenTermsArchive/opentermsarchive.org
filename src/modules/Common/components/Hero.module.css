@@ -1,17 +1,32 @@
 .hero {
+  margin: var(--m4XL) 0;
+
   &.hero__isDark {
     color: var(--colorWhite);
+  }
+
+  & a {
+    display: inline-block;
+
+    font-size: 2.75rem;
   }
 }
 
 .hero_title {
   @mixin grid 10, 10;
+
+  font-size: 5rem;
+  & span {
+    font-weight: 200;
+  }
 }
 
 .hero_subtitle {
   @mixin grid 12, 11;
+
+  font-size: 2.75rem;
 }
 
 .hero_title + .hero_subtitle {
-  margin-top: var(--mXL);
+  margin-top: var(--m2XL);
 }
