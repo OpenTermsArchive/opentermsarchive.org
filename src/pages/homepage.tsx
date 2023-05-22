@@ -23,7 +23,7 @@ const HomePage = () => {
       <Container layout="wide" dark={true} paddingY={false} id="mission-statement">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
           <Hero title={t('homepage:mission_statement')} subtitle={t('homepage:what_it_is')}>
-            <Link href="/focus">{t('homepage:learn_more_focus_areas')}</Link>
+            <Link href="/impact">{t('homepage:learn_more_focus_areas')}</Link>
           </Hero>
         </Container>
       </Container>
