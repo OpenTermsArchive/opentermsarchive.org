@@ -44,6 +44,16 @@ module.exports = nextI18nRoutes({
         permanent: true,
       },
       {
+        source: '/focus/disinformation',
+        destination: '/domain/disinformation',
+        permanent: true,
+      },
+      {
+        source: '/focus/generative-ai',
+        destination: '/domain/generative-ai',
+        permanent: true,
+      },
+      {
         source: '/en/contribute/:slug',
         destination: 'https://contribute.opentermsarchive.org/en/:slug',
         permanent: true,
