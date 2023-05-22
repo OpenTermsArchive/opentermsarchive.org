@@ -47,11 +47,11 @@ const Layout = ({
                     </li>
                     <li>
                       <Link
-                        href={'/case-studies'}
+                        href={'/impact'}
                         onClick={toggleExtended}
-                        title={t('case-studies:hero.subtitle')}
+                        title={t('header:link.impact.title')}
                       >
-                        {t('header:link.case-studies')}
+                        {t('header:link.impact')}
                       </Link>
                     </li>
                     <li>
@@ -123,13 +123,13 @@ const Layout = ({
                   <Link href="/">{t('footer:link.home')}</Link>
                 </li>
                 <li>
+                  <Link href={'/impact'}>{t('footer:link.impact')}</Link>
+                </li>
+                <li>
                   <Link href={'/case-studies'}>{t('footer:link.case-studies')}</Link>
                 </li>
                 <li>
                   <Link href={'/about'}>{t('footer:link.about')}</Link>
-                </li>
-                <li>
-                  <Link href={'/media'}>{t('footer:link.media')}</Link>
                 </li>
                 <li>
                   <Link href="https://docs.opentermsarchive.org">{t('footer:link.docs')}</Link>
@@ -166,11 +166,6 @@ const Layout = ({
             </FooterMenu>
             <FooterMenu small={true} align={'right'}>
               <ul>
-                <li>
-                  <Link href="/stats" title={t('footer:link.stats.title')}>
-                    {t('footer:link.stats')}
-                  </Link>
-                </li>
                 <li>
                   <Link href="/media">{t('footer:link.media')}</Link>
                 </li>
