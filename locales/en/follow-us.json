@@ -1,5 +1,6 @@
 {
-  "button.label": "Follow @OpenTerms",
-  "title": "Discover interesting changes",
-  "desc": "We regularly tweet changes to documents worth having a look at."
+  "twitter.button.label": "On Twitter",
+  "mastodon.button.label": "On Mastodon",
+  "title": "Follow us",
+  "desc": "We publish regularly discoveries from Open Terms Archive and its ecosystem."
 }

@@ -1,4 +1,5 @@
-import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
+import { HiMail as IconMailFill } from 'react-icons/hi';
+import { SiMastodon as IconMastodonFill, SiTwitter as IconTwitterFill } from 'react-icons/si';
 import React, { ReactNode } from 'react';
 
 import { Analytics } from 'modules/Analytics';
@@ -72,30 +73,6 @@ const Layout = ({
                 </HeaderMenu>
                 <HeaderMenu type="secondary">
                   <LanguageSwitcher />
-                  <ul>
-                    <li>
-                      <Link
-                        href="https://twitter.com/OpenTerms"
-                        className={classNames('icon_circle')}
-                        target="_blank"
-                        rel="noopener"
-                        title={t('header:link.twitter.title')}
-                      >
-                        <FiTwitter color="#fefffd" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="https://github.com/OpenTermsArchive/"
-                        className={classNames('icon_circle')}
-                        target="_blank"
-                        rel="noopener"
-                        title={t('header:link.github.title')}
-                      >
-                        <FiGithub color="#fefffd" />
-                      </Link>
-                    </li>
-                  </ul>
                 </HeaderMenu>
               </>
             )}
@@ -138,6 +115,20 @@ const Layout = ({
               <ul>
                 <li>
                   <Link
+                    href="https://mastodon.lescommuns.org/@opentermsarchive"
+                    target="_blank"
+                    rel="noopener"
+                    title={t('footer:link.mastodon.title')}
+                    className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
+                  >
+                    <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
+                      <IconMastodonFill color="#fefffd" />
+                    </span>
+                    <span>{t('footer:link.mastodon')}</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="https://twitter.com/OpenTerms"
                     target="_blank"
                     rel="noopener"
@@ -145,7 +136,7 @@ const Layout = ({
                     className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
                   >
                     <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
-                      <FiTwitter color="#fefffd" />
+                      <IconTwitterFill color="#fefffd" />
                     </span>
                     <span>{t('footer:link.twitter')}</span>
                   </Link>
@@ -157,7 +148,7 @@ const Layout = ({
                     className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
                   >
                     <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
-                      <FiMail color="#fefffd" />
+                      <IconMailFill color="#fefffd" />
                     </span>
                     <span>{t('footer:link.contact')}</span>
                   </Link>
