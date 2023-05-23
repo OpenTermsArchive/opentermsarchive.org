@@ -31,7 +31,14 @@ export default function StaticPage({ mdxContent }: WithMdxResult) {
     >
       {frontmatter['hero.title'] && (
         <Container layout="wide" dark={true} paddingY={false}>
-          <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} dark={true}>
+          <Container
+            gridCols="12"
+            gridGutters="11"
+            flex={true}
+            paddingX={false}
+            paddingY={false}
+            dark={true}
+          >
             <Hero title={frontmatter['hero.title']} subtitle={frontmatter['hero.subtitle']}></Hero>
           </Container>
         </Container>
