@@ -20,13 +20,11 @@
   }
 
   &.button__secondary {
-    background-color: var(--colorWhite);
+    background-color: transparent;
     border: 1px solid var(--colorPrimary);
     color: var(--colorPrimary);
 
     &:hover {
-      background-color: var(--colorWhite);
-      color: var(--colorSecondary);
       border: 1px solid var(--colorSecondary);
     }
 

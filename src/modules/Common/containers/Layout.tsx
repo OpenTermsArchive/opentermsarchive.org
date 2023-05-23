@@ -1,5 +1,5 @@
-import { HiMail as IconMail } from 'react-icons/hi';
-import { SiMastodon as IconMastodon } from 'react-icons/si';
+import { HiMail as IconMailFill } from 'react-icons/hi';
+import { SiMastodon as IconMastodonFill, SiTwitter as IconTwitterFill } from 'react-icons/si';
 import React, { ReactNode } from 'react';
 
 import { Analytics } from 'modules/Analytics';
@@ -122,7 +122,21 @@ const Layout = ({
                     className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
                   >
                     <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
-                      <IconMastodon color="#fefffd" />
+                      <IconMastodonFill color="#fefffd" />
+                    </span>
+                    <span>{t('footer:link.mastodon')}</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://twitter.com/OpenTerms"
+                    target="_blank"
+                    rel="noopener"
+                    title={t('footer:link.twitter.title')}
+                    className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
+                  >
+                    <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
+                      <IconTwitterFill color="#fefffd" />
                     </span>
                     <span>{t('footer:link.twitter')}</span>
                   </Link>
@@ -134,7 +148,7 @@ const Layout = ({
                     className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
                   >
                     <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
-                      <IconMail color="#fefffd" />
+                      <IconMailFill color="#fefffd" />
                     </span>
                     <span>{t('footer:link.contact')}</span>
                   </Link>

@@ -1,5 +1,6 @@
-import { FiMail as IconMail } from 'react-icons/fi';
+import { FiMail as IconMail, FiTwitter as IconTwitter } from 'react-icons/fi';
 import { TbBrandMastodon as IconMastodon } from 'react-icons/tb';
+import { SiMastodon as IconMastodonFill, SiTwitter as IconTwitterFill } from 'react-icons/si';
 
 import Button from 'modules/Common/components/Button';
 import Card from 'modules/Common/components/Card';
@@ -47,6 +48,7 @@ const HomePage = () => {
         <Container gridCols="9" gridGutters="8" flex={true}>
           <Column width={40} alignX="center" alignY="center">
             <IconMastodon size="128" color="var(--colorBlack400)" strokeWidth="1px" />
+            <IconTwitter size="128" color="var(--colorBlack400)" strokeWidth="1px" />
           </Column>
           <Column width={60} subtitle={t('follow-us:title')}>
             <TextContent marginTop={false}>
@@ -56,7 +58,21 @@ const HomePage = () => {
                 target="_blank"
                 rel="noopener"
               >
-                <Button className="mb__0">{t('follow-us:button.label')}</Button>
+                <Button className="mb__0">
+                  <IconMastodonFill strokeWidth="1px" />
+                  <span className="ml__XS">{t('follow-us:mastodon.button.label')}</span>
+                </Button>
+              </Link>
+              <Link
+                href="https://twitter.com/OpenTerms"
+                target="_blank"
+                rel="noopener"
+                className="ml__S"
+              >
+                <Button type="secondary" className="mb__0">
+                  <IconTwitterFill strokeWidth="1px" />
+                  <span className="ml__XS">{t('follow-us:twitter.button.label')}</span>
+                </Button>
               </Link>
             </TextContent>
           </Column>
