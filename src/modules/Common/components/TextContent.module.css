@@ -157,7 +157,15 @@
   }
 
   & ul {
-    list-style-type: disc;
+    list-style: none;
+
+    & li::before {
+      content: "\2022";  /* \2022 is the CSS Code/unicode for a bullet */
+      color: var(--colorBlack400);
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
 
     &:not(:last-child) {
       margin-bottom: var(--mL);
@@ -173,6 +181,11 @@
     }
     &:not(:last-child) {
       margin-bottom: var(--mM);
+    }
+
+    & h1, & h2, & h3, & h4, & h5, & h6 {
+      display: inline-block;
+      margin-bottom: 0;
     }
   }
 
