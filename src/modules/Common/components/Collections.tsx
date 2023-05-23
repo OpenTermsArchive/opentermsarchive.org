@@ -1,6 +1,6 @@
 import Button from 'modules/Common/components/Button';
 import Card from 'modules/Common/components/Card';
-import CardList from 'modules/Common/components/CardList';
+import CardList, { CardListProps } from 'modules/Common/components/CardList';
 import CardTable from 'modules/Common/components/CardTable';
 import CardTableItem from 'modules/Common/components/CardTableItem';
 import { FiSearch as IconSearch } from 'react-icons/fi';
@@ -12,7 +12,10 @@ import slugify from 'slugify';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'modules/I18n';
 
-type CollectionsProps = {} & React.HTMLAttributes<HTMLDivElement>;
+type CollectionsProps = {
+  ids?: Array<string>;
+} & CardListProps &
+  React.HTMLAttributes<HTMLDivElement>;
 
 interface Maintainer {
   name: string;
@@ -39,7 +42,18 @@ interface Collection {
   industries?: Industries;
 }
 
-const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
+const Collections: React.FC<CollectionsProps> = ({
+  ids,
+  title,
+  titleLevel,
+  centerTitle = true,
+  subtitle,
+  subtitleLevel = 'h5',
+  small,
+  big,
+  children,
+  ...props
+}) => {
   const { t } = useTranslation();
   const router = useRouter();
 
@@ -49,15 +63,23 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
   // @ts-ignore
   const countryName = new Intl.DisplayNames(router.locale, { type: 'region' });
 
+  const collections = ids
+    ? Object.entries(collectionsData).filter(
+        // @ts-ignore
+        ([name, collection]) => ids.indexOf(collection.id) > -1
+      )
+    : Object.entries(collectionsData);
+
   return (
     <CardList
-      title={t('collections:title')}
-      subtitle={t('collections:subtitle', { contactEmail: 'contact@opentermsarchive.org' })}
-      subtitleLevel="h5"
-      centerTitle={true}
+      title={title}
+      titleLevel={titleLevel}
+      subtitle={subtitle}
+      subtitleLevel={subtitleLevel}
+      centerTitle={centerTitle}
       {...props}
     >
-      {Object.entries(collectionsData).map(([name, collection]) => {
+      {collections.map(([name, collection]) => {
         const {
           maintainers,
           languages,

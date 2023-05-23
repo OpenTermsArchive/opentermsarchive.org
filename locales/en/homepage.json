@@ -16,7 +16,7 @@
   "how.bloc4.desc": "All recorded versions are published in datasets enabling reuse and research.",
   "how.bloc4.title": "4. Disseminating",
   "how.title": "How it works",
-  "mission_statement": "When the services we use every day change their rules, we should be the first ones to know.",
+  "mission_statement": "<span>Big Tech services benefit from the opaqueness of their terms.</span><br />We make them transparent.",
   "reuses.memos-elections-fr.author": "Reset",
   "reuses.memos-elections-fr.subtitle": "Tracks major platforms behaviour over the French 2022 elections.",
   "reuses.memos-elections-fr.title": "French Elections Memos",
@@ -38,5 +38,6 @@
   "reuses.tosdr.title": "Terms of Service; Didn’t Read",
   "seo.desc": "We track every change to terms of services to shift the power balance from big tech towards end users.",
   "seo.title": "Open Terms Archive",
-  "what_it_is": "Open Terms Archive records every change to the terms of digital services. Our community analyses these changes, shifting the power balance from big tech towards end users."
+  "what_it_is": "Open Terms Archive publicly records every version of the terms of digital services to enable democratic oversight.",
+  "learn_more_focus_areas": "Discover how that makes a difference →"
 }

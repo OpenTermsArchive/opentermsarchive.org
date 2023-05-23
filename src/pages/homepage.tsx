@@ -21,15 +21,23 @@ const HomePage = () => {
     <Layout title={t('homepage:seo.title')} desc={t('homepage:seo.desc')}>
       {/* Mission statement + What is it ? */}
       <Container layout="wide" dark={true} paddingY={false} id="mission-statement">
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
-          <Hero title={t('homepage:mission_statement')} subtitle={t('homepage:what_it_is')}></Hero>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingY={false}>
+          <Hero title={t('homepage:mission_statement')} subtitle={t('homepage:what_it_is')}>
+            <Link href="/impact" className="a__darked">
+              {t('homepage:learn_more_focus_areas')}
+            </Link>
+          </Hero>
         </Container>
       </Container>
 
       {/* Collections */}
       <Container gray={true} layout="wide" paddingX={false} paddingTop={false} id="collections">
         <Container gridCols="12" gridGutters="11">
-          <Collections />
+          <Collections
+            title={t('collections:title')}
+            subtitle={t('collections:subtitle', { contactEmail: 'contact@opentermsarchive.org' })}
+            subtitleLevel="h5"
+          />
         </Container>
       </Container>
 

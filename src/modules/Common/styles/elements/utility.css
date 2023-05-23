@@ -281,3 +281,15 @@
 .mb__4XL {
   margin-bottom: var(--m4XL);
 }
+
+.color__light {
+  color: var(--colorBlack600);
+}
+
+.color__lighter {
+  color: var(--colorBlack400);
+}
+
+.font-style__italic {
+  font-style: italic;
+}
