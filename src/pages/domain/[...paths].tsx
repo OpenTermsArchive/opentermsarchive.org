@@ -56,7 +56,7 @@ export default function CaseStudyPage({ mdxContent }: WithMdxResult) {
                 ids={frontmatter.related_collections}
                 title={t('domain:related-collections')}
                 titleLevel="h3"
-                centerTitle="false"
+                centerTitle={false}
               />
             </div>
           </Container>

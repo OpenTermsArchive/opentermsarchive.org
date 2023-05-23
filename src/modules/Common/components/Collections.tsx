@@ -65,6 +65,7 @@ const Collections: React.FC<CollectionsProps> = ({
 
   const collections = ids
     ? Object.entries(collectionsData).filter(
+        // @ts-ignore
         ([name, collection]) => ids.indexOf(collection.id) > -1
       )
     : Object.entries(collectionsData);
