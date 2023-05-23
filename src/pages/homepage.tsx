@@ -1,4 +1,5 @@
-import { FiMail as IconMail, FiTwitter as IconTwitter } from 'react-icons/fi';
+import { FiMail as IconMail } from 'react-icons/fi';
+import { TbBrandMastodon as IconMastodon } from 'react-icons/tb';
 
 import Button from 'modules/Common/components/Button';
 import Card from 'modules/Common/components/Card';
@@ -45,12 +46,16 @@ const HomePage = () => {
       <Container layout="wide" paddingY={false} dark={true} id="follow-us">
         <Container gridCols="9" gridGutters="8" flex={true}>
           <Column width={40} alignX="center" alignY="center">
-            <IconTwitter size="128" color="var(--colorBlack400)" strokeWidth="1px" />
+            <IconMastodon size="128" color="var(--colorBlack400)" strokeWidth="1px" />
           </Column>
           <Column width={60} subtitle={t('follow-us:title')}>
             <TextContent marginTop={false}>
               <p className="mt__M">{t('follow-us:desc')}</p>
-              <Link href="https://twitter.com/OpenTerms" target="_blank" rel="noopener">
+              <Link
+                href="https://mastodon.lescommuns.org/@opentermsarchive"
+                target="_blank"
+                rel="noopener"
+              >
                 <Button className="mb__0">{t('follow-us:button.label')}</Button>
               </Link>
             </TextContent>

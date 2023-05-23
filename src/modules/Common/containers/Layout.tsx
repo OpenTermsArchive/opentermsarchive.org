@@ -1,4 +1,5 @@
-import { FiGithub, FiMail, FiTwitter } from 'react-icons/fi';
+import { HiMail as IconMail } from 'react-icons/hi';
+import { SiMastodon as IconMastodon, SiGithub as IconGithub } from 'react-icons/si';
 import React, { ReactNode } from 'react';
 
 import { Analytics } from 'modules/Analytics';
@@ -75,13 +76,13 @@ const Layout = ({
                   <ul>
                     <li>
                       <Link
-                        href="https://twitter.com/OpenTerms"
+                        href="https://mastodon.lescommuns.org/@opentermsarchive"
                         className={classNames('icon_circle')}
                         target="_blank"
                         rel="noopener"
                         title={t('header:link.twitter.title')}
                       >
-                        <FiTwitter color="#fefffd" />
+                        <IconMastodon color="#fefffd" />
                       </Link>
                     </li>
                     <li>
@@ -92,7 +93,7 @@ const Layout = ({
                         rel="noopener"
                         title={t('header:link.github.title')}
                       >
-                        <FiGithub color="#fefffd" />
+                        <IconGithub color="#fefffd" />
                       </Link>
                     </li>
                   </ul>
@@ -138,14 +139,14 @@ const Layout = ({
               <ul>
                 <li>
                   <Link
-                    href="https://twitter.com/OpenTerms"
+                    href="https://mastodon.lescommuns.org/@opentermsarchive"
                     target="_blank"
                     rel="noopener"
                     title={t('footer:link.twitter.title')}
                     className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
                   >
                     <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
-                      <FiTwitter color="#fefffd" />
+                      <IconMastodon color="#fefffd" />
                     </span>
                     <span>{t('footer:link.twitter')}</span>
                   </Link>
@@ -157,7 +158,7 @@ const Layout = ({
                     className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
                   >
                     <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
-                      <FiMail color="#fefffd" />
+                      <IconMail color="#fefffd" />
                     </span>
                     <span>{t('footer:link.contact')}</span>
                   </Link>
