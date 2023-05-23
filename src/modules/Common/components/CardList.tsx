@@ -2,8 +2,9 @@ import React from 'react';
 import classNames from 'classnames';
 import s from './CardList.module.css';
 
-type CardListProps = {
+export type CardListProps = {
   title?: string;
+  titleLevel?: 'h2' | 'h3' | 'h4' | 'h5';
   centerTitle?: boolean;
   subtitle?: string;
   subtitleLevel?: 'h3' | 'h4' | 'h5';
@@ -13,6 +14,7 @@ type CardListProps = {
 
 const CardList: React.FC<CardListProps> = ({
   title,
+  titleLevel = 'h2',
   centerTitle,
   subtitle,
   subtitleLevel = 'h3',
@@ -22,6 +24,7 @@ const CardList: React.FC<CardListProps> = ({
   className,
   ...props
 }) => {
+  const TitleComponent = titleLevel;
   const SubTitleComponent = subtitleLevel;
 
   return (
@@ -31,7 +34,7 @@ const CardList: React.FC<CardListProps> = ({
           [s.cardList_header__isCenter]: centerTitle === true,
         })}
       >
-        {title && <h2 className={classNames(s.cardList_title)}>{title}</h2>}
+        {title && <TitleComponent className={classNames(s.cardList_title)}>{title}</TitleComponent>}
         {subtitle && (
           <SubTitleComponent
             className={classNames(s.cardList_subtitle, `${subtitleLevel}__light`)}

@@ -13,6 +13,7 @@ import TextContent from 'modules/Common/components/TextContent';
 import ThumbGallery from 'modules/Common/components/ThumbGallery';
 import ThumbGalleryItem from 'modules/Common/components/ThumbGalleryItem';
 import useTranslation from 'next-translate/useTranslation';
+import Collections from 'modules/Common/components/Collections';
 
 const STATIC_PAGES_PATH = 'pages';
 
@@ -28,6 +29,7 @@ export default function CaseStudyPage({ mdxContent }: WithMdxResult) {
       <Container
         gridCols={frontmatter['grid.cols'] || 8}
         gridGutters={frontmatter['grid.gutters'] || 7}
+        paddingBottom={false}
       >
         <TextContent>
           <h2>{frontmatter.title}</h2>
@@ -45,13 +47,31 @@ export default function CaseStudyPage({ mdxContent }: WithMdxResult) {
             />
           )}
         </TextContent>
-        <TextContent className="mt__2XL">
-          <hr />
-          <p className="color__light font-style__italic">
-            {t('domain:impact-model-reminder')}{' '}
-            <Link href="/impact">{t('domain:impact-model-link')}</Link>
-          </p>
-        </TextContent>
+      </Container>
+      {frontmatter.related_collections && (
+        <Container layout="wide" paddingX={false} paddingY={false} id="collections">
+          <Container gridCols="8" gridGutters="7" paddingY={false}>
+            <div className="mt__2XL">
+              <Collections
+                ids={frontmatter.related_collections}
+                title={t('domain:related-collections')}
+                titleLevel="h3"
+                centerTitle="false"
+              />
+            </div>
+          </Container>
+        </Container>
+      )}
+      <Container layout="wide" paddingY={false}>
+        <Container gridCols="8" gridGutters="7">
+          <TextContent>
+            <hr />
+            <p className="color__light font-style__italic">
+              {t('domain:impact-model-reminder')}{' '}
+              <Link href="/impact">{t('domain:impact-model-link')}</Link>
+            </p>
+          </TextContent>
+        </Container>
       </Container>
     </Layout>
   );
