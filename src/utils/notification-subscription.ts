@@ -24,6 +24,7 @@ class NotificationSubscription {
       const response = await this.contactsApi.createList({ name, folderId });
       return response?.body || [];
     } catch (err) {
+      // @ts-ignore
       console.error(err.toString(), err?.response?.body?.message);
       return { lists: [], count: 0 };
     }
@@ -40,6 +41,7 @@ class NotificationSubscription {
 
       return response?.body?.contacts || [];
     } catch (err) {
+      // @ts-ignore
       console.error(err.toString(), err?.response?.body?.message);
       return { lists: [], count: 0 };
     }
@@ -50,6 +52,7 @@ class NotificationSubscription {
       const response = await this.contactsApi.getLists(limit, offset);
       return response?.body || [];
     } catch (err) {
+      // @ts-ignore
       console.error(err.toString(), err?.response?.body?.message || err?.response?.statusMessage);
 
       return { lists: [], count: 0 };
@@ -85,6 +88,7 @@ class NotificationSubscription {
       const response = await this.contactsApi.getContactInfo(email);
       return response?.body?.email ? response?.body : null;
     } catch (err) {
+      // @ts-ignore
       console.error(err.toString(), err?.response?.body?.message);
       return null;
     }
@@ -95,6 +99,7 @@ class NotificationSubscription {
       const response = await this.contactsApi.createContact({ email, ...otherFields });
       return response?.body?.email ? response?.body : null;
     } catch (err) {
+      // @ts-ignore
       console.error(err.toString(), err?.response?.body?.message);
       return null;
     }

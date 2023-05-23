@@ -224,6 +224,7 @@ export default function Table<T extends Record<string, unknown>>({
                     height={virtualize?.height || 500}
                     itemCount={rows.length}
                     itemSize={virtualize?.itemSize || 56}
+                    // @ts-ignore
                     width={width - scrollBarSize}
                   >
                     {RenderVirtualizedRow}
