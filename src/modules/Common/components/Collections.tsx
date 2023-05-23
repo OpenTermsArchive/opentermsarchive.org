@@ -192,7 +192,7 @@ const Collections: React.FC<CollectionsProps> = ({
           isPlaceholder={true}
           image=""
           className="card__placeholder text__center"
-          title={t('collections:new_collections.title')}
+          subtitle={t('collections:new_collections.title')}
           link="mailto:contact@opentermsarchive.org"
           center={true}
         />

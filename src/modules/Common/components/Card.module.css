@@ -68,6 +68,8 @@
       font-size: 12rem;
       font-weight: 300;
       width: 100%;
+      height: 16rem;
+      margin-top: -8rem;
     }
 
     border: 3px dashed #DDD;
