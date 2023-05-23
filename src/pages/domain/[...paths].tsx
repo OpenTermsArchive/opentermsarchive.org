@@ -19,8 +19,7 @@ const STATIC_PAGES_PATH = 'pages';
 export default function CaseStudyPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
   const { t } = useTranslation();
-  
-  
+
   return (
     <Layout
       title={frontmatter['html_title'] ?? frontmatter['title'] ?? frontmatter['hero.title']}
@@ -30,9 +29,6 @@ export default function CaseStudyPage({ mdxContent }: WithMdxResult) {
         gridCols={frontmatter['grid.cols'] || 8}
         gridGutters={frontmatter['grid.gutters'] || 7}
       >
-        <p className='mb__2XL color__light font-style__italic'>
-          {t('domain:impact-model-reminder')} <Link href="/impact">{t('domain:impact-model-link')}</Link>
-        </p>
         <TextContent>
           <h2>{frontmatter.title}</h2>
           {mdxContent && (
@@ -48,6 +44,13 @@ export default function CaseStudyPage({ mdxContent }: WithMdxResult) {
               }}
             />
           )}
+        </TextContent>
+        <TextContent className="mt__2XL">
+          <hr />
+          <p className="color__light font-style__italic">
+            {t('domain:impact-model-reminder')}{' '}
+            <Link href="/impact">{t('domain:impact-model-link')}</Link>
+          </p>
         </TextContent>
       </Container>
     </Layout>
