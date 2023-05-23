@@ -12,5 +12,6 @@
   "title": "We establish partnerships to cover different industries, languages and jurisdictions",
   "subtitle": "We are constantly looking for new partners to track more services. <br/><a href=\"mailto:{{ contactEmail }}?subject=Partnership&body=Dear%20Open%20Terms%20Archive%20team%2C%0A%0AI%20represent%20____%20and%20am%20interested%20in%20tracking%20documents%20from%20services%20that%20operate%20in%3A%0A%0A-%20industry%3A%20_____%0A-%20language%3A%20_____%0A-%20jurisdiction%3A%20_____%0A%0AWe%20could%20allocate%20___%20hours%20per%20week%20to%20target%2C%20maintain%20and%20analyse%20these%20documents.%0A%0AOur%20team%20would%20be%20comprised%20of%20the%20following%20people%20and%20expertise%3A%0A%0A-%20____%0A-%20____%0A%0AThanks%2C\">Contact us</a> to start collaborating!",
   "volunteer-contributors": "Volunteer contributors",
-  "cta.download-dataset": "Download dataset"
+  "cta.download-dataset": "Download dataset",
+  "new_collections.title": "Want to track services for different languages, jurisdictions, or industries? Contact us to collaborate!"
 }

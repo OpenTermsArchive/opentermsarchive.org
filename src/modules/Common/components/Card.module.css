@@ -48,6 +48,37 @@
   &.card__isWhite {
     background-color: var(--colorWhite);
   }
+
+  &.card__placeholder {
+    position: relative;
+    background: #EFEFEF;
+
+    &:hover {
+      border: 3px dashed #ccc;
+
+      &::before {
+        color: var(--colorSecondary);
+      }
+    }
+
+    &::before {
+      content: "+";
+      color: #CECECE;
+      display: block;
+      font-size: 12rem;
+      font-weight: 300;
+      width: 100%;
+    }
+
+    border: 3px dashed #DDD;
+    display: flex;
+    justify-content: center;
+
+    & .card_title {
+      font-weight: 300;
+      font-size: 2rem;
+    }
+  }
 }
 
 .card__isLink {
@@ -72,7 +103,6 @@
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   overflow: hidden;
-  top: -1px;
 }
 
 .card_body {

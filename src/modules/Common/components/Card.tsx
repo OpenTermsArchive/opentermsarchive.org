@@ -17,6 +17,7 @@ type CardProps = {
   small?: boolean;
   big?: boolean;
   white?: boolean;
+  isPlaceholder?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const Card: React.FC<CardProps> = ({
@@ -33,6 +34,7 @@ const Card: React.FC<CardProps> = ({
   big,
   white = false,
   className,
+  isPlaceholder,
   ...props
 }) => {
   return (
@@ -46,6 +48,7 @@ const Card: React.FC<CardProps> = ({
           [s.card__isSmall]: !!small,
           [s.card__isBig]: !!big,
         },
+        isPlaceholder && s.card__placeholder,
         className
       )}
       {...props}
