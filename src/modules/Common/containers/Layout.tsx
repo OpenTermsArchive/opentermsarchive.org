@@ -118,7 +118,7 @@ const Layout = ({
                     href="https://mastodon.lescommuns.org/@opentermsarchive"
                     target="_blank"
                     rel="noopener"
-                    title={t('footer:link.twitter.title')}
+                    title={t('footer:link.mastodon.title')}
                     className={classNames('a_icontext', 'a__small', 'footer_menus_icontext')}
                   >
                     <span className={classNames('icon_circle', 'icon_circle__medium', 'mr__2XS')}>
