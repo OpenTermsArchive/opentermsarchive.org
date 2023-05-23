@@ -1,15 +1,15 @@
 {
   "P2B Compliance": {
     "id": "p2b-compliance",
-    "languages": ["*"],
+    "languages": ["*eu"],
     "jurisdictions": ["EU"],
     "stats": {
       "services": "208",
       "documents": "253"
     },
     "industries": {
-      "en": "Services covered by the Regulation (EU) on promoting fairness and transparency for business users of online intermediation services",
-      "fr": "Services révélant du règlement (UE) visant à promouvoir l'équité et la transparence pour les utilisateurs professionnels de services d'intermédiation en ligne"
+      "en": "Online intermediation services for businesses subject to the European <a href=\"https://eur-lex.europa.eu/eli/reg/2019/1150/oj\">platforms-to-businesses (“P2B” / 2019/1150) regulation</a>",
+      "fr": "Services d’intermédiation en ligne pour les entreprises sujets au règlement européen <a href=\"https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32019R1150&from=EN\">P2B / 2019/1150</a>"
     },
     "maintainers": [
       {
@@ -19,6 +19,11 @@
       {
         "name": "Open Evidence",
         "url": "https://open-evidence.com/"
+      },
+      {
+        "name": "European Comission",
+        "logo": "/images/contributors/european-commission.jpg",
+        "url": "https://europa.eu"
       }
     ]
   },

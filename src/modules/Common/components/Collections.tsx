@@ -87,6 +87,8 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
           .map((languageCode) => {
             if (languageCode === '*') {
               return t('collections:language.various');
+            } else if (languageCode === '*eu') {
+              return t('collections:language.europe');
             } else {
               return languageName.of(languageCode);
             }
