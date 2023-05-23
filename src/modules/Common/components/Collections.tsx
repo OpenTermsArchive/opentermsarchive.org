@@ -14,6 +14,7 @@ import { useTranslation } from 'modules/I18n';
 
 type CollectionsProps = {
   ids?: Array<string>;
+  withPlaceholder?: Boolean,
 } & CardListProps &
   React.HTMLAttributes<HTMLDivElement>;
 
@@ -52,6 +53,7 @@ const Collections: React.FC<CollectionsProps> = ({
   small,
   big,
   children,
+  withPlaceholder,
   ...props
 }) => {
   const { t } = useTranslation();
@@ -185,6 +187,17 @@ const Collections: React.FC<CollectionsProps> = ({
           </Card>
         );
       })}
+      {withPlaceholder && 
+        <Card
+          isPlaceholder={true}
+          image=""
+          className="card__placeholder text__center"
+          subtitle={t('collections:new_collections.title')}
+          link="mailto:contact@opentermsarchive.org"
+          center={true}
+        />
+      }
+      
     </CardList>
   );
 };

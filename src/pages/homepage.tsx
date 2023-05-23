@@ -37,8 +37,8 @@ const HomePage = () => {
         <Container gridCols="12" gridGutters="11">
           <Collections
             title={t('collections:title')}
-            subtitle={t('collections:subtitle', { contactEmail: 'contact@opentermsarchive.org' })}
             subtitleLevel="h5"
+            withPlaceholder={true}
           />
         </Container>
       </Container>
