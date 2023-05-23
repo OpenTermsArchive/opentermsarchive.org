@@ -1,9 +1,8 @@
-import { Link } from 'modules/I18n';
 import React from 'react';
 import classNames from 'classnames';
 import contributorsData from '../../../../public/contributors.json';
-import { kebabCase } from 'lodash';
 import s from './Contributors.module.css';
+import slugify from 'slugify';
 
 type ContributorsProps = {
   subtitle?: string;
@@ -45,23 +44,23 @@ const Contributors: React.FC<ContributorsProps> = React.memo(
           {Object.entries(contributors).map(([name, url]) => {
             return (
               <div className={s.contributor} key={`${name}`}>
-                <Link
-                  href={url}
+                <a
                   target="_blank"
                   rel="nofollow noopener"
                   className={s.contributor_link}
                   title={url}
                   key={`${url}_link`}
+                  href={url}
                 >
                   <img
                     className={s.contributor_image}
-                    src={`/images/contributors/${kebabCase(name)}.jpg`}
+                    src={`/images/contributors/${slugify(name, { lower: true })}.jpg`}
                     alt={name}
                     width={64}
                     height={64}
                   />
                   {showInfo && <div className={s.contributor_info}>{name}</div>}
-                </Link>
+                </a>
               </div>
             );
           })}

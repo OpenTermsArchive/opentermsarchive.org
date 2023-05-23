@@ -1,7 +1,5 @@
 # i18n module
 
-Caution: This module is based on next-translate but does not have the same signature for calls.
-
 ## Install
 
 1. Copy this module
@@ -9,7 +7,7 @@ Caution: This module is based on next-translate but does not have the same signa
 and run
 
 ```
-    npm run install next-translate
+    npm install next-translate
 ```
 
 2. Create the config file
@@ -19,7 +17,7 @@ touch i18n.js
 echo "module.exports = require('./src/modules/I18n/i18n');" >> i18n.js
 ```
 
-We will keep the config file in the module but next-i18nnext requires the file to be at the root of the project
+We will keep the config file in the module but next-translate requires the file to be at the root of the project
 
 3. import the config file
 
@@ -35,6 +33,8 @@ module.exports = nextTranslate({
 ```
 
 ## Usage
+
+See https://github.com/aralroca/next-translate#readme
 
 ### Main concept
 
@@ -52,24 +52,7 @@ Example:
 - `home:title`
 - `contribute:contributors.subtitle`
 
-### Import
-
-```
-import { useTranslation } from 'modules/I18n';
-
-export default () => {
-  const { t, tC } = useTranslation();
-}
-
-```
-
-### Language Switching
-
-A component called `LanguageSwitcher` is available in the `components` folder.
-
 ### Translate simple strings
-
-This will return a `string`
 
 ```
 {t('contribute:service_page.title')}
@@ -79,13 +62,17 @@ This will return a `string`
 
 ### Translate html
 
-This will return a `React Component`
+```
+<Trans i18nKey="contribute:service_page.description1">
+  Most of the time, contractual documents contains a header, a footer, navigation
+  menus, possibly ads… We aim at tracking only{' '}
+  <strong>the significant parts of the document</strong>
+</Trans>
+```
 
-```
-{tC('contribute:service_page.title')}
-{tC('contribute:service_page.title-with-value', { value: 'Dynamic value' })}
-{tC('contribute:service_page.title-with-value', { dynamicValue: 'Dynamic value' }, { fallback: "A title with {{dynamicValue}}" })}
-```
+### Language Switching
+
+A component called `LanguageSwitcher` is available in the `components` folder.
 
 ### Translate complete files with mdx
 

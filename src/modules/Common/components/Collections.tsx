@@ -8,7 +8,7 @@ import { Link } from 'modules/I18n';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
 import collectionsData from '../../../../public/collections.json';
-import { kebabCase } from 'lodash';
+import slugify from 'slugify';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'modules/I18n';
 
@@ -16,7 +16,6 @@ type CollectionsProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
 interface Maintainer {
   name: string;
-  logo: string;
   url: string;
 }
 
@@ -67,6 +66,7 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
           subscribeURL,
           industries,
         }: Collection = collection;
+        const instanceSlug = slugify(name, { lower: true });
         const author =
           maintainers == undefined ? (
             <img src={`/images/contributors/volunteer-${router?.locale}.png`} alt="" />
@@ -74,17 +74,29 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
             <>
               {maintainers.map((maintainer) => (
                 <img
-                  key={`maintainer_${kebabCase(maintainer.name)}`}
-                  src={maintainer.logo}
+                  key={`maintainer_${slugify(maintainer.name)}`}
+                  src={`/images/contributors/${slugify(maintainer.name, { lower: true })}.png`}
                   alt={maintainer.name}
                 />
               ))}
             </>
           );
 
+        const languagesList = languages
+          .map((languageCode) => {
+            if (languageCode === '*') {
+              return t('collections:language.various');
+            } else if (languageCode === '*eu') {
+              return t('collections:language.europe');
+            } else {
+              return languageName.of(languageCode);
+            }
+          })
+          .join(', ');
+
         return (
           <Card
-            key={`collection_${collection.id}`}
+            key={`collections_${instanceSlug}`}
             title={name}
             subtitle={!!industries ? industries[router?.locale as keyof Industries] : ''}
             author={author}
@@ -106,9 +118,11 @@ const Collections: React.FC<CollectionsProps> = ({ children, ...props }) => {
                 desc={stats.documents}
               />
               <CardTableItem
-                title={t('collections:language', { count: languages.length })}
+                title={t('collections:language', {
+                  count: languages[0] === '*' ? 2 : languages.length,
+                })}
                 iconName="FiMessageCircle"
-                desc={languages.map((languageCode) => languageName.of(languageCode)).join(', ')}
+                desc={languagesList}
               />
               <CardTableItem
                 title={t('collections:country', { count: jurisdictions.length })}

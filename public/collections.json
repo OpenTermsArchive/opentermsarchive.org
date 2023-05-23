@@ -1,4 +1,27 @@
 {
+  "P2B Compliance": {
+    "id": "p2b-compliance",
+    "languages": ["*eu"],
+    "jurisdictions": ["EU"],
+    "stats": {
+      "services": "208",
+      "documents": "253"
+    },
+    "industries": {
+      "en": "Online intermediation services for businesses subject to the European <a href=\"https://eur-lex.europa.eu/eli/reg/2019/1150/oj\">platforms-to-businesses (“P2B” / 2019/1150) regulation</a>",
+      "fr": "Services d’intermédiation en ligne pour les entreprises sujets au règlement européen <a href=\"https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32019R1150&from=EN\">P2B / 2019/1150</a>"
+    },
+    "maintainers": [
+      {
+        "name": "Open Evidence",
+        "url": "https://open-evidence.com/"
+      },
+      {
+        "name": "European Commission",
+        "url": "https://ec.europa.eu/info/departments/communications-networks-content-and-technology_en"
+      }
+    ]
+  },
   "Contrib": {
     "id": "contrib",
     "languages": ["en", "fr"],
@@ -15,12 +38,10 @@
     "maintainers": [
       {
         "name": "UFC Que Choisir",
-        "logo": "/images/contributors/ufc-que-choisir.png",
         "url": "https://www.quechoisir.org"
       },
       {
         "name": "Ambassadeur français pour le numérique",
-        "logo": "/images/contributors/ambnum.png",
         "url": "https://disinfo.quaidorsay.fr/fr"
       }
     ],
@@ -36,7 +57,6 @@
     "maintainers": [
       {
         "name": "Reset",
-        "logo": "/images/contributors/reset.png",
         "url": "https://www.reset.tech"
       }
     ],
@@ -56,7 +76,6 @@
     "maintainers": [
       {
         "name": "HestiaLabs",
-        "logo": "/images/contributors/hestialabs.png",
         "url": "https://hestialabs.org"
       }
     ],
@@ -76,12 +95,10 @@
     "maintainers": [
       {
         "name": "Centre for Media, Communication and Information Research (ZeMKI), University of Bremen",
-        "logo": "/images/contributors/university-of-bremen.png",
         "url": "https://www.uni-bremen.de/"
       },
       {
         "name": "Alexander von Humboldt Institute for Internet and Society (HIIG)",
-        "logo": "/images/contributors/hiig.png",
         "url": "https://hiig.de/"
       }
     ],
@@ -101,7 +118,6 @@
     "maintainers": [
       {
         "name": "Open Terms Archive",
-        "logo": "/images/logo/logo-open-terms-archive-black.png",
         "url": "https://opentermsarchive.org"
       }
     ],

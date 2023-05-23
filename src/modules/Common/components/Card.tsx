@@ -57,7 +57,12 @@ const Card: React.FC<CardProps> = ({
       )}
       <div className={s.card_body}>
         {title && <h4 className={s.card_title}>{title}</h4>}
-        {subtitle && <h5 className={classNames(s.card_subtitle, 'h5__light')}>{subtitle}</h5>}
+        {subtitle && (
+          <h5
+            className={classNames(s.card_subtitle, 'h5__light')}
+            dangerouslySetInnerHTML={{ __html: subtitle.toString() }}
+          />
+        )}
         {children && <div className={s.card_children}>{children}</div>}
       </div>
       {author && (
