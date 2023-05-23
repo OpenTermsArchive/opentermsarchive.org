@@ -11,8 +11,6 @@ import collectionsData from '../../../../public/collections.json';
 import slugify from 'slugify';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'modules/I18n';
-import classNames from 'classnames';
-import s from './Card.module.css';
 
 type CollectionsProps = {
   ids?: Array<string>;
