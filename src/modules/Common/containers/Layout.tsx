@@ -1,5 +1,5 @@
 import { HiMail as IconMail } from 'react-icons/hi';
-import { SiMastodon as IconMastodon, SiGithub as IconGithub } from 'react-icons/si';
+import { SiMastodon as IconMastodon } from 'react-icons/si';
 import React, { ReactNode } from 'react';
 
 import { Analytics } from 'modules/Analytics';
@@ -73,30 +73,6 @@ const Layout = ({
                 </HeaderMenu>
                 <HeaderMenu type="secondary">
                   <LanguageSwitcher />
-                  <ul>
-                    <li>
-                      <Link
-                        href="https://mastodon.lescommuns.org/@opentermsarchive"
-                        className={classNames('icon_circle')}
-                        target="_blank"
-                        rel="noopener"
-                        title={t('header:link.twitter.title')}
-                      >
-                        <IconMastodon color="#fefffd" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="https://github.com/OpenTermsArchive/"
-                        className={classNames('icon_circle')}
-                        target="_blank"
-                        rel="noopener"
-                        title={t('header:link.github.title')}
-                      >
-                        <IconGithub color="#fefffd" />
-                      </Link>
-                    </li>
-                  </ul>
                 </HeaderMenu>
               </>
             )}
