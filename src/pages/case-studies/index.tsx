@@ -26,7 +26,7 @@ export default function CaseStudiesPage({ caseStudiesMdx }: { caseStudiesMdx: Ca
   return (
     <Layout title={t('case-studies:seo.title')} desc={t('case-studies:seo.desc')}>
       <Container layout="wide" dark={true} paddingY={false}>
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false}>
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingY={false}>
           <Hero
             title={t('case-studies:hero.title')}
             subtitle={t('case-studies:hero.subtitle')}
