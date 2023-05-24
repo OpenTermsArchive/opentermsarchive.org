@@ -185,7 +185,7 @@ const HomePage = () => {
               white={true}
             />
             <Card
-              image="/images/reuses/new-reuse.png"
+              isPlaceholder={true}
               className="text__center"
               title={t('homepage:reuses.new_reuse.title')}
               subtitle={t('homepage:reuses.new_reuse.subtitle')}
