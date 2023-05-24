@@ -159,14 +159,6 @@
   & ul {
     list-style: none;
 
-    & li::before {
-      content: "\2022";  /* \2022 is the CSS Code/unicode for a bullet */
-      color: var(--colorBlack400);
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
-
     &:not(:last-child) {
       margin-bottom: var(--mL);
     }
@@ -174,18 +166,23 @@
 
   & li {
     position: relative;
+
+    &::before {
+      content: '\2022'; /* \2022 is the CSS Code/unicode for a bullet */
+      color: var(--colorBlack400);
+      width: 1em;
+      left: calc(var(--mM) * -1);
+      position: absolute;
+    }
+
     & svg {
       left: calc(var(--mL) * -1);
       top: var(--m2XS);
       position: absolute;
     }
+
     &:not(:last-child) {
       margin-bottom: var(--mM);
-    }
-
-    & h1, & h2, & h3, & h4, & h5, & h6 {
-      display: inline-block;
-      margin-bottom: 0;
     }
   }
 

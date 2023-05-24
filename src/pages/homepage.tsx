@@ -51,30 +51,25 @@ const HomePage = () => {
             <IconTwitter size="128" color="var(--colorBlack400)" strokeWidth="1px" />
           </Column>
           <Column width={60} subtitle={t('follow-us:title')}>
-            <TextContent marginTop={false}>
-              <p className="mt__M">{t('follow-us:desc')}</p>
+            <p className="mt__M mb__L">{t('follow-us:desc')}</p>
+            <Container layout="fluid" flex={true} paddingX={false} paddingY={false}>
               <Link
                 href="https://mastodon.lescommuns.org/@opentermsarchive"
                 target="_blank"
                 rel="noopener"
               >
-                <Button className="mb__0">
+                <Button>
                   <IconMastodonFill strokeWidth="1px" />
                   <span className="ml__XS">{t('follow-us:mastodon.button.label')}</span>
                 </Button>
               </Link>
-              <Link
-                href="https://twitter.com/OpenTerms"
-                target="_blank"
-                rel="noopener"
-                className="ml__S"
-              >
-                <Button type="secondary" className="mb__0">
+              <Link href="https://twitter.com/OpenTerms" target="_blank" rel="noopener">
+                <Button type="secondary">
                   <IconTwitterFill strokeWidth="1px" />
                   <span className="ml__XS">{t('follow-us:twitter.button.label')}</span>
                 </Button>
               </Link>
-            </TextContent>
+            </Container>
           </Column>
         </Container>
       </Container>
@@ -190,7 +185,7 @@ const HomePage = () => {
               white={true}
             />
             <Card
-              image="/images/reuses/new-reuse.png"
+              isPlaceholder={true}
               className="text__center"
               title={t('homepage:reuses.new_reuse.title')}
               subtitle={t('homepage:reuses.new_reuse.subtitle')}

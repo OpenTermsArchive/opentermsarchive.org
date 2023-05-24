@@ -187,17 +187,15 @@ const Collections: React.FC<CollectionsProps> = ({
           </Card>
         );
       })}
-      {withPlaceholder && 
+      {withPlaceholder && (
         <Card
           isPlaceholder={true}
-          image=""
           className="card__placeholder text__center"
           subtitle={t('collections:new_collections.title')}
           link="mailto:contact@opentermsarchive.org"
           center={true}
         />
-      }
-      
+      )}
     </CardList>
   );
 };
