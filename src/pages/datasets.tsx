@@ -27,7 +27,7 @@ export default function DatasetsPage({ mdxContent }: WithMdxResult) {
       </Container>
       <Container gray={false} layout="wide" paddingX={false} paddingTop={false} id="collections">
         <Container gridCols="12" gridGutters="11" paddingTop={false}>
-          <Collections subtitleLevel="h5" withPlaceholder={false} />
+          <Collections subtitleLevel="h5" withPlaceholder={false} cardLink="datasets" />
         </Container>
       </Container>
     </Layout>

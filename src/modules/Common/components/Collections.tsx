@@ -4,6 +4,7 @@ import CardList, { CardListProps } from 'modules/Common/components/CardList';
 import CardTable from 'modules/Common/components/CardTable';
 import CardTableItem from 'modules/Common/components/CardTableItem';
 import { FiSearch as IconSearch } from 'react-icons/fi';
+import { FiDownload as IconDownload } from 'react-icons/fi';
 import { Link } from 'modules/I18n';
 import LinkIcon from 'modules/Common/components/LinkIcon';
 import React from 'react';
@@ -14,7 +15,8 @@ import { useTranslation } from 'modules/I18n';
 
 type CollectionsProps = {
   ids?: Array<string>;
-  withPlaceholder?: Boolean,
+  withPlaceholder?: Boolean;
+  cardLink?: 'versions' | 'datasets';
 } & CardListProps &
   React.HTMLAttributes<HTMLDivElement>;
 
@@ -54,6 +56,7 @@ const Collections: React.FC<CollectionsProps> = ({
   big,
   children,
   withPlaceholder,
+  cardLink = 'versions',
   ...props
 }) => {
   const { t } = useTranslation();
@@ -155,27 +158,30 @@ const Collections: React.FC<CollectionsProps> = ({
               />
             </CardTable>
             <div className="mt__XL text__center">
-              <Link
-                href={`https://github.com/openTermsArchive/${collection.id}-versions`}
-                target="_blank"
-                rel="noopener"
-              >
-                <Button type="secondary">
-                  <IconSearch className="mr__2XS" />
-                  {t('collections:cta.versions')}
-                </Button>
-              </Link>
-            </div>
-            <div className="mt__M text__center">
-              <LinkIcon
-                iconName="FiDownload"
-                iconColor="var(--colorBlack400)"
-                href={`https://github.com/openTermsArchive/${collection.id}-versions/releases`}
-                target="_blank"
-                rel="noopener"
-              >
-                {t('collections:cta.download-dataset')}
-              </LinkIcon>
+              {cardLink == 'versions' && (
+                <Link
+                  href={`https://github.com/openTermsArchive/${collection.id}-versions`}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <Button type="secondary">
+                    <IconSearch className="mr__2XS" />
+                    {t('collections:cta.versions')}
+                  </Button>
+                </Link>
+              )}
+              {cardLink == 'datasets' && (
+                <Link
+                  href={`https://github.com/openTermsArchive/${collection.id}-versions/releases`}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <Button type="secondary">
+                    <IconDownload className="mr__2XS" />
+                    {t('collections:cta.download-dataset')}
+                  </Button>
+                </Link>
+              )}
             </div>
             {subscribeURL && (
               <div className="mt__2XS text__center">
