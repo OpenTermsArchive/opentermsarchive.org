@@ -11,6 +11,7 @@
   }
 }
 .cardList_title {
+  margin-bottom: var(--m3XL);
 }
 
 .cardList_subtitle {
@@ -22,7 +23,6 @@
 
 .cardList_items {
   @mixin grid 12, 11;
-  margin-top: var(--m3XL);
   margin-bottom: var(--m2XL);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
