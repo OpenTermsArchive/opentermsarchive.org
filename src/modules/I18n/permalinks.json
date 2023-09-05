@@ -1,5 +1,8 @@
 {
   "/case-studies": {
     "fr": "/etudes-de-cas"
+  },
+  "/datasets": {
+    "fr": "/jeux-de-donnees"
   }
 }
