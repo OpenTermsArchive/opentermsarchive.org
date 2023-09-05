@@ -69,6 +69,15 @@ const Layout = ({
                         {t('header:link.docs')}
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        href={'/datasets'}
+                        onClick={toggleExtended}
+                        title={t('header:link.datasets.title')}
+                      >
+                        {t('header:link.datasets')}
+                      </Link>
+                    </li>
                   </ul>
                 </HeaderMenu>
                 <HeaderMenu type="secondary">
