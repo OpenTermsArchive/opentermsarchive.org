@@ -4,7 +4,6 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import Collections from 'modules/Common/components/Collections';
 import withMdx, { WithMdxResult } from 'modules/I18n/hoc/withMdx';
-import { MDXRemote } from 'next-mdx-remote';
 
 export default function DatasetsPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
