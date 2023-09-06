@@ -11,6 +11,6 @@ module.exports = {
     '/stats': ['stats'],
     '/budget': ['budget'],
     '/media': ['media'],
-    '/datasets' : ['collections']
+    '/datasets' : ['datasets','collections']
   },
 };

@@ -4,9 +4,11 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import Collections from 'modules/Common/components/Collections';
 import withMdx, { WithMdxResult } from 'modules/I18n/hoc/withMdx';
+import { useTranslation } from 'modules/I18n';
 
 export default function DatasetsPage({ mdxContent }: WithMdxResult) {
   const { frontmatter = {} } = mdxContent || {};
+  const { t } = useTranslation();
   return (
     <Layout
       title={frontmatter['html_title'] ?? frontmatter['title'] ?? frontmatter['hero.title']}
@@ -20,7 +22,7 @@ export default function DatasetsPage({ mdxContent }: WithMdxResult) {
         >
           <TextContent>
             {frontmatter.title && <h1>{frontmatter.title}</h1>}
-            {frontmatter.introduction && <>{frontmatter.introduction}</>}
+            <div dangerouslySetInnerHTML={{ __html: t('datasets:introduction') }} />
           </TextContent>
         </Container>
       </Container>
