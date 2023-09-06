@@ -54,4 +54,10 @@
 		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/budget" />
 		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr/budget" />
 	</url>
+	<url>
+		<loc>https://opentermsarchive.org/datasets</loc>
+		<xhtml:link rel="alternate" hreflang="x-default" href="https://opentermsarchive.org/datasets" />
+		<xhtml:link rel="alternate" hreflang="en" href="https://opentermsarchive.org/datasets" />
+		<xhtml:link rel="alternate" hreflang="fr" href="https://opentermsarchive.org/fr/jeux-de-donnees" />
+	</url>
 </urlset>
