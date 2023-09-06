@@ -3,7 +3,7 @@
   margin-right: auto;
 
   &.thumbGalery__isSmall {
-    & > .thumbGalery_items {
+    & > .thumbGalery_items:not(.thumbGalery_items__hasNoMarginTop) {
       margin-top: var(--mL);
     }
   }
@@ -49,4 +49,8 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
+
+  &.thumbGalery_items__hasNoMarginTop {
+    margin-top: 0;
+  }
 }

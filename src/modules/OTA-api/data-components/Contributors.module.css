@@ -11,6 +11,10 @@
     }
   }
 
+  &.contributors__hasNoMarginTop {
+    margin-top: 0;
+  }
+
   &.contributors__showInfos {
     & > .contributors_items {
       & > .contributor {

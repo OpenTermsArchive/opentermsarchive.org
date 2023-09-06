@@ -1,5 +1,7 @@
 ---
 permalink: "/a-propos"
+grid.cols: 9
+grid.gutters: 8
 ---
 
 <div className="text__center">
@@ -12,23 +14,25 @@ permalink: "/a-propos"
 
   **Nous recherchons des financements pour développer les usages et garantir la pérennité d'Open Terms Archive. Vous connaissez des moyens de nous aider ? [Contactez-nous](mailto:contact@opentermsarchive.org) !**
 
+  ---
+
   ### Équipe cœur
 
   Améliore et maintient Open Terms Archive.
 
-  <Contributors type="core" showInfo="true" thumbnailWidth="88" thumbnailHeight="88" />
+  <Contributors type="core" showInfo="true" thumbnailWidth="88" thumbnailHeight="88" className="mb__XL" marginTop={false} />
 
   #### Alumni
 
   Anciens membres de l'équipe cœur.
 
-  <Contributors type="alumnis" showInfo="true" className="mb__XL" />
+  <Contributors type="alumnis" showInfo="true" className="mb__2XL" marginTop={false} />
 
   ### Incubateur
 
   Fournit la structure légale et le parrainage politique pour le projet.
 
-  <ThumbGallery>
+  <ThumbGallery className="mb__2XL" marginTop={false}>
     <Link href="https://disinfo.quaidorsay.fr" target="_blank" rel="noopener">
         <ThumbGalleryItem src="/images/contributors/ambassadeur-francais-pour-le-numerique.png" width="158" height="80" />
     </Link>
@@ -38,7 +42,7 @@ permalink: "/a-propos"
 
   Indemnisent le temps de l'équipe cœur et financent l'infrastructure technique.
 
-  <ThumbGallery small={true} className="mb__XL">
+  <ThumbGallery small={true} className="mb__2XL" marginTop={false}>
     <ThumbGalleryItem src="/images/contributors/meae.png" width="130" height="117" />
     <ThumbGalleryItem src="/images/contributors/france-relance.png" width="77" height="77" />
     <ThumbGalleryItem src="/images/contributors/nextgen.png" width="220" height="48" />

@@ -11,6 +11,7 @@ type ContributorsProps = {
   thumbnailWidth?: number;
   thumbnailHeight?: number;
   showInfo?: boolean;
+  marginTop?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 const getContributorsByType = (type: ContributorsProps['type']) => {
@@ -35,6 +36,7 @@ const Contributors: React.FC<ContributorsProps> = React.memo(
     showInfo = false,
     thumbnailWidth = 64,
     thumbnailHeight = 64,
+    marginTop = true,
     className,
     ...props
   }) => {
@@ -44,6 +46,9 @@ const Contributors: React.FC<ContributorsProps> = React.memo(
       <div
         className={classNames(
           s.contributors,
+          {
+            [s.contributors__hasNoMarginTop]: marginTop === false,
+          },
           s[`contributors__alignX${alignX}`],
           showInfo ? s.contributors__showInfos : null,
           className
