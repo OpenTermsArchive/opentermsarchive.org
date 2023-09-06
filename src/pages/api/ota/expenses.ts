@@ -6,7 +6,6 @@ import dayjs from 'dayjs';
 
 export interface ExpensesData {
   expenses: typeof expenses;
-  accumulatedExpenditures: number;
   totalExpendituresData: {
     x: string;
     y: number;
@@ -56,11 +55,8 @@ const expenses = {
 
 export const buildExpensesData = (): ExpensesData => {
   const totalExpendituresData: any = [];
-  let accumulatedExpenditures = 0;
 
   Object.entries(expenses).forEach(([month, accumulatedExpendituresThisMonth]) => {
-    accumulatedExpenditures = Math.max(accumulatedExpenditures, accumulatedExpendituresThisMonth);
-
     totalExpendituresData.push({
       x: dayjs(month).toISOString(),
       y: accumulatedExpendituresThisMonth,
@@ -68,7 +64,6 @@ export const buildExpensesData = (): ExpensesData => {
   });
   return {
     expenses,
-    accumulatedExpenditures,
     totalExpendituresData,
   };
 };

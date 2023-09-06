@@ -21,7 +21,6 @@ export default function BudgetPage({
   mdxContent,
   expenses,
   totalExpendituresData,
-  accumulatedExpenditures,
 }: WithMdxResult & ExpensesData) {
   const { frontmatter = {} } = mdxContent || {};
   const router = useRouter();
@@ -48,8 +47,6 @@ export default function BudgetPage({
                 />
               ),
               FundingSourcesGraph,
-              accumulatedExpenditures: () => accumulatedExpenditures.toLocaleString(router.locale),
-              months: () => (Object.entries(expenses).length - 1).toString(),
             }}
           />
         </TextContent>
