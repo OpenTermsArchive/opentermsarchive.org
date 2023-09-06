@@ -19,7 +19,6 @@ const FundingSourcesGraph = dynamic(() => import('modules/Common/components/Fund
 
 export default function BudgetPage({
   mdxContent,
-  expenses,
   totalExpendituresData,
 }: WithMdxResult & ExpensesData) {
   const { frontmatter = {} } = mdxContent || {};
