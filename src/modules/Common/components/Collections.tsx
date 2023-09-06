@@ -16,7 +16,7 @@ import { useTranslation } from 'modules/I18n';
 type CollectionsProps = {
   ids?: Array<string>;
   withPlaceholder?: Boolean;
-  cardLink?: 'versions' | 'datasets';
+  cardLink?: 'versions' | 'dataset';
 } & CardListProps &
   React.HTMLAttributes<HTMLDivElement>;
 
