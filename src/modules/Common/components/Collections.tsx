@@ -172,7 +172,7 @@ const Collections: React.FC<CollectionsProps> = ({
               )}
               {cardLink == 'datasets' && (
                 <Link
-                  href={`https://github.com/openTermsArchive/${collection.id}-versions/releases`}
+                  href={`https://github.com/openTermsArchive/${collection.id}-versions/releases/latest`}
                   target="_blank"
                   rel="noopener"
                 >
