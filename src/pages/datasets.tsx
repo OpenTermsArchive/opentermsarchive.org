@@ -21,13 +21,37 @@ export default function DatasetsPage({ mdxContent }: WithMdxResult) {
         >
           <TextContent>
             {frontmatter.title && <h1>{frontmatter.title}</h1>}
-            <MDXRemote {...(mdxContent as any)} />
+            {frontmatter.introduction && <>{frontmatter.introduction}</>}
           </TextContent>
         </Container>
       </Container>
       <Container gray={false} layout="wide" paddingX={false} paddingTop={false} id="collections">
-        <Container gridCols="12" gridGutters="11" paddingTop={false}>
+        <Container gridCols="12" gridGutters="11" paddingY={false}>
           <Collections subtitleLevel="h5" withPlaceholder={false} cardLink="datasets" />
+        </Container>
+      </Container>
+      <Container paddingTop={false}>
+        <Container
+          gridCols={frontmatter['grid.cols'] || 10}
+          gridGutters={frontmatter['grid.gutters'] || 9}
+          paddingTop={false}
+        >
+          <TextContent>
+            <h2>{frontmatter.related_datasets.title}</h2>
+            <ul>
+              {frontmatter.related_datasets.datasets.map((relatedDataset: any) => {
+                return (
+                  <li key={relatedDataset.name}>
+                    <a href={relatedDataset.website} target="_blank">
+                      {relatedDataset.name}
+                    </a>
+                    <br />
+                    {relatedDataset.description}
+                  </li>
+                );
+              })}
+            </ul>
+          </TextContent>
         </Container>
       </Container>
     </Layout>
