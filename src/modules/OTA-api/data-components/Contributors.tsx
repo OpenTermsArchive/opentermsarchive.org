@@ -8,6 +8,8 @@ type ContributorsProps = {
   subtitle?: string;
   type?: 'core' | 'alumnis' | 'contributors' | 'all';
   alignX?: 'left' | 'center' | 'right';
+  thumbnailWidth?: number;
+  thumbnailHeight?: number;
   showInfo?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
@@ -26,7 +28,16 @@ const getContributorsByType = (type: ContributorsProps['type']) => {
 };
 
 const Contributors: React.FC<ContributorsProps> = React.memo(
-  ({ subtitle, type = 'all', alignX = 'center', showInfo = false, className, ...props }) => {
+  ({
+    subtitle,
+    type = 'all',
+    alignX = 'center',
+    showInfo = false,
+    thumbnailWidth = 64,
+    thumbnailHeight = 64,
+    className,
+    ...props
+  }) => {
     const contributors = getContributorsByType(type);
 
     return (
@@ -56,8 +67,8 @@ const Contributors: React.FC<ContributorsProps> = React.memo(
                     className={s.contributor_image}
                     src={`/images/contributors/${slugify(name, { lower: true })}.jpg`}
                     alt={name}
-                    width={64}
-                    height={64}
+                    width={thumbnailWidth}
+                    height={thumbnailHeight}
                   />
                   {showInfo && <div className={s.contributor_info}>{name}</div>}
                 </a>
