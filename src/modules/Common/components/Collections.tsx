@@ -170,7 +170,7 @@ const Collections: React.FC<CollectionsProps> = ({
                   </Button>
                 </Link>
               )}
-              {cardLink == 'datasets' && (
+              {cardLink == 'dataset' && (
                 <Link
                   href={`https://github.com/openTermsArchive/${collection.id}-versions/releases/latest`}
                   target="_blank"
