@@ -18,7 +18,7 @@ const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
   const fundingSources = [
     {
       id: t('budget:funding-sources.meae'),
-      value: 476988,
+      value: 595931,
     },
     {
       id: t('budget:funding-sources.france-relance'),
@@ -30,15 +30,27 @@ const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
     },
     {
       id: t('budget:funding-sources.dinum'),
-      value: 18750,
+      value: 18811,
+    },
+    {
+      id: t('budget:funding-sources.ubremen'),
+      value: 17447,
     },
     {
       id: t('budget:funding-sources.comeu'),
       value: 12000,
     },
     {
-      id: t('budget:funding-sources.ubremen'),
-      value: 11537,
+      id: t('budget:funding-sources.nlnet'),
+      value: 7465,
+    },
+    {
+      id: t('budget:funding-sources.ufc'),
+      value: 2085,
+    },
+    {
+      id: t('budget:funding-sources.dpga'),
+      value: 1250,
     },
   ];
 
