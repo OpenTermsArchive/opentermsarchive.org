@@ -38,8 +38,11 @@ export default function DatasetsPage({ mdxContent }: WithMdxResult) {
           paddingTop={false}
         >
           <TextContent>
-            <h2>{frontmatter.related_datasets.title}</h2>
-            <ul>
+            <h2>{t('datasets:related_datasets.title')}</h2>
+            <div
+              dangerouslySetInnerHTML={{ __html: t('datasets:related_datasets.introduction') }}
+            />
+            <ul className="mt__XL">
               {frontmatter.related_datasets.datasets.map((relatedDataset: any) => {
                 return (
                   <li key={relatedDataset.name}>
