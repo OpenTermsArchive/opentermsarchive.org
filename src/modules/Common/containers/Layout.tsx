@@ -48,16 +48,11 @@ const Layout = ({
                     </li>
                     <li>
                       <Link
-                        href={'/impact'}
+                        href={'/datasets'}
                         onClick={toggleExtended}
-                        title={t('header:link.impact.title')}
+                        title={t('header:link.datasets.title')}
                       >
-                        {t('header:link.impact')}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href={'/about'} onClick={toggleExtended}>
-                        {t('header:link.about')}
+                        {t('header:link.datasets')}
                       </Link>
                     </li>
                     <li>
@@ -71,11 +66,16 @@ const Layout = ({
                     </li>
                     <li>
                       <Link
-                        href={'/datasets'}
+                        href={'/impact'}
                         onClick={toggleExtended}
-                        title={t('header:link.datasets.title')}
+                        title={t('header:link.impact.title')}
                       >
-                        {t('header:link.datasets')}
+                        {t('header:link.impact')}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={'/about'} onClick={toggleExtended}>
+                        {t('header:link.about')}
                       </Link>
                     </li>
                   </ul>
