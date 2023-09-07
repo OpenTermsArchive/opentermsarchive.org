@@ -7,7 +7,6 @@ import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import dynamic from 'next/dynamic';
-import { useRouter } from 'next/router';
 
 const TotalExpendituresGraph = dynamic(
   () => import('modules/Common/components/TotalExpendituresGraph'),
@@ -22,7 +21,6 @@ export default function BudgetPage({
   totalExpendituresData,
 }: WithMdxResult & ExpensesData) {
   const { frontmatter = {} } = mdxContent || {};
-  const router = useRouter();
 
   return (
     <Layout
