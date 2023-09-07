@@ -48,6 +48,24 @@ const Layout = ({
                     </li>
                     <li>
                       <Link
+                        href={'/datasets'}
+                        onClick={toggleExtended}
+                        title={t('header:link.datasets.title')}
+                      >
+                        {t('header:link.datasets')}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="https://docs.opentermsarchive.org"
+                        onClick={toggleExtended}
+                        title={t('header:link.docs.title')}
+                      >
+                        {t('header:link.docs')}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
                         href={'/impact'}
                         onClick={toggleExtended}
                         title={t('header:link.impact.title')}
@@ -58,15 +76,6 @@ const Layout = ({
                     <li>
                       <Link href={'/about'} onClick={toggleExtended}>
                         {t('header:link.about')}
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="https://docs.opentermsarchive.org"
-                        onClick={toggleExtended}
-                        title={t('header:link.docs.title')}
-                      >
-                        {t('header:link.docs')}
                       </Link>
                     </li>
                   </ul>
@@ -100,16 +109,19 @@ const Layout = ({
                   <Link href="/">{t('footer:link.home')}</Link>
                 </li>
                 <li>
-                  <Link href={'/impact'}>{t('footer:link.impact')}</Link>
-                </li>
-                <li>
                   <Link href={'/case-studies'}>{t('footer:link.case-studies')}</Link>
                 </li>
                 <li>
-                  <Link href={'/about'}>{t('footer:link.about')}</Link>
+                  <Link href={'/datasets'}>{t('footer:link.datasets')}</Link>
                 </li>
                 <li>
                   <Link href="https://docs.opentermsarchive.org">{t('footer:link.docs')}</Link>
+                </li>
+                <li>
+                  <Link href={'/impact'}>{t('footer:link.impact')}</Link>
+                </li>
+                <li>
+                  <Link href={'/about'}>{t('footer:link.about')}</Link>
                 </li>
               </ul>
               <ul>

@@ -1,0 +1,5 @@
+{
+  "introduction": "Les jeux de données répertoriés ici sont des <a href=\"https://docs.opentermsarchive.org/#collections\">collections</a> publiques au sein de l'écosystème fédéré d'Open Terms Archive. Leur qualité dépend des équipes qui les maintiennent. Elle peut donc varier considérablement, entre une collection maintenue par une équipe de recherche universitaire à plein temps et une collection gérée par des bénévoles occasionnels. Assurez-vous de lire la licence et l'engagement de maintenance de chaque collection avant de publier un travail basé sur ces données.",
+  "related_datasets.title": "Jeux de données connexes",
+  "related_datasets.introduction": "Les jeux de données ci-dessous sont indépendants d'Open Terms Archive et sont référencés pour rendre service. Si vous connaissez d'autres jeux de données pertinents, <a href=\"https://github.com/OpenTermsArchive/opentermsarchive.org/edit/main/content/parts/en/datasets.mdx\">ajoutez-les</a> !"
+}
