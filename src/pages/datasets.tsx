@@ -43,7 +43,7 @@ export default function DatasetsPage({ mdxContent }: WithMdxResult) {
               dangerouslySetInnerHTML={{ __html: t('datasets:related_datasets.introduction') }}
             />
             <ul className="mt__XL">
-              {frontmatter.related_datasets.datasets.map((relatedDataset: any) => {
+              {frontmatter.related_datasets.map((relatedDataset: any) => {
                 return (
                   <li key={relatedDataset.name}>
                     <a href={relatedDataset.website} target="_blank">
