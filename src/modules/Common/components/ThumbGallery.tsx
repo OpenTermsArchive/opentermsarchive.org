@@ -8,6 +8,7 @@ type ThumbGalleryProps = {
   titleLevel?: 'h2' | 'h3' | 'h4';
   small?: boolean;
   align?: 'left' | 'center' | 'right';
+  marginTop?: boolean;
   className?: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
@@ -18,6 +19,7 @@ const ThumbGallery: React.FC<ThumbGalleryProps> = ({
   titleLevel = 'h2',
   small = false,
   align = 'center',
+  marginTop = true,
   className,
   ...props
 }) => {
@@ -40,7 +42,13 @@ const ThumbGallery: React.FC<ThumbGalleryProps> = ({
           {subtitle && <div className={s.thumbGalery_subtitle}>{subtitle}</div>}
         </div>
       )}
-      <div className={s.thumbGalery_items}>{children}</div>
+      <div
+        className={classNames(s.thumbGalery_items, {
+          [s.thumbGalery_items__hasNoMarginTop]: marginTop === false,
+        })}
+      >
+        {children}
+      </div>
     </div>
   );
 };

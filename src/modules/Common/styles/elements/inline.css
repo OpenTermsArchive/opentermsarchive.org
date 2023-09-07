@@ -1,5 +1,6 @@
 .text__light {
   font-size: 1.4rem;
+  line-height: 1.4;
   letter-spacing: -0.2px;
   color: var(--colorBlack600);
 }
