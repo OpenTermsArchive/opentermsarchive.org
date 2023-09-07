@@ -109,16 +109,19 @@ const Layout = ({
                   <Link href="/">{t('footer:link.home')}</Link>
                 </li>
                 <li>
-                  <Link href={'/impact'}>{t('footer:link.impact')}</Link>
-                </li>
-                <li>
                   <Link href={'/case-studies'}>{t('footer:link.case-studies')}</Link>
                 </li>
                 <li>
-                  <Link href={'/about'}>{t('footer:link.about')}</Link>
+                  <Link href={'/datasets'}>{t('footer:link.datasets')}</Link>
                 </li>
                 <li>
                   <Link href="https://docs.opentermsarchive.org">{t('footer:link.docs')}</Link>
+                </li>
+                <li>
+                  <Link href={'/impact'}>{t('footer:link.impact')}</Link>
+                </li>
+                <li>
+                  <Link href={'/about'}>{t('footer:link.about')}</Link>
                 </li>
               </ul>
               <ul>

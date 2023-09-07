@@ -20,5 +20,6 @@
   "link.twitter.title": "Follow us on Twitter",
   "link.mastodon": "Follow us",
   "link.mastodon.title": "Follow us on Mastodon",
-  "link.docs": "Documentation"
+  "link.docs": "Documentation",
+  "link.datasets": "Datasets"
 }
