@@ -62,7 +62,7 @@ const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
     <ResponsivePie
       data={fundingSources}
       colors={graphPieColors}
-      margin={{ top: 44, right: 44, bottom: 200, left: 44 }}
+      margin={{ top: 44, right: 44, bottom: 240, left: 44 }}
       innerRadius={0.6}
       enableArcLabels={false}
       arcLinkLabel={function (e) {
@@ -78,7 +78,7 @@ const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
           direction: 'column',
           justify: false,
           translateX: 0,
-          translateY: 200,
+          translateY: 240,
           itemsSpacing: 0,
           itemWidth: 240,
           itemHeight: 24,
