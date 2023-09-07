@@ -6,6 +6,10 @@ type FundingSourcesGraphProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
 const graphPieColors = [
   'var(--colorPrimary)',
+  'hsl(205,90%,80%)',
+  'hsl(205,90%,70%)',
+  'hsl(205,80%,60%)',
+  'hsl(205,80%,50%)',
   'hsl(205,80%,40%)',
   'hsl(205,60%,30%)',
   'hsl(205,40%,25%)',
@@ -18,7 +22,7 @@ const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
   const fundingSources = [
     {
       id: t('budget:funding-sources.meae'),
-      value: 476988,
+      value: 595931,
     },
     {
       id: t('budget:funding-sources.france-relance'),
@@ -30,15 +34,27 @@ const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
     },
     {
       id: t('budget:funding-sources.dinum'),
-      value: 18750,
+      value: 18811,
+    },
+    {
+      id: t('budget:funding-sources.ubremen'),
+      value: 17447,
     },
     {
       id: t('budget:funding-sources.comeu'),
       value: 12000,
     },
     {
-      id: t('budget:funding-sources.ubremen'),
-      value: 11537,
+      id: t('budget:funding-sources.nlnet'),
+      value: 7465,
+    },
+    {
+      id: t('budget:funding-sources.ufc'),
+      value: 2085,
+    },
+    {
+      id: t('budget:funding-sources.dpga'),
+      value: 1250,
     },
   ];
 
@@ -50,15 +66,17 @@ const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
     <ResponsivePie
       data={fundingSources}
       colors={graphPieColors}
-      margin={{ top: 44, right: 44, bottom: 200, left: 44 }}
+      margin={{ top: 44, right: 44, bottom: 240, left: 44 }}
       innerRadius={0.6}
       enableArcLabels={false}
+      padAngle={2}
       arcLinkLabel={function (e) {
         return Math.round((100 * e.value) / totalFundingSources).toString() + '%';
       }}
       arcLinkLabelsTextColor="var(--colorBlack600)"
-      arcLinkLabelsStraightLength={4}
+      arcLinkLabelsStraightLength={30}
       arcLinkLabelsTextOffset={4}
+      arcLinkLabelsDiagonalLength={30}
       theme={{ legends: { text: { fontSize: 16 } } }}
       legends={[
         {
@@ -66,7 +84,7 @@ const FundingSourcesGraph: React.FC<FundingSourcesGraphProps> = () => {
           direction: 'column',
           justify: false,
           translateX: 0,
-          translateY: 200,
+          translateY: 240,
           itemsSpacing: 0,
           itemWidth: 240,
           itemHeight: 24,

@@ -7,7 +7,6 @@ import { MDXRemote } from 'next-mdx-remote';
 import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import dynamic from 'next/dynamic';
-import { useRouter } from 'next/router';
 
 const TotalExpendituresGraph = dynamic(
   () => import('modules/Common/components/TotalExpendituresGraph'),
@@ -19,12 +18,9 @@ const FundingSourcesGraph = dynamic(() => import('modules/Common/components/Fund
 
 export default function BudgetPage({
   mdxContent,
-  expenses,
   totalExpendituresData,
-  accumulatedExpenditures,
 }: WithMdxResult & ExpensesData) {
   const { frontmatter = {} } = mdxContent || {};
-  const router = useRouter();
 
   return (
     <Layout
@@ -48,8 +44,6 @@ export default function BudgetPage({
                 />
               ),
               FundingSourcesGraph,
-              accumulatedExpenditures: () => accumulatedExpenditures.toLocaleString(router.locale),
-              months: () => (Object.entries(expenses).length - 1).toString(),
             }}
           />
         </TextContent>
