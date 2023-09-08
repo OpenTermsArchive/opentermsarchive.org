@@ -188,7 +188,7 @@ const Collections: React.FC<CollectionsProps> = ({
             {cardLink == 'dataset' && endpoint && (
               <div className="mt__S text__center">
                 <LinkIcon
-                  iconName="FiLayers"
+                  iconName="FiTool"
                   iconColor="var(--colorBlack400)"
                   href={endpoint}
                   target="_blank"
