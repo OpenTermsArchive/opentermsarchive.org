@@ -6,7 +6,7 @@ import slugify from 'slugify';
 
 type ContributorsProps = {
   subtitle?: string;
-  type?: 'core' | 'alumnis' | 'contributors' | 'communityManager' | 'all';
+  type?: 'core' | 'alumnis' | 'contributors' | 'communityManagers' | 'all';
   alignX?: 'left' | 'center' | 'right';
   thumbnailWidth?: number;
   thumbnailHeight?: number;
@@ -22,8 +22,8 @@ const getContributorsByType = (type: ContributorsProps['type']) => {
       return contributorsData.alumnis;
     case 'contributors':
       return contributorsData.contributors;
-    case 'communityManager':
-      return contributorsData.communityManager;
+    case 'communityManagers':
+      return contributorsData.communityManagers;
     case 'all':
     default:
       return contributorsData;
