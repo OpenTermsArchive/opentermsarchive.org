@@ -43,6 +43,7 @@ interface Collection {
   stats: Stats;
   subscribeURL?: string;
   industries?: Industries;
+  endpoint?: string;
 }
 
 const Collections: React.FC<CollectionsProps> = ({
@@ -92,6 +93,7 @@ const Collections: React.FC<CollectionsProps> = ({
           stats,
           subscribeURL,
           industries,
+          endpoint,
         }: Collection = collection;
         const instanceSlug = slugify(name, { lower: true });
         const author =
@@ -183,6 +185,19 @@ const Collections: React.FC<CollectionsProps> = ({
                 </Link>
               )}
             </div>
+            {cardLink == 'dataset' && endpoint && (
+              <div className="mt__S text__center">
+                <LinkIcon
+                  iconName="FiTool"
+                  iconColor="var(--colorBlack400)"
+                  href={endpoint}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {t('collections:endpoint')}
+                </LinkIcon>
+              </div>
+            )}
             {subscribeURL && (
               <div className="mt__2XS text__center">
                 <LinkIcon iconColor="var(--colorBlack400)" iconName="FiMail" href="/subscribe">
