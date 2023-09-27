@@ -15,6 +15,7 @@
 }
 
 .cardList_subtitle {
+  margin-bottom: var(--m3XL);
 }
 
 .cardList_title + .cardList_subtitle {
