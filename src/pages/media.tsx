@@ -24,8 +24,8 @@ export default function MediaPage({ mdxContent }: WithMdxResult) {
       title={frontmatter['html_title'] ?? frontmatter['title'] ?? frontmatter['hero.title']}
       desc={frontmatter['html_description'] ?? frontmatter['hero.subtitle']}
     >
-      <Container layout="wide" paddingY={false} dark={true}>
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingY={false}>
+      <Container layout="wide" paddingY={false} dark={false}>
+        <Container gridCols="9" gridGutters="8" flex={true} paddingX={false} paddingY={false}>
           <Hero title={frontmatter['hero.title']}></Hero>
         </Container>
       </Container>

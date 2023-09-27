@@ -25,8 +25,8 @@ export default function CaseStudiesPage({ caseStudiesMdx }: { caseStudiesMdx: Ca
 
   return (
     <Layout title={t('case-studies:seo.title')} desc={t('case-studies:seo.desc')}>
-      <Container layout="wide" dark={true} paddingY={false}>
-        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingY={false}>
+      <Container layout="wide" dark={false} paddingY={false}>
+        <Container gridCols="10" gridGutters="9" flex={true} paddingY={false}>
           <Hero
             title={t('case-studies:hero.title')}
             subtitle={t('case-studies:hero.subtitle')}
@@ -35,7 +35,7 @@ export default function CaseStudiesPage({ caseStudiesMdx }: { caseStudiesMdx: Ca
       </Container>
 
       <Container paddingY={false}>
-        <Container gridCols="10" gridGutters="9">
+        <Container gridCols="10" gridGutters="9" paddingTop={false}>
           <TextContent>
             {caseStudiesMdx.map(({ url, frontmatter }, i: number) => {
               const title = (
