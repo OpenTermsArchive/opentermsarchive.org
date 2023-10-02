@@ -20,7 +20,8 @@
     "industries": {
       "en": "Major global social media services",
       "fr": "Médias sociaux mondiaux majeurs"
-    }
+    },
+    "endpoint": "http://134.102.58.70/api/v1/docs/"
   },
   "P2B Compliance": {
     "id": "p2b-compliance",
