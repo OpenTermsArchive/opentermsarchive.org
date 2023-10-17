@@ -42,7 +42,7 @@ Contributors to Open Terms Archive are listed publicly on the website.
 
 ### For contributors with a GitHub account
 
-This is made possible by the use of [All Contributors](https://allcontributors.org/) bot that allows you to add a contributor with a comment on Issue or pull request, without writing code. To do this you need to open an issue on this repository and write a command like `@all-contributors please add @<username> for <contributions>`. See the complete [documentation](https://allcontributors.org/docs/en/bot/usage) for more details.
+This is made possible by the use of the [All Contributors bot](https://allcontributors.org/docs/en/bot/overview), that enables adding a contributor with a comment on an issue or pull request, without writing code. To do this, open an issue on this repository and write a command like `@all-contributors please add @<username> for <contributions>`.
 
 ### For contributors who do not have a GitHub account
 
