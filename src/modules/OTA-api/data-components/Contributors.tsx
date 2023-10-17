@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import staffData from '../../../../public/staff.json';
+//@ts-ignore
 import allContributorsData from '../../../../.all-contributorsrc';
 import s from './Contributors.module.css';
 import slugify from 'slugify';
