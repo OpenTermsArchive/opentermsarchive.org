@@ -84,6 +84,7 @@
     "@types/react-virtualized-auto-sizer": "^1.0.0",
     "@types/react-window": "1.8.5",
     "@types/user-agents": "^1.0.2",
+    "all-contributors-cli": "^6.26.1",
     "fast-glob": "^3.2.5",
     "json-loader": "^0.5.7",
     "linkinator": "^4.1.2",
