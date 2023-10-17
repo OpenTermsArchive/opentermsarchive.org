@@ -74,8 +74,8 @@ This is made possible by the use of the [All Contributors bot](https://allcontri
 
 You can do this by editing the `.all-contributorsrc` file or by using the bot with `@all-contributors please add @<already_listed_contributor> for <new_contribution_type>`
 
-### How to delete a contributor
+### How to remove a contributor
 
 1. Edit the `.all-contributorsrc` file and remove the contributor
-2. Delete the picture in `public/images/contributors` folder
+2. If present, delete the picture in the `public/images/contributors` folder
 3. Generate the contributors table with `npx all-contributors generate`
