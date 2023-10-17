@@ -46,7 +46,7 @@ This is made possible by the use of the [All Contributors bot](https://allcontri
 
 ### For contributors who do not have a GitHub account
 
-1. Edit the `.all-contributorsrc` file and use the following format to add a contributor:
+1. Edit the `.all-contributorsrc` file at the root of this repository and use the following format to add a contributor:
 
 ```json
 {
