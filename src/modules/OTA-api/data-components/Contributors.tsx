@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import contributorsData from '../../../../public/contributors.json';
+import staffData from '../../../../public/staff.json';
 import s from './Contributors.module.css';
 import slugify from 'slugify';
 
@@ -17,16 +17,16 @@ type ContributorsProps = {
 const getContributorsByType = (type: ContributorsProps['type']) => {
   switch (type) {
     case 'core':
-      return contributorsData.core;
+      return staffData.core;
     case 'alumnis':
-      return contributorsData.alumnis;
+      return staffData.alumnis;
     case 'contributors':
-      return contributorsData.contributors;
+      return staffData.contributors;
     case 'communityManagers':
-      return contributorsData.communityManagers;
+      return staffData.communityManagers;
     case 'all':
     default:
-      return contributorsData;
+      return staffData;
   }
 };
 
