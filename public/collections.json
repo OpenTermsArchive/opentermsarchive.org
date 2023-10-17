@@ -122,7 +122,7 @@
       "services": "299",
       "documents": "660"
     },
-    "endpoint": "http://198.244.153.104/api/v1/docs/"
+    "endpoint": "http://51.89.224.102/api/v1/docs/"
   },
   "Demo": {
     "id": "demo",
