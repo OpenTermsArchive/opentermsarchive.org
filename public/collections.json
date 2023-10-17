@@ -83,8 +83,7 @@
     "industries": {
       "en": "Online dating",
       "fr": "Rencontre en ligne"
-    },
-    "endpoint": "http://vps-99ae1d89.vps.ovh.net/api/v1/docs/"
+    }
   },
   "France": {
     "id": "france",
