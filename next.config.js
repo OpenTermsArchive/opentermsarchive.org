@@ -111,6 +111,7 @@ module.exports = nextI18nRoutes({
         'https://avatars.githubusercontent.com',
         'https://pbs.twimg.com',
         'https://sibyll.in',
+        'https://opentermsarchive.org'
       ],
       'frame-src': ["'self'", 'https://stats.data.gouv.fr'],
     };
