@@ -26,7 +26,7 @@ module.exports = nextI18nRoutes({
     });
     config.module.rules.push({
       test: /\.all-contributorsrc$/i,
-      loader:'json-loader'
+      loader: 'json-loader'
     })
     return config;
   },
