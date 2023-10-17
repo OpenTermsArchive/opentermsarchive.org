@@ -23,21 +23,21 @@ const mapAllContributorsData = (
     avatar_url: string;
   }[]
 ) => {
-  const contributorsShemed: {
+  const formatedContributors: {
     [name: string]: {
       website: string;
       picture?: string;
     };
   } = {};
   Object.values(allContributors).map((contributor: any) => {
-    contributorsShemed[contributor.name] = {
+    formatedContributors[contributor.name] = {
       website: contributor.profile,
     };
     if (contributor.avatar_url != '') {
-      contributorsShemed[contributor.name].picture = contributor.avatar_url;
+      formatedContributors[contributor.name].picture = contributor.avatar_url;
     }
   });
-  return contributorsShemed;
+  return formatedContributors;
 };
 
 const getContributorsByType = (type: ContributorsProps['type']) => {
