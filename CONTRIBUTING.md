@@ -74,6 +74,8 @@ This is made possible by the use of the [All Contributors bot](https://allcontri
 
 You can do this by editing the `.all-contributorsrc` file or by using the bot with `@all-contributors please add @<already_listed_contributor> for <new_contribution_type>`
 
+The types of contribution that can be used are listed [here](https://allcontributors.org/docs/en/emoji-key).
+
 ### How to remove a contributor
 
 1. Edit the `.all-contributorsrc` file and remove the contributor
