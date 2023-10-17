@@ -96,7 +96,6 @@ const Contributors: React.FC<ContributorsProps> = React.memo(
                   target="_blank"
                   rel="nofollow noopener"
                   className={s.contributor_link}
-                  title={website}
                   key={`${name}_link`}
                   href={website}
                 >
