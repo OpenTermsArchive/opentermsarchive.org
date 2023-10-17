@@ -38,7 +38,7 @@ We add this additional rule:
 
 ## Add a contributor
 
-Some contributors may wish to be listed as a contributor on the [README](./README.md#contributors) file and the Open Terms Archive [website](https://opentermsarchive.org/about).
+Contributors to Open Terms Archive are listed publicly on the website.
 
 ### For contributors with a GitHub account
 
