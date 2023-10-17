@@ -68,10 +68,7 @@ This is made possible by the use of the [All Contributors bot](https://allcontri
 - in optimised `jpg`
 - slugify the filename, for exemple: `contributor-name.jpg`
 
-3. Generate the contributors table in the readme file:
-
-- install cli: `npm install all-contributors-cli --save-dev`
-- generate: `npx all-contributors generate`
+3. Generate the contributors table with `npx all-contributors generate`.
 
 ### How to add a type of contribution to a contributor
 
