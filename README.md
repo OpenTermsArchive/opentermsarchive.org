@@ -136,6 +136,20 @@ See our [contributing guide](CONTRIBUTING.md).
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Ndpnt"><img src="https://avatars.githubusercontent.com/u/1098708?v=4?s=100" width="100px;" alt="Nicolas Dupont"/><br /><sub><b>Nicolas Dupont</b></sub></a><br /><a href="https://github.com/OpenTermsArchive/opentermsarchive.org/commits?author=Ndpnt" title="Code">💻</a> <a href="#infra-Ndpnt" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
