@@ -4,8 +4,6 @@ import staffData from '../../../../public/staff.json';
 //@ts-ignore
 import allContributorsData from '../../../../.all-contributorsrc';
 import s from './Contributors.module.css';
-import slugify from 'slugify';
-import { copySync } from 'fs-extra';
 
 type ContributorsProps = {
   subtitle?: string;
