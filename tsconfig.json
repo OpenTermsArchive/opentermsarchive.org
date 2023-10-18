@@ -7,10 +7,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "es2019"
-    ],
+    "lib": ["dom", "es2022"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -23,12 +20,6 @@
     "target": "esnext",
     "incremental": true
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "additional.d.ts"
-  ]
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx", "additional.d.ts"]
 }
