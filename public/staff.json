@@ -1,16 +1,5 @@
 {
-  "core": {
-    "Matti Schneider": "https://mattischneider.fr",
-    "Nicolas Dupont": "https://github.com/Ndpnt",
-    "Clément Biron": "https://clementbiron.com"
-  },
-  "alumnis": {
-    "Martin Ratinaud": "https://github.com/martinratinaud",
-    "Elsa Trujillo": "https://twitter.com/Elsa_Trujillo_",
-    "Siegrid Henry": "https://github.com/SiegridHenry"
-  },
-  "communityManagers": {
-    "Clifford Ouma": "https://github.com/Cli4d",
-    "Amarachi Johnson-Ubah": "https://github.com/emmanuellar"
-  }
+  "core": ["Matti Schneider", "Nicolas Dupont", "Clément Biron"],
+  "alumnis": ["Martin Ratinaud", "Elsa Trujillo", "Siegrid Henry"],
+  "communityManagers": ["Clifford Ouma", "Amarachi Johnson-Ubah"]
 }

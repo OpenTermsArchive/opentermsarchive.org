@@ -5,10 +5,11 @@ import staffData from '../../../../public/staff.json';
 import allContributorsData from '../../../../.all-contributorsrc';
 import s from './Contributors.module.css';
 import slugify from 'slugify';
+import { copySync } from 'fs-extra';
 
 type ContributorsProps = {
   subtitle?: string;
-  type?: 'core' | 'alumnis' | 'contributors' | 'communityManagers' | 'all';
+  type?: 'core' | 'alumnis' | 'all' | 'communityManagers';
   alignX?: 'left' | 'center' | 'right';
   thumbnailWidth?: number;
   thumbnailHeight?: number;
@@ -16,44 +17,15 @@ type ContributorsProps = {
   marginTop?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-const mapAllContributorsData = (
-  allContributors: {
-    name: string;
-    profile: string;
-    avatar_url: string;
-  }[]
-) => {
-  const formatedContributors: {
-    [name: string]: {
-      website: string;
-      picture?: string;
-    };
-  } = {};
-  Object.values(allContributors).map((contributor: any) => {
-    formatedContributors[contributor.name] = {
-      website: contributor.profile,
-    };
-    if (contributor.avatar_url != '') {
-      formatedContributors[contributor.name].picture = contributor.avatar_url;
-    }
-  });
-  return formatedContributors;
-};
+type StaffDataKey = keyof typeof staffData;
 
-const getContributorsByType = (type: ContributorsProps['type']) => {
-  switch (type) {
-    case 'core':
-      return staffData.core;
-    case 'alumnis':
-      return staffData.alumnis;
-    case 'communityManagers':
-      return staffData.communityManagers;
-    case 'contributors':
-      return mapAllContributorsData(allContributorsData.contributors);
-    case 'all':
-    default:
-      return staffData;
+const getContributorsByType = (type: ContributorsProps['type'] = 'all') => {
+  if (!Object.hasOwn(staffData, type)) {
+    return allContributorsData.contributors;
   }
+  return allContributorsData.contributors.filter((contributor: any) => {
+    return staffData[type as StaffDataKey].includes(contributor.name);
+  });
 };
 
 const Contributors: React.FC<ContributorsProps> = React.memo(
@@ -84,29 +56,24 @@ const Contributors: React.FC<ContributorsProps> = React.memo(
       >
         {subtitle && <h4 className={classNames(s.contributors_subtitle)}>{subtitle}</h4>}
         <div className={s.contributors_items}>
-          {Object.entries(contributors).map(([name, value]) => {
-            const website = typeof value === 'object' ? value.website : value;
-            const imgSrc =
-              typeof value === 'object' && value.picture != null
-                ? value.picture
-                : `/images/contributors/${slugify(name, { lower: true })}.jpg`;
+          {contributors.map((contributor: any) => {
             return (
-              <div className={s.contributor} key={`${name}`}>
+              <div className={s.contributor} key={`${contributor.name}`}>
                 <a
                   target="_blank"
                   rel="nofollow noopener"
                   className={s.contributor_link}
-                  key={`${name}_link`}
-                  href={website}
+                  key={`${contributor.name}_link`}
+                  href={contributor.profile}
                 >
                   <img
                     className={s.contributor_image}
-                    src={imgSrc}
-                    alt={name}
+                    src={contributor.avatar_url}
+                    alt={contributor.name}
                     width={thumbnailWidth}
                     height={thumbnailHeight}
                   />
-                  {showInfo && <div className={s.contributor_info}>{name}</div>}
+                  {showInfo && <div className={s.contributor_info}>{contributor.name}</div>}
                 </a>
               </div>
             );
