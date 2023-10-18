@@ -55,14 +55,14 @@ This is made possible by the use of the [All Contributors bot](https://allcontri
     {
       "name": "<contributor_name>",
       "profile": "<contributor_website>",
-      "avatar_url": "https://opentermsarchive.org/images/contributors/<slugify-contributor-name>.jpg",
+      "avatar_url": "images/contributors/<slugify-contributor-name>.jpg",
       "contributions": ["<type_of_contribution>"]
     }
   ]
 }
 ```
 
-2. Add a picture to `public/images/contributors` folder which respects the following constraints:
+2. Add a picture to `public/images/contributors/` folder which respects the following constraints:
 
 - square format, 420x420px
 - in optimised `jpg`
