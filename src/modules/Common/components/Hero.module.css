@@ -5,6 +5,10 @@
     color: var(--colorWhite);
   }
 
+  &.hero__hasNoMarginBottom {
+    margin-bottom: 0;
+  }
+
   & a {
     display: inline-block;
 
