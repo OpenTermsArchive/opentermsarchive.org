@@ -55,7 +55,7 @@ This is made possible by the use of the [All Contributors bot](https://allcontri
     {
       "name": "<contributor_name>",
       "profile": "<contributor_website>",
-      "avatar_url": "images/contributors/<slugify-contributor-name>.jpg",
+      "avatar_url": "images/contributors/<slugified-contributor-name>.jpg",
       "contributions": ["<type_of_contribution>"]
     }
   ]
@@ -65,8 +65,8 @@ This is made possible by the use of the [All Contributors bot](https://allcontri
 2. Add a picture to `public/images/contributors/` folder which respects the following constraints:
 
 - square format, 420x420px
-- in optimised `jpg`
-- slugify the filename, for exemple: `contributor-name.jpg`
+- in [optimised](https://imageoptim.com) JPEG
+- slugify the filename and use `jpg` as an extension, for example: `contributor-name.jpg`
 
 3. Generate the contributors table with `npx all-contributors generate`.
 
