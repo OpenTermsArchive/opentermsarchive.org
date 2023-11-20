@@ -27,7 +27,7 @@
   }
 }
 
-.discintion {
+.distinction {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,13 +35,13 @@
 
   &:hover {
     color: var(--colorBlack400);
-    .discintion_img {
+    .distinction_img {
       opacity: 0.8;
     }
   }
 }
 
-.discintion_img {
+.distinction_img {
   max-width: 14rem;
   height: 12rem;
   display: flex;
@@ -49,7 +49,7 @@
   justify-content: end;
 }
 
-.discintion_desc {
+.distinction_desc {
   margin-top: var(--mM);
   text-align: center;
   max-width: 32rem;

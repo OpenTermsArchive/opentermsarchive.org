@@ -15,11 +15,11 @@ const Distinctions: React.FC<DistinctionsProps> = ({ children, className, ...pro
     <div className={classNames(s.distinctions, className)} {...props}>
       {Object.entries(distinctionsData).map(([name, data]) => {
         return (
-          <a href={data.link} target="_blank" rel="noopener" className={s.discintion}>
-            <div className={s.discintion_img}>
+          <a href={data.link} target="_blank" rel="noopener" className={s.distinction}>
+            <div className={s.distinction_img}>
               <img src={`/images/distinctions/${slugify(name, { lower: true })}.png`} alt="" />
             </div>
-            <div className={s.discintion_desc}>
+            <div className={s.distinction_desc}>
               {
                 // @ts-ignore
                 data.description[router.locale]
