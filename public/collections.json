@@ -2,7 +2,7 @@
   "Generative AI": {
     "id": "GenAI",
     "languages": ["en"],
-    "jurisdictions": ["EU"],
+    "jurisdictions": ["EU", "CN"],
     "maintainers": [
       {
         "name": "Open Terms Archive",
