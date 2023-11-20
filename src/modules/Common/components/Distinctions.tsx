@@ -19,12 +19,13 @@ const Distinctions: React.FC<DistinctionsProps> = ({ children, className, ...pro
             <div className={s.distinction_img}>
               <img src={`/images/distinctions/${slugify(name, { lower: true })}.png`} alt="" />
             </div>
-            <div className={s.distinction_desc}>
-              {
+            <div
+              className={s.distinction_desc}
+              dangerouslySetInnerHTML={{
                 // @ts-ignore
-                data.description[router.locale]
-              }
-            </div>
+                __html: data.description[router.locale],
+              }}
+            ></div>
           </a>
         );
       })}
