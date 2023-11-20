@@ -1,6 +1,6 @@
 {
   "Generative AI": {
-    "id": "genAI",
+    "id": "GenAI",
     "languages": ["en"],
     "jurisdictions": ["EU"],
     "maintainers": [
