@@ -5,10 +5,6 @@
     "jurisdictions": ["EU", "CN"],
     "maintainers": [
       {
-        "name": "Open Terms Archive",
-        "url": "https://opentermsarchive.org"
-      },
-      {
         "name": "Sciences Po Law School Clinic",
         "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
       }
