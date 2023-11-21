@@ -190,7 +190,7 @@ const Collections: React.FC<CollectionsProps> = ({
                 <LinkIcon
                   iconName="FiTool"
                   iconColor="var(--colorBlack400)"
-                  href={endpoint}
+                  href={`${endpoint}/docs`}
                   target="_blank"
                   rel="noopener"
                 >

@@ -21,7 +21,7 @@
       "en": "Major global social media services",
       "fr": "Médias sociaux mondiaux majeurs"
     },
-    "endpoint": "http://134.102.58.70/api/v1/docs/"
+    "endpoint": "http://134.102.58.70/api/v1"
   },
   "P2B Compliance": {
     "id": "p2b-compliance",
@@ -45,7 +45,7 @@
         "url": "https://ec.europa.eu/info/departments/communications-networks-content-and-technology_en"
       }
     ],
-    "endpoint": "http://vps-463f0baf.vps.ovh.net/api/v1/docs/"
+    "endpoint": "http://vps-463f0baf.vps.ovh.net/api/v1"
   },
   "France Élections": {
     "id": "france-elections",
@@ -107,7 +107,7 @@
       "services": "108",
       "documents": "216"
     },
-    "endpoint": "http://198.244.142.9/api/v1/docs/"
+    "endpoint": "http://198.244.142.9/api/v1"
   },
   "Contrib": {
     "id": "contrib",
@@ -121,7 +121,7 @@
       "services": "299",
       "documents": "660"
     },
-    "endpoint": "http://51.89.224.102/api/v1/docs/"
+    "endpoint": "http://51.89.224.102/api/v1"
   },
   "Demo": {
     "id": "demo",
@@ -141,6 +141,6 @@
       "en": "Services needed to operate the Open Terms Archive engine",
       "fr": "Services nécessaires au fonctionnement du moteur d'Open Terms Archive"
     },
-    "endpoint": "http://162.19.74.224/api/v1/docs/"
+    "endpoint": "http://162.19.74.224/api/v1"
   }
 }
