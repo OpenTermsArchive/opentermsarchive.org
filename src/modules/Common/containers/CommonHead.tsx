@@ -11,10 +11,12 @@ export default function CommonHead({
   title = 'Open Terms Archive',
   description = '',
   url,
+  image,
   children,
 }: {
   title: string;
   description?: string;
+  image: string;
   url?: string;
   children?: any;
 }) {
@@ -56,6 +58,7 @@ export default function CommonHead({
       <meta property="og:type" content={type} />
       {description && <meta property="og:description" content={description} />}
       {websiteName && <meta property="og:site_name" content={websiteName} />}
+      <meta property="og:image" content={image} />
 
       <link rel="canonical" href={currentUrl} />
 

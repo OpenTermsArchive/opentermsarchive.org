@@ -29,7 +29,7 @@ const Layout = ({
   const { t } = useTranslation();
   return (
     <>
-      <CommonHead title={title} description={desc} />
+      <CommonHead title={title} description={desc} image="/images/open-graph-image.png" />
 
       <Analytics />
 
