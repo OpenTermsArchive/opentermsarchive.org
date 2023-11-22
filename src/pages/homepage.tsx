@@ -15,6 +15,7 @@ import React from 'react';
 import TextContent from 'modules/Common/components/TextContent';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'modules/I18n';
+import Distinctions from 'modules/Common/components/Distinctions';
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -24,7 +25,11 @@ const HomePage = () => {
       {/* Mission statement + What is it ? */}
       <Container layout="wide" dark={true} paddingY={false} id="mission-statement">
         <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingY={false}>
-          <Hero title={t('homepage:mission_statement')} subtitle={t('homepage:what_it_is')}>
+          <Hero
+            title={t('homepage:mission_statement')}
+            subtitle={t('homepage:what_it_is')}
+            marginBottom={false}
+          >
             <Link href="/impact" className="a__darked">
               {t('homepage:learn_more_focus_areas')}
             </Link>
@@ -32,14 +37,17 @@ const HomePage = () => {
         </Container>
       </Container>
 
+      {/* Distinctions */}
+      <Container layout="wide" dark={true} paddingY={false} id="distinctions">
+        <Container gridCols="12" gridGutters="11" flex={true} paddingX={false} paddingTop={false}>
+          <Distinctions />
+        </Container>
+      </Container>
+
       {/* Collections */}
       <Container gray={true} layout="wide" paddingX={false} paddingTop={false} id="collections">
         <Container gridCols="12" gridGutters="11">
-          <Collections
-            title={t('collections:title')}
-            subtitleLevel="h5"
-            withPlaceholder={true}
-          />
+          <Collections title={t('collections:title')} subtitleLevel="h5" withPlaceholder={true} />
         </Container>
       </Container>
 
