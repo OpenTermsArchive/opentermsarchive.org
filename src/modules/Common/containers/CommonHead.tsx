@@ -3,7 +3,6 @@ import React from 'react';
 import { getLinkAlternates } from 'modules/I18n';
 import { useRouter } from 'next/router';
 import { words } from 'lodash';
-const twitterUser = 'OpenTerms';
 const websiteName = 'opentermsarchive.org';
 const type = 'website';
 const MAX_DESC_WORDS = 25;
@@ -11,13 +10,13 @@ const MAX_DESC_WORDS = 25;
 export default function CommonHead({
   title = 'Open Terms Archive',
   description = '',
-  twitterCard,
   url,
+  image,
   children,
 }: {
   title: string;
   description?: string;
-  twitterCard?: string;
+  image: string;
   url?: string;
   children?: any;
 }) {
@@ -53,19 +52,13 @@ export default function CommonHead({
         <link rel="alternate" {...link} />
       ))}
 
-      {/* TWITTER https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      {description && <meta name="twitter:description" content={description} />}
-      <meta name="twitter:image" content={twitterCard} />
-      {twitterUser && <meta name="twitter:site" content={twitterUser} />}
-
       {/* OPENGRAPH https://ogp.me/ */}
       <meta property="og:title" content={title} />
       {currentUrl && <meta property="og:url" content={currentUrl} />}
       <meta property="og:type" content={type} />
       {description && <meta property="og:description" content={description} />}
       {websiteName && <meta property="og:site_name" content={websiteName} />}
+      <meta property="og:image" content={image} />
 
       <link rel="canonical" href={currentUrl} />
 
