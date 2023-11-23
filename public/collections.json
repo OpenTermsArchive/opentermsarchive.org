@@ -1,4 +1,24 @@
 {
+  "Generative AI": {
+    "id": "GenAI",
+    "languages": ["en"],
+    "jurisdictions": ["EU", "CN"],
+    "maintainers": [
+      {
+        "name": "Sciences Po Law School Clinic",
+        "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+      }
+    ],
+    "stats": {
+      "services": "12",
+      "documents": "28"
+    },
+    "industries": {
+      "en": "Most popular generative AI services",
+      "fr": "Services d'IA générative les plus populaires"
+    },
+    "endpoint": "http://51.77.110.109/api/v1"
+  },
   "Platform Governance Archive": {
     "id": "pga",
     "languages": ["en"],
