@@ -147,6 +147,15 @@ const HomePage = () => {
         <Container gridCols="12" gridGutters="11">
           <CardList title={t('homepage:reuses.title')} subtitle={t('homepage:reuses.subtitle')}>
             <Card
+              image={`/images/reuses/report-lab-lex-${router?.locale}.png`}
+              title={t('homepage:reuses.report-lab-lex.title')}
+              subtitle={t('homepage:reuses.report-lab-lex.subtitle')}
+              author={t('homepage:reuses.report-lab-lex.author')}
+              link="https://grsomedia.wordpress.com/2023/10/10/publication-du-rapport-les-conditions-dutilisation-des-reseaux-sociaux-et-leur-impact-sur-les-droits-de-lhomme/"
+              center={true}
+              white={true}
+            />
+            <Card
               image={`/images/reuses/memos-elections-${router?.locale}.png`}
               className="text__center"
               title={t('homepage:reuses.memos-elections-fr.title')}
