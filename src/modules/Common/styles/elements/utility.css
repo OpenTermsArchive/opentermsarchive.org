@@ -291,5 +291,5 @@
 }
 
 .font-style__italic {
-  font-style: italic;
+  font-style: oblique 12deg;
 }
