@@ -157,7 +157,6 @@ const HomePage = () => {
             />
             <Card
               image={`/images/reuses/memos-elections-${router?.locale}.png`}
-              className="text__center"
               title={t('homepage:reuses.memos-elections-fr.title')}
               subtitle={t('homepage:reuses.memos-elections-fr.subtitle')}
               author={t('homepage:reuses.memos-elections-fr.author')}
@@ -203,7 +202,6 @@ const HomePage = () => {
             />
             <Card
               isPlaceholder={true}
-              className="text__center"
               title={t('homepage:reuses.new_reuse.title')}
               subtitle={t('homepage:reuses.new_reuse.subtitle')}
               link="mailto:contact@opentermsarchive.org"
