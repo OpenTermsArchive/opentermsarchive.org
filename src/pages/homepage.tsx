@@ -154,6 +154,7 @@ const HomePage = () => {
               link="https://grsomedia.wordpress.com/2023/10/10/publication-du-rapport-les-conditions-dutilisation-des-reseaux-sociaux-et-leur-impact-sur-les-droits-de-lhomme/"
               center={true}
               white={true}
+              key={t('homepage:reuses.report-lab-lex.title')}
             />
             <Card
               image={`/images/reuses/memos-elections-${router?.locale}.png`}
@@ -163,6 +164,7 @@ const HomePage = () => {
               link="https://www.reset.tech/resources/memos-on-platforms-behaviour-during-the-2022-french-elections/"
               center={true}
               white={true}
+              key={t('homepage:reuses.memos-elections-fr.title')}
             />
             <Card
               image="/images/reuses/tosdr.jpg"
@@ -172,6 +174,7 @@ const HomePage = () => {
               link="https://tosdr.org"
               center={true}
               white={true}
+              key={t('homepage:reuses.tosdr.title')}
             />
             <Card
               image="/images/reuses/readability.jpg"
@@ -181,6 +184,7 @@ const HomePage = () => {
               link="https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments"
               center={true}
               white={true}
+              key={t('homepage:reuses.readability.title')}
             />
             <Card
               image="/images/reuses/scripta-manent.jpg"
@@ -190,6 +194,7 @@ const HomePage = () => {
               link="https://disinfo.quaidorsay.fr/fr/open-terms-archive/scripta-manent"
               center={true}
               white={true}
+              key={t('homepage:reuses.scripta_manent.title')}
             />
             <Card
               image="/images/reuses/tosback.jpg"
@@ -199,6 +204,7 @@ const HomePage = () => {
               link="https://tosback.org/"
               center={true}
               white={true}
+              key={t('homepage:reuses.tosback.title')}
             />
             <Card
               isPlaceholder={true}
@@ -207,6 +213,7 @@ const HomePage = () => {
               link="mailto:contact@opentermsarchive.org"
               center={true}
               white={true}
+              key={t('homepage:reuses.new_reuse.title')}
             />
           </CardList>
         </Container>
