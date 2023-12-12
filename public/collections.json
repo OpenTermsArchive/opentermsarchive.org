@@ -1,4 +1,24 @@
 {
+  "ToS;DR": {
+    "id": "tosdr",
+    "languages": ["en"],
+    "jurisdictions": ["*"],
+    "maintainers": [
+      {
+        "name": "Terms of Service; Didn’t Read",
+        "url": "https://tosdr.org"
+      }
+    ],
+    "stats": {
+      "services": "...",
+      "documents": "..."
+    },
+    "industries": {
+      "en": "Any terms or policy document of any service that has a review written in ToS;DR",
+      "fr": "Tout document relatif aux conditions ou à la politique d'un service dont l'évaluation est rédigée sur ToS;DR"
+    },
+    "endpoint": "..."
+  },
   "Generative AI": {
     "id": "GenAI",
     "languages": ["en"],
