@@ -123,6 +123,16 @@ const Collections: React.FC<CollectionsProps> = ({
           })
           .join(', ');
 
+        const jurisdictionsList = jurisdictions
+          .map((regionCode) => {
+            if (regionCode === '*') {
+              return t('collections:jurisdiction.various');
+            } else {
+              return countryName.of(regionCode);
+            }
+          })
+          .join(', ');
+
         return (
           <Card
             key={`collections_${instanceSlug}`}
@@ -156,7 +166,7 @@ const Collections: React.FC<CollectionsProps> = ({
               <CardTableItem
                 title={t('collections:country', { count: jurisdictions.length })}
                 iconName="FiMap"
-                desc={jurisdictions.map((regionCode) => countryName.of(regionCode)).join(', ')}
+                desc={jurisdictionsList}
               />
             </CardTable>
             <div className="mt__XL text__center">
