@@ -104,7 +104,10 @@ const Collections: React.FC<CollectionsProps> = ({
               {maintainers.map((maintainer) => (
                 <img
                   key={`maintainer_${slugify(maintainer.name)}`}
-                  src={`/images/contributors/${slugify(maintainer.name, { lower: true })}.png`}
+                  src={`/images/contributors/${slugify(maintainer.name, {
+                    lower: true,
+                    remove: /[*+~.()'"!:@;,]/g,
+                  })}.png`}
                   alt={maintainer.name}
                 />
               ))}
