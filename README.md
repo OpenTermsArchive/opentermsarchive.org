@@ -119,7 +119,7 @@ In `my-page.mdx`:
 
 `  [0] http://localhost:<PORT>/. ERROR: Detected 1 broken links. Scanned 1 links in 0.013 seconds.` is triggered if you do not have started the app.
 
-`Error: listen EADDRINUSE: address already in use 0.0.0.0:<PORT>` is triggered if you have already an app started in background. You can stop all processes running on the configured port with the command `npm run stop`. To close only the desired process you have to get the PID with `lsof -i :<PORT>` and kill it with `kill -p <PID>`.
+`Error: listen EADDRINUSE: address already in use 0.0.0.0:<PORT>` is triggered if you have already an app started in background. You can stop all processes running on the configured port with the command `npm run stop`. To close only the desired process you have to get the PID with `lsof -i :<PORT>` and kill it with `kill <PID>`.
 
 ### Modules documentation
 
