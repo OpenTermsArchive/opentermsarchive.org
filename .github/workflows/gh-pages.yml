@@ -1,0 +1,49 @@
+name: Deploy to GitHub pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.122.0'
+          extended: true
+
+      - name: Clean public dir
+        run: rm -rf public
+
+      - name: Print Hugo info
+        run: |
+          echo "hugo env"
+          hugo env
+          echo "hugo config"
+          hugo config
+        
+      - name: Build with Hugo
+        run: npm run build
+
+      - name: Print public files
+        run: |
+          cd public
+          find . -print
+
+      - name: Deploy ./public directory to the remote gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          cname: opentermsarchive.org
