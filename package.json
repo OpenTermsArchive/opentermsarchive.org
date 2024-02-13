@@ -13,6 +13,7 @@
   "license": "EUPL v1.2",
   "author": "Open Terms Archive",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "hugo --minify",
+    "start:dev": "hugo serve --watch --logLevel debug --disableFastRender"
   }
 }
