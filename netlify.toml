@@ -1,0 +1,10 @@
+[build]
+  publish = "public"
+
+# All deploys generated from a pull/merge request will inherit these settings.
+[context.deploy-preview]
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+  HUGO_ENV = "preview"
+  HUGO_VERSION = "0.122.0"
