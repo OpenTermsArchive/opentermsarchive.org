@@ -1,0 +1,16 @@
+# Node
+node_modules
+npm-debug.log
+
+# OS
+.DS_Store
+public/.DS_Store
+
+# Hugo
+public
+/.project
+.hugo_build.lock
+resources/_gen/
+
+# VSCode
+.vscode
