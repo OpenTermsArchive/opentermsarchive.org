@@ -2,6 +2,45 @@
 
 The website that presents Open Terms Archive to the general public.
 
+## Installation
+
+### Dependencies
+
+This website is built using [Hugo](https://gohugo.io), a static website editor, and uses [Node.js](https://nodejs.org).
+
+To build it, [install Hugo](https://gohugo.io/getting-started/installing/) (>= v0.114.0) and [Node.js](https://nodejs.org), and then:
+
+```sh
+git clone https://github.com/OpenTermsArchive/opentermsarchive.org
+cd docs
+npm install
+hugo
+```
+
+## Usage
+
+### Building the site
+
+```sh
+hugo
+```
+
+The website will be built in the `public` directory.
+
+### Serving the app locally
+
+For development purposes:
+
+```sh
+npm run start:dev
+```
+
+## Deployment
+
+The `main` branch is used on production and automatically deployed through GitHub pages. Refer to the configuration file `.github/workflows/gh-pages.yml`.
+
+For each pull request, a preview is automatically deployed through Netlify and a comment on the GitHub pull request display the necessary information, such as the preview URL. The configuration can be found in `netlify.toml` file.
+
 ## Contributing
 
 See our [contributing guide](CONTRIBUTING.md).

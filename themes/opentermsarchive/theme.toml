@@ -1,0 +1,7 @@
+name = "opentermsarchive"
+license = "EUPL"
+licenselink = "https://github.com/OpenTermsArchive/opentermsarchive.org/blob/master/LICENSE"
+homepage = "https://opentermsarchive.org"
+tags = []
+features = []
+min_version = "0.122.0"

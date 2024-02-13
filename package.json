@@ -1,0 +1,19 @@
+{
+  "name": "open-terms-archive-website",
+  "version": "0.0.1",
+  "description": "The Open Terms Archive website",
+  "homepage": "https://github.com/OpenTermsArchive/opentermsarchive.org#readme",
+  "bugs": {
+    "url": "https://github.com/OpenTermsArchive/opentermsarchive.org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenTermsArchive/opentermsarchive.org.git"
+  },
+  "license": "EUPL v1.2",
+  "author": "Open Terms Archive",
+  "scripts": {
+    "build": "hugo --minify",
+    "start:dev": "hugo serve --watch --logLevel debug --disableFastRender"
+  }
+}

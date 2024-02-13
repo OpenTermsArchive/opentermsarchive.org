@@ -1,0 +1,7 @@
+baseURL: https://opentermsarchive.org/
+languageCode: en-us
+title: Open Terms Archive website
+theme: opentermsarchive
+disableKinds:
+  - taxonomy
+ignoreErrors: ["error-disable-taxonomy"]
