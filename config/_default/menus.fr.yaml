@@ -1,0 +1,7 @@
+header:
+  - name: Accueil
+    pageRef: /
+    weight: 1
+  - name: Étude de cas
+    pageRef: /case-studies
+    weight: 2

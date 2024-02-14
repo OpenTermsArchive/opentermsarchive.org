@@ -1,0 +1,7 @@
+header:
+  - name: Home
+    pageRef: /
+    weight: 1
+  - name: Case studies
+    pageRef: /case-studies
+    weight: 2
