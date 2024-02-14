@@ -5,3 +5,4 @@ theme: opentermsarchive
 disableKinds:
   - taxonomy
 ignoreErrors: ["error-disable-taxonomy"]
+removePathAccents: true
