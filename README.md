@@ -35,6 +35,26 @@ For development purposes:
 npm run start:dev
 ```
 
+### Linting Markdown files
+
+To lint the Markdown files use the following command:
+
+```sh
+npm run lint:markdown
+```
+
+To apply automatic corrections use the following command:
+
+```sh
+npm run lint:markdown -- --fix
+```
+
+### Testing
+
+```sh
+npm run test
+```
+
 ## Deployment
 
 The `main` branch is used on production and automatically deployed through GitHub pages. Refer to the configuration file `.github/workflows/gh-pages.yml`.
