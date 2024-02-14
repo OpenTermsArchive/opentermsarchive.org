@@ -1,0 +1,28 @@
+# These rules are documented on https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+header-style:
+  style: atx  # use the hash style headers instead of the underlined one
+
+first-line-h1: false # first line in a file should not necessary be a top-level heading
+
+ul: # unordered list style
+  style: dash
+
+line_length: false  # do not check for line length; rely on editor wrapping
+
+no-inline-html:
+  allowed_elements:
+    - abbr
+    - i
+    - a
+
+no-duplicate-header: false
+
+emphasis-style:
+  style: underscore
+
+strong-style:
+  style: asterisk
+
+single-title:
+  front_matter_title: "" # disable front matter title as a top level heading, see https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md#md025---multiple-top-level-headings-in-the-same-document
