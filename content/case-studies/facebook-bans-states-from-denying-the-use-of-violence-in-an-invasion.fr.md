@@ -4,7 +4,6 @@ title: "Facebook interdit aux États de nier l’usage de la force lors d’une 
 service: "Facebook"
 terms_types: ["Community Guidelines"]
 dates: ["2022-04-28"]
-permalink: "/etudes-de-cas/facebook-interdit-aux-etats-de-nier-lusage-de-la-force-lors-dune-invasion"
 ---
 
 Facebook <a target="_blank" rel="noopener" href="https://github.com/OpenTermsArchive/france-elections-versions/commit/b315d25#diff-57f4f166af0a7f6e4fc8f63a103c74f5a8d47754238aad621db0eebdf4048df4R24">a ajouté</a> une interdiction à ses règles de prévention de manipulation de sa plateforme : l’entreprise indique ne plus autoriser

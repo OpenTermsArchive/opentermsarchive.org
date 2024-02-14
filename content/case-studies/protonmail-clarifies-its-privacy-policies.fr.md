@@ -4,7 +4,6 @@ title: "Protonmail clarifie ses politiques de confidentialité"
 service: "Protonmail"
 terms_types: ["Privacy Policy"]
 dates: ["2021-09-06"]
-permalink: "/etudes-de-cas/protonmail-clarifies-its-privacy-policies"
 ---
 
 Le 6 septembre 2021, ProtonMail a <a target="_blank" rel="noopener" href="https://github.com/OpenTermsArchive/contrib-versions/commit/510c7d65e4254e1d53221b139d7e25bb2b990510">modifié</a> ses politiques de confidentialité de sorte à clarifier les effets des lois suisses (où l’entreprise est installée) sur le traitement des données des utilisateurs. Ainsi, bien que la société déclare offrir un service de courriel particulièrement sécurisé, elle peut se retrouver « forcée de partager l’adresse IP » de ses utilisateurs avec les forces de l’ordre dans le cadre d’enquêtes criminelles.
