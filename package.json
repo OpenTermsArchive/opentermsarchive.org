@@ -15,5 +15,8 @@
   "scripts": {
     "build": "hugo --minify",
     "start:dev": "hugo serve --watch --logLevel debug --disableFastRender"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.39.0"
   }
 }
