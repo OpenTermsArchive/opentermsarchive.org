@@ -14,7 +14,8 @@
   "author": "Open Terms Archive",
   "scripts": {
     "build": "hugo --minify",
-    "start:dev": "hugo serve --watch --logLevel debug --disableFastRender"
+    "start:dev": "hugo serve --watch --logLevel debug --disableFastRender",
+    "lint:markdown": "markdownlint *.md content/**/*.md"
   },
   "devDependencies": {
     "markdownlint-cli": "^0.39.0"
