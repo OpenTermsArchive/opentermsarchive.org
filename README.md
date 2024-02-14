@@ -49,6 +49,12 @@ To apply automatic corrections use the following command:
 npm run lint:markdown -- --fix
 ```
 
+### Testing
+
+```sh
+npm run test
+```
+
 ## Deployment
 
 The `main` branch is used on production and automatically deployed through GitHub pages. Refer to the configuration file `.github/workflows/gh-pages.yml`.
