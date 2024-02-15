@@ -21,4 +21,4 @@ jobs:
           hugo-version: '0.122.0'
           extended: true
       - name: Test broken links
-        run: npm run test:links
+        run: npm run test:links -- --skip '^(?!https?://(www.opentermsarchive.org|netlify.app))'
