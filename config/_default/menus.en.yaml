@@ -5,3 +5,6 @@ header:
   - name: Case studies
     pageRef: /case-studies
     weight: 2
+  - name: Impact
+    pageRef: /impact
+    weight: 3
