@@ -4,6 +4,7 @@ html_description: Leverage a database of terms of service changes to identify pr
 related_collections:
   - pga
   - dating
+aliases: /domain/privacy
 ---
 
 ### Achievements

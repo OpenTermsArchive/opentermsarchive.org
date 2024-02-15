@@ -3,6 +3,7 @@ title: Impact on consumer protection
 html_description: Leverage a database of terms of service changes to measure how loyal service providers are to their customers
 related_collections:
   - france
+aliases: /domain/consumer-protection
 ---
 
 ### Achievements

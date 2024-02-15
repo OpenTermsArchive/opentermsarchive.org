@@ -4,6 +4,7 @@ slug: protection-des-consommateurs
 html_description: Exploitez une base de données des changements de CGUs pour mesurer la loyauté des services en ligne vis à vis de leurs consommateurs
 related_collections:
   - france
+aliases: /fr/domain/consumer-protection
 ---
 
 ### Réalisations

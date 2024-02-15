@@ -2,6 +2,7 @@
 title: Appel aux financeurs et aux contributeurs sur l'industrie de l'IA générative
 slug: ia-generative
 html_description: Exploitez une base de données des CGUs de services d'IA générative pour concevoir une réglementation adaptée et vérifier son adoption
+aliases: /fr/domain/generative-ai
 ---
 
 ### Proposition

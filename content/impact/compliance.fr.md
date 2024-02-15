@@ -4,6 +4,7 @@ slug: conformite
 html_description: Exploitez une base de données des changements de CGUs pour évaluer la conformité des services en ligne avec la réglementation en vigueur
 related_collections:
   - p2b-compliance
+aliases: /fr/domain/compliance
 ---
 
 ### Réalisations

@@ -5,6 +5,7 @@ html_description: Exploitez une base de données des changements de CGUs pour pr
 related_collections:
   - pga
   - france-elections
+aliases: /fr/domain/disinformation
 ---
 
 Les manipulations de l'information sont généralement abordés par le biais de mesures réactives contre des attaques spécifiques ou d'efforts de prévention proactifs. Bien que ces approches soient nécessaires et utiles, elles sont par nature sans fin et ne s'attaquent pas à la racine du problème. L'exploitation des vulnérabilités à des fins politiques attirera toujours les acteurs malveillants, qui seront plus nombreux que ceux qui s'intéressent à la prévention.

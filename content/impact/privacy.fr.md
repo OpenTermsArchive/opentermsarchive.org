@@ -5,6 +5,7 @@ html_description: Exploitez une base de données des changements de CGUs pour é
 related_collections:
   - pga
   - dating
+aliases: /fr/domain/privacy
 ---
 
 ### Réalisations

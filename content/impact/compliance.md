@@ -3,6 +3,7 @@ title: Impact on compliance
 html_description: Leverage a database of terms of service changes to assess the compliance of online service providers with regulation
 related_collections:
   - p2b-compliance
+aliases: /domain/compliance
 ---
 
 ### Achievements
