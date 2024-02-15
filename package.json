@@ -19,6 +19,7 @@
     "lint:markdown": "markdownlint *.md content/**/*.md"
   },
   "devDependencies": {
+    "linkinator": "^6.0.4",
     "markdownlint-cli": "^0.39.0"
   }
 }
