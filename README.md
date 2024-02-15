@@ -51,8 +51,16 @@ npm run lint:markdown -- --fix
 
 ### Testing
 
+Run the entire test set
+
 ```sh
 npm run test
+```
+
+#### Check for broken links
+
+```sh
+npm run test:links
 ```
 
 ## Deployment
