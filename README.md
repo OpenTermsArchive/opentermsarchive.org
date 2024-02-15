@@ -51,9 +51,19 @@ npm run lint:markdown -- --fix
 
 ### Testing
 
+Run the entire test set
+
 ```sh
 npm run test
 ```
+
+#### Check for broken links
+
+```sh
+npm run test:links
+```
+
+Note that because of CloudFlare protection, tests on external links are not run in CI so as not to block on 503 errors.
 
 ## Deployment
 

@@ -15,3 +15,10 @@ jobs:
       - run: npm ci
       - name: Lint Markdown
         run: npm run lint:markdown
+      - name: Set Hugo up
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.122.0'
+          extended: true
+      - name: Test broken links
+        run: npm run test:links -- --skip '^(?!https?://(www.opentermsarchive.org|netlify.app))'
