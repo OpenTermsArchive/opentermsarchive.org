@@ -35,7 +35,7 @@ Since it increases scrutiny on online services and federates actors, Open Terms
 - ##### [Privacy and personal data protection]({{< relref path="/impact/privacy" >}})
 - ##### [Generative AI industry]({{< relref path="/impact/generative-ai" >}}) (Looking for funders and network)
 
-We are constantly looking for new partners to strengthen our impact on these domains and expand to new ones. **If you can contribute funds, analysis capability, tracking suggestions or other forms of partnership, [contact us](mailto:contact@opentermsarchive.org) to start collaborating!**
+We are constantly looking for new partners to strengthen our impact on these domains and expand to new ones. **If you can contribute funds, analysis capability, tracking suggestions or other forms of partnership, [contact us](mailto:{{< param "contact_email" >}}) to start collaborating!**
 
 ### Decentralise and federate
 

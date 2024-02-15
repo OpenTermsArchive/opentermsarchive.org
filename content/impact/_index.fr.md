@@ -34,7 +34,7 @@ Open Terms Archive est conçu pour renforcer les capacités de ces acteurs pui
 - ##### [Protection des données personnelles]({{< relref path="/impact/privacy" >}})
 - ##### [Industrie de l'IA générative]({{< relref path="/impact/generative-ai" >}}) (Appel aux financeurs et aux contributeurs)
 
-Nous sommes constamment à la recherche de nouveaux partenaires afin de renforcer notre impact sur ces domaines et d'en étendre la portée à d'autres. **Si vous pouvez apporter des fonds, des capacités d'analyse, des suggestions de suivi ou d'autres formes de partenariat, [contactez-nous](mailto:contact@opentermsarchive.org) pour commencer à collaborer !**
+Nous sommes constamment à la recherche de nouveaux partenaires afin de renforcer notre impact sur ces domaines et d'en étendre la portée à d'autres. **Si vous pouvez apporter des fonds, des capacités d'analyse, des suggestions de suivi ou d'autres formes de partenariat, [contactez-nous](mailto:{{< param "contact_email" >}}) pour commencer à collaborer !**
 
 ### Décentraliser et fédérer
 
