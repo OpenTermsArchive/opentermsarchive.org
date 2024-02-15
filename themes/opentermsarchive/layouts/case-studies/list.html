@@ -1,11 +1,9 @@
 {{ define "main" }}
-
   {{ $sortedPages := slice }}
   {{ range .Pages }}
     {{ $m := dict "date" (index .Params.dates 0) "page" . }}
     {{ $sortedPages = $sortedPages | append $m }}
   {{ end }}
-
   <ul>
     {{ range sort $sortedPages "date" "desc" }}
       <li>
@@ -13,5 +11,4 @@
         </li>
     {{ end }}
   </ul>
-  
 {{ end }}
