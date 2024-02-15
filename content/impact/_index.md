@@ -3,7 +3,7 @@ title: Impact model
 html_description: Open Terms Archive addresses a critical gap in the ability of activists, journalists, researchers, lawmakers and regulators to analyse and influence the rules of online services.
 ---
 
-### Open Terms Archive addresses a critical gap in the ability of activists, journalists, researchers, lawmakers and regulators to analyse and influence the rules of online services.
+### Open Terms Archive addresses a critical gap in the ability of activists, journalists, researchers, lawmakers and regulators to analyse and influence the rules of online services
 
 Digital platforms hold immense power in forming global information flows, managing personal data and dictating business practices, and thus massively influence societal change. Their power is shaped by the rules set forth in complex and regularly changing documents that define how these platforms operate: terms of service, privacy policies, community guidelines…
 
@@ -28,11 +28,14 @@ Open Terms Archive is designed to amplify the capabilities of these influentia
 
 Since it increases scrutiny on online services and federates actors, Open Terms Archive data is relevant to any domain related to platform governance. Any entity can use its open data and software to target whichever domain it deems relevant. Within the constraints of its resources, the Open Terms Archive core team focuses on developing tools and partnerships on specific domains that are impactful to its mission and funders:
 
-
 - ##### [Mis- and disinformation]({{< relref path="/impact/disinformation" >}})
+
 - ##### [Compliance and regulatory impact assessment]({{< relref path="/impact/compliance" >}})
+
 - ##### [Consumer protection]({{< relref path="/impact/consumer-protection" >}})
+
 - ##### [Privacy and personal data protection]({{< relref path="/impact/privacy" >}})
+
 - ##### [Generative AI industry]({{< relref path="/impact/generative-ai" >}}) (Looking for funders and network)
 
 We are constantly looking for new partners to strengthen our impact on these domains and expand to new ones. **If you can contribute funds, analysis capability, tracking suggestions or other forms of partnership, [contact us](mailto:{{< param "contact_email" >}}) to start collaborating!**

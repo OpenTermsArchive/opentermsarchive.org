@@ -3,7 +3,7 @@ title: Modèle d'impact
 html_description: Open Terms Archive comble une lacune critique dans la capacité des militants, journalistes, chercheurs, législateurs et régulateurs à comprendre, analyser et influencer les règles des services en ligne.
 ---
 
-### Open Terms Archive comble une lacune critique dans la capacité des militants, journalistes, chercheurs, législateurs et régulateurs à comprendre, analyser et influencer les règles des services en ligne.
+### Open Terms Archive comble une lacune critique dans la capacité des militants, journalistes, chercheurs, législateurs et régulateurs à comprendre, analyser et influencer les règles des services en ligne
 
 Les plateformes numériques détiennent un pouvoir immense dans la répartition des flux d'informations mondiaux, la gestion des données personnelles et la définition des pratiques commerciales. Leur pouvoir est façonné par les règles énoncées dans des documents complexes et en constante évolution qui définissent le fonctionnement de ces plateformes : conditions d'utilisation, politiques de confidentialité, règles de la communauté…
 
@@ -29,9 +29,13 @@ Open Terms Archive est conçu pour renforcer les capacités de ces acteurs pui
 Étant donné qu'elles renforcent le contrôle sur les services en ligne et fédèrent les acteurs, les données d'Open Terms Archive sont pertinentes pour tous les domaines liés à la gouvernance des plateformes. Toute entité peut utiliser ses données ouvertes et ses outils pour cibler le domaine qu'elle juge pertinent. Dans la limite de ses ressources, l'équipe cœur d'Open Terms Archive se concentre sur le développement d'outils et de partenariats dans des domaines spécifiques qui ont un impact sur sa mission et ses financeurs :
 
 - ##### [Manipulations de l'information]({{< relref path="/impact/disinformation" >}})
+
 - ##### [Conformité]({{< relref path="/impact/compliance" >}})
+
 - ##### [Protection des consommateurs]({{< relref path="/impact/consumer-protection" >}})
+
 - ##### [Protection des données personnelles]({{< relref path="/impact/privacy" >}})
+
 - ##### [Industrie de l'IA générative]({{< relref path="/impact/generative-ai" >}}) (Appel aux financeurs et aux contributeurs)
 
 Nous sommes constamment à la recherche de nouveaux partenaires afin de renforcer notre impact sur ces domaines et d'en étendre la portée à d'autres. **Si vous pouvez apporter des fonds, des capacités d'analyse, des suggestions de suivi ou d'autres formes de partenariat, [contactez-nous](mailto:{{< param "contact_email" >}}) pour commencer à collaborer !**
