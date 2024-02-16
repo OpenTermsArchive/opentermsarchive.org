@@ -1,0 +1,12 @@
+<hr />
+<div>
+  <div>name: {{ .name }}</div>
+  <div>id: {{ .data.id }}</div>
+  <div>endpoint: {{ .data.endpoint }}</div>
+  {{ $industries := index .data.industries site.Language.Lang }}
+  <div>industries: {{ $industries }}</div>
+  <div>jurisdictions: <ul>{{ range .data.jurisdictions }}<li>{{ . }}</li>{{ end }}</ul></div>
+  <div>languages: <ul>{{ range .data.languages }}<li>{{ . }}</li>{{ end }}</ul></div>
+  <div>stats: <ul><li>documents: {{ .data.stats.documents }}</li><li>documents: {{ .data.stats.services }}</li></ul></div>
+</div>
+
