@@ -1,5 +1,6 @@
 ---
 layout: "datasets"
+slug: /jeux-de-donnees/
 title: "Jeux de données"
 html_description: "Télécharger des jeux de données de conditions d'utilisation"
 ---
