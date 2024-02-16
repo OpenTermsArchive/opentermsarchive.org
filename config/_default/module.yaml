@@ -1,0 +1,3 @@
+mounts:
+  - source: data/collections.json
+    target: static/collections.json
