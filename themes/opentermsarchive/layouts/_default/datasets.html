@@ -1,0 +1,6 @@
+{{ define "main" }}
+  {{ .Content }}
+  {{ partial "collections.html" . }}
+  <hr />
+  {{ partial "related-datasets.html" . }}
+{{ end }}
