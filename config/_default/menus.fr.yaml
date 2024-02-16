@@ -8,3 +8,6 @@ header:
   - name: Impact
     pageRef: /impact
     weight: 3
+  - name: Jeux de données
+    pageRef: /datasets
+    weight: 4
