@@ -18,3 +18,6 @@ footer:
   - name: Mentions légales
     pageRef: /legal-notice
     weight: 2
+  - name: "Accessibilité : non conforme"
+    pageRef: /accessibility
+    weight: 3
