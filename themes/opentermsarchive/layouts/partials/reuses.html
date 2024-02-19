@@ -1,4 +1,6 @@
 <div class="reuses" id="reuses">
+  {{ with .Params.reuses.title }}<h2>{{ . }}</h2>{{ end }}
+  {{ with .Params.reuses.subtitle }}<h3>{{ . }}</h3>{{ end }}
   {{/*
     As Hugo removes the first level keys when sorting the reuses map,
     we recreate a temporary reuses collection which stores the filename,
