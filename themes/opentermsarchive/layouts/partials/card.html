@@ -1,5 +1,7 @@
 <hr />
 <div>
+  {{ $image := resources.Get (printf "/images/collections/%s.png" (.name | urlize)) }}
+  <div><img src="{{ $image.RelPermalink }}" alt="" /></div>
   <div>name: {{ .name }}</div>
   <div>id: {{ .data.id }}</div>
   <div>endpoint: {{ .data.endpoint }}</div>
