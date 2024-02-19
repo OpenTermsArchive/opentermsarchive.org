@@ -14,3 +14,7 @@ header:
 footer:
   - name: Politique de confidentialité
     pageRef: /privacy-policy
+    weight: 1
+  - name: Mentions légales
+    pageRef: /legal-notice
+    weight: 2

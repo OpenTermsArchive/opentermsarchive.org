@@ -14,3 +14,7 @@ header:
 footer:
   - name: Privacy policy
     pageRef: /privacy-policy
+    weight: 1
+  - name: Legal notice
+    pageRef: /legal-notice
+    weight: 2
