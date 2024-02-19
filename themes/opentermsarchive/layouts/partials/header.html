@@ -8,4 +8,11 @@
       {{ end }}
     </ul>
   </nav>
+  <nav>
+    {{ if .IsTranslated }}
+      {{ range .Translations }}
+        <a  href="{{ .Permalink }}">{{ .Language.Lang | upper }}</a>
+      {{ end }}
+    {{ end }}
+  </nav>
 </header>
