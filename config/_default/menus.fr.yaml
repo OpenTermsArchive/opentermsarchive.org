@@ -11,3 +11,6 @@ header:
   - name: Jeux de données
     pageRef: /datasets
     weight: 4
+footer:
+  - name: Politique de confidentialité
+    pageRef: /privacy-policy

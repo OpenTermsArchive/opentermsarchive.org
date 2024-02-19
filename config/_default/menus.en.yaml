@@ -11,3 +11,6 @@ header:
   - name: Datasets
     pageRef: /datasets
     weight: 4
+footer:
+  - name: Privacy policy
+    pageRef: /privacy-policy
