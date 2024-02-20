@@ -1,0 +1,15 @@
+<div class="container container__isDark container__hasNoPaddingY" id="mission-statement">
+  <div class="container container__1211 container__flex container__hasNoPaddingX container__hasNoPaddingY">
+    <div class="hero {{ with .class }}{{ . }}{{ end }}">
+      {{ with .title }}<h1 class="hero_title">{{ . }}</h1>{{ end }}
+      {{ with .subtitle }}
+        <h2 class="hero_subtitle h2__thin">
+          {{ . }}
+          {{ with $.link }}
+            {{ . | markdownify }}
+          {{ end }}
+        </h2>
+      {{ end }}
+    </div>
+  </div>
+</div>
