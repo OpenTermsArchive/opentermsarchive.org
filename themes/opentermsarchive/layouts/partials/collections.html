@@ -3,4 +3,5 @@
   {{ range $name, $data := site.Data.collections }}
     {{ partial "card.html" (dict "name" $name "data" $data) }}
   {{ end }}
+  {{ partial "new-collection.html" . }}
 </div>
