@@ -1,0 +1,31 @@
+<div class="container container__wide container__hasNoPaddingY container__isDark" id="follow-us">
+  <div class="container container__98 container__flex">
+    <div class="column column__40 column__alignXcenter column__alignYcenter">
+      <div class="column_header"></div>
+      <div class="column_desc">
+        <i class="icon icon_mastodon" size="128" color="var(--colorBlack400)" strokeWidth="1px"></i>
+        <i class="icon icon_twitter" size="128" color="var(--colorBlack400)" strokeWidth="1px"></i>
+      </div>
+    </div>
+    <div class="column column__60">
+      <div class="column_header">
+        <h2 class="column_title">{{ i18n "follow_us.title" }}</h2>
+      </div>
+      <p class="mt__M mb__L">{{ i18n "follow_us.subtitle" }}</p>
+      <div class="container container__fluid container__flex container__hasNoPaddingX container__hasNoPaddingY">
+        <a href="{{ site.Params.mastodon.url }}" target="_blank" rel="noopener">
+          <button>
+            <i class="icon icon_mastodon"strokeWidth="1px"></i>
+            <span class="ml__XS">{{ i18n "follow_us.mastodon" }}</span>
+          </button>
+        </a>
+        <a href="{{ site.Params.twitter.url }}" target="_blank" rel="noopener">
+          <button class="button button__secondary">
+            <i class="icon icon_twitter" strokeWidth="1px"></i>
+            <span class="ml__XS">{{ i18n "follow_us.twitter" }}</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

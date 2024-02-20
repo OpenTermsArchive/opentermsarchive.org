@@ -4,6 +4,7 @@
     {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "subtitle" .Params.hero.subtitle "link" .Params.hero.link "class" "hero__hasNoMarginBottom") }}
     {{ partial "distinctions.html" . }}
     {{ partial "collections.html" . }}
+    {{ partial "follow-us.html" . }}
     {{ partial "reuses.html" . }}
   </div>
 {{ end }}
