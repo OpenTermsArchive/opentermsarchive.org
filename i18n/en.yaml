@@ -52,3 +52,10 @@ foss:
   title: Contributive Digital Common
   subtitle: Open Terms Archive is free and open source software. Any entity can reuse and build upon it, as long as it shares its improvements with the community. The product is built collaboratively by all those who use and contribute to it.
   link: About the project
+product_newsletter:
+  title: Follow the evolutions of Open Terms Archive
+  subtitle: No terms changes, only news about the product and its partners! Two emails a month at most, often less than that.
+  form:
+    action: https://98bb6346.sibforms.com/serve/MUIEABuvRacGvFG5qloccLUI_5pWT2w-cVI7L5RogU08EvZ_-d1aTmfUQd-XrwdNYa4MSZbn09Yq-px0kkqKuzbQRjJs9KIzYPwHEbs-3YCnczbaQq4hQthHw0hKh2BcajLr98vsJni7IzUuQRjz1rb6vemMlGn1-raTiNiDxy5Ujm69CxV_wjMFTr4BiSiSAUBiLpOA0Vv3zYcG
+    email_placeholder: your@email.eu
+    button: Subscribe
