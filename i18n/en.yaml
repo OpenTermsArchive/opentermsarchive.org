@@ -48,3 +48,7 @@ follow_us:
   mastodon: On Mastodon
   title: "Follow #TermsSpotting"
   subtitle: "Found some interesting changes? Share them with #TermsSpotting! Follow us for such finds and for news from Open Terms Archive and its ecosystem."
+foss:
+  title: Contributive Digital Common
+  subtitle: Open Terms Archive is free and open source software. Any entity can reuse and build upon it, as long as it shares its improvements with the community. The product is built collaboratively by all those who use and contribute to it.
+  link: About the project
