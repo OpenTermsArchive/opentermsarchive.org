@@ -1,6 +1,9 @@
 {{ define "main" }}
   {{ .Content }}
-  <div>    
+  <div>
+    <hr/>
+    {{ partial "distinctions.html" . }}
+    <hr/>
     {{ partial "collections.html" . }}
     {{ partial "reuses.html" . }}
   </div>

@@ -1,0 +1,6 @@
+<div>
+  {{ range $name, $data := site.Data.distinctions }}
+    {{ $image := resources.Get (printf "/images/distinctions/%s.png" ($name | urlize)) }}
+    <li><img src="{{ $image.RelPermalink }}" alt="" /><br/>{{ $name }}<br/>link : <a href="{{ $data.link }}" target="_blank" rel="noopener">{{ $data.link }}</a><br />description : {{ index $data.description site.Language.Lang | safeHTML }}</li>
+  {{ end }}
+</div>
