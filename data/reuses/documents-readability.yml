@@ -1,0 +1,11 @@
+title:
+  en: Documents Readability
+  fr: Lisibilité des documents
+author:
+  en: Office of the French Ambassador for Digital Affairs
+  fr: Équipe de l'Ambassadeur français pour le numérique
+description:
+  en: Computes the readability and necessary education level to understand a contractual document.
+  fr: Calcule la lisibilité et le niveau d'études nécessaires pour comprendre un document contractuel.
+website: https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments
+weight: 4
