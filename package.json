@@ -17,7 +17,7 @@
     "test": "npm run lint:markdown && npm run test:links",
     "pretest:links": "npm run build",
     "test:links": "linkinator ./public --recurse --verbosity error",
-    "start:dev": "hugo serve --watch --logLevel debug --disableFastRender",
+    "start:dev": "hugo serve --watch --logLevel debug --disableFastRender --printI18nWarnings",
     "lint:markdown": "markdownlint *.md content/**/*.md"
   },
   "devDependencies": {
