@@ -7,3 +7,14 @@ media:
     light_background: Pour fond clair
     cta_png: Télécharger en PNG
     cta_svg: ou en SVG
+budget:
+  expenditures:
+    title: Dépenses cumulées
+    table:
+      col1: Date
+      col2: Total cumulé en €
+  funding_sources:
+    title: Sources de financement
+    table:
+      col1: Source
+      col2: en €
