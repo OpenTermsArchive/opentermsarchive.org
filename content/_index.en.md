@@ -9,7 +9,3 @@ reuses:
   title: Built with Open Terms Archive
   subtitle: Tools created by the community to shift the power balance from big tech towards end users.
 ---
-
-Welcome to the Open Terms Archive website!
-
-[Version française]({{< relref path="/" lang="fr" >}}).
