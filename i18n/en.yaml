@@ -7,3 +7,14 @@ media:
     light_background: For light background
     cta_png: Download in PNG
     cta_svg: or in SVG
+budget:
+  expenditures:
+    title: Total expenditures
+    table:
+      col1: Date
+      col2: Cumulative total in €
+  funding_sources:
+    title: Funding sources
+    table:
+      col1: Source
+      col2: in €
