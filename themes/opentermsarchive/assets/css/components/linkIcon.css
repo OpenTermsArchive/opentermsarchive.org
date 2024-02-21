@@ -1,0 +1,41 @@
+.linkIcon {
+  display: inline-flex;
+  align-items: flex-start;
+
+  & svg {
+    margin-top: var(--m2XS);
+    transition: stroke 0.3s easeOutCirc;
+  }
+
+  &:hover {
+    & .linkIcon_content {
+      transition: transform 0.3s easeOutCirc;
+    }
+
+    & svg {
+      transition: stroke 0.3s easeOutCirc;
+      stroke: var(--colorSecondary);
+    }
+  }
+
+  &.linkIcon__isSmall {
+    font-size: 1.4rem;
+    &:hover {
+      & .linkIcon_content {
+        transform: translateX(2px);
+      }
+    }
+  }
+
+  &.linkIcon__isLeft {
+    & svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.linkIcon_content {
+  transition: all 0.1s easeInCirc;
+  margin-left: var(--m2XS);
+  text-align: left;
+}

@@ -1,0 +1,157 @@
+.container {
+  margin: 0 auto;
+  padding-top: var(--p4XL);
+  padding-bottom: var(--p4XL);
+
+  &.container__1211 {
+    @mixin grid 12, 11;
+  }
+
+  &.container__1110 {
+    @mixin grid 11, 10;
+  }
+
+  &.container__1011 {
+    @mixin grid 10, 11;
+  }
+
+  &.container__109 {
+    @mixin grid 10, 9;
+  }
+
+  &.container__98 {
+    @mixin grid 9, 8;
+  }
+
+  &.container__87 {
+    @mixin grid 8, 7;
+  }
+
+  &.container__76 {
+    @mixin grid 7, 6;
+  }
+
+  &.container__65 {
+    @mixin grid 6, 5;
+  }
+
+  &.container__54 {
+    @mixin grid 5, 4;
+  }
+
+  &.container__43 {
+    @mixin grid 4, 3;
+  }
+
+  &.container__32 {
+    @mixin grid 3, 2;
+  }
+
+  &.container__21 {
+    @mixin grid 2, 1;
+  }
+
+  &.container__flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--mM);
+
+    @media (--tabletSmall) {
+      flex-direction: column;
+    }
+  }
+
+  &.container__fluid {
+    padding-left: var(--pL);
+    padding-right: var(--pL);
+    max-width: 100%;
+  }
+
+  &.container__wide {
+    max-width: var(--desktopWide);
+    margin: 0 auto;
+  }
+
+  &.container__hasBgImage {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &.container__isDark {
+    background-color: var(--colorBlack900);
+    color: var(--colorWhite);
+
+    & h1,
+    & h2,
+    & h3,
+    & .text__subtitle {
+      color: var(--colorWhite);
+    }
+  }
+
+  &.container__isGray {
+    background-color: var(--colorBlack200);
+
+    & blockquote {
+      &:before {
+        color: var(--colorWhite);
+      }
+    }
+  }
+
+  &.container__hasNoPaddingX {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.container__hasNoPaddingLeft {
+    padding-left: 0;
+  }
+
+  &.container__hasNoPaddingRight {
+    padding-right: 0;
+  }
+
+  &.container__hasNoPaddingY {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &.container__hasNoPaddingTop {
+    padding-top: 0;
+  }
+
+  &.container__hasNoPaddingBottom {
+    padding-bottom: 0;
+  }
+
+  &.container__hasPaddingYSmall {
+    padding-top: var(--pL);
+    padding-bottom: var(--pL);
+  }
+
+  &.container__alignXleft {
+    margin-left: 0;
+  }
+}
+
+@media (--gridPlus) {
+  .container {
+    padding-left: var(--pL);
+    padding-right: var(--pL);
+  }
+}
+
+@media (--tabletSmall) {
+  .container {
+    padding-top: var(--p3XL);
+    padding-bottom: var(--p2XL);
+
+    &.container__hasPaddingYSmall {
+      padding-top: var(--pXL);
+      padding-bottom: var(--pM);
+    }
+  }
+}

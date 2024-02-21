@@ -1,0 +1,14 @@
+.icon_circle {
+  background-color: var(--colorBlack400);
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &.icon_circle__medium {
+    height: 24px;
+    width: 24px;
+  }
+}

@@ -1,0 +1,133 @@
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: var(--pL);
+  padding-bottom: var(--pL);
+  position: relative;
+
+  &.header__isOpen {
+    & .header_menus {
+      transition: 0.5s all easeOutCirc;
+      transform: translateX(0);
+    }
+
+    & .header_openLink {
+      display: none;
+    }
+
+    & .header_closeLink {
+      display: inline-flex;
+    }
+  }
+}
+
+.header {
+}
+
+@media (--gridPlus) {
+  .header {
+    padding-left: var(--pL);
+    padding-right: var(--pL);
+  }
+}
+
+.header_logo {
+  line-height: 0;
+}
+
+.header_menus {
+  flex-grow: 1;
+  display: flex;
+
+  & nav {
+    &:first-child {
+      flex-grow: 1;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+}
+
+@media (--tabletLarge) {
+  .header_menus {
+    transition: 0.3s all easeOutExpo;
+    transform: translateX(100%);
+    background-color: var(--colorSecondary);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    & nav {
+      width: 100%;
+
+      &:first-child {
+        align-items: flex-end;
+      }
+
+      &:first-child,
+      &:last-child {
+        flex-grow: 1;
+        justify-content: center;
+
+        & ul {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      &:last-child {
+        margin-top: auto;
+        margin-bottom: var(--mXL);
+        flex-direction: column;
+
+        & div {
+          margin-bottom: var(--mL);
+        }
+      }
+    }
+  }
+}
+
+.header_openLink {
+  @mixin resetButton;
+  color: var(--colorPrimary);
+  display: none;
+  font-size: 1.4rem;
+  position: absolute;
+  padding: var(--pS);
+  top: var(--mL);
+  right: var(--mL);
+}
+
+@media (--tabletLarge) {
+  .header_openLink {
+    display: inline-flex;
+  }
+}
+
+.header_closeLink {
+  @mixin resetButton;
+  position: fixed;
+  display: none;
+  color: var(--colorWhite);
+  font-size: 1.4rem;
+  padding: var(--pS);
+  top: var(--mL);
+  right: var(--mL);
+  align-items: center;
+  z-index: 1;
+
+  & svg {
+    margin-left: var(--m2XS);
+  }
+}

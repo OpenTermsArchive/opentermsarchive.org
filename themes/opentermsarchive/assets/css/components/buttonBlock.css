@@ -1,0 +1,74 @@
+.buttonBlock {
+  border: 1px solid var(--colorBlack200);
+  @mixin grid 3, 3;
+  text-align: center;
+  padding: var(--p2XL) var(--pM) var(--pXL) var(--pM);
+  position: relative;
+  flex-shrink: 0;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+
+  &.buttonBlock__fillParent {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &.buttonBlock__isDark {
+    background-color: var(--colorBlack900);
+    border: 1px solid var(--colorBlack900);
+    color: var(--colorWhite);
+
+    & h3 {
+      color: var(--colorWhite);
+    }
+
+    & a:hover {
+      color: var(--colorWhite);
+    }
+  }
+
+  &.buttonBlock__isWhite {
+    border: 1px solid var(--colorWhite);
+    background-color: var(--colorWhite);
+  }
+}
+
+.buttonBlock_icon {
+  position: absolute;
+  background-color: var(--colorWhite);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--colorBlack200);
+
+  & svg {
+    margin: 0 auto;
+  }
+}
+
+.buttonBlock_title {
+  & + .buttonBlock_desc {
+    margin-top: var(--mXS);
+  }
+}
+
+.buttonBlock_desc {
+}
+
+.buttonBlock_actions {
+  margin-top: auto;
+  padding-top: var(--pM);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & a:not(:first-child) {
+    margin-top: var(--m2XS);
+  }
+}

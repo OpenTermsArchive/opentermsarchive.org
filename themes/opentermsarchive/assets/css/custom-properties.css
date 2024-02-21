@@ -1,0 +1,61 @@
+/**
+* Custom properties
+**/
+:root {
+  /* Fonts */
+  --defaultFontSize: 1.6rem;
+  --defaultFontFamily: 'Inter';
+
+  /* Grid */
+  --gridColsNumber: 12;
+  --gridColWidth: 76px;
+  --gridGuttersNumber: 11;
+  --gridGutterWidth: 24px;
+
+  /* Colors */
+  --colorPrimary: #0496ff;
+  --colorSecondary: #0b08a0;
+  --colorTertiary: #f9dd3f;
+  --colorDarkedSecondary: #b4656f;
+  --colorError: #ec368d;
+  --colorSuccess: #11ebc3;
+  --colorBlack900: #010613;
+  --colorBlack800: #333333;
+  --colorBlack600: #5e5e5e;
+  --colorBlack400: #999999;
+  --colorBlack300: #d6d6d6;
+  --colorBlack200: #f5f5f5;
+  --colorWhite: #fefffd;
+
+  /* Padding & margin */
+  --p3XS: 2px;
+  --p2XS: 4px;
+  --pXS: 8px;
+  --pS: 12px;
+  --pM: 16px;
+  --pL: 24px;
+  --pXL: 36px;
+  --p2XL: 48px;
+  --p3XL: 64px;
+  --p4XL: 96px;
+
+  --m3XS: 2px;
+  --m2XS: 4px;
+  --mXS: 8px;
+  --mS: 12px;
+  --mM: 16px;
+  --mL: 24px;
+  --mXL: 36px;
+  --m2XL: 48px;
+  --m3XL: 64px;
+  --m4XL: 96px;
+
+  /* Breakpoints */
+  --bpMobileSmall: 320px;
+  --bpMobileLarge: 480px;
+  --bpMobileExtraLarge: 620px;
+  --bpTabletSmall: 768px;
+  --bpTabletLarge: 1024px;
+  --bpGridPlus: 1196px;
+  --bpDesktopWide: 1440px;
+}

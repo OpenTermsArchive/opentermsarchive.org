@@ -1,0 +1,51 @@
+/* Reset */
+@import "node_modules/minireset.css/minireset.css";
+
+/* Mixins */
+@import "themes/opentermsarchive/assets/css/mixins.css";
+
+/* Custom media queries and custom properties */
+@import "themes/opentermsarchive/assets/css/custom-properties.css";
+@import "themes/opentermsarchive/assets/css/custom-media-queries.css";
+
+/* Base */
+@import "themes/opentermsarchive/assets/css/base.css";
+
+/* Import elements styles */
+@import 'themes/opentermsarchive/assets/css/elements/blockquote.css';
+@import 'themes/opentermsarchive/assets/css/elements/code.css';
+@import 'themes/opentermsarchive/assets/css/elements/fonts.css';
+@import 'themes/opentermsarchive/assets/css/elements/form.css';
+@import 'themes/opentermsarchive/assets/css/elements/icons.css';
+@import 'themes/opentermsarchive/assets/css/elements/inline.css';
+@import 'themes/opentermsarchive/assets/css/elements/links.css';
+@import 'themes/opentermsarchive/assets/css/elements/table.css';
+@import 'themes/opentermsarchive/assets/css/elements/titles.css';
+@import 'themes/opentermsarchive/assets/css/elements/utility.css';
+
+/* Components */
+@import "themes/opentermsarchive/assets/css/components/article.css";
+@import "themes/opentermsarchive/assets/css/components/aside.css";
+@import "themes/opentermsarchive/assets/css/components/button.css";
+@import "themes/opentermsarchive/assets/css/components/buttonBlock.css";
+@import "themes/opentermsarchive/assets/css/components/buttonBlockList.css";
+@import "themes/opentermsarchive/assets/css/components/card.css";
+@import "themes/opentermsarchive/assets/css/components/cardList.css";
+@import "themes/opentermsarchive/assets/css/components/cardTable.css";
+@import "themes/opentermsarchive/assets/css/components/cardTableItem.css";
+@import "themes/opentermsarchive/assets/css/components/column.css";
+@import "themes/opentermsarchive/assets/css/components/container.css";
+@import "themes/opentermsarchive/assets/css/components/distinctions.css";
+@import "themes/opentermsarchive/assets/css/components/divider.css";
+@import "themes/opentermsarchive/assets/css/components/featureItem.css";
+@import "themes/opentermsarchive/assets/css/components/featureList.css";
+@import "themes/opentermsarchive/assets/css/components/footer.css";
+@import "themes/opentermsarchive/assets/css/components/footerMenu.css";
+@import "themes/opentermsarchive/assets/css/components/header.css";
+@import "themes/opentermsarchive/assets/css/components/headerMenu.css";
+@import "themes/opentermsarchive/assets/css/components/hero.css";
+@import "themes/opentermsarchive/assets/css/components/linkIcon.css";
+@import "themes/opentermsarchive/assets/css/components/logo.css";
+@import "themes/opentermsarchive/assets/css/components/textContent.css";
+@import "themes/opentermsarchive/assets/css/components/thumbGallery.css";
+@import "themes/opentermsarchive/assets/css/components/thumbGalleryItem.css";

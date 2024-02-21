@@ -1,0 +1,36 @@
+.buttonBlockList {
+}
+
+.buttonBlockList_header {
+  text-align: center;
+  @mixin grid 9, 8;
+  margin: 0 auto;
+}
+
+.buttonBlockList_subtitle {
+}
+
+.buttonBlockList_title {
+}
+
+.buttonBlockList_items {
+  @mixin grid 12, 11;
+  margin: 0 auto;
+  margin-top: var(--m4XL);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  & > div {
+    margin-top: 0;
+    margin-bottom: var(--m2XL);
+    margin-left: var(--gridGutterWidth);
+    margin-right: var(--gridGutterWidth);
+  }
+}
+
+@media (--tabletSmall) {
+  .buttonBlockList_items {
+    margin-top: var(--m3XL);
+  }
+}

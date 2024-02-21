@@ -1,0 +1,18 @@
+blockquote {
+  padding-left: var(--p2XL);
+  position: relative;
+
+  &:before {
+    left: 0;
+    top: -4rem;
+  }
+
+  &:before {
+    font-weight: bold;
+    color: var(--colorBlack200);
+    font-size: 10rem;
+    content: '“';
+    position: absolute;
+    transform: rotate(-5deg);
+  }
+}
