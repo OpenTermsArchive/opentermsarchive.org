@@ -20,9 +20,9 @@
   --colorError: #ec368d;
   --colorSuccess: #11ebc3;
   --colorBlack900: #010613;
-  --colorBlack800: #333333;
+  --colorBlack800: #333;
   --colorBlack600: #5e5e5e;
-  --colorBlack400: #999999;
+  --colorBlack400: #999;
   --colorBlack300: #d6d6d6;
   --colorBlack200: #f5f5f5;
   --colorWhite: #fefffd;
@@ -38,7 +38,6 @@
   --p2XL: 48px;
   --p3XL: 64px;
   --p4XL: 96px;
-
   --m3XS: 2px;
   --m2XS: 4px;
   --mXS: 8px;

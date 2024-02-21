@@ -9,7 +9,7 @@
 
 /* Read https://stackoverflow.com/questions/18744164/flex-box-align-last-row-to-grid */
 @define-mixin gridAutoFillSpace {
-  &:after {
+  &::after {
     content: '';
     flex: auto;
   }
