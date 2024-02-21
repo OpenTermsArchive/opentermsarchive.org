@@ -19,7 +19,7 @@ Cette déclaration d’accessibilité s’applique à **Open Terms Archive** (ht
 Si vous n’arrivez pas à accéder à un contenu ou à un service, vous pouvez contacter le responsable de Open Terms Archive pour être orienté vers une alternative accessible ou obtenir le contenu sous une autre forme.
 
 - E-mail : [{{< param "contact_email" >}}](mailto:{{< param "contact_email" >}})
-- Mastodon : [@opentermsarchive@mastodon.lescommuns.org]({{< param "mastodon" >}})
+- Mastodon : [{{< param "mastodon.username" >}}]({{< param "mastodon.url" >}})
 
 Nous essayons de répondre dans les 2 jours ouvrés.
 

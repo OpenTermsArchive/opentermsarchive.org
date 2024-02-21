@@ -18,7 +18,7 @@ This accessibility statement applies to **Open Terms Archive** (https://openterm
 If you are unable to access a content or service, you can contact the Open Terms Archive manager to be directed to an accessible alternative or to obtain the content in another form.
 
 - E-mail: [{{< param "contact_email" >}}](mailto:{{< param "contact_email" >}})
-- Mastodon: [@opentermsarchive@mastodon.lescommuns.org]({{< param "mastodon" >}})
+- Mastodon: [{{< param "mastodon.username" >}}]({{< param "mastodon.url" >}})
 
 We try to respond within 2 business days.
 
