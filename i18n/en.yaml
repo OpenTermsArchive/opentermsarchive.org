@@ -59,3 +59,17 @@ product_newsletter:
     action: https://98bb6346.sibforms.com/serve/MUIEABuvRacGvFG5qloccLUI_5pWT2w-cVI7L5RogU08EvZ_-d1aTmfUQd-XrwdNYa4MSZbn09Yq-px0kkqKuzbQRjJs9KIzYPwHEbs-3YCnczbaQq4hQthHw0hKh2BcajLr98vsJni7IzUuQRjz1rb6vemMlGn1-raTiNiDxy5Ujm69CxV_wjMFTr4BiSiSAUBiLpOA0Vv3zYcG
     email_placeholder: your@email.eu
     button: Subscribe
+how_it_works:
+  title: How it works
+  step1:
+    title: 1. Targeting
+    subtitle: The terms of use of a service are targeted by contributors.
+  step2:
+    title: 2. Tracking
+    subtitle: Several times a day, our robots download and publicly archive the targeted documents.
+  step3:
+    title: 3. Analysing
+    subtitle: When changes are spotted, they are recorded and exposed for human analysts.
+  step4:
+    title: 4. Disseminating
+    subtitle: We publish all versions in datasets enabling reuse and research.

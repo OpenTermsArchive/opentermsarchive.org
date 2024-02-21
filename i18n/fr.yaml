@@ -59,3 +59,17 @@ product_newsletter:
     action: https://98bb6346.sibforms.com/serve/MUIEAMjUWLVIdeiQhwdN4AJo1SB8QMtDFKbp-JIARujMmZ9_feY8x0U6V84om-RPrHKu22mPwcozi9kjLI8gP1bMWgqFwsmw_7Y5rDuFHMGEGz5JqMhgYzcFoO78g8zvArqGLojk4L_6mm4cz3y9c3LkVMrrgs32BFinj1yIBdN5knTmlmbhsOYc2OhwVLFRkRTYg2luE4LwWHyV
     email_placeholder: votre@adresse.eu
     button: S’inscrire
+how_it_works:
+  title: Fonctionnement
+  step1:
+    title: 1. Ciblage
+    subtitle: Plusieurs fois par jour, nos robots téléchargent et archivent publiquement les documents ciblés.
+  step2:
+    title: 2. Suivi
+    subtitle: Plusieurs fois par jour, nos robots téléchargent et archivent publiquement les documents ciblés.
+  step3:
+    title: 3. Analyse
+    subtitle: Lorsque des modifications sont repérées, elles sont enregistrées et exposées pour analyse humaine.
+  step4:
+    title: 4. Diffusion
+    subtitle: Nous publions toutes les versions dans des jeux de données pour soutenir leur réutilisation et la recherche.
