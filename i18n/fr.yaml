@@ -43,3 +43,33 @@ about:
   contributors:
     title: Contributeurs
     subtitle: Offrent du temps bénévole pour améliorer le logiciel, les données, la documentation, la visibilité ou toute autre forme d'action qui contribue au [modèle d'impact]({{ .impactLink }}) d'Open Terms Archive.
+follow_us:
+  twitter: Sur Twitter
+  mastodon: Sur Mastodon
+  title: "Suivez #TermsSpotting"
+  subtitle: "Vous avez trouvé des changements intéressants ? Partagez-les avec #TermsSpotting ! Suivez-nous pour en lire et pour avoir des nouvelles d''Open Terms Archive et de son écosystème."
+foss:
+  title: Commun contributif
+  subtitle: Open Terms Archive est un logiciel libre et ouvert. Toute personne peut le réutiliser et le modifier librement, tant qu’elle partage ses améliorations avec la communauté. Le produit est construit collaborativement par toutes les entités qui l’utilisent et y contribuent.
+  link: À propos du projet
+product_newsletter:
+  title: Suivez les évolutions d’Open Terms Archive
+  subtitle: Pas de changements de conditions, juste des nouveautés sur le produit et ses partenaires ! Au maximum deux envois par mois, souvent moins.
+  form:
+    action: https://98bb6346.sibforms.com/serve/MUIEAMjUWLVIdeiQhwdN4AJo1SB8QMtDFKbp-JIARujMmZ9_feY8x0U6V84om-RPrHKu22mPwcozi9kjLI8gP1bMWgqFwsmw_7Y5rDuFHMGEGz5JqMhgYzcFoO78g8zvArqGLojk4L_6mm4cz3y9c3LkVMrrgs32BFinj1yIBdN5knTmlmbhsOYc2OhwVLFRkRTYg2luE4LwWHyV
+    email_placeholder: votre@adresse.eu
+    button: S’inscrire
+how_it_works:
+  title: Fonctionnement
+  step1:
+    title: 1. Ciblage
+    subtitle: Plusieurs fois par jour, nos robots téléchargent et archivent publiquement les documents ciblés.
+  step2:
+    title: 2. Suivi
+    subtitle: Plusieurs fois par jour, nos robots téléchargent et archivent publiquement les documents ciblés.
+  step3:
+    title: 3. Analyse
+    subtitle: Lorsque des modifications sont repérées, elles sont enregistrées et exposées pour analyse humaine.
+  step4:
+    title: 4. Diffusion
+    subtitle: Nous publions toutes les versions dans des jeux de données pour soutenir leur réutilisation et la recherche.

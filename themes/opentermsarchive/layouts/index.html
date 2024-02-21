@@ -1,10 +1,10 @@
 {{ define "main" }}
-  {{ .Content }}
-  <div>
-    <hr/>
-    {{ partial "distinctions.html" . }}
-    <hr/>
-    {{ partial "collections.html" . }}
-    {{ partial "reuses.html" . }}
-  </div>
+  {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "subtitle" .Params.hero.subtitle "link" .Params.hero.link "class" "hero__hasNoMarginBottom") }}
+  {{ partial "distinctions.html" . }}
+  {{ partial "collections.html" . }}
+  {{ partial "follow-us.html" . }}
+  {{ partial "how-it-works.html" . }}
+  {{ partial "reuses.html" . }}
+  {{ partial "product-newsletter.html" . }}
+  {{ partial "foss.html" . }}
 {{ end }}

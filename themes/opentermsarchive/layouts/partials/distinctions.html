@@ -1,6 +1,17 @@
-<div>
-  {{ range $name, $data := site.Data.distinctions }}
-    {{ $image := resources.Get (printf "/images/distinctions/%s.png" ($name | urlize)) }}
-    <li><img src="{{ $image.RelPermalink }}" alt="" /><br/>{{ $name }}<br/>link : <a href="{{ $data.link }}" target="_blank" rel="noopener">{{ $data.link }}</a><br />description : {{ index $data.description site.Language.Lang | safeHTML }}</li>
-  {{ end }}
+<div class="container container__wide container__isDark container__hasNoPaddingY" id="distinctions">
+  <div class="container container__1211 container__flex container__hasNoPaddingX container__hasNoPaddingTop">
+    <div class="distinctions">
+      {{ range $name, $data := site.Data.distinctions }}
+        {{ $image := resources.Get (printf "/images/distinctions/%s.png" ($name | urlize)) }}    
+        <a class="distinction" href="{{ $data.link }}" target="_blank" rel="noopener">
+          <div class="distinction_img">
+            <img src="{{ $image.RelPermalink }}" alt="" />
+          </div>
+          <div class="distinction_desc">
+            {{ index $data.description site.Language.Lang | safeHTML }}
+          </div>
+        </a>
+      {{ end }}
+    </div>
+  </div>
 </div>
