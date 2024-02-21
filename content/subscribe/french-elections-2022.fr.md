@@ -16,8 +16,8 @@ et YouTube. En vous abonnant, vous les recevrez directement dans votre boîte de
     <input type="email" id="EMAIL" name="EMAIL" autoComplete="off" placeholder="Email" data-required="true" required />
   </div>
   <div class="formfield formfield__alignRight">
-    <button class="button" form="sib-form" submit={true}>S'inscrire aux mémos</button>
-    <input type="checkbox" hidden={true} value="1" id="OPT_IN" name="OPT_IN" defaultChecked={true} required />
+    <button class="button" form="sib-form" type="submit">S'inscrire aux mémos</button>
+    <input type="checkbox" hidden value="1" id="OPT_IN" name="OPT_IN" checked required />
     <input type="hidden" name="locale" value="fr" />
   </div>
 </form>
