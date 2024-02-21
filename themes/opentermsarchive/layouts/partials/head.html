@@ -1,6 +1,6 @@
 <head>
-	<meta charset="utf-8" />
-	<title>Open Terms Archive - {{ .Title}}</title>
-	{{ with .Param "html_description"}}<meta name="description" content="{{ . }}" />{{ end }}
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8" />
+  <title>{{ with .Param "html_title" }}{{ . }}{{ else }}{{ .Title }}{{ end }}</title>
+  {{ with .Param "html_description"}}<meta name="description" content="{{ . }}" />{{ end }}
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 </head>
