@@ -15,6 +15,11 @@ no-inline-html:
     - abbr
     - i
     - a
+    - form
+    - div
+    - input
+    - button
+    - p
 
 no-duplicate-header: false
 
