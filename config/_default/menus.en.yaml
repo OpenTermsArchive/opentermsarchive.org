@@ -11,3 +11,13 @@ header:
   - name: Datasets
     pageRef: /datasets
     weight: 4
+footer:
+  - name: Privacy policy
+    pageRef: /privacy-policy
+    weight: 1
+  - name: Legal notice
+    pageRef: /legal-notice
+    weight: 2
+  - name: "Accessibility: not compliant"
+    pageRef: /accessibility
+    weight: 3

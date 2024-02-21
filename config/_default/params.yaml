@@ -1,1 +1,4 @@
 contact_email: contact@opentermsarchive.org
+mastodon: 
+  url: https://mastodon.lescommuns.org/@opentermsarchive
+  username: "@opentermsarchive@mastodon.lescommuns.org"

@@ -11,3 +11,13 @@ header:
   - name: Jeux de données
     pageRef: /datasets
     weight: 4
+footer:
+  - name: Politique de confidentialité
+    pageRef: /privacy-policy
+    weight: 1
+  - name: Mentions légales
+    pageRef: /legal-notice
+    weight: 2
+  - name: "Accessibilité : non conforme"
+    pageRef: /accessibility
+    weight: 3
