@@ -23,3 +23,23 @@ budget:
     table:
       col1: Source
       col2: in €
+about:
+  core:
+    title: Core Team
+    subtitle: Improve and maintain Open Terms Archive on a daily basis.
+  alumni:
+    title: Alumni
+    subtitle: Former Core Team members.
+  community_managers:
+    title: Community Managers
+    subtitle: Review contributions, engage contributors and animate the ecosystem.
+  incubator:
+    title: Incubator
+    subtitle: Provides legal hosting and political sponsorship.
+  funders:
+    title: Funders
+    subtitle: Compensate the time of the Core Team and pay for the technical infrastructure.
+    details: This project was in part [funded](https://nlnet.nl/project/TOSDR-OTA/) through the [NGI0 Entrust](https://nlnet.nl/entrust) Fund, a fund established by [NLnet](https://nlnet.nl/) with financial support from the European Commission's [Next Generation Internet](https://www.ngi.eu/) programme, under the aegis of DG Communications Networks, Content and Technology under grant agreement N°101069594.
+  contributors:
+    title: Contributors
+    subtitle: Volunteer time and effort to improve the software, data, documentation, outreach or any other form of action that serves Open\_Terms\_Archive’s [impact model]({{ .impactLink }}).

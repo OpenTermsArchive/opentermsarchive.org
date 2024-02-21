@@ -1,0 +1,18 @@
+{{ $thumbnailWidth := 64 }}
+{{ if .thumbnailWidth }}{{ $thumbnailWidth = .thumbnailWidth }}{{ end }}
+{{ $thumbnailHeight := 64 }}
+{{ if .thumbnailHeight }}{{ $thumbnailHeight = .thumbnailHeight }}{{ end }}
+<div class="contributors {{ with .class }}{{ . }}{{ end }}">
+  <div class="contributors_items">
+    {{ range $name, $link := (index site.Data.contributors .type) }}
+      <div class="contributor">
+        <a  class="contributor_link" href="{{ $link }}" target="_blank" rel="nofollow noopener">
+          {{ $imagePath := (printf "/images/contributors/%s.jpg" ($name | urlize)) }}
+          {{ $image := resources.Get $imagePath }}
+          <img class="contributor_image" src="{{ $image.RelPermalink }}" alt="{{ $name }}" width="{{ $thumbnailWidth }}" height="{{ $thumbnailHeight }}" />
+          {{ with $.showInfo }}<div class="contributor_info">{{ $name }}</div>{{ end }}
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</div>
