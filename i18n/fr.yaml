@@ -1,0 +1,9 @@
+media:
+  logo:
+    title: Logo
+    main_version: Version principale
+    alternative_version: Version alternative
+    dark_background: Pour fond sombre
+    light_background: Pour fond clair
+    cta_png: Télécharger en PNG
+    cta_svg: ou en SVG

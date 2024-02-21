@@ -21,3 +21,6 @@ footer:
   - name: "Accessibilité : non conforme"
     pageRef: /accessibility
     weight: 3
+  - name: Média
+    pageRef: /media
+    weight: 4
