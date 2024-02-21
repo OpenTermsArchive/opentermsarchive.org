@@ -14,11 +14,12 @@
   "author": "Open Terms Archive",
   "scripts": {
     "build": "hugo --minify",
-    "test": "npm run lint:markdown && npm run lint:js && npm run test:links",
+    "test": "npm run lint:markdown && npm run lint:css && npm run lint:js && npm run test:links",
     "pretest:links": "npm run build",
     "test:links": "linkinator ./public --recurse --verbosity error",
     "start:dev": "hugo serve --watch --logLevel debug --disableFastRender --printI18nWarnings",
     "lint:markdown": "markdownlint *.md content/**/*.md",
+    "lint:css": "stylelint \"themes/opentermsarchive/assets/css/*.css\"",
     "lint:js": "eslint themes/opentermsarchive/assets/js/"
   },
   "devDependencies": {

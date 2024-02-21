@@ -49,6 +49,20 @@ To apply automatic corrections use the following command:
 npm run lint:markdown -- --fix
 ```
 
+### Linting CSS files
+
+To lint the CSS files use the following command:
+
+```sh
+npm run lint:css
+```
+
+To apply automatic corrections use the following command:
+
+```sh
+npm run lint:css -- --fix
+```
+
 ### Linting JavaScript files
 
 To lint the JavaScript files use the following command:
