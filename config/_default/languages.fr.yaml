@@ -5,3 +5,4 @@ permalinks:
     case-studies: /etudes-de-cas/
   page:
     case-studies: /etudes-de-cas/:slug/
+    subscribe: /souscrire/:slug
