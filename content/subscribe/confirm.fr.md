@@ -2,6 +2,7 @@
 html_title: Confirmez votre abonnement
 html_description: Vous devriez recevoir un courriel avec un lien de confirmation.
 slug: /confirmation
+aliases: /fr/subscribe/confirm
 ---
 
 # Presque terminé !

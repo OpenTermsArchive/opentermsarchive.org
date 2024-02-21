@@ -1,6 +1,7 @@
 ---
 html_title: Thanks for subscribing!
 html_description: You are now subscribed.
+aliases: /en/subscribe/done
 ---
 
 # You are now subscribed!
