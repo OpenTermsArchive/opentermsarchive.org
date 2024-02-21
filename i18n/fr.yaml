@@ -1,3 +1,7 @@
+header:
+  menu:
+    open: Menu
+    close: Fermer
 new_reuse:
   title: Votre outil
   subtitle: Si vous souhaitez développer un outil basé sur Open Terms Archive, contactez-nous !

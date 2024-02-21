@@ -1,18 +1,83 @@
-<header>
-  <nav aria-label="Primary">
-    <ul>
-      {{ range .Site.Menus.header }}
-      <li>
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </nav>
-  <nav aria-label="Languages">
-    {{ if .IsTranslated }}
-    {{ range .Translations }}
-    <a href="{{ .Permalink }}">{{ .Language.Lang | upper }}</a>
-    {{ end }}
-    {{ end }}
-  </nav>
-</header>
+<div class="container container--has-no-padding-y container--has-no-padding-x container--fluid">
+  <div class="container container--1211 container--flex container--has-no-padding-x container--has-no-padding-y">
+    <header class="header">
+      <div class="header__logo">
+        <a href="{{ relref . "/" }}">
+          <div class="logo">
+            <svg>
+              <use href="#logo-main"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+      <div class="header__menus">
+        <nav class="header__menu header__menu__primary">
+          <ul>
+            {{ range .Site.Menus.header }}
+            <li>
+              <a href="{{ .URL }}">
+                {{ .Name }}
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </nav>
+        <nav class="header__menu header__menu__secondary">
+          <div class="language-switcher">
+            <button class="language-switcher--current">
+              {{ $currentLanguage := .Site.Language.Lang }}
+              {{ $currentLanguage | upper }}
+              <svg class="icon--arrow-down">
+                <use href="#arrowDown"></use>
+              </svg>
+            </button>
+            <div class="language-switcher__items">
+              {{/*
+              If we have translations of this page, we display links to them.
+              Else, we link to the home page of different languages available.
+              */}}
+              {{ if .IsTranslated }}
+              {{ range .Translations }}
+              <div class="language-switcher__item">
+                <a href="{{ .Permalink }}">{{ .Language.Lang | upper }}</a>
+              </div>
+              {{ end }}
+              {{ else }}
+              {{ range $.Site.Home.AllTranslations }}
+              {{ if ne $currentLanguage .Language.Lang }}
+              <div class="language-switcher__item">
+                <a href="{{ .RelPermalink }}">{{ .Language.Lang | upper }}</a>
+              </div>
+              {{ end }}
+              {{ end }}
+              {{ end }}
+            </div>
+          </div>
+          <ul>
+            <li>
+              <a class="icon--circle" target="_blank" rel="noopener" href="{{ .Param "twitter.url" }}">
+                <svg class="icon--twitter">
+                  <use href="#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a class="icon--circle" target="_blank" rel="noopener" href="{{ .Param "github.url" }}">
+                <svg class="icon--github">
+                  <use href="#github"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__open-link">{{ i18n "header.menu.open" }}</div>
+      <div class="header__close-link">
+        {{ i18n "header.menu.close" }}
+        <svg class="icon--close">
+          <use href="#close"></use>
+        </svg>
+      </div>
+    </header>
+  </div>
+</div>

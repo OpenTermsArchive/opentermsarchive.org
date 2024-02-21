@@ -4,3 +4,5 @@ mastodon:
   username: "@opentermsarchive@mastodon.lescommuns.org"
 twitter: 
   url: https://twitter.com/OpenTerms
+github:
+  url: https://github.com/OpenTermsArchive

@@ -2,15 +2,15 @@ header:
   - name: Home
     pageRef: /
     weight: 1
-  - name: Case studies
-    pageRef: /case-studies
+  - name: Datasets
+    pageRef: /datasets
     weight: 2
+  - name: Documentation
+    url: https://docs.opentermsarchive.org
+    weight: 3
   - name: Impact
     pageRef: /impact
     weight: 3
-  - name: Datasets
-    pageRef: /datasets
-    weight: 4
   - name: About
     pageRef: /about
     weight: 5

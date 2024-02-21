@@ -6,9 +6,48 @@
   height: 28px;
   background-color: var(--colorBlack400);
   border-radius: 50%;
+}
 
-  &.icon--circle-medium {
-    width: 24px;
-    height: 24px;
-  }
+.icon--circle-medium {
+  width: 24px;
+  height: 24px;
+}
+
+.icon--arrow-down{
+  width:1em;
+  height:1em;
+}
+
+.icon--close{
+  width:1em;
+  height:1em;
+}
+
+.icon--twitter{
+  width:1em;
+  height:1em;
+}
+
+.icon--mastodon{
+  width:1em;
+  height:1em;
+}
+
+.icon--github{
+  width:1em;
+  height:1em;
+}
+
+.icon--contact{
+  width:1em;
+  height:1em;
+}
+
+.icon--mail{
+  width:1em;
+  height:1em;
+}
+
+.icon--white{
+  fill:var(--colorWhite);
 }

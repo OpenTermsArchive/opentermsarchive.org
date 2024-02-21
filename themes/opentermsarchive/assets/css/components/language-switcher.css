@@ -1,0 +1,51 @@
+.language-switcher {
+  position: relative;
+  margin-right: var(--mXS);
+  font-size: 1.4rem;
+  text-align: right;
+}
+
+.language-switcher--current {
+  @mixin resetButton;
+
+  display: flex;
+  align-items: center;
+  padding: var(--pXS);
+  background-color: var(--colorWhite);
+  border: 1px solid var(--colorBlack200);
+  border-radius: 4px;
+
+  & > svg {
+    margin-left: var(--m2XS);
+  }
+}
+
+.language-switcher__items {
+  position: absolute;
+  right: 0;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  margin-top: -1px;
+  overflow: visible;
+  text-align: right;
+  background-color: var(--colorWhite);
+  border: 1px solid var(--colorBlack200);
+  border-radius: 4px;
+}
+
+.language-switcher__item {
+  width: 100%;
+  padding: var(--pXS);
+  white-space: nowrap;
+
+  &.language-switcher__item--is-active {
+    border: 1px solid red;
+  }
+}
+
+.language-switcher--is-open {
+  & .language-switcher__items {
+    display: block;
+  }
+}
