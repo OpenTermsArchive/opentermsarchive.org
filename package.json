@@ -31,6 +31,7 @@
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.0.1",
     "postcss-mixins": "^9.0.4",
-    "postcss-preset-env": "^9.4.0"
+    "postcss-preset-env": "^9.4.0",
+    "stylelint": "^16.2.1"
   }
 }
