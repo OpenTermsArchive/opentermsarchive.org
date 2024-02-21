@@ -1,0 +1,90 @@
+extends:
+  - airbnb-base
+parserOptions:
+  sourceType: module
+env:
+  browser: true
+  es6: true
+rules:
+  arrow-parens:
+    - error
+    - as-needed
+  array-bracket-spacing:
+    - error
+    - always
+    - objectsInArrays: false
+      arraysInArrays: false
+      singleValue: false
+  eqeqeq: 0
+  comma-dangle:
+    - error
+    - always-multiline
+  consistent-return: 0
+  function-paren-newline:
+    - error
+    - multiline
+  implicit-arrow-linebreak:
+    - 'off'
+  import/extensions:
+    - error
+    - always
+    - ignorePackages: true
+  import/prefer-default-export: 0
+  import/order:
+    - error
+    - newlines-between: always
+      alphabetize:
+        order: asc
+        caseInsensitive: true
+  import/namespace:
+    - error
+    - allowComputed: true
+  indent:
+    - error
+    - 2
+  max-len: 0
+  object-curly-newline:
+    - error
+    - multiline: true
+  no-console: 0
+  no-continue: 0
+  no-param-reassign: 0
+  no-plusplus: 0
+  no-restricted-syntax: 0
+  no-shadow: 0
+  no-tabs: 0
+  no-underscore-dangle: 0
+  no-unused-expressions: 0
+  no-unused-vars:
+    - error
+    - argsIgnorePattern: next
+  no-use-before-define: 0
+  padding-line-between-statements:
+    - error
+    - blankLine: always
+      prev: '*'
+      next: return
+    - blankLine: always
+      prev:
+        - const
+        - let
+        - var
+      next: '*'
+    - blankLine: any
+      prev:
+        - const
+        - let
+        - var
+      next:
+        - const
+        - let
+        - var
+  multiline-comment-style:
+    - error
+    - separate-lines
+  eol-last:
+    - error
+    - always
+  new-cap:
+    - error
+    - properties: false
