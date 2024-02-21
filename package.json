@@ -25,6 +25,7 @@
     "markdownlint-cli": "^0.39.0",
     "postcss": "^8.4.35",
     "postcss-cli": "^11.0.0",
-    "postcss-import": "^16.0.1"
+    "postcss-import": "^16.0.1",
+    "postcss-mixins": "^9.0.4"
   }
 }
