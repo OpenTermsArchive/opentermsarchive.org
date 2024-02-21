@@ -49,6 +49,20 @@ To apply automatic corrections use the following command:
 npm run lint:markdown -- --fix
 ```
 
+### Linting JavaScript files
+
+To lint the JavaScript files use the following command:
+
+```sh
+npm run lint:js
+```
+
+To automatically fix, where possible, problems reported:
+
+```sh
+npm run lint:js -- --fix
+```
+
 ### Testing
 
 Run the entire test set
