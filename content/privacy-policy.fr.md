@@ -29,6 +29,7 @@ Lorsque vous visitez ce site web, nous laissons un petit fichier texte (un “co
   width="100%"
   height="100px"
   src="https://stats.data.gouv.fr/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=f5f5f5&fontColor=333333&fontSize=16px&fontFamily="
+  title="Cookies opt-out"
 ></iframe>
 
 ### Pourquoi ce site web n’affiche-t-il pas une bannière de consentement pour les cookies ?

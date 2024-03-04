@@ -11,6 +11,9 @@
 /* Base */
 @import "themes/opentermsarchive/assets/css/base.css";
 
+/* Sprite */
+@import "themes/opentermsarchive/assets/css/sprite.css";
+
 /* Import elements styles */
 @import 'themes/opentermsarchive/assets/css/elements/blockquote.css';
 @import 'themes/opentermsarchive/assets/css/elements/code.css';
@@ -49,3 +52,4 @@
 @import "themes/opentermsarchive/assets/css/components/textContent.css";
 @import "themes/opentermsarchive/assets/css/components/thumbGallery.css";
 @import "themes/opentermsarchive/assets/css/components/thumbGalleryItem.css";
+@import "themes/opentermsarchive/assets/css/components/howItWorks.css";

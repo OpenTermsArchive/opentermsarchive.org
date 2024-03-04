@@ -12,15 +12,15 @@
       <div class="column_desc">
         <div class="textContent textContent__hasNoMarginTop">
           <p class="mt__M">{{ i18n "product_newsletter.subtitle" }}</p>
-            <form id="sib-form" method="POST" action={{ i18n "product_newsletter.form.action" }} data-type="subscription">
+            <form id="sib-form" method="POST" action="{{ i18n "product_newsletter.form.action" }}" data-type="subscription">
             <div class="formfield mb__L">
-              <input type="email" id="email" name="EMAIL" autoComplete="email" placeholder={{ i18n "product_newsletter.form.email_placeholder" }} required />
+              <input type="email" id="email" name="EMAIL" autoComplete="email" placeholder="{{ i18n "product_newsletter.form.email_placeholder" }}" required />
             </div>
             <div class="formfield formfield__alignRight">
-              <button class="button" form="sib-form" submit={true}>
+              <button class="button" form="sib-form" type="submit">
                 {{ i18n "product_newsletter.form.button" }}
               </button>
-              <input type="hidden" name="locale" value={{ site.Language.Lang }} />
+              <input type="hidden" name="locale" value="{{ site.Language.Lang }}" />
             </div>
           </form>
         </div>

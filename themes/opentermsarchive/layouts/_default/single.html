@@ -1,7 +1,6 @@
 {{ define "main" }}
-    <h1>{{ .Title }}</h1>
-    <div>
-      {{ .Content }}
-    </div>
-  </section>
+  {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+  <div>
+    {{ .Content }}
+  </div>
 {{ end }}

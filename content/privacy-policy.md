@@ -28,6 +28,7 @@ When you visit this website, we leave a small text file (a “cookie”) on your
   width="100%"
   height="100px"
   src="https://stats.data.gouv.fr/index.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=f5f5f5&fontColor=333333&fontSize=16px&fontFamily="
+  title="Cookies opt-out"
 ></iframe>
 
 ### Why doesn’t this website show a consent banner for cookies?

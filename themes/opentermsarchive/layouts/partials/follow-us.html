@@ -13,17 +13,13 @@
       </div>
       <p class="mt__M mb__L">{{ i18n "follow_us.subtitle" }}</p>
       <div class="container container__fluid container__flex container__hasNoPaddingX container__hasNoPaddingY">
-        <a href="{{ site.Params.mastodon.url }}" target="_blank" rel="noopener">
-          <button>
-            <i class="icon icon_mastodon"strokeWidth="1px"></i>
-            <span class="ml__XS">{{ i18n "follow_us.mastodon" }}</span>
-          </button>
+        <a href="{{ site.Params.mastodon.url }}" target="_blank" rel="noopener" class="button">
+          <i class="icon icon_mastodon"strokeWidth="1px"></i>
+          <span class="ml__XS">{{ i18n "follow_us.mastodon" }}</span>
         </a>
-        <a href="{{ site.Params.twitter.url }}" target="_blank" rel="noopener">
-          <button class="button button__secondary">
-            <i class="icon icon_twitter" strokeWidth="1px"></i>
-            <span class="ml__XS">{{ i18n "follow_us.twitter" }}</span>
-          </button>
+        <a href="{{ site.Params.twitter.url }}" target="_blank" rel="noopener" class="button button__secondary">
+          <i class="icon icon_twitter" strokeWidth="1px"></i>
+          <span class="ml__XS">{{ i18n "follow_us.twitter" }}</span>
         </a>
       </div>
     </div>

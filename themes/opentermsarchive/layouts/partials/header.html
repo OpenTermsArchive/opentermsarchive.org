@@ -1,5 +1,5 @@
 <header>
-  <nav>
+  <nav aria-label="Primary">
     <ul>
       {{ range .Site.Menus.header }}
         <li>
@@ -8,7 +8,7 @@
       {{ end }}
     </ul>
   </nav>
-  <nav>
+  <nav aria-label="Languages">
     {{ if .IsTranslated }}
       {{ range .Translations }}
         <a  href="{{ .Permalink }}">{{ .Language.Lang | upper }}</a>
