@@ -91,6 +91,12 @@ npm run test
 npm run test:links
 ```
 
+#### Check for HTML validation
+
+```sh
+npm run test:html
+```
+
 Note that because of CloudFlare protection, tests on external links are not run in CI so as not to block on 503 errors.
 
 ## Deployment
