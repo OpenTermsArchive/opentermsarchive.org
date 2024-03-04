@@ -15,15 +15,41 @@ header:
     pageRef: /about
     weight: 5
 footer:
-  - name: Politique de confidentialité
-    pageRef: /privacy-policy
+  - name: Accueil
+    pageRef: /
     weight: 1
-  - name: Mentions légales
-    pageRef: /legal-notice
+  - name: Jeux de données
+    pageRef: /datasets
     weight: 2
-  - name: "Accessibilité : non conforme"
-    pageRef: /accessibility
+  - name: Études de cas
+    pageRef: /case-studies
     weight: 3
+  - name: Documentation
+    url: https://docs.opentermsarchive.org
+    weight: 4
+  - name: Impact
+    pageRef: /impact
+    weight: 5
+  - name: À propos
+    pageRef: /about
+    weight: 6
+first_subfooter:
+  - name: Statistiques
+    pageRef: /stats
+    weight: 1
   - name: Média
     pageRef: /media
-    weight: 4
+    weight: 2
+  - name: Code source
+    url: https://github.com/ambanum/OpenTermsArchive
+    weight: 3
+second_subfooter:
+  - name: Mentions légales
+    pageRef: /legal-notice
+    weight: 1
+  - name: Politique de confidentialité
+    pageRef: /privacy-policy
+    weight: 2
+  - name: 'Accessibilité : non conforme'
+    pageRef: /accessibility
+    weight: 3

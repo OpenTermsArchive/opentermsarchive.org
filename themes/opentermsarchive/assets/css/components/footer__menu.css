@@ -1,9 +1,9 @@
-.footermenu {
-  &.footermenu--is-small {
+.footer__menu {
+  &.footer__menu--is-small {
     font-size: 1.4rem;
   }
 
-  &.footermenu--align-right {
+  &.footer__menu--align-right {
     & ul {
       justify-content: flex-end;
     }

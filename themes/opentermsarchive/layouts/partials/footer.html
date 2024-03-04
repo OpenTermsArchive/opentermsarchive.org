@@ -1,17 +1,92 @@
-<footer>
-  <nav aria-label="Footer">
-    <ul>
-      {{ range .Site.Menus.footer }}
-      <li>
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </nav>
-</footer>
+<div class="container container--has-no-padding-y container--fluid container--has-no-padding-x container--is-gray">
+  <div class="divider">
+    <hr />
+  </div>
+  <div class="container container--flex container--1211 container--has-no-padding-x container--has-padding-y-small">
+    <footer class="footer">
+      <div class="logo">
+        <svg><use href="#logo-main"></use></svg>
+      </div>
+      <div class="footer__menus">
+        <div class="footer__menu">
+          <ul>
+            {{ range .Site.Menus.footer }}
+              <li>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+            {{ end }}
+          </ul>
+          <ul>
+            <li>
+              <a class="a--icontext a--small" target="_blank" rel="me" href="{{ .Param "mastodon.url" }}">
+                <span class="icon--circle icon--circle-medium mr--2xs">
+                  <svg class="icon--mastodon icon--white"><use href="#mastodon"></use></svg>
+                </span>
+                <span>{{ i18n "footer.mastodon" }}</span>
+              </a>
+            </li>
+            <li>
+              <a class="a--icontext a--small" target="_blank" rel="me" href="{{ .Param "twitter.url" }}">
+                <span class="icon--circle icon--circle-medium mr--2xs">
+                  <svg class="icon--twitter icon--white"><use href="#twitter"></use></svg>
+                </span>
+                <span>{{ i18n "footer.twitter" }}</span>
+              </a>
+            </li>
+            <li>
+              <a class="a--icontext a--small" target="_blank" rel="me" href="mailto:{{ .Param "contact_email" }}">
+                <span class="icon--circle icon--circle-medium mr--2xs">
+                  <svg class="icon--mail icon--white"><use href="#mail"></use></svg>
+                </span>
+                <span>{{ i18n "footer.mail" }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__menu footer__menu--is-small footer__menu--align-right">
+          <ul>
+            {{ range .Site.Menus.first_subfooter }}
+              <li>
+                <a href="{{ .URL }}">
+                  {{ .Name }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+          <ul>
+            {{ range .Site.Menus.second_subfooter }}
+              <li>
+                <a href="{{ .URL }}">
+                  {{ .Name }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
 
 {{ $languageSwitcherJs := resources.Get "js/languageSwitcher.js" | js.Build }}
 <script src="{{ $languageSwitcherJs.RelPermalink }}"></script>
 
 {{ $headerJs := resources.Get "js/header.js" | js.Build }}
 <script src="{{ $headerJs.RelPermalink }}"></script>
+
+<!-- Matomo -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setExcludedQueryParams", ["simulationId","_csrf"]]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://stats.data.gouv.fr/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '179']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code -->

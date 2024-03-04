@@ -15,15 +15,41 @@ header:
     pageRef: /about
     weight: 5
 footer:
-  - name: Privacy policy
-    pageRef: /privacy-policy
+  - name: Home
+    pageRef: /
     weight: 1
-  - name: Legal notice
-    pageRef: /legal-notice
+  - name: Datasets
+    pageRef: /datasets
     weight: 2
-  - name: "Accessibility: not compliant"
-    pageRef: /accessibility
+  - name: Case studies
+    pageRef: /case-studies
     weight: 3
+  - name: Documentation
+    pageRef: /
+    weight: 4
+  - name: Impact
+    pageRef: /impact
+    weight: 5
+  - name: About
+    pageRef: /about
+    weight: 6
+first_subfooter:
+  - name: Statistics
+    pageRef: /stats
+    weight: 1
   - name: Media
     pageRef: /media
-    weight: 4
+    weight: 2
+  - name: Source code
+    url: https://github.com/ambanum/OpenTermsArchive
+    weight: 3
+second_subfooter:
+  - name: Legal notice
+    pageRef: /legal-notice
+    weight: 1
+  - name: Privacy policy
+    pageRef: /privacy-policy
+    weight: 2
+  - name: 'Accessibility: not compliant'
+    pageRef: /accessibility
+    weight: 3
