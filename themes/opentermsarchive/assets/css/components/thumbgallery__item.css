@@ -1,7 +1,7 @@
-.thumbGaleryItem {
+.thumbgallery__item {
   margin: 0 calc(var(--gridGutterWidth) / 2) var(--gridGutterWidth) calc(var(--gridGutterWidth) / 2);
 
-  &.thumbGaleryItem__isSmall {
+  &.thumbgallery__item--is-small {
     margin: 0 var(--mS) var(--mS) var(--mS);
   }
 }

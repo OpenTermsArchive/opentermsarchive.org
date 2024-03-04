@@ -19,7 +19,7 @@
     text-decoration: none;
   }
 
-  &.button__secondary {
+  &.button--secondary {
     background-color: transparent;
     border: 1px solid var(--colorPrimary);
     color: var(--colorPrimary);
@@ -33,7 +33,7 @@
     }
   }
 
-  &.button__hasOnlyIcon {
+  &.button--has-only-icon {
     padding-left: var(--pS);
     padding-right: var(--pS);
   }

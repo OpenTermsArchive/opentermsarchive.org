@@ -6,46 +6,46 @@
   display: flex;
   flex-direction: column;
 
-  &.card__center {
-    & > .card_body {
-      & > .card_title,
-      & > .card_subtitle {
+  &.card--center {
+    & > .card__body {
+      & > .card__title,
+      & > .card__subtitle {
         text-align: center;
       }
     }
 
-    & > .card_author {
+    & > .card__author {
       text-align: left;
     }
   }
 
-  &.card__isBig {
+  &.card--isBig {
     @mixin grid 6, 5;
 
-    & .card_body {
+    & .card__body {
       padding: var(--pXL) var(--pL) var(--p3XL) var(--pL);
     }
 
-    & .card_subtitle {
+    & .card__subtitle {
       margin-top: var(--mS);
     }
 
-    & .card_children {
+    & .card__children {
       margin-top: var(--mL);
     }
   }
 
-  &.card__isSmall {
-    & > .card_header {
+  &.card--is-small {
+    & > .card__header {
       height: 140px;
     }
   }
 
-  &.card__isWhite {
+  &.card--is-white {
     background-color: var(--colorWhite);
   }
 
-  &.card__placeholder {
+  &.card--placeholder {
     position: relative;
     background: #EFEFEF;
 
@@ -69,14 +69,14 @@
     display: flex;
     justify-content: center;
 
-    & .card_title {
+    & .card__title {
       font-weight: 300;
       font-size: 2rem;
     }
   }
 }
 
-.card__isLink {
+.card--is-link {
   cursor: pointer;
 
   &:hover {
@@ -84,7 +84,7 @@
   }
 }
 
-.card_link {
+.card__link {
   position: absolute;
   top: 0;
   left: 0;
@@ -92,25 +92,25 @@
   height: 100%;
 }
 
-.card_header {
+.card__header {
   position: relative;
   height: 180px;
   overflow: hidden;
 }
 
-.card_body {
+.card__body {
   padding: var(--pL) var(--pM) var(--pM) var(--pM);
 }
 
-.card_title {
+.card__title {
 }
 
-.card_subtitle {
+.card__subtitle {
   margin: var(--mS) 0 var(--mXL);
   font-size: 1.8rem;
 }
 
-.card_children {
+.card__children {
   margin-top: var(--mM);
 
   & p:not(:last-child) {
@@ -122,7 +122,7 @@
   }
 }
 
-.card_author {
+.card__author {
   border-top: 1px solid var(--colorBlack200);
   padding: var(--pS);
   display: flex;
@@ -137,13 +137,13 @@
     margin: 0 var(--pXS);
   }
 
-  &.card_author__isCenter {
+  &.card__author--is-center {
     justify-content: center;
   }
 }
 
-.card_author_icon {
+.card__author_icon {
   margin-right: var(--mXS);
 }
-.card_author_desc {
+.card__author_desc {
 }

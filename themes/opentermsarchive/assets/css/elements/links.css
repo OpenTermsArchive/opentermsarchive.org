@@ -9,23 +9,23 @@ a {
   }
 }
 
-.a__small {
+.a--small {
   font-size: 1.4rem;
 }
 
-.a__darked {
+.a--darked {
   &:hover {
     color: var(--colorDarkedSecondary);
   }
 }
 
-.a_icontext {
+.a--icontext {
   display: flex;
   align-items: center;
 }
 
 @media (--mobileExtraLarge) {
-  .a_icontext {
+  .a--icontext {
     justify-content: center;
   }
 }

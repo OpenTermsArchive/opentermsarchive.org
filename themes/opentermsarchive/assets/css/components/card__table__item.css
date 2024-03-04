@@ -1,4 +1,4 @@
-.cardTableItem {
+.cardtable__item {
   display: flex;
   align-items: flex-start;
   padding-top: var(--m2XS);
@@ -9,16 +9,16 @@
   }
 }
 
-.cardTableItem_icon {
+.cardtable__item__icon {
   flex-shrink: 0;
   margin-top: var(--m3XS);
 }
 
-.cardTableItem_title {
+.cardtable__item__title {
   margin-left: var(--m2XS);
 }
 
-.cardTableItem_desc {
+.cardtable__item__desc {
   margin-left: auto;
   padding-left: var(--pS);
   text-align: right;

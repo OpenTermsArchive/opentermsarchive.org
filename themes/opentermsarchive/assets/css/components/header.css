@@ -6,17 +6,17 @@
   padding-bottom: var(--pL);
   position: relative;
 
-  &.header__isOpen {
-    & .header_menus {
+  &.header--is-open {
+    & .header__menus {
       transition: 0.5s all easeOutCirc;
       transform: translateX(0);
     }
 
-    & .header_openLink {
+    & .header__open-link {
       display: none;
     }
 
-    & .header_closeLink {
+    & .header__close-link {
       display: inline-flex;
     }
   }
@@ -32,11 +32,11 @@
   }
 }
 
-.header_logo {
+.header__logo {
   line-height: 0;
 }
 
-.header_menus {
+.header__menus {
   flex-grow: 1;
   display: flex;
 
@@ -54,7 +54,7 @@
 }
 
 @media (--tabletLarge) {
-  .header_menus {
+  .header__menus {
     transition: 0.3s all easeOutExpo;
     transform: translateX(100%);
     background-color: var(--colorSecondary);
@@ -98,7 +98,7 @@
   }
 }
 
-.header_openLink {
+.header__open-link {
   @mixin resetButton;
   color: var(--colorPrimary);
   display: none;
@@ -110,12 +110,12 @@
 }
 
 @media (--tabletLarge) {
-  .header_openLink {
+  .header__open-link {
     display: inline-flex;
   }
 }
 
-.header_closeLink {
+.header__close-link {
   @mixin resetButton;
   position: fixed;
   display: none;

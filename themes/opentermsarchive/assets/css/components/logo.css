@@ -3,21 +3,21 @@
     height: 40px;
   }
 
-  &.logo__alternative {
+  &.logo--alternative {
     & svg {
       height: 76px;
     }
   }
 }
 
-.logo__small {
+.logo--small {
 }
-.logo__medium {
+.logo--medium {
 }
-.logo__large {
+.logo--large {
 }
 
-.logo__full {
+.logo--full {
   width: 100%;
 
   & svg {

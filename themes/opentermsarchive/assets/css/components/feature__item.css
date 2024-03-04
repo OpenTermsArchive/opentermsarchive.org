@@ -1,4 +1,4 @@
-.featureItem {
+.featureitem {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -9,7 +9,7 @@
   }
 }
 
-.featureItem_icon {
+.featureitem__icon {
   flex-shrink: 0;
   border: 1px solid var(--colorBlack200);
   width: var(--gridColWidth);
@@ -25,17 +25,17 @@
 }
 
 @media (--tabletSmall) {
-  .featureItem_icon {
+  .featureitem__icon {
     margin-left: 0;
   }
 }
 
-.featureItem_info {
+.featureitem__info {
 }
 
-.featureItem_title {
+.featureitem__title {
 }
 
-.featureItem_desc {
+.featureitem__desc {
   margin-top: var(--m2XS);
 }

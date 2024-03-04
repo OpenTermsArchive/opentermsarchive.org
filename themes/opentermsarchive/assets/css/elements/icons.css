@@ -1,4 +1,4 @@
-.icon_circle {
+.icon--circle {
   background-color: var(--colorBlack400);
   border-radius: 50%;
   height: 28px;
@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
 
-  &.icon_circle__medium {
+  &.icon--circle-medium {
     height: 24px;
     width: 24px;
   }

@@ -1,11 +1,11 @@
-.text__light {
+.text--light {
   font-size: 1.4rem;
   line-height: 1.4;
   letter-spacing: -0.2px;
   color: var(--colorBlack600);
 }
 
-.text__smallcaps {
+.text--smallcaps {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;

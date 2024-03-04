@@ -1,4 +1,4 @@
-.buttonBlock {
+.buttonblock {
   border: 1px solid var(--colorBlack200);
   @mixin grid 3, 3;
   text-align: center;
@@ -9,12 +9,12 @@
   display: flex;
   flex-direction: column;
 
-  &.buttonBlock__fillParent {
+  &.buttonblock--fillParent {
     width: 100%;
     max-width: 100%;
   }
 
-  &.buttonBlock__isDark {
+  &.buttonblock--is-dark {
     background-color: var(--colorBlack900);
     border: 1px solid var(--colorBlack900);
     color: var(--colorWhite);
@@ -28,13 +28,13 @@
     }
   }
 
-  &.buttonBlock__isWhite {
+  &.buttonblock--is-white {
     border: 1px solid var(--colorWhite);
     background-color: var(--colorWhite);
   }
 }
 
-.buttonBlock_icon {
+.buttonblock_icon {
   position: absolute;
   background-color: var(--colorWhite);
   width: 44px;
@@ -52,16 +52,16 @@
   }
 }
 
-.buttonBlock_title {
-  & + .buttonBlock_desc {
+.buttonblock__title {
+  & + .buttonblock_desc {
     margin-top: var(--mXS);
   }
 }
 
-.buttonBlock_desc {
+.buttonblock__desc {
 }
 
-.buttonBlock_actions {
+.buttonblock__actions {
   margin-top: auto;
   padding-top: var(--pM);
   display: flex;

@@ -1,10 +1,10 @@
-.textContent {
+.textcontent {
   & hr {
     clear: both;
     border: 1px solid var(--colorBlack300);
     margin-bottom: var(--mXL);
 
-    &:global(.mb__3XL) {
+    &:global(.mb--3xl) {
       margin-bottom: var(--m3XL);
     }
   }
@@ -16,11 +16,11 @@
       margin-bottom: 0;
     }
 
-    &:global(.mb__0) {
+    &:global(.mb--0) {
       margin-bottom: 0;
     }
 
-    &:global(.mb__3XL) {
+    &:global(.mb--3xl) {
       margin-bottom: var(--m3XL);
     }
   }
@@ -36,7 +36,7 @@
       margin-bottom: var(--mXL);
     }
 
-    &:global(.mb__0) {
+    &:global(.mb--0) {
       margin-bottom: 0;
     }
 
@@ -56,7 +56,7 @@
       margin-bottom: var(--mL);
     }
 
-    &:global(.mb__0) {
+    &:global(.mb--0) {
       margin-bottom: 0;
     }
   }
@@ -68,7 +68,7 @@
       margin-bottom: var(--mM);
     }
 
-    &:global(.mb__0) {
+    &:global(.mb--0) {
       margin-bottom: 0;
     }
   }
@@ -80,7 +80,7 @@
       margin-bottom: var(--mS);
     }
 
-    &:global(.mb__0) {
+    &:global(.mb--0) {
       margin-bottom: 0;
     }
 
@@ -88,11 +88,11 @@
       margin-bottom: var(--mXL);
     }
 
-    &:global(.mb__2XL) {
+    &:global(.mb--2xl) {
       margin-bottom: var(--m2XL);
     }
 
-    &:global(.mb__3XL) {
+    &:global(.mb--3xl) {
       margin-bottom: var(--m3XL);
     }
   }
@@ -104,7 +104,7 @@
       margin-bottom: var(--mXS);
     }
 
-    &:global(.mb__0) {
+    &:global(.mb--0) {
       margin-bottom: 0;
     }
   }
@@ -116,7 +116,7 @@
       margin-bottom: var(--m2XS);
     }
 
-    &:global(.mb__0) {
+    &:global(.mb--0) {
       margin-bottom: 0;
     }
   }
@@ -186,7 +186,7 @@
     }
   }
 
-  & .textContent__noListStyle {
+  & .textcontent--no-list-style {
     list-style-type: none;
   }
 
@@ -205,16 +205,16 @@
       margin-bottom: var(--mL);
     }
 
-    &:global(.mb__0) {
+    &:global(.mb--0) {
       margin-bottom: 0;
     }
   }
 }
 
-.textContent__marginTopLarge {
+.textcontent--margin-top-large {
   margin-top: var(--m2XL);
 }
 
-.textContent__hasNoMarginTop {
+.textcontent--has-no-margin-top {
   margin-top: 0;
 }

@@ -47,11 +47,11 @@ label {
     margin-top: var(--mL);
   }
 
-  &.formfield__alignRight {
+  &.formfield--align-right {
     text-align: right;
   }
 
-  &.formfield__flex {
+  &.formfield--flex {
     display: flex;
   }
 }

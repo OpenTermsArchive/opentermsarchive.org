@@ -1,4 +1,4 @@
-.linkIcon {
+.linkicon {
   display: inline-flex;
   align-items: flex-start;
 
@@ -8,7 +8,7 @@
   }
 
   &:hover {
-    & .linkIcon_content {
+    & .linkicon__content {
       transition: transform 0.3s easeOutCirc;
     }
 
@@ -18,23 +18,23 @@
     }
   }
 
-  &.linkIcon__isSmall {
+  &.linkicon--is-small {
     font-size: 1.4rem;
     &:hover {
-      & .linkIcon_content {
+      & .linkicon__content {
         transform: translateX(2px);
       }
     }
   }
 
-  &.linkIcon__isLeft {
+  &.linkicon--is-left {
     & svg {
       transform: rotate(180deg);
     }
   }
 }
 
-.linkIcon_content {
+.linkicon__content {
   transition: all 0.1s easeInCirc;
   margin-left: var(--m2XS);
   text-align: left;

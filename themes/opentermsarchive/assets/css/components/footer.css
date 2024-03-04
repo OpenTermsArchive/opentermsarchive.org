@@ -15,7 +15,7 @@
   }
 }
 
-.footer_menus {
+.footer__menus {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -60,7 +60,7 @@
 }
 
 @media (--tabletLarge) {
-  .footer_menus {
+  .footer__menus {
     justify-content: center;
     align-items: flex-start;
 
@@ -100,7 +100,7 @@
 }
 
 @media (--mobileExtraLarge) {
-  .footer_menus {
+  .footer__menus {
     justify-content: flex-start;
     flex-wrap: wrap;
     & div {

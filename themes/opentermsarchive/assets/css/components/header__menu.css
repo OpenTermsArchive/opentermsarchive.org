@@ -1,4 +1,4 @@
-.headerMenu {
+.headermenu {
   display: flex;
   align-items: center;
 
@@ -6,7 +6,7 @@
     display: flex;
   }
 
-  &.headerMenu__primary {
+  &.headermenu__primary {
     & ul {
       & li {
         margin: 0 var(--mS);
@@ -14,7 +14,7 @@
     }
   }
 
-  &.headerMenu__secondary {
+  &.headermenu__secondary {
     & ul {
       & li:not(:last-child) {
         margin: 0 var(--m2XS);
@@ -24,7 +24,7 @@
 }
 
 @media (--tabletLarge) {
-  .headerMenu {
+  .headermenu {
     & ul {
       width: 100%;
 
@@ -39,7 +39,7 @@
       }
     }
 
-    &.headerMenu__primary {
+    &.headermenu__primary {
       & ul {
         & li {
           margin: var(--mS) auto;
@@ -47,7 +47,7 @@
       }
     }
 
-    &.headerMenu__secondary {
+    &.headermenu__secondary {
       & ul {
         & li:not(:last-child) {
           margin: var(--mS) auto;
