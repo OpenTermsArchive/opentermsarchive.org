@@ -19,6 +19,8 @@ jobs:
         run: npm run lint:css
       - name: Lint JavaScript
         run: npm run lint:js
+      - name: Lint HTML
+        run: npm run lint:html
       - name: Set Hugo up
         uses: peaceiris/actions-hugo@v2
         with:
