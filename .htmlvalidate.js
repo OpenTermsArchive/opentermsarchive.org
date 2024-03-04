@@ -14,5 +14,8 @@ module.exports = defineConfig({
 
     /* Increase max <title> size */
     "long-title": ["error", {"maxlength": 120}],
+
+    /* Validates BEM class names, based on https://github.com/potherca-blog/BEM-Regex */
+    "class-pattern": ["error", {"pattern": "^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$"}],
   }
 });
