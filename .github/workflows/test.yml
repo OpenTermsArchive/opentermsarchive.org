@@ -26,3 +26,5 @@ jobs:
           extended: true
       - name: Test broken links
         run: npm run test:links -- --skip '^(?!https?://(www.opentermsarchive.org|netlify.app))'
+      - name: Validate HTML
+        run: npm run test:html
