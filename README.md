@@ -77,6 +77,20 @@ To automatically fix, where possible, problems reported:
 npm run lint:js -- --fix
 ```
 
+### Linting HTML files
+
+To lint the HTML files use the following command:
+
+```sh
+npm run lint:html
+```
+
+To automatically fix, where possible, problems reported:
+
+```sh
+npm run lint:html -- --fix
+```
+
 ### Testing
 
 Run the entire test set

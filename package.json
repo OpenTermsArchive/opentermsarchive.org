@@ -14,7 +14,7 @@
   "author": "Open Terms Archive",
   "scripts": {
     "build": "hugo --minify",
-    "test": "npm run lint:markdown && npm run lint:css && npm run lint:js && npm run test:links && npm run test:html",
+    "test": "npm run lint:markdown && npm run lint:css && npm run lint:js && npm run lint:html && npm run test:links && npm run test:html",
     "pretest:links": "npm run build",
     "test:links": "linkinator ./public --recurse --verbosity error",
     "pretest:html": "npm run build",
@@ -22,7 +22,8 @@
     "start:dev": "hugo serve --watch --logLevel debug --disableFastRender --printI18nWarnings",
     "lint:markdown": "markdownlint *.md content/**/*.md",
     "lint:css": "stylelint \"themes/opentermsarchive/assets/css/*.css\"",
-    "lint:js": "eslint themes/opentermsarchive/assets/js/"
+    "lint:js": "eslint themes/opentermsarchive/assets/js/",
+    "lint:html": "eslint themes/opentermsarchive/layouts/**/*.html -c .htmleslintrc.yaml"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.23.1",
