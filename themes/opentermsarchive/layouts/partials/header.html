@@ -27,9 +27,7 @@
             <button class="language-switcher--current">
               {{ $currentLanguage := .Site.Language.Lang }}
               {{ $currentLanguage | upper }}
-              <svg class="icon--arrow-down">
-                <use href="#arrowDown"></use>
-              </svg>
+              <i class="icon icon--gray" data-lucide="chevron-down"></i>
             </button>
             <div class="language-switcher__items">
               {{/*
@@ -55,17 +53,13 @@
           </div>
           <ul>
             <li>
-              <a class="icon--circle" target="_blank" rel="noopener" href="{{ .Param "twitter.url" }}">
-                <svg class="icon--twitter">
-                  <use href="#twitter"></use>
-                </svg>
+              <a class="icon__circle-wrapper" target="_blank" rel="noopener" href="{{ .Param "twitter.url" }}">
+                <i class="icon icon--white" data-lucide="twitter"></i>
               </a>
             </li>
             <li>
-              <a class="icon--circle" target="_blank" rel="noopener" href="{{ .Param "github.url" }}">
-                <svg class="icon--github">
-                  <use href="#github"></use>
-                </svg>
+              <a class="icon__circle-wrapper" target="_blank" rel="noopener" href="{{ .Param "github.url" }}">
+                <i class="icon icon--white" data-lucide="github"></i>
               </a>
             </li>
           </ul>
@@ -74,9 +68,7 @@
       <div class="header__open-link">{{ i18n "header.menu.open" }}</div>
       <div class="header__close-link">
         {{ i18n "header.menu.close" }}
-        <svg class="icon--close">
-          <use href="#close"></use>
-        </svg>
+        <i class="icon" data-lucide="x"></i>
       </div>
     </header>
   </div>

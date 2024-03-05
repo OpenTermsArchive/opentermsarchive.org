@@ -19,24 +19,24 @@
           <ul>
             <li>
               <a class="a--icontext a--small" target="_blank" rel="me" href="{{ .Param "mastodon.url" }}">
-                <span class="icon--circle icon--circle-medium mr--2xs">
-                  <svg class="icon--mastodon icon--white"><use href="#mastodon"></use></svg>
+                <span class="icon__circle-wrapper icon__circle-wrapper--small mr--2xs">
+                  <svg class="icon icon--fill-white"><use href="#mastodon"></use></svg>
                 </span>
                 <span>{{ i18n "footer.mastodon" }}</span>
               </a>
             </li>
             <li>
               <a class="a--icontext a--small" target="_blank" rel="me" href="{{ .Param "twitter.url" }}">
-                <span class="icon--circle icon--circle-medium mr--2xs">
-                  <svg class="icon--twitter icon--white"><use href="#twitter"></use></svg>
+                <span class="icon__circle-wrapper icon__circle-wrapper--small mr--2xs">
+                  <i class="icon icon--white" data-lucide="twitter"></i>
                 </span>
                 <span>{{ i18n "footer.twitter" }}</span>
               </a>
             </li>
             <li>
               <a class="a--icontext a--small" target="_blank" rel="me" href="mailto:{{ .Param "contact_email" }}">
-                <span class="icon--circle icon--circle-medium mr--2xs">
-                  <svg class="icon--mail icon--white"><use href="#mail"></use></svg>
+                <span class="icon__circle-wrapper icon__circle-wrapper--small mr--2xs">
+                  <i class="icon icon--white" data-lucide="mail"></i>
                 </span>
                 <span>{{ i18n "footer.mail" }}</span>
               </a>
@@ -67,6 +67,9 @@
     </footer>
   </div>
 </div>
+
+{{ $lucideJs := resources.Get "js/lucide.js" | js.Build }}
+<script src="{{ $lucideJs.RelPermalink }}"></script>
 
 {{ $languageSwitcherJs := resources.Get "js/languageSwitcher.js" | js.Build }}
 <script src="{{ $languageSwitcherJs.RelPermalink }}"></script>
