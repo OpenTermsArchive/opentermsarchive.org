@@ -1,0 +1,26 @@
+.buttonblocklist_header {
+  margin: 0 auto;
+  text-align: center;
+
+  @mixin grid 9, 8;
+}
+
+.buttonblocklist_items {
+  @mixin grid 12, 11;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: var(--m4XL);
+
+  & > div {
+    margin: 0 var(--gridGutterWidth) var(--m2XL) var(--gridGutterWidth);
+  }
+}
+
+@media (--tabletSmall) {
+  .buttonblocklist_items {
+    margin-top: var(--m3XL);
+  }
+}

@@ -1,0 +1,30 @@
+.logo {
+  & svg {
+    height: 40px;
+  }
+}
+
+.logo--alternative {
+  & svg {
+    height: 76px;
+  }
+}
+
+.logo--full {
+  width: 100%;
+
+  & svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (--mobileLarge) {
+  .logo {
+    margin-top: 8px;
+
+    & svg {
+      height: 32px;
+    }
+  }
+}

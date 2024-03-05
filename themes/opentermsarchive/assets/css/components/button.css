@@ -1,0 +1,51 @@
+.button {
+  @mixin resetButton;
+
+  display: inline-flex;
+  align-items: center;
+  padding: var(--pS) var(--pL);
+  color: var(--colorWhite);
+  background-color: var(--colorPrimary);
+  border-radius: 4px;
+  transition: all 0.3s easeoutexpo;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &:not(:disabled):hover {
+    color: var(--colorWhite);
+    background-color: var(--colorSecondary);
+    transition: all 0.25s easeoutcirc;
+  }
+
+  & a {
+    color: var(--colorWhite);
+    text-decoration: none;
+  }
+
+  &.button--secondary {
+    color: var(--colorPrimary);
+    background-color: transparent;
+    border: 1px solid var(--colorPrimary);
+
+    &:hover {
+      border: 1px solid var(--colorSecondary);
+    }
+
+    & a {
+      color: var(--colorPrimary);
+    }
+  }
+
+  &.button--has-only-icon {
+    padding-right: var(--pS);
+    padding-left: var(--pS);
+  }
+
+  &.sm {
+    padding: var(--pXS) var(--pM);
+    font-size: 0.8em;
+  }
+}

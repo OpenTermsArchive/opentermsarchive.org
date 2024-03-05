@@ -4,7 +4,7 @@ html_description: Cette politique de confidentialité explique de quelle manièr
 slug: "/politique-de-confidentialite"
 ---
 
-<p class="text__smallcaps mb__3XL">Dernière mise à jour : 13 février 2024</p>
+<p class="text--smallcaps mb--3xl">Dernière mise à jour : 13 février 2024</p>
 
 Cette politique de confidentialité explique de quelle manière, pour quelles raisons et dans quelles conditions le site d'Open Terms Archive (OTA) collecte des informations personnelles, et la finalité du traitement de ces dernières. Notre politique de confidentialité est vouée à évoluer au fil du temps. Et bien sûr, nous [enregistrons publiquement ces changements](https://github.com/OpenTermsArchive/demo-versions/commits/main/Open%20Terms%20Archive/Privacy%20Policy.md) avec Open Terms Archive 😉
 
@@ -29,6 +29,7 @@ Lorsque vous visitez ce site web, nous laissons un petit fichier texte (un “co
   width="100%"
   height="100px"
   src="https://stats.data.gouv.fr/index.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=f5f5f5&fontColor=333333&fontSize=16px&fontFamily="
+  title="Cookies opt-out"
 ></iframe>
 
 ### Pourquoi ce site web n’affiche-t-il pas une bannière de consentement pour les cookies ?

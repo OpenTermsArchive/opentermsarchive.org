@@ -1,0 +1,31 @@
+a {
+  color: var(--colorPrimary);
+  text-decoration: none;
+  transition: all 0.3s easeoutexpo;
+
+  &:hover {
+    color: var(--colorSecondary);
+    transition: all 0.25s easeoutcirc;
+  }
+}
+
+.a--small {
+  font-size: 1.4rem;
+}
+
+.a--darked {
+  &:hover {
+    color: var(--colorDarkedSecondary);
+  }
+}
+
+.a--icontext {
+  display: flex;
+  align-items: center;
+}
+
+@media (--mobileExtraLarge) {
+  .a--icontext {
+    justify-content: center;
+  }
+}

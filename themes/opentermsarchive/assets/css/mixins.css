@@ -1,0 +1,62 @@
+@define-mixin debug $size: 1px, $color: red {
+  outline: $size solid $color;
+}
+
+/* Read https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
+@define-mixin height100vh {
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+/* Read https://stackoverflow.com/questions/18744164/flex-box-align-last-row-to-grid */
+@define-mixin gridAutoFillSpace {
+  &::after {
+    flex: auto;
+    content: '';
+  }
+}
+
+/* Grid generator */
+@define-mixin grid $colNumber, $gutterNumber {
+  width: 100%;
+  max-width: calc(
+    (var(--gridColWidth) * $(colNumber)) + (var(--gridGutterWidth) * $(gutterNumber))
+  );
+}
+
+/* Read https://ismamz.github.io/postcss-utilities/docs#word-wrap */
+@define-mixin word-wrap {
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Read https://codepen.io/raphaelgoetter/pen/KMgBJd?editors=1100 */
+@define-mixin autogrid {
+  flex: 1;
+  min-width: 0; /* avoid min-width:auto */
+}
+
+/* https://gist.github.com/MoOx/9137295 */
+@define-mixin resetButton {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+}

@@ -2,6 +2,9 @@
 <div>{{ .Params.related_datasets.introduction | markdownify }}</div>
 <ul>
   {{ range site.Data.related_datasets }}
-    <li>name : {{ .name }}<br/>website : {{ .website }}<br />description : {{ index .description site.Language.Lang }}</li>
+  <li>
+    name : {{ .name }}<br>
+    website : {{ .website }}<br >description : {{ index .description site.Language.Lang }}
+  </li>
   {{ end }}
 </ul>

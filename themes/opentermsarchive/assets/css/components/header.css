@@ -1,0 +1,126 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-top: var(--pL);
+  padding-bottom: var(--pL);
+}
+
+.header__logo {
+  line-height: 0;
+}
+
+.header__menus {
+  display: flex;
+  flex-grow: 1;
+
+  & nav {
+    &:first-child {
+      flex-grow: 1;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+}
+
+.header__open-link {
+  @mixin resetButton;
+
+  position: absolute;
+  top: var(--mL);
+  right: var(--mL);
+  display: none;
+  padding: var(--pS);
+  font-size: 1.4rem;
+  color: var(--colorPrimary);
+}
+
+.header__close-link {
+  @mixin resetButton;
+
+  position: fixed;
+  top: var(--mL);
+  right: var(--mL);
+  z-index: 1;
+  display: none;
+  align-items: center;
+  padding: var(--pS);
+  font-size: 1.4rem;
+  color: var(--colorWhite);
+
+  & svg {
+    margin-left: var(--m2XS);
+  }
+}
+
+.header--is-open {
+  & .header__menus {
+    transition: 0.5s all easeoutcirc;
+    transform: translateX(0);
+  }
+
+  & .header__open-link {
+    display: none;
+  }
+
+  & .header__close-link {
+    display: inline-flex;
+  }
+}
+
+@media (--gridPlus) {
+  .header {
+    padding-right: var(--pL);
+    padding-left: var(--pL);
+  }
+}
+
+@media (--tabletLarge) {
+  .header__open-link {
+    display: inline-flex;
+  }
+
+  .header__menus {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    flex-flow: column wrap;
+    background-color: var(--colorSecondary);
+    transition: 0.3s all easeoutexpo;
+    transform: translateX(100%);
+
+    & nav {
+      width: 100%;
+
+      &:first-child {
+        align-items: flex-end;
+      }
+
+      &:first-child,
+      &:last-child {
+        flex-grow: 1;
+        justify-content: center;
+
+        & ul {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      &:last-child {
+        flex-direction: column;
+        margin-top: auto;
+        margin-bottom: var(--mXL);
+
+        & div {
+          margin-bottom: var(--mL);
+        }
+      }
+    }
+  }
+}

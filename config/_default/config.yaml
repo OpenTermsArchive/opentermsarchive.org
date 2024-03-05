@@ -6,3 +6,7 @@ disableKinds:
   - taxonomy
 ignoreErrors: ["error-disable-taxonomy"]
 removePathAccents: true
+minify:
+  tdewolff:
+    html:
+      keepQuotes: true

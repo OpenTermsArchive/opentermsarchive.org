@@ -1,0 +1,11 @@
+.footermenu {
+  &.footermenu--is-small {
+    font-size: 1.4rem;
+  }
+
+  &.footermenu--align-right {
+    & ul {
+      justify-content: flex-end;
+    }
+  }
+}

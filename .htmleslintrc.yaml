@@ -1,0 +1,10 @@
+extends:
+  - "plugin:@html-eslint/recommended"
+plugins: 
+  - "@html-eslint"
+parser: "@html-eslint/parser"
+rules:
+  "@html-eslint/require-img-alt": warn
+  "@html-eslint/indent": 
+    - error
+    - 2

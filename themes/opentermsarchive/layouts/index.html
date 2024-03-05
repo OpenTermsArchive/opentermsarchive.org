@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "subtitle" .Params.hero.subtitle "link" .Params.hero.link "class" "hero__hasNoMarginBottom") }}
+  {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "subtitle" .Params.hero.subtitle "link" .Params.hero.link "class" "hero--has-no-margin-bottom") }}
   {{ partial "distinctions.html" . }}
   {{ partial "collections.html" . }}
   {{ partial "follow-us.html" . }}

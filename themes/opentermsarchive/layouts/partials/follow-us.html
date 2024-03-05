@@ -1,29 +1,25 @@
-<div class="container container__wide container__hasNoPaddingY container__isDark" id="follow-us">
-  <div class="container container__98 container__flex">
-    <div class="column column__40 column__alignXcenter column__alignYcenter">
-      <div class="column_header"></div>
-      <div class="column_desc">
-        <i class="icon icon_mastodon" size="128" color="var(--colorBlack400)" strokeWidth="1px"></i>
-        <i class="icon icon_twitter" size="128" color="var(--colorBlack400)" strokeWidth="1px"></i>
+<div class="container container--wide container--has-no-padding-y container--is-dark" id="follow-us">
+  <div class="container container--98 container--flex">
+    <div class="column column--40 column--align-x-centerer column--align-y-center">
+      <div class="column__header"></div>
+      <div class="column__desc">
+        <i class="icon icon--mastodon" size="128" color="var(--colorBlack400)" strokeWidth="1px"></i>
+        <i class="icon icon--twitter" size="128" color="var(--colorBlack400)" strokeWidth="1px"></i>
       </div>
     </div>
-    <div class="column column__60">
-      <div class="column_header">
-        <h2 class="column_title">{{ i18n "follow_us.title" }}</h2>
+    <div class="column column--60">
+      <div class="column__header">
+        <h2 class="column__title">{{ i18n "follow_us.title" }}</h2>
       </div>
-      <p class="mt__M mb__L">{{ i18n "follow_us.subtitle" }}</p>
-      <div class="container container__fluid container__flex container__hasNoPaddingX container__hasNoPaddingY">
-        <a href="{{ site.Params.mastodon.url }}" target="_blank" rel="noopener">
-          <button>
-            <i class="icon icon_mastodon"strokeWidth="1px"></i>
-            <span class="ml__XS">{{ i18n "follow_us.mastodon" }}</span>
-          </button>
+      <p class="mt-m mb--l">{{ i18n "follow_us.subtitle" }}</p>
+      <div class="container container__fluid container--flex container--has-no-padding-x container--has-no-padding-y">
+        <a href="{{ site.Params.mastodon.url }}" target="_blank" rel="noopener" class="button">
+          <i class="icon icon--mastodon"strokeWidth="1px"></i>
+          <span class="ml--xs">{{ i18n "follow_us.mastodon" }}</span>
         </a>
-        <a href="{{ site.Params.twitter.url }}" target="_blank" rel="noopener">
-          <button class="button button__secondary">
-            <i class="icon icon_twitter" strokeWidth="1px"></i>
-            <span class="ml__XS">{{ i18n "follow_us.twitter" }}</span>
-          </button>
+        <a href="{{ site.Params.twitter.url }}" target="_blank" rel="noopener" class="button button--secondary">
+          <i class="icon icon--twitter" strokeWidth="1px"></i>
+          <span class="ml--xs">{{ i18n "follow_us.twitter" }}</span>
         </a>
       </div>
     </div>

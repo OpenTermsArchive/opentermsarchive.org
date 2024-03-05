@@ -1,0 +1,13 @@
+.text--light {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--colorBlack600);
+  letter-spacing: -0.2px;
+}
+
+.text--smallcaps {
+  font-size: 1.2rem;
+  color: var(--colorBlack800);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

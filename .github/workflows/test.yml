@@ -15,6 +15,12 @@ jobs:
       - run: npm ci
       - name: Lint Markdown
         run: npm run lint:markdown
+      - name: Lint CSS
+        run: npm run lint:css
+      - name: Lint JavaScript
+        run: npm run lint:js
+      - name: Lint HTML
+        run: npm run lint:html
       - name: Set Hugo up
         uses: peaceiris/actions-hugo@v2
         with:
@@ -22,3 +28,5 @@ jobs:
           extended: true
       - name: Test broken links
         run: npm run test:links -- --skip '^(?!https?://(www.opentermsarchive.org|netlify.app))'
+      - name: Validate HTML
+        run: npm run test:html

@@ -1,0 +1,13 @@
+/* 
+Custom media queries  
+Read https://preset-env.cssdb.org/features#custom-media-queries
+Use : @media (--tabletLarge) {}
+Warning : custom properties are not allowed inside custom media queries /!\
+*/
+@custom-media --mobileSmall (max-width: 320px);
+@custom-media --mobileLarge (max-width: 480px);
+@custom-media --mobileExtraLarge (max-width: 620px);
+@custom-media --tabletSmall (max-width: 768px);
+@custom-media --tabletLarge (max-width: 1024px);
+@custom-media --gridPlus (max-width: 1196px);
+@custom-media --desktopWide (max-width: 1440px);

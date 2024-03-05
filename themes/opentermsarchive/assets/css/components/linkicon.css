@@ -1,0 +1,42 @@
+.linkicon {
+  display: inline-flex;
+  align-items: flex-start;
+
+  & svg {
+    margin-top: var(--m2XS);
+    transition: stroke 0.3s easeoutcirc;
+  }
+}
+
+.linkicon__content {
+  margin-left: var(--m2XS);
+  text-align: left;
+  transition: all 0.1s easeincirc;
+}
+
+.linkicon--is-left {
+  & svg {
+    transform: rotate(180deg);
+  }
+}
+
+.linkicon--is-small {
+  font-size: 1.4rem;
+
+  &:hover {
+    & .linkicon__content {
+      transform: translateX(2px);
+    }
+  }
+}
+
+.linkicon:hover {
+  & .linkicon__content {
+    transition: transform 0.3s easeoutcirc;
+  }
+
+  & svg {
+    stroke: var(--colorSecondary);
+    transition: stroke 0.3s easeoutcirc;
+  }
+}

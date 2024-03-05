@@ -1,0 +1,12 @@
+/* 
+Custom media queries  
+Read https://preset-env.cssdb.org/features#custom-media-queries
+Use : @media (--tabletLarge) {}
+*/
+@custom-media --mobileSmall (max-width: var(--bpMobileSmall));
+@custom-media --mobileLarge (max-width: var(--bpMobileLarge));
+@custom-media --mobileExtraLarge (max-width: var(--bpMobileExtraLarge));
+@custom-media --tabletSmall (max-width: var(--bpTabletSmall));
+@custom-media --tabletLarge (max-width: var(--bpTabletLarge));
+@custom-media --gridPlus (max-width: var(--bpGridPlus));
+@custom-media --desktopWide (max-width: var(--bpDesktopWide));

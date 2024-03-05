@@ -1,0 +1,366 @@
+/* float utility */
+.float--right {
+  float: right;
+}
+
+.float--left {
+  float: left;
+}
+
+/* align utility */
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* padding left utility */
+.pl--0 {
+  padding-left: 0;
+}
+
+.pl--2xs {
+  padding-left: var(--p2XS);
+}
+
+.pl--xs {
+  padding-left: var(--pXS);
+}
+
+.pl--s {
+  padding-left: var(--pS);
+}
+
+.pl--m {
+  padding-left: var(--pM);
+}
+
+.pl--l {
+  padding-left: var(--pL);
+}
+
+.pl--xl {
+  padding-left: var(--pXL);
+}
+
+.pl--2xl {
+  padding-left: var(--p2XL);
+}
+
+.pl--3xl {
+  padding-left: var(--p3XL);
+}
+
+.pl--4xl {
+  padding-left: var(--p4XL);
+}
+
+/* padding right utility */
+.pr--0 {
+  padding-right: 0;
+}
+
+.pr--2xs {
+  padding-right: var(--p2XS);
+}
+
+.pr--xs {
+  padding-right: var(--pXS);
+}
+
+.pr--s {
+  padding-right: var(--pS);
+}
+
+.pr--m {
+  padding-right: var(--pM);
+}
+
+.pr--l {
+  padding-right: var(--pL);
+}
+
+.pr--xl {
+  padding-right: var(--pXL);
+}
+
+.pr--2xl {
+  padding-right: var(--p2XL);
+}
+
+.pr--3xl {
+  padding-right: var(--p3XL);
+}
+
+.pr--4xl {
+  padding-right: var(--p4XL);
+}
+
+/* padding top utility */
+.pt--0 {
+  padding-top: 0;
+}
+
+.pt--2xs {
+  padding-top: var(--p2XS);
+}
+
+.pt--xs {
+  padding-top: var(--pXS);
+}
+
+.pt--s {
+  padding-top: var(--pS);
+}
+
+.pt--m {
+  padding-top: var(--pM);
+}
+
+.pt--l {
+  padding-top: var(--pL);
+}
+
+.pt--xl {
+  padding-top: var(--pXL);
+}
+
+.pt--2xl {
+  padding-top: var(--p2XL);
+}
+
+.pt--3xl {
+  padding-top: var(--p3XL);
+}
+
+.pt--4xl {
+  padding-top: var(--p4XL);
+}
+
+/* padding bottom utility */
+.pb--0 {
+  padding-bottom: 0;
+}
+
+.pb--2xs {
+  padding-bottom: var(--p2XS);
+}
+
+.pb--xs {
+  padding-bottom: var(--pXS);
+}
+
+.pb--s {
+  padding-bottom: var(--pS);
+}
+
+.pb--m {
+  padding-bottom: var(--pM);
+}
+
+.pb--l {
+  padding-bottom: var(--pL);
+}
+
+.pb--xl {
+  padding-bottom: var(--pXL);
+}
+
+.pb--2xl {
+  padding-bottom: var(--p2XL);
+}
+
+.pb--3xl {
+  padding-bottom: var(--p3XL);
+}
+
+.pb--4xl {
+  padding-bottom: var(--p4XL);
+}
+
+/* margin left utility  */
+.ml--0 {
+  margin-left: 0;
+}
+
+.ml--2xs {
+  margin-left: var(--m2XS);
+}
+
+.ml--xs {
+  margin-left: var(--mXS);
+}
+
+.ml--s {
+  margin-left: var(--mS);
+}
+
+.ml--m {
+  margin-left: var(--mM);
+}
+
+.ml--l {
+  margin-left: var(--mL);
+}
+
+.ml--xl {
+  margin-left: var(--mXL);
+}
+
+.ml--2xl {
+  margin-left: var(--m2XL);
+}
+
+.ml--3xl {
+  margin-left: var(--m3XL);
+}
+
+.ml--4xl {
+  margin-left: var(--m4XL);
+}
+
+/* margin right utility */
+.mr--0 {
+  margin-right: 0;
+}
+
+.mr--2xs {
+  margin-right: var(--m2XS);
+}
+
+.mr--xs {
+  margin-right: var(--mXS);
+}
+
+.mr--s {
+  margin-right: var(--mS);
+}
+
+.mr--m {
+  margin-right: var(--mM);
+}
+
+.mr--l {
+  margin-right: var(--mL);
+}
+
+.mr--xl {
+  margin-right: var(--mXL);
+}
+
+.mr--2xl {
+  margin-right: var(--m2XL);
+}
+
+.mr--3xl {
+  margin-right: var(--m3XL);
+}
+
+.mr--4xl {
+  margin-right: var(--m4XL);
+}
+
+/* margin top utility */
+.mt--0 {
+  margin-top: 0;
+}
+
+.mt--2xs {
+  margin-top: var(--m2XS);
+}
+
+.mt--xs {
+  margin-top: var(--mXS);
+}
+
+.mt--s {
+  margin-top: var(--mS);
+}
+
+.mt-m {
+  margin-top: var(--mM);
+}
+
+.mt--l {
+  margin-top: var(--mL);
+}
+
+.mt--xl {
+  margin-top: var(--mXL);
+}
+
+.mt--2xl {
+  margin-top: var(--m2XL);
+}
+
+.mt--3xl {
+  margin-top: var(--m3XL);
+}
+
+.mt--4xl {
+  margin-top: var(--m4XL);
+}
+
+/* margin bottom utility */
+.mb--0 {
+  margin-bottom: 0;
+}
+
+.mb--2xs {
+  margin-bottom: var(--m2XS);
+}
+
+.mb--xs {
+  margin-bottom: var(--mXS);
+}
+
+.mb--s {
+  margin-bottom: var(--mS);
+}
+
+.mb--m {
+  margin-bottom: var(--mM);
+}
+
+.mb--l {
+  margin-bottom: var(--mL);
+}
+
+.mb--xl {
+  margin-bottom: var(--mXL);
+}
+
+.mb--2xl {
+  margin-bottom: var(--m2XL);
+}
+
+.mb--3xl {
+  margin-bottom: var(--m3XL);
+}
+
+.mb--4xl {
+  margin-bottom: var(--m4XL);
+}
+
+.color--light {
+  color: var(--colorBlack600);
+}
+
+.color--lighter {
+  color: var(--colorBlack400);
+}
+
+.fontstyle--italic {
+  font-style: oblique 12deg;
+}

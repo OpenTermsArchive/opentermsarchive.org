@@ -1,0 +1,71 @@
+input,
+select,
+textarea {
+  width: 100%;
+  padding: var(--pS) var(--pM);
+  font-size: 1.6rem;
+  color: var(--colorBlack800);
+  background-color: var(--colorWhite);
+  border: 1px solid var(--colorBlack400);
+  border-radius: 4px;
+
+  &::placeholder {
+    color: var(--colorBlack400);
+  }
+}
+
+select:disabled,
+input:is([disabled]):not([type='submit']) textarea:disabled {
+  background-color: var(--colorBlack400);
+}
+
+input[type='checkbox'] {
+  width: 2rem;
+  height: 2rem;
+  margin-right: var(--mXS);
+}
+
+label {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--mXS);
+  font-weight: bold;
+  color: var(--color1-600);
+}
+
+.label__inline {
+  display: inline-flex;
+  width: auto;
+}
+
+.formfield {
+  width: 100%;
+
+  & + .formfield {
+    margin-top: var(--mL);
+  }
+
+  &.formfield--align-right {
+    text-align: right;
+  }
+
+  &.formfield--flex {
+    display: flex;
+  }
+}
+
+.select {
+  position: relative;
+
+  & select {
+    position: relative;
+    appearance: none;
+  }
+
+  & svg {
+    position: absolute;
+    top: var(--mM);
+    right: var(--mS);
+    pointer-events: none;
+  }
+}
