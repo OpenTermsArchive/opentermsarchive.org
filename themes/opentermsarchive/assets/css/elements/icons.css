@@ -1,14 +1,14 @@
 .icon--circle {
-  background-color: var(--colorBlack400);
-  border-radius: 50%;
-  height: 28px;
-  width: 28px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 28px;
+  height: 28px;
+  background-color: var(--colorBlack400);
+  border-radius: 50%;
 
   &.icon--circle-medium {
-    height: 24px;
     width: 24px;
+    height: 24px;
   }
 }

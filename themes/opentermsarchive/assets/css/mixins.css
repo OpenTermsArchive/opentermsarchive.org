@@ -10,24 +10,24 @@
 /* Read https://stackoverflow.com/questions/18744164/flex-box-align-last-row-to-grid */
 @define-mixin gridAutoFillSpace {
   &::after {
-    content: '';
     flex: auto;
+    content: '';
   }
 }
 
 /* Grid generator */
 @define-mixin grid $colNumber, $gutterNumber {
+  width: 100%;
   max-width: calc(
     (var(--gridColWidth) * $(colNumber)) + (var(--gridGutterWidth) * $(gutterNumber))
   );
-  width: 100%;
 }
 
 /* Read https://ismamz.github.io/postcss-utilities/docs#word-wrap */
 @define-mixin word-wrap {
-  overflow-wrap: break-word;
   word-break: break-all;
   word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Read https://codepen.io/raphaelgoetter/pen/KMgBJd?editors=1100 */
@@ -38,25 +38,25 @@
 
 /* https://gist.github.com/MoOx/9137295 */
 @define-mixin resetButton {
-  border: none;
-  margin: 0;
-  padding: 0;
   width: auto;
+  padding: 0;
+  margin: 0;
   overflow: visible;
-  background: transparent;
-
-  /* inherit font & color from ancestor */
-  color: inherit;
   font: inherit;
 
   /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
   line-height: normal;
 
-  /* Corrects font smoothing for webkit */
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
+  /* inherit font & color from ancestor */
+  color: inherit;
 
   /* Corrects inability to style clickable `input` types in iOS */
   -webkit-appearance: none;
   cursor: pointer;
+  background: transparent;
+  border: none;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
 }

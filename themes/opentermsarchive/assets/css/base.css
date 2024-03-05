@@ -10,11 +10,11 @@ html {
 }
 
 body {
-  background-color: var(--colorWhite);
   font-family: var(--defaultFontFamily);
   font-size: var(--defaultFontSize);
-  color: var(--colorBlack900);
-  line-height: 1.6;
-  letter-spacing: -0.2px;
   font-weight: normal;
+  line-height: 1.6;
+  color: var(--colorBlack900);
+  letter-spacing: -0.2px;
+  background-color: var(--colorWhite);
 }

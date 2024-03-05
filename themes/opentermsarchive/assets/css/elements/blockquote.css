@@ -1,18 +1,15 @@
 blockquote {
-  padding-left: var(--p2XL);
   position: relative;
+  padding-left: var(--p2XL);
 
-  &:before {
-    left: 0;
+  &::before {
+    position: absolute;
     top: -4rem;
-  }
-
-  &:before {
+    left: 0;
+    font-size: 10rem;
     font-weight: bold;
     color: var(--colorBlack200);
-    font-size: 10rem;
     content: '“';
-    position: absolute;
     transform: rotate(-5deg);
   }
 }

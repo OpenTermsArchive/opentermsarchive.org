@@ -1,10 +1,10 @@
 .textcontent {
   & hr {
+    margin-bottom: var(--mXL);
     clear: both;
     border: 1px solid var(--colorBlack300);
-    margin-bottom: var(--mXL);
 
-    &:global(.mb--3xl) {
+    &.mb--3xl {
       margin-bottom: var(--m3XL);
     }
   }
@@ -16,11 +16,11 @@
       margin-bottom: 0;
     }
 
-    &:global(.mb--0) {
+    &.mb--0 {
       margin-bottom: 0;
     }
 
-    &:global(.mb--3xl) {
+    &.mb--3xl {
       margin-bottom: var(--m3XL);
     }
   }
@@ -36,15 +36,15 @@
       margin-bottom: var(--mXL);
     }
 
-    &:global(.mb--0) {
+    &.mb--0 {
       margin-bottom: 0;
     }
 
-    &:global(.mb__S) {
+    &.mb__S {
       margin-bottom: var(--mS);
     }
 
-    &:global(.mb__M) {
+    &.mb__M {
       margin-bottom: var(--mM);
     }
   }
@@ -56,7 +56,7 @@
       margin-bottom: var(--mL);
     }
 
-    &:global(.mb--0) {
+    &.mb--0 {
       margin-bottom: 0;
     }
   }
@@ -68,7 +68,7 @@
       margin-bottom: var(--mM);
     }
 
-    &:global(.mb--0) {
+    &.mb--0 {
       margin-bottom: 0;
     }
   }
@@ -80,19 +80,19 @@
       margin-bottom: var(--mS);
     }
 
-    &:global(.mb--0) {
+    &.mb--0 {
       margin-bottom: 0;
     }
 
-    &:global(.mb__XL) {
+    &.mb__XL {
       margin-bottom: var(--mXL);
     }
 
-    &:global(.mb--2xl) {
+    &.mb--2xl {
       margin-bottom: var(--m2XL);
     }
 
-    &:global(.mb--3xl) {
+    &.mb--3xl {
       margin-bottom: var(--m3XL);
     }
   }
@@ -104,7 +104,7 @@
       margin-bottom: var(--mXS);
     }
 
-    &:global(.mb--0) {
+    &.mb--0 {
       margin-bottom: 0;
     }
   }
@@ -116,7 +116,7 @@
       margin-bottom: var(--m2XS);
     }
 
-    &:global(.mb--0) {
+    &.mb--0 {
       margin-bottom: 0;
     }
   }
@@ -168,17 +168,17 @@
     position: relative;
 
     &::before {
-      content: '\2022'; /* \2022 is the CSS Code/unicode for a bullet */
-      color: var(--colorBlack400);
-      width: 1em;
-      left: calc(var(--mM) * -1);
       position: absolute;
+      left: calc(var(--mM) * -1);
+      width: 1em;
+      color: var(--colorBlack400);
+      content: '\2022'; /* \2022 is the CSS Code/unicode for a bullet */
     }
 
     & svg {
-      left: calc(var(--mL) * -1);
-      top: var(--m2XS);
       position: absolute;
+      top: var(--m2XS);
+      left: calc(var(--mL) * -1);
     }
 
     &:not(:last-child) {
@@ -205,7 +205,7 @@
       margin-bottom: var(--mL);
     }
 
-    &:global(.mb--0) {
+    &.mb--0 {
       margin-bottom: 0;
     }
   }

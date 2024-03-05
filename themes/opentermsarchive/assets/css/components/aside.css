@@ -1,14 +1,15 @@
 .aside {
   flex-shrink: 0;
-  margin-left: var(--mM);
   margin-top: var(--m4XL);
+  margin-left: var(--mM);
+
   @mixin grid 3, 3;
 }
 
 @media (--tabletSmall) {
   .aside {
-    margin-left: 0;
-    margin-top: var(--mXL);
     max-width: 100%;
+    margin-top: var(--mXL);
+    margin-left: 0;
   }
 }

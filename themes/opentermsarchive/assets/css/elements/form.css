@@ -1,13 +1,13 @@
 input,
 select,
 textarea {
-  font-size: 1.6rem;
-  border-radius: 4px;
-  background-color: var(--colorWhite);
-  padding: var(--pS) var(--pM);
-  border: 1px solid var(--colorBlack400);
   width: 100%;
+  padding: var(--pS) var(--pM);
+  font-size: 1.6rem;
   color: var(--colorBlack800);
+  background-color: var(--colorWhite);
+  border: 1px solid var(--colorBlack400);
+  border-radius: 4px;
 
   &::placeholder {
     color: var(--colorBlack400);
@@ -26,11 +26,11 @@ input[type='checkbox'] {
 }
 
 label {
-  color: var(--color1-600);
-  font-weight: bold;
   display: block;
   width: 100%;
   margin-bottom: var(--mXS);
+  font-weight: bold;
+  color: var(--color1-600);
 }
 
 .label__inline {
@@ -63,9 +63,9 @@ label {
   }
 
   & svg {
+    position: absolute;
     top: var(--mM);
     right: var(--mS);
-    position: absolute;
     pointer-events: none;
   }
 }

@@ -1,11 +1,11 @@
 a {
   color: var(--colorPrimary);
   text-decoration: none;
-  transition: all 0.3s easeOutExpo;
+  transition: all 0.3s easeoutexpo;
 
   &:hover {
     color: var(--colorSecondary);
-    transition: all 0.25s easeOutCirc;
+    transition: all 0.25s easeoutcirc;
   }
 }
 

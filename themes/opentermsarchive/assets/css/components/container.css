@@ -1,7 +1,7 @@
 .container {
-  margin: 0 auto;
   padding-top: var(--p4XL);
   padding-bottom: var(--p4XL);
+  margin: 0 auto;
 
   &.container--1211 {
     @mixin grid 12, 11;
@@ -53,8 +53,7 @@
 
   &.container--flex {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     gap: var(--mM);
 
     @media (--tabletSmall) {
@@ -63,9 +62,9 @@
   }
 
   &.container--fluid {
-    padding-left: var(--pL);
-    padding-right: var(--pL);
     max-width: 100%;
+    padding-right: var(--pL);
+    padding-left: var(--pL);
   }
 
   &.container--wide {
@@ -74,14 +73,14 @@
   }
 
   &.container--has-bg-image {
-    background-position: top;
     background-repeat: no-repeat;
+    background-position: top;
     background-size: cover;
   }
 
   &.container--is-dark {
-    background-color: var(--colorBlack900);
     color: var(--colorWhite);
+    background-color: var(--colorBlack900);
 
     & h1,
     & h2,
@@ -95,15 +94,15 @@
     background-color: var(--colorBlack200);
 
     & blockquote {
-      &:before {
+      &::before {
         color: var(--colorWhite);
       }
     }
   }
 
   &.container--has-no-padding-x {
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
 
   &.container--has-no-padding-left {
@@ -139,8 +138,8 @@
 
 @media (--gridPlus) {
   .container {
-    padding-left: var(--pL);
     padding-right: var(--pL);
+    padding-left: var(--pL);
   }
 }
 

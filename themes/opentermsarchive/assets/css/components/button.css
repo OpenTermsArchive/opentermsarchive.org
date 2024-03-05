@@ -1,17 +1,23 @@
 .button {
   @mixin resetButton;
+
   display: inline-flex;
   align-items: center;
-  background-color: var(--colorPrimary);
   padding: var(--pS) var(--pL);
   color: var(--colorWhite);
+  background-color: var(--colorPrimary);
   border-radius: 4px;
-  transition: all 0.3s easeOutExpo;
+  transition: all 0.3s easeoutexpo;
 
-  &:hover:not(:disabled) {
-    background-color: var(--colorSecondary);
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &:not(:disabled):hover {
     color: var(--colorWhite);
-    transition: all 0.25s easeOutCirc;
+    background-color: var(--colorSecondary);
+    transition: all 0.25s easeoutcirc;
   }
 
   & a {
@@ -20,9 +26,9 @@
   }
 
   &.button--secondary {
+    color: var(--colorPrimary);
     background-color: transparent;
     border: 1px solid var(--colorPrimary);
-    color: var(--colorPrimary);
 
     &:hover {
       border: 1px solid var(--colorSecondary);
@@ -34,17 +40,12 @@
   }
 
   &.button--has-only-icon {
-    padding-left: var(--pS);
     padding-right: var(--pS);
+    padding-left: var(--pS);
   }
 
   &.sm {
-    font-size: 0.8em;
     padding: var(--pXS) var(--pM);
-  }
-
-  &:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+    font-size: 0.8em;
   }
 }

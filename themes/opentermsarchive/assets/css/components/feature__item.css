@@ -1,7 +1,6 @@
 .featureitem {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   align-items: flex-start;
 
   &:not(:last-child) {
@@ -10,18 +9,17 @@
 }
 
 .featureitem__icon {
-  flex-shrink: 0;
-  border: 1px solid var(--colorBlack200);
-  width: var(--gridColWidth);
   display: flex;
-  justify-content: center;
+  flex-shrink: 0;
   align-items: center;
+  justify-content: center;
   width: 40px;
   height: 40px;
   padding: 4px;
-  margin: 0 calc((76px-40px) / 2);
-  border-radius: 10px;
+  margin: 0 calc((76px - 40px) / 2);
   background-color: var(--colorWhite);
+  border: 1px solid var(--colorBlack200);
+  border-radius: 10px;
 }
 
 @media (--tabletSmall) {

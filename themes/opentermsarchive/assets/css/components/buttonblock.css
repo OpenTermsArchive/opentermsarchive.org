@@ -1,51 +1,28 @@
 .buttonblock {
-  border: 1px solid var(--colorBlack200);
-  @mixin grid 3, 3;
-  text-align: center;
-  padding: var(--p2XL) var(--pM) var(--pXL) var(--pM);
   position: relative;
-  flex-shrink: 0;
-  border-radius: 4px;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
+  padding: var(--p2XL) var(--pM) var(--pXL) var(--pM);
+  text-align: center;
+  border: 1px solid var(--colorBlack200);
+  border-radius: 4px;
 
-  &.buttonblock--fillParent {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  &.buttonblock--is-dark {
-    background-color: var(--colorBlack900);
-    border: 1px solid var(--colorBlack900);
-    color: var(--colorWhite);
-
-    & h3 {
-      color: var(--colorWhite);
-    }
-
-    & a:hover {
-      color: var(--colorWhite);
-    }
-  }
-
-  &.buttonblock--is-white {
-    border: 1px solid var(--colorWhite);
-    background-color: var(--colorWhite);
-  }
+  @mixin grid 3, 3;
 }
 
 .buttonblock_icon {
   position: absolute;
-  background-color: var(--colorWhite);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
   top: -22px;
   left: 50%;
-  transform: translateX(-50%);
   display: flex;
   align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--colorWhite);
   border: 1px solid var(--colorBlack200);
+  border-radius: 50%;
+  transform: translateX(-50%);
 
   & svg {
     margin: 0 auto;
@@ -59,13 +36,38 @@
 }
 
 .buttonblock__actions {
-  margin-top: auto;
-  padding-top: var(--pM);
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: var(--pM);
+  margin-top: auto;
 
   & a:not(:first-child) {
     margin-top: var(--m2XS);
   }
 }
+
+.buttonblock--fillParent {
+  width: 100%;
+  max-width: 100%;
+}
+
+.buttonblock--is-dark {
+  color: var(--colorWhite);
+  background-color: var(--colorBlack900);
+  border: 1px solid var(--colorBlack900);
+
+  & h3 {
+    color: var(--colorWhite);
+  }
+
+  & a:hover {
+    color: var(--colorWhite);
+  }
+}
+
+.buttonblock--is-white {
+  background-color: var(--colorWhite);
+  border: 1px solid var(--colorWhite);
+}
+

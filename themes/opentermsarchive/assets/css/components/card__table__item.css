@@ -19,7 +19,7 @@
 }
 
 .cardtable__item__desc {
-  margin-left: auto;
   padding-left: var(--pS);
+  margin-left: auto;
   text-align: right;
 }
