@@ -1,7 +1,8 @@
 ---
 layout: media
 hero.title: Media
-html_title: Logos, copywriting rules and media releases
+html_title: Media
+html_description: Logos, copywriting rules and media releases
 ---
 
 ## Copywriting
