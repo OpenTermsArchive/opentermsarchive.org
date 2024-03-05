@@ -1,13 +1,13 @@
 <head>
   <meta charset="utf-8">
   <title>{{ with .Param "html_title" }}{{ . }}{{ else }}{{ .Title }}{{ end }}</title>
-  {{ with .Param "html_description"}}<meta name="description" content="{{ . }}" />{{ end }}
+  {{ with .Param "html_description"}}<meta name="description" content="{{ . }}">{{ end }}
   <meta name="viewport" content="width=device-width,initial-scale=1">
   {{ $styles := resources.Get "css/loader.css" | toCSS | postCSS (dict "config" "./assets/css/postcss.config.js") }}
-	{{ if hugo.IsServer }}
-		<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-	{{ else }}
-		{{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
-		<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
-	{{ end }}
+  {{ if hugo.IsServer }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+  {{ else }}
+  {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+  {{ end }}
 </head>

@@ -1,14 +1,14 @@
 {{ define "main" }}
-  {{ $sortedPages := slice }}
-  {{ range .Pages }}
-    {{ $m := dict "date" (index .Params.dates 0) "page" . }}
-    {{ $sortedPages = $sortedPages | append $m }}
+{{ $sortedPages := slice }}
+{{ range .Pages }}
+{{ $m := dict "date" (index .Params.dates 0) "page" . }}
+{{ $sortedPages = $sortedPages | append $m }}
+{{ end }}
+<ul>
+  {{ range sort $sortedPages "date" "desc" }}
+  <li>
+    <a href="{{ .page.RelPermalink }}">{{ .page.LinkTitle }}</a> {{ range .page.Params.dates }}{{ . }} ▪ {{ end }}
+  </li>
   {{ end }}
-  <ul>
-    {{ range sort $sortedPages "date" "desc" }}
-      <li>
-          <a href="{{ .page.RelPermalink }}">{{ .page.LinkTitle }}</a> {{ range .page.Params.dates }}{{ . }} ▪ {{ end }}
-        </li>
-    {{ end }}
-  </ul>
+</ul>
 {{ end }}

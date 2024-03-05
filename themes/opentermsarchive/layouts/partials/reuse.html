@@ -1,14 +1,18 @@
-<hr />
+<hr >
 <div>
   {{ $translatedImagePath := (printf "/images/reuses/%s-%s.png" .filename site.Language.Lang) }}
   {{ $commonImagePath := (printf "/images/reuses/%s.png" .filename) }}
   {{ $image := resources.Get $translatedImagePath }}
   {{ if eq $image nil }}
-    {{ $image = resources.Get $commonImagePath }}
+  {{ $image = resources.Get $commonImagePath }}
   {{ end }}
-  <div><img src="{{ $image.RelPermalink }}" alt="" /></div>
+  <div>
+    <img src="{{ $image.RelPermalink }}" alt="">
+  </div>
   <div>title: {{ index .data.title site.Language.Lang }}</div>
   <div>description: {{ index .data.description site.Language.Lang }}</div>
   <div>author: {{ index .data.author site.Language.Lang }}</div>
-  <div>link: <a href="{{ .data.website }}" target="_blank" rel="noopener">{{ .data.website }}</a></div>
+  <div>
+    link: <a href="{{ .data.website }}" target="_blank" rel="noopener">{{ .data.website }}</a>
+  </div>
 </div>

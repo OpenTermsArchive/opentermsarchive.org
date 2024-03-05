@@ -1,7 +1,7 @@
 <div class="collections">
   {{ with .Params.collections.title }}<h2>{{ . }}</h2>{{ end }}
   {{ range $name, $data := site.Data.collections }}
-    {{ partial "card.html" (dict "name" $name "data" $data) }}
+  {{ partial "card.html" (dict "name" $name "data" $data) }}
   {{ end }}
   {{ partial "new-collection.html" . }}
 </div>

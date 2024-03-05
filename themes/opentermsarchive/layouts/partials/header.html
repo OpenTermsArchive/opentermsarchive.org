@@ -2,17 +2,17 @@
   <nav aria-label="Primary">
     <ul>
       {{ range .Site.Menus.header }}
-        <li>
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
+      <li>
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
       {{ end }}
     </ul>
   </nav>
   <nav aria-label="Languages">
     {{ if .IsTranslated }}
-      {{ range .Translations }}
-        <a  href="{{ .Permalink }}">{{ .Language.Lang | upper }}</a>
-      {{ end }}
+    {{ range .Translations }}
+    <a href="{{ .Permalink }}">{{ .Language.Lang | upper }}</a>
+    {{ end }}
     {{ end }}
   </nav>
 </header>

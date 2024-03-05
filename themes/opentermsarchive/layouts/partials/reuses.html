@@ -2,17 +2,17 @@
   {{ with .Params.reuses.title }}<h2>{{ . }}</h2>{{ end }}
   {{ with .Params.reuses.subtitle }}<h3>{{ . }}</h3>{{ end }}
   {{/*
-    As Hugo removes the first level keys when sorting the reuses map,
-    we recreate a temporary reuses collection which stores the filename,
-    to be able to display the reuse image in the partial
+  As Hugo removes the first level keys when sorting the reuses map,
+  we recreate a temporary reuses collection which stores the filename,
+  to be able to display the reuse image in the partial
   */}}
   {{ $reusesWithfilenames := slice }}
   {{ range $filename, $data := site.Data.reuses }}
-    {{ $reusesWithfilenames = $reusesWithfilenames | append (dict "filename" $filename "data" $data) }}
+  {{ $reusesWithfilenames = $reusesWithfilenames | append (dict "filename" $filename "data" $data) }}
   {{ end }}
   {{ $sortedReuses := sort $reusesWithfilenames "data.weight" }}
   {{ range $sortedReuses }}
-    {{ partial "reuse.html" . }}
+  {{ partial "reuse.html" . }}
   {{ end }}
   {{ partial "new-reuse.html" . }}
 </div>

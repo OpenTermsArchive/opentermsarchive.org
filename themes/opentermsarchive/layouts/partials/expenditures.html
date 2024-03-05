@@ -8,10 +8,10 @@
   </thead>
   <tbody>
     {{ range $date, $value := site.Data.budget.expenditures }}
-      <tr scope="row">
-        <td>{{ $date }}</td>
-        <td>{{ $value }}</td>
-      </tr>
+    <tr scope="row">
+      <td>{{ $date }}</td>
+      <td>{{ $value }}</td>
+    </tr>
     {{ end }}
   </tbody>
 </table>

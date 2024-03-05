@@ -1,68 +1,68 @@
 {{ define "main" }}
-  {{ .Content }}
-  <hr />
-  <div>
-    <h3>{{ i18n "about.core.title" }}</h3>
-    <p>{{ i18n "about.core.subtitle" }}</p>
-    {{ partial "contributors.html" (dict "type" "core" "thumbnailWidth" 88 "thumbnailHeight" 88 "showInfo" true "class" "contributors--has-no-margin-top" ) }}
+{{ .Content }}
+<hr >
+<div>
+  <h3>{{ i18n "about.core.title" }}</h3>
+  <p>{{ i18n "about.core.subtitle" }}</p>
+  {{ partial "contributors.html" (dict "type" "core" "thumbnailWidth" 88 "thumbnailHeight" 88 "showInfo" true "class" "contributors--has-no-margin-top" ) }}
+</div>
+<div>
+  <h4>{{ i18n "about.alumni.title" }}</h4>
+  <p>{{ i18n "about.alumni.subtitle" }}</p>
+  {{ partial "contributors.html" (dict "type" "alumni" "showInfo" true "class" "mb--2xl contributors--has-no-margin-top" ) }}
+</div>
+<div>
+  <h3>{{ i18n "about.incubator.title" }}</h3>
+  <p>{{ i18n "about.incubator.subtitle" }}</p>
+  <div class="thumbgallery mb--2xl">
+    <div class="thumbgallery__items thumbgallery__items--has-no-margin-top">
+      <a href="https://disinfo.quaidorsay.fr" target="_blank" rel="noopener" aria-label="{{ i18n "about.incubator.subtitle" }}">
+        <div class="thumbgallery__itemememem">
+          <img src="{{ (resources.Get "/images/contributors/ambassadeur-francais-pour-le-numerique.png").RelPermalink }}" width="158" height="80" />
+        </div>
+      </a>
+    </div>
   </div>
-  <div>
-    <h4>{{ i18n "about.alumni.title" }}</h4>
-    <p>{{ i18n "about.alumni.subtitle" }}</p>
-    {{ partial "contributors.html" (dict "type" "alumni" "showInfo" true "class" "mb--2xl contributors--has-no-margin-top" ) }}
-  </div>
-  <div>
-    <h3>{{ i18n "about.incubator.title" }}</h3>
-    <p>{{ i18n "about.incubator.subtitle" }}</p>
-    <div class="thumbgallery mb--2xl">
-      <div class="thumbgallery__items thumbgallery__items--has-no-margin-top">
-        <a href="https://disinfo.quaidorsay.fr" target="_blank" rel="noopener" aria-label="{{ i18n "about.incubator.subtitle" }}">
-          <div class="thumbgallery__itemememem">
-            <img src="{{ (resources.Get "/images/contributors/ambassadeur-francais-pour-le-numerique.png").RelPermalink }}" width="158" height="80" />
-          </div>
-        </a>
+</div>
+<div>
+  <h3>{{ i18n "about.funders.title" }}</h3>
+  <p>{{ i18n "about.funders.subtitle" }}</p>
+  <div class="thumbgallery thumbgalery--is-small mb--2xl">
+    <div class="thumbgallery__items thumbgallery__items--has-no-margin-top">
+      <div class="thumbgallery__item">
+        <img src="{{ (resources.Get "/images/contributors/meae.png").RelPermalink }}" width="130" height="117" />
+      </div>
+      <div class="thumbgallery__item">
+        <img src="{{ (resources.Get "/images/contributors/france-relance.png").RelPermalink }}" width="77" height="77" />
+      </div>
+      <div class="thumbgallery__item">
+        <img src="{{ (resources.Get "/images/contributors/nextgen.png").RelPermalink }}" width="220" height="48" />
+      </div>
+      <div class="thumbgallery__item">
+        <img src="{{ (resources.Get "/images/contributors/reset.png").RelPermalink }}" width="101" height="29" />
+      </div>
+      <div class="thumbgallery__item">
+        <img src="{{ (resources.Get "/images/contributors/nlnet.png").RelPermalink }}" width="160" height="120" />
+      </div>
+      <div class="thumbgallery__item">
+        <img src="{{ (resources.Get "/images/contributors/european-commission.png").RelPermalink }}" width="144" height="100" />
+      </div>
+      <div class="thumbgallery__item">
+        <img src="{{ (resources.Get "/images/contributors/dinum.png").RelPermalink }}" width="320" height="80" />
       </div>
     </div>
   </div>
-  <div>
-    <h3>{{ i18n "about.funders.title" }}</h3>
-    <p>{{ i18n "about.funders.subtitle" }}</p>
-    <div class="thumbgallery thumbgalery--is-small mb--2xl">
-      <div class="thumbgallery__items thumbgallery__items--has-no-margin-top">
-        <div class="thumbgallery__item">
-          <img src="{{ (resources.Get "/images/contributors/meae.png").RelPermalink }}" width="130" height="117" />
-        </div>
-        <div class="thumbgallery__item">
-          <img src="{{ (resources.Get "/images/contributors/france-relance.png").RelPermalink }}" width="77" height="77" />
-        </div>
-        <div class="thumbgallery__item">
-          <img src="{{ (resources.Get "/images/contributors/nextgen.png").RelPermalink }}" width="220" height="48" />
-        </div>
-        <div class="thumbgallery__item">
-          <img src="{{ (resources.Get "/images/contributors/reset.png").RelPermalink }}" width="101" height="29" />
-        </div>
-        <div class="thumbgallery__item">
-          <img src="{{ (resources.Get "/images/contributors/nlnet.png").RelPermalink }}" width="160" height="120" />
-        </div>
-        <div class="thumbgallery__item">
-          <img src="{{ (resources.Get "/images/contributors/european-commission.png").RelPermalink }}" width="144" height="100" />
-        </div>
-        <div class="thumbgallery__item">
-          <img src="{{ (resources.Get "/images/contributors/dinum.png").RelPermalink }}" width="320" height="80" />
-        </div>
-      </div>
-    </div>
-    <p>{{ i18n "about.funders.details" | markdownify }}</p>
-  </div>
-  <div>
-    <h3>{{ i18n "about.community_managers.title" }}</h3>
-    <p>{{ i18n "about.community_managers.subtitle" }}</p>
-    {{ partial "contributors.html" (dict "type" "communityManagers" "showInfo" true "class" "mb--2xl contributors--has-no-margin-top" ) }}
-  </div>
-  <div>
-    <h3>{{ i18n "about.contributors.title" }}</h3>
-    {{ $impactLink := .RelRef (dict "path" "/impact") }}
-    <p>{{ i18n "about.contributors.subtitle" (dict "impactLink" $impactLink) | markdownify }}</p>
-    {{ partial "contributors.html" (dict "type" "contributors" ) }}
-  </div>
+  <p>{{ i18n "about.funders.details" | markdownify }}</p>
+</div>
+<div>
+  <h3>{{ i18n "about.community_managers.title" }}</h3>
+  <p>{{ i18n "about.community_managers.subtitle" }}</p>
+  {{ partial "contributors.html" (dict "type" "communityManagers" "showInfo" true "class" "mb--2xl contributors--has-no-margin-top" ) }}
+</div>
+<div>
+  <h3>{{ i18n "about.contributors.title" }}</h3>
+  {{ $impactLink := .RelRef (dict "path" "/impact") }}
+  <p>{{ i18n "about.contributors.subtitle" (dict "impactLink" $impactLink) | markdownify }}</p>
+  {{ partial "contributors.html" (dict "type" "contributors" ) }}
+</div>
 {{ end }}

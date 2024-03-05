@@ -8,10 +8,10 @@
   </thead>
   <tbody>
     {{ range site.Data.budget.funding_sources }}
-      <tr scope="row">
-        <td>{{ index .title site.Language.Lang }}</td>
-        <td>{{ .value }}</td>
-      </tr>
+    <tr scope="row">
+      <td>{{ index .title site.Language.Lang }}</td>
+      <td>{{ .value }}</td>
+    </tr>
     {{ end }}
   </tbody>
 </table>
