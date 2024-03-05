@@ -22,9 +22,6 @@
   }
 }
 
-.header {
-}
-
 @media (--gridPlus) {
   .header {
     padding-left: var(--pL);

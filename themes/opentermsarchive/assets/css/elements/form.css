@@ -12,8 +12,6 @@ textarea {
   &::placeholder {
     color: var(--colorBlack400);
   }
-
-  /* TODO size modifier */
 }
 
 select:disabled,

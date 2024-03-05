@@ -136,18 +136,6 @@
   }
 }
 
-.column__header {
-}
-
-.column__title {
-}
-
-.column__subtitle {
-}
-
 .column__title + .column__subtitle {
   margin-top: var(--mXS);
-}
-
-.column__desc {
 }

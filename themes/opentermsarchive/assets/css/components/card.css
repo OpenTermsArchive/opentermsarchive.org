@@ -102,9 +102,6 @@
   padding: var(--pL) var(--pM) var(--pM) var(--pM);
 }
 
-.card__title {
-}
-
 .card__subtitle {
   margin: var(--mS) 0 var(--mXL);
   font-size: 1.8rem;
@@ -144,6 +141,4 @@
 
 .card__author_icon {
   margin-right: var(--mXS);
-}
-.card__author_desc {
 }
