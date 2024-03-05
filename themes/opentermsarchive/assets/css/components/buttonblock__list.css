@@ -1,16 +1,7 @@
-.buttonblocklist {
-}
-
 .buttonblocklist_header {
   text-align: center;
   @mixin grid 9, 8;
   margin: 0 auto;
-}
-
-.buttonblocklist_subtitle {
-}
-
-.buttonblocklist_title {
 }
 
 .buttonblocklist_items {
