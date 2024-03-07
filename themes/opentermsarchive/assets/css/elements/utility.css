@@ -8,18 +8,6 @@
 }
 
 /* align utility */
-.text--center {
-  text-align: center;
-}
-
-.text--right {
-  text-align: right;
-}
-
-.text--left {
-  text-align: left;
-}
-
 .center {
   margin-right: auto;
   margin-left: auto;
@@ -353,14 +341,40 @@
   margin-bottom: var(--m4XL);
 }
 
+.text--light {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--colorBlack600);
+  letter-spacing: -0.2px;
+}
+
+.text--smallcaps {
+  font-size: 1.2rem;
+  color: var(--colorBlack800);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.text--left {
+  text-align: left;
+}
+ 
+.fontstyle--italic {
+  font-style: oblique 12deg;
+}
+
 .color--light {
   color: var(--colorBlack600);
 }
 
 .color--lighter {
   color: var(--colorBlack400);
-}
-
-.fontstyle--italic {
-  font-style: oblique 12deg;
 }

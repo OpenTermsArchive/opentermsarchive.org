@@ -40,11 +40,11 @@
       margin-bottom: 0;
     }
 
-    &.mb__S {
+    &.mb--s {
       margin-bottom: var(--mS);
     }
 
-    &.mb__M {
+    &.mb--m {
       margin-bottom: var(--mM);
     }
   }

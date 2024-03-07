@@ -20,7 +20,6 @@
 @import 'themes/opentermsarchive/assets/css/elements/fonts.css';
 @import 'themes/opentermsarchive/assets/css/elements/form.css';
 @import 'themes/opentermsarchive/assets/css/elements/icons.css';
-@import 'themes/opentermsarchive/assets/css/elements/inline.css';
 @import 'themes/opentermsarchive/assets/css/elements/links.css';
 @import 'themes/opentermsarchive/assets/css/elements/table.css';
 @import 'themes/opentermsarchive/assets/css/elements/titles.css';
@@ -34,15 +33,15 @@
 @import "themes/opentermsarchive/assets/css/components/buttonblock.css";
 @import "themes/opentermsarchive/assets/css/components/buttonblocklist.css";
 @import "themes/opentermsarchive/assets/css/components/card.css";
-@import "themes/opentermsarchive/assets/css/components/card__list.css";
-@import "themes/opentermsarchive/assets/css/components/card__table.css";
-@import "themes/opentermsarchive/assets/css/components/card__table__item.css";
+@import "themes/opentermsarchive/assets/css/components/cardlist.css";
+@import "themes/opentermsarchive/assets/css/components/cardtable.css";
+@import "themes/opentermsarchive/assets/css/components/cardtable__item.css";
 @import "themes/opentermsarchive/assets/css/components/column.css";
 @import "themes/opentermsarchive/assets/css/components/container.css";
 @import "themes/opentermsarchive/assets/css/components/contributors.css";
 @import "themes/opentermsarchive/assets/css/components/distinctions.css";
 @import "themes/opentermsarchive/assets/css/components/divider.css";
-@import "themes/opentermsarchive/assets/css/components/feature__item.css";
+@import "themes/opentermsarchive/assets/css/components/featureitem.css";
 @import "themes/opentermsarchive/assets/css/components/footer.css";
 @import "themes/opentermsarchive/assets/css/components/footer__menu.css";
 @import "themes/opentermsarchive/assets/css/components/header.css";
