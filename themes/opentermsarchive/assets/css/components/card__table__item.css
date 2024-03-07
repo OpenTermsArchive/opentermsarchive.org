@@ -1,8 +1,8 @@
 .cardtable__item {
   display: flex;
-  align-items: flex-start;
   padding-top: var(--m2XS);
   padding-bottom: var(--m2XS);
+  align-items:flex-start;
 
   &:not(:first-child) {
     border-top: 1px solid var(--colorBlack200);
@@ -11,7 +11,12 @@
 
 .cardtable__item__icon {
   flex-shrink: 0;
-  margin-top: var(--m3XS);
+  display:flex;
+  margin-top:var(--m2XS);
+
+  & svg{
+    margin: auto;
+  }
 }
 
 .cardtable__item__title {

@@ -81,3 +81,20 @@ how_it_works:
   step4:
     title: 4. Diffusion
     subtitle: Nous publions toutes les versions dans des jeux de données pour soutenir leur réutilisation et la recherche.
+collections:
+  services: Services
+  documents: Documents
+  language:
+    one: Langue
+    other: Langues
+  language_various: diverses
+  language_europe: Union européenne
+  jurisdiction: 
+      one: Juridiction
+      other: Juridictions
+  cta:
+    browse: Voir les documents
+    download: Télécharger le jeu de données
+    endpoint: API de métadonnées
+  volunteer_contributors: Contributeurs bénévoles
+  new: Vous voulez suivre des services visant une autre langue, juridiction ou industrie ? Contactez-nous pour commencer à collaborer !

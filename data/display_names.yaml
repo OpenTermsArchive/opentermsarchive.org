@@ -1,0 +1,20 @@
+languages:
+  fr:
+    en: anglais
+    fr: français
+  en:
+    en: english
+    fr: french
+regions:
+  fr:
+    EU: Union européenne
+    CH: Suisse
+    CN: Chine
+    FR: France
+    US: États-Unis
+  en:
+    EU: European Union
+    CH: Switzerland
+    CN: China
+    FR: France
+    US: United States
