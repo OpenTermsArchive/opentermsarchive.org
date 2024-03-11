@@ -1,6 +1,39 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<div>
-  {{ .Content }}
-</div>
+  <div class="container container--87 container--has-no-padding-bottom">
+    <div class="textcontent">
+      <h1>{{ .Title }}</h1>
+      <div>{{ .Content }}</div>
+    </div>
+  </div>
+  {{ with .Params.related_collections }}
+    {{ $relatedCollections := . }}
+    {{ $relatedCollectionslinksTo := slice "version" }}
+    <div class="container container--is-white container--wide container--has-no-padding-x container--has-no-padding-y" id="related-collections">
+      <div class="container container--87 container--has-no-padding-y">
+        <div class="collections cardlist">
+          <div class="cardlist__header">
+            <h3 class="cardlist__title mt--2xl">{{ i18n "impact.related_collections" }}</h3>
+          </div>
+          <div class="cardlist__items">
+            {{ range $name, $data := site.Data.collections }}
+              {{ if (in $relatedCollections $data.id) }}
+                {{ partial "collection.html" (dict "title" $name "data" $data "linksTo" $relatedCollectionslinksTo) }}
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+  <div class="container container--wide container--has-no-padding-y">
+    <div class="container container--87">
+      <div class="textcontent">
+        <hr />
+        <p class="color--light fontstyle--italic">
+          {{ i18n "impact.reminder" }}
+          <a href="{{ .RelRef (dict "path" "/impact") }}">{{ i18n "impact.link" }}</a>
+        </p>
+      </div>
+    </div>
+  </div>
 {{ end }}

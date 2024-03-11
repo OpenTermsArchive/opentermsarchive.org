@@ -98,3 +98,7 @@ collections:
     endpoint: Metadata API
   volunteer_contributors: Volunteer contributors
   new: Want to track services for different languages, jurisdictions, or industries? Contact us to collaborate!
+impact:
+  related_collections: Related collections
+  reminder: Open Terms Archive publicly records the terms of services of online services in different languages and countries several times a day, increasing their readability and highlighting their changes. It is designed as a tool to steer platform governance towards increased accountability, improved legislation and stronger regulatory compliance.
+  link: Read more on our impact model.
