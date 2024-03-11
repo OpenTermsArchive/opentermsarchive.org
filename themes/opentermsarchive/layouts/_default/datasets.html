@@ -1,6 +1,12 @@
 {{ define "main" }}
-{{ .Content }}
-{{ partial "collections.html" . }}
-<hr >
-{{ partial "related-datasets.html" . }}
+  <div class="container container--has-no-padding-y">
+  <div class="container container--98 container--has-no-padding-bottom">
+      <div class="textcontent">
+        {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+  {{ partial "collections.html" . }}
+  {{ partial "related-datasets.html" . }}
 {{ end }}
