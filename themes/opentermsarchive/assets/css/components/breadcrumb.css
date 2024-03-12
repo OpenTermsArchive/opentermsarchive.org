@@ -1,0 +1,20 @@
+.breadcrumb {
+
+  & ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  & li:not(:first-child) {
+    margin-left: var(--m2XS);
+  }
+
+  & i {
+    font-size: 8px;
+    display: block;
+  }
+
+  & svg {
+    display: flex;
+  }
+}
