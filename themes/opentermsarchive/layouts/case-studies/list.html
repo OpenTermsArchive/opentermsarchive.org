@@ -1,14 +1,32 @@
 {{ define "main" }}
-{{ $sortedPages := slice }}
-{{ range .Pages }}
-{{ $m := dict "date" (index .Params.dates 0) "page" . }}
-{{ $sortedPages = $sortedPages | append $m }}
-{{ end }}
-<ul>
-  {{ range sort $sortedPages "date" "desc" }}
-  <li>
-    <a href="{{ .page.RelPermalink }}">{{ .page.LinkTitle }}</a> {{ range .page.Params.dates }}{{ . }} ▪ {{ end }}
-  </li>
-  {{ end }}
-</ul>
+  {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "subtitle" .Params.hero.subtitle "size" "109") }}
+  <div class="container container--has-no-padding-y">
+    <div class="container container--has-no-padding-top container--109">
+      <div class="textcontent">
+        {{ $sortedPages := slice }}
+        {{ range .Pages }}
+        {{ $m := dict "date" (index .Params.dates 0) "page" . }}
+        {{ $sortedPages = $sortedPages | append $m }}
+        {{ end }}
+        {{ range sort $sortedPages "date" "desc" }}
+          <div class="mb--xl">
+            <h4 class="mb--0">
+              <a href="{{ .page.RelPermalink }}">{{ .page.LinkTitle }}</a>
+            </h4>
+            <div class="text--smallcaps mt--2xs">
+              {{ .page.Params.service }} ▪ 
+              {{ delimit .page.Params.terms_types " , " }} ▪ 
+              {{ $formatedDates := slice }}
+              {{ range .page.Params.dates }}
+                {{ $formatedDate := ( . | time.Format ":date_long") }}
+                {{ $formatedDates = $formatedDates | append $formatedDate }}
+              {{ end }}
+              {{ delimit $formatedDates " - " }}
+             </div>
+            <hr class="mt--xl" />
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
 {{ end }}
