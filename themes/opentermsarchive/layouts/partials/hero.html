@@ -1,5 +1,5 @@
-<div class="container container--is-dark container--has-no-padding-y" id="mission-statement">
-  <div class="container container--1211 container--flex container--has-no-padding-x container--has-no-padding-y">
+<div class="container {{ with .dark }}container--is-dark{{ end }} container--has-no-padding-y" id="mission-statement">
+  <div class="container {{ with .size }}container--{{ . }}{{ else }}container--1211{{ end }} container--flex container--has-no-padding-y">
     <div class="hero {{ with .class }}{{ . }}{{ end }}">
       {{ with .title }}<h1 class="hero__title">{{ . }}</h1>{{ end }}
       {{ with .subtitle }}
