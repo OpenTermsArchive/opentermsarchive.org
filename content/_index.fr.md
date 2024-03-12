@@ -1,5 +1,5 @@
 ---
-html_title: Open Terms Archive
+title: Open Terms Archive
 html_description: Open Terms Archive enregistre publiquement chaque version des conditions d'utilisation des services en ligne pour en permettre le contrôle démocratique.
 hero:
   title: <span>Les Big Tech bénéficient de l'opacité de leurs conditions d'utilisation.</span><br /> Nous les rendons transparentes.

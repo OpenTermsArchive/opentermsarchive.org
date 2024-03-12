@@ -1,5 +1,5 @@
 ---
-html_title: À propos
+title: À propos
 html_description: Open Terms Archive est un logiciel libre et ouvert visant à devenir un commun numérique.
 slug: /a-propos
 layout: about

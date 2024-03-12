@@ -1,5 +1,5 @@
 ---
-html_title: About
+title: About
 html_description: Open Terms Archive is free and open source software aiming at becoming a digital common.
 layout: about
 ---
