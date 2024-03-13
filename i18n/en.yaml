@@ -102,3 +102,23 @@ impact:
   related_collections: Related collections
   reminder: Open Terms Archive publicly records the terms of services of online services in different languages and countries several times a day, increasing their readability and highlighting their changes. It is designed as a tool to steer platform governance towards increased accountability, improved legislation and stronger regulatory compliance.
   link: Read more on our impact model.
+stats:
+  title: As of {{ .date }}
+  services:
+    title: "{{ .number }}+ services"
+    desc: spread over industries, languages and jurisdictions
+  terms:
+    title: "{{ .number }}+ terms"
+    desc: classified along a taxonomy of over fifty terms types
+  analysis:
+    title: "{{ .number }}+ analysis"
+    desc: published in the form of short stories and tweets
+  contributors:
+    title: "{{ .number }} contributors"
+    desc: that allow Open Terms Archive to exist
+  reuses:
+    title: "{{ .number }} reuses"
+    desc: that illustrate the value of this data
+  collections:
+    title: "{{ .number }} collections"
+    desc: maintained by various partners

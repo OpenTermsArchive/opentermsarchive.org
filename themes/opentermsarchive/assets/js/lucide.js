@@ -15,6 +15,10 @@ import {
   Users,
   User,
   Map,
+  Globe,
+  Eye,
+  Layers,
+  Flag,
   createIcons,
 } from 'lucide';
 
@@ -35,6 +39,10 @@ createIcons({
     Wrench,
     Users,
     User,
+    Globe,
+    Eye,
+    Layers,
+    Flag,
     Map
   }
 });

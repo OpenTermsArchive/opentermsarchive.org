@@ -7,11 +7,11 @@
   text-align: center;
   border: 1px solid var(--colorBlack200);
   border-radius: 4px;
-
   @mixin grid 3, 3;
+  margin: 0 var(--gridGutterWidth) var(--m2XL) var(--gridGutterWidth);
 }
 
-.buttonblock_icon {
+.buttonblock__icon {
   position: absolute;
   top: -22px;
   left: 50%;
@@ -30,44 +30,7 @@
 }
 
 .buttonblock__title {
-  & + .buttonblock_desc {
+  & + .buttonblock__desc {
     margin-top: var(--mXS);
   }
 }
-
-.buttonblock__actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: var(--pM);
-  margin-top: auto;
-
-  & a:not(:first-child) {
-    margin-top: var(--m2XS);
-  }
-}
-
-.buttonblock--fillParent {
-  width: 100%;
-  max-width: 100%;
-}
-
-.buttonblock--is-dark {
-  color: var(--colorWhite);
-  background-color: var(--colorBlack900);
-  border: 1px solid var(--colorBlack900);
-
-  & h3 {
-    color: var(--colorWhite);
-  }
-
-  & a:hover {
-    color: var(--colorWhite);
-  }
-}
-
-.buttonblock--is-white {
-  background-color: var(--colorWhite);
-  border: 1px solid var(--colorWhite);
-}
-
