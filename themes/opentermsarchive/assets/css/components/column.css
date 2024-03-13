@@ -1,5 +1,4 @@
 .column {
-
   &.column--5 {
     width: calc(5% - (var(--gridGutterWidth) / 2));
   }
@@ -81,23 +80,23 @@
   }
 
   &.column--align-x-center {
-    justify-content: center;
     display: flex;
+    justify-content: center;
   }
 
   &.column--align-x-right {
-    justify-content: flex-end;
     display: flex;
+    justify-content: flex-end;
   }
 
   &.column--align-y-center {
-    align-items: center;
     display: flex;
+    align-items: center;
   }
 
   &.column--align-y-bottom {
-    align-items: flex-end;
     display: flex;
+    align-items: flex-end;
   }
 
   &:not(:first-child) {

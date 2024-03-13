@@ -2,11 +2,12 @@
   width: 100%;
   padding: 0 0 var(--pL) 0;
 }
+
 .version {
-  color: var(--colorBlack400);
   font-size: 0.8em;
-  text-align: right;
   font-style: italic;
+  color: var(--colorBlack400);
+  text-align: right;
 }
 
 @media (--tabletLarge) {

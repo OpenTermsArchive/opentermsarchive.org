@@ -1,12 +1,13 @@
 .buttonblocklist__header {
   margin: 0 auto;
   text-align: center;
+
   @mixin grid 9, 8;
 }
 
 .buttonblocklist__items {
   @mixin grid 12, 11;
-  border:1pxs solid red;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
