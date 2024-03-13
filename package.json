@@ -13,7 +13,7 @@
   "license": "EUPL v1.2",
   "author": "Open Terms Archive",
   "scripts": {
-    "build": "hugo --minify",
+    "build": "hugo --minify --cleanDestinationDir",
     "test": "npm run lint:markdown && npm run lint:css && npm run lint:js && npm run lint:html && npm run test:links && npm run test:html",
     "pretest:links": "npm run build",
     "test:links": "linkinator ./public --recurse --verbosity error",
