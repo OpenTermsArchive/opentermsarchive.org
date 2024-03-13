@@ -43,6 +43,6 @@ createIcons({
     Eye,
     Layers,
     Flag,
-    Map
-  }
+    Map,
+  },
 });
