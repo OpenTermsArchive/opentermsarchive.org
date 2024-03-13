@@ -2,9 +2,9 @@
 {{ $bgColor := "gray" }}
 {{ $isDatasetsPage := false }}
 {{ if eq (relref . "/datasets") .Page.RelPermalink }}
-  {{ $linksTo = slice "dataset" "endpoint" }}
-  {{ $bgColor = "white" }}
-  {{ $isDatasetsPage = true }}
+{{ $linksTo = slice "dataset" "endpoint" }}
+{{ $bgColor = "white" }}
+{{ $isDatasetsPage = true }}
 {{ end }}
 
 {{/*
@@ -14,7 +14,7 @@ we create a new slice which stores it with all necessary data
 */}}
 {{ $collections := slice }}
 {{ range $name, $data := site.Data.collections }}
-  {{ $collections = $collections | append (dict "name" $name "data" $data) }}
+{{ $collections = $collections | append (dict "name" $name "data" $data) }}
 {{ end }}
 {{ $collectionsSortedByWeight := sort $collections "data.weight"}}
 
@@ -22,16 +22,16 @@ we create a new slice which stores it with all necessary data
   <div class="container container--1211 {{ with $isDatasetsPage }}container--has-no-padding-bottom{{ end }}">
     <div class="collections cardlist">
       {{ with .Params.collections.title }}
-        <div class="cardlist__header cardlist__header--is-center">
-          <h2 class="cardlist__title">{{ . }}</h2>
-        </div>
+      <div class="cardlist__header cardlist__header--is-center">
+        <h2 class="cardlist__title">{{ . }}</h2>
+      </div>
       {{ end }}
       <div class="cardlist__items">
         {{ range $collectionsSortedByWeight }}
-          {{ partial "collection.html" (dict "title" .name "data" .data "linksTo" $linksTo) }}
+        {{ partial "collection.html" (dict "title" .name "data" .data "linksTo" $linksTo) }}
         {{ end }}
         {{ if not (eq "/datasets/" .Page.RelPermalink) }}
-          {{ partial "new-collection.html" . }}
+        {{ partial "new-collection.html" . }}
         {{ end }}
       </div>
     </div>

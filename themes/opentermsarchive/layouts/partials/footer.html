@@ -1,26 +1,30 @@
 <div class="container container--has-no-padding-y container--fluid container--has-no-padding-x container--is-gray">
   <div class="divider">
-    <hr />
+    <hr >
   </div>
   <div class="container container--flex container--1211 container--has-no-padding-x container--has-padding-y-small">
     <footer class="footer">
       <div class="logo">
-        <svg><use href="#logo-main"></use></svg>
+        <svg>
+          <use href="#logo-main"></use>
+        </svg>
       </div>
       <div class="footer__menus">
         <div class="footer__menu">
           <ul>
             {{ range .Site.Menus.footer }}
-              <li>
-                <a href="{{ .URL }}">{{ .Name }}</a>
-              </li>
+            <li>
+              <a href="{{ .URL }}">{{ .Name }}</a>
+            </li>
             {{ end }}
           </ul>
           <ul>
             <li>
               <a class="a--icontext a--small" target="_blank" rel="me" href="{{ .Param "mastodon.url" }}">
                 <span class="icon__circle-wrapper icon__circle-wrapper--small mr--2xs">
-                  <svg class="icon icon--fill-white"><use href="#mastodon"></use></svg>
+                  <svg class="icon icon--fill-white">
+                    <use href="#mastodon"></use>
+                  </svg>
                 </span>
                 <span>{{ i18n "footer.mastodon" }}</span>
               </a>
@@ -46,20 +50,20 @@
         <div class="footer__menu footer__menu--is-small footer__menu--align-right">
           <ul>
             {{ range .Site.Menus.first_subfooter }}
-              <li>
-                <a href="{{ .URL }}">
-                  {{ .Name }}
-                </a>
-              </li>
+            <li>
+              <a href="{{ .URL }}">
+                {{ .Name }}
+              </a>
+            </li>
             {{ end }}
           </ul>
           <ul>
             {{ range .Site.Menus.second_subfooter }}
-              <li>
-                <a href="{{ .URL }}">
-                  {{ .Name }}
-                </a>
-              </li>
+            <li>
+              <a href="{{ .URL }}">
+                {{ .Name }}
+              </a>
+            </li>
             {{ end }}
           </ul>
         </div>
@@ -77,7 +81,6 @@
 {{ $headerJs := resources.Get "js/header.js" | js.Build }}
 <script src="{{ $headerJs.RelPermalink }}"></script>
 
-<!-- Matomo -->
 <script>
   var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -92,4 +95,3 @@
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
-<!-- End Matomo Code -->

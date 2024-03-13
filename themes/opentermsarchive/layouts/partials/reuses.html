@@ -5,7 +5,7 @@ to be able to display the reuse image in the partial
 */}}
 {{ $reusesWithfilenames := slice }}
 {{ range $filename, $data := site.Data.reuses }}
-  {{ $reusesWithfilenames = $reusesWithfilenames | append (dict "filename" $filename "data" $data) }}
+{{ $reusesWithfilenames = $reusesWithfilenames | append (dict "filename" $filename "data" $data) }}
 {{ end }}
 {{ $sortedReuses := sort $reusesWithfilenames "data.weight" }}
 
@@ -18,7 +18,7 @@ to be able to display the reuse image in the partial
       </div>
       <div class="cardlist__items">
         {{ range $sortedReuses }}
-          {{ partial "reuse.html" . }}
+        {{ partial "reuse.html" . }}
         {{ end }}
         {{ partial "new-reuse.html" . }}
       </div>

@@ -1,12 +1,14 @@
 <nav class="breadcrumb" aria-label="breadcrumbs">
   <ul>
     {{ range .Ancestors.Reverse }}
-      {{ if not .IsHome }}
-        <li>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-        <li><i class="icon" data-lucide="chevron-right"></i></li>
-      {{ end }}
+    {{ if not .IsHome }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    <li>
+      <i class="icon" data-lucide="chevron-right"></i>
+    </li>
+    {{ end }}
     {{ end }}
     <li>
       <span aria-current="page">{{ .Title }}</span>

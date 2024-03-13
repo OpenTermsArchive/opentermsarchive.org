@@ -6,8 +6,9 @@
       <ul class="mt--xl">
         {{ range site.Data.related_datasets }}
         <li>
-          <a href="{{ .website }}" target="_blank">{{ .name }}</a><br />
-          {{ index .description site.Language.Lang }} 
+          <a href="{{ .website }}" target="_blank">{{ .name }}</a>
+          <br >
+          {{ index .description site.Language.Lang }}
         </li>
         {{ end }}
       </ul>
