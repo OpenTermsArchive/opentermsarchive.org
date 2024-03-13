@@ -1,6 +1,7 @@
 {
   "Generative AI": {
     "id": "GenAI",
+    "weight": 1,
     "languages": ["en"],
     "jurisdictions": ["EU", "CN"],
     "maintainers": [
@@ -21,6 +22,7 @@
   },
   "Platform Governance Archive": {
     "id": "pga",
+    "weight": 2,
     "languages": ["en"],
     "jurisdictions": ["EU"],
     "maintainers": [
@@ -45,6 +47,7 @@
   },
   "P2B Compliance": {
     "id": "p2b-compliance",
+    "weight": 3,
     "languages": ["*eu"],
     "jurisdictions": ["EU"],
     "stats": {
@@ -69,6 +72,7 @@
   },
   "France Élections": {
     "id": "france-elections",
+    "weight": 4,
     "languages": ["fr"],
     "jurisdictions": ["FR"],
     "maintainers": [
@@ -88,6 +92,7 @@
   },
   "Dating": {
     "id": "dating",
+    "weight": 5,
     "languages": ["en"],
     "jurisdictions": ["EU", "CH"],
     "maintainers": [
@@ -107,6 +112,7 @@
   },
   "France": {
     "id": "france",
+    "weight": 6,
     "languages": ["fr"],
     "jurisdictions": ["FR"],
     "industries": {
@@ -131,6 +137,7 @@
   },
   "Contrib": {
     "id": "contrib",
+    "weight": 7,
     "languages": ["en", "fr"],
     "jurisdictions": ["EU", "US"],
     "industries": {
@@ -145,6 +152,7 @@
   },
   "Demo": {
     "id": "demo",
+    "weight": 999,
     "languages": ["en"],
     "jurisdictions": ["EU"],
     "maintainers": [
