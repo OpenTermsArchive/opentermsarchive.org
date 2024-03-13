@@ -4,14 +4,14 @@ html_description: Direction de publication et hébergeur
 slug: /mentions-legales
 ---
 
+# Mentions légales
+
 ## Editeur de la Plateforme
 
 La Plateforme Open Terms Archive est éditée par le Bureau de l’ambassadeur pour les affaires numériques situé :
 
 _Ministry of Europe and Foreign Affairs_
-
 _37 Quai d'Orsay, 75015 Paris, France_
-
 _contact - at - opentermsarchive.org_
 
 ## Directeur de la publication
@@ -23,7 +23,6 @@ Henri Verdier, ambassadeur pour le numérique.
 Ce site est hébergé chez Scalingo :
 
 _[https://www.scalingo.com](https://www.scalingo.com)_
-
 _15 avenue du Rhin, 67100 Strasbourg, France_
 
 ## Accessibilité
@@ -41,5 +40,4 @@ Pour en savoir plus sur la politique d’accessibilité numérique de l’État 
 
 ## Sécurité
 
-Le site est protégé par un certificat électronique, matérialisé pour la grande majorité des navigateurs par un cadenas. Cette protection participe à la confidentialité des échanges.
-En aucun cas les services associés à la plateforme ne seront à l’origine d’envoi de courriels pour demander la saisie d’informations personnelles.
+Le site est protégé par un certificat électronique, matérialisé pour la grande majorité des navigateurs par un cadenas. Cette protection participe à la confidentialité des échanges.En aucun cas les services associés à la plateforme ne seront à l’origine d’envoi de courriels pour demander la saisie d’informations personnelles.

@@ -3,6 +3,8 @@ title: Privacy Policy
 html_description: This privacy policy explains how, why and under what conditions the Open Terms Archive site collects personal information and how it is used.
 ---
 
+# Privacy Policy
+
 <p class="text--smallcaps mb--3xl">Last updated: February 13, 2024</p>
 
 This privacy policy explains how, why and under what conditions the Open Terms Archive (OTA) site collects personal information and how it is used. Our privacy policy will change over time. And of course, we [publicly record those changes](https://github.com/OpenTermsArchive/demo-versions/commits/main/Open%20Terms%20Archive/Privacy%20Policy.md) with Open Terms Archive 😉
