@@ -5,13 +5,14 @@
         <a href="{{ relref . "/" }}">
           <div class="logo">
             <svg>
+              <title>Open Terms Archive logo</title>
               <use href="#logo-main"></use>
             </svg>
           </div>
         </a>
       </div>
       <div class="header__menus">
-        <nav class="header__menu header__menu__primary">
+        <nav class="header__menu header__menu-primary" aria-label="Primary">
           <ul>
             {{ range .Site.Menus.header }}
             <li>
@@ -22,9 +23,9 @@
             {{ end }}
           </ul>
         </nav>
-        <nav class="header__menu header__menu__secondary">
+        <nav class="header__menu header__menu-secondary" aria-label="Languages switcher">
           <div class="language-switcher">
-            <button class="language-switcher--current">
+            <button type="button" class="language-switcher--current">
               {{ $currentLanguage := .Site.Language.Lang }}
               {{ $currentLanguage | upper }}
               <i class="icon icon--gray" data-lucide="chevron-down"></i>
@@ -53,12 +54,12 @@
           </div>
           <ul>
             <li>
-              <a class="icon__circle-wrapper" target="_blank" rel="noopener" href="{{ .Param "twitter.url" }}">
+              <a class="icon__circle-wrapper" target="_blank" rel="noopener" href="{{ .Param "twitter.url" }}" aria-label="Twitter">
                 <i class="icon icon--white" data-lucide="twitter"></i>
               </a>
             </li>
             <li>
-              <a class="icon__circle-wrapper" target="_blank" rel="noopener" href="{{ .Param "github.url" }}">
+              <a class="icon__circle-wrapper" target="_blank" rel="noopener" href="{{ .Param "github.url" }}" aria-label="GitHub">
                 <i class="icon icon--white" data-lucide="github"></i>
               </a>
             </li>

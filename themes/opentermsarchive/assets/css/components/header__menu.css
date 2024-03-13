@@ -7,7 +7,7 @@
   }
 }
 
-.header__menu__primary {
+.header__menu-primary {
   & ul {
     & li {
       margin: 0 var(--mS);
@@ -15,7 +15,7 @@
   }
 }
 
-.header__menu__secondary {
+.header__menu-secondary {
   & ul {
     & li:not(:last-child) {
       margin: 0 var(--m2XS);
@@ -40,7 +40,7 @@
     }
   }
 
-  .header__menu__primary {
+  .header__menu-primary {
     & ul {
       & li {
         margin: var(--mS) auto;
@@ -48,7 +48,7 @@
     }
   }
 
-  .header__menu__secondary {
+  .header__menu-secondary {
     & ul {
       & li:not(:last-child) {
         margin: var(--mS) auto;

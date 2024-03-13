@@ -45,4 +45,5 @@ createIcons({
     Flag,
     Map,
   },
+  attrs: { 'aria-hidden': true },
 });

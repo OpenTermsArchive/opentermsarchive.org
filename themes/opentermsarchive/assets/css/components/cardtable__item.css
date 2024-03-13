@@ -9,7 +9,7 @@
   }
 }
 
-.cardtable__item__icon {
+.cardtable__item-icon {
   display:flex;
   flex-shrink: 0;
   margin-top:var(--m2XS);
@@ -19,11 +19,11 @@
   }
 }
 
-.cardtable__item__title {
+.cardtable__item-title {
   margin-left: var(--m2XS);
 }
 
-.cardtable__item__desc {
+.cardtable__item-desc {
   padding-left: var(--pS);
   margin-left: auto;
   text-align: right;
