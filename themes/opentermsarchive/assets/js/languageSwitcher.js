@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.language-switcher--current, .language-switcher__item').forEach($el => {
     $el.addEventListener('click', () => {
-      console.log('azdazd');
       $languageSwitcher.classList.toggle('language-switcher--is-open');
     });
   });
