@@ -5,11 +5,11 @@
       <div>{{ .Params.related_datasets.introduction | markdownify }}</div>
       <ul class="mt--xl">
         {{ range site.Data.related_datasets }}
-        <li>
-          <a href="{{ .website }}" target="_blank">{{ .name }}</a>
-          <br >
-          {{ index .description site.Language.Lang }}
-        </li>
+          <li>
+            <a href="{{ .website }}" target="_blank">{{ .name }}</a>
+            <br >
+            {{ index .description site.Language.Lang }}
+          </li>
         {{ end }}
       </ul>
     </div>

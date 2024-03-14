@@ -1,38 +1,38 @@
 {{ define "main" }}
-<div class="container container--109">
-  <div class="textcontent">
-    {{ .Content }}
+  <div class="container container--109">
+    <div class="textcontent">
+      {{ .Content }}
+    </div>
   </div>
-</div>
-<div class="container container--wide container--has-no-padding-top">
-  <div class="container container--1211 container--has-no-padding-x container--has-no-padding-y">
-    {{ $sortedStats := sort site.Data.stats "date" "desc" }}
-    {{ $lastUpdatedStats := index $sortedStats 0 }}
-    <div class="buttonblocklist">
-      <div class="buttonblocklist__header">
-        <h2 class="buttonblocklist__title">{{ i18n "stats.title" (dict "date" ($lastUpdatedStats.date | time.Format "January 2006") ) }}</h2>
-      </div>
-      <div class="buttonblocklist__items">
-        {{ $servicesTitle := i18n "stats.services.title" (dict "number" $lastUpdatedStats.services) }}
-        {{ $servicesDescription := i18n "stats.services.desc" }}
-        {{ partial "buttonblock.html" (dict "title" $servicesTitle "description" $servicesDescription "icon" "globe")}}
-        {{ $termsTitle := i18n "stats.terms.title" (dict "number" $lastUpdatedStats.terms) }}
-        {{ $termsDescription := i18n "stats.terms.desc" }}
-        {{ partial "buttonblock.html" (dict "title" $termsTitle "description" $termsDescription "icon" "file")}}
-        {{ $analysisTitle := i18n "stats.analysis.title" (dict "number" $lastUpdatedStats.analysis) }}
-        {{ $analysisDescription := i18n "stats.analysis.desc" }}
-        {{ partial "buttonblock.html" (dict "title" $analysisTitle "description" $analysisDescription "icon" "eye")}}
-        {{ $contributorsTitle := i18n "stats.contributors.title" (dict "number" $lastUpdatedStats.contributors) }}
-        {{ $contributorsDescription := i18n "stats.contributors.desc" }}
-        {{ partial "buttonblock.html" (dict "title" $contributorsTitle "description" $contributorsDescription "icon" "users")}}
-        {{ $reusesTitle := i18n "stats.reuses.title" (dict "number" $lastUpdatedStats.reuses) }}
-        {{ $reusesDescription := i18n "stats.reuses.desc" }}
-        {{ partial "buttonblock.html" (dict "title" $reusesTitle "description" $reusesDescription "icon" "layers")}}
-        {{ $collectionsTitle := i18n "stats.collections.title" (dict "number" $lastUpdatedStats.collections) }}
-        {{ $collectionsDescription := i18n "stats.collections.desc" }}
-        {{ partial "buttonblock.html" (dict "title" $collectionsTitle "description" $collectionsDescription "icon" "flag")}}
+  <div class="container container--wide container--has-no-padding-top">
+    <div class="container container--1211 container--has-no-padding-x container--has-no-padding-y">
+      {{ $sortedStats := sort site.Data.stats "date" "desc" }}
+      {{ $lastUpdatedStats := index $sortedStats 0 }}
+      <div class="buttonblocklist">
+        <div class="buttonblocklist__header">
+          <h2 class="buttonblocklist__title">{{ i18n "stats.title" (dict "date" ($lastUpdatedStats.date | time.Format "January 2006") ) }}</h2>
+        </div>
+        <div class="buttonblocklist__items">
+          {{ $servicesTitle := i18n "stats.services.title" (dict "number" $lastUpdatedStats.services) }}
+          {{ $servicesDescription := i18n "stats.services.desc" }}
+          {{ partial "buttonblock.html" (dict "title" $servicesTitle "description" $servicesDescription "icon" "globe")}}
+          {{ $termsTitle := i18n "stats.terms.title" (dict "number" $lastUpdatedStats.terms) }}
+          {{ $termsDescription := i18n "stats.terms.desc" }}
+          {{ partial "buttonblock.html" (dict "title" $termsTitle "description" $termsDescription "icon" "file")}}
+          {{ $analysisTitle := i18n "stats.analysis.title" (dict "number" $lastUpdatedStats.analysis) }}
+          {{ $analysisDescription := i18n "stats.analysis.desc" }}
+          {{ partial "buttonblock.html" (dict "title" $analysisTitle "description" $analysisDescription "icon" "eye")}}
+          {{ $contributorsTitle := i18n "stats.contributors.title" (dict "number" $lastUpdatedStats.contributors) }}
+          {{ $contributorsDescription := i18n "stats.contributors.desc" }}
+          {{ partial "buttonblock.html" (dict "title" $contributorsTitle "description" $contributorsDescription "icon" "users")}}
+          {{ $reusesTitle := i18n "stats.reuses.title" (dict "number" $lastUpdatedStats.reuses) }}
+          {{ $reusesDescription := i18n "stats.reuses.desc" }}
+          {{ partial "buttonblock.html" (dict "title" $reusesTitle "description" $reusesDescription "icon" "layers")}}
+          {{ $collectionsTitle := i18n "stats.collections.title" (dict "number" $lastUpdatedStats.collections) }}
+          {{ $collectionsDescription := i18n "stats.collections.desc" }}
+          {{ partial "buttonblock.html" (dict "title" $collectionsTitle "description" $collectionsDescription "icon" "flag")}}
+        </div>
       </div>
     </div>
   </div>
-</div>
 {{ end }}

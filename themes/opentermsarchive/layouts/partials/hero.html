@@ -3,12 +3,12 @@
     <div class="hero {{ with .class }}{{ . }}{{ end }}">
       {{ with .title }}<h1 class="hero__title">{{ . }}</h1>{{ end }}
       {{ with .subtitle }}
-      <h2 class="hero__subtitle h2--thin">
-        {{ . }}
-        {{ with $.link }}
-        {{ . | markdownify }}
-        {{ end }}
-      </h2>
+        <h2 class="hero__subtitle h2--thin">
+          {{ . }}
+          {{ with $.link }}
+          {{ . | markdownify }}
+          {{ end }}
+        </h2>
       {{ end }}
     </div>
   </div>
