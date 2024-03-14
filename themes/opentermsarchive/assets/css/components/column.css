@@ -79,23 +79,23 @@
     width: 100%;
   }
 
-  &.column--has-align {
-    display: flex;
-  }
-
   &.column--align-x-center {
+    display: flex;
     justify-content: center;
   }
 
   &.column--align-x-right {
+    display: flex;
     justify-content: flex-end;
   }
 
   &.column--align-y-center {
+    display: flex;
     align-items: center;
   }
 
   &.column--align-y-bottom {
+    display: flex;
     align-items: flex-end;
   }
 

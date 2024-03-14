@@ -1,24 +1,25 @@
 <div class="container container--wide container--has-no-padding-y container--is-dark" id="follow-us">
   <div class="container container--98 container--flex">
-    <div class="column column--40 column--align-x-centerer column--align-y-center">
+    <div class="column column--40 column--align-x-center column--align-y-center">
       <div class="column__header"></div>
       <div class="column__desc">
-        <i class="icon icon--mastodon" size="128" color="var(--colorBlack400)" strokeWidth="1px"></i>
-        <i class="icon icon--twitter" size="128" color="var(--colorBlack400)" strokeWidth="1px"></i>
+        <i class="icon icon--gray icon--size-inherit" data-lucide="hash" stroke-width="1" width="188" height="188"></i>
       </div>
     </div>
     <div class="column column--60">
       <div class="column__header">
-        <h2 class="column__title">{{ i18n "follow_us.title" }}</h2>
+        <h3 class="column__title h3--light">{{ i18n "follow_us.title" }}</h3>
       </div>
-      <p class="mt-m mb--l">{{ i18n "follow_us.subtitle" }}</p>
-      <div class="container container__fluid container--flex container--has-no-padding-x container--has-no-padding-y">
+      <p class="mt--m mb--l">{{ i18n "follow_us.subtitle" }}</p>
+      <div class="container container--fluid container--flex container--has-no-padding-x container--has-no-padding-y">
         <a href="{{ site.Params.mastodon.url }}" target="_blank" rel="noopener" class="button">
-          <i class="icon icon--mastodon"strokeWidth="1px"></i>
+          <svg class="icon icon--fill-white">
+            <use href="#mastodon"></use>
+          </svg>
           <span class="ml--xs">{{ i18n "follow_us.mastodon" }}</span>
         </a>
         <a href="{{ site.Params.twitter.url }}" target="_blank" rel="noopener" class="button button--secondary">
-          <i class="icon icon--twitter" strokeWidth="1px"></i>
+          <i class="icon" data-lucide="twitter"></i>
           <span class="ml--xs">{{ i18n "follow_us.twitter" }}</span>
         </a>
       </div>

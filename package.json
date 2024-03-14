@@ -13,7 +13,7 @@
   "license": "EUPL v1.2",
   "author": "Open Terms Archive",
   "scripts": {
-    "build": "hugo --minify",
+    "build": "hugo --minify --cleanDestinationDir",
     "test": "npm run lint:markdown && npm run lint:css && npm run lint:js && npm run lint:html && npm run test:links && npm run test:html",
     "pretest:links": "npm run build",
     "test:links": "linkinator ./public --recurse --verbosity error",
@@ -28,10 +28,12 @@
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.23.1",
     "@html-eslint/parser": "^0.23.0",
+    "@stylistic/stylelint-config": "^1.0.1",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "html-validate": "^8.12.0",
     "linkinator": "^6.0.4",
+    "lucide": "^0.344.0",
     "markdownlint-cli": "^0.39.0",
     "minireset.css": "^0.0.7",
     "postcss": "^8.4.35",

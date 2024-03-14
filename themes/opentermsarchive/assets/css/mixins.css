@@ -11,16 +11,17 @@
 @define-mixin gridAutoFillSpace {
   &::after {
     flex: auto;
-    content: '';
+    content: "";
   }
 }
 
 /* Grid generator */
 @define-mixin grid $colNumber, $gutterNumber {
   width: 100%;
-  max-width: calc(
-    (var(--gridColWidth) * $(colNumber)) + (var(--gridGutterWidth) * $(gutterNumber))
-  );
+  max-width:
+    calc(
+      (var(--gridColWidth) * $(colNumber)) + (var(--gridGutterWidth) * $(gutterNumber))
+    );
 }
 
 /* Read https://ismamz.github.io/postcss-utilities/docs#word-wrap */

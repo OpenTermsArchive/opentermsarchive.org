@@ -1,4 +1,8 @@
-.icon--circle {
+:root {
+  --svgFill: none;
+}
+
+.icon__circle-wrapper {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -6,9 +10,37 @@
   height: 28px;
   background-color: var(--colorBlack400);
   border-radius: 50%;
+}
 
-  &.icon--circle-medium {
-    width: 24px;
-    height: 24px;
-  }
+.icon__circle-wrapper--small {
+  width: 24px;
+  height: 24px;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+}
+
+.icon--size-inherit {
+  width: inherit;
+  height: inherit;
+}
+
+.icon--white {
+  color: var(--colorWhite);
+}
+
+.icon--fill-white {
+  --svgFill: var(--colorWhite);
+}
+
+.icon--gray {
+  color: var(--colorBlack400);
+}
+
+.icon__volunteer-contributors-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

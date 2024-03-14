@@ -40,11 +40,11 @@
       margin-bottom: 0;
     }
 
-    &.mb__S {
+    &.mb--s {
       margin-bottom: var(--mS);
     }
 
-    &.mb__M {
+    &.mb--m {
       margin-bottom: var(--mM);
     }
   }
@@ -172,7 +172,7 @@
       left: calc(var(--mM) * -1);
       width: 1em;
       color: var(--colorBlack400);
-      content: '\2022'; /* \2022 is the CSS Code/unicode for a bullet */
+      content: "\2022"; /* \2022 is the CSS Code/unicode for a bullet */
     }
 
     & svg {

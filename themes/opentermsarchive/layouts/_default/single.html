@@ -1,6 +1,9 @@
 {{ define "main" }}
-{{ with .Title }}<h1>{{ . }}</h1>{{ end }}
-<div>
-  {{ .Content }}
-</div>
+  <div class="container container--has-no-padding-top">
+    <div class="container container--109">
+      <div class="textcontent">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
 {{ end }}

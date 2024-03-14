@@ -4,7 +4,9 @@ html_description: La déclaration d'accessibilité qui s'applique au site intern
 slug: /accessibilite
 ---
 
-Établie le 15 juin 2022.
+# Déclaration d’accessibilité
+
+<p class="text--smallcaps mb--3xl">Établie le 15 juin 2022.</p>
 
 Ministère de l'Europe et des Affaires étrangères s’engage à rendre son service accessible, conformément à l’article 47 de la loi n° 2005-102 du 11 février 2005.
 

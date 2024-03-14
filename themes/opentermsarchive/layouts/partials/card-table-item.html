@@ -1,0 +1,7 @@
+<div class="cardtable__item">
+  {{ with .icon }}<div class="cardtable__item-icon">
+    <i class="icon icon--gray" data-lucide="{{ . }}"></i>
+  </div>{{ end }}
+  <div class="cardtable__item-title">{{ .title }}</div>
+  <div class="cardtable__item-desc">{{ .desc }}</div>
+</div>

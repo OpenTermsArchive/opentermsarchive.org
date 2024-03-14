@@ -1,10 +1,17 @@
-<h2>{{ .Params.related_datasets.title }}</h2>
-<div>{{ .Params.related_datasets.introduction | markdownify }}</div>
-<ul>
-  {{ range site.Data.related_datasets }}
-  <li>
-    name : {{ .name }}<br>
-    website : {{ .website }}<br >description : {{ index .description site.Language.Lang }}
-  </li>
-  {{ end }}
-</ul>
+<div class="container container--has-no-padding-top">
+  <div class="container container--98 container--has-no-padding-top">
+    <div class="textcontent">
+      <h2>{{ .Params.related_datasets.title }}</h2>
+      <div>{{ .Params.related_datasets.introduction | markdownify }}</div>
+      <ul class="mt--xl">
+        {{ range site.Data.related_datasets }}
+          <li>
+            <a href="{{ .website }}" target="_blank">{{ .name }}</a>
+            <br >
+            {{ index .description site.Language.Lang }}
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>

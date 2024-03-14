@@ -69,10 +69,6 @@
     & div {
       margin: var(--gridGutterWidth) var(--gridColWidth) 0 var(--gridColWidth);
 
-      &:first-child {
-        margin-right: 0;
-      }
-
       & ul {
         flex-direction: column;
 
@@ -84,7 +80,7 @@
             margin-top: 0;
             margin-left: var(--mXS);
           }
-          
+
           &:last-child {
             margin-right: var(--mXS);
           }

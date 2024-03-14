@@ -1,7 +1,39 @@
-<div class="collections">
-  {{ with .Params.collections.title }}<h2>{{ . }}</h2>{{ end }}
-  {{ range $name, $data := site.Data.collections }}
-  {{ partial "card.html" (dict "name" $name "data" $data) }}
-  {{ end }}
-  {{ partial "new-collection.html" . }}
+{{ $linksTo := slice "version" }}
+{{ $bgColor := "gray" }}
+{{ $isDatasetsPage := false }}
+{{ if eq (relref . "/datasets") .Page.RelPermalink }}
+  {{ $linksTo = slice "dataset" "endpoint" }}
+  {{ $bgColor = "white" }}
+  {{ $isDatasetsPage = true }}
+{{ end }}
+
+{{/*
+As Hugo removes the first level keys when sorting a map (see https://gohugo.io/functions/collections/sort/#)
+and because this key is the name of the collection that we need
+we create a new slice which stores it with all necessary data
+*/}}
+{{ $collections := slice }}
+{{ range $name, $data := site.Data.collections }}
+  {{ $collections = $collections | append (dict "name" $name "data" $data) }}
+{{ end }}
+{{ $collectionsSortedByWeight := sort $collections "data.weight"}}
+
+<div class="container container--is-{{ $bgColor }} container--wide container--has-no-padding-x container--has-no-padding-top" id="collections">
+  <div class="container container--1211 {{ with $isDatasetsPage }}container--has-no-padding-bottom{{ end }}">
+    <div class="collections cardlist">
+      {{ with .Params.collections.title }}
+      <div class="cardlist__header cardlist__header--is-center">
+        <h2 class="cardlist__title">{{ . }}</h2>
+      </div>
+      {{ end }}
+      <div class="cardlist__items">
+        {{ range $collectionsSortedByWeight }}
+          {{ partial "collection.html" (dict "title" .name "data" .data "linksTo" $linksTo) }}
+        {{ end }}
+        {{ if not (eq "/datasets/" .Page.RelPermalink) }}
+          {{ partial "new-collection.html" . }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
 </div>

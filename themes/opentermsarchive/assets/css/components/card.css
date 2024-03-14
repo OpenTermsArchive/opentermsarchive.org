@@ -20,6 +20,17 @@
   position: relative;
   height: 180px;
   overflow: hidden;
+  background-color: var(--colorBlack300);
+
+  & img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    object-fit: cover;
+    object-position: top;
+  }
 }
 
 .card__body {
@@ -62,8 +73,8 @@
   }
 }
 
-.card__author_icon {
-  margin-right: var(--mXS);
+.card__author-icon {
+  margin-right: var(--m2XS);
 }
 
 .card--is-big {
@@ -86,11 +97,10 @@
   position: relative;
   display: flex;
   justify-content: center;
-  background: #EFEFEF;
+  background: #efefef;
 
   & .card__title {
     font-size: 2rem;
-    font-weight: 300;
   }
 
   &::before {
@@ -98,8 +108,7 @@
     width: 100%;
     height: 16rem;
     font-size: 12rem;
-    font-weight: 300;
-    color: #CECECE;
+    color: #cecece;
     text-align: center;
     content: "+";
   }

@@ -1,3 +1,11 @@
+header:
+  menu:
+    open: Menu
+    close: Fermer
+footer:
+  mastodon: Suivez-nous
+  twitter: Suivez-nous
+  mail: Contactez-nous
 new_reuse:
   title: Votre outil
   subtitle: Si vous souhaitez développer un outil basé sur Open Terms Archive, contactez-nous !
@@ -47,7 +55,7 @@ follow_us:
   twitter: Sur Twitter
   mastodon: Sur Mastodon
   title: "Suivez #TermsSpotting"
-  subtitle: "Vous avez trouvé des changements intéressants ? Partagez-les avec #TermsSpotting ! Suivez-nous pour en lire et pour avoir des nouvelles d''Open Terms Archive et de son écosystème."
+  subtitle: "Vous avez trouvé des changements intéressants ? Partagez-les avec #TermsSpotting ! Suivez-nous pour en lire et pour avoir des nouvelles d'Open Terms Archive et de son écosystème."
 foss:
   title: Commun contributif
   subtitle: Open Terms Archive est un logiciel libre et ouvert. Toute personne peut le réutiliser et le modifier librement, tant qu’elle partage ses améliorations avec la communauté. Le produit est construit collaborativement par toutes les entités qui l’utilisent et y contribuent.
@@ -73,3 +81,44 @@ how_it_works:
   step4:
     title: 4. Diffusion
     subtitle: Nous publions toutes les versions dans des jeux de données pour soutenir leur réutilisation et la recherche.
+collections:
+  services: Services
+  documents: Documents
+  language:
+    one: Langue
+    other: Langues
+  language_various: diverses
+  language_europe: Union européenne
+  jurisdiction: 
+      one: Juridiction
+      other: Juridictions
+  cta:
+    browse: Voir les documents
+    download: Télécharger le jeu de données
+    endpoint: API de métadonnées
+  volunteer_contributors: Contributeurs bénévoles
+  new: Vous voulez suivre des services visant une autre langue, juridiction ou industrie ? Contactez-nous pour commencer à collaborer !
+impact:
+  related_collections: Collections associées
+  reminder: Open Terms Archive enregistre publiquement les conditions d'utilisation des services en ligne dans différentes langues et différents pays plusieurs fois par jour, en améliorant leur lisibilité et en mettant en évidence leurs modifications. Il est conçue comme un outil permettant d'orienter la gouvernance des plateformes vers une plus grande responsabilité, une meilleure législation et une plus grande conformité réglementaire.
+  link: En savoir plus sur notre modèle d'impact.
+stats:
+  title: L’écosystème Open Terms Archive en {{ .date }}
+  services:
+    title: "{{ .number }}+ services"
+    desc: répartis sur plusieurs industries, langues et juridictions
+  terms:
+    title: "{{ .number }}+ conditions d'utilisations"
+    desc: classés selon une taxonomie d'une cinquantaine de types de termes
+  analysis:
+    title: "{{ .number }}+ analyses"
+    desc: publiées sous forme de brèves et de tweets
+  contributors:
+    title: "{{ .number }} contributeurs"
+    desc: qui valorisent les données produites
+  reuses:
+    title: "{{ .number }} réutilisations"
+    desc: qui valorisent les données produites
+  collections:
+    title: "{{ .number }} collections"
+    desc: maintenues par divers partenaires

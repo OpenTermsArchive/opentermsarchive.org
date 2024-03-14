@@ -1,6 +1,25 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-<div>
-  {{ .Content }}
-</div>
+  <div class="container container--wide container--is-gray container--has-no-padding-y">
+    <div class="container container--1211 container--has-padding-y-small">
+      {{ partial "breadcrumb.html" . }}
+    </div>
+  </div>
+  <div class="container container--has-no-padding-top">
+    <div class="container container--109">
+      <div class="textcontent">
+        <h1 class="mb--s">{{ .Title }}</h1>
+        <h4 class="h4--ultralight mb--3xl">
+          {{ .Params.service }} ▪
+          {{ delimit .Params.terms_types " , " }} ▪
+          {{ $formatedDates := slice }}
+          {{ range .Params.dates }}
+            {{ $formatedDate := ( . | time.Format ":date_long") }}
+            {{ $formatedDates = $formatedDates | append $formatedDate }}
+          {{ end }}
+          {{ delimit $formatedDates " - " }}
+        </h4>
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
 {{ end }}

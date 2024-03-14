@@ -5,6 +5,4 @@ plugins:
 parser: "@html-eslint/parser"
 rules:
   "@html-eslint/require-img-alt": warn
-  "@html-eslint/indent": 
-    - error
-    - 2
+  "@html-eslint/indent": off

@@ -1,3 +1,11 @@
+header:
+  menu:
+    open: Menu
+    close: Close
+footer:
+  mastodon: Follow us
+  twitter: Follow us
+  mail: Contact us
 new_reuse:
   title: Your Tool
   subtitle: If you want to build a tool with Open Terms Archive, contact us!
@@ -42,7 +50,7 @@ about:
     details: This project was in part [funded](https://nlnet.nl/project/TOSDR-OTA/) through the [NGI0 Entrust](https://nlnet.nl/entrust) Fund, a fund established by [NLnet](https://nlnet.nl/) with financial support from the European Commission's [Next Generation Internet](https://www.ngi.eu/) programme, under the aegis of DG Communications Networks, Content and Technology under grant agreement N°101069594.
   contributors:
     title: Contributors
-    subtitle: Volunteer time and effort to improve the software, data, documentation, outreach or any other form of action that serves Open\_Terms\_Archive’s [impact model]({{ .impactLink }}).
+    subtitle: Volunteer time and effort to improve the software, data, documentation, outreach or any other form of action that serves Open Terms Archive’s [impact model]({{ .impactLink }}).
 follow_us:
   twitter: On Twitter
   mastodon: On Mastodon
@@ -73,3 +81,44 @@ how_it_works:
   step4:
     title: 4. Disseminating
     subtitle: We publish all versions in datasets enabling reuse and research.
+collections:
+  services: Services
+  documents: Documents
+  language:
+    one: Language
+    other: Languages
+  language_various: various
+  language_europe: European Union
+  jurisdiction: 
+    one: Jurisdiction
+    other: Jurisdictions
+  cta:
+    browse: Browse terms
+    download: Download dataset
+    endpoint: Metadata API
+  volunteer_contributors: Volunteer contributors
+  new: Want to track services for different languages, jurisdictions, or industries? Contact us to collaborate!
+impact:
+  related_collections: Related collections
+  reminder: Open Terms Archive publicly records the terms of services of online services in different languages and countries several times a day, increasing their readability and highlighting their changes. It is designed as a tool to steer platform governance towards increased accountability, improved legislation and stronger regulatory compliance.
+  link: Read more on our impact model.
+stats:
+  title: As of {{ .date }}
+  services:
+    title: "{{ .number }}+ services"
+    desc: spread over industries, languages and jurisdictions
+  terms:
+    title: "{{ .number }}+ terms"
+    desc: classified along a taxonomy of over fifty terms types
+  analysis:
+    title: "{{ .number }}+ analysis"
+    desc: published in the form of short stories and tweets
+  contributors:
+    title: "{{ .number }} contributors"
+    desc: that allow Open Terms Archive to exist
+  reuses:
+    title: "{{ .number }} reuses"
+    desc: that illustrate the value of this data
+  collections:
+    title: "{{ .number }} collections"
+    desc: maintained by various partners

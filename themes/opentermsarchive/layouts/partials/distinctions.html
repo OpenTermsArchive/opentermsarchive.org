@@ -2,15 +2,15 @@
   <div class="container container--1211 container--flex container--has-no-padding-x container--has-no-padding-top">
     <div class="distinctions">
       {{ range $name, $data := site.Data.distinctions }}
-      {{ $image := resources.Get (printf "/images/distinctions/%s.png" ($name | urlize)) }}
-      <a class="distinction" href="{{ $data.link }}" target="_blank" rel="noopener">
-        <div class="distinction__img">
-          <img src="{{ $image.RelPermalink }}" alt="">
-        </div>
-        <div class="distinction__desc">
-          {{ index $data.description site.Language.Lang | safeHTML }}
-        </div>
-      </a>
+        {{ $image := resources.Get (printf "/images/distinctions/%s.png" ($name | urlize)) }}
+        <a class="distinction" href="{{ $data.link }}" target="_blank" rel="noopener">
+          <div class="distinction__img">
+            <img src="{{ $image.RelPermalink }}" alt="">
+          </div>
+          <div class="distinction__desc">
+            {{ index $data.description site.Language.Lang | safeHTML }}
+          </div>
+        </a>
       {{ end }}
     </div>
   </div>

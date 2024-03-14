@@ -3,7 +3,9 @@ title: Accessibility Statement
 html_description: The accessibility statement that applies to Open Terms Archive website.
 ---
 
-Established on June 15, 2022.
+# Accessibility Statement
+
+<p class="text--smallcaps mb--3xl">Established on June 15, 2022.</p>
 
 The Ministry of Europe and Foreign Affairs is committed to making its service accessible, in accordance with Article 47 of Law No. 2005-102 of 11 February 2005.
 

@@ -2,7 +2,7 @@
   <div class="container container--98 container--flex">
     <div class="column column--40 column--align-x-center column--align-y-center">
       <div class="column__desc">
-        <i class="icon icon--mail" size="128" color="var(--colorBlack400)" strokeWidth="1"></i>
+        <i class="icon icon--gray icon--size-inherit" data-lucide="mail" stroke-width="1" width="188" height="188"></i>
       </div>
     </div>
     <div class="column column--60">
@@ -11,7 +11,7 @@
       </div>
       <div class="column__desc">
         <div class="textcontent textcontent--has-no-margin-top">
-          <p class="mt-m">{{ i18n "product_newsletter.subtitle" }}</p>
+          <p class="mt--m">{{ i18n "product_newsletter.subtitle" }}</p>
           <form id="sib-form" method="POST" action="{{ i18n "product_newsletter.form.action" }}" data-type="subscription">
             <div class="formfield mb--l">
               <input type="email" id="email" name="EMAIL" autoComplete="email" placeholder="{{ i18n "product_newsletter.form.email_placeholder" }}" required>
