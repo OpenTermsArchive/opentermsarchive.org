@@ -1,8 +1,8 @@
-:root{
+:root {
   --svgFill: none;
 }
 
-.icon__circle-wrapper{
+.icon__circle-wrapper {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -17,30 +17,30 @@
   height: 24px;
 }
 
-.icon{
-  width:1em;
-  height:1em;
+.icon {
+  width: 1em;
+  height: 1em;
 }
 
-.icon--size-inherit{
+.icon--size-inherit {
   width: inherit;
   height: inherit;
 }
 
-.icon--white{
-  color:var(--colorWhite);
+.icon--white {
+  color: var(--colorWhite);
 }
 
-.icon--fill-white{
+.icon--fill-white {
   --svgFill: var(--colorWhite);
 }
 
-.icon--gray{
-  color:var(--colorBlack400);
+.icon--gray {
+  color: var(--colorBlack400);
 }
 
-.icon__volunteer-contributors-wrapper{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+.icon__volunteer-contributors-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -4,7 +4,7 @@
 :root {
   /* Fonts */
   --defaultFontSize: 1.6rem;
-  --defaultFontFamily: 'Inter';
+  --defaultFontFamily: "Inter";
 
   /* Grid */
   --gridColsNumber: 12;

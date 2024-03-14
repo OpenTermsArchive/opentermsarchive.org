@@ -1,5 +1,5 @@
-/* 
-Custom media queries  
+/*
+Custom media queries
 Read https://preset-env.cssdb.org/features#custom-media-queries
 Use : @media (--tabletLarge) {}
 Warning : custom properties are not allowed inside custom media queries /!\

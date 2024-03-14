@@ -22,14 +22,14 @@
   overflow: hidden;
   background-color: var(--colorBlack300);
 
-  & img{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    color:transparent;
-    object-fit:cover;
-    object-position:top;
+  & img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    object-fit: cover;
+    object-position: top;
   }
 }
 
@@ -97,7 +97,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  background: #EFEFEF;
+  background: #efefef;
 
   & .card__title {
     font-size: 2rem;
@@ -108,7 +108,7 @@
     width: 100%;
     height: 16rem;
     font-size: 12rem;
-    color: #CECECE;
+    color: #cecece;
     text-align: center;
     content: "+";
   }

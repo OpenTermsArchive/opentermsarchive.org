@@ -80,7 +80,7 @@
             margin-top: 0;
             margin-left: var(--mXS);
           }
-          
+
           &:last-child {
             margin-right: var(--mXS);
           }

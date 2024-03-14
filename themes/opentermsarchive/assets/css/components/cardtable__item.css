@@ -1,6 +1,6 @@
 .cardtable__item {
   display: flex;
-  align-items:flex-start;
+  align-items: flex-start;
   padding-top: var(--m2XS);
   padding-bottom: var(--m2XS);
 
@@ -10,11 +10,11 @@
 }
 
 .cardtable__item-icon {
-  display:flex;
+  display: flex;
   flex-shrink: 0;
-  margin-top:var(--m2XS);
+  margin-top: var(--m2XS);
 
-  & svg{
+  & svg {
     margin: auto;
   }
 }

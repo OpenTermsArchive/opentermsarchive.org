@@ -9,7 +9,7 @@ blockquote {
     font-size: 10rem;
     font-weight: bold;
     color: var(--colorBlack200);
-    content: '“';
+    content: "“";
     transform: rotate(-5deg);
   }
 }

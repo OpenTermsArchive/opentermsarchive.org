@@ -15,11 +15,11 @@ textarea {
 }
 
 select:disabled,
-input:is([disabled]):not([type='submit']) textarea:disabled {
+input:is([disabled]):not([type="submit"]) textarea:disabled {
   background-color: var(--colorBlack400);
 }
 
-input[type='checkbox'] {
+input[type="checkbox"] {
   width: 2rem;
   height: 2rem;
   margin-right: var(--mXS);
