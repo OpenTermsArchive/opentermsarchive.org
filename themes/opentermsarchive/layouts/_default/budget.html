@@ -1,7 +1,11 @@
 {{ define "main" }}
-  <div>
-    {{ .Content }}
-    {{ partial "expenditures.html" . }}
-    {{ partial "funding-sources.html" . }}
+  <div class="container container--has-no-padding-top">
+    <div class="container container--87">
+      <div class="textcontent">
+        {{ .Content }}
+        {{ partial "expenditures.html" . }}
+        {{ partial "funding-sources.html" . }}
+      </div>
+    </div>
   </div>
 {{ end }}

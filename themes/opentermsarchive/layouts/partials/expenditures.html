@@ -1,5 +1,5 @@
 <h2>{{ i18n "budget.expenditures.title" }}</h2>
-<table>
+<table class="mb--3xl">
   <thead>
     <tr>
       <th scope="col">{{ i18n "budget.expenditures.table.col1" }}</th>
@@ -7,11 +7,11 @@
     </tr>
   </thead>
   <tbody>
-    {{ range $date, $value := site.Data.budget.expenditures }}
-    <tr scope="row">
-      <td>{{ $date }}</td>
-      <td>{{ $value }}</td>
-    </tr>
+    {{ range sort site.Data.budget.expenditures "date" "desc" }}
+      <tr scope="row">
+        <td>{{ (.date | time.Format "January 2006") }}</td>
+        <td>{{ .value }}</td>
+      </tr>
     {{ end }}
   </tbody>
 </table>

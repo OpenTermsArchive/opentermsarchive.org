@@ -7,7 +7,7 @@
     </tr>
   </thead>
   <tbody>
-    {{ range site.Data.budget.funding_sources }}
+    {{ range sort site.Data.budget.funding_sources "value" }}
     <tr scope="row">
       <td>{{ index .title site.Language.Lang }}</td>
       <td>{{ .value }}</td>
