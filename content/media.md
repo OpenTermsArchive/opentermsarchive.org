@@ -1,6 +1,7 @@
 ---
 layout: media
-hero.title: Media
+hero:
+  title: Media
 title: Media
 html_description: Logos, copywriting rules and media releases
 ---

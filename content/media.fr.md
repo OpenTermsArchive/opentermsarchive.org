@@ -1,6 +1,7 @@
 ---
 layout: media
-hero.title: Média
+hero:
+  title: Média
 title: Média
 html_description: Logos, règles de rédaction et communiqués de presse
 ---

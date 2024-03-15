@@ -1,0 +1,18 @@
+.assets:not(:last-child) {
+  margin-bottom: var(--mXL);
+}
+
+.asset {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--pXS) 0;
+}
+
+.asset:not(:last-child) {
+  border-bottom: 1px solid var(--colorBlack300);
+}
+
+.asset__actions {
+  margin-left: auto;
+}
