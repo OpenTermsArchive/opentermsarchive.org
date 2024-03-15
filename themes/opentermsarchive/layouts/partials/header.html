@@ -36,19 +36,19 @@
               Else, we link to the home page of different languages available.
               */}}
               {{ if .IsTranslated }}
-              {{ range .Translations }}
-              <div class="language-switcher__item">
-                <a href="{{ .Permalink }}">{{ .Language.Lang | upper }}</a>
-              </div>
-              {{ end }}
+                {{ range .Translations }}
+                <div class="language-switcher__item">
+                  <a href="{{ .Permalink }}">{{ .Language.Lang | upper }}</a>
+                </div>
+                {{ end }}
               {{ else }}
               {{ range $.Site.Home.AllTranslations }}
-              {{ if ne $currentLanguage .Language.Lang }}
-              <div class="language-switcher__item">
-                <a href="{{ .RelPermalink }}">{{ .Language.Lang | upper }}</a>
-              </div>
-              {{ end }}
-              {{ end }}
+                {{ if ne $currentLanguage .Language.Lang }}
+                  <div class="language-switcher__item">
+                    <a href="{{ .RelPermalink }}">{{ .Language.Lang | upper }}</a>
+                  </div>
+                  {{ end }}
+                {{ end }}
               {{ end }}
             </div>
           </div>
