@@ -38,7 +38,7 @@
               {{ if .IsTranslated }}
                 {{ range .Translations }}
                 <div class="language-switcher__item">
-                  <a href="{{ .Permalink }}">{{ .Language.Lang | upper }}</a>
+                  <a href="{{ .RelPermalink }}">{{ .Language.Lang | upper }}</a>
                 </div>
                 {{ end }}
               {{ else }}
