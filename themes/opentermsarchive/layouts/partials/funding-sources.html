@@ -10,7 +10,7 @@
     {{ range sort site.Data.budget.funding_sources "value" }}
     <tr scope="row">
       <td>{{ index .title site.Language.Lang }}</td>
-      <td>{{ .value }}</td>
+      <td>{{ .value | lang.FormatNumber 0 }}</td>
     </tr>
     {{ end }}
   </tbody>

@@ -10,7 +10,7 @@
     {{ range sort site.Data.budget.expenditures "date" "desc" }}
       <tr scope="row">
         <td>{{ (.date | time.Format "January 2006") }}</td>
-        <td>{{ .value }}</td>
+        <td>{{ .value | lang.FormatNumber 0 }}</td>
       </tr>
     {{ end }}
   </tbody>
