@@ -1,5 +1,5 @@
 :root {
-  --svgFill: none;
+  --svgfill: none;
 }
 
 .icon__circle-wrapper {
@@ -32,7 +32,7 @@
 }
 
 .icon--fill-white {
-  --svgFill: var(--colorWhite);
+  --svgfill: var(--colorWhite);
 }
 
 .icon--gray {
