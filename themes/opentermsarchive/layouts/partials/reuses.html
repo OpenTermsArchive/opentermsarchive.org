@@ -7,7 +7,7 @@ to be able to display the reuse image in the partial
 {{ range $filename, $data := site.Data.reuses }}
   {{ $reusesWithfilenames = $reusesWithfilenames | append (dict "filename" $filename "data" $data) }}
 {{ end }}
-{{ $sortedReuses := sort $reusesWithfilenames "data.weight" }}
+{{ $sortedReuses := sort $reusesWithfilenames "data.weight" "desc" }}
 
 <div class="reuses container container--is-gray container--wide container--has-no-padding-x container--has-no-padding-top" id="reuses">
   <div class="container container--1211">
