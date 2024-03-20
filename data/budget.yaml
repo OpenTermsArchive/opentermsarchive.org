@@ -68,18 +68,33 @@ expenditures:
   - date: 2023-03-01
     value: 779472
   - date: 2023-04-01
-    value: 797888
+    value: 795976
   - date: 2023-05-01
-    value: 818257
+    value: 815324
   - date: 2023-06-01
-    value: 826478
+    value: 821053
   - date: 2023-07-01
-    value: 832870
+    value: 825405
+  - date: 2023-08-01
+    value: 833780
+  - date: 2023-09-01
+    value: 863394
+  - date: 2023-10-01
+    value: 889807
+  - date: 2023-11-01
+    value: 891404
+  - date: 2023-12-01
+    value: 905187
+  - date: 2024-01-01
+    value: 907312
+  - date: 2024-02-01
+    value: 927471
+
 funding_sources:
   - title:
       fr: 🇫🇷🏛 Ministère de l’Europe et des Affaires Étrangères
       en: 🇫🇷🏛 French Ministry for Europe and Foreign Affairs
-    value: 595931
+    value: 677921
   - title:
       fr: 🇪🇺🏛 France Relance
       en: 🇪🇺🏛 French Covid Recovery Fund
@@ -91,7 +106,7 @@ funding_sources:
   - title:
       fr: 🇫🇷🏛 Direction Interministérielle du Numérique
       en: 🇫🇷🏛 Interministerial Directorate for Digital Affairs
-    value: 18811
+    value: 18871
   - title:
       fr: 🇩🇪🎓 Université de Brême
       en: 🇩🇪🎓 University of Bremen
@@ -103,7 +118,7 @@ funding_sources:
   - title:
       fr: 🇳🇱🏦 NLNet Foundation
       en: 🇳🇱🏦 NLNet Foundation
-    value: 7465
+    value: 19890
   - title:
       fr: 🇫🇷🏢 UFC Que Choisir
       en: 🇫🇷🏢 UFC Que Choisir
@@ -111,4 +126,4 @@ funding_sources:
   - title:
       fr: 🇺🇳🏦 Digital Public Goods Alliance
       en: 🇺🇳🏦 Digital Public Goods Alliance
-    value: 1250
+    value: 1375
