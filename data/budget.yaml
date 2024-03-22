@@ -72,23 +72,23 @@ expenditures:
   - date: 2023-05-01
     value: 815324
   - date: 2023-06-01
-    value: 821053
+    value: 821293
   - date: 2023-07-01
-    value: 825405
+    value: 825705
   - date: 2023-08-01
-    value: 833780
+    value: 834110
   - date: 2023-09-01
-    value: 863394
+    value: 864169
   - date: 2023-10-01
-    value: 889807
+    value: 890602
   - date: 2023-11-01
-    value: 891404
+    value: 893129
   - date: 2023-12-01
-    value: 905187
+    value: 910387
   - date: 2024-01-01
-    value: 907312
+    value: 907617
   - date: 2024-02-01
-    value: 927471
+    value: 927776
 
 funding_sources:
   - title:
@@ -106,7 +106,11 @@ funding_sources:
   - title:
       fr: 🇫🇷🏛 Direction Interministérielle du Numérique
       en: 🇫🇷🏛 Interministerial Directorate for Digital Affairs
-    value: 18871
+    value: 20551
+  - title:
+      fr: 🇳🇱🏦 NLNet Foundation
+      en: 🇳🇱🏦 NLNet Foundation
+    value: 19890
   - title:
       fr: 🇩🇪🎓 Université de Brême
       en: 🇩🇪🎓 University of Bremen
@@ -116,14 +120,14 @@ funding_sources:
       en: 🇪🇺🏛 European Commission
     value: 12000
   - title:
-      fr: 🇳🇱🏦 NLNet Foundation
-      en: 🇳🇱🏦 NLNet Foundation
-    value: 19890
+      fr: 🇺🇳🏦 Digital Public Goods Alliance
+      en: 🇺🇳🏦 Digital Public Goods Alliance
+    value: 6215
   - title:
       fr: 🇫🇷🏢 UFC Que Choisir
       en: 🇫🇷🏢 UFC Que Choisir
     value: 2085
   - title:
-      fr: 🇺🇳🏦 Digital Public Goods Alliance
-      en: 🇺🇳🏦 Digital Public Goods Alliance
-    value: 1375
+      fr: 🇫🇷🎓 Université de Brest
+      en: 🇫🇷🎓 University of Brest
+    value: 445
