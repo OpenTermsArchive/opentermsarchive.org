@@ -1,133 +1,133 @@
 expenditures:
   - date: 2020-06-01
-    value: 20164
+    amount: 20164
   - date: 2020-07-01
-    value: 41225
+    amount: 41225
   - date: 2020-08-01
-    value: 65980
+    amount: 65980
   - date: 2020-09-01
-    value: 82662
+    amount: 82662
   - date: 2020-10-01
-    value: 113006
+    amount: 113006
   - date: 2020-11-01
-    value: 134122
+    amount: 134122
   - date: 2020-12-01
-    value: 157444
+    amount: 157444
   - date: 2021-01-01
-    value: 160489
+    amount: 160489
   - date: 2021-02-01
-    value: 163535
+    amount: 163535
   - date: 2021-03-01
-    value: 175102
+    amount: 175102
   - date: 2021-04-01
-    value: 189532
+    amount: 189532
   - date: 2021-05-01
-    value: 201578
+    amount: 201578
   - date: 2021-06-01
-    value: 214084
+    amount: 214084
   - date: 2021-07-01
-    value: 224887
+    amount: 224887
   - date: 2021-08-01
-    value: 237278
+    amount: 237278
   - date: 2021-09-01
-    value: 252117
+    amount: 252117
   - date: 2021-10-01
-    value: 294596
+    amount: 294596
   - date: 2021-11-01
-    value: 326758
+    amount: 326758
   - date: 2021-12-01
-    value: 340544
+    amount: 340544
   - date: 2022-01-01
-    value: 342250
+    amount: 342250
   - date: 2022-02-01
-    value: 354120
+    amount: 354120
   - date: 2022-03-01
-    value: 401509
+    amount: 401509
   - date: 2022-04-01
-    value: 431689
+    amount: 431689
   - date: 2022-05-01
-    value: 472800
+    amount: 472800
   - date: 2022-06-01
-    value: 512906
+    amount: 512906
   - date: 2022-07-01
-    value: 551087
+    amount: 551087
   - date: 2022-08-01
-    value: 572105
+    amount: 572105
   - date: 2022-09-01
-    value: 609376
+    amount: 609376
   - date: 2022-10-01
-    value: 638153
+    amount: 638153
   - date: 2022-11-01
-    value: 685259
+    amount: 685259
   - date: 2022-12-01
-    value: 699557
+    amount: 699557
   - date: 2023-01-01
-    value: 733520
+    amount: 733520
   - date: 2023-02-01
-    value: 753788
+    amount: 753788
   - date: 2023-03-01
-    value: 779472
+    amount: 779472
   - date: 2023-04-01
-    value: 795976
+    amount: 795976
   - date: 2023-05-01
-    value: 815324
+    amount: 815324
   - date: 2023-06-01
-    value: 821293
+    amount: 821293
   - date: 2023-07-01
-    value: 825705
+    amount: 825705
   - date: 2023-08-01
-    value: 834110
+    amount: 834110
   - date: 2023-09-01
-    value: 864169
+    amount: 864169
   - date: 2023-10-01
-    value: 890602
+    amount: 890602
   - date: 2023-11-01
-    value: 893129
+    amount: 893129
   - date: 2023-12-01
-    value: 910387
+    amount: 910387
   - date: 2024-01-01
-    value: 907617
+    amount: 907617
   - date: 2024-02-01
-    value: 927776
+    amount: 927776
 
 funding_sources:
   - title:
       fr: 🇫🇷🏛 Ministère de l’Europe et des Affaires Étrangères
       en: 🇫🇷🏛 French Ministry for Europe and Foreign Affairs
-    value: 677921
+    amount: 677921
   - title:
       fr: 🇪🇺🏛 France Relance
       en: 🇪🇺🏛 French Covid Recovery Fund
-    value: 145695
+    amount: 145695
   - title:
       fr: 🇺🇸🏦 Reset
       en: 🇺🇸🏦 Reset
-    value: 32187
+    amount: 32187
   - title:
       fr: 🇫🇷🏛 Direction Interministérielle du Numérique
       en: 🇫🇷🏛 Interministerial Directorate for Digital Affairs
-    value: 20551
+    amount: 20551
   - title:
       fr: 🇳🇱🏦 NLNet Foundation
       en: 🇳🇱🏦 NLNet Foundation
-    value: 19890
+    amount: 19890
   - title:
       fr: 🇩🇪🎓 Université de Brême
       en: 🇩🇪🎓 University of Bremen
-    value: 17447
+    amount: 17447
   - title:
       fr: 🇪🇺🏛 Commission européenne
       en: 🇪🇺🏛 European Commission
-    value: 12000
+    amount: 12000
   - title:
       fr: 🇺🇳🏦 Digital Public Goods Alliance
       en: 🇺🇳🏦 Digital Public Goods Alliance
-    value: 6215
+    amount: 6215
   - title:
       fr: 🇫🇷🏢 UFC Que Choisir
       en: 🇫🇷🏢 UFC Que Choisir
-    value: 2085
+    amount: 2085
   - title:
       fr: 🇫🇷🎓 Université de Brest
       en: 🇫🇷🎓 University of Brest
-    value: 445
+    amount: 445
