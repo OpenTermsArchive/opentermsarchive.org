@@ -5,5 +5,3 @@ layout: budget
 ---
 
 # Budget
-
-<p class="text--smallcaps mb--3xl">Dernière mise à jour : août 2023</p>
