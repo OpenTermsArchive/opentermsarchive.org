@@ -54,8 +54,10 @@
           </div>
           <ul>
             <li>
-              <a class="icon__circle-wrapper" target="_blank" rel="noopener" href="{{ .Param "twitter.url" }}" aria-label="Twitter">
-                <i class="icon icon--white" data-lucide="twitter"></i>
+              <a class="icon__circle-wrapper" target="_blank" rel="noopener" href="{{ site.Params.mastodon.url }}" aria-label="Mastodon">
+                 <svg class="icon icon--fill-white">
+                  <use href="#mastodon"></use>
+                </svg>
               </a>
             </li>
             <li>

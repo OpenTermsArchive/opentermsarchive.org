@@ -4,7 +4,6 @@ header:
     close: Close
 footer:
   mastodon: Follow us
-  twitter: Follow us
   mail: Contact us
 new_reuse:
   title: Your Tool
@@ -52,7 +51,6 @@ about:
     title: Contributors
     subtitle: Volunteer time and effort to improve the software, data, documentation, outreach or any other form of action that serves Open Terms Archive’s [impact model]({{ .impactLink }}).
 follow_us:
-  twitter: On Twitter
   mastodon: On Mastodon
   title: "Follow #TermsSpotting"
   subtitle: "Found some interesting changes? Share them with #TermsSpotting! Follow us for such finds and for news from Open Terms Archive and its ecosystem."

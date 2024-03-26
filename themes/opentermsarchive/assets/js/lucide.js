@@ -1,6 +1,5 @@
 import {
   Github,
-  Twitter,
   ChevronDown,
   ChevronRight,
   X,
@@ -24,7 +23,6 @@ import {
 
 createIcons({
   icons: {
-    Twitter,
     X,
     ChevronDown,
     ChevronRight,

@@ -4,7 +4,6 @@ header:
     close: Fermer
 footer:
   mastodon: Suivez-nous
-  twitter: Suivez-nous
   mail: Contactez-nous
 new_reuse:
   title: Votre outil
@@ -52,7 +51,6 @@ about:
     title: Contributeurs
     subtitle: Offrent du temps bénévole pour améliorer le logiciel, les données, la documentation, la visibilité ou toute autre forme d'action qui contribue au [modèle d'impact]({{ .impactLink }}) d'Open Terms Archive.
 follow_us:
-  twitter: Sur Twitter
   mastodon: Sur Mastodon
   title: "Suivez #TermsSpotting"
   subtitle: "Vous avez trouvé des changements intéressants ? Partagez-les avec #TermsSpotting ! Suivez-nous pour en lire et pour avoir des nouvelles d'Open Terms Archive et de son écosystème."
