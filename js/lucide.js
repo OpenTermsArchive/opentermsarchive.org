@@ -233,20 +233,6 @@
     ]
   ];
 
-  // node_modules/lucide/dist/esm/icons/twitter.js
-  var Twitter = [
-    "svg",
-    defaultAttributes,
-    [
-      [
-        "path",
-        {
-          d: "M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
-        }
-      ]
-    ]
-  ];
-
   // node_modules/lucide/dist/esm/icons/user.js
   var User = [
     "svg",
@@ -323,7 +309,6 @@
   // <stdin>
   createIcons({
     icons: {
-      Twitter,
       X,
       ChevronDown,
       ChevronRight,
@@ -486,14 +471,6 @@ lucide/dist/esm/icons/message-circle.js:
    *)
 
 lucide/dist/esm/icons/search.js:
-  (**
-   * @license lucide v0.344.0 - ISC
-   *
-   * This source code is licensed under the ISC license.
-   * See the LICENSE file in the root directory of this source tree.
-   *)
-
-lucide/dist/esm/icons/twitter.js:
   (**
    * @license lucide v0.344.0 - ISC
    *
