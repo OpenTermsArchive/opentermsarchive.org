@@ -1,5 +1,6 @@
-{
-  "Generative AI": {
+[
+  {
+    "name": "Generative AI",
     "id": "GenAI",
     "weight": 1,
     "languages": ["en"],
@@ -20,7 +21,8 @@
     },
     "endpoint": "http://51.77.110.109/api/v1"
   },
-  "Platform Governance Archive": {
+  {
+    "name": "Platform Governance Archive",
     "id": "pga",
     "weight": 2,
     "languages": ["en"],
@@ -45,7 +47,8 @@
     },
     "endpoint": "http://134.102.58.70/api/v1"
   },
-  "P2B Compliance": {
+  {
+    "name": "P2B Compliance",
     "id": "p2b-compliance",
     "weight": 3,
     "languages": ["*eu"],
@@ -70,7 +73,8 @@
     ],
     "endpoint": "http://vps-463f0baf.vps.ovh.net/api/v1"
   },
-  "France Élections": {
+  {
+    "name": "France Élections",
     "id": "france-elections",
     "weight": 4,
     "languages": ["fr"],
@@ -90,7 +94,8 @@
       "fr": "Médias sociaux pouvant influencer les élections présidentielles et législatives françaises 2022"
     }
   },
-  "Dating": {
+  {
+    "name": "Dating",
     "id": "dating",
     "weight": 5,
     "languages": ["en"],
@@ -110,7 +115,8 @@
       "fr": "Rencontre en ligne"
     }
   },
-  "France": {
+  {
+    "name": "France",
     "id": "france",
     "weight": 6,
     "languages": ["fr"],
@@ -135,7 +141,8 @@
     },
     "endpoint": "http://198.244.142.9/api/v1"
   },
-  "Contrib": {
+  {
+    "name": "Contrib",
     "id": "contrib",
     "weight": 7,
     "languages": ["en", "fr"],
@@ -150,7 +157,8 @@
     },
     "endpoint": "http://51.89.224.102/api/v1"
   },
-  "Demo": {
+  {
+    "name": "Demo",
     "id": "demo",
     "weight": 999,
     "languages": ["en"],
@@ -171,4 +179,4 @@
     },
     "endpoint": "http://162.19.74.224/collection-api/v1"
   }
-}
+]
