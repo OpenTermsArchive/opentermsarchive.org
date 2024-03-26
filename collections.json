@@ -11,8 +11,8 @@
       }
     ],
     "stats": {
-      "services": "12",
-      "documents": "28"
+      "services": "18",
+      "documents": "52"
     },
     "industries": {
       "en": "Most popular generative AI services",
@@ -36,8 +36,8 @@
       }
     ],
     "stats": {
-      "services": "20",
-      "documents": "80"
+      "services": "22",
+      "documents": "86"
     },
     "industries": {
       "en": "Major global social media services",
@@ -145,8 +145,8 @@
       "fr": "Documents ajoutés par des contributeurs bénévoles et importés historiquement de TOSBack.org"
     },
     "stats": {
-      "services": "299",
-      "documents": "660"
+      "services": "322",
+      "documents": "683"
     },
     "endpoint": "http://51.89.224.102/api/v1"
   },
@@ -162,8 +162,8 @@
       }
     ],
     "stats": {
-      "services": "2",
-      "documents": "6"
+      "services": "4",
+      "documents": "9"
     },
     "industries": {
       "en": "Services needed to operate the Open Terms Archive engine",
