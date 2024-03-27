@@ -1,11 +1,11 @@
 title:
   en: Digital Services Terms and Conditions Database
-  fr: Base de données des conditions générales des services numériques
+  fr: Base de données des conditions des services numériques
 author:
-  en: DGCNECT
-  fr: DGCNECT
+  en: European Commission (DGCNECT)
+  fr: Commission européenne (DGCNECT)
 description:
-  en: Database from an European Commission initiative which features the terms and conditions of digital services, with a focus on online platforms such as social media, app stores or marketplaces.
-  fr: Base de données issue d'une initiative de la Commission européenne qui présente les conditions générales des services numériques, en mettant l'accent sur les plateformes en ligne telles que les médias sociaux, les magasins d'applications ou les places de marché.
+  en: Dedicated portal to access data from a collection operated by the DSA Enforcement Team within the European Commission.
+  fr: Portail d'accès aux données d'une collection opérée par l’équipe « application du DSA » au sein de la Commission européenne.
 website: https://platform-contracts.digital-strategy.ec.europa.eu/
 weight: 8
