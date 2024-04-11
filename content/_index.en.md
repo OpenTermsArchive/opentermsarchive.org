@@ -15,13 +15,46 @@ how_it_works:
   step1:
     title: 1. Targeting
     subtitle: The terms of use of a service are targeted by contributors.
+    exemple: |
+      {
+        "name": "Facebook",
+        "documents": {
+          "Terms of Service": {
+            "fetch": "https://facebook.com/legal/terms",
+            "select": "body > article > .main_content"
+          },
+          "Privacy Policy": {
+            "fetch": "https://facebook.com/privacy",
+            "select": "div > .fb_content"
+          }
+        }
+      }
   step2:
     title: 2. Tracking
     subtitle: Several times a day, our robots download and publicly archive the targeted documents.
+    exemple: |
+      2024-02-22 06:31:03: Record new changes of Facebook Terms of Service with id a2f5b02
+      2024-01-18 08:26.12: Record new changes of Facebook Privacy Policy with id b091d16
   step3:
     title: 3. Analysing
     subtitle: When changes are spotted, they are recorded and exposed for human analysts.
+    exemple: |
+      Face recognition: If you have it tured on, we use face recognition technology to recognise you in photos, videos and camera experiences.
+      - The face recognition templates that we create may constitue data with special protections under the laws of you country.
+      + The face recognition templates that we create are data with special protections under EU laws.
   step4:
     title: 4. Disseminating
     subtitle: We publish all versions in datasets enabling reuse and research.
+    exemple: |
+      ↳ 📂 Facebook
+        ↳ 📂 Privacy Policy
+            📄 2024-02-20--31-15.md
+            📄 2023-12-05--25-25.md
+            📄 2023-10-17--18-23.md
+            📄 2023-10-31--07-23.md
+        ↳ 📂 Terms of Service
+            📄 2024-03-12--30-16.md
+            📄 2024-01-20--15-42.md
+            📄 2023-12-08--26-16.md
+            📄 2023-12-26--01-16.md
 ---

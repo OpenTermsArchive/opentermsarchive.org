@@ -8,8 +8,8 @@
       <p class="mt--m h3 h3--light">{{ .Params.how_it_works.step1.subtitle }}</p>
     </div>
     <div class="column column--50 column--align-x-right">
-      <div class="step1">
-        <img src="{{ (resources.Get "/images/how-it-works/step-1.png").RelPermalink }}" />
+      <div class="how-it-works_exemple how-it-works_exemple--1">
+        {{ transform.Highlight .Params.how_it_works.step1.exemple "json" }}
       </div>
     </div>
   </div>
@@ -21,8 +21,8 @@
       <p class="mt--m h3 h3--light">{{ .Params.how_it_works.step2.subtitle }}</p>
     </div>
     <div class="column column--50 column--align-x-right">
-      <div class="step2">
-        <img src="{{ (resources.Get "/images/how-it-works/step-2.png").RelPermalink }}" />
+      <div class="how-it-works_exemple how-it-works_exemple--2">
+        {{ transform.Highlight .Params.how_it_works.step2.exemple "ABNF" }}
       </div>
     </div>
   </div>
@@ -34,8 +34,8 @@
       <p class="mt--m h3 h3--light">{{ .Params.how_it_works.step3.subtitle }}</p>
     </div>
     <div class="column column--50 column--align-x-right">
-      <div class="step3">
-        <img src="{{ (resources.Get "/images/how-it-works/step-3.png").RelPermalink }}" />
+      <div class="how-it-works_exemple how-it-works_exemple--3">
+        {{ transform.Highlight .Params.how_it_works.step3.exemple "diff" }}
       </div>
     </div>
   </div>
@@ -47,8 +47,8 @@
       <p class="mt--m h3 h3--light">{{ .Params.how_it_works.step4.subtitle }}</p>
     </div>
     <div class="column column--50 column--align-x-right column--align-y-center">
-      <div class="step4">
-        <img src="{{ (resources.Get "/images/how-it-works/step-4.png").RelPermalink }}" />
+      <div class="how-it-works_exemple how-it-works_exemple--4">
+        {{ transform.Highlight .Params.how_it_works.step4.exemple "Go" }}
       </div>
     </div>
   </div>
