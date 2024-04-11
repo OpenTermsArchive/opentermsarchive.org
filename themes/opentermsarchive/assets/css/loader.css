@@ -24,6 +24,7 @@
 @import "themes/opentermsarchive/assets/css/elements/table.css";
 @import "themes/opentermsarchive/assets/css/elements/titles.css";
 @import "themes/opentermsarchive/assets/css/elements/utility.css";
+@import "themes/opentermsarchive/assets/css/elements/syntax.css";
 
 /* Components */
 @import "themes/opentermsarchive/assets/css/components/article.css";
