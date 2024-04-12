@@ -6,8 +6,8 @@
     </div>
   {{ end }}
   <div class="card__body">
-    {{ with .title }}<h4 class="card__title">{{ . }}</h4>{{ end }}
-    {{ with .data.industries }}<h5 class="card__subtitle h5--light">{{ index . site.Language.Lang | safeHTML }}</h5>{{ end }}
+    {{ with .title }}<h3 class="h4 card__title">{{ . }}</h3>{{ end }}
+    {{ with .data.industries }}<h4 class="card__subtitle h5 h5--light">{{ index . site.Language.Lang | safeHTML }}</h4>{{ end }}
     <div class="cardtable">
       {{ with .data.stats.services }}
         {{ partial "card-table-item.html" (dict "title" (i18n "collections.services") "icon" "folder" "desc" .) }}
