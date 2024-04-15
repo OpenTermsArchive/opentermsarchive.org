@@ -1,11 +1,11 @@
-.how-it-works_exemple{
-  width:100%;
+.howitworks__exemple {
+  width: 100%;
 
   & pre {
-    width:100%;
+    width: 100%;
     white-space: pre-wrap;
   }
-  
+
   & code {
     display: block;
     padding: var(--pM);
