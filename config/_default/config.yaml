@@ -1,5 +1,6 @@
 baseURL: https://opentermsarchive.org/
-languageCode: en-us
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: true
 title: Open Terms Archive website
 theme: opentermsarchive
 disableKinds:
