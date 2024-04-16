@@ -197,12 +197,21 @@
   & pre {
     padding: 0.8rem;
     margin-bottom: var(--mM);
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 
   & code {
+    display: inline-block;
     font-size: 0.95em;
     background-color: var(--colorBlack200);
+
+    &.language-success {
+      border: 2px solid var(--colorSuccess);
+    }
+
+    &.language-error {
+      border: 2px solid var(--colorError);
+    }
   }
 
   & .button {

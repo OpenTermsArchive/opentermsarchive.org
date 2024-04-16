@@ -16,7 +16,6 @@
 
 /* Import elements styles */
 @import "themes/opentermsarchive/assets/css/elements/blockquote.css";
-@import "themes/opentermsarchive/assets/css/elements/code.css";
 @import "themes/opentermsarchive/assets/css/elements/fonts.css";
 @import "themes/opentermsarchive/assets/css/elements/form.css";
 @import "themes/opentermsarchive/assets/css/elements/icons.css";
@@ -24,6 +23,7 @@
 @import "themes/opentermsarchive/assets/css/elements/table.css";
 @import "themes/opentermsarchive/assets/css/elements/titles.css";
 @import "themes/opentermsarchive/assets/css/elements/utility.css";
+@import "themes/opentermsarchive/assets/css/elements/syntax.css";
 
 /* Components */
 @import "themes/opentermsarchive/assets/css/components/article.css";

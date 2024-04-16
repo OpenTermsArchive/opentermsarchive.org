@@ -2,3 +2,5 @@ goldmark:
   renderer:
     hardWraps: true
     unsafe: true
+highlight:
+  noClasses: false

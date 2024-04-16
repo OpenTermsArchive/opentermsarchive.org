@@ -13,12 +13,6 @@ a {
   font-size: 1.4rem;
 }
 
-.a--darked {
-  &:hover {
-    color: var(--colorDarkedSecondary);
-  }
-}
-
 .a--icontext {
   display: flex;
   align-items: center;

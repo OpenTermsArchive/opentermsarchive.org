@@ -1,15 +1,13 @@
-.step1 {
-  max-width: 480px;
-}
+.howitworks__exemple {
+  width: 100%;
 
-.step2 {
-  max-width: 480px;
-}
+  & pre {
+    width: 100%;
+    white-space: pre-wrap;
+  }
 
-.step3 {
-  max-width: 430px;
-}
-
-.step4 {
-  max-width: 350px;
+  & code {
+    display: block;
+    padding: var(--pM);
+  }
 }

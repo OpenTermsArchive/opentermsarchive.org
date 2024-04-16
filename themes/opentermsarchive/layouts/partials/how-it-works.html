@@ -1,15 +1,15 @@
 <div class="container container--wide container--has-no-padding-y" id="how-it-works">
   <div class="container container--1110 container--has-no-padding-x">
-    <h2 class="text--center">{{ i18n "how_it_works.title" }}</h2>
+    <h2 class="text--center">{{ .Params.how_it_works.title }}</h2>
   </div>
   <div class="container container--1110 container--flex container--has-no-padding-x">
     <div class="column column--50">
-      <h3>{{ i18n "how_it_works.step1.title" }}</h3>
-      <p class="mt--m h3 h3--light">{{ i18n "how_it_works.step1.subtitle" }}</p>
+      <h3>{{ .Params.how_it_works.step1.title }}</h3>
+      <p class="mt--m h3 h3--light">{{ .Params.how_it_works.step1.subtitle }}</p>
     </div>
     <div class="column column--50 column--align-x-right">
-      <div class="step1">
-        <img src="{{ (resources.Get "/images/how-it-works/step-1.png").RelPermalink }}" />
+      <div class="howitworks__exemple howitworks__exemple--1">
+        {{ transform.Highlight .Params.how_it_works.step1.exemple "json" }}
       </div>
     </div>
   </div>
@@ -17,12 +17,12 @@
 <div class="container container--wide container--has-no-padding-y" id="archival">
   <div class="container container--1110 container--flex container--has-no-padding-x">
     <div class="column column--50">
-      <h3>{{ i18n "how_it_works.step2.title" }}</h3>
-      <p class="mt--m h3 h3--light">{{ i18n "how_it_works.step2.subtitle" }}</p>
+      <h3>{{ .Params.how_it_works.step2.title }}</h3>
+      <p class="mt--m h3 h3--light">{{ .Params.how_it_works.step2.subtitle }}</p>
     </div>
     <div class="column column--50 column--align-x-right">
-      <div class="step2">
-        <img src="{{ (resources.Get "/images/how-it-works/step-2.png").RelPermalink }}" />
+      <div class="howitworks__exemple howitworks__exemple--2">
+        {{ transform.Highlight .Params.how_it_works.step2.exemple "abnf" }}
       </div>
     </div>
   </div>
@@ -30,12 +30,14 @@
 <div class="container container--wide container--has-no-padding-y" id="detection">
   <div class="container container--1110 container--flex container--has-no-padding-x">
     <div class="column column--50">
-      <h3>{{ i18n "how_it_works.step3.title" }}</h3>
-      <p class="mt--m h3 h3--light">{{ i18n "how_it_works.step3.subtitle" }}</p>
+      <h3>{{ .Params.how_it_works.step3.title }}</h3>
+      <p class="mt--m h3 h3--light">{{ .Params.how_it_works.step3.subtitle }}</p>
     </div>
     <div class="column column--50 column--align-x-right">
-      <div class="step3">
-        <img src="{{ (resources.Get "/images/how-it-works/step-3.png").RelPermalink }}" />
+      <div class="howitworks__exemple howitworks__exemple--3">
+        <div class="highlight">
+          <pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">{{ .Params.how_it_works.step3.exemple | safeHTML }}</span></span></code></pre>
+        </div>
       </div>
     </div>
   </div>
@@ -43,12 +45,12 @@
 <div class="container container--wide container--has-no-padding-top" id="publishing">
   <div class="container container--1110 container--flex container--has-no-padding-x">
     <div class="column column--50">
-      <h3>{{ i18n "how_it_works.step4.title" }}</h3>
-      <p class="mt--m h3 h3--light">{{ i18n "how_it_works.step4.subtitle" }}</p>
+      <h3>{{ .Params.how_it_works.step4.title }}</h3>
+      <p class="mt--m h3 h3--light">{{ .Params.how_it_works.step4.subtitle }}</p>
     </div>
     <div class="column column--50 column--align-x-right column--align-y-center">
-      <div class="step4">
-        <img src="{{ (resources.Get "/images/how-it-works/step-4.png").RelPermalink }}" />
+      <div class="howitworks__exemple howitworks__exemple--4">
+        {{ transform.Highlight .Params.how_it_works.step4.exemple "go" }}
       </div>
     </div>
   </div>
