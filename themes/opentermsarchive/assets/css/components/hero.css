@@ -1,10 +1,6 @@
 .hero {
   margin: var(--m4XL) 0;
 
-  &.hero--is-dark {
-    color: var(--colorWhite);
-  }
-
   &.hero--has-no-margin-bottom {
     margin-bottom: 0;
   }
