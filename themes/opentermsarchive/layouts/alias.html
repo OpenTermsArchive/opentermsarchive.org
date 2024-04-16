@@ -6,6 +6,34 @@
     <meta name="robots" content="noindex">
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+     <script>
+      let supportedLanguagesCode = [];
+      {{ range site.Languages }}
+        {{ if eq .Weight 0 }}let redirectURL = "/{{ .LanguageCode }}"{{ end }}
+        supportedLanguagesCode.push({{ .LanguageCode }});
+      {{ end }}
+      const baseURL = {{ absLangURL "" }};
+      let pages = [];
+      let page;
+      {{ range site.Pages }}
+        page = {
+          "permalink": "{{ .Permalink }}",
+          "lang": "{{ .Language.LanguageCode }}",
+          "translations": []
+        };
+        {{ range .Translations }}
+          page.translations.push({
+            "permalink": "{{ .Permalink }}",
+            "lang": "{{ .Language.LanguageCode }}"
+          })
+        {{ end }}
+        pages.push(page);
+      {{ end }}
+     </script>
   </head>
-  <body></body>
+  {{ $languageRedirectJs := resources.Get "js/languageRedirect.js" | js.Build }}
+  <script src="{{ $languageRedirectJs.RelPermalink }}"></script>
+  <body>
+    <p>You should be redirected very quickly, if not <a href="{{ .Permalink }}">click here</a>.</p>
+  </body>
 </html>
