@@ -38,10 +38,7 @@ how_it_works:
   step3:
     title: 3. Analysing
     subtitle: When changes are spotted, they are recorded and exposed for human analysts.
-    exemple: |
-      Face recognition: If you have it tured on, we use face recognition technology to recognise you in photos, videos and camera experiences.
-      - The face recognition templates that we create may constitue data with special protections under the laws of you country.
-      + The face recognition templates that we create are data with special protections under EU laws.
+    exemple: "Face recognition: If you have it tured on, we use face recognition technology to recognise you in photos, videos and camera experiences. The face recognition templates that we create <span class=\"code--removed\">may constitue</span><span class=\"code--added\">are</span> data with special protections under <span class=\"code--removed\">the laws of you country</span><span class=\"code--added\">EU Law</span>."
   step4:
     title: 4. Disseminating
     subtitle: We publish all versions in datasets enabling reuse and research.

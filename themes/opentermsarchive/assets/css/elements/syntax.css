@@ -6,7 +6,7 @@
 
 /* PreWrapper */
 .chroma {
-  color: var(--colorBlack300);
+  color: var(--colorBlack200);
   background-color: var(--colorBlack900);
 }
 
@@ -327,4 +327,15 @@
 /* GenericSubheading */
 .chroma .gu {
   color: #75715e;
+}
+
+.code--removed {
+  color: var(--colorBlack900);
+  text-decoration-line: line-through;
+  background-color: #f92672;
+}
+
+.code--added {
+  color: var(--colorBlack900);
+  background-color: #a6e22e;
 }
