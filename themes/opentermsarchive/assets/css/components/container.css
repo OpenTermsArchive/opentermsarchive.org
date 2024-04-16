@@ -88,6 +88,11 @@
     & .text__subtitle {
       color: var(--colorWhite);
     }
+
+    & a:not(.distinction):hover,
+    a:not(.button):hover {
+      color: var(--colorBlack400);
+    }
   }
 
   &.container--is-gray {
