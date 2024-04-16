@@ -330,12 +330,12 @@
 }
 
 .code--removed {
-  color: var(--colorBlack900);
+  display: inline-block;
   text-decoration-line: line-through;
-  background-color: #f92672;
+  background-color: rgb(249 38 114 / 65%);
 }
 
 .code--added {
-  color: var(--colorBlack900);
-  background-color: #a6e22e;
+  display: inline-block;
+  background-color: rgb(166 226 46 / 65%);
 }
