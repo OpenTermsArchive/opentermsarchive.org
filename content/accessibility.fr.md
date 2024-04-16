@@ -6,9 +6,11 @@ slug: /accessibilite
 
 # Déclaration d’accessibilité
 
-<p class="text--smallcaps mb--3xl">Établie le 15 juin 2022.</p>
+<p class="text--smallcaps mb--3xl">Établie le 15 avril 2024.</p>
 
-Ministère de l'Europe et des Affaires étrangères s’engage à rendre son service accessible, conformément à l’article 47 de la loi n° 2005-102 du 11 février 2005.
+Le Ministère de l'Europe et des Affaires étrangères s’engage à rendre son service accessible, conformément à l’article 47 de la loi n° 2005-102 du 11 février 2005.
+
+Dans cet objectif, nous mettons en place les stratégies et les mesures définies dans le [Schéma Pluriannuel d’Accessibilité 2021-2023 du Ministère de l’Europe et des Affaires étrangères](https://www.diplomatie.gouv.fr/fr/mentions-legales/accessibilite/article/schema-pluriannuel-d-accessibilite-2021-2023-du-ministere-de-l-europe-et-des).
 
 Cette déclaration d’accessibilité s’applique à **Open Terms Archive** (https://opentermsarchive.org).
 
