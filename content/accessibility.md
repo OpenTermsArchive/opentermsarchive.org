@@ -1,6 +1,7 @@
 ---
 title: Accessibility Statement
 html_description: The accessibility statement that applies to Open Terms Archive website.
+aliases: /accessibility
 ---
 
 # Accessibility Statement

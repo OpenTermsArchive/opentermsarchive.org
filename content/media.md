@@ -4,6 +4,7 @@ hero:
   title: Media
 title: Media
 html_description: Logos, copywriting rules and media releases
+aliases: /media
 ---
 
 ## Copywriting

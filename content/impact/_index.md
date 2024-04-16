@@ -1,6 +1,7 @@
 ---
 title: Impact model
 html_description: Open Terms Archive addresses a critical gap in the ability of activists, journalists, researchers, lawmakers and regulators to analyse and influence the rules of online services.
+aliases: /impact
 ---
 
 ### Open Terms Archive addresses a critical gap in the ability of activists, journalists, researchers, lawmakers and regulators to analyse and influence the rules of online services

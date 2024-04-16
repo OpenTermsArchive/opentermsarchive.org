@@ -6,7 +6,9 @@ related_collections:
   - pga
   - france-elections
   - france
-aliases: /domain/disinformation
+aliases: 
+  - /domain/disinformation
+  - /impact/mis-and-disinformation
 ---
 
 Mis- and disinformation are typically addressed through reactive measures against specific attacks or proactive prevention efforts. While these approaches are necessary and valuable, they are inherently endless and fail to address the root of the problem. Exploiting vulnerabilities for political gains will always attract malign actors, outnumbering those interested in prevention.
