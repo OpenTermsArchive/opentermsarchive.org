@@ -9,7 +9,7 @@ html_description: The accessibility statement that applies to Open Terms Archi
 
 The Ministry of Europe and Foreign Affairs is committed to making its service accessible, in accordance with Article 47 of Law No. 2005-102 of 11 February 2005.
 
-To this end, we are implementing the following strategy and actions: https://www.diplomatie.gouv.fr/fr/mentions-legales/accessibilite/article/schema-pluriannuel-d-accessibilite-2021-2023-du-ministere-de-l-europe-et-des.
+To this end, we are implementing the strategies and measures set out in the [Multiannual Accessibility Plan 2021-2023 of the Ministry of Europe and Foreign Affairs](https://www.diplomatie.gouv.fr/fr/mentions-legales/accessibilite/article/schema-pluriannuel-d-accessibilite-2021-2023-du-ministere-de-l-europe-et-des).
 
 This accessibility statement applies to **Open Terms Archive** (https://opentermsarchive.org).
 
