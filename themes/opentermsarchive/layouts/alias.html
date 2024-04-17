@@ -1,39 +1,32 @@
 <!doctype html>
 <html lang="{{ site.Language.LanguageCode }}">
   <head>
-    <title>{{ .Permalink }}</title>
+    <title>{{ substr .Permalink 0 120 }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
     <meta name="robots" content="noindex">
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
-     <script>
+    <script>
       let supportedLanguagesCode = [];
       {{ range site.Languages }}
-        {{ if eq .Weight 0 }}let redirectURL = "/{{ .LanguageCode }}"{{ end }}
+        {{ if eq .Weight 0 }}let redirectURL = "/{{ .LanguageCode }}";{{ end }}
         supportedLanguagesCode.push({{ .LanguageCode }});
       {{ end }}
       const baseURL = {{ absLangURL "" }};
       let pages = [];
       let page;
       {{ range site.Pages }}
-        page = {
-          "permalink": "{{ .Permalink }}",
-          "lang": "{{ .Language.LanguageCode }}",
-          "translations": []
-        };
+        page = {"permalink": "{{ .Permalink }}", "lang": "{{ .Language.LanguageCode }}", "translations": []};
         {{ range .Translations }}
-          page.translations.push({
-            "permalink": "{{ .Permalink }}",
-            "lang": "{{ .Language.LanguageCode }}"
-          })
+          page.translations.push({ "permalink": "{{ .Permalink }}", "lang": "{{ .Language.LanguageCode }}" });
         {{ end }}
         pages.push(page);
       {{ end }}
-     </script>
+    </script>
   </head>
-  {{ $languageRedirectJs := resources.Get "js/languageRedirect.js" | js.Build }}
-  <script src="{{ $languageRedirectJs.RelPermalink }}"></script>
   <body>
     <p>You should be redirected very quickly, if not <a href="{{ .Permalink }}">click here</a>.</p>
+    {{ $languageRedirectJs := resources.Get "js/languageRedirect.js" | js.Build }}
+    <script src="{{ $languageRedirectJs.RelPermalink }}"></script>
   </body>
 </html>
