@@ -21,6 +21,7 @@
     "test:html": "html-validate ./public",
     "test:i18n": "node test/i18n.js",
     "start:dev": "hugo serve --watch --logLevel debug --disableFastRender --printI18nWarnings",
+    "start:ci": "hugo serve --logLevel error --port 1313",
     "lint:markdown": "markdownlint *.md content/**/*.md",
     "lint:css": "stylelint \"themes/opentermsarchive/assets/css/**/*.css\"",
     "lint:js": "eslint themes/opentermsarchive/assets/js/",
