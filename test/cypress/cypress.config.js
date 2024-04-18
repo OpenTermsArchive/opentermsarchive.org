@@ -6,6 +6,7 @@ module.exports = defineConfig({
     supportFile: false,
     specPattern: 'test/cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     screenshotOnRunFailure: false,
+    // Code from Cypress documentation https://docs.cypress.io/api/commands/task
     setupNodeEvents(on) {
       on('task', {
         log(message) {
