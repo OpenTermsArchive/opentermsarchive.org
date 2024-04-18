@@ -31,10 +31,6 @@ describe('i18n', () => {
           })
         })
         it(`is redirected to ${EN_HOMEPAGE}`, () => {
-          cy.task('log', 'This will be output to the terminal')
-          cy.location('href').then(href => {
-            cy.task('log', href)
-          })
           cy.location('href').should('equal', EN_HOMEPAGE)
         });
         it('<html> lang attribute value is equal to en', () => {
