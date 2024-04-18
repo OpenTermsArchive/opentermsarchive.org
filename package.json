@@ -24,7 +24,7 @@
     "start:ci": "hugo serve --logLevel error --port 1313",
     "lint:markdown": "markdownlint *.md content/**/*.md",
     "lint:css": "stylelint \"themes/opentermsarchive/assets/css/**/*.css\"",
-    "lint:js": "eslint themes/opentermsarchive/assets/js/",
+    "lint:js": "eslint themes/opentermsarchive/assets/js/ test/**/*.js",
     "lint:html": "eslint themes/opentermsarchive/layouts/**/*.html -c .htmleslintrc.yaml"
   },
   "devDependencies": {

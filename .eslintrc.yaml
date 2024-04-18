@@ -91,3 +91,8 @@ rules:
   import/no-extraneous-dependencies:
     - error
     - devDependencies: true
+overrides:
+  - files:
+      - test/**/*.js
+    rules:
+      no-console: 0
