@@ -113,10 +113,10 @@ npm run test:html
 
 Note that because of CloudFlare protection, tests on external links are not run in CI so as not to block on 503 errors.
 
-#### Check for i18n operating
+#### Check for end-to-end
 
 ```sh
-npm run test:i18n
+npm run test:e2e
 ```
 
 ## Deployment
