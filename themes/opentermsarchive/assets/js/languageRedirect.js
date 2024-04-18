@@ -1,24 +1,24 @@
+/* global OTA_SUPPORTED_LANGUAGE_CODE, OTA_BASEURL, OTA_PAGES */
 (() => {
-  /* eslint-disable no-undef */
-  const preferredNavigatorLanguages = Array.from(new Set(navigator.languages.map(lang => new Intl.Locale(lang).language)));
-  const currentPath = window.location.pathname;
-  const isLangDefinedInPath = supportedLanguagesCode.some(code => currentPath.includes(code));
+  let redirectURL = `${OTA_BASEURL}`;
+  const PREFERRED_NAVIGATOR_LANGUAGES = Array.from(new Set(navigator.languages.map(lang => new Intl.Locale(lang).language)));
+  const CURRENT_PATH = window.location.pathname;
+  const IS_LANG_DEFINED_IN_PATH = OTA_SUPPORTED_LANGUAGE_CODE.some(code => CURRENT_PATH.includes(code));
 
-  if (!isLangDefinedInPath) {
-    const regex = currentPath === '/' ? new RegExp(`^${baseURL}$`) : new RegExp(`${currentPath}$`);
-    const matchingPage = pages.find(page => regex.test(page.permalink));
+  if (!IS_LANG_DEFINED_IN_PATH) {
+    const REGEX = CURRENT_PATH === '/' ? new RegExp(`^${OTA_BASEURL}$`) : new RegExp(`${CURRENT_PATH}$`);
+    const MATCHING_PAGE = OTA_PAGES.find(page => REGEX.test(page.permalink));
 
-    if (matchingPage) {
-      const matchingTranslation = matchingPage.translations.find(translation =>
-        preferredNavigatorLanguages.includes(translation.lang));
+    if (MATCHING_PAGE) {
+      const MATCHING_TRANSLATION = MATCHING_PAGE.translations.find(translation =>
+        PREFERRED_NAVIGATOR_LANGUAGES.includes(translation.lang));
 
-      if (matchingTranslation) {
-        redirectURL = matchingTranslation.permalink;
+      if (MATCHING_TRANSLATION) {
+        redirectURL = MATCHING_TRANSLATION.permalink;
       } else {
-        redirectURL = matchingPage.permalink;
+        redirectURL = MATCHING_PAGE.permalink;
       }
     }
   }
   window.location.replace(redirectURL);
-  /* eslint-enable no-undef */
 })();

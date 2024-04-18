@@ -7,21 +7,26 @@
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
     <script>
-      let supportedLanguagesCode = [];
+      const OTA_BASEURL = {{ absLangURL "" | jsonify | safeJS }};
+
+      {{ $supportedLanguagesCode := slice }}
       {{ range site.Languages }}
-        {{ if eq .Weight 0 }}let redirectURL = "/{{ .LanguageCode }}";{{ end }}
-        supportedLanguagesCode.push({{ .LanguageCode }});
+        {{ $supportedLanguagesCode = $supportedLanguagesCode | append .LanguageCode }}
       {{ end }}
-      const baseURL = {{ absLangURL "" }};
-      let pages = [];
-      let page;
+      const OTA_SUPPORTED_LANGUAGE_CODE = {{ $supportedLanguagesCode | jsonify | safeJS }};
+
+      {{ $pages := slice }}
       {{ range site.Pages }}
-        page = {"permalink": "{{ .Permalink }}", "lang": "{{ .Language.LanguageCode }}", "translations": []};
+        {{ $page := dict "permalink" .Permalink "lang" .Language.LanguageCode }}
+        {{ $translations := slice }}
         {{ range .Translations }}
-          page.translations.push({ "permalink": "{{ .Permalink }}", "lang": "{{ .Language.LanguageCode }}" });
+          {{ $translation := dict "permalink" .Permalink "lang" .Language.LanguageCode }}
+          {{ $translations = $translations | append $translation }}
         {{ end }}
-        pages.push(page);
+        {{ $page = merge $page (dict "translations" $translations) }}
+        {{ $pages = $pages | append $page }}
       {{ end }}
+      const OTA_PAGES = {{ $pages | jsonify | safeJS }}
     </script>
   </head>
   <body>
