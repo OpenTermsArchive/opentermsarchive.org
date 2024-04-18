@@ -106,3 +106,6 @@ stats:
   collections:
     title: "{{ .number }} collections"
     desc: maintenues par divers partenaires
+alias:
+  title: Vous devriez être redirigé rapidement
+  message: Vous devriez être redirigé rapidement, si toutefois ce n'était pas le cas <a href="{{ .permalink }}">cliquez ici</a>.

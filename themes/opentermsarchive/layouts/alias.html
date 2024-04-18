@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ site.Language.LanguageCode }}">
   <head>
-    <title>{{ substr .Permalink 0 120 }}</title>
+    <title>{{ i18n "alias.title" }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
     <meta name="robots" content="noindex">
     <meta charset="utf-8">
@@ -25,7 +25,7 @@
     </script>
   </head>
   <body>
-    <p>You should be redirected very quickly, if not <a href="{{ .Permalink }}">click here</a>.</p>
+    <p>{{ i18n "alias.message" (dict "permalink" .Permalink) | safeHTML }}</p>
     {{ $languageRedirectJs := resources.Get "js/languageRedirect.js" | js.Build }}
     <script src="{{ $languageRedirectJs.RelPermalink }}"></script>
   </body>
