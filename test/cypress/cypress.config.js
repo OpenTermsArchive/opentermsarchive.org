@@ -1,4 +1,4 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
@@ -6,14 +6,14 @@ module.exports = defineConfig({
     supportFile: false,
     specPattern: 'test/cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
     screenshotOnRunFailure: false,
-    setupNodeEvents(on, config) {
+    setupNodeEvents(on) {
       on('task', {
         log(message) {
-          console.log(message)
+          console.log(message);
 
-          return null
+          return null;
         },
-      })
+      });
     },
   },
-})
+});
