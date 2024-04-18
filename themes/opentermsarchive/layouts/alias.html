@@ -18,8 +18,8 @@
       const OTA_BASEURL = {{ (strings.TrimSuffix "/" (absLangURL "")) | jsonify | safeJS }};
       const OTA_PAGES = {{ $pages | jsonify | safeJS }}
       const userLanguage = new Intl.Locale(navigator.language).language;
-      const preferredPage = OTA_PAGES[`${OTA_BASEURL}${window.location.pathname}`][userLanguage];
-      window.location.replace(preferredPage || OTA_BASEURL);
+      const redirectionURL = OTA_PAGES[`${OTA_BASEURL}${window.location.pathname}`][userLanguage];
+      window.location.replace(redirectionURL || OTA_BASEURL);
     </script>
   </head>
   <body>
