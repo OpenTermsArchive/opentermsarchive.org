@@ -1,3 +1,11 @@
+{{ $pages := slice }}
+{{ range site.Pages }}
+  {{ $translations := slice }}
+  {{ range .Translations }}
+    {{ $translations = merge $translations (dict .Language.LanguageCode .Permalink) }}
+  {{ end }}
+  {{ $pages = merge $pages (dict .Permalink $translations) }}
+{{ end }}
 <!doctype html>
 <html lang="{{ site.Language.LanguageCode }}">
   <head>
@@ -7,31 +15,14 @@
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
     <script>
-      const OTA_BASEURL = {{ absLangURL "" | jsonify | safeJS }};
-
-      {{ $supportedLanguagesCode := slice }}
-      {{ range site.Languages }}
-        {{ $supportedLanguagesCode = $supportedLanguagesCode | append .LanguageCode }}
-      {{ end }}
-      const OTA_SUPPORTED_LANGUAGE_CODE = {{ $supportedLanguagesCode | jsonify | safeJS }};
-
-      {{ $pages := slice }}
-      {{ range site.Pages }}
-        {{ $page := dict "permalink" .Permalink "lang" .Language.LanguageCode }}
-        {{ $translations := slice }}
-        {{ range .Translations }}
-          {{ $translation := dict "permalink" .Permalink "lang" .Language.LanguageCode }}
-          {{ $translations = $translations | append $translation }}
-        {{ end }}
-        {{ $page = merge $page (dict "translations" $translations) }}
-        {{ $pages = $pages | append $page }}
-      {{ end }}
+      const OTA_BASEURL = {{ (strings.TrimSuffix "/" (absLangURL "")) | jsonify | safeJS }};
       const OTA_PAGES = {{ $pages | jsonify | safeJS }}
+      const userLanguage = new Intl.Locale(navigator.language).language;
+      const preferredPage = OTA_PAGES[`${OTA_BASEURL}${window.location.pathname}`][userLanguage];
+      window.location.replace(preferredPage || OTA_BASEURL);
     </script>
   </head>
   <body>
     <p>{{ i18n "alias.message" (dict "permalink" .Permalink) | safeHTML }}</p>
-    {{ $languageRedirectJs := resources.Get "js/languageRedirect.js" | js.Build }}
-    <script src="{{ $languageRedirectJs.RelPermalink }}"></script>
   </body>
 </html>
