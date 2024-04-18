@@ -1,81 +1,100 @@
-const EN_HOMEPAGE = `${Cypress.config().baseUrl}/en/`;
-const FR_HOMEPAGE = `${Cypress.config().baseUrl}/fr/`;
+const LANGUAGES = {
+  default: 'en',
+  supported: [ 'en', 'fr' ],
+  unsupported: ['jp'],
+};
+
+const HOMEPAGE = {
+  en: { permalink: `${Cypress.config().baseUrl}/en/` },
+  fr: { permalink: `${Cypress.config().baseUrl}/fr/` },
+};
+
+const PRIVACY_POLICY = {
+  en: {
+    permalink: `${Cypress.config().baseUrl}/en/privacy-policy/`,
+    text: 'Privacy policy',
+  },
+  fr: {
+    permalink: `${Cypress.config().baseUrl}/fr/politique-de-confidentialite/`,
+    text: 'Politique de confidentialité',
+  },
+};
 
 describe('i18n', () => {
   describe('Homepage', () => {
-    context(`when browsing ${Cypress.config().baseUrl}`,() => {
-      context('when window navigator languages is defined as [fr-FR]',() => {
-        beforeEach(function () {
+    context('when language is not specified in the URL', () => {
+      context('when user prefered language is supported', () => {
+        beforeEach(() => {
           cy.visit('/', {
-            onBeforeLoad (win) {
-              Object.defineProperty(win.navigator, 'languages', { value: ['fr-FR'] });
-            }
-          })
-        })
-        it(`is redirected to ${FR_HOMEPAGE}`, () => {
-          cy.location('href').should('equal', FR_HOMEPAGE)
+            onBeforeLoad(window) {
+              Object.defineProperty(window.navigator, 'languages', { value: [LANGUAGES.supported[1]] });
+            },
+          });
         });
-        it('<html> lang attribute value is equal to fr', () => {
-          cy.get('html').should('have.attr', 'lang', 'fr');
+        it('adds language in the URL', () => {
+          cy.location('href').should('equal', HOMEPAGE.fr.permalink);
         });
-        it('content is in french', () => {
+        it('defines the proper HTML lang attribute', () => {
+          cy.get('html').should('have.attr', 'lang', LANGUAGES.supported[1]);
+        });
+        it('displays the content in the proper language', () => {
           cy.get('.footer').contains('Politique de confidentialité');
         });
       });
-      context('when window navigator languages is defined as [ja-JP]',() => {
-        beforeEach(function () {
+      context('when user prefered language is not supported', () => {
+        beforeEach(() => {
           cy.visit('/', {
-            onBeforeLoad (win) {
-              Object.defineProperty(win.navigator, 'languages', { value: ['ja-JP'] });
-            }
-          })
-        })
-        it(`is redirected to ${EN_HOMEPAGE}`, () => {
-          cy.location('href').should('equal', EN_HOMEPAGE)
+            onBeforeLoad(window) {
+              Object.defineProperty(window.navigator, 'languages', { value: [LANGUAGES.unsupported[0]] });
+            },
+          });
         });
-        it('<html> lang attribute value is equal to en', () => {
-          cy.get('html').should('have.attr', 'lang', 'en');
+        it('adds the default language in the URL', () => {
+          cy.location('href').should('equal', HOMEPAGE.en.permalink);
         });
-        it('content is in english', () => {
-          cy.get('.footer').contains('Privacy policy');
+        it('defines the proper HTML lang attribute', () => {
+          cy.get('html').should('have.attr', 'lang', LANGUAGES.default);
+        });
+        it('displays the content in the proper language', () => {
+          cy.get('.footer').contains(PRIVACY_POLICY.en.text);
         });
       });
     });
-    context(`when browsing ${FR_HOMEPAGE}`,() => {
-      context("when language code is defined as 'fr'",() => {
-        beforeEach(function () {
-          cy.visit(FR_HOMEPAGE);
-        })
-        it(`is URL is equal to ${FR_HOMEPAGE}`, () => {
-          cy.location('href').should('equal', FR_HOMEPAGE)
+    context('when language is specified in the URL', () => {
+      context('when language is supported', () => {
+        beforeEach(() => {
+          cy.visit(HOMEPAGE.fr.permalink);
         });
-        it('<html> lang attribute value is equal to fr', () => {
-          cy.get('html').should('have.attr', 'lang', 'fr');
+        it('shows language in the URL', () => {
+          cy.location('href').should('equal', HOMEPAGE.fr.permalink);
         });
-        it('content is in french', () => {
-          cy.get('.footer').contains('Politique de confidentialité');
+        it('defines the proper HTML lang attribute', () => {
+          cy.get('html').should('have.attr', 'lang', LANGUAGES.supported[1]);
+        });
+        it('displays the content in the proper language', () => {
+          cy.get('.footer').contains(PRIVACY_POLICY.fr.text);
         });
       });
     });
   });
   describe('Privacy Policy', () => {
-    context(`when browsing ${Cypress.config().baseUrl}/privacy-policy`,() => {
-      context('when window navigator languages is defined as [fr-FR]',() => {
-        beforeEach(function () {
-          cy.visit('/', {
-            onBeforeLoad (win) {
-              Object.defineProperty(win.navigator, 'languages', { value: ['fr-FR'] });
-            }
-          })
-        })
-        it(`is redirected to ${FR_HOMEPAGE}politique-de-confidentialite`, () => {
-          cy.location('href').should('equal', FR_HOMEPAGE)
+    context('when language is not specified in the URL', () => {
+      context('when user prefered language is supported', () => {
+        beforeEach(() => {
+          cy.visit('/privacy-policy', {
+            onBeforeLoad(window) {
+              Object.defineProperty(window.navigator, 'languages', { value: [LANGUAGES.supported[1]] });
+            },
+          });
         });
-        it('<html> lang attribute value is equal to fr', () => {
-          cy.get('html').should('have.attr', 'lang', 'fr');
+        it('adds language in the URL', () => {
+          cy.location('href').should('equal', PRIVACY_POLICY.fr.permalink);
         });
-        it('content is in french', () => {
-          cy.get('.footer').contains('Politique de confidentialité');
+        it('defines the proper HTML lang attribute', () => {
+          cy.get('html').should('have.attr', 'lang', LANGUAGES.supported[1]);
+        });
+        it('displays the content in the proper language', () => {
+          cy.get('.footer').contains(PRIVACY_POLICY.fr.text);
         });
       });
     });
