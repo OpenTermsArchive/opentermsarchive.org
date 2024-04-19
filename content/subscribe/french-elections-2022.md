@@ -2,7 +2,9 @@
 html_title: Subscribe to French Elections Memos
 html_description: These Memos are short analyses published within 48 hours of the detection of changes in the contractual documents of five platforms that could have a systemic impact on the 2022 French elections
 slug: /memos-french-elections-2022
-aliases: /subscribe/french-elections
+aliases: 
+  - /subscribe/french-elections
+  - /subscribe/memos-french-elections-2022
 ---
 
 # French Elections Memos

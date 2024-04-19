@@ -1,11 +1,28 @@
+{{ $pages := slice }}
+{{ range site.Pages }}
+  {{ $translations := slice }}
+  {{ range .Translations }}
+    {{ $translations = merge $translations (dict .Language.LanguageCode .Permalink) }}
+  {{ end }}
+  {{ $pages = merge $pages (dict .Permalink $translations) }}
+{{ end }}
 <!doctype html>
 <html lang="{{ site.Language.LanguageCode }}">
   <head>
-    <title>{{ .Permalink }}</title>
+    <title>{{ i18n "alias.title" }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
     <meta name="robots" content="noindex">
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+    <script>
+      const OTA_BASEURL = {{ (strings.TrimSuffix "/" (absLangURL "")) | jsonify | safeJS }};
+      const OTA_PAGES = {{ $pages | jsonify | safeJS }}
+      const userLanguage = new Intl.Locale(navigator.language).language;
+      const redirectionURL = OTA_PAGES[`${OTA_BASEURL}${window.location.pathname}`][userLanguage];
+      window.location.replace(redirectionURL || OTA_BASEURL);
+    </script>
   </head>
-  <body></body>
+  <body>
+    <p>{{ i18n "alias.message" (dict "permalink" .Permalink) | safeHTML }}</p>
+  </body>
 </html>

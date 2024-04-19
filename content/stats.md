@@ -2,6 +2,7 @@
 title: Size of the federation
 html_description: Total numbers of tracked terms, services, analyses and publications in the Open Terms Archive ecosystem
 layout: stats
+aliases: /stats
 ---
 
 # Size of the federation

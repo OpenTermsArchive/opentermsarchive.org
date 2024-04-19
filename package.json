@@ -14,21 +14,24 @@
   "author": "Open Terms Archive",
   "scripts": {
     "build": "hugo --minify --cleanDestinationDir",
-    "test": "npm run lint:markdown && npm run lint:css && npm run lint:js && npm run lint:html && npm run test:links && npm run test:html",
+    "test": "npm run lint:markdown && npm run lint:css && npm run lint:js && npm run lint:html && npm run test:links && npm run test:html && npm run test:e2e",
     "pretest:links": "npm run build",
     "test:links": "linkinator ./public --recurse --verbosity error",
     "pretest:html": "npm run build",
     "test:html": "html-validate ./public",
+    "test:e2e": "node test/cypress/e2e/index.js",
     "start:dev": "hugo serve --watch --logLevel debug --disableFastRender --printI18nWarnings",
+    "start:ci": "hugo serve --logLevel error --port 1313",
     "lint:markdown": "markdownlint *.md content/**/*.md",
     "lint:css": "stylelint \"themes/opentermsarchive/assets/css/**/*.css\"",
-    "lint:js": "eslint themes/opentermsarchive/assets/js/",
+    "lint:js": "eslint themes/opentermsarchive/assets/js/ test/**/*.js",
     "lint:html": "eslint themes/opentermsarchive/layouts/**/*.html -c .htmleslintrc.yaml"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.23.1",
     "@html-eslint/parser": "^0.23.0",
     "@stylistic/stylelint-config": "^1.0.1",
+    "cypress": "^13.7.3",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "html-validate": "^8.12.0",
@@ -43,6 +46,7 @@
     "postcss-preset-env": "^9.4.0",
     "stylelint": "^16.2.1",
     "stylelint-config-recess-order": "^5.0.0",
-    "stylelint-config-standard": "^36.0.0"
+    "stylelint-config-standard": "^36.0.0",
+    "wait-on": "^7.2.0"
   }
 }

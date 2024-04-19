@@ -1,7 +1,9 @@
 ---
 title: Call for funders and contributors on generative AI industry
 html_description: Leverage a database of generative AI services terms to design AI regulation and assess upcoming compliance
-aliases: /domain/generative-ai
+aliases: 
+  - /domain/generative-ai
+  - /impact/generative-ai
 ---
 
 ### Proposal

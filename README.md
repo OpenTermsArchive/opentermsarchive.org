@@ -113,6 +113,12 @@ npm run test:html
 
 Note that because of CloudFlare protection, tests on external links are not run in CI so as not to block on 503 errors.
 
+#### Check for end-to-end
+
+```sh
+npm run test:e2e
+```
+
 ## Deployment
 
 The `main` branch is used on production and automatically deployed through GitHub pages. Refer to the configuration file `.github/workflows/gh-pages.yml`.

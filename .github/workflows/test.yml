@@ -30,3 +30,10 @@ jobs:
         run: npm run test:links -- --skip '^(?!https?://(www.opentermsarchive.org|netlify.app))'
       - name: Validate HTML
         run: npm run test:html
+      - name: Test i18n
+        uses: cypress-io/github-action@v6
+        with:
+          start: npm run start:ci
+          wait-on: 'http://localhost:1313'
+          config-file: test/cypress/cypress.config.js
+          spec: test/cypress/e2e/i18n.cy.js

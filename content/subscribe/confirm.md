@@ -1,7 +1,7 @@
 ---
 html_title: Confirm your subscription
 html_description: You should receive an email with a confirmation link.
-aliases: /en/subscribe/confirm
+aliases: /subscribe/confirm
 ---
 
 # Almost done!

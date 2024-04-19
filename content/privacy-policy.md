@@ -1,6 +1,7 @@
 ---
 title: Privacy Policy
 html_description: This privacy policy explains how, why and under what conditions the Open Terms Archive site collects personal information and how it is used.
+aliases: /privacy-policy
 ---
 
 # Privacy Policy
