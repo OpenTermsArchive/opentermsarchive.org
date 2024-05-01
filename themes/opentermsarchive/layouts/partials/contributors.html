@@ -2,15 +2,40 @@
 {{ if .thumbnailWidth }}{{ $thumbnailWidth = .thumbnailWidth }}{{ end }}
 {{ $thumbnailHeight := 64 }}
 {{ if .thumbnailHeight }}{{ $thumbnailHeight = .thumbnailHeight }}{{ end }}
+
+{{ $allcontributorsrc := resources.Get "allcontributorsrc.json" | unmarshal }}
+{{ $filteredContributors := slice }}
+{{ $allStaffNames := slice }}
+{{ range site.Data.staff }}{{ $allStaffNames = union $allStaffNames . }}{{ end }}
+
+{{ range $allcontributorsrc.contributors }}
+  {{ $contributor := . }}
+  {{ with $.type }}
+    {{ if (in (index site.Data.staff .) $contributor.name)}}
+      {{ $filteredContributors = $filteredContributors | append $contributor }}
+    {{ end }}
+   {{ else }}
+    {{ if not (in $allStaffNames $contributor.name)}}
+      {{ $filteredContributors = $filteredContributors | append $contributor }}
+    {{ end }}
+   {{ end }}
+{{ end }}
+
 <div class="contributors {{ with .class }}{{ . }}{{ end }} {{ with .showInfo }}contributors--show-infos{{ end }}">
   <div class="contributors__items">
-    {{ range $name, $link := (index site.Data.contributors .type) }}
+    {{ range $filteredContributors }}
+      {{ $contributor := . }}
+      {{ $image := resources.Get (printf "/images/contributors/%s.jpg" ($contributor.name | urlize)) }}
+      {{ with $contributor.avatar_url }}
+        {{ $remoteImage := resources.GetRemote . }}
+        {{ if or (eq $remoteImage.Data.ContentType "image/jpeg") (eq $remoteImage.Data.ContentType "image/png") }}
+          {{ $image = $remoteImage }}
+        {{ end }}
+      {{ end }}
       <div class="contributor">
-        <a class="contributor__link" href="{{ $link }}" target="_blank" rel="nofollow noopener">
-          {{ $imagePath := (printf "/images/contributors/%s.jpg" ($name | urlize)) }}
-          {{ $image := resources.Get $imagePath }}
-          <img class="contributor__image" src="{{ $image.RelPermalink }}" alt="{{ $name }}" width="{{ $thumbnailWidth }}" height="{{ $thumbnailHeight }}">
-          {{ with $.showInfo }}<div class="contributor__info">{{ $name }}</div>{{ end }}
+        <a class="contributor__link" href="{{ $contributor.profile }}" target="_blank" rel="nofollow noopener">
+          {{ with $image }}<img class="contributor__image" src="{{ .RelPermalink }}" alt="{{ $contributor.name }}" width="{{ $thumbnailWidth }}" height="{{ $thumbnailHeight }}">{{ end }}
+          {{ with $.showInfo }}<div class="contributor__info">{{ $contributor.name }}</div>{{ end }}
         </a>
       </div>
     {{ end }}

@@ -66,7 +66,7 @@
           <h3>{{ i18n "about.contributors.title" }}</h3>
           {{ $impactLink := .RelRef (dict "path" "/impact") }}
           <p>{{ i18n "about.contributors.subtitle" (dict "impactLink" $impactLink) | markdownify }}</p>
-          {{ partial "contributors.html" (dict "type" "contributors" ) }}
+          {{ partial "contributors.html" }}
         </div>
       </div>
     </div>
