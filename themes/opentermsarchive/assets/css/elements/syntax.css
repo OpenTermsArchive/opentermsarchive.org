@@ -331,11 +331,11 @@
 
 .code--removed {
   display: inline-block;
+  color: #f92672;
   text-decoration-line: line-through;
-  background-color: rgb(249 38 114 / 65%);
 }
 
 .code--added {
   display: inline-block;
-  background-color: rgb(166 226 46 / 65%);
+  color: #a6e22e;
 }
