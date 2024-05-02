@@ -1,6 +1,7 @@
 ---
 title: Legal notice of Open Terms Archive
 html_description: Publishing and hosting identification
+aliases: /legal-notice
 ---
 
 # Legal notice
