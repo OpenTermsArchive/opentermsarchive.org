@@ -70,3 +70,38 @@ We add this additional rule:
 ### CSS naming convention
 
 Use [BEM methodology](https://getbem.com/) to create reusable components and facilitate code sharing.
+
+## Add a contributor
+
+Contributors to Open Terms Archive are listed publicly on the website.
+
+### For contributors with a GitHub account
+
+This is made possible by the use of the [All Contributors bot](https://allcontributors.org/docs/en/bot/overview), that enables adding a contributor with a comment on an issue or pull request, without writing code. To do this, please use the [dedicated issue](https://github.com/OpenTermsArchive/opentermsarchive.org/issues/271) on this repository and write a comment with a command like `@all-contributors please add @<username> for <contributions>`.
+
+### For contributors who do not have a GitHub account
+
+1. Edit the `.all-contributorsrc` file at the root of this repository and use the following format to add a contributor:
+
+```json
+{
+  ...,
+  "contributors": [
+    {
+      "name": "<contributor_name>",
+      "profile": "<contributor_website>",
+      "contributions": ["<type_of_contribution>"]
+    }
+  ]
+}
+```
+
+2. Add a picture to `assets/images/contributors/` folder which respects the following constraints:
+
+- square format, 420x420px
+- in [optimised](https://imageoptim.com) JPEG
+- slugify the filename and use `jpg` as an extension, for example: `contributor-name.jpg`
+
+### How to add a type of contribution to a contributor
+
+You can do this by editing the `.all-contributorsrc` file or by using the bot with `@all-contributors please add @<already_listed_contributor> for <new_contribution_type>`
