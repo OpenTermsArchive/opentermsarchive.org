@@ -1,0 +1,335 @@
+{
+  "projectName": "opentermsarchive.org",
+  "projectOwner": "OpenTermsArchive",
+  "files": [
+    "README.md"
+  ],
+  "contributors": [
+    {
+      "login": "Ndpnt",
+      "name": "Nicolas Dupont",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1098708?v=4",
+      "profile": "https://github.com/Ndpnt",
+      "contributions": [
+        "code",
+        "infra"
+      ]
+    },
+    {
+      "login": "MattiSG",
+      "name": "Matti Schneider",
+      "avatar_url": "https://avatars.githubusercontent.com/u/222463?v=4",
+      "profile": "https://mattischneider.fr",
+      "contributions": [
+        "code",
+        "projectManagement"
+      ]
+    },
+    {
+      "login": "clementbiron",
+      "name": "Clément Biron",
+      "avatar_url": "https://avatars.githubusercontent.com/u/364319?v=4",
+      "profile": "https://www.clementbiron.com",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "martinratinaud",
+      "name": "Martin Ratinaud",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4191809?v=4",
+      "profile": "https://github.com/martinratinaud",
+      "contributions": [
+        "code",
+        "infra"
+      ]
+    },
+    {
+      "login": "Cli4d",
+      "name": "Clifford Ouma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56266330?v=4",
+      "profile": "https://github.com/Cli4d",
+      "contributions": [
+        "review",
+        "doc"
+      ]
+    },
+    {
+      "login": "emmanuellar",
+      "name": "Amarachi Johnson-Ubah",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41474439?v=4",
+      "profile": "https://github.com/emmanuellar",
+      "contributions": [
+        "review",
+        "doc"
+      ]
+    },
+    {
+      "login": "michielbdejong",
+      "name": "Michiel de Jong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/408412?v=4",
+      "profile": "https://github.com/michielbdejong",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "LVerneyPEReN",
+      "name": "Lucas Verney",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58298410?v=4",
+      "profile": "https://github.com/LVerneyPEReN",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "THouriezPEReN",
+      "name": "Tom Houriez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70654947?v=4",
+      "profile": "https://github.com/THouriezPEReN",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "avernois",
+      "name": "Antoine Vernois",
+      "avatar_url": "https://avatars.githubusercontent.com/u/765477?v=4",
+      "profile": "https://github.com/avernois",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "vviers",
+      "name": "Vincent Viers",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30295971?v=4",
+      "profile": "https://github.com/vviers",
+      "contributions": [
+        "code",
+        "data"
+      ]
+    },
+    {
+      "login": "cquest",
+      "name": "Christian Quest",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1202668?v=4",
+      "profile": "https://github.com/cquest",
+      "contributions": [
+        "infra"
+      ]
+    },
+    {
+      "login": "AaronjSugarman",
+      "name": "Aaron Sugarman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/82889095?v=4",
+      "profile": "https://github.com/AaronjSugarman",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "karnauskas",
+      "name": "Marius Karnauskas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1094012?v=4",
+      "profile": "https://github.com/karnauskas",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "GatienH",
+      "name": "GatienH",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6501059?v=4",
+      "profile": "https://github.com/GatienH",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "mvidonne",
+      "name": "Marie-Pierre Vidonne",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46820105?v=4",
+      "profile": "https://github.com/mvidonne",
+      "contributions": [
+        "data",
+        "review"
+      ]
+    },
+    {
+      "login": "Amustache",
+      "name": "Stache",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5108539?v=4",
+      "profile": "https://github.com/Amustache",
+      "contributions": [
+        "review",
+        "infra"
+      ]
+    },
+    {
+      "login": "afisher3578",
+      "name": "Alex Fisher",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92438650?v=4",
+      "profile": "https://github.com/afisher3578",
+      "contributions": [
+        "code",
+        "infra"
+      ]
+    },
+    {
+      "login": "pdehaye",
+      "name": "Paul-Olivier Dehaye",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3274335?v=4",
+      "profile": "https://github.com/pdehaye",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "guillett",
+      "name": "Thomas Guillet",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1410356?v=4",
+      "profile": "https://github.com/guillett",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Kissaki",
+      "name": "Jan Klass",
+      "avatar_url": "https://avatars.githubusercontent.com/u/93181?v=4",
+      "profile": "https://github.com/Kissaki",
+      "contributions": [
+        "code",
+        "review"
+      ]
+    },
+    {
+      "login": "Harshil-Jani",
+      "name": "Harshil Jani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/79367883?v=4",
+      "profile": "https://github.com/Harshil-Jani",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "AdrienFines",
+      "name": "Adrien Fines",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41912392?v=4",
+      "profile": "https://github.com/AdrienFines",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "name": "Marine Guillaume",
+      "profile": "https://twitter.com/marineguillaum",
+      "contributions": [
+        "promotion"
+      ]
+    },
+    {
+      "name": "Louis-Victor de Franssu",
+      "profile": "https://twitter.com/lvdefranssu",
+      "contributions": [
+        "promotion"
+      ]
+    },
+    {
+      "name": "Jeremy Hureaux",
+      "profile": "https://twitter.com/hureaux",
+      "contributions": [
+        "promotion"
+      ]
+    },
+    {
+      "name": "Luã Streit",
+      "profile": "https://www.linkedin.com/in/lua-streit/",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "name": "Laurie Liddell",
+      "profile": "https://www.linkedin.com/in/laurie-liddell-bb4278b3/",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "name": "Raphael Bartlomé",
+      "profile": "https://www.linkedin.com/in/raphael-bartlome-840006164/",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "name": "Chloé Legendre",
+      "profile": "https://www.linkedin.com/in/chlo%C3%A9-legendre-2b014a1a6/",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "name": "Constance Dauvergne",
+      "profile": "https://www.linkedin.com/in/constance-dauvergne-1811a5192/",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "name": "Lucie Lechardoy",
+      "profile": "https://www.linkedin.com/in/lucie-lechardoy-b092b745/",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "name": "Paolo Calderoni",
+      "profile": "https://www.linkedin.com/in/paolo-calderoni/",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "name": "Giacomo Stazi",
+      "profile": "https://www.linkedin.com/in/giacomo-stazi-a14a15136/",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "name": "Elsa Trujillo",
+      "profile": "https://twitter.com/Elsa_Trujillo_",
+      "contributions": [
+        "promotion"
+      ]
+    },
+    {
+      "name": "Siegrid Henry",
+      "profile": "https://www.linkedin.com/in/siegridhenry/",
+      "contributions": [
+        "promotion"
+      ]
+    },
+    {
+      "name": "Mathilde Saliou",
+      "profile": "https://twitter.com/mathildsl",
+      "contributions": [
+        "content",
+        "data"
+      ]
+    },
+    {
+      "name": "Thomas Reboul",
+      "profile": "https://www.linkedin.com/in/thomas-reboul-29a46569/",
+      "contributions": [
+        "data"
+      ]
+    }
+  ],
+  "repoType": "github",
+  "commitConvention": "angular"
+}
