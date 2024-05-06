@@ -83,18 +83,18 @@ This is made possible by the use of the [All Contributors bot](https://allcontri
 
 1. Edit the `.all-contributorsrc` file at the root of this repository and use the following format to add a contributor:
 
-```json
-{
-  ...,
-  "contributors": [
-    {
-      "name": "<contributor_name>",
-      "profile": "<contributor_website>",
-      "contributions": ["<type_of_contribution>"]
-    }
-  ]
-}
-```
+   ```json
+   {
+     ...,
+     "contributors": [
+       {
+         "name": "<contributor_name>",
+         "profile": "<contributor_website>",
+         "contributions": ["<type_of_contribution>"]
+       }
+     ]
+   }
+   ```
 
 2. Add a picture to `assets/images/contributors/` folder which respects the following constraints:
 
