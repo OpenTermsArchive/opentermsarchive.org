@@ -2,7 +2,7 @@
   "projectName": "opentermsarchive.org",
   "projectOwner": "OpenTermsArchive",
   "files": [
-    "README.md"
+    ".all-contributors.md"
   ],
   "contributors": [
     {
