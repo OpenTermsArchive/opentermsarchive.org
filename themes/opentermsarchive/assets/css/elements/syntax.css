@@ -332,7 +332,6 @@
 .code--removed {
   display: inline-block;
   color: #f92672;
-  text-decoration-line: line-through;
 }
 
 .code--added {

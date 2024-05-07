@@ -7,14 +7,14 @@
     </div>
     <div class="column column--60">
       <div class="column__header">
-        <h3 class="column__subtitle h3--light">{{ i18n "product_newsletter.title" }}</h3>
+        <h3 class="column__subtitle h3--light" id="newsletter__title">{{ i18n "product_newsletter.title" }}</h3>
       </div>
       <div class="column__desc">
         <div class="textcontent textcontent--has-no-margin-top">
           <p class="mt--m">{{ i18n "product_newsletter.subtitle" }}</p>
           <form id="sib-form" method="POST" action="{{ i18n "product_newsletter.form.action" }}" data-type="subscription">
             <div class="formfield mb--l">
-              <input type="email" id="email" name="EMAIL" autoComplete="email" placeholder="{{ i18n "product_newsletter.form.email_placeholder" }}" required>
+              <input aria-labelledby="newsletter__title" type="email" id="email" name="EMAIL" autoComplete="email" placeholder="{{ i18n "product_newsletter.form.email_placeholder" }}" required>
             </div>
             <div class="formfield formfield--align-right">
               <button class="button" form="sib-form" type="submit">
