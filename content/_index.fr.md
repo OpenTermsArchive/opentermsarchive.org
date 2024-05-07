@@ -38,7 +38,7 @@ how_it_works:
   step3:
     title: 3. Analyse
     subtitle: Lorsque des modifications sont repérées, elles sont enregistrées et exposées pour analyse humaine.
-    exemple: "Reconnaissance faciale : si vous l'avez activé, nous utilisons la technologie de reconnaissance faciale pour vous reconnaître sur les photos, les vidéos et les expériences de l'appareil photo. Les modèles de reconnaissance faciale que nous créons <del class=\"code--removed\">peuvent constituer</del><ins class=\"code--added\">sont</ins> des données bénéficiant de protections spéciales en vertu <del class=\"code--removed\">des lois de votre pays</del><ins class=\"code--added\">de la législation européenne</ins>."
+    exemple: "Reconnaissance faciale : si vous l'avez activée, nous utilisons la technologie de reconnaissance faciale pour vous reconnaître sur les photos et les vidéos. Les modèles de reconnaissance faciale que nous créons <del class=\"code--removed\">peuvent constituer</del><ins class=\"code--added\">sont</ins> des données bénéficiant de protections spéciales en vertu <del class=\"code--removed\">des lois de votre pays</del><ins class=\"code--added\">de la législation européenne</ins>."
   step4:
     title: 4. Diffusion
     subtitle: Nous publions toutes les versions dans des jeux de données pour soutenir leur réutilisation et la recherche.
