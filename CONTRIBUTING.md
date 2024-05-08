@@ -77,7 +77,9 @@ We acknowledge the efforts of our contributors by listing them on our website. D
 
 ### For contributors with a GitHub account
 
-This is made possible by the use of the [All Contributors bot](https://allcontributors.org/docs/en/bot/overview), that enables adding a contributor with a comment on an issue or pull request, without writing code. To do this, please use the [dedicated issue](https://github.com/OpenTermsArchive/opentermsarchive.org/issues/271) on this repository and write a comment with a command like `@all-contributors please add @<username> for <contributions>`.
+This is made possible by the use of the [All Contributors bot](https://allcontributors.org/docs/en/bot/overview), that enables adding a contributor with a comment on an issue or pull request, without writing code. To do this, please use the [dedicated issue](https://github.com/OpenTermsArchive/opentermsarchive.org/issues/271) on this repository and write a comment with a command like:
+
+```@all-contributors please add @<username> for <contributions>```
 
 ### For contributors without a GitHub account
 
@@ -105,4 +107,6 @@ If the contributor does not have a GitHub account, the repository files will nee
 
 ### Add a new contribution type to a contributor
 
-To add more contribution types to an existing contributor, you can either edit the `.all-contributorsrc` file directly or use the All Contributors bot by posting a comment in the format: `@all-contributors please add @<already_listed_contributor> for <new_contribution_type>`
+To add more contribution types to an existing contributor, you can either edit the `.all-contributorsrc` file directly or use the All Contributors bot by posting a comment in the format:
+
+```@all-contributors please add @<already_listed_contributor> for <new_contribution_type>```
