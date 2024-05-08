@@ -83,6 +83,7 @@ This is made possible by the use of the [All Contributors bot](https://allcontri
 
 If the contributor does not have a GitHub account, the repository files will need to be manually updated:
 Edit the `.all-contributorsrc` file at the root of this repository by adding the contributor's details in the following format within the contributors array:
+
    ```json
    {
      ...,
