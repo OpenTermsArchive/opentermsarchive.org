@@ -70,3 +70,43 @@ We add this additional rule:
 ### CSS naming convention
 
 Use [BEM methodology](https://getbem.com/) to create reusable components and facilitate code sharing.
+
+## List a new contributor in the Open Terms Archive website
+
+We acknowledge the efforts of our contributors by listing them on our website. Depending on whether the contributor has a GitHub account, the process for adding them differs slightly.
+
+### For contributors with a GitHub account
+
+This is made possible by the use of the [All Contributors bot](https://allcontributors.org/docs/en/bot/overview), that enables adding a contributor with a comment on an issue or pull request, without writing code. To do this, please use the [dedicated issue](https://github.com/OpenTermsArchive/opentermsarchive.org/issues/271) on this repository and write a comment with a command like:
+
+```@all-contributors please add @<username> for <contributions>```
+
+### For contributors without a GitHub account
+
+If the contributor does not have a GitHub account, the repository files will need to be manually updated:
+
+- Edit the `.all-contributorsrc` file at the root of this repository by adding the contributor's details in the following format within the contributors array:
+
+   ```json
+   {
+     ...,
+     "contributors": [
+       {
+         "name": "<contributor_name>",
+         "profile": "<contributor_website>",
+         "contributions": ["<type_of_contribution>"]
+       }
+     ]
+   }
+   ```
+
+- Add a contributor's picture in the `assets/images/contributors/` folder which respects the following constraints:
+  - Square format, 420x420 pixels.
+  - Optimized JPEG format (you can use tools like [Image Optim](https://imageoptim.com) for optimization).
+  - Filename should be a slugified version of the contributor's name with a `.jpg` extension (e.g., `contributor-name.jpg`).
+
+### Add a new contribution type to a contributor
+
+To add more contribution types to an existing contributor, you can either edit the `.all-contributorsrc` file directly or use the All Contributors bot by posting a comment in the format:
+
+```@all-contributors please add @<already_listed_contributor> for <new_contribution_type>```
