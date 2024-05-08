@@ -36,6 +36,4 @@ jobs:
           start: npm run start:ci
           wait-on: 'http://localhost:1313'
           config-file: test/cypress/cypress.config.js
-          spec: |
-            test/cypress/e2e/contributors.cy.js
-            test/cypress/e2e/i18n.cy.js
+          spec: test/cypress/e2e/i18n.cy.js

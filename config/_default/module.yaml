@@ -5,5 +5,3 @@ mounts:
     target: assets
   - source: .all-contributorsrc
     target: assets/allcontributorsrc.json
-  - source: .all-contributorsrc
-    target: static/contributors.json
