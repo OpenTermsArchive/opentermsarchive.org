@@ -1,6 +1,6 @@
 header:
-  - name: Home
-    pageRef: /
+  - name: Memos
+    pageRef: /memos
     weight: 1
   - name: Datasets
     pageRef: /datasets
@@ -18,11 +18,11 @@ footer:
   - name: Home
     pageRef: /
     weight: 1
-  - name: Datasets
-    pageRef: /datasets
-    weight: 2
   - name: Memos
     pageRef: /memos
+    weight: 2
+  - name: Datasets
+    pageRef: /datasets
     weight: 3
   - name: Documentation
     pageRef: /
