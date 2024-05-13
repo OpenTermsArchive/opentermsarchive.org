@@ -32,7 +32,8 @@
       "profile": "https://www.clementbiron.com",
       "contributions": [
         "code",
-        "design"
+        "design",
+        "a11y"
       ]
     },
     {
@@ -331,5 +332,7 @@
     }
   ],
   "repoType": "github",
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs",
+  "contributorsPerLine": 7
 }
