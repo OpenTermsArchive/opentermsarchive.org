@@ -109,3 +109,5 @@ stats:
 alias:
   title: You should be redirected quickly
   message: You should be redirected quickly, if not <a href="{{ .permalink }}">click here</a>.
+memos:
+  disclaimer: This analysis is written by an independent contributor and does not necessarily match the understanding of Open Terms Archive.
