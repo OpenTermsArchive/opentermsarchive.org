@@ -1,7 +1,7 @@
 ---
-title: Études de cas
+title: Mémos
 html_description: Quelques exemples de ce qu’Open Terms Archive expose
 hero:
-  title: Études de cas
+  title: Mémos
   subtitle: Quelques exemples de ce qu’Open Terms Archive expose
 ---

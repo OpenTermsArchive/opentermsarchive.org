@@ -21,8 +21,8 @@ footer:
   - name: Jeux de données
     pageRef: /datasets
     weight: 2
-  - name: Études de cas
-    pageRef: /case-studies
+  - name: Mémos
+    pageRef: /memos
     weight: 3
   - name: Documentation
     url: https://docs.opentermsarchive.org

@@ -1,8 +1,8 @@
 ---
-title: Case Studies
+title: Memos
 html_description: Some examples of what Open Terms Archive exposes
 hero:
-  title: Case Studies
+  title: Memos
   subtitle: Some examples of what Open Terms Archive exposes
 aliases: /case-studies
 ---

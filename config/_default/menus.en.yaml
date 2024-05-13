@@ -21,8 +21,8 @@ footer:
   - name: Datasets
     pageRef: /datasets
     weight: 2
-  - name: Case studies
-    pageRef: /case-studies
+  - name: Memos
+    pageRef: /memos
     weight: 3
   - name: Documentation
     pageRef: /
