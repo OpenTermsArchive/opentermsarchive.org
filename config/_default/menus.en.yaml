@@ -1,9 +1,9 @@
 header:
-  - name: Memos
-    pageRef: /memos
-    weight: 1
   - name: Datasets
     pageRef: /datasets
+    weight: 1
+  - name: Memos
+    pageRef: /memos
     weight: 2
   - name: Documentation
     url: https://docs.opentermsarchive.org
@@ -18,11 +18,11 @@ footer:
   - name: Home
     pageRef: /
     weight: 1
-  - name: Memos
-    pageRef: /memos
-    weight: 2
   - name: Datasets
     pageRef: /datasets
+    weight: 2
+  - name: Memos
+    pageRef: /memos
     weight: 3
   - name: Documentation
     pageRef: /

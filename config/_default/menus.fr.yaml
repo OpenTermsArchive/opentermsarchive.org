@@ -1,9 +1,9 @@
 header:
-  - name: Accueil
-    pageRef: /
-    weight: 1
   - name: Jeux de données
     pageRef: /datasets
+    weight: 1
+  - name: Mémos
+    pageRef: /memos
     weight: 2
   - name: Documentation
     url: https://docs.opentermsarchive.org
