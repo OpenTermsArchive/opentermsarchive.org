@@ -10,4 +10,4 @@ aliases: /fr/domain/privacy
 
 ### Réalisations
 
-- En septembre 2021, des [articles de presse](https://techcrunch.com/2021/09/06/protonmail-logged-ip-address-of-french-activist-after-order-by-swiss-authorities/) ont objectivé leurs enquêtes à l'aide de données provenant d'Open Terms Archive à la suite de la [collaboration](https://opentermsarchive.org/case-studies/protonmail-clarifies-its-privacy-policies) du fournisseur suisse ProtonMail avec les forces de l'ordre.
+- En septembre 2021, des [articles de presse](https://techcrunch.com/2021/09/06/protonmail-logged-ip-address-of-french-activist-after-order-by-swiss-authorities/) ont objectivé leurs enquêtes à l'aide de données provenant d'Open Terms Archive à la suite de la [collaboration]({{< relref path="/protonmail-clarifies-its-privacy-policies" >}}) du fournisseur suisse ProtonMail avec les forces de l'ordre.

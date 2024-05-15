@@ -2,8 +2,6 @@ weight: 1
 languageName: Français
 languageCode: fr
 permalinks:
-  section:
-    case-studies: /etudes-de-cas/
   page:
-    case-studies: /etudes-de-cas/:slug/
+    memos: /memos/:slug/
     subscribe: /souscrire/:slug
