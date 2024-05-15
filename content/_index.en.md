@@ -2,6 +2,7 @@
 title: Open Terms Archive
 html_description: Open Terms Archive publicly records every version of the terms of digital services to enable democratic oversight.
 hero:
+  anchor: mission-statement
   title: <span>Big Tech services benefit from the opaqueness of their terms.</span><br />We make them transparent.
   subtitle: Open Terms Archive publicly records every version of the terms of digital services to enable democratic oversight.
   link: "[Discover how that makes a difference →]({{< relref path=\"/impact\" >}})"
