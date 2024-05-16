@@ -1,0 +1,1 @@
+midjourney-ceases-free-trials-as-it-unveils-subscription-plans.md

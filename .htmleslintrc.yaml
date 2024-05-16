@@ -11,3 +11,4 @@ rules:
     - skip:
       - pre
       - code
+  "@html-eslint/no-duplicate-attrs": warn
