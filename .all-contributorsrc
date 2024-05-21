@@ -332,7 +332,6 @@
     }
   ],
   "repoType": "github",
-  "commitConvention": "angular",
-  "commitType": "docs",
+  "commitConvention": "none",
   "contributorsPerLine": 7
 }
