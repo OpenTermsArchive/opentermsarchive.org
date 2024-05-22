@@ -1,43 +1,34 @@
-{{ $thumbnailWidth := or .thumbnailWidth 64 }}
-{{ $thumbnailHeight := or .thumbnailHeight 64 }}
+{{ $thumbnailWidth := default 64 .thumbnailWidth }}
+{{ $thumbnailHeight := default 64 .thumbnailHeight }}
 
-{{ $contributors := (resources.Get "allcontributorsrc.json" | unmarshal).contributors }}
+{{ $contributors := dict }}
+{{ range (resources.Get "allcontributorsrc.json" | unmarshal).contributors }}
+  {{ $contributors = $contributors | merge (dict .name .) }}
+{{ end }}
+
 {{ $allStaffNames := slice }}
 {{ range site.Data.staff }}{{ $allStaffNames = union $allStaffNames . }}{{ end }}
 
-{{ $remoteContributors := slice }}
 {{ with resources.GetRemote "https://raw.githubusercontent.com/OpenTermsArchive/engine/main/.all-contributorsrc" }}
   {{ with .Err }}
     {{ errorf "%s" . }}
   {{ else }}
-    {{ $remoteContributors = (.Content | unmarshal).contributors }}
+    {{ range (.Content | unmarshal).contributors }}
+      {{ $contributors =  $contributors | merge (dict .name .) }}
+    {{ end }}
   {{ end }}
 {{ else }}
   {{ errorf "Unable to get the remote contributors" }}
 {{ end }}
 
-{{ $uniqueContributors := $contributors }}
-{{ range $remoteContributor := $remoteContributors }}
-  {{ $duplicate := false }}
-  {{ range $contributors }}
-    {{ if eq .name $remoteContributor.name }}
-      {{ $duplicate = true }}
-      {{ break }}
-    {{ end }}
-  {{ end }}
-  {{ if not $duplicate }}
-    {{ $uniqueContributors = $uniqueContributors | append $remoteContributor }}
-  {{ end }}
-{{ end }}
-
 {{ $filteredContributors := slice }}
-{{ range $contributor := $uniqueContributors }}
+{{ range $contributor := $contributors }}
   {{ with $.type }}
-    {{ if (in (index site.Data.staff .) $contributor.name)}}
+    {{ if (in (index site.Data.staff .) $contributor.name) }}
       {{ $filteredContributors = $filteredContributors | append $contributor }}
     {{ end }}
   {{ else }}
-    {{ if not (in $allStaffNames $contributor.name)}}
+    {{ if not (in $allStaffNames $contributor.name) }}
       {{ $filteredContributors = $filteredContributors | append $contributor }}
     {{ end }}
   {{ end }}
