@@ -76,33 +76,6 @@
       ]
     },
     {
-      "login": "LVerneyPEReN",
-      "name": "Lucas Verney",
-      "avatar_url": "https://avatars.githubusercontent.com/u/58298410?v=4",
-      "profile": "https://github.com/LVerneyPEReN",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "THouriezPEReN",
-      "name": "Tom Houriez",
-      "avatar_url": "https://avatars.githubusercontent.com/u/70654947?v=4",
-      "profile": "https://github.com/THouriezPEReN",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "avernois",
-      "name": "Antoine Vernois",
-      "avatar_url": "https://avatars.githubusercontent.com/u/765477?v=4",
-      "profile": "https://github.com/avernois",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
       "login": "vviers",
       "name": "Vincent Viers",
       "avatar_url": "https://avatars.githubusercontent.com/u/30295971?v=4",
@@ -159,16 +132,6 @@
       ]
     },
     {
-      "login": "Amustache",
-      "name": "Stache",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5108539?v=4",
-      "profile": "https://github.com/Amustache",
-      "contributions": [
-        "review",
-        "infra"
-      ]
-    },
-    {
       "login": "afisher3578",
       "name": "Alex Fisher",
       "avatar_url": "https://avatars.githubusercontent.com/u/92438650?v=4",
@@ -176,34 +139,6 @@
       "contributions": [
         "code",
         "infra"
-      ]
-    },
-    {
-      "login": "pdehaye",
-      "name": "Paul-Olivier Dehaye",
-      "avatar_url": "https://avatars.githubusercontent.com/u/3274335?v=4",
-      "profile": "https://github.com/pdehaye",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "guillett",
-      "name": "Thomas Guillet",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1410356?v=4",
-      "profile": "https://github.com/guillett",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "Kissaki",
-      "name": "Jan Klass",
-      "avatar_url": "https://avatars.githubusercontent.com/u/93181?v=4",
-      "profile": "https://github.com/Kissaki",
-      "contributions": [
-        "code",
-        "review"
       ]
     },
     {
