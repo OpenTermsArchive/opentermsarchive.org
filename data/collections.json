@@ -169,6 +169,6 @@
       "en": "Services needed to operate the Open Terms Archive engine",
       "fr": "Services nécessaires au fonctionnement du moteur d'Open Terms Archive"
     },
-    "endpoint": "http://162.19.74.224/api/v1"
+    "endpoint": "http://162.19.74.224/collection-api/v1"
   }
 }
