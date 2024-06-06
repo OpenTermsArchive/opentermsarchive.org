@@ -8,4 +8,5 @@ github:
   url: https://github.com/OpenTermsArchive
 contributors:
   local: allcontributorsrc.json
-  remote: https://raw.githubusercontent.com/OpenTermsArchive/engine/main/.all-contributorsrc
+  remote:
+    - https://raw.githubusercontent.com/OpenTermsArchive/engine/main/.all-contributorsrc

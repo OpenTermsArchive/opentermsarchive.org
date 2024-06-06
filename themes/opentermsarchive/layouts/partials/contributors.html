@@ -9,16 +9,18 @@
 {{ $allStaffNames := slice }}
 {{ range site.Data.staff }}{{ $allStaffNames = union $allStaffNames . }}{{ end }}
 
-{{ with resources.GetRemote site.Params.contributors.remote }}
-  {{ with .Err }}
-    {{ errorf "%s" . }}
-  {{ else }}
-    {{ range (.Content | unmarshal).contributors }}
-      {{ $contributors =  $contributors | merge (dict .name .) }}
+{{ range $remoteContributorsSource := site.Params.contributors.remote }}
+  {{ with resources.GetRemote $remoteContributorsSource }}
+    {{ with .Err }}
+      {{ errorf "%s" . }}
+    {{ else }}
+      {{ range (.Content | unmarshal).contributors }}
+        {{ $contributors =  $contributors | merge (dict .name .) }}
+      {{ end }}
     {{ end }}
+  {{ else }}
+    {{ errorf "Unable to get the remote contributors" }}
   {{ end }}
-{{ else }}
-  {{ errorf "Unable to get the remote contributors" }}
 {{ end }}
 
 {{ $filteredContributors := slice }}
