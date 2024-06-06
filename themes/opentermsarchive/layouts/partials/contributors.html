@@ -2,14 +2,14 @@
 {{ $thumbnailHeight := default 64 .thumbnailHeight }}
 
 {{ $contributors := dict }}
-{{ range (resources.Get "allcontributorsrc.json" | unmarshal).contributors }}
+{{ range (resources.Get site.Params.contributors.local | unmarshal).contributors }}
   {{ $contributors = $contributors | merge (dict .name .) }}
 {{ end }}
 
 {{ $allStaffNames := slice }}
 {{ range site.Data.staff }}{{ $allStaffNames = union $allStaffNames . }}{{ end }}
 
-{{ with resources.GetRemote "https://raw.githubusercontent.com/OpenTermsArchive/engine/main/.all-contributorsrc" }}
+{{ with resources.GetRemote site.Params.contributors.remote }}
   {{ with .Err }}
     {{ errorf "%s" . }}
   {{ else }}
