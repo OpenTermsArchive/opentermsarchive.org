@@ -10,3 +10,6 @@ contributors:
   local: allcontributorsrc.json
   remote:
     - https://raw.githubusercontent.com/OpenTermsArchive/engine/main/.all-contributorsrc
+    - https://raw.githubusercontent.com/OpenTermsArchive/demo-declarations/main/.all-contributorsrc
+    - https://raw.githubusercontent.com/OpenTermsArchive/genai-declarations/main/.all-contributorsrc
+    - https://raw.githubusercontent.com/OpenTermsArchive/contrib-declarations/main/.all-contributorsrc
