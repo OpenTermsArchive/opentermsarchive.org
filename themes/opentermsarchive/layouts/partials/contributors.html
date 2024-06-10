@@ -2,24 +2,29 @@
 {{ $thumbnailHeight := default 64 .thumbnailHeight }}
 
 {{ $contributors := dict }}
-{{ range (resources.Get site.Params.contributors.local | unmarshal).contributors }}
+{{ range (resources.Get site.Params.contributors.local_source | unmarshal).contributors }}
   {{ $contributors = $contributors | merge (dict .name .) }}
 {{ end }}
 
 {{ $allStaffNames := slice }}
 {{ range site.Data.staff }}{{ $allStaffNames = union $allStaffNames . }}{{ end }}
 
-{{ range $remoteContributorsSource := site.Params.contributors.remote }}
-  {{ with resources.GetRemote $remoteContributorsSource }}
+{{ $additionalSources := site.Params.contributors.additional_sources }}
+{{ range site.Data.collections }}
+  {{ $additionalSources = $additionalSources | append (printf "https://raw.githubusercontent.com/OpenTermsArchive/%s-declarations/main/.all-contributorsrc" .id) }}
+{{ end }}
+
+{{ range $additionalSource := $additionalSources }}
+  {{ with resources.GetRemote $additionalSource }}
     {{ with .Err }}
       {{ errorf "%s" . }}
     {{ else }}
       {{ range (.Content | unmarshal).contributors }}
-        {{ $contributors =  $contributors | merge (dict .name .) }}
+        {{ $contributors = $contributors | merge (dict .name .) }}
       {{ end }}
     {{ end }}
   {{ else }}
-    {{ errorf "Unable to get the remote contributors" }}
+    {{ warnf "Unable to get the remote contributors from %q" . }}
   {{ end }}
 {{ end }}
 

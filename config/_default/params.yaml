@@ -7,9 +7,7 @@ twitter:
 github:
   url: https://github.com/OpenTermsArchive
 contributors:
-  local: allcontributorsrc.json
-  remote:
+  local_source: allcontributorsrc.json
+  additional_sources:
     - https://raw.githubusercontent.com/OpenTermsArchive/engine/main/.all-contributorsrc
-    - https://raw.githubusercontent.com/OpenTermsArchive/demo-declarations/main/.all-contributorsrc
-    - https://raw.githubusercontent.com/OpenTermsArchive/genai-declarations/main/.all-contributorsrc
-    - https://raw.githubusercontent.com/OpenTermsArchive/contrib-declarations/main/.all-contributorsrc
+    - https://raw.githubusercontent.com/OpenTermsArchive/docs/main/.all-contributorsrc
