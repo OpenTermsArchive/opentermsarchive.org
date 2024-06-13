@@ -1,0 +1,1 @@
+google-integrates-its-generative-ai-services-terms-into-their-standard-terms.en.md
