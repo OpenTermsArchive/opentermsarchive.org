@@ -5,6 +5,8 @@ parserOptions:
 env:
   browser: true
   es6: true
+plugins:
+  - json-format
 rules:
   arrow-parens:
     - error

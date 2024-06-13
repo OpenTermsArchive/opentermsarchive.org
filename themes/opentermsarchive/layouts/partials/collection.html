@@ -1,13 +1,13 @@
 <div class="card card--is-white card--center">
-  {{ $image := resources.Get (printf "/images/collections/%s.png" (.title | urlize)) }}
+  {{ $image := resources.Get (printf "/images/collections/%s.png" (.data.name | urlize)) }}
   {{ with $image }}
     <div class="card__header">
       <img src="{{ .RelPermalink }}" alt="">
     </div>
   {{ end }}
   <div class="card__body">
-    {{ with .title }}<h3 class="h4 card__title">{{ . }}</h3>{{ end }}
-    {{ with .data.industries }}<h4 class="card__subtitle h5 h5--light">{{ index . site.Language.Lang | safeHTML }}</h4>{{ end }}
+    {{ with .data.name }}<h4 class="card__title">{{ . }}</h4>{{ end }}
+    {{ with .data.industries }}<h5 class="card__subtitle h5--light">{{ index . site.Language.Lang | safeHTML }}</h5>{{ end }}
     <div class="cardtable">
       {{ with .data.stats.services }}
         {{ partial "card-table-item.html" (dict "title" (i18n "collections.services") "icon" "folder" "desc" .) }}
