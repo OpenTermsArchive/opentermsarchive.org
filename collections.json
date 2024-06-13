@@ -43,7 +43,7 @@
       "en": "Major global social media services",
       "fr": "Médias sociaux mondiaux majeurs"
     },
-    "endpoint": "http://134.102.58.70/api/v1"
+    "endpoint": "http://134.102.58.70/collection-api/v1"
   },
   {
     "name": "P2B Compliance",
@@ -108,7 +108,8 @@
     "industries": {
       "en": "Online dating",
       "fr": "Rencontre en ligne"
-    }
+    },
+    "endpoint": "http://vps-99ae1d89.vps.ovh.net/api/v1"
   },
   {
     "name": "France",
@@ -148,7 +149,7 @@
       "services": "322",
       "documents": "683"
     },
-    "endpoint": "http://51.89.224.102/api/v1"
+    "endpoint": "http://51.89.224.102/collection-api/v1"
   },
   {
     "name": "Demo",
