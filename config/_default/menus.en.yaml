@@ -34,15 +34,18 @@ footer:
     pageRef: /about
     weight: 6
 first_subfooter:
+  - name: Status
+    url: https://stats.uptimerobot.com/nXvrBcl0wx
+    weight: 1
   - name: Statistics
     pageRef: /stats
-    weight: 1
+    weight: 2
   - name: Media
     pageRef: /media
-    weight: 2
+    weight: 3
   - name: Source code
     url: https://github.com/ambanum/OpenTermsArchive
-    weight: 3
+    weight: 4
 second_subfooter:
   - name: Legal notice
     pageRef: /legal-notice
