@@ -47,119 +47,6 @@
       ]
     },
     {
-      "login": "Cli4d",
-      "name": "Clifford Ouma",
-      "avatar_url": "https://avatars.githubusercontent.com/u/56266330?v=4",
-      "profile": "https://github.com/Cli4d",
-      "contributions": [
-        "review",
-        "doc"
-      ]
-    },
-    {
-      "login": "emmanuellar",
-      "name": "Amarachi Johnson-Ubah",
-      "avatar_url": "https://avatars.githubusercontent.com/u/41474439?v=4",
-      "profile": "https://github.com/emmanuellar",
-      "contributions": [
-        "review",
-        "doc"
-      ]
-    },
-    {
-      "login": "michielbdejong",
-      "name": "Michiel de Jong",
-      "avatar_url": "https://avatars.githubusercontent.com/u/408412?v=4",
-      "profile": "https://github.com/michielbdejong",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "vviers",
-      "name": "Vincent Viers",
-      "avatar_url": "https://avatars.githubusercontent.com/u/30295971?v=4",
-      "profile": "https://github.com/vviers",
-      "contributions": [
-        "code",
-        "data"
-      ]
-    },
-    {
-      "login": "cquest",
-      "name": "Christian Quest",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1202668?v=4",
-      "profile": "https://github.com/cquest",
-      "contributions": [
-        "infra"
-      ]
-    },
-    {
-      "login": "AaronjSugarman",
-      "name": "Aaron Sugarman",
-      "avatar_url": "https://avatars.githubusercontent.com/u/82889095?v=4",
-      "profile": "https://github.com/AaronjSugarman",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "karnauskas",
-      "name": "Marius Karnauskas",
-      "avatar_url": "https://avatars.githubusercontent.com/u/1094012?v=4",
-      "profile": "https://github.com/karnauskas",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "GatienH",
-      "name": "GatienH",
-      "avatar_url": "https://avatars.githubusercontent.com/u/6501059?v=4",
-      "profile": "https://github.com/GatienH",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "mvidonne",
-      "name": "Marie-Pierre Vidonne",
-      "avatar_url": "https://avatars.githubusercontent.com/u/46820105?v=4",
-      "profile": "https://github.com/mvidonne",
-      "contributions": [
-        "data",
-        "review"
-      ]
-    },
-    {
-      "login": "afisher3578",
-      "name": "Alex Fisher",
-      "avatar_url": "https://avatars.githubusercontent.com/u/92438650?v=4",
-      "profile": "https://github.com/afisher3578",
-      "contributions": [
-        "code",
-        "infra"
-      ]
-    },
-    {
-      "login": "Harshil-Jani",
-      "name": "Harshil Jani",
-      "avatar_url": "https://avatars.githubusercontent.com/u/79367883?v=4",
-      "profile": "https://github.com/Harshil-Jani",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "AdrienFines",
-      "name": "Adrien Fines",
-      "avatar_url": "https://avatars.githubusercontent.com/u/41912392?v=4",
-      "profile": "https://github.com/AdrienFines",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
       "name": "Marine Guillaume",
       "profile": "https://twitter.com/marineguillaum",
       "contributions": [
@@ -181,71 +68,8 @@
       ]
     },
     {
-      "name": "Luã Streit",
-      "profile": "https://www.linkedin.com/in/lua-streit/",
-      "contributions": [
-        "data"
-      ]
-    },
-    {
-      "name": "Laurie Liddell",
-      "profile": "https://www.linkedin.com/in/laurie-liddell-bb4278b3/",
-      "contributions": [
-        "data"
-      ]
-    },
-    {
-      "name": "Raphael Bartlomé",
-      "profile": "https://www.linkedin.com/in/raphael-bartlome-840006164/",
-      "contributions": [
-        "data"
-      ]
-    },
-    {
-      "name": "Chloé Legendre",
-      "profile": "https://www.linkedin.com/in/chlo%C3%A9-legendre-2b014a1a6/",
-      "contributions": [
-        "data"
-      ]
-    },
-    {
-      "name": "Constance Dauvergne",
-      "profile": "https://www.linkedin.com/in/constance-dauvergne-1811a5192/",
-      "contributions": [
-        "data"
-      ]
-    },
-    {
-      "name": "Lucie Lechardoy",
-      "profile": "https://www.linkedin.com/in/lucie-lechardoy-b092b745/",
-      "contributions": [
-        "data"
-      ]
-    },
-    {
-      "name": "Paolo Calderoni",
-      "profile": "https://www.linkedin.com/in/paolo-calderoni/",
-      "contributions": [
-        "data"
-      ]
-    },
-    {
-      "name": "Giacomo Stazi",
-      "profile": "https://www.linkedin.com/in/giacomo-stazi-a14a15136/",
-      "contributions": [
-        "data"
-      ]
-    },
-    {
       "name": "Elsa Trujillo",
       "profile": "https://twitter.com/Elsa_Trujillo_",
-      "contributions": [
-        "promotion"
-      ]
-    },
-    {
-      "name": "Siegrid Henry",
-      "profile": "https://www.linkedin.com/in/siegridhenry/",
       "contributions": [
         "promotion"
       ]
@@ -263,6 +87,14 @@
       "profile": "https://www.linkedin.com/in/thomas-reboul-29a46569/",
       "contributions": [
         "data"
+      ]
+    },
+    {
+      "name": "Henri Verdier",
+      "profile": "https://www.linkedin.com/in/henriverdier/",
+      "contributions": [
+        "promotion",
+        "fundingFinding"
       ]
     }
   ],
