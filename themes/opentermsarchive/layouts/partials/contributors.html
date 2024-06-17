@@ -44,7 +44,7 @@
 <div class="contributors {{ with .class }}{{ . }}{{ end }} {{ with .showInfo }}contributors--show-infos{{ end }}">
   <div class="contributors__items">
     {{ range $contributor := $filteredContributors }}
-      {{ $image := resources.Get (printf "/images/contributors/%s.jpg" ($contributor.name | urlize)) }}
+      {{ $image := default (resources.Get "/images/contributors/placeholder.jpg") (resources.Get (printf "/images/contributors/%s.jpg" ($contributor.name | urlize))) }}
       {{ with $contributor.avatar_url }}
         {{ $remoteImage := resources.GetRemote . }}
         {{ if or (eq $remoteImage.Data.ContentType "image/jpeg") (eq $remoteImage.Data.ContentType "image/png") }}
@@ -53,7 +53,7 @@
       {{ end }}
       <div class="contributor">
         <a class="contributor__link" href="{{ $contributor.profile }}" target="_blank" rel="nofollow noopener">
-          {{ with $image }}<img class="contributor__image" src="{{ .RelPermalink }}" alt="{{ $contributor.name }}" width="{{ $thumbnailWidth }}" height="{{ $thumbnailHeight }}">{{ end }}
+          <img class="contributor__image" src="{{ $image.RelPermalink }}" alt="{{ $contributor.name }}" width="{{ $thumbnailWidth }}" height="{{ $thumbnailHeight }}">
           {{ with $.showInfo }}<div class="contributor__info">{{ $contributor.name }}</div>{{ end }}
         </a>
       </div>
