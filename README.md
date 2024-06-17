@@ -8,7 +8,7 @@ The website that presents Open Terms Archive to the general public.
 
 This website is built using [Hugo](https://gohugo.io), a static website editor, and uses [Node.js](https://nodejs.org).
 
-To build it, [install Hugo](https://gohugo.io/getting-started/installing/) (>= v0.114.0) and [Node.js](https://nodejs.org), and then:
+To build it, [install Hugo](https://gohugo.io/getting-started/installing/) (>= v0.127.0) and [Node.js](https://nodejs.org), and then:
 
 ```sh
 git clone https://github.com/OpenTermsArchive/opentermsarchive.org
