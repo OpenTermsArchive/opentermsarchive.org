@@ -34,7 +34,7 @@ footer:
     pageRef: /about
     weight: 6
 first_subfooter:
-  - name: Status
+  - name: Services status
     url: https://stats.uptimerobot.com/nXvrBcl0wx
     weight: 1
   - name: Statistics
