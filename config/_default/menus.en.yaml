@@ -37,6 +37,8 @@ first_subfooter:
   - name: Services status
     url: https://stats.uptimerobot.com/nXvrBcl0wx
     weight: 1
+    params:
+      target: _blank
   - name: Statistics
     pageRef: /stats
     weight: 2
@@ -46,6 +48,8 @@ first_subfooter:
   - name: Source code
     url: https://github.com/ambanum/OpenTermsArchive
     weight: 4
+    params:
+      target: _blank
 second_subfooter:
   - name: Legal notice
     pageRef: /legal-notice
