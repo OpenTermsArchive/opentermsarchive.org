@@ -46,7 +46,7 @@ first_subfooter:
     pageRef: /media
     weight: 3
   - name: Code source
-    url: https://github.com/ambanum/OpenTermsArchive
+    url: https://github.com/OpenTermsArchive/engine
     weight: 4
     params:
       target: _blank
