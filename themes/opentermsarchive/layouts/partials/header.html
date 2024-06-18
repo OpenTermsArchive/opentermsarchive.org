@@ -16,7 +16,7 @@
           <ul>
             {{ range .Site.Menus.header }}
             <li>
-              <a href="{{ .URL }}">
+              <a href="{{ .URL }}" {{ with .Params.target }}target="{{ . }}"{{ end }}>
                 {{ .Name }}
               </a>
             </li>
