@@ -6,3 +6,10 @@ twitter:
   url: https://twitter.com/OpenTerms
 github:
   url: https://github.com/OpenTermsArchive
+contributors:
+  local_source: allcontributorsrc.json
+  additional_sources:
+    - https://raw.githubusercontent.com/OpenTermsArchive/engine/main/.all-contributorsrc
+    - https://raw.githubusercontent.com/OpenTermsArchive/docs/main/.all-contributorsrc
+    - https://raw.githubusercontent.com/OpenTermsArchive/deployment/main/.all-contributorsrc
+    - https://raw.githubusercontent.com/OpenTermsArchive/terms-types/main/.all-contributorsrc
