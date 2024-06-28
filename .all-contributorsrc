@@ -96,9 +96,21 @@
         "promotion",
         "fundingFinding"
       ]
+    },
+    {
+      "login": "PNoemie",
+      "name": "PNoemie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80331765?v=4",
+      "profile": "https://github.com/PNoemie",
+      "contributions": [
+        "content",
+        "promotion",
+        "fundingFinding"
+      ]
     }
   ],
   "repoType": "github",
   "commitConvention": "none",
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "commitType": "docs"
 }
