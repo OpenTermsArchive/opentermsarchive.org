@@ -3,21 +3,36 @@
   <div class="container container--has-no-padding-y">
     <div class="container container--has-no-padding-top container--109">
       <div class="textcontent">
-        {{ $sortedPages := slice }}
-        {{ range .Pages }}
-          {{ $m := dict "date" (index .Params.dates 0) "page" . }}
-          {{ $sortedPages = $sortedPages | append $m }}
+
+        {{/* Add a date parameter to each page, which takes the first date in the list of dates */}}
+        {{ $pagesWithDateParam := slice }}
+          {{ range .Pages }}
+            {{ $firstDate := (index .Params.dates 0) | time }}
+            {{ $pagesWithDateParam = $pagesWithDateParam | append (dict "date" $firstDate "page" .) }}
+          {{ end }}
+
+        {{/* Sort pages by date */}}
+        {{ $sortedPages := sort $pagesWithDateParam "date" "desc" }}
+
+        {{/* Extract Hugo pages object */}}
+        {{ $sortedHugoPages := slice }}
+        {{ range $sortedPages }}
+          {{ $sortedHugoPages = $sortedHugoPages | append .page }}
         {{ end }}
-        {{ range sort $sortedPages "date" "desc" }}
+
+        {{/* Paginate */}}
+        {{ $paginator := .Paginate $sortedHugoPages 8 }}
+
+        {{ range $paginator.Pages }}
           <div class="mb--xl">
             <h4 class="mb--0">
-              <a href="{{ .page.RelPermalink }}">{{ .page.LinkTitle }}</a>
+              <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
             </h4>
             <div class="text--smallcaps mt--2xs">
-              {{ .page.Params.service }} ▪
-              {{ delimit .page.Params.terms_types " , " }} ▪
+              {{ .Params.service }} ▪
+              {{ delimit .Params.terms_types " , " }} ▪
               {{ $formatedDates := slice }}
-              {{ range .page.Params.dates }}
+              {{ range .Params.dates }}
                 {{ $formatedDate := ( . | time.Format ":date_long") }}
                 {{ $formatedDates = $formatedDates | append $formatedDate }}
               {{ end }}
