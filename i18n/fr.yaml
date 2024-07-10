@@ -111,3 +111,11 @@ alias:
   message: Vous devriez être redirigé rapidement, si toutefois ce n'était pas le cas <a href="{{ .permalink }}">cliquez ici</a>.
 memos:
   disclaimer: Cette analyse a été rédigée par un contributeur indépendant et ne correspond pas nécessairement à la compréhension d'Open Terms Archive.
+pagination:
+  nav_aria_label: Navigation de la pagination
+  previous_page: Page précédente
+  next_page: Page suivante
+  link:
+    aria_label: Page numéro {{ .currrentPageNumber }}
+    current:
+      aria_label: Page courante, numéro {{ .currrentPageNumber }}
