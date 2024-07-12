@@ -1,0 +1,30 @@
+{{ if gt .Paginator.TotalPages 1 }}
+  <nav class="pagination mt--4xl" aria-label="{{ i18n "pagination.nav_aria_label" }}">
+    <ul class="pagination__list">
+      {{ if .Paginator.HasPrev }}
+        <li class="pagination__item">
+          <a class="pagination__link pagination__link--prev" href="{{ .Paginator.Prev.URL }}">
+            <i class="icon" data-lucide="chevron-left"></i>
+            {{ i18n "pagination.previous_page" }}
+          </a>
+        </li>
+      {{ end }}
+      {{ range .Paginator.Pagers }}
+        {{ $isCurrentPage := eq .PageNumber $.Paginator.PageNumber }}
+        <li class="pagination__item">
+          <a class="pagination__link" href="{{ .URL }}" aria-current="{{ $isCurrentPage }}" aria-label="{{ if $isCurrentPage }}{{ i18n "pagination.link.current.aria_label" (dict "currrentPageNumber" .PageNumber) }}{{ else }}{{ i18n "pagination.link.aria_label" (dict "currrentPageNumber" .PageNumber) }}{{ end }}">
+            {{ .PageNumber }}
+          </a>
+        </li>
+      {{ end }}
+      {{ if .Paginator.HasNext }}
+        <li class="pagination__item">
+          <a class="pagination__link pagination__link--next" href="{{ .Paginator.Next.URL }}">
+            {{ i18n "pagination.next_page" }}
+            <i class="icon" data-lucide="chevron-right"></i>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+{{ end }}
