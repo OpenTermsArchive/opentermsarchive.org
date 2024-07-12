@@ -83,6 +83,9 @@
   // node_modules/lucide/dist/esm/icons/chevron-down.js
   var ChevronDown = ["svg", defaultAttributes, [["path", { d: "m6 9 6 6 6-6" }]]];
 
+  // node_modules/lucide/dist/esm/icons/chevron-left.js
+  var ChevronLeft = ["svg", defaultAttributes, [["path", { d: "m15 18-6-6 6-6" }]]];
+
   // node_modules/lucide/dist/esm/icons/chevron-right.js
   var ChevronRight = ["svg", defaultAttributes, [["path", { d: "m9 18 6-6-6-6" }]]];
 
@@ -312,6 +315,7 @@
       X,
       ChevronDown,
       ChevronRight,
+      ChevronLeft,
       Github,
       Hash,
       Mail,
@@ -359,6 +363,14 @@ lucide/dist/esm/defaultAttributes.js:
    *)
 
 lucide/dist/esm/icons/chevron-down.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/chevron-left.js:
   (**
    * @license lucide v0.344.0 - ISC
    *
