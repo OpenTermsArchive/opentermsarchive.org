@@ -136,6 +136,10 @@
     padding-bottom: var(--pL);
   }
 
+  &.container--has-padding-top-medium {
+    padding-top: var(--p2XL);
+  }
+
   &.container--align-x-left {
     margin-left: 0;
   }
