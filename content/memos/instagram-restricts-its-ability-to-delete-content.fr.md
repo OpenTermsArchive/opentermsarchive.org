@@ -1,5 +1,5 @@
 ---
-html_description: "La nouvelle politique d'Instagram stipule qu'elle ne supprimera du contenu que si elle est légalement "tenue" de le faire, ce qui constitue un changement par rapport à la politique précédente qui autorisait la suppression si elle était "autorisée" par la loi."
+html_description: "La nouvelle politique d'Instagram stipule qu'elle ne supprimera du contenu que si elle est légalement \"tenue\" de le faire, ce qui constitue un changement par rapport à la politique précédente qui autorisait la suppression si elle était \"autorisée\" par la loi."
 title: Instagram restreint sa capacité à supprimer du contenu
 service: Instagram
 terms_types: ["Terms of Service"]

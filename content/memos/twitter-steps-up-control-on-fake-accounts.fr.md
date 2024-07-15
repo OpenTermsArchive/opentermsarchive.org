@@ -1,5 +1,5 @@
 ---
-html_description: "Twitter a mis à jour ses règles communautaires pour cibler toutes les identités "fausses et trompeuses", interdisant leur utilisation pour perturber l'expérience des utilisateurs."
+html_description: "Twitter a mis à jour ses règles communautaires pour cibler toutes les identités \"fausses et trompeuses\", interdisant leur utilisation pour perturber l'expérience des utilisateurs."
 title: Twitter accentue le contrôle des faux comptes
 service: Twitter
 terms_types: ["Community Guidelines"]
