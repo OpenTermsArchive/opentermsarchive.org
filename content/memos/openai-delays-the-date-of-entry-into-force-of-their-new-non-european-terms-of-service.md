@@ -4,6 +4,7 @@ title: OpenAI delays the date of entry into force of their new non-European term
 service: OpenAI
 terms_types: ["Privacy Policy"]
 dates: ["2023-12-03"]
+author: Brice Bai
 ---
 
 OpenAI [postponed](https://github.com/OpenTermsArchive/GenAI-versions/commit/417bd95e82655cc88182e8929eb199fb86ed4edf) the effective date of its new non-European terms of service from December 14 2023 to January 31 2024.

@@ -4,6 +4,7 @@ title: Midjourney ceases free trials as it unveils subscription plans
 service: Midjourney
 terms_types: ["Terms of Service"]
 dates: ["2023-12-21"]
+author: Brice Bai
 ---
 
 Midjourney [ceased](https://github.com/OpenTermsArchive/GenAI-versions/commit/e2662337073ce704cbf2dd91457dc7d89ae59e36?diff=split&w=0) to refer to the entitlements of unpaid members to the assets they create. Indeed, Midjourney [stopped](https://help.midjourney.com/en/articles/8150088-is-there-a-free-trial) offering free trials. They also extended the obligation to subscribe for a Pro or Mega plan for employees of companies with over 1M$ in revenue.

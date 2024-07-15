@@ -7,6 +7,7 @@ dates: ["2022-04-20"]
 aliases:
   - /case-studies/terrorists-and-their-content-banned-from-twitter/
   - /en/case-studies/terrorists-and-their-content-banned-from-twitter/
+author: Mathilde Saliou
 ---
 
 Twitter [made clear](https://github.com/OpenTermsArchive/france-elections-versions/commit/4c973b7c1cfa724c3f922adb88be091957a676c1?diff=unified&short_path=97a74cf#diff-97a74cf182c32c5fd04a7f7ad157a172456b1e3ead0535083736fb3a8ce84c38) that it will delete "any accounts maintained by individual perpetrators of terrorist, violent extremist, or mass violent attacks" and that it may delete all third-party content "disseminating manifestos or other content produced by the perpetrators".

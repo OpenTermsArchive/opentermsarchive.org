@@ -4,6 +4,7 @@ title: Twitter steps up control on fake accounts
 service: Twitter
 terms_types: ["Community Guidelines"]
 dates: ["2022-03-29"]
+author: Mathilde Saliou
 ---
 
 In an [amendment to its Community Rules](https://github.com/OpenTermsArchive/france-elections-versions/commit/9e02e8dc2a10ce9d388677c4ba190804bf31390f?short_path=97a74cf#diff-97a74cf182c32c5fd04a7f7ad157a172456b1e3ead0535083736fb3a8ce84c38), Twitter changed its section regarding account authenticity. The platform previously addressed only "impersonation" while it now targets all "false and misleading" identities, prohibiting "using false identities in a way that disrupts the experience of other users." In its rules on [platform manipulation](https://github.com/OpenTermsArchive/france-elections-versions/commit/befac4352f27254954ef51acb9c2fa6ae0270bd5), Twitter switched from constraining "account and identity" to preventing "multiple accounts and coordination", replacing the mention of "fake accounts" with a ban on "creating a very large number of accounts" and "using automation to create accounts." Surprisingly, the platform however [removed](https://github.com/OpenTermsArchive/france-elections-versions/commit/056ada5513abfade20cd73458e56e41abe2f80cf#diff-3089779674bfd306d704d6da138bf9e166d07e8145f5bb30e7998f2fcdf9cdcfL161) from its anti-spam tools the possibility to ask for an official ID.
