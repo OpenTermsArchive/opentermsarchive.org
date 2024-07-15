@@ -8,7 +8,7 @@
     <div class="container container--109">
       <div class="textcontent">
         <h1 class="mb--s">{{ .Title }}</h1>
-        <h4 class="h4--ultralight mb--3xl">
+        <h4 class="h4--ultralight">
           {{ .Params.service }} ▪
           {{ delimit .Params.terms_types " , " }} ▪
           {{ $formatedDates := slice }}
@@ -18,9 +18,16 @@
           {{ end }}
           {{ delimit $formatedDates " - " }}
         </h4>
+        {{ $contributors := partial "load_contributors.html" . }}
+        {{ with .Params.author }}
+          {{ with index $contributors . }}
+            <div class="author text--light fontstyle--italic">
+              By <a href="{{ .profile }}" target="_blank" rel="nofollow noopener">{{ .name }}</a>, a third-party contributor
+            </div>
+          {{ end }}
+        {{ end }}
+        <hr class="mt--2xl">
         {{ .Content }}
-        <hr>
-        <p class="text--light fontstyle--italic">{{ i18n "memos.disclaimer" }}</p>
       </div>
     </div>
   </div>
