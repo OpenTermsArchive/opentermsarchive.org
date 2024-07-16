@@ -5,6 +5,7 @@ service: Instagram
 terms_types: ["Terms of Service"]
 dates: ["2022-02-20"]
 author: Mathilde Saliou
+related_collections: ["france"]
 ---
 
 In the previous version of its Terms of Services, the social network stated that it provided its service as it is, unable to guarantee its ideal and safe operation at all times. Instagram disclaimed (in all caps) any express or implied warranties, including merchantability, fitness for a particular purpose, title and non-infringement, and stated that it did not control the words and publications of third parties, nor those of the user, and that its liability was limited to the extent permitted by law in the event of an incident.

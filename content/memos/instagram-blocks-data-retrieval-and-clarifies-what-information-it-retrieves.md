@@ -8,6 +8,7 @@ aliases:
   - /case-studies/instagram-blocks-data-retrieval-and-clarifies-what-information-it-retrieves/
   - /en/case-studies/instagram-blocks-data-retrieval-and-clarifies-what-information-it-retrieves/
 author: Thomas Reboul
+related_collections: ["contrib"]
 ---
 
 In November 2021, Instagram made several updates to its <a target="_blank" rel="noopener" href="https://github.com/OpenTermsArchive/contrib-versions/commit/9998cb21b69a222540491a81dd05be19a9785891">community rules</a>, its <a target="_blank" rel="noopener" href="https://github.com/OpenTermsArchive/contrib-versions/commit/9aaf5dbfc3b34d45d640b0c7f96dce3598c7bcd2">terms of use</a> and its <a target="_blank" rel="noopener" href="https://github.com/OpenTermsArchive/contrib-versions/commit/927ceba3865d79cd1b123d9f4b9928b8e997070c">privacy policy</a>. Among the notable developments, the platform explicitly prohibits the sale or exchange of "non-medical or pharmaceutical substances." It says it will remove all posts promoting such products, either for sale or to indicate personal consumption, except in a healing context.

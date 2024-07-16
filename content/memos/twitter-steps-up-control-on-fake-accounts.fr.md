@@ -5,6 +5,7 @@ service: Twitter
 terms_types: ["Community Guidelines"]
 dates: ["2022-03-29"]
 author: Mathilde Saliou
+related_collections: ["france-elections"]
 ---
 
 Dans une modification de ses [Règles communautaires](https://github.com/OpenTermsArchive/france-elections-versions/commit/9e02e8dc2a10ce9d388677c4ba190804bf31390f?short_path=97a74cf#diff-97a74cf182c32c5fd04a7f7ad157a172456b1e3ead0535083736fb3a8ce84c38) du 24 mars 2022, Twitter a modifié la partie concernant l’authenticité des comptes. Le réseau s’attaquait auparavant uniquement à l’« usurpation d’identité », et indique désormais cibler toutes les identités « fallacieuses et trompeuses », ajoutant qu’il interdit d’« utiliser de fausse identité d'une façon qui perturbe l'expérience des autres utilisateurs ». Dans ses règles relatives à la [manipulation de la plateforme](https://github.com/OpenTermsArchive/france-elections-versions/commit/befac4352f27254954ef51acb9c2fa6ae0270bd5), Twitter bascule d’une contrainte sur les « compte et identité » vers les « comptes multiples et coordination », remplaçant la mention de « faux comptes » par l’interdiction de « créer un très grand nombre de comptes » et de « recourir à l'automatisation pour créer des comptes ». Pour autant, la plateforme a [retiré](https://github.com/OpenTermsArchive/france-elections-versions/commit/056ada5513abfade20cd73458e56e41abe2f80cf#diff-3089779674bfd306d704d6da138bf9e166d07e8145f5bb30e7998f2fcdf9cdcfL161) de ses défis antispam la possibilité de demander une pièce d’identité officielle.

@@ -8,6 +8,7 @@ aliases:
   - /case-studies/alibaba-adds-disease-outbreaks-to-its-disclaimer/
   - /en/case-studies/alibaba-adds-disease-outbreaks-to-its-disclaimer/
 author: Elsa Trujilo
+related_collections: ["contrib"]
 ---
 
 The impact of the Covid-19 pandemic can be read right into Alibaba's terms of service: since May 6, 2020, the marketplace <a target="_blank" rel="noopener" href="https://github.com/ambanum/CGUs-data/commit/37503cb23">specified</a> epidemics as cases of force majeure in which it is not responsible for order delays or failures.

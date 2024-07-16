@@ -6,6 +6,7 @@ terms_types: ["Terms of use"]
 dates: ["2020-06-23"]
 aliases: /fr/etudes-de-cas/alibaba-ajoute-les-epidemies-a-ses-clauses-dexclusion-de-responsabilite/
 author: Elsa Trujilo
+related_collections: ["contrib"]
 ---
 
 L’épidémie de Covid se lit jusque dans les conditions d’utilisation d’Alibaba : depuis le 6 mai 2020, la place de marché <a target="_blank" rel="noopener" href="https://github.com/ambanum/CGUs-data/commit/37503cb23">précise</a> dans les cas de force majeure dans lesquels elle n’est pas responsable des retards ou des échecs de commande.
