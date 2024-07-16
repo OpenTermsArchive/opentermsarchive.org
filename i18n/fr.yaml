@@ -118,4 +118,4 @@ pagination:
     current:
       aria_label: Page courante, numéro {{ .currrentPageNumber }}
 memos:
-  author: Par <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, un contributeur tiers
+  author: Par <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, un‧e contributeur tiers
