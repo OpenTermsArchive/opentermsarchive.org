@@ -22,7 +22,7 @@
         {{ with .Params.author }}
           {{ with index $contributors . }}
             <div class="author text--light fontstyle--italic">
-              By <a href="{{ .profile }}" target="_blank" rel="nofollow noopener">{{ .name }}</a>, a third-party contributor
+              {{ i18n "memos.author" (dict "profile" .profile "name" .name) | safeHTML }}
             </div>
           {{ end }}
         {{ end }}

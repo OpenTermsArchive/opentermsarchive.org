@@ -117,3 +117,5 @@ pagination:
     aria_label: Page number {{ .currrentPageNumber }}
     current:
       aria_label: Current page, number {{ .currrentPageNumber }}
+memos:
+  author: By <a href="{{ .profile }}" target="_blank" rel="nofollow noopener">{{ .name }}</a>, a third-party contributor
