@@ -4,6 +4,7 @@ title: "Meta autorise plus de nudité dans un contexte médical"
 service: "Facebook"
 terms_types: ["Community Guidelines – Adult Nudity"]
 dates: ["2022-06-13"]
+author: Mathilde Saliou
 ---
 
 Facebook [précise](https://github.com/OpenTermsArchive/france-elections-versions/commit/200fae809ed553d6882bef3659b4544fac37e322#diff-f5b2499012804c371ee8d35d8a109e0b7a91f6a2d6d7736ab9857bfd331dbf68R23-R26) depuis le 13 juin que les publications de parties génitales visibles ou de mamelons de femmes découverts sont acceptées si la publication relève d’un contexte médical ou lié à la santé. Meta a modifié les mêmes éléments dans les règles de communauté d’Instagram.

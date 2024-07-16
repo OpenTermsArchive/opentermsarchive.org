@@ -4,6 +4,7 @@ title: Copy.AI stops abiding with the EU-U.S. Data Privacy Framework
 service: Copy.AI
 terms_types: ["Privacy Policy"]
 dates: ["2023-10-17"]
+author: Bertille Gauducheau
 ---
 
 Copy.AI [erased](https://github.com/OpenTermsArchive/GenAI-versions/commit/c8a3f106587decf0cb6b5e0ce7695929d153a856) from its privacy policy its commitment to abide by the EU-U.S. Data Privacy Framework.

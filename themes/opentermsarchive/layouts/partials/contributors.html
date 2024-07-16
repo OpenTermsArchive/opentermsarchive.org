@@ -1,32 +1,10 @@
 {{ $thumbnailWidth := default 64 .thumbnailWidth }}
 {{ $thumbnailHeight := default 64 .thumbnailHeight }}
 
-{{ $contributors := dict }}
-{{ range (resources.Get site.Params.contributors.local_source | unmarshal).contributors }}
-  {{ $contributors = $contributors | merge (dict .name .) }}
-{{ end }}
+{{ $contributors := partial "load_contributors.html" . }}
 
 {{ $allStaffNames := slice }}
 {{ range site.Data.staff }}{{ $allStaffNames = union $allStaffNames . }}{{ end }}
-
-{{ $additionalSources := site.Params.contributors.additional_sources }}
-{{ range site.Data.collections }}
-  {{ $additionalSources = $additionalSources | append (printf "https://raw.githubusercontent.com/OpenTermsArchive/%s-declarations/main/.all-contributorsrc" .id) }}
-{{ end }}
-
-{{ range $additionalSource := $additionalSources }}
-  {{ with resources.GetRemote $additionalSource }}
-    {{ with .Err }}
-      {{ errorf "%s" . }}
-    {{ else }}
-      {{ range (.Content | unmarshal).contributors }}
-        {{ $contributors = $contributors | merge (dict .name .) }}
-      {{ end }}
-    {{ end }}
-  {{ else }}
-    {{ warnf "Unable to get the remote contributors from %q" . }}
-  {{ end }}
-{{ end }}
 
 {{ $filteredContributors := slice }}
 {{ range $contributor := $contributors }}
@@ -44,19 +22,7 @@
 <div class="contributors {{ with .class }}{{ . }}{{ end }} {{ with .showInfo }}contributors--show-infos{{ end }}">
   <div class="contributors__items">
     {{ range $contributor := $filteredContributors }}
-      {{ $image := default (resources.Get "/images/contributors/placeholder.jpg") (resources.Get (printf "/images/contributors/%s.jpg" ($contributor.name | urlize))) }}
-      {{ with $contributor.avatar_url }}
-        {{ $remoteImage := resources.GetRemote . }}
-        {{ if or (eq $remoteImage.Data.ContentType "image/jpeg") (eq $remoteImage.Data.ContentType "image/png") }}
-          {{ $image = $remoteImage }}
-        {{ end }}
-      {{ end }}
-      <div class="contributor">
-        <a class="contributor__link" href="{{ $contributor.profile }}" target="_blank" rel="nofollow noopener">
-          <img class="contributor__image" src="{{ $image.RelPermalink }}" alt="{{ $contributor.name }}" width="{{ $thumbnailWidth }}" height="{{ $thumbnailHeight }}">
-          {{ with $.showInfo }}<div class="contributor__info">{{ $contributor.name }}</div>{{ end }}
-        </a>
-      </div>
+      {{ partial "contributor.html" (dict "contributor" $contributor "thumbnailWidth" $thumbnailWidth "thumbnailHeight" $thumbnailHeight "showInfo" $.showInfo ) }}
     {{ end }}
   </div>
 </div>

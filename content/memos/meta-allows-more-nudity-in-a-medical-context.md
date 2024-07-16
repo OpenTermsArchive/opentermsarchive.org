@@ -4,6 +4,7 @@ title: "Meta allows more nudity in a medical context"
 service: "Facebook"
 terms_types: ["Community Guidelines – Adult Nudity"]
 dates: ["2022-06-13"]
+author: Mathilde Saliou
 ---
 
 Since June 13, Facebook [specifies](https://github.com/OpenTermsArchive/france-elections-versions/commit/200fae809ed553d6882bef3659b4544fac37e322#diff-f5b2499012804c371ee8d35d8a109e0b7a91f6a2d6d7736ab9857bfd331dbf68R23-R26) that posts with visible genitals or stimulated female nipples are acceptable if the post is about a medical or health-related issue. Meta changed the same elements in the Instagram community rules.

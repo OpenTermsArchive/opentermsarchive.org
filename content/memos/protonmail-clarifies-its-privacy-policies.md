@@ -7,6 +7,7 @@ dates: ["2021-09-06"]
 aliases:
   - /case-studies/protonmail-clarifies-its-privacy-policies/
   - /en/case-studies/protonmail-clarifies-its-privacy-policies/
+author: Elsa Trujilo
 ---
 
 On September 6, 2021, ProtonMail <a target="_blank" rel="noopener" href="https://github.com/OpenTermsArchive/contrib-versions/commit/510c7d65e4254e1d53221b139d7e25bb2b990510">amended</a> its privacy policies so as to clarify the effects of Swiss laws (where the company is based) on the handling of user data. So, while the company claims to offer a particularly secure email service, it may find itself "forced to share the IP address" of its users with law enforcement in criminal investigations.

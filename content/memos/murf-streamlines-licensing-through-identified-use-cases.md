@@ -4,6 +4,7 @@ title: Murf streamlines licensing through identified use cases
 service: Murf
 terms_types: ["Terms of Service"]
 dates: ["2023-11-03"]
+author: Brice Bai
 ---
 
 First, Murf [ceased](https://github.com/OpenTermsArchive/GenAI-versions/commit/de437963aac5969e1af7bff0fb48a2aa890ad188) to grant a license for the use and display of their logo/marks only to identify that the Generated Content originates from Murf.

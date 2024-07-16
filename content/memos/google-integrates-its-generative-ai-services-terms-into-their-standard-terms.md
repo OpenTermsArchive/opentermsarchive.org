@@ -4,6 +4,7 @@ title: Google integrates its Generative AI Services terms into their standard te
 service: Google
 terms_types: ["Terms of Service"]
 dates: ["2024-05-22"]
+author: Clément Biron
 ---
 
 Google [integrated](https://github.com/OpenTermsArchive/GenAI-versions/commit/5dc544475a9dd326f2ce7f107a89cb94c5f14cb6) all provisions of its Generative AI Additional Terms of Service into their main Terms of Service. Starting on 22 May 2024, the additional terms “no longer apply, unless you’re a business partner with a signed agreement that references these terms.”

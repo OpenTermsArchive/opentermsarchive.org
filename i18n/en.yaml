@@ -109,8 +109,6 @@ stats:
 alias:
   title: You should be redirected quickly
   message: You should be redirected quickly, if not <a href="{{ .permalink }}">click here</a>.
-memos:
-  disclaimer: This analysis is written by an independent contributor and does not necessarily match the understanding of Open Terms Archive.
 pagination:
   nav_aria_label: Pagination Navigation
   previous_page: Previous page
@@ -119,3 +117,5 @@ pagination:
     aria_label: Page number {{ .currrentPageNumber }}
     current:
       aria_label: Current page, number {{ .currrentPageNumber }}
+memos:
+  author: By <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, a third-party contributor
