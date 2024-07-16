@@ -1,8 +1,8 @@
 {{ define "main" }}
-  {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "subtitle" .Params.hero.subtitle "size" "109" "class" (and .Content "hero--has-no-margin-bottom")) }}
+  {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "subtitle" .Params.hero.subtitle "size" "87" "class" (and .Content "hero--has-no-margin-bottom")) }}
   {{ with .Content}}
     <div class="container container--has-no-padding-y">
-      <div class="container container--has-padding-top-medium container--109">
+      <div class="container container--has-padding-top-medium container--87">
         <div class="textcontent">
           {{ . }}
         </div>
@@ -10,7 +10,7 @@
     </div>
   {{ end }}
   <div class="container container--has-no-padding-y">
-    <div class="container container--has-no-padding-top container--109">
+    <div class="container container--has-no-padding-top container--87">
       <div class="textcontent">
 
         {{/* Add a date parameter to each page, which takes the first date in the list of dates */}}
