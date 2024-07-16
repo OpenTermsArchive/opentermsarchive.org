@@ -1,0 +1,17 @@
+{{ $size := default "87" .size}}
+<div class="container container--has-no-padding-y" id="related-collections">
+  <div class="container container--{{ $size }}">
+    <div class="collections cardlist">
+      <div class="cardlist__header">
+        <h3 class="cardlist__title">{{ i18n "impact.related_collections" }}</h3>
+      </div>
+      <div class="cardlist__items">
+        {{ range $name, $data := site.Data.collections }}
+          {{ if (in $.relatedCollectionsIDs $data.id) }}
+            {{ partial "collection.html" (dict "title" $name "data" $data "linksTo" .linksTo) }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>
