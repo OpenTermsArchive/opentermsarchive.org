@@ -51,14 +51,16 @@
         </a>
       {{ end }}
       {{ if (in . "endpoint") }}
-        <div class="mt--s text--center">
-          <a class="linkicon" href="{{ $.data.endpoint }}/docs" target="_blank" rel="noopener">
-            <i class="icon" data-lucide="wrench"></i>
-            <span class="linkicon__content">
-              {{ i18n "collections.cta.endpoint" }}
-            </span>
-          </a>
-        </div>
+        {{ with $.data.endpoint }}
+          <div class="mt--s text--center">
+            <a class="linkicon" href="{{ . }}/docs" target="_blank" rel="noopener">
+              <i class="icon" data-lucide="wrench"></i>
+              <span class="linkicon__content">
+                {{ i18n "collections.cta.endpoint" }}
+              </span>
+            </a>
+          </div>
+        {{ end }}
       {{ end }}
     {{ end }}
     </div>
