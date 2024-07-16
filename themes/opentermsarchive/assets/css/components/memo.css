@@ -1,0 +1,18 @@
+.memo {
+  padding: var(--mXL);
+  border: 1px solid var(--colorBlack300);
+}
+
+.memo__title {
+  margin-bottom: var(--mS);
+}
+
+.memo__subtitle {
+  margin-bottom: var(--mS);
+}
+
+.memo__content {
+  padding-top: var(--mL);
+  margin-top: var(--mL);
+  border-top: 1px solid var(--colorBlack300);
+}

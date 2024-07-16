@@ -1,39 +1,19 @@
 {{ define "main" }}
+
   <div class="container container--wide container--is-gray container--has-no-padding-y">
     <div class="container container--1211 container--has-padding-y-small">
       {{ partial "breadcrumb.html" . }}
     </div>
   </div>
-  <div class="container container--has-no-padding-top">
-    <div class="container container--109">
-      <div class="textcontent">
-        <h1 class="mb--s">{{ .Title }}</h1>
-        <h4 class="h4--ultralight">
-          {{ .Params.service }} ▪
-          {{ delimit .Params.terms_types " , " }} ▪
-          {{ $formatedDates := slice }}
-          {{ range .Params.dates }}
-            {{ $formatedDate := ( . | time.Format ":date_long") }}
-            {{ $formatedDates = $formatedDates | append $formatedDate }}
-          {{ end }}
-          {{ delimit $formatedDates " - " }}
-        </h4>
-        {{ $contributors := partial "load_contributors.html" . }}
-        {{ with .Params.author }}
-          {{ with index $contributors . }}
-            <div class="author text--light fontstyle--italic">
-              {{ i18n "memos.author" (dict "profile" .profile "name" .name) | safeHTML }}
-            </div>
-          {{ end }}
-        {{ end }}
-        <hr class="mt--2xl">
-        {{ .Content }}
-      </div>
+
+  <div class="container container--has-no-padding-y">
+    <div class="container container--87 container--has-padding-bottom-medium">
+      {{ partial "memo.html" (dict "memo" . ) }}
     </div>
   </div>
 
   {{ with .Params.related_collections }}
-    {{ partial "related-collections.html" (dict "relatedCollectionsIDs" . "linksTo" (slice "version") "size" "109" )}}
+    {{ partial "related-collections.html" (dict "relatedCollectionsIDs" . "linksTo" (slice "version") "size" "87" "class" "container--has-no-padding-top" )}}
   {{ end }}
 
 {{ end }}

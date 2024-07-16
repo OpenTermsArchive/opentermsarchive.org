@@ -5,9 +5,9 @@
       <div>{{ .Content }}</div>
     </div>
   </div>
-  
+
   {{ with .Params.related_collections }}
-    {{ partial "related-collections.html" (dict "relatedCollectionsIDs" . "linksTo" (slice "version") )}}
+    {{ partial "related-collections.html" (dict "relatedCollectionsIDs" . "linksTo" (slice "version") "class" "container--has-padding-top-medium container--has-no-padding-bottom" )}}
   {{ end }}
 
   <div class="container container--wide container--has-no-padding-y">

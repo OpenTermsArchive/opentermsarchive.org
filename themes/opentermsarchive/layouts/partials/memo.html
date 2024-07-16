@@ -1,0 +1,36 @@
+{{ $template := default "single" .template }}
+
+<article class="memo{{ with .class }} {{ . }}{{ end }}">
+  <header>
+    {{ if eq $template "list" }}<h4 class="memo__title"><a href="{{ .memo.RelPermalink }}">{{ .memo.Title }}</a></h4>{{ end}}
+    {{ if eq $template "single" }}<h1 class="memo__title">{{ .memo.Title }}</h1>{{ end }}
+
+    {{ if eq $template "list" }}<h6 class="memo__subtitle h6--ultralight">{{ end }}
+    {{ if eq $template "single" }}<h4 class="memo__subtitle h4--ultralight">{{ end }}
+      {{ .memo.Params.service }} ▪
+      {{ delimit .memo.Params.terms_types " , " }} ▪
+      {{ $formatedDates := slice }}
+      {{ range .memo.Params.dates }}
+        {{ $formatedDate := ( . | time.Format ":date_long") }}
+        {{ $formatedDates = $formatedDates | append $formatedDate }}
+      {{ end }}
+      {{ delimit $formatedDates " - " }}
+    {{ if eq $template "list" }}</h6>{{ end }}
+    {{ if eq $template "single" }}</h4>{{ end }}
+
+    {{ $contributors := partial "load_contributors.html" . }}
+    {{ with .memo.Params.author }}
+      {{ with index $contributors . }}
+        <div class="author text--light fontstyle--italic">
+          {{ i18n "memos.author" (dict "profile" .profile "name" .name) | safeHTML }}
+        </div>
+      {{ end }}
+    {{ end }}
+</header>
+
+  {{ if eq $template "single" }}
+    <div class="memo__content textcontent">
+      {{ .memo.Content }}
+    </div>
+  {{ end }}
+</article>

@@ -1,6 +1,6 @@
 {{ $size := default "87" .size}}
-<div class="container container--has-no-padding-y" id="related-collections">
-  <div class="container container--{{ $size }}">
+<div class="container {{ .class }}" id="related-collections">
+  <div class="container container--{{ $size }} container--has-no-padding-y">
     <div class="collections cardlist">
       <div class="cardlist__header">
         <h3 class="cardlist__title">{{ i18n "impact.related_collections" }}</h3>
