@@ -1,0 +1,9 @@
+{
+  "profile": "golang",
+  "indent": "2",
+  "ignore": "H013,H006,H016,H030,H031",
+  "preserve_blank_lines": true,
+  "max_line_length": 1000,
+  "max_attribute_length": 1000,
+  "line_break_after_multiline_tag": false
+}

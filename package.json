@@ -25,7 +25,7 @@
     "lint:markdown": "markdownlint *.md content/**/*.md",
     "lint:css": "stylelint \"themes/opentermsarchive/assets/css/**/*.css\"",
     "lint:js": "eslint themes/opentermsarchive/assets/js/ test/**/*.js",
-    "lint:html": "eslint themes/opentermsarchive/layouts/**/*.html -c .htmleslintrc.yaml"
+    "lint:html": "djlint themes/opentermsarchive/layouts/**/*.html"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.23.1",
@@ -33,6 +33,7 @@
     "@stylistic/stylelint-config": "^1.0.1",
     "all-contributors-cli": "^6.26.1",
     "cypress": "^13.7.3",
+    "djlint": "^1.34.1",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-json-format": "^2.0.1",
