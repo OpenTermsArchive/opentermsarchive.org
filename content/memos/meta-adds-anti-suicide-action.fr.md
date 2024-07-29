@@ -2,7 +2,7 @@
 html_description: "Facebook a ajouté des 'ressources d'aide' pour les utilisateurs qui publient sur le suicide ou l'automutilation depuis le 13 juin, à la suite d'un examen antérieur depuis 2019."
 title: "Meta ajoute des actions de lutte contre le suicide"
 service: "Facebook"
-terms_types: ["Community Guidelines -- Self-harm"]
+terms_types: ["Community Guidelines - Self-harm"]
 dates: ["2022-06-13"]
 author: Mathilde Saliou
 related_collections: ["france-elections"]
