@@ -8,21 +8,21 @@
 
 {{ $filteredContributors := slice }}
 {{ range $contributor := $contributors }}
-  {{ with $.type }}
-    {{ if (in (index site.Data.staff .) $contributor.name) }}
-      {{ $filteredContributors = $filteredContributors | append $contributor }}
-    {{ end }}
-  {{ else }}
-    {{ if not (in $allStaffNames $contributor.name) }}
-      {{ $filteredContributors = $filteredContributors | append $contributor }}
-    {{ end }}
-  {{ end }}
+{{ with $.type }}
+{{ if (in (index site.Data.staff .) $contributor.name) }}
+{{ $filteredContributors = $filteredContributors | append $contributor }}
+{{ end }}
+{{ else }}
+{{ if not (in $allStaffNames $contributor.name) }}
+{{ $filteredContributors = $filteredContributors | append $contributor }}
+{{ end }}
+{{ end }}
 {{ end }}
 
 <div class="contributors {{ with .class }}{{ . }}{{ end }} {{ with .showInfo }}contributors--show-infos{{ end }}">
   <div class="contributors__items">
     {{ range $contributor := $filteredContributors }}
-      {{ partial "contributor.html" (dict "contributor" $contributor "thumbnailWidth" $thumbnailWidth "thumbnailHeight" $thumbnailHeight "showInfo" $.showInfo ) }}
+    {{ partial "contributor.html" (dict "contributor" $contributor "thumbnailWidth" $thumbnailWidth "thumbnailHeight" $thumbnailHeight "showInfo" $.showInfo ) }}
     {{ end }}
   </div>
 </div>

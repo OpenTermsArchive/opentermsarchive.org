@@ -7,9 +7,9 @@
       </div>
       <div class="cardlist__items">
         {{ range $name, $data := site.Data.collections }}
-          {{ if (in $.relatedCollectionsIDs $data.id) }}
-            {{ partial "collection.html" (dict "title" $name "data" $data "linksTo" .linksTo) }}
-          {{ end }}
+        {{ if (in $.relatedCollectionsIDs $data.id) }}
+        {{ partial "collection.html" (dict "title" $name "data" $data "linksTo" .linksTo) }}
+        {{ end }}
         {{ end }}
       </div>
     </div>

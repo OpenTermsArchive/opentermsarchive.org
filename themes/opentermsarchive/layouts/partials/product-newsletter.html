@@ -12,14 +12,12 @@
       <div class="column__desc">
         <div class="textcontent textcontent--has-no-margin-top">
           <p class="mt--m">{{ i18n "product_newsletter.subtitle" }}</p>
-          <form id="sib-form" method="POST" action="{{ i18n "product_newsletter.form.action" }}" data-type="subscription">
+          <form id="sib-form" method="post" action="{{ i18n "product_newsletter.form.action" }}" data-type="subscription">
             <div class="formfield mb--l">
               <input aria-labelledby="newsletter__title" type="email" id="email" name="EMAIL" autoComplete="email" placeholder="{{ i18n "product_newsletter.form.email_placeholder" }}" required>
             </div>
             <div class="formfield formfield--align-right">
-              <button class="button" form="sib-form" type="submit">
-                {{ i18n "product_newsletter.form.button" }}
-              </button>
+              <button class="button" form="sib-form" type="submit">{{ i18n "product_newsletter.form.button" }}</button>
               <input type="hidden" name="locale" value="{{ site.Language.Lang }}">
             </div>
           </form>

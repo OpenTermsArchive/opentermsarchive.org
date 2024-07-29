@@ -31,48 +31,48 @@
               <i class="icon icon--gray" data-lucide="chevron-down"></i>
             </button>
             <div class="language-switcher__items">
-              {{/*
-              If we have translations of this page, we display links to them.
-              Else, we link to the home page of different languages available.
-              */}}
-              {{ if .IsTranslated }}
-                {{ range .Translations }}
-                <div class="language-switcher__item">
-                  <a href="{{ .RelPermalink }}">{{ .Language.Lang | upper }}</a>
-                </div>
-                {{ end }}
-              {{ else }}
-              {{ range $.Site.Home.AllTranslations }}
-                {{ if ne $currentLanguage .Language.Lang }}
-                  <div class="language-switcher__item">
-                    <a href="{{ .RelPermalink }}">{{ .Language.Lang | upper }}</a>
-                  </div>
-                  {{ end }}
-                {{ end }}
-              {{ end }}
+            {{/*
+                          If we have translations of this page, we display links to them.
+                          Else, we link to the home page of different languages available.
+                          */}}
+            {{ if .IsTranslated }}
+            {{ range .Translations }}
+            <div class="language-switcher__item">
+              <a href="{{ .RelPermalink }}">{{ .Language.Lang | upper }}</a>
             </div>
+            {{ end }}
+          {{ else }}
+            {{ range $.Site.Home.AllTranslations }}
+            {{ if ne $currentLanguage .Language.Lang }}
+            <div class="language-switcher__item">
+              <a href="{{ .RelPermalink }}">{{ .Language.Lang | upper }}</a>
+            </div>
+            {{ end }}
+            {{ end }}
+            {{ end }}
           </div>
-          <ul>
-            <li>
-              <a class="icon__circle-wrapper" target="_blank" rel="noopener" href="{{ site.Params.mastodon.url }}" aria-label="Mastodon">
-                 <svg class="icon icon--fill-white">
-                  <use href="#mastodon"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="icon__circle-wrapper" target="_blank" rel="noopener" href="{{ .Param "github.url" }}" aria-label="GitHub">
-                <i class="icon icon--white" data-lucide="github"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="header__open-link">{{ i18n "header.menu.open" }}</div>
-      <div class="header__close-link">
-        {{ i18n "header.menu.close" }}
-        <i class="icon" data-lucide="x"></i>
-      </div>
-    </header>
-  </div>
+        </div>
+        <ul>
+          <li>
+            <a class="icon__circle-wrapper" target="_blank" rel="noopener" href="{{ site.Params.mastodon.url }}" aria-label="Mastodon">
+              <svg class="icon icon--fill-white">
+                <use href="#mastodon"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="icon__circle-wrapper" target="_blank" rel="noopener" href="{{ .Param "github.url" }}" aria-label="GitHub">
+              <i class="icon icon--white" data-lucide="github"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header__open-link">{{ i18n "header.menu.open" }}</div>
+    <div class="header__close-link">
+      {{ i18n "header.menu.close" }}
+      <i class="icon" data-lucide="x"></i>
+    </div>
+  </header>
+</div>
 </div>
