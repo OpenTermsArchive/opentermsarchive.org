@@ -88,7 +88,7 @@ npm run lint:html
 To automatically fix, where possible, problems reported:
 
 ```sh
-npm run lint:html -- --fix
+npm run lint:html -- --reformat
 ```
 
 ### Testing
