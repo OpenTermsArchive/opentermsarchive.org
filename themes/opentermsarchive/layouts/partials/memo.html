@@ -18,12 +18,14 @@
     {{ if eq $template "list" }}</h6>{{ end }}
     {{ if eq $template "single" }}</h4>{{ end }}
 
-    {{ $contributors := partial "load_contributors.html" . }}
-    {{ with .memo.Params.author }}
-      {{ with index $contributors . }}
-        <div class="author text--light fontstyle--italic">
-          {{ i18n "memos.author" (dict "profile" .profile "name" .name) | safeHTML }}
-        </div>
+    {{ if eq $template "single" }}
+      {{ $contributors := partial "load_contributors.html" . }}
+      {{ with .memo.Params.author }}
+        {{ with index $contributors . }}
+          <div class="memo__author text--light fontstyle--italic">
+            {{ i18n "memos.author" (dict "profile" .profile "name" .name) | safeHTML }}
+          </div>
+        {{ end }}
       {{ end }}
     {{ end }}
 </header>

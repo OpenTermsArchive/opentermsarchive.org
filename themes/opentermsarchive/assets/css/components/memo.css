@@ -7,8 +7,8 @@
   margin-bottom: var(--mS);
 }
 
-.memo__subtitle {
-  margin-bottom: var(--mS);
+.memo__subtitle + .memo__author {
+  margin-top: var(--mXS);
 }
 
 .memo__content {
