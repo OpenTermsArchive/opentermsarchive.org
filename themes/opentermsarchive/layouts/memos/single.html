@@ -12,8 +12,9 @@
     </div>
   </div>
 
+  {{ $context := . }}
   {{ with .Params.related_collections }}
-    {{ partial "related-collections.html" (dict "relatedCollectionsIDs" . "linksTo" (slice "version") "size" "87" "class" "container--has-no-padding-top" )}}
+    {{ partial "related-collections.html" (dict "relatedCollectionsIDs" . "linksTo" (slice "version") "size" "87" "class" "container--has-no-padding-top" "context" $context )}}
   {{ end }}
 
 {{ end }}
