@@ -12,7 +12,7 @@
 }
 
 .cardlist__title {
-  margin-bottom: var(--m3XL);
+  margin-bottom: var(--mXL);
 }
 
 .cardlist__subtitle {
@@ -30,7 +30,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   grid-gap: var(--gridGutterWidth);
   place-content: center;
-  justify-items: center;
+  justify-content: left;
 
   &.cardlist__items--is-small {
     grid-template-columns: repeat(4, 1fr);
@@ -59,6 +59,7 @@
 @media (--mobileExtraLarge) {
   .cardlist__items {
     grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
 
     &.cardlist__items--is-small {
       grid-template-columns: repeat(1, 1fr);

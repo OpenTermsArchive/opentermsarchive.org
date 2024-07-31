@@ -132,4 +132,8 @@ h6,
   line-height: 1.25;
   color: var(--colorBlack900);
   letter-spacing: 0;
+
+  &.h6--ultralight {
+    font-weight: 300;
+  }
 }

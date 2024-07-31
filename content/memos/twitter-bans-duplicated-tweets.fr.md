@@ -5,6 +5,7 @@ service: "Twitter"
 terms_types: ["Community Guidelines - Platform Manipulation"]
 dates: ["2022-05-10"]
 author: Mathilde Saliou
+related_collections: ["france-elections"]
 ---
 
 Twitter [ajoute](https://github.com/OpenTermsArchive/france-elections-versions/commit/0bf0a8f85460f936781141bfaf764183867d0685) une interdiction de poster des « Tweets comportant une phrase ou un contenu existant de manière dupliquée, que ce soit individuellement ou de concert avec d'autres comptes ». La modification a été ajoutée aux règles françaises alors que Twitter publiait des explications plus longues, [en anglais](https://help.twitter.com/en/rules-and-policies/copypasta-duplicate-content), sur le renforcement de sa lutte contre les « copypastas ».

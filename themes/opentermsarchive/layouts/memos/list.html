@@ -1,8 +1,8 @@
 {{ define "main" }}
-  {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "subtitle" .Params.hero.subtitle "size" "109" "class" (and .Content "hero--has-no-margin-bottom")) }}
+  {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "subtitle" .Params.hero.subtitle "size" "87" "class" (and .Content "hero--has-no-margin-bottom")) }}
   {{ with .Content}}
     <div class="container container--has-no-padding-y">
-      <div class="container container--has-padding-top-medium container--109">
+      <div class="container container--has-padding-top-medium container--87">
         <div class="textcontent">
           {{ . }}
         </div>
@@ -10,48 +10,31 @@
     </div>
   {{ end }}
   <div class="container container--has-no-padding-y">
-    <div class="container container--has-no-padding-top container--109">
-      <div class="textcontent">
+    <div class="container container--has-no-padding-top container--87">
 
-        {{/* Add a date parameter to each page, which takes the first date in the list of dates */}}
-        {{ $pagesWithDateParam := slice }}
-          {{ range .Pages }}
-            {{ $firstDate := (index .Params.dates 0) | time }}
-            {{ $pagesWithDateParam = $pagesWithDateParam | append (dict "date" $firstDate "page" .) }}
-          {{ end }}
-
-        {{/* Sort pages by date */}}
-        {{ $sortedPages := sort $pagesWithDateParam "date" "desc" }}
-
-        {{/* Extract Hugo pages object */}}
-        {{ $sortedHugoPages := slice }}
-        {{ range $sortedPages }}
-          {{ $sortedHugoPages = $sortedHugoPages | append .page }}
+      {{/* Add a date parameter to each page, which takes the first date in the list of dates */}}
+      {{ $pagesWithDateParam := slice }}
+        {{ range .Pages }}
+          {{ $firstDate := (index .Params.dates 0) | time }}
+          {{ $pagesWithDateParam = $pagesWithDateParam | append (dict "date" $firstDate "page" .) }}
         {{ end }}
 
-        {{/* Paginate */}}
-        {{ $paginator := .Paginate $sortedHugoPages 8 }}
+      {{/* Sort pages by date */}}
+      {{ $sortedPages := sort $pagesWithDateParam "date" "desc" }}
 
-        {{ range $index, $page := $paginator.Pages }}
-          {{ $isLastOfPage := eq $index (sub (len $paginator.Pages) 1) }}
-          <div class="{{ if not $isLastOfPage }}mb--xl{{ end }}">
-            <h4 class="mb--0">
-              <a href="{{ $page.RelPermalink }}">{{ $page.LinkTitle }}</a>
-            </h4>
-            <div class="text--smallcaps mt--2xs">
-              {{ $page.Params.service }} ▪
-              {{ delimit $page.Params.terms_types " , " }} ▪
-              {{ $formattedDates := slice }}
-              {{ range $page.Params.dates }}
-                {{ $formattedDate := ( . | time.Format ":date_long") }}
-                {{ $formattedDates = $formattedDates | append $formattedDate }}
-              {{ end }}
-              {{ delimit $formattedDates " - " }}
-            </div>
-            {{ if not $isLastOfPage }}<hr class="mt--xl">{{ end }}
-          </div>
-        {{ end }}
-      </div>
+      {{/* Extract Hugo pages object */}}
+      {{ $sortedHugoPages := slice }}
+      {{ range $sortedPages }}
+        {{ $sortedHugoPages = $sortedHugoPages | append .page }}
+      {{ end }}
+
+      {{/* Paginate */}}
+      {{ $paginator := .Paginate $sortedHugoPages 8 }}
+
+      {{ range $index, $page := $paginator.Pages }}
+        {{ $isLastOfPage := eq $index (sub (len $paginator.Pages) 1) }}
+        {{ partial "memo.html" (dict "memo" $page "template" "list" "class" (cond $isLastOfPage "" "mb--xl")) }}
+      {{ end }}
 
       {{ partial "pagination.html" . }}
     </div>

@@ -7,8 +7,10 @@ rules:
   "@html-eslint/require-img-alt": warn
   "@html-eslint/indent": off
   "@html-eslint/element-newline":
-    - error
+    - warn
     - skip:
       - pre
       - code
   "@html-eslint/no-duplicate-attrs": warn
+  "@html-eslint/require-closing-tags":
+    - warn

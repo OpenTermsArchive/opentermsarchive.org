@@ -5,6 +5,7 @@ service: Instagram
 terms_types: ["Terms of Service"]
 dates: ["2022-02-20"]
 author: Mathilde Saliou
+related_collections: ["france"]
 ---
 
 Dans la version précédente, le réseau social déclarait fournir son service « en l’état », dans l’incapacité de « garantir son fonctionnement idéal et sûr en permanence » et déclinait (tout en majuscule) « toute garantie explicite ou implicite », notamment de « qualité marchande, d’adéquation à un usage particulier, de titre et d’absence de contrefaçon ». Elle déclarait ne pas contrôler les propos et publications « des tiers », « ni les vôtres » et avoir une responsabilité « limitée autant que la loi le permet » en cas d’incident.
