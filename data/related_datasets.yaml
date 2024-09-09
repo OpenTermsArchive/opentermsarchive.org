@@ -73,3 +73,8 @@
     fr: Une publication décrivant les pratiques de suspension des principales plateformes de médias sociaux et qui liste différents jeux de données.
     en: A note that describes the suspension practices of the major social media platforms and list several datasets.
   website: https://tecunningham.github.io/posts/2023-01-31-social-media-suspensions-data.html
+- name: GDPRhub
+  description:
+    fr: Un wiki collaboratif opéré par nyob.eu qui consolide et résume les décisions prises par les agences de protection des données (DPAs) et les tribunaux sur la base du RGPD, dans toute l'Europe.
+    en: A collaborative wiki operated by nyob.eu that collects and summarises GDPR-related decisions from Data Protection Authorities (DPAs) and courts across Europe.
+  website: https://gdprhub.eu/
