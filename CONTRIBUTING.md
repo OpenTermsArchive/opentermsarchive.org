@@ -37,6 +37,10 @@ It is strongly recommended to use an image compression tool such as [ImageOptim]
 
 If you need to use different illustrations depending on the language of the site, you can do so by adding a suffix to the name of your image file. Supported suffix values are `en` and `fr` and it must be preceded by a `-`. For example: `research-on-the-impact-on-human-rights-fr.png`.
 
+## Adding an Open Graph image
+
+Add an 1200*630px image in JPG format to the [`assets/images/opengraph/<language_tag>/` folder](https://github.com/OpenTermsArchive/opentermsarchive.org/tree/master/assets/images/opengraph/) where <language_tag> is the language tag as defined by [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646) and the file is named with [sanitized](https://gohugo.io/functions/urls/urlize/) [title](https://gohugo.io/methods/page/title/) of the page for which you want to configure the open graph image.
+
 ## Contributing code
 
 ### Pull requests
