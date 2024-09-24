@@ -21,8 +21,11 @@
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
   {{ $openGraphImage := resources.Get "/images/opengraph/open-terms-archive.jpg" }}
-  {{ with resources.Get (printf "/images/opengraph/%s/%s.jpg" .Page.Lang (.Title | urlize)) }}
-    {{ $openGraphImage = . }}
+  {{ $filename := print (path.BaseName .Page.File.Path) ".png" }}
+  {{ range where .Site.Pages ".Section" .CurrentSection.Section }}
+    {{ with .Page.Resources.GetMatch $filename }}
+      {{ $openGraphImage = . }}
+    {{ end }}
   {{ end }}
   <meta property="og:image" content="{{ $openGraphImage.Permalink }}">
   <meta property="og:image:width" content="{{ $openGraphImage.Width }}">
