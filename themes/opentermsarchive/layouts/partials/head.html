@@ -25,6 +25,6 @@
     {{ $openGraphImage = . }}
   {{ end }}
   <meta property="og:image" content="{{ $openGraphImage.Permalink }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+  <meta property="og:image:width" content="{{ $openGraphImage.Width }}">
+  <meta property="og:image:height" content="{{ $openGraphImage.Height }}">
 </head>
