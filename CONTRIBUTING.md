@@ -39,7 +39,7 @@ If you need to use different illustrations depending on the language of the site
 
 ## Adding an Open Graph image (social media preview image)
 
-Add an 1200*630px image in JPG format to the [`assets/images/opengraph/<language_tag>/` folder](https://github.com/OpenTermsArchive/opentermsarchive.org/tree/master/assets/images/opengraph/) where <language_tag> is the language tag as defined by [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646) and the file is named with the [sanitized](https://gohugo.io/functions/urls/urlize/) [title](https://gohugo.io/methods/page/title/) of the page for which you want to configure the Open Graph image. The extension must be `.jpg` (not `.jpeg`, all lowercase).
+Add an image in PNG format to the [`content/<current_section>/` folder](https://github.com/OpenTermsArchive/opentermsarchive.org/tree/master/content) where <current_section> is the folder in which the given page resides. Name the file with the [sanitized](https://gohugo.io/functions/urls/urlize/)[title](https://gohugo.io/methods/page/title/) of the page for which you want to configure the Open Graph image. The extension must be `.png` (all lowercase).
 
 ## Contributing code
 
