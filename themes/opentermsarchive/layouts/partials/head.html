@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <title>{{ with .Param "html_title" }}{{ . }}{{ else }}{{ .Title }}{{ end }}</title>
-  {{ with .Param "html_description"}}<meta name="description" content="{{ . }}">{{ end }}
+  <meta name="description" content="{{ with .Param "html_description"}}{{ . }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   {{ $styles := resources.Get "css/loader.css" | toCSS | postCSS (dict "config" "./assets/css/postcss.config.js") }}
   {{ if hugo.IsServer }}
@@ -17,4 +17,18 @@
   <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#000">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="{{ with .Param "html_title" }}{{ . }}{{ else }}{{ .Title }}{{ end }}">
+  <meta property="og:description" content="{{ with .Param "html_description"}}{{ . }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{ $openGraphImage := resources.Get "/images/opengraph/open-terms-archive.png" }}
+  {{ $filename := print (path.BaseName .Page.File.Path) ".png" }}
+  {{ range where .Site.Pages ".Section" .CurrentSection.Section }}
+    {{ with .Page.Resources.GetMatch $filename }}
+      {{ $openGraphImage = . }}
+    {{ end }}
+  {{ end }}
+  <meta property="og:image" content="{{ $openGraphImage.Permalink }}">
+  <meta property="og:image:width" content="{{ $openGraphImage.Width }}">
+  <meta property="og:image:height" content="{{ $openGraphImage.Height }}">
 </head>

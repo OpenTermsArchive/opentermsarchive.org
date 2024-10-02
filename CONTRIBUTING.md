@@ -37,6 +37,10 @@ It is strongly recommended to use an image compression tool such as [ImageOptim]
 
 If you need to use different illustrations depending on the language of the site, you can do so by adding a suffix to the name of your image file. Supported suffix values are `en` and `fr` and it must be preceded by a `-`. For example: `research-on-the-impact-on-human-rights-fr.png`.
 
+## Adding an Open Graph image (social media preview image)
+
+Add an image in PNG format to the [`content/<current_section>/` folder](https://github.com/OpenTermsArchive/opentermsarchive.org/tree/master/content) where <current_section> is the folder in which the given page resides. Name the file with the [sanitized](https://gohugo.io/functions/urls/urlize/)[title](https://gohugo.io/methods/page/title/) of the page for which you want to configure the Open Graph image. The extension must be `.png` (all lowercase).
+
 ## Contributing code
 
 ### Pull requests
