@@ -1,9 +1,7 @@
 contact_email: contact@opentermsarchive.org
 mastodon: 
-  url: https://mastodon.lescommuns.org/@opentermsarchive
-  username: "@opentermsarchive@mastodon.lescommuns.org"
-twitter: 
-  url: https://twitter.com/OpenTerms
+  url: https://mastodon.social/@opentermsarchive
+  username: "@opentermsarchive@mastodon.social"
 github:
   url: https://github.com/OpenTermsArchive
 contributors:
