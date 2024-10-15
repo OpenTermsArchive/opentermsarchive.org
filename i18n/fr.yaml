@@ -107,7 +107,8 @@ stats:
     title: "{{ .number }} collections"
     desc: maintenues par divers partenaires
 alias:
-  title: Vous devriez être redirigé rapidement
+  title: Open Terms Archive
+  html_description: Open Terms Archive enregistre publiquement chaque version des conditions d'utilisation des services en ligne pour en permettre le contrôle démocratique.
   message: Vous devriez être redirigé rapidement, si toutefois ce n'était pas le cas <a href="{{ .permalink }}">cliquez ici</a>.
 pagination:
   nav_aria_label: Navigation de la pagination

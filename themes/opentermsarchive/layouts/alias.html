@@ -14,6 +14,13 @@
     <meta name="robots" content="noindex">
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="0; url={{ .Permalink }}">
+    <meta property="og:title" content="{{ i18n "alias.title" }}">
+    <meta property="og:description" content="{{ i18n "alias.html_description" }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="https://opentermsarchive.org/images/opengraph/open-terms-archive.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <script>
       const OTA_BASEURL = {{ (strings.TrimSuffix "/" (absLangURL "")) | jsonify | safeJS }};
       const OTA_PAGES = {{ $pages | jsonify | safeJS }}
