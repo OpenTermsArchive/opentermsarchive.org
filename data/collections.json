@@ -67,8 +67,7 @@
         "name": "European Commission",
         "url": "https://ec.europa.eu/info/departments/communications-networks-content-and-technology_en"
       }
-    ],
-    "endpoint": "http://vps-463f0baf.vps.ovh.net/api/v1"
+    ]
   },
   {
     "name": "France Élections",
