@@ -107,7 +107,8 @@ stats:
     title: "{{ .number }} collections"
     desc: maintained by various partners
 alias:
-  title: You should be redirected quickly
+  title: Open Terms Archive
+  html_description: Open Terms Archive publicly records every version of the terms of digital services to enable democratic oversight.
   message: You should be redirected quickly, if not <a href="{{ .permalink }}">click here</a>.
 pagination:
   nav_aria_label: Pagination Navigation
