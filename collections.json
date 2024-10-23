@@ -55,8 +55,8 @@
       "documents": "253"
     },
     "industries": {
-      "en": "Online intermediation services for businesses subject to the European <a href=\"https://eur-lex.europa.eu/eli/reg/2019/1150/oj\">platforms-to-businesses (“P2B” / 2019/1150) regulation</a><br>(until August, 2024)",
-      "fr": "Services d’intermédiation en ligne pour les entreprises sujets au règlement européen <a href=\"https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32019R1150&from=EN\">P2B / 2019/1150</a><br>(jusque août 2024)"
+      "en": "Online intermediation services for businesses subject to the European <a href=\"https://eur-lex.europa.eu/eli/reg/2019/1150/oj\">platforms-to-businesses (“P2B” / 2019/1150) regulation</a><br><span class=\"text--light\">until August 2024</span>",
+      "fr": "Services d’intermédiation en ligne pour les entreprises sujets au règlement européen <a href=\"https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32019R1150&from=EN\">P2B / 2019/1150</a><br><span class=\"text--light\">jusqu'en août 2024</span>"
     },
     "maintainers": [
       {
@@ -85,8 +85,8 @@
       "documents": "65"
     },
     "industries": {
-      "en": "Most used social media in France that could have a systemic impact on the 2022 elections",
-      "fr": "Médias sociaux pouvant influencer les élections présidentielles et législatives françaises 2022"
+      "en": "Most used social media in France that could have a systemic impact on the elections<br><span class=\"text--light\">until September 2022</span>",
+      "fr": "Médias sociaux pouvant influencer les élections présidentielles et législatives françaises<br><span class=\"text--light\">jusqu'en septembre 2022</span>"
     }
   },
   {
