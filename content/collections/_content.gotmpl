@@ -1,0 +1,11 @@
+{{ .EnableAllLanguages }}
+{{ range site.Data.collections }}
+  {{ $params := dict "name" .name "id" .id "languages" .languages "jurisdictions" .jurisdictions "maintainers" .maintainers "stats" .stats "industries" .industries "endpoint" .endpoint }}
+  {{ $page := dict
+    "params" $params
+    "path" .name
+    "title" .name
+    "slug" .id
+  }}
+  {{ $.AddPage $page }}
+{{ end }}
