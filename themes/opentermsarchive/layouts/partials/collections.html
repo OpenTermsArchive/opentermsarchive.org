@@ -16,8 +16,9 @@
       </div>
       {{ end }}
       <div class="cardlist__items">
-        {{ range site.Data.collections }}
-          {{ partial "collection.html" (dict "data" . "linksTo" $linksTo) }}
+        {{ range where .Site.RegularPages "Section" "collections" }}
+          {{ .Scratch.Set "linksTo" $linksTo }}
+          {{ partial "collection-card.html" . }}
         {{ end }}
         {{ if not (eq "/datasets/" .Page.RelPermalink) }}
           {{ partial "new-collection.html" . }}

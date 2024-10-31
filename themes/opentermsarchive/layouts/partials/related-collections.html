@@ -1,5 +1,5 @@
-{{ $size := default "87" .size}}
-{{ $memoTitle := .context.Title}}
+{{ $size := default "87" .size }}
+
 <div class="container {{ .class }}" id="related-collections">
   <div class="container container--{{ $size }} container--has-no-padding-y">
     <div class="collections cardlist">
@@ -15,13 +15,13 @@
 
         {{ range $.relatedCollectionsIDs }}
           {{ if not (in $collectionsIDs .) }}
-            {{ errorf "Reladed collection %q not found for %q memo" . $memoTitle }}
+            {{ errorf "Reladed collection %q not found" . }}
           {{ end }}
         {{ end }}
 
-        {{ range $name, $data := site.Data.collections }}
-          {{ if (in $.relatedCollectionsIDs $data.id) }}
-            {{ partial "collection.html" (dict "title" $name "data" $data "linksTo" .linksTo) }}
+        {{ range where site.RegularPages "Section" "collections" }}
+          {{ if (in $.relatedCollectionsIDs .Params.id) }}
+            {{ partial "collection-card.html" . }}
           {{ end }}
         {{ end }}
       </div>
