@@ -108,7 +108,7 @@
       "en": "Online dating",
       "fr": "Rencontre en ligne"
     },
-    "endpoint": "http://vps-99ae1d89.vps.ovh.net/api/v1"
+    "endpoint": "http://vps-99ae1d89.vps.ovh.net/collection-api/v1"
   },
   {
     "name": "France",
