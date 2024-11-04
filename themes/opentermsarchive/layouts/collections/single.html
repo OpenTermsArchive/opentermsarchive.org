@@ -1,0 +1,44 @@
+{{ define "main" }}
+  <div class="collection">
+
+    <div class="container container--wide container--has-no-padding-y">
+      <div class="collection__header container container--1211">
+        {{ $image := resources.Get (printf "/images/collections/%s.png" (.Params.name | urlize)) }}
+        {{ with $image }}
+          <div class="collection__header__image">
+            <img src="{{ .RelPermalink }}" alt="">
+          </div>
+        {{ end }}
+        <div class="collection__header__content">
+          <div class="collection__header__infos">
+            <h1>{{ .Title }}</h1>
+            {{ with .Params.industries }}<h2 class="h3 h3--ultralight">{{ index . site.Language.Lang | safeHTML }}</h2>{{ end }}
+          </div>
+          <ul class="collection__header__actions">
+            <li>
+              <a class="button" href="https://github.com/openTermsArchive/{{ $.Params.id }}-versions" target="_blank" rel="noopener">
+                {{ i18n "collections.cta.browse" }}
+                <i class="icon ml--2xs" data-lucide="search"></i>
+              </a>
+            </li>
+            <li>
+              <a class="button" href="https://github.com/openTermsArchive/{{ $.Params.id }}-versions/releases/latest" target="_blank" rel="noopener">
+                {{ i18n "collections.cta.download" }}
+                <i class="icon ml--2xs" data-lucide="download"></i>
+              </a>
+            </li>
+            {{ with $.Params.endpoint }}
+              <li>
+                <a class="button" href="{{ . }}/docs" target="_blank" rel="noopener">
+                  {{ i18n "collections.cta.endpoint" }}
+                  <i class="icon ml--2xs" data-lucide="wrench"></i>
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{{ end }}

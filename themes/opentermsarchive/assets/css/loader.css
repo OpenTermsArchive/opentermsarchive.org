@@ -38,6 +38,8 @@
 @import "themes/opentermsarchive/assets/css/components/cardtable.css";
 @import "themes/opentermsarchive/assets/css/components/cardtable__item.css";
 @import "themes/opentermsarchive/assets/css/components/column.css";
+@import "themes/opentermsarchive/assets/css/components/collection.css";
+@import "themes/opentermsarchive/assets/css/components/collection__header.css";
 @import "themes/opentermsarchive/assets/css/components/container.css";
 @import "themes/opentermsarchive/assets/css/components/contributors.css";
 @import "themes/opentermsarchive/assets/css/components/distinctions.css";

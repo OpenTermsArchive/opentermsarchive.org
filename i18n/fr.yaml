@@ -79,7 +79,7 @@ collections:
   cta:
     browse: Voir les documents
     download: Télécharger le jeu de données
-    endpoint: API de métadonnées
+    endpoint: Accès à l'API
   volunteer_contributors: Contributeurs bénévoles
   new: Vous voulez suivre des services visant une autre langue, juridiction ou industrie ? Contactez-nous pour commencer à collaborer !
 impact:

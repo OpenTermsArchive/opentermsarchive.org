@@ -79,7 +79,7 @@ collections:
   cta:
     browse: Browse terms
     download: Download dataset
-    endpoint: Metadata API
+    endpoint: Access API
   volunteer_contributors: Volunteer contributors
   new: Want to track services for different languages, jurisdictions, or industries? Contact us to collaborate!
 impact:
