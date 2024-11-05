@@ -1,0 +1,27 @@
+.collection__memos__items {
+  margin-top: var(--mXL);
+  display: grid;
+  gap: var(--mL);
+  grid-template-columns: repeat(3, 1fr);
+
+  & > .collection__memos__item{
+    background-color: var(--colorWhite);
+  }
+
+  @media (--tabletLarge) {
+    gap: var(--mS);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.collection__memos__cta{
+  margin-top: var(--m2XL);
+  display: flex;
+  justify-content: flex-end;
+
+  @media (--tabletLarge) {
+    justify-content: center;
+  }
+}
+
+

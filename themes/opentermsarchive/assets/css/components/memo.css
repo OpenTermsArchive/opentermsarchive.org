@@ -1,6 +1,7 @@
 .memo {
   padding: var(--mXL);
   border: 1px solid var(--colorBlack300);
+  background-color: var(--colorWhite);
 }
 
 .memo__title {

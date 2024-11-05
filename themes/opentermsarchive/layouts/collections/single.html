@@ -118,6 +118,39 @@
         </div>
       </div>
     </div>
+    
+    {{ $memosRelRef := relref . "/memos" }}
+    {{ $currentCollectionID := .Params.id }}
+    {{ $memos := where .Site.RegularPages "Type" "memos" }}
+    {{ $filteredMemos := slice }}
+
+    {{/* Get memos related to the current collection and add a date parameter to each memos, which takes the first date in the list of dates */}}
+    {{ range $memos }}
+      {{ if in .Params.related_collections $currentCollectionID }}
+        {{ $firstDate := (index .Params.dates 0) | time }}
+        {{ $filteredMemos = $filteredMemos | append (dict "date" $firstDate "page" .) }}
+      {{ end }}
+    {{ end }}
+
+    {{/* Sort memos by date and get the first 3 */}}
+    {{ $sortedMemos := sort $filteredMemos "date" "desc" }}
+    {{ $latestMemos := first 3 $sortedMemos }}
+
+    {{ with $latestMemos }}
+      <div class="container container--wide container--has-no-padding-y container--is-gray">
+        <div class="collection__memos container container--1211">
+          <h3>{{ i18n "collections.memos.title" }}</h3>
+          <div class="collection__memos__items">
+            {{ range . }}
+              {{ partial "memo.html" (dict "memo" .page "template" "list" "class" "collection__memos__item") }}
+            {{ end }}
+          </div>
+          <div class="collection__memos__cta">
+            <a class="button button--secondary" href="{{ $memosRelRef }}">{{ i18n "collections.memos.cta" }}</a>
+          </div>
+        </div>
+      </div>
+    {{ end }}
 
   </div>
 {{ end }}
