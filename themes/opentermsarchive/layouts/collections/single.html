@@ -152,5 +152,32 @@
       </div>
     {{ end }}
 
+     <div class="container container--wide container--has-no-padding-y">
+      <div class="collection__governance container container--1211">
+        <h3>{{ i18n "collections.governance.title" }}</h3>
+        <h4 class="mt--xl h4--light">{{ i18n "collections.governance.maintainers.title" }}</h4>
+        <div class="governance__maintainers__items">
+          {{ with .Params.maintainers }}
+            {{ range . }}
+              {{ $image := resources.Get (printf "/images/contributors/%s.png" (.name | urlize)) }}
+              {{ $name := .name }}
+              {{ with $image }}
+                <div class="governance__maintainers__item">
+                  <img src="{{ .RelPermalink }}" alt="{{ $name }}">
+                </div>
+              {{ end }}
+            {{ end }}
+          {{ else }}
+            <div class="governance__maintainers__item">
+              {{ partial "volunteer-contributors.html" . }}
+            </div>
+          {{ end }}
+        </div>
+        <h4 class="mt--xl h4--light">{{ i18n "collections.governance.contributors.title" }}</h4>
+        {{ $collectionRepositoryID := print .Params.id "-declarations" | lower }}
+        {{ partial "contributors.html" (dict "repositories" (slice $collectionRepositoryID) "showInfo" true "class" "contributors--align-x-left") }}
+      </div>
+    </div>
+
   </div>
 {{ end }}

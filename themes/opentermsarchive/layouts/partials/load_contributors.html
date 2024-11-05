@@ -13,8 +13,33 @@
     {{ with .Err }}
       {{ errorf "%s" . }}
     {{ else }}
+      {{ $repository := (.Content | unmarshal).projectName }}
       {{ range (.Content | unmarshal).contributors }}
-        {{ $contributors = $contributors | merge (dict .name .) }}
+        {{ $contributorName := .name }}
+        {{ $contributorData := dict 
+          "repositories" (slice ($repository | lower))
+          "avatar_url" .avatar_url 
+          "contributions" .contributions 
+          "login" .login 
+          "name" $contributorName 
+          "profile" .profile
+          "staff" nil
+        }}
+
+        {{ if isset $contributors $contributorName }}
+          {{ $existingContributor := index $contributors $contributorName }}
+          {{ $contributorData = merge $contributorData (dict "repositories" (union $existingContributor.repositories $contributorData.repositories)) }}
+        {{ end }}
+
+        {{ range $staffType, $staffMembers := site.Data.staff }}
+          {{ if in $staffMembers $contributorName }}
+            {{ $existingContributor := index $contributors $contributorName }}
+            {{ $contributorData = merge $contributorData (dict "staff" $staffType) }}
+          {{ end }}
+        {{ end }}
+
+        {{ $contributors = merge $contributors (dict $contributorName $contributorData) }}
+
       {{ end }}
     {{ end }}
   {{ else }}

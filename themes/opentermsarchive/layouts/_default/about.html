@@ -7,12 +7,12 @@
         <div>
           <h3>{{ i18n "about.core.title" }}</h3>
           <p>{{ i18n "about.core.subtitle" }}</p>
-          {{ partial "contributors.html" (dict "type" "core" "thumbnailWidth" 88 "thumbnailHeight" 88 "showInfo" true "class" "contributors--has-no-margin-top mb--xl" ) }}
+          {{ partial "contributors.html" (dict "staffType" "core" "thumbnailWidth" 88 "thumbnailHeight" 88 "showInfo" true "class" "contributors--has-no-margin-top mb--xl" ) }}
         </div>
         <div>
           <h4>{{ i18n "about.alumni.title" }}</h4>
           <p>{{ i18n "about.alumni.subtitle" }}</p>
-          {{ partial "contributors.html" (dict "type" "alumni" "showInfo" true "class" "mb--2xl contributors--has-no-margin-top" ) }}
+          {{ partial "contributors.html" (dict "staffType" "alumni" "showInfo" true "class" "mb--2xl contributors--has-no-margin-top" ) }}
         </div>
         <div>
           <h3>{{ i18n "about.incubator.title" }}</h3>
@@ -60,7 +60,7 @@
         <div>
           <h3>{{ i18n "about.community_managers.title" }}</h3>
           <p>{{ i18n "about.community_managers.subtitle" }}</p>
-          {{ partial "contributors.html" (dict "type" "communityManagers" "showInfo" true "class" "mb--2xl contributors--has-no-margin-top" ) }}
+          {{ partial "contributors.html" (dict "staffType" "communityManagers" "showInfo" true "class" "mb--2xl contributors--has-no-margin-top" ) }}
         </div>
         <div>
           <h3>{{ i18n "about.contributors.title" }}</h3>
