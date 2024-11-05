@@ -19,6 +19,11 @@ import {
   Eye,
   Layers,
   Flag,
+  HandHeart,
+  SquarePen,
+  FilePlus,
+  FileWarning,
+  Megaphone,
   createIcons,
 } from 'lucide';
 
@@ -44,6 +49,11 @@ createIcons({
     Layers,
     Flag,
     Map,
+    HandHeart,
+    SquarePen,
+    FilePlus,
+    FileWarning,
+    Megaphone,
   },
   attrs: { 'aria-hidden': true },
 });

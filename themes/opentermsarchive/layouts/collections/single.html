@@ -76,5 +76,48 @@
       </div>
     </div>
 
+    <div class="container container--wide container--has-no-padding-y">
+      <div class="collection__contribute container container--1211">
+        <h3>{{ i18n "collections.contribute.title" }}</h3>
+        <div class="collection__contribute__items">
+          <div class="collection__contribute__item">
+            <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
+              <i class="icon icon--primary" data-lucide="hand-heart"></i>
+            </div>
+            <h4 class="h4--light">{{ i18n "collections.contribute.donate" }}</h4>
+            <a class="contribute__item__link" href="{{ .Param "opencollective.url" }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.donate" }}"></a>
+          </div>
+          <div class="collection__contribute__item">
+            <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
+              <i class="icon icon--primary" data-lucide="square-pen"></i>
+            </div>
+            <h4 class="h4--light">{{ i18n "collections.contribute.publish" }}</h4>
+            <a class="contribute__item__link" href="{{ .Param "memos.how_to_publish.url" }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.publish" }}"></a>
+          </div>
+          <div class="collection__contribute__item">
+            <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
+              <i class="icon icon--primary" data-lucide="file-plus"></i>
+            </div>
+            <h4 class="h4--light">{{ i18n "collections.contribute.track" }}</h4>
+            <a class="contribute__item__link" href="{{ .Param "contribution_tool.url" }}?destination=OpenTermsArchive/{{ .Params.id }}-declarations" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.track" }}"></a>
+          </div>
+          <div class="collection__contribute__item">
+            <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
+              <i class="icon icon--primary" data-lucide="file-warning"></i>
+            </div>
+            <h4 class="h4--light">{{ i18n "collections.contribute.restore" }}</h4>
+            <a class="contribute__item__link" href="{{ .Param "github.url" }}/{{ .Params.id }}-declarations/issues" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.restore" }}"></a>
+          </div>
+          <div class="collection__contribute__item">
+            <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
+              <i class="icon icon--primary" data-lucide="megaphone"></i>
+            </div>
+            <h4 class="h4--light">{{ i18n "collections.contribute.promote" }}</h4>
+            <a class="contribute__item__link" href="https://mastodon.social/share?url={{ .Permalink }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.promote" }}"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 {{ end }}

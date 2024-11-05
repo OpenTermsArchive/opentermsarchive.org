@@ -17,6 +17,16 @@
   height: 24px;
 }
 
+.icon__circle-wrapper--big {
+  width: 68px;
+  height: 68px;
+  font-size: 3rem;
+}
+
+.icon__circle-wrapper--graylight{
+  background-color: var(--colorBlack200);
+}
+
 .icon {
   width: 1em;
   height: 1em;
@@ -31,12 +41,16 @@
   color: var(--colorWhite);
 }
 
-.icon--fill-white {
-  --svgfill: var(--colorWhite);
+.icon--primary {
+  color: var(--colorPrimary);
 }
 
 .icon--gray {
   color: var(--colorBlack400);
+}
+
+.icon--fill-white {
+  --svgfill: var(--colorWhite);
 }
 
 .icon__volunteer-contributors-wrapper {

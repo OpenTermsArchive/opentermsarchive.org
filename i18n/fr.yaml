@@ -84,6 +84,13 @@ collections:
     endpoint: Accès à l'API
   volunteer_contributors: Contributeurs bénévoles
   new: Vous voulez suivre des services visant une autre langue, juridiction ou industrie ? Contactez-nous pour commencer à collaborer !
+  contribute:
+    title: Contribuer
+    donate: Donner
+    publish: Publier un mémo
+    track: Suivre plus de documents
+    restore: Restaurer les documents en panne
+    promote: Promouvoir
 impact:
   related_collections: Collections associées
   reminder: Open Terms Archive enregistre publiquement les conditions d'utilisation des services en ligne dans différentes langues et différents pays plusieurs fois par jour, en améliorant leur lisibilité et en mettant en évidence leurs modifications. Il est conçue comme un outil permettant d'orienter la gouvernance des plateformes vers une plus grande responsabilité, une meilleure législation et une plus grande conformité réglementaire.
