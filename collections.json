@@ -18,7 +18,7 @@
       "en": "Most popular generative AI services",
       "fr": "Services d'IA générative les plus populaires"
     },
-    "endpoint": "http://51.77.110.109/api/v1"
+    "endpoint": "http://51.77.110.109/collection-api/v1"
   },
   {
     "name": "Platform Governance Archive",
