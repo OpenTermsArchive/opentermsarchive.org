@@ -1,0 +1,9 @@
+<div class="collection__metadata">
+  {{ with .icon }}
+    <div class="collection__metadata__icon">
+      <i class="icon icon--gray icon--size-inherit" data-lucide="{{ . }}"></i>
+    </div>
+  {{ end }}
+  <h6 class="h6--ultralight collection__metadata__title">{{ .title }}</h6>
+  <h6 class="collection__metadata__desc">{{ .desc }}</h6>
+</div>
