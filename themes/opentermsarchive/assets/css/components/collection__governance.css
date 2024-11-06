@@ -1,18 +1,18 @@
-.collection__governance{
+.collection__governance {
   @media (--tabletLarge) {
-    & > h4, & > h3 {
+    & > h4,
+    & > h3 {
       text-align: center;
     }
   }
 }
 
-.governance__maintainers__items{
-  margin-top: var(--mL);
+.governance__maintainers__items {
   display: flex;
+  flex-flow: row wrap;
   gap: var(--mL);
-  flex-direction: row;
-  flex-wrap: wrap;
   align-items: flex-start;
+  margin-top: var(--mL);
 
   @media (--tabletLarge) {
     gap: var(--mM);
@@ -20,10 +20,10 @@
   }
 }
 
-.governance__maintainers__item{
+.governance__maintainers__item {
   max-width: 220px;
 
-  & > .icon__volunteer-contributors-wrapper{
+  & > .icon__volunteer-contributors-wrapper {
     font-size: 2em;
   }
 }

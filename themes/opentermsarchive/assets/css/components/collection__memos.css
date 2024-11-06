@@ -1,27 +1,25 @@
 .collection__memos__items {
-  margin-top: var(--mXL);
   display: grid;
-  gap: var(--mL);
   grid-template-columns: repeat(3, 1fr);
+  gap: var(--mL);
+  margin-top: var(--mXL);
 
-  & > .collection__memos__item{
+  & > .collection__memos__item {
     background-color: var(--colorWhite);
   }
 
   @media (--tabletLarge) {
-    gap: var(--mS);
     grid-template-columns: repeat(1, 1fr);
+    gap: var(--mS);
   }
 }
 
-.collection__memos__cta{
-  margin-top: var(--m2XL);
+.collection__memos__cta {
   display: flex;
   justify-content: flex-end;
+  margin-top: var(--m2XL);
 
   @media (--tabletLarge) {
     justify-content: center;
   }
 }
-
-

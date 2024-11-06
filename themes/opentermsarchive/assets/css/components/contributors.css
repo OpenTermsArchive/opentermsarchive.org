@@ -9,9 +9,8 @@
 
 .contributors__items {
   display: flex;
+  flex-flow: row wrap;
   gap: var(--mM);
-  flex-direction: row;
-  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
 
@@ -23,18 +22,18 @@
 .contributor__link {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: var(--m2XS);
+  align-items: center;
 
   &:hover > img {
     box-shadow: 0 0 0 6px var(--colorSecondary);
   }
 }
 
-.contributor__info{
+.contributor__info {
   width: 12rem;
-  text-align: center;
   line-height: 1.4;
+  text-align: center;
 }
 
 .contributor__image {

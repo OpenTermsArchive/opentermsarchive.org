@@ -1,40 +1,42 @@
-.collection__contribute{
+.collection__contribute {
   @media (--tabletSmall) {
     & > h3 {
       text-align: center;
-  }
+    }
   }
 }
 
-.collection__contribute__items{
-  gap: var(--mL);
-  margin-top: var(--mXL); 
-  display:grid;
+.collection__contribute__items {
+  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--mL);
+  margin-top: var(--mXL);
 
   @media (--tabletSmall) {
     gap: var(--mS);
   }
 }
 
-.collection__contribute__item{
+.collection__contribute__item {
   position: relative;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
-  padding: var(--pL);
   gap: var(--mL);
   align-items: center;
+  padding: var(--pL);
   text-align: center;
   pointer-events: none;
+  cursor: pointer;
 
-  &:hover{
-    & > h4{
+  &:hover {
+    & > h4 {
       color: var(--colorSecondary);
     }
-    & > .icon__circle-wrapper{
+
+    & > .icon__circle-wrapper {
       background-color: var(--colorSecondary);
-      & > .icon{
+
+      & > .icon {
         color: var(--colorWhite);
       }
     }
