@@ -7,7 +7,7 @@
   }
 }
 
-.governance__maintainers__items {
+.governance__maintainers-items {
   display: flex;
   flex-flow: row wrap;
   gap: var(--mL);
@@ -20,7 +20,7 @@
   }
 }
 
-.governance__maintainers__item {
+.governance__maintainers-item {
   max-width: 220px;
 
   & > .icon__volunteer-contributors-wrapper {

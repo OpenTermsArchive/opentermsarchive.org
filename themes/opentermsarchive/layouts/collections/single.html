@@ -7,16 +7,16 @@
       <div class="collection__header container container--1211 container--has-no-padding-x">
         {{ $image := resources.Get (printf "/images/collections/%s.png" (.Params.name | urlize)) }}
         {{ with $image }}
-          <div class="collection__header__image">
+          <div class="collection__header-image">
             <img src="{{ .RelPermalink }}" alt="">
           </div>
         {{ end }}
-        <div class="collection__header__content">
-          <div class="collection__header__infos">
+        <div class="collection__header-content">
+          <div class="collection__header-infos">
             <h1>{{ .Title }}</h1>
             {{ with .Params.industries }}<h2 class="h3 h3--ultralight">{{ index . site.Language.Lang | safeHTML }}</h2>{{ end }}
           </div>
-          <ul class="collection__header__actions">
+          <ul class="collection__header-actions">
             <li>
               <a class="button" href="https://github.com/openTermsArchive/{{ $.Params.id }}-versions" target="_blank" rel="noopener">
                 {{ i18n "collections.cta.browse" }}
@@ -44,10 +44,10 @@
 
     <div class="container container--wide container--has-no-padding-y {{ if modBool $isGraySectionIndex 2 }}container--is-gray{{ end }}">
       <div class="collection__metadatas container container--1211 container--has-no-padding-x">
-        <div class="collection__metadatas__desc">
+        <div class="collection__metadatas-desc">
           {{ i18n "collections.metadatas.placeholder" | safeHTML }}
         </div>
-        <div class="collection__metadatas__items">
+        <div class="collection__metadatas-items">
           {{ with .Params.stats.services }}
             {{ partial "collection-metadata.html" (dict "title" (i18n "collections.services") "icon" "folder" "desc" .) }}
           {{ end }}
@@ -82,47 +82,48 @@
     <div class="container container--wide container--has-no-padding-y {{ if modBool $isGraySectionIndex 2 }}container--is-gray{{ end }}">
       <div class="collection__contribute container container--1211 container--has-no-padding-x">
         <h3>{{ i18n "collections.contribute.title" }}</h3>
-        <div class="collection__contribute__items">
-          <div class="collection__contribute__item">
+        <div class="collection__contribute-items">
+          <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
               <i class="icon icon--primary" data-lucide="hand-heart"></i>
             </div>
             <h4 class="h4--light">{{ i18n "collections.contribute.donate" }}</h4>
-            <a class="contribute__item__link" href="{{ .Param "opencollective.url" }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.donate" }}"></a>
+            <a class="contribute__item-link" href="{{ .Param "opencollective.url" }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.donate" }}"></a>
           </div>
-          <div class="collection__contribute__item">
+          <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
               <i class="icon icon--primary" data-lucide="square-pen"></i>
             </div>
             <h4 class="h4--light">{{ i18n "collections.contribute.publish" }}</h4>
-            <a class="contribute__item__link" href="{{ .Param "memos.how_to_publish.url" }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.publish" }}"></a>
+            <a class="contribute__item-link" href="{{ .Param "memos.how_to_publish.url" }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.publish" }}"></a>
           </div>
-          <div class="collection__contribute__item">
+          <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
               <i class="icon icon--primary" data-lucide="file-plus"></i>
             </div>
             <h4 class="h4--light">{{ i18n "collections.contribute.track" }}</h4>
-            <a class="contribute__item__link" href="{{ .Param "contribution_tool.url" }}?destination=OpenTermsArchive/{{ .Params.id }}-declarations" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.track" }}"></a>
+            {{ $contributionToolURL := printf "%s?destination=OpenTermsArchive/%s-declarations" (.Param "contribution_tool.url") .Params.id }}
+            <a class="contribute__item-link" href="{{ $contributionToolURL }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.track" }}"></a>
           </div>
-          <div class="collection__contribute__item">
+          <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
               <i class="icon icon--primary" data-lucide="file-warning"></i>
             </div>
             <h4 class="h4--light">{{ i18n "collections.contribute.restore" }}</h4>
-            <a class="contribute__item__link" href="{{ .Param "github.url" }}/{{ .Params.id }}-declarations/issues" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.restore" }}"></a>
+            <a class="contribute__item-link" href="{{ .Param "github.url" }}/{{ .Params.id }}-declarations/issues" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.restore" }}"></a>
           </div>
-          <div class="collection__contribute__item">
+          <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
               <i class="icon icon--primary" data-lucide="megaphone"></i>
             </div>
             <h4 class="h4--light">{{ i18n "collections.contribute.promote" }}</h4>
-            <a class="contribute__item__link" href="https://mastodon.social/share?url={{ .Permalink }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.promote" }}"></a>
+            <a class="contribute__item-link" href="https://mastodon.social/share?url={{ .Permalink }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.promote" }}"></a>
           </div>
         </div>
       </div>
     </div>
     {{ $isGraySectionIndex = add $isGraySectionIndex 1 }}
-    
+
     {{ $memosRelRef := relref . "/memos" }}
     {{ $currentCollectionID := .Params.id }}
     {{ $memos := where .Site.RegularPages "Type" "memos" }}
@@ -144,12 +145,12 @@
       <div class="container container--wide container--has-no-padding-y {{ if modBool $isGraySectionIndex 2 }}container--is-gray{{ end }}">
         <div class="collection__memos container container--1211 container--has-no-padding-x">
           <h3>{{ i18n "collections.memos.title" }}</h3>
-          <div class="collection__memos__items">
+          <div class="collection__memos-items">
             {{ range . }}
-              {{ partial "memo.html" (dict "memo" .page "template" "list" "class" "collection__memos__item") }}
+              {{ partial "memo.html" (dict "memo" .page "template" "list" "class" "collection__memos-item") }}
             {{ end }}
           </div>
-          <div class="collection__memos__cta">
+          <div class="collection__memos-cta">
             <a class="button button--secondary" href="{{ $memosRelRef }}">{{ i18n "collections.memos.cta" }}</a>
           </div>
         </div>
@@ -161,19 +162,19 @@
       <div class="collection__governance container container--1211 container--has-no-padding-x">
         <h3>{{ i18n "collections.governance.title" }}</h3>
         <h4 class="mt--xl h4--light">{{ i18n "collections.governance.maintainers.title" }}</h4>
-        <div class="governance__maintainers__items">
+        <div class="governance__maintainers-items">
           {{ with .Params.maintainers }}
             {{ range . }}
               {{ $image := resources.Get (printf "/images/contributors/%s.png" (.name | urlize)) }}
               {{ $name := .name }}
               {{ with $image }}
-                <div class="governance__maintainers__item">
+                <div class="governance__maintainers-item">
                   <img src="{{ .RelPermalink }}" alt="{{ $name }}">
                 </div>
               {{ end }}
             {{ end }}
           {{ else }}
-            <div class="governance__maintainers__item">
+            <div class="governance__maintainers-item">
               {{ partial "volunteer-contributors.html" . }}
             </div>
           {{ end }}

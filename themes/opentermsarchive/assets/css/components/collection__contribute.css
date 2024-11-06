@@ -6,7 +6,7 @@
   }
 }
 
-.collection__contribute__items {
+.collection__contribute-items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: var(--mL);
@@ -17,7 +17,7 @@
   }
 }
 
-.collection__contribute__item {
+.collection__contribute-item {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@
   }
 }
 
-.contribute__item__link {
+.contribute__item-link {
   position: absolute;
   top: 0;
   left: 0;

@@ -16,12 +16,12 @@
       {{ $repository := (.Content | unmarshal).projectName }}
       {{ range (.Content | unmarshal).contributors }}
         {{ $contributorName := .name }}
-        {{ $contributorData := dict 
+        {{ $contributorData := dict
           "repositories" (slice ($repository | lower))
-          "avatar_url" .avatar_url 
-          "contributions" .contributions 
-          "login" .login 
-          "name" $contributorName 
+          "avatar_url" .avatar_url
+          "contributions" .contributions
+          "login" .login
+          "name" $contributorName
           "profile" .profile
           "staff" nil
         }}

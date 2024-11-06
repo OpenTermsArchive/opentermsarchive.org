@@ -9,7 +9,7 @@
   }
 }
 
-.collection__header__image {
+.collection__header-image {
   flex-shrink: 0;
   width: 180px;
   height: 180px;
@@ -26,7 +26,7 @@
   }
 }
 
-.collection__header__content {
+.collection__header-content {
   display: flex;
   flex-grow: 1;
   gap: var(--mL);
@@ -38,14 +38,14 @@
   }
 }
 
-.collection__header__infos {
+.collection__header-infos {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   gap: var(--m2XS);
 }
 
-.collection__header__actions {
+.collection__header-actions {
   display: flex;
   flex-direction: column;
   gap: var(--mXS);

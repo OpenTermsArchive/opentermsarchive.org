@@ -11,7 +11,7 @@
   }
 }
 
-.collection__metadatas__desc {
+.collection__metadatas-desc {
   width: 50%;
   font-size: 1.8rem;
 
@@ -28,7 +28,7 @@
   }
 }
 
-.collection__metadatas__items {
+.collection__metadatas-items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: var(--mL);
@@ -49,7 +49,7 @@
   border: 1px solid var(--colorBlack300);
 }
 
-.collection__metadata__icon {
+.collection__metadata-icon {
   display: flex;
 
   & svg {
@@ -57,10 +57,10 @@
   }
 }
 
-.collection__metadata__title {
+.collection__metadata-title {
   margin-top: var(--mXS);
 }
 
-.collection__metadata__desc {
+.collection__metadata-desc {
   margin-top: var(--mS);
 }
