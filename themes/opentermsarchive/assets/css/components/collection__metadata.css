@@ -12,7 +12,7 @@
 }
 
 .collection__metadata-desc {
-  width: 50%;
+  width: 45%;
   font-size: 1.8rem;
 
   & p {
@@ -30,9 +30,9 @@
 
 .collection__metadata-items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: var(--mL);
-  width: 40%;
+  width: 45%;
 
   @media (--tabletSmall) {
     width: 100%;
@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--mL) var(--mM);
+  padding: var(--mM) var(--mL);
   text-align: center;
   background-color: var(--colorWhite);
   border: 1px solid var(--colorBlack300);
@@ -59,6 +59,7 @@
 
 .collection__metadata-item-title {
   margin-top: var(--mXS);
+  color: var(--colorBlack600);
 }
 
 .collection__metadata-item-desc {

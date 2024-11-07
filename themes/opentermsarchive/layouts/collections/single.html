@@ -24,14 +24,14 @@
               </a>
             </li>
             <li>
-              <a class="button" href="https://github.com/openTermsArchive/{{ $.Params.id }}-versions/releases/latest" target="_blank" rel="noopener">
+              <a class="button button--secondary" href="https://github.com/openTermsArchive/{{ $.Params.id }}-versions/releases/latest" target="_blank" rel="noopener">
                 {{ i18n "collections.cta.download" }}
                 <i class="icon ml--2xs" data-lucide="download"></i>
               </a>
             </li>
             {{ with $.Params.endpoint }}
               <li>
-                <a class="button" href="{{ . }}/docs" target="_blank" rel="noopener">
+                <a class="button button--secondary" href="{{ . }}/docs" target="_blank" rel="noopener">
                   {{ i18n "collections.cta.endpoint" }}
                   <i class="icon ml--2xs" data-lucide="wrench"></i>
                 </a>
@@ -49,30 +49,30 @@
         </div>
         <div class="collection__metadata-items">
           {{ with .Params.stats.services }}
-            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.services") "icon" "folder" "desc" .) }}
+            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.services") "icon" "folder" "desc" .) }}
           {{ end }}
           {{ with .Params.stats.documents }}
-            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.documents") "icon" "file" "desc" .) }}
+            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.documents") "icon" "file" "desc" .) }}
           {{ end }}
           {{ with .Params.languages }}
             {{ $languages := slice }}
             {{ range . }}
               {{ if eq . "*" }}
-                {{ $languages = $languages | append (i18n "collections.language_various") }}
+                {{ $languages = $languages | append (i18n "collections.metadata.language_various") }}
               {{ else if eq . "*eu" }}
-                {{ $languages = $languages | append (i18n "collections.language_europe") }}
+                {{ $languages = $languages | append (i18n "collections.metadata.anguage_europe") }}
               {{ else }}
                 {{ $languages = $languages | append ( strings.FirstUpper (index site.Data.display_names.languages site.Language.LanguageCode .)) }}
               {{ end }}
             {{ end }}
-            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.language" (len $languages)) "icon" "message-circle" "desc" (delimit $languages ", ")) }}
+            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.language" (len $languages)) "icon" "message-circle" "desc" (delimit $languages ", ")) }}
           {{ end }}
           {{ with .Params.jurisdictions }}
             {{ $jurisdictions := slice }}
             {{ range . }}
               {{ $jurisdictions = $jurisdictions | append ( strings.FirstUpper (index site.Data.display_names.regions site.Language.LanguageCode .)) }}
             {{ end }}
-            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.jurisdiction" (len $jurisdictions)) "icon" "map" "desc" (delimit $jurisdictions ", ")) }}
+            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.jurisdiction" (len $jurisdictions)) "icon" "map" "desc" (delimit $jurisdictions ", ")) }}
           {{ end }}
         </div>
       </div>
@@ -86,38 +86,38 @@
         <div class="collection__contribute-items">
           <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
-              <i class="icon icon--primary" data-lucide="hand-heart"></i>
+              <i class="icon icon--primary icon--big icon--stroke-thin" data-lucide="hand-heart"></i>
             </div>
-            <h4 class="h4--light">{{ i18n "collections.contribute.donate" }}</h4>
+            <h4 class="h4--ultralight">{{ i18n "collections.contribute.donate" }}</h4>
             <a class="contribute__item-link" href="{{ .Param "opencollective.url" }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.donate" }}"></a>
           </div>
           <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
-              <i class="icon icon--primary" data-lucide="square-pen"></i>
+              <i class="icon icon--primary icon--big icon--stroke-thin" data-lucide="square-pen"></i>
             </div>
-            <h4 class="h4--light">{{ i18n "collections.contribute.publish" }}</h4>
+            <h4 class="h4--ultralight">{{ i18n "collections.contribute.publish" }}</h4>
             <a class="contribute__item-link" href="{{ .Param "memos.how_to_publish.url" }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.publish" }}"></a>
           </div>
           <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
-              <i class="icon icon--primary" data-lucide="file-plus"></i>
+              <i class="icon icon--primary icon--big icon--stroke-thin" data-lucide="file-plus"></i>
             </div>
-            <h4 class="h4--light">{{ i18n "collections.contribute.track" }}</h4>
+            <h4 class="h4--ultralight">{{ i18n "collections.contribute.track" }}</h4>
             {{ $contributionToolURL := printf "%s?destination=OpenTermsArchive/%s-declarations" (.Param "contribution_tool.url") .Params.id }}
             <a class="contribute__item-link" href="{{ $contributionToolURL }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.track" }}"></a>
           </div>
           <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
-              <i class="icon icon--primary" data-lucide="file-warning"></i>
+              <i class="icon icon--primary icon--big icon--stroke-thin" data-lucide="file-warning"></i>
             </div>
-            <h4 class="h4--light">{{ i18n "collections.contribute.restore" }}</h4>
+            <h4 class="h4--ultralight">{{ i18n "collections.contribute.restore" }}</h4>
             <a class="contribute__item-link" href="{{ .Param "github.url" }}/{{ .Params.id }}-declarations/issues" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.restore" }}"></a>
           </div>
           <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
-              <i class="icon icon--primary" data-lucide="megaphone"></i>
+              <i class="icon icon--primary icon--big icon--stroke-thin" data-lucide="megaphone"></i>
             </div>
-            <h4 class="h4--light">{{ i18n "collections.contribute.promote" }}</h4>
+            <h4 class="h4--ultralight">{{ i18n "collections.contribute.promote" }}</h4>
             <a class="contribute__item-link" href="https://mastodon.social/share?url={{ .Permalink }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.promote" }}"></a>
           </div>
         </div>

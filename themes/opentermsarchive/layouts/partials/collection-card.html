@@ -12,30 +12,30 @@
     {{ with .Params.industries }}<h5 class="card__subtitle h5--light">{{ index . site.Language.Lang | safeHTML }}</h5>{{ end }}
     <div class="cardtable">
       {{ with .Params.stats.services }}
-        {{ partial "card-table-item.html" (dict "title" (i18n "collections.services") "icon" "folder" "desc" .) }}
+        {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.services") "icon" "folder" "desc" .) }}
       {{ end }}
       {{ with .Params.stats.documents }}
-        {{ partial "card-table-item.html" (dict "title" (i18n "collections.documents") "icon" "file" "desc" .) }}
+        {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.documents") "icon" "file" "desc" .) }}
       {{ end }}
       {{ with .Params.languages }}
         {{ $languages := slice }}
         {{ range . }}
           {{ if eq . "*" }}
-            {{ $languages = $languages | append (i18n "collections.language_various") }}
+            {{ $languages = $languages | append (i18n "collections.metadata.language_various") }}
           {{ else if eq . "*eu" }}
-            {{ $languages = $languages | append (i18n "collections.language_europe") }}
+            {{ $languages = $languages | append (i18n "collections.metadata.language_europe") }}
           {{ else }}
             {{ $languages = $languages | append ( strings.FirstUpper (index site.Data.display_names.languages site.Language.LanguageCode .)) }}
           {{ end }}
         {{ end }}
-        {{ partial "card-table-item.html" (dict "title" (i18n "collections.language" (len $languages)) "icon" "message-circle" "desc" (delimit $languages ", ")) }}
+        {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.language" (len $languages)) "icon" "message-circle" "desc" (delimit $languages ", ")) }}
       {{ end }}
       {{ with .Params.jurisdictions }}
         {{ $jurisdictions := slice }}
         {{ range . }}
           {{ $jurisdictions = $jurisdictions | append ( strings.FirstUpper (index site.Data.display_names.regions site.Language.LanguageCode .)) }}
         {{ end }}
-        {{ partial "card-table-item.html" (dict "title" (i18n "collections.jurisdiction" (len $jurisdictions)) "icon" "map" "desc" (delimit $jurisdictions ", ")) }}
+        {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.jurisdiction" (len $jurisdictions)) "icon" "map" "desc" (delimit $jurisdictions ", ")) }}
       {{ end }}
     </div>
     <div class="mt--xl text--center">

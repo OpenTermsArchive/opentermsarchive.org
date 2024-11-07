@@ -133,6 +133,10 @@ h6,
   color: var(--colorBlack900);
   letter-spacing: 0;
 
+  &.h6--light {
+    font-weight: normal;
+  }
+
   &.h6--ultralight {
     font-weight: 300;
   }

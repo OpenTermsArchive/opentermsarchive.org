@@ -66,18 +66,18 @@ product_newsletter:
     email_placeholder: your@email.eu
     button: Subscribe
 collections:
-  services: Services
-  documents: Documents
-  language:
-    one: Language
-    other: Languages
-  language_various: various
-  language_europe: European Union
-  jurisdiction: 
-    one: Jurisdiction
-    other: Jurisdictions
   metadata:
     placeholder: <p>Open Terms Archive collections are designed to gather and organise terms according to a given industry, language, and jurisdiction.</p><p>This structure allows communities sharing similar interests to come together and pool their efforts.</p>
+    services: Number of services
+    documents: Number of documents
+    language:
+      one: Language
+      other: Languages
+    language_various: various
+    language_europe: European Union
+    jurisdiction: 
+      one: Jurisdiction
+      other: Jurisdictions
   cta:
     browse: Browse terms
     download: Download dataset

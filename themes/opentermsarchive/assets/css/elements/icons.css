@@ -13,14 +13,13 @@
 }
 
 .icon__circle-wrapper--small {
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 .icon__circle-wrapper--big {
-  width: 68px;
-  height: 68px;
-  font-size: 3rem;
+  width: 8.8rem;
+  height: 8.8rem;
 }
 
 .icon__circle-wrapper--graylight {
@@ -35,6 +34,20 @@
 .icon--size-inherit {
   width: inherit;
   height: inherit;
+}
+
+.icon--medium {
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.icon--big {
+  width: 2.6em;
+  height: 2.6em;
+}
+
+.icon--stroke-thin{
+  stroke-width: 1;
 }
 
 .icon--white {

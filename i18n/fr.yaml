@@ -66,18 +66,18 @@ product_newsletter:
     email_placeholder: votre@adresse.eu
     button: S’inscrire
 collections:
-  services: Services
-  documents: Documents
-  language:
-    one: Langue
-    other: Langues
-  language_various: diverses
-  language_europe: Union européenne
-  jurisdiction: 
-    one: Juridiction
-    other: Juridictions
   metadata:
     placeholder: <p>Les collections Open Terms Archive sont conçues pour rassembler et organiser des termes selon une industrie, langue et juridiction données.</p><p>Cette structure permet de rassembler des communautés d'intêrets et de mutualiser leurs efforts.</p>
+    services: Nombre de services
+    documents: Nombre de documents
+    language:
+      one: Langue
+      other: Langues
+    language_various: diverses
+    language_europe: Union européenne
+    jurisdiction: 
+      one: Juridiction
+      other: Juridictions
   cta:
     browse: Voir les documents
     download: Télécharger le jeu de données

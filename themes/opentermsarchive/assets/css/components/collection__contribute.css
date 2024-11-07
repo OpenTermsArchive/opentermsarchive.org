@@ -1,10 +1,8 @@
 .collection__contribute {
-  @media (--tabletSmall) {
     & > h3,
     & > h5 {
       text-align: center;
     }
-  }
 }
 
 .collection__contribute-items {
@@ -28,17 +26,21 @@
   text-align: center;
   pointer-events: none;
   cursor: pointer;
+  border-radius: 4px;
+  color: var(--colorPrimary);
 
   &:hover {
+    background-color: var(--colorSecondary);
+
     & > h4 {
-      color: var(--colorSecondary);
+      color: var(--colorWhite);
     }
 
     & > .icon__circle-wrapper {
-      background-color: var(--colorSecondary);
+      background-color: var(--colorWhite);
 
       & > .icon {
-        color: var(--colorWhite);
+        color: var(--colorSecondary);
       }
     }
   }
