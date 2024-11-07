@@ -80,6 +80,16 @@
     "stroke-linejoin": "round"
   };
 
+  // node_modules/lucide/dist/esm/icons/arrow-right.js
+  var ArrowRight = [
+    "svg",
+    defaultAttributes,
+    [
+      ["path", { d: "M5 12h14" }],
+      ["path", { d: "m12 5 7 7-7 7" }]
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/chevron-down.js
   var ChevronDown = ["svg", defaultAttributes, [["path", { d: "m6 9 6 6 6-6" }]]];
 
@@ -107,6 +117,29 @@
     [
       ["path", { d: "M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" }],
       ["circle", { cx: "12", cy: "12", r: "3" }]
+    ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/file-plus.js
+  var FilePlus = [
+    "svg",
+    defaultAttributes,
+    [
+      ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }],
+      ["path", { d: "M14 2v4a2 2 0 0 0 2 2h4" }],
+      ["path", { d: "M9 15h6" }],
+      ["path", { d: "M12 18v-6" }]
+    ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/file-warning.js
+  var FileWarning = [
+    "svg",
+    defaultAttributes,
+    [
+      ["path", { d: "M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" }],
+      ["path", { d: "M12 9v4" }],
+      ["path", { d: "M12 17h.01" }]
     ]
   ];
 
@@ -170,6 +203,28 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/hand-heart.js
+  var HandHeart = [
+    "svg",
+    defaultAttributes,
+    [
+      ["path", { d: "M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16" }],
+      [
+        "path",
+        {
+          d: "m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"
+        }
+      ],
+      ["path", { d: "m2 15 6 6" }],
+      [
+        "path",
+        {
+          d: "M19.5 8.5c.7-.7 1.5-1.6 1.5-2.7A2.73 2.73 0 0 0 16 4a2.78 2.78 0 0 0-5 1.8c0 1.2.8 2 1.5 2.8L16 12Z"
+        }
+      ]
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/hash.js
   var Hash = [
     "svg",
@@ -219,6 +274,16 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/megaphone.js
+  var Megaphone = [
+    "svg",
+    defaultAttributes,
+    [
+      ["path", { d: "m3 11 18-5v12L3 14v-3z" }],
+      ["path", { d: "M11.6 16.8a3 3 0 1 1-5.8-1.6" }]
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/message-circle.js
   var MessageCircle = [
     "svg",
@@ -233,6 +298,16 @@
     [
       ["circle", { cx: "11", cy: "11", r: "8" }],
       ["path", { d: "m21 21-4.3-4.3" }]
+    ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/square-pen.js
+  var SquarePen = [
+    "svg",
+    defaultAttributes,
+    [
+      ["path", { d: "M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" }],
+      ["path", { d: "M18.375 2.625a2.121 2.121 0 1 1 3 3L12 15l-4 1 1-4Z" }]
     ]
   ];
 
@@ -331,7 +406,13 @@
       Eye,
       Layers,
       Flag,
-      Map
+      Map,
+      HandHeart,
+      SquarePen,
+      FilePlus,
+      FileWarning,
+      Megaphone,
+      ArrowRight
     },
     attrs: { "aria-hidden": true }
   });
@@ -355,6 +436,14 @@ lucide/dist/esm/replaceElement.js:
    *)
 
 lucide/dist/esm/defaultAttributes.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/arrow-right.js:
   (**
    * @license lucide v0.344.0 - ISC
    *
@@ -402,6 +491,22 @@ lucide/dist/esm/icons/eye.js:
    * See the LICENSE file in the root directory of this source tree.
    *)
 
+lucide/dist/esm/icons/file-plus.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/file-warning.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
 lucide/dist/esm/icons/file.js:
   (**
    * @license lucide v0.344.0 - ISC
@@ -442,6 +547,14 @@ lucide/dist/esm/icons/globe.js:
    * See the LICENSE file in the root directory of this source tree.
    *)
 
+lucide/dist/esm/icons/hand-heart.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
 lucide/dist/esm/icons/hash.js:
   (**
    * @license lucide v0.344.0 - ISC
@@ -474,6 +587,14 @@ lucide/dist/esm/icons/map.js:
    * See the LICENSE file in the root directory of this source tree.
    *)
 
+lucide/dist/esm/icons/megaphone.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
 lucide/dist/esm/icons/message-circle.js:
   (**
    * @license lucide v0.344.0 - ISC
@@ -483,6 +604,14 @@ lucide/dist/esm/icons/message-circle.js:
    *)
 
 lucide/dist/esm/icons/search.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/square-pen.js:
   (**
    * @license lucide v0.344.0 - ISC
    *
