@@ -60,7 +60,7 @@
               {{ if eq . "*" }}
                 {{ $languages = $languages | append (i18n "collections.metadata.language_various") }}
               {{ else if eq . "*eu" }}
-                {{ $languages = $languages | append (i18n "collections.metadata.anguage_europe") }}
+                {{ $languages = $languages | append (i18n "collections.metadata.language_europe") }}
               {{ else }}
                 {{ $languages = $languages | append ( strings.FirstUpper (index site.Data.display_names.languages site.Language.LanguageCode .)) }}
               {{ end }}
