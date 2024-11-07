@@ -68,8 +68,8 @@ product_newsletter:
 collections:
   metadata:
     placeholder: <p>Les collections Open Terms Archive sont conçues pour rassembler et organiser des termes selon une industrie, langue et juridiction données.</p><p>Cette structure permet de rassembler des communautés d'intêrets et de mutualiser leurs efforts.</p>
-    services: Nombre de services
-    documents: Nombre de documents
+    services: Services suivis
+    documents: Termes suivis
     language:
       one: Langue
       other: Langues
@@ -82,28 +82,28 @@ collections:
     browse: Voir les documents
     details: Voir les détails
     download: Télécharger le jeu de données
-    endpoint: Accès à l'API
+    endpoint: Accéder à l'API
   volunteer_contributors: Contributeurs bénévoles
   new: Vous voulez suivre des services visant une autre langue, juridiction ou industrie ? Contactez-nous pour commencer à collaborer !
   contribute:
     title: Contribuer
-    subtitle: Les façons dont vous pouvez soutenir la communauté à suivre les termes de cette collection.
-    donate: Donner
+    subtitle: Les façons dont vous pouvez rejoindre la communauté qui suit les termes de cette collection.
+    donate: Faire un don
     publish: Publier un mémo
-    track: Suivre plus de documents
-    restore: Restaurer les documents en panne
-    promote: Promouvoir
+    track: Suivre des termes supplémentaires
+    restore: Réparer des termes mal suivis
+    promote: Faire connaître
   memos:
     title: Mémos
-    subtitle: Les mémos sont des analyses courtes des changements significatifs qui expliquent clairement leurs conséquences pour les utilisateurs finaux.
+    subtitle: Un mémo est une courte analyse de changements significatifs qui explique clairement leurs conséquences pour les utilisateurs.
     cta: Voir tous les mémos
   governance:
     title: Gouvernance
     subtitle: Ces personnes et entités s'assurent que les termes de cette collection sont bien suivis.
     maintainers:
-      title: Mainteneurs
+      title: Maintenance
     contributors:
-      title: Contributeurs
+      title: Contributeurices
 impact:
   related_collections: Collections associées
   reminder: Open Terms Archive enregistre publiquement les conditions d'utilisation des services en ligne dans différentes langues et différents pays plusieurs fois par jour, en améliorant leur lisibilité et en mettant en évidence leurs modifications. Il est conçue comme un outil permettant d'orienter la gouvernance des plateformes vers une plus grande responsabilité, une meilleure législation et une plus grande conformité réglementaire.

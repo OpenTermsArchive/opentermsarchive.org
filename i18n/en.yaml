@@ -68,8 +68,8 @@ product_newsletter:
 collections:
   metadata:
     placeholder: <p>Open Terms Archive collections are designed to gather and organise terms according to a given industry, language, and jurisdiction.</p><p>This structure allows communities sharing similar interests to come together and pool their efforts.</p>
-    services: Number of services
-    documents: Number of documents
+    services: Tracked services
+    documents: Tracked terms
     language:
       one: Language
       other: Languages
@@ -87,7 +87,7 @@ collections:
   new: Want to track services for different languages, jurisdictions, or industries? Contact us to collaborate!
   contribute:
     title: Contribute
-    subtitle: Ways in which you can support the community tracking terms in this collection.
+    subtitle: Ways in which you can join the community tracking terms in this collection.
     donate: Donate
     publish: Publish a memo
     track: Track more terms
@@ -99,7 +99,7 @@ collections:
     cta: See all memos
   governance:
     title: Governance
-    subtitle: These people and entities ensure that terms in this collection are tracked well.
+    subtitle: These people and entities ensure that terms in this collection are tracked properly.
     maintainers:
       title: Maintainers
     contributors:
