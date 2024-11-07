@@ -39,27 +39,37 @@
       {{ end }}
     </div>
     <div class="mt--xl text--center">
+      <div>
+        <a class="button" href="{{ .Permalink }}">
+          {{ i18n "collections.cta.details" }}
+          <i class="icon ml--2xs" data-lucide="arrow-right"></i>
+        </a>
+      </div>
       {{ with $linksTo }}
         {{ if (in . "version") }}
-          <a class="button button--secondary" href="https://github.com/openTermsArchive/{{ $.Params.id }}-versions" target="_blank" rel="noopener">
-            <i class="icon mr--2xs" data-lucide="search"></i>
-            {{ i18n "collections.cta.browse" }}
-          </a>
+          <div class="mt--xs">
+            <a class="button button--secondary" href="https://github.com/openTermsArchive/{{ $.Params.id }}-versions" target="_blank" rel="noopener">
+              {{ i18n "collections.cta.browse" }}
+              <i class="icon ml--2xs" data-lucide="search"></i>
+            </a>
+          </div>
         {{ end }}
         {{ if (in . "dataset") }}
-          <a class="button button--secondary" href="https://github.com/openTermsArchive/{{ $.Params.id }}-versions/releases/latest" target="_blank" rel="noopener">
-            <i class="icon mr--2xs" data-lucide="download"></i>
-            {{ i18n "collections.cta.download" }}
-          </a>
+          <div class="mt--xs">
+            <a class="button button--secondary" href="https://github.com/openTermsArchive/{{ $.Params.id }}-versions/releases/latest" target="_blank" rel="noopener">
+              {{ i18n "collections.cta.download" }}
+              <i class="icon ml--2xs" data-lucide="download"></i>
+            </a>
+          </div>
         {{ end }}
         {{ if (in . "endpoint") }}
           {{ with $.Params.endpoint }}
             <div class="mt--s text--center">
               <a class="linkicon" href="{{ . }}/docs" target="_blank" rel="noopener">
-                <i class="icon" data-lucide="wrench"></i>
                 <span class="linkicon__content">
                   {{ i18n "collections.cta.endpoint" }}
                 </span>
+                <i class="icon ml--2xs" data-lucide="wrench"></i>
               </a>
             </div>
           {{ end }}

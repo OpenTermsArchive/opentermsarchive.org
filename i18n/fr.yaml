@@ -80,6 +80,7 @@ collections:
       other: Juridictions
   cta:
     browse: Voir les documents
+    details: Voir les détails
     download: Télécharger le jeu de données
     endpoint: Accès à l'API
   volunteer_contributors: Contributeurs bénévoles

@@ -24,6 +24,7 @@ import {
   FilePlus,
   FileWarning,
   Megaphone,
+  ArrowRight,
   createIcons,
 } from 'lucide';
 
@@ -54,6 +55,7 @@ createIcons({
     FilePlus,
     FileWarning,
     Megaphone,
+    ArrowRight,
   },
   attrs: { 'aria-hidden': true },
 });

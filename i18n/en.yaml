@@ -80,6 +80,7 @@ collections:
       other: Jurisdictions
   cta:
     browse: Browse terms
+    details: View details
     download: Download dataset
     endpoint: Access API
   volunteer_contributors: Volunteer contributors
