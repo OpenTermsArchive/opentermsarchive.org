@@ -1,8 +1,8 @@
 .collection__contribute {
-    & > h3,
-    & > h5 {
-      text-align: center;
-    }
+  & > h3,
+  & > h5 {
+    text-align: center;
+  }
 }
 
 .collection__contribute-items {
@@ -23,11 +23,11 @@
   gap: var(--mL);
   align-items: center;
   padding: var(--pL);
+  color: var(--colorPrimary);
   text-align: center;
   pointer-events: none;
   cursor: pointer;
   border-radius: 4px;
-  color: var(--colorPrimary);
 
   &:hover {
     background-color: var(--colorSecondary);
