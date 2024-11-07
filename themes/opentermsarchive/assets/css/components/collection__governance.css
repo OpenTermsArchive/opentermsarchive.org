@@ -1,7 +1,8 @@
 .collection__governance {
   @media (--tabletLarge) {
+    & > h3,
     & > h4,
-    & > h3 {
+    & > h5 {
       text-align: center;
     }
   }

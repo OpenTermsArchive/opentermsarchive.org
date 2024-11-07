@@ -86,6 +86,7 @@ collections:
   new: Want to track services for different languages, jurisdictions, or industries? Contact us to collaborate!
   contribute:
     title: Contribute
+    subtitle: Ways in which you can support the community tracking terms in this collection.
     donate: Donate
     publish: Publish a memo
     track: Track more terms
@@ -93,9 +94,11 @@ collections:
     promote: Promote
   memos:
     title: Memos
+    subtitle: Memos are short analyses of significant changes that clearly explain their consequences for end users.
     cta: See all memos
   governance:
     title: Governance
+    subtitle: These people and entities ensure that terms in this collection are tracked well.
     maintainers:
       title: Maintainers
     contributors:

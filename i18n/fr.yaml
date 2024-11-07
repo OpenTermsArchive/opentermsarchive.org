@@ -86,6 +86,7 @@ collections:
   new: Vous voulez suivre des services visant une autre langue, juridiction ou industrie ? Contactez-nous pour commencer à collaborer !
   contribute:
     title: Contribuer
+    subtitle: Les façons dont vous pouvez soutenir la communauté à suivre les termes de cette collection.
     donate: Donner
     publish: Publier un mémo
     track: Suivre plus de documents
@@ -93,9 +94,11 @@ collections:
     promote: Promouvoir
   memos:
     title: Mémos
+    subtitle: Les mémos sont des analyses courtes des changements significatifs qui expliquent clairement leurs conséquences pour les utilisateurs finaux.
     cta: Voir tous les mémos
   governance:
     title: Gouvernance
+    subtitle: Ces personnes et entités s'assurent que les termes de cette collection sont bien suivis.
     maintainers:
       title: Mainteneurs
     contributors:

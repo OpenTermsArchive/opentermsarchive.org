@@ -82,6 +82,7 @@
     <div class="container container--wide container--has-no-padding-y {{ if modBool $isGraySectionIndex 2 }}container--is-gray{{ end }}">
       <div class="collection__contribute container container--1211 container--has-no-padding-x">
         <h3>{{ i18n "collections.contribute.title" }}</h3>
+        <h5 class="h5--light mt--m">{{ i18n "collections.contribute.subtitle" }}</h5>
         <div class="collection__contribute-items">
           <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
@@ -145,6 +146,7 @@
       <div class="container container--wide container--has-no-padding-y {{ if modBool $isGraySectionIndex 2 }}container--is-gray{{ end }}">
         <div class="collection__memos container container--1211 container--has-no-padding-x">
           <h3>{{ i18n "collections.memos.title" }}</h3>
+          <h5 class="h5--light mt--m">{{ i18n "collections.memos.subtitle" }}</h5>
           <div class="collection__memos-items">
             {{ range . }}
               {{ partial "memo.html" (dict "memo" .page "template" "list" "class" "collection__memos-item") }}
@@ -161,7 +163,8 @@
     <div class="container container--wide container--has-no-padding-y {{ if modBool $isGraySectionIndex 2 }}container--is-gray{{ end }}">
       <div class="collection__governance container container--1211 container--has-no-padding-x">
         <h3>{{ i18n "collections.governance.title" }}</h3>
-        <h4 class="mt--xl h4--light">{{ i18n "collections.governance.maintainers.title" }}</h4>
+        <h5 class="h5--light mt--m">{{ i18n "collections.governance.subtitle" }}</h5>
+        <h4 class="mt--xl">{{ i18n "collections.governance.maintainers.title" }}</h4>
         <div class="governance__maintainers-items">
           {{ with .Params.maintainers }}
             {{ range . }}
@@ -179,7 +182,7 @@
             </div>
           {{ end }}
         </div>
-        <h4 class="mt--xl h4--light">{{ i18n "collections.governance.contributors.title" }}</h4>
+        <h4 class="mt--xl">{{ i18n "collections.governance.contributors.title" }}</h4>
         {{ $collectionRepositoryID := print .Params.id "-declarations" | lower }}
         {{ partial "contributors.html" (dict "repositories" (slice $collectionRepositoryID) "showInfo" true "class" "contributors--align-x-left") }}
       </div>
