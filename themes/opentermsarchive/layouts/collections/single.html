@@ -43,16 +43,16 @@
     </div>
 
     <div class="container container--wide container--has-no-padding-y {{ if modBool $isGraySectionIndex 2 }}container--is-gray{{ end }}">
-      <div class="collection__metadatas container container--1211 container--has-no-padding-x">
-        <div class="collection__metadatas-desc">
-          {{ i18n "collections.metadatas.placeholder" | safeHTML }}
+      <div class="collection__metadata container container--1211 container--has-no-padding-x">
+        <div class="collection__metadata-desc">
+          {{ i18n "collections.metadata.placeholder" | safeHTML }}
         </div>
-        <div class="collection__metadatas-items">
+        <div class="collection__metadata-items">
           {{ with .Params.stats.services }}
-            {{ partial "collection-metadata.html" (dict "title" (i18n "collections.services") "icon" "folder" "desc" .) }}
+            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.services") "icon" "folder" "desc" .) }}
           {{ end }}
           {{ with .Params.stats.documents }}
-            {{ partial "collection-metadata.html" (dict "title" (i18n "collections.documents") "icon" "file" "desc" .) }}
+            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.documents") "icon" "file" "desc" .) }}
           {{ end }}
           {{ with .Params.languages }}
             {{ $languages := slice }}
@@ -65,14 +65,14 @@
                 {{ $languages = $languages | append ( strings.FirstUpper (index site.Data.display_names.languages site.Language.LanguageCode .)) }}
               {{ end }}
             {{ end }}
-            {{ partial "collection-metadata.html" (dict "title" (i18n "collections.language" (len $languages)) "icon" "message-circle" "desc" (delimit $languages ", ")) }}
+            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.language" (len $languages)) "icon" "message-circle" "desc" (delimit $languages ", ")) }}
           {{ end }}
           {{ with .Params.jurisdictions }}
             {{ $jurisdictions := slice }}
             {{ range . }}
               {{ $jurisdictions = $jurisdictions | append ( strings.FirstUpper (index site.Data.display_names.regions site.Language.LanguageCode .)) }}
             {{ end }}
-            {{ partial "collection-metadata.html" (dict "title" (i18n "collections.jurisdiction" (len $jurisdictions)) "icon" "map" "desc" (delimit $jurisdictions ", ")) }}
+            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.jurisdiction" (len $jurisdictions)) "icon" "map" "desc" (delimit $jurisdictions ", ")) }}
           {{ end }}
         </div>
       </div>

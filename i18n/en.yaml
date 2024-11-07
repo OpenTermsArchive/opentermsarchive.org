@@ -76,7 +76,7 @@ collections:
   jurisdiction: 
     one: Jurisdiction
     other: Jurisdictions
-  metadatas:
+  metadata:
     placeholder: <p>Open Terms Archive collections are designed to gather and organise terms according to a given industry, language, and jurisdiction.</p><p>This structure allows communities sharing similar interests to come together and pool their efforts.</p>
   cta:
     browse: Browse terms
