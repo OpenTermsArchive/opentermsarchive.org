@@ -77,7 +77,7 @@ collections:
     one: Juridiction
     other: Juridictions
   metadatas:
-    placeholder: <p>Les collections Open Terms Archive sont conçues pour rassembler et organiser des documents selon une industrie, une langue et une juridiction données.</p><p>Cette structure permet de rassembler des communautés d'intêrets et de mutualiser leurs efforts.</p>
+    placeholder: <p>Les collections Open Terms Archive sont conçues pour rassembler et organiser des termes selon une industrie, langue et juridiction données.</p><p>Cette structure permet de rassembler des communautés d'intêrets et de mutualiser leurs efforts.</p>
   cta:
     browse: Voir les documents
     download: Télécharger le jeu de données
