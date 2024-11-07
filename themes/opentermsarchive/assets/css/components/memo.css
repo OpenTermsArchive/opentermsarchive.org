@@ -1,5 +1,6 @@
 .memo {
   padding: var(--mXL);
+  background-color: var(--colorWhite);
   border: 1px solid var(--colorBlack300);
 }
 

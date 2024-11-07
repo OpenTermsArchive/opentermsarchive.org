@@ -1,0 +1,25 @@
+.collection__memos-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--mL);
+  margin-top: var(--mXL);
+
+  & > .collection__memos__item {
+    background-color: var(--colorWhite);
+  }
+
+  @media (--tabletLarge) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--mS);
+  }
+}
+
+.collection__memos-cta {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--m2XL);
+
+  @media (--tabletLarge) {
+    justify-content: center;
+  }
+}

@@ -11,3 +11,10 @@ contributors:
     - https://raw.githubusercontent.com/OpenTermsArchive/docs/main/.all-contributorsrc
     - https://raw.githubusercontent.com/OpenTermsArchive/deployment/main/.all-contributorsrc
     - https://raw.githubusercontent.com/OpenTermsArchive/terms-types/main/.all-contributorsrc
+opencollective:
+  url: https://opencollective.com/opentermsarchive
+memos:
+  how_to_publish:
+    url: https://docs.opentermsarchive.org/memos/how-to-publish/
+contribution_tool:
+  url: https://contribute.opentermsarchive.org/

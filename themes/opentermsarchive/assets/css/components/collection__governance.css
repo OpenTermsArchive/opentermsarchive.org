@@ -1,0 +1,30 @@
+.collection__governance {
+  @media (--tabletLarge) {
+    & > h3,
+    & > h4,
+    & > h5 {
+      text-align: center;
+    }
+  }
+}
+
+.governance__maintainers-items {
+  display: flex;
+  flex-flow: row wrap;
+  gap: var(--mL);
+  align-items: flex-start;
+  margin-top: var(--mL);
+
+  @media (--tabletLarge) {
+    gap: var(--mM);
+    justify-content: center;
+  }
+}
+
+.governance__maintainers-item {
+  max-width: 220px;
+
+  & > .icon__volunteer-contributors-wrapper {
+    font-size: 2em;
+  }
+}

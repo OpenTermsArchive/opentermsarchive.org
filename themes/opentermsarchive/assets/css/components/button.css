@@ -27,7 +27,7 @@
 
   &.button--secondary {
     color: var(--colorPrimary);
-    background-color: transparent;
+    background-color: var(--colorWhite);
     border: 1px solid var(--colorPrimary);
 
     &:hover {
