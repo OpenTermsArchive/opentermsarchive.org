@@ -16,7 +16,7 @@
       </div>
       {{ end }}
       <div class="cardlist__items">
-        {{ range where .Site.RegularPages "Section" "collections" }}
+        {{ range where .Site.RegularPages.ByWeight "Section" "collections" }}
           {{ .Scratch.Set "linksTo" $linksTo }}
           {{ partial "collection-card.html" . }}
         {{ end }}

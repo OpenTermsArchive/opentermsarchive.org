@@ -1,4 +1,5 @@
 {{ .EnableAllLanguages }}
+{{ $weight := 1 }}
 {{ range site.Data.collections }}
   {{ $params := dict "name" .name "id" .id "languages" .languages "jurisdictions" .jurisdictions "maintainers" .maintainers "stats" .stats "industries" .industries "endpoint" .endpoint }}
   {{ $page := dict
@@ -6,6 +7,8 @@
     "path" .name
     "title" .name
     "slug" .id
+    "weight" $weight
   }}
   {{ $.AddPage $page }}
+  {{ $weight = add $weight 1 }}
 {{ end }}
