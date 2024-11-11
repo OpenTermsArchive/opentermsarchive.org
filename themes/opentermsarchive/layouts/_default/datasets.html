@@ -4,9 +4,21 @@
       <div class="textcontent">
         {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
         {{ .Content }}
+        <ul class="mt--xl">
+          {{ $query := where site.RegularPages.ByWeight "Section" "collections" }}
+          {{ range $query }}
+            <li>
+              <a href="https://github.com/openTermsArchive/{{ .Params.id }}-versions/releases/latest" target="_blank" rel="noopener">
+                {{ .Params.name }}
+              </a>
+              <br >
+              {{ with .Params.industries }}{{ index . site.Language.Lang | safeHTML }}{{ end }}
+            </li>
+          {{ end }}
+        </ul>
       </div>
     </div>
   </div>
-  {{ partial "collections.html" (dict "context" .) }}
+
   {{ partial "related-datasets.html" . }}
 {{ end }}
