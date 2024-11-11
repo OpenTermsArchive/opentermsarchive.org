@@ -1,5 +1,5 @@
 {{ $linksTo := slice "version" }}
-{{ $bgColor := "gray" }}
+{{ $bgColor := default "gray" .bgColor }}
 {{ $isDatasetsPage := false }}
 {{ $context := .context }}
 {{ $featured := default false .featured }}
@@ -12,7 +12,7 @@
 {{ end }}
 
 <div class="container container--is-{{ $bgColor }} container--wide container--has-no-padding-x container--has-no-padding-top" id="collections">
-  <div class="container container--1211 {{ with $isDatasetsPage }}container--has-no-padding-bottom{{ end }}">
+  <div class="container container--1211 {{ if or $isDatasetsPage .featured }}container--has-no-padding-bottom{{ end }}">
     <div class="collections cardlist">
       {{ with $context.Params.collections.title }}
       <div class="cardlist__header cardlist__header--is-center">
@@ -29,5 +29,12 @@
         {{ end }}
       </div>
     </div>
+    {{ if $featured }}
+      <div class="container container--1211 container--has-no-padding-bottom text--center">
+        <a href="{{ relref $context "/collections" }}" class="button">
+          {{ i18n "collections.cta.view_all" }}
+        </a>
+      </div>
+    {{ end }}
   </div>
 </div>

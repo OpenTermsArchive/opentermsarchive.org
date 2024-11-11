@@ -105,6 +105,10 @@
     }
   }
 
+  &.container--is-white {
+    background-color: var(--colorWhite);
+  }
+
   &.container--has-no-padding-x {
     padding-right: 0;
     padding-left: 0;
