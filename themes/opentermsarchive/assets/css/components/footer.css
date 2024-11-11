@@ -18,17 +18,17 @@
 
 .footer__menus {
   display: flex;
+  gap: var(--mXL);
   justify-content: space-between;
   width: 100%;
   margin-top: var(--mM);
-  gap: var(--mXL);
 
   & div {
     max-width: 45%;
+
     & ul {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
+      flex-flow: row wrap;
       gap: var(--mS);
 
       & li {
@@ -53,16 +53,18 @@
 
 @media (--tabletLarge) {
   .footer {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .footer__menus {
     align-items: flex-start;
     justify-content: center;
 
     & div {
       max-width: 100%;
+
       & ul {
         flex-direction: column;
 
@@ -81,8 +83,8 @@
 @media (--mobileExtraLarge) {
   .footer__menus {
     flex-wrap: wrap;
-    justify-content: flex-start;
     gap: var(--mXL);
+    justify-content: flex-start;
 
     & div {
       width: 100%;
