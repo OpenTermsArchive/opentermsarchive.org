@@ -1,4 +1,3 @@
-{{ $linksTo := slice "version" }}
 {{ $bgColor := default "gray" .bgColor }}
 {{ $isDatasetsPage := false }}
 {{ $context := .context }}
@@ -6,7 +5,6 @@
 {{ $query := where site.RegularPages.ByWeight "Section" "collections" }}
 {{ if .featured }}{{ $query = first 3 $query }}{{ end }}
 {{ if eq (relref $context "/datasets") $context.Page.RelPermalink }}
-  {{ $linksTo = slice "dataset" "endpoint" }}
   {{ $bgColor = "white" }}
   {{ $isDatasetsPage = true }}
 {{ end }}
@@ -21,7 +19,6 @@
       {{ end }}
       <div class="cardlist__items">
         {{ range $query }}
-          {{ .Scratch.Set "linksTo" $linksTo }}
           {{ partial "collection-card.html" . }}
         {{ end }}
         {{ if and (not (eq "/datasets/" .Page.RelPermalink)) (not .featured) }}
