@@ -1,7 +1,11 @@
 {{ $linksTo := slice "version" }}
 {{ $bgColor := "gray" }}
 {{ $isDatasetsPage := false }}
-{{ if eq (relref . "/datasets") .Page.RelPermalink }}
+{{ $context := .context }}
+{{ $featured := default false .featured }}
+{{ $query := where site.RegularPages.ByWeight "Section" "collections" }}
+{{ if .featured }}{{ $query = first 3 $query }}{{ end }}
+{{ if eq (relref $context "/datasets") $context.Page.RelPermalink }}
   {{ $linksTo = slice "dataset" "endpoint" }}
   {{ $bgColor = "white" }}
   {{ $isDatasetsPage = true }}
@@ -10,17 +14,17 @@
 <div class="container container--is-{{ $bgColor }} container--wide container--has-no-padding-x container--has-no-padding-top" id="collections">
   <div class="container container--1211 {{ with $isDatasetsPage }}container--has-no-padding-bottom{{ end }}">
     <div class="collections cardlist">
-      {{ with .Params.collections.title }}
+      {{ with $context.Params.collections.title }}
       <div class="cardlist__header cardlist__header--is-center">
         <h2 class="cardlist__title">{{ . }}</h2>
       </div>
       {{ end }}
       <div class="cardlist__items">
-        {{ range where .Site.RegularPages.ByWeight "Section" "collections" }}
+        {{ range $query }}
           {{ .Scratch.Set "linksTo" $linksTo }}
           {{ partial "collection-card.html" . }}
         {{ end }}
-        {{ if not (eq "/datasets/" .Page.RelPermalink) }}
+        {{ if and (not (eq "/datasets/" .Page.RelPermalink)) (not .featured) }}
           {{ partial "new-collection.html" . }}
         {{ end }}
       </div>

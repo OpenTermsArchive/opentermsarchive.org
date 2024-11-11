@@ -7,6 +7,6 @@
       </div>
     </div>
   </div>
-  {{ partial "collections.html" . }}
+  {{ partial "collections.html" (dict "context" .) }}
   {{ partial "related-datasets.html" . }}
 {{ end }}
