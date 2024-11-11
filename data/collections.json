@@ -46,6 +46,31 @@
     "endpoint": "http://134.102.58.70/collection-api/v1"
   },
   {
+    "name": "France",
+    "id": "france",
+    "languages": ["fr"],
+    "jurisdictions": ["FR"],
+    "industries": {
+      "en": "Largest digital services used in France",
+      "fr": "Principaux services numériques utilisés en France"
+    },
+    "maintainers": [
+      {
+        "name": "UFC Que Choisir",
+        "url": "https://www.quechoisir.org"
+      },
+      {
+        "name": "Ambassadeur français pour le numérique",
+        "url": "https://disinfo.quaidorsay.fr/fr"
+      }
+    ],
+    "stats": {
+      "services": "108",
+      "documents": "216"
+    },
+    "endpoint": "http://198.244.142.9/api/v1"
+  },
+  {
     "name": "P2B Compliance",
     "id": "p2b-compliance",
     "languages": ["*eu"],
@@ -109,31 +134,6 @@
       "fr": "Rencontre en ligne"
     },
     "endpoint": "http://vps-99ae1d89.vps.ovh.net/collection-api/v1"
-  },
-  {
-    "name": "France",
-    "id": "france",
-    "languages": ["fr"],
-    "jurisdictions": ["FR"],
-    "industries": {
-      "en": "Largest digital services used in France",
-      "fr": "Principaux services numériques utilisés en France"
-    },
-    "maintainers": [
-      {
-        "name": "UFC Que Choisir",
-        "url": "https://www.quechoisir.org"
-      },
-      {
-        "name": "Ambassadeur français pour le numérique",
-        "url": "https://disinfo.quaidorsay.fr/fr"
-      }
-    ],
-    "stats": {
-      "services": "108",
-      "documents": "216"
-    },
-    "endpoint": "http://198.244.142.9/api/v1"
   },
   {
     "name": "Contrib",
