@@ -13,9 +13,12 @@
   <div class="container container--1211 {{ if or $isDatasetsPage .featured }}container--has-no-padding-bottom{{ end }}">
     <div class="collections cardlist">
       {{ with $context.Params.collections.title }}
-      <div class="cardlist__header cardlist__header--is-center">
-        <h2 class="cardlist__title">{{ . }}</h2>
-      </div>
+        <div class="cardlist__header cardlist__header--is-center">
+          <h2 class="cardlist__title">{{ . }}</h2>
+          {{ with $context.Params.collections.subtitle }}
+            <h3 class="cardlist__subtitle h3--light">{{ . }}</h3>
+          {{ end }}
+        </div>
       {{ end }}
       <div class="cardlist__items">
         {{ range $query }}
@@ -30,6 +33,7 @@
       <div class="container container--1211 container--has-no-padding-bottom text--center">
         <a href="{{ relref $context "/collections" }}" class="button">
           {{ i18n "collections.cta.view_all" }}
+          <i class="icon ml--2xs" data-lucide="arrow-right"></i>
         </a>
       </div>
     {{ end }}
