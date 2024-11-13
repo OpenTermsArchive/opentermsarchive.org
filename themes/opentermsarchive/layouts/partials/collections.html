@@ -14,10 +14,7 @@
     <div class="collections cardlist">
       {{ with $context.Params.collections.title }}
         <div class="cardlist__header cardlist__header--is-center">
-          <h2 class="cardlist__title">{{ . }}</h2>
-          {{ with $context.Params.collections.subtitle }}
-            <h3 class="cardlist__subtitle h3--light">{{ . }}</h3>
-          {{ end }}
+          <h3 class="cardlist__subtitle h3--light">{{ . }}</h3>
         </div>
       {{ end }}
       <div class="cardlist__items">
