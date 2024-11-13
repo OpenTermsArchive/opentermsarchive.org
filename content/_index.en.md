@@ -8,7 +8,7 @@ hero:
   link: "[Discover how that makes a difference →]({{< relref path=\"/impact\" >}})"
 collections:
   title: Featured collections
-  subtitle: We establish partnerships and structure them in collections to track the terms of many industries, in several languages and jurisdictions.
+  subtitle: Collections are created by groups of interest to track the terms of services operating in specific industries, languages and jurisdictions. Here are some examples.
 reuses:
   title: Built with Open Terms Archive
   subtitle: Tools created by the community to shift the power balance from big tech towards end users.
