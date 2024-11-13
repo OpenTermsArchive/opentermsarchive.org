@@ -8,7 +8,7 @@ hero:
   link: "[Découvrez comment →]({{< relref path=\"/impact\" >}})"
 collections:
   title: Collections phares
-  subtitle: Nous établissons des partenariats et les structurons en collections pour suivre les conditions d'utilisation de nombreuses industries, dans plusieurs langues et juridictions.
+  subtitle: Les collections sont créées par des groupes ayant un intérêt commun pour les conditions d'utilisation de services dans des industries, langues et juridictions spécifiques. En voici quelques exemples.
 reuses:
   title: Construit avec Open Terms Archive
   subtitle: Des outils créés par la communauté pour rééquilibrer le rapport de force face aux grandes plateformes numériques.
