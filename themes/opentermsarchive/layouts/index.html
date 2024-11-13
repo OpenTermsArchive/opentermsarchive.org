@@ -1,7 +1,7 @@
 {{ define "main" }}
   {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "subtitle" .Params.hero.subtitle "link" .Params.hero.link "class" "hero--has-no-margin-bottom" "dark" true "anchor" .Params.hero.anchor) }}
   {{ partial "distinctions.html" . }}
-  {{ partial "collections.html" . }}
+  {{ partial "collections.html" (dict "featured" true "context" .) }}
   {{ partial "follow-us.html" . }}
   {{ partial "how-it-works.html" . }}
   {{ partial "reuses.html" . }}

@@ -79,6 +79,7 @@ collections:
       one: Juridiction
       other: Juridictions
   cta:
+    view_all: Explorer d'autres collections
     browse: Voir les documents
     details: Voir les détails
     download: Télécharger le jeu de données

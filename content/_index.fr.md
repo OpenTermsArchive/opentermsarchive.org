@@ -7,7 +7,7 @@ hero:
   subtitle: Open Terms Archive enregistre publiquement chaque version des conditions d'utilisation des services en ligne pour en permettre le contrôle démocratique.
   link: "[Découvrez comment →]({{< relref path=\"/impact\" >}})"
 collections:
-  title: Nous établissons des partenariats pour suivre les conditions d'utilisation de nombreuses industries, dans plusieurs langues et juridictions
+  title: Les collections sont créées par des groupes ayant un intérêt commun pour les conditions d'utilisation de services dans des industries, langues et juridictions spécifiques. En voici quelques exemples.
 reuses:
   title: Construit avec Open Terms Archive
   subtitle: Des outils créés par la communauté pour rééquilibrer le rapport de force face aux grandes plateformes numériques.

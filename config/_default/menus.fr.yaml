@@ -1,6 +1,6 @@
 header:
-  - name: Jeux de données
-    pageRef: /datasets
+  - name: Collections
+    pageRef: /collections
     weight: 1
   - name: Mémos
     pageRef: /memos
@@ -10,7 +10,7 @@ header:
     weight: 3
   - name: Impact
     pageRef: /impact
-    weight: 3
+    weight: 4
   - name: A propos
     pageRef: /about
     weight: 5
@@ -18,21 +18,24 @@ footer:
   - name: Accueil
     pageRef: /
     weight: 1
+  - name: Collections
+    pageRef: /collections
+    weight: 2
   - name: Jeux de données
     pageRef: /datasets
-    weight: 2
+    weight: 3
   - name: Mémos
     pageRef: /memos
-    weight: 3
+    weight: 4
   - name: Documentation
     url: https://docs.opentermsarchive.org
-    weight: 4
+    weight: 5
   - name: Impact
     pageRef: /impact
-    weight: 5
+    weight: 6
   - name: À propos
     pageRef: /about
-    weight: 6
+    weight: 7
 first_subfooter:
   - name: État des services
     url: https://stats.uptimerobot.com/nXvrBcl0wx
