@@ -4,7 +4,7 @@
   {{ partial "collections.html" (dict "featured" true "context" .) }}
   {{ partial "follow-us.html" . }}
   {{ partial "how-it-works.html" . }}
-  {{ partial "reuses.html" . }}
+  {{ partial "reuses.html" (dict "title" .Params.reuses.title "subtitle" .Params.reuses.subtitle "class" "container--is-gray container--has-no-padding-top" "context" .) }}
   {{ partial "product-newsletter.html" . }}
   {{ partial "foss.html" . }}
 {{ end }}

@@ -1,3 +1,4 @@
+{{ $relatedTo := default "all" .relatedTo }}
 {{/*
 As Hugo removes the first level keys when sorting the reuses map,
 we recreate a temporary reuses collection which stores the filename,
@@ -8,20 +9,47 @@ to be able to display the reuse image in the partial
   {{ $reusesWithfilenames = $reusesWithfilenames | append (dict "filename" $filename "data" $data) }}
 {{ end }}
 {{ $sortedReuses := sort $reusesWithfilenames "data.weight" "desc" }}
+{{ if ne $relatedTo "all" }}
+  {{ $sortedReuses = where $sortedReuses "data.related_collections" "intersect" (slice $relatedTo) }}
+{{ end }}
 
-<div class="reuses container container--is-gray container--wide container--has-no-padding-x container--has-no-padding-top" id="reuses">
-  <div class="container container--1211">
-    <div class="collections cardlist">
-      <div class="cardlist__header">
-        <h2 class="cardlist__title">{{ .Params.reuses.title }}</h2>
-        <h3 class="cardlist__subtitle h3--light">{{ .Params.reuses.subtitle }}</h3>
-      </div>
-      <div class="cardlist__items">
-        {{ range $sortedReuses }}
-          {{ partial "reuse.html" . }}
+{{ if $sortedReuses }}
+  <div class="reuses container container--wide container--has-no-padding-x {{ with .class }}{{ . }}{{ end }}" id="{{ i18n "reuses" | urlize }}">
+    <div class="container container--1211 {{ if ne $relatedTo "all" }}container--has-no-padding-y{{ end }}">
+      <div class="collections cardlist">
+        {{ if or .title .subtitle }}
+          <div class="cardlist__header">
+            {{ with .title }}
+              {{ if ne $relatedTo "all" }}
+                <h3>{{ . }}</h3>
+              {{ else }}
+                <h2 class="cardlist__title">{{ . }}</h2>
+              {{ end }}
+            {{ end }}
+            {{ with .subtitle }}
+              {{ if ne $relatedTo "all" }}
+                <h5 class="h5--light mt--m mb--xl">{{ . }}</h5>
+              {{ else }}
+                <h3 class="cardlist__subtitle h3--light">{{ . }}</h3>
+              {{ end }}
+            {{ end }}
+          </div>
         {{ end }}
-        {{ partial "new-reuse.html" . }}
+        <div class="cardlist__items">
+          {{ range $sortedReuses }}
+            {{ partial "reuse.html" . }}
+          {{ end }}
+          {{ if eq $relatedTo "all" }}
+            {{ partial "new-reuse.html" .context }}
+          {{ end }}
+        </div>
       </div>
+      {{ if ne $relatedTo "all" }}
+        {{ $reusesRelRef := printf "%s#%s" (relref .context "/") (i18n "reuses" | urlize) }}
+        <div class="collection__reuses-cta">
+          <a class="button button--secondary" href="{{ $reusesRelRef }}">{{ i18n "collections.cta.reuses" }}</a>
+        </div>
+      {{ end}}
     </div>
   </div>
-</div>
+{{ end }}

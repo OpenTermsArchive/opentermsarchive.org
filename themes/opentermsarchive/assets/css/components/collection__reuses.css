@@ -1,0 +1,9 @@
+.collection__reuses-cta {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--m2XL);
+
+  @media (--tabletLarge) {
+    justify-content: center;
+  }
+}
