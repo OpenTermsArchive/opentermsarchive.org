@@ -78,6 +78,7 @@ collections:
     jurisdiction: 
       one: Jurisdiction
       other: Jurisdictions
+    server_location: Server location
   cta:
     view_all: Explore other collections
     browse: Browse terms

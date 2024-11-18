@@ -25,6 +25,7 @@ import {
   FileWarning,
   Megaphone,
   ArrowRight,
+  MapPin,
   createIcons,
 } from 'lucide';
 
@@ -56,6 +57,7 @@ createIcons({
     FileWarning,
     Megaphone,
     ArrowRight,
+    MapPin,
   },
   attrs: { 'aria-hidden': true },
 });

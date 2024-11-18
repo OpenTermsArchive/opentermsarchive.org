@@ -78,6 +78,7 @@ collections:
     jurisdiction: 
       one: Juridiction
       other: Juridictions
+    server_location: Localisation du serveur
   cta:
     view_all: Explorer d'autres collections
     browse: Voir les documents
