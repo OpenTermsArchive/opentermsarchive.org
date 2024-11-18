@@ -92,6 +92,11 @@
               {{ $formatedDate := ( . | time.Format ":date_long") }}
               {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.end_date") "icon" "power-off" "desc" $formatedDate) }}
             {{ end }}
+            {{ with $currentTracking.schedule }}
+              {{ $cronKey := printf "collections.metadata.cron.%s" . }}
+              {{ $cronExpression := i18n $cronKey . }}
+              {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.schedule") "icon" "clock" "desc" $cronExpression) }}
+            {{ end }}
           {{ end }}
         </div>
       </div>

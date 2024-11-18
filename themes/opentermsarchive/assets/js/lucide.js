@@ -28,6 +28,7 @@ import {
   MapPin,
   Power,
   PowerOff,
+  Clock,
   createIcons,
 } from 'lucide';
 
@@ -62,6 +63,7 @@ createIcons({
     MapPin,
     Power,
     PowerOff,
+    Clock,
   },
   attrs: { 'aria-hidden': true },
 });
