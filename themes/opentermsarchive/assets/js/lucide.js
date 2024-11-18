@@ -26,6 +26,7 @@ import {
   Megaphone,
   ArrowRight,
   MapPin,
+  Power,
   createIcons,
 } from 'lucide';
 
@@ -58,6 +59,7 @@ createIcons({
     Megaphone,
     ArrowRight,
     MapPin,
+    Power,
   },
   attrs: { 'aria-hidden': true },
 });

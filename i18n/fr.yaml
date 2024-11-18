@@ -79,6 +79,7 @@ collections:
       one: Juridiction
       other: Juridictions
     server_location: Localisation du serveur
+    start_date: Date de début
   cta:
     view_all: Explorer d'autres collections
     browse: Voir les documents

@@ -84,6 +84,10 @@
               {{ $fullLocation := printf "%s, %s" $city $countryName }}
               {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.server_location") "icon" "map-pin" "desc" $fullLocation) }}
             {{ end }}
+            {{ with $currentTracking.startDate }}
+              {{ $formatedDate := ( . | time.Format ":date_long") }}
+              {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.start_date") "icon" "power" "desc" $formatedDate) }}
+            {{ end }}
           {{ end }}
         </div>
       </div>

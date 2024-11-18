@@ -79,6 +79,7 @@ collections:
       one: Jurisdiction
       other: Jurisdictions
     server_location: Server location
+    start_date: Start date
   cta:
     view_all: Explore other collections
     browse: Browse terms
