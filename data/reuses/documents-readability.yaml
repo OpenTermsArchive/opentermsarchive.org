@@ -9,3 +9,4 @@ description:
   fr: Calcule la lisibilité et le niveau d'études nécessaires pour comprendre un document contractuel.
 website: https://disinfo.quaidorsay.fr/en/open-terms-archive/experiments
 weight: 3
+related_collections: ["contrib"]
