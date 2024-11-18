@@ -68,7 +68,7 @@
       "services": "108",
       "documents": "216"
     },
-    "endpoint": "http://198.244.142.9/api/v1"
+    "endpoint": "http://198.244.142.9/collection-api/v1"
   },
   {
     "name": "P2B Compliance",
