@@ -92,6 +92,7 @@ collections:
     details: View details
     download: Download dataset
     endpoint: Access API
+    reuses: See all reuses
   volunteer_contributors: Volunteer contributors
   new: Want to track services for different languages, jurisdictions, or industries? Contact us to collaborate!
   contribute:
@@ -106,6 +107,9 @@ collections:
     title: Memos
     subtitle: Memos are short analyses of significant changes that clearly explain their consequences for end users.
     cta: See all memos
+  reuses:
+    title: Reuses
+    subtitle: Identified reuses of the data in this collection.
   governance:
     title: Governance
     subtitle: These people and entities ensure that terms in this collection are tracked properly.
@@ -151,3 +155,4 @@ pagination:
       aria_label: Current page, number {{ .currrentPageNumber }}
 memos:
   author: By <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, a third-party contributor
+reuses: Reuses

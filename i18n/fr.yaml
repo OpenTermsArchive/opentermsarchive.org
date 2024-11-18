@@ -92,6 +92,7 @@ collections:
     details: Voir les détails
     download: Télécharger le jeu de données
     endpoint: Accéder à l'API
+    reuses: Voir toutes les réutilisations
   volunteer_contributors: Contributeurs bénévoles
   new: Vous voulez suivre des services visant une autre langue, juridiction ou industrie ? Contactez-nous pour commencer à collaborer !
   contribute:
@@ -106,6 +107,9 @@ collections:
     title: Mémos
     subtitle: Un mémo est une courte analyse de changements significatifs qui explique clairement leurs conséquences pour les utilisateurs.
     cta: Voir tous les mémos
+  reuses:
+    title: Réutilisations
+    subtitle: Des réutilisations identifiées des données de cette collection.
   governance:
     title: Gouvernance
     subtitle: Ces personnes et entités s'assurent que les termes de cette collection sont bien suivis.
@@ -151,3 +155,4 @@ pagination:
       aria_label: Page courante, numéro {{ .currrentPageNumber }}
 memos:
   author: Par <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, un‧e contributeur tiers
+reuses: Réutilisations
