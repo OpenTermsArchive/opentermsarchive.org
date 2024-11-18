@@ -80,6 +80,7 @@ collections:
       other: Juridictions
     server_location: Localisation du serveur
     start_date: Date de début
+    end_date: Date de fin
   cta:
     view_all: Explorer d'autres collections
     browse: Voir les documents

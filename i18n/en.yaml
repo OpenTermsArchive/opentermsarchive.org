@@ -80,6 +80,7 @@ collections:
       other: Jurisdictions
     server_location: Server location
     start_date: Start date
+    end_date: End date
   cta:
     view_all: Explore other collections
     browse: Browse terms

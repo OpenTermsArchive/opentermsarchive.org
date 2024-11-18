@@ -27,6 +27,7 @@ import {
   ArrowRight,
   MapPin,
   Power,
+  PowerOff,
   createIcons,
 } from 'lucide';
 
@@ -60,6 +61,7 @@ createIcons({
     ArrowRight,
     MapPin,
     Power,
+    PowerOff,
   },
   attrs: { 'aria-hidden': true },
 });

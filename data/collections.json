@@ -134,7 +134,7 @@
     "tracking": [
       {
         "startDate": "2022-07-19",
-        "endDate": "2024-08",
+        "endDate": "2024-08-01",
         "schedule": "30 */6 * * *",
         "serverLocation": "London, GB"
       }
@@ -166,7 +166,7 @@
     "tracking": [
       {
         "startDate": "2022-03-14",
-        "endDate": "2022-09",
+        "endDate": "2022-09-01",
         "schedule": "30 */6 * * *",
         "serverLocation": "London, GB"
       }
