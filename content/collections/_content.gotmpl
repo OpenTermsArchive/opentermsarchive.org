@@ -1,7 +1,7 @@
 {{ .EnableAllLanguages }}
 {{ $weight := 1 }}
 {{ range site.Data.collections }}
-  {{ $params := dict "name" .name "id" .id "languages" .languages "jurisdictions" .jurisdictions "maintainers" .maintainers "stats" .stats "industries" .industries "endpoint" .endpoint }}
+  {{ $params := dict "name" .name "id" .id "languages" .languages "jurisdictions" .jurisdictions "maintainers" .maintainers "stats" .stats "industries" .industries "endpoint" .endpoint "tracking" .tracking }}
   {{ $page := dict
     "params" $params
     "path" .name

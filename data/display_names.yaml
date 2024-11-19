@@ -12,9 +12,13 @@ regions:
     CN: Chine
     FR: France
     US: États-Unis
+    GB: Royaume-Uni
+    DE: Allemagne
   en:
     EU: European Union
     CH: Switzerland
     CN: China
     FR: France
     US: United States
+    GB: United Kingdom
+    DE: Germany

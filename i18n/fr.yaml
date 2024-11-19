@@ -78,6 +78,14 @@ collections:
     jurisdiction: 
       one: Juridiction
       other: Juridictions
+    server_location: Localisation du serveur
+    start_date: Début du suivi
+    end_date: Fin du suivi
+    schedule: Exécution
+    cron:
+      "30 */12 * * *": Deux fois par jour
+      "30 */6 * * *": Quatre fois par jour
+      "0 6,18 * * *": Deux fois par jour
   cta:
     view_all: Explorer d'autres collections
     browse: Voir les documents
