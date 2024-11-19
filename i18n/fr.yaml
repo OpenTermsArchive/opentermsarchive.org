@@ -79,8 +79,8 @@ collections:
       one: Juridiction
       other: Juridictions
     server_location: Localisation du serveur
-    start_date: Date de début
-    end_date: Date de fin
+    start_date: Début du suivi
+    end_date: Fin du suivi
     schedule: Exécution
     cron:
       "30 */12 * * *": Deux fois par jour

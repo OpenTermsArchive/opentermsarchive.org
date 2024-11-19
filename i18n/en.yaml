@@ -79,8 +79,8 @@ collections:
       one: Jurisdiction
       other: Jurisdictions
     server_location: Server location
-    start_date: Start date
-    end_date: End date
+    start_date: Start tracking date
+    end_date: End tracking date
     schedule: Schedule
     cron:
       "30 */12 * * *": Twice a day
