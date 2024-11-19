@@ -1,0 +1,3 @@
+{{ $reuses := partial "func/getReuses.html" . }}
+{{ $reuses = where $reuses "data.related_collections" "intersect" (slice .relatedTo) }}
+{{ return $reuses }}
