@@ -31,6 +31,7 @@
 .collection__metadata-items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-auto-rows: 1fr;
   gap: var(--mM);
   width: 55%;
 
@@ -43,7 +44,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--mL) var(--mM) var(--mM) var(--mM);
+  padding: var(--mL) var(--mM);
   text-align: center;
   background-color: var(--colorWhite);
   border: 1px solid var(--colorBlack300);
