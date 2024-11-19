@@ -99,6 +99,16 @@
   // node_modules/lucide/dist/esm/icons/chevron-right.js
   var ChevronRight = ["svg", defaultAttributes, [["path", { d: "m9 18 6-6-6-6" }]]];
 
+  // node_modules/lucide/dist/esm/icons/clock.js
+  var Clock = [
+    "svg",
+    defaultAttributes,
+    [
+      ["circle", { cx: "12", cy: "12", r: "10" }],
+      ["polyline", { points: "12 6 12 12 16 14" }]
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/download.js
   var Download = [
     "svg",
@@ -263,6 +273,16 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/map-pin.js
+  var MapPin = [
+    "svg",
+    defaultAttributes,
+    [
+      ["path", { d: "M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" }],
+      ["circle", { cx: "12", cy: "10", r: "3" }]
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/map.js
   var Map = [
     "svg",
@@ -289,6 +309,28 @@
     "svg",
     defaultAttributes,
     [["path", { d: "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }]]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/power-off.js
+  var PowerOff = [
+    "svg",
+    defaultAttributes,
+    [
+      ["path", { d: "M18.36 6.64A9 9 0 0 1 20.77 15" }],
+      ["path", { d: "M6.16 6.16a9 9 0 1 0 12.68 12.68" }],
+      ["path", { d: "M12 2v4" }],
+      ["path", { d: "m2 2 20 20" }]
+    ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/power.js
+  var Power = [
+    "svg",
+    defaultAttributes,
+    [
+      ["path", { d: "M12 2v10" }],
+      ["path", { d: "M18.4 6.6a9 9 0 1 1-12.77.04" }]
+    ]
   ];
 
   // node_modules/lucide/dist/esm/icons/search.js
@@ -412,7 +454,11 @@
       FilePlus,
       FileWarning,
       Megaphone,
-      ArrowRight
+      ArrowRight,
+      MapPin,
+      Power,
+      PowerOff,
+      Clock
     },
     attrs: { "aria-hidden": true }
   });
@@ -468,6 +514,14 @@ lucide/dist/esm/icons/chevron-left.js:
    *)
 
 lucide/dist/esm/icons/chevron-right.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/clock.js:
   (**
    * @license lucide v0.344.0 - ISC
    *
@@ -579,6 +633,14 @@ lucide/dist/esm/icons/mail.js:
    * See the LICENSE file in the root directory of this source tree.
    *)
 
+lucide/dist/esm/icons/map-pin.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
 lucide/dist/esm/icons/map.js:
   (**
    * @license lucide v0.344.0 - ISC
@@ -596,6 +658,22 @@ lucide/dist/esm/icons/megaphone.js:
    *)
 
 lucide/dist/esm/icons/message-circle.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/power-off.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/power.js:
   (**
    * @license lucide v0.344.0 - ISC
    *
