@@ -1,27 +1,27 @@
-{{ $translatedImagePath := (printf "/images/reuses/%s-%s.png" .filename site.Language.Lang) }}
-{{ $commonImagePath := (printf "/images/reuses/%s.png" .filename) }}
+{{ $translatedImagePath := (printf "/images/reuses/%s-%s.png" .context.filename site.Language.Lang) }}
+{{ $commonImagePath := (printf "/images/reuses/%s.png" .context.filename) }}
 {{ $image := resources.Get $translatedImagePath }}
 {{ if eq $image nil }}
   {{ $image = resources.Get $commonImagePath }}
 {{ end }}
 
-<div class="card card--is-white card--center card--is-link reuse">
+<div class="card card--is-white card--center card--is-link reuse {{ with .class }}{{ . }}{{ end }}">
   {{ with $image }}
     <div class="card__header">
       <img src="{{ .RelPermalink }}" alt="">
     </div>
   {{ end }}
   <div class="card__body">
-    {{ with (index .data.title site.Language.Lang) }}<h4 class="card__title">{{ . }}</h4>{{ end }}
-    {{ with (index .data.description site.Language.Lang ) }}<h5 class="card__subtitle h5--light">{{ . | safeHTML }}</h5>{{ end }}
+    {{ with (index .context.data.title site.Language.Lang) }}<h4 class="card__title">{{ . }}</h4>{{ end }}
+    {{ with (index .context.data.description site.Language.Lang ) }}<h5 class="card__subtitle h5--light">{{ . | safeHTML }}</h5>{{ end }}
   </div>
   <div class="card__author">
     <div class="card__author-icon">
       <i class="icon icon--gray" data-lucide="user"></i>
     </div>
     <div class="card__author-desc text--light">
-      {{ index .data.author site.Language.Lang }}
+      {{ index .context.data.author site.Language.Lang }}
     </div>
   </div>
-  <a class="card__link" href="{{ .data.website }}" target="_blank" rel="noopener" aria-label="{{ .data.website }}"></a>
+  <a class="card__link" href="{{ .context.data.website }}" target="_blank" rel="noopener" aria-label="{{ .context.data.website }}"></a>
 </div>

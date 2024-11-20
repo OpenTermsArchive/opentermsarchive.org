@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $currentCollectionID := .Params.id }}
   <div class="collection">
 
     {{ $isGraySectionIndex := 0 }}
@@ -150,7 +151,6 @@
     {{ $isGraySectionIndex = add $isGraySectionIndex 1 }}
 
     {{ $memosRelRef := relref . "/memos" }}
-    {{ $currentCollectionID := .Params.id }}
     {{ $memos := where .Site.RegularPages "Type" "memos" }}
     {{ $filteredMemos := slice }}
 
@@ -178,6 +178,27 @@
           </div>
           <div class="collection__memos-cta">
             <a class="button button--secondary" href="{{ $memosRelRef }}">{{ i18n "collections.memos.cta" }}</a>
+          </div>
+        </div>
+      </div>
+      {{ $isGraySectionIndex = add $isGraySectionIndex 1 }}
+    {{ end }}
+
+    {{ $reuses := partial "func/getReuses.html" . }}
+    {{ $relatedReuses := where $reuses "data.related_collections" "intersect" (slice $currentCollectionID) }}
+    {{ $reusesRelRef := printf "%s#%s" (relref . "/") (i18n "reuses" | urlize) }}
+    {{ with $relatedReuses }}
+      <div class="container container--wide container--has-no-padding-y {{ if modBool $isGraySectionIndex 2 }}container--is-gray{{ end }}">
+        <div class="collection__reuses container container--1211 container--has-no-padding-x">
+          <h3>{{ i18n "collections.reuses.title" }}</h3>
+          <h5 class="h5--light mt--m">{{ i18n "collections.reuses.subtitle" }}</h5>
+          <div class="collection__reuses-items">
+            {{ range . }}
+              {{ partial "reuse.html" (dict "class" "collection__reuses-item" "context" . ) }}
+            {{ end }}
+          </div>
+          <div class="collection__reuses-cta">
+            <a class="button button--secondary" href="{{ $reusesRelRef }}">{{ i18n "collections.cta.reuses" }}</a>
           </div>
         </div>
       </div>

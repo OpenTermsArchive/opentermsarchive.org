@@ -9,3 +9,4 @@ description:
   en: Tracks major platforms behaviour over the French 2022 elections.
 website: https://www.reset.tech/resources/french-election-report-2022/
 weight: 5
+related_collections: ["france-elections"]

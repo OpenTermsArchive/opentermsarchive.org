@@ -1,0 +1,25 @@
+.collection__reuses-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--mL);
+  margin-top: var(--mXL);
+
+  @media (--tabletLarge) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--mS);
+  }
+
+  @media (--mobileExtraLarge) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.collection__reuses-cta {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--m2XL);
+
+  @media (--tabletLarge) {
+    justify-content: center;
+  }
+}

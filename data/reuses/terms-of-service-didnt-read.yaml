@@ -9,3 +9,4 @@ description:
   fr: Permet aux utilisateurs de donner collaborativement une note aux conditions d’utilisation selon le respect de leurs droits.
 website: https://tosdr.org
 weight: 4
+related_collections: ["contrib"]

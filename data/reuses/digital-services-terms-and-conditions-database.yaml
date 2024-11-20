@@ -9,3 +9,4 @@ description:
   fr: Portail d'accès aux données d'une collection opérée par l’équipe « application du DSA » au sein de la Commission européenne.
 website: https://platform-contracts.digital-strategy.ec.europa.eu/
 weight: 8
+related_collections: ["p2b-compliance"]
