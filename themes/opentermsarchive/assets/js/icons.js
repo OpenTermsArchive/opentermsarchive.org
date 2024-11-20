@@ -1,5 +1,4 @@
 import {
-  Github,
   ChevronDown,
   ChevronRight,
   ChevronLeft,
@@ -38,7 +37,6 @@ createIcons({
     ChevronDown,
     ChevronRight,
     ChevronLeft,
-    Github,
     Hash,
     Mail,
     Folder,
