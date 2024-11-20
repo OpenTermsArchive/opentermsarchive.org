@@ -64,8 +64,8 @@
   </div>
 </div>
 
-{{ $lucideJs := resources.Get "js/lucide.js" | js.Build }}
-<script src="{{ $lucideJs.RelPermalink }}"></script>
+{{ $iconsJs := resources.Get "js/icons.js" | js.Build }}
+<script src="{{ $iconsJs.RelPermalink }}"></script>
 
 {{ $languageSwitcherJs := resources.Get "js/languageSwitcher.js" | js.Build }}
 <script src="{{ $languageSwitcherJs.RelPermalink }}"></script>
