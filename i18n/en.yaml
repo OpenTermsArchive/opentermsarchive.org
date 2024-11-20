@@ -109,7 +109,7 @@ collections:
     cta: See all memos
   reuses:
     title: Reuses
-    subtitle: Identified reuses of the data in this collection.
+    subtitle: Identified reuses of data from this collection.
   governance:
     title: Governance
     subtitle: These people and entities ensure that terms in this collection are tracked properly.

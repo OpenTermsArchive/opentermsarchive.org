@@ -109,7 +109,7 @@ collections:
     cta: Voir tous les mémos
   reuses:
     title: Réutilisations
-    subtitle: Des réutilisations identifiées des données de cette collection.
+    subtitle: Réutilisations connues des données de cette collection.
   governance:
     title: Gouvernance
     subtitle: Ces personnes et entités s'assurent que les termes de cette collection sont bien suivis.
