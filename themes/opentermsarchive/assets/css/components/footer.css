@@ -1,93 +1,58 @@
 .footer {
-  width: 100%;
-  padding: 0 0 var(--pL) 0;
-}
-
-@media (--tabletLarge) {
-  .footer {
-    text-align: center;
-  }
-}
-
-.footer__menus {
   display: flex;
-  gap: var(--mXL);
-  justify-content: space-between;
-  width: 100%;
-  margin-top: var(--mM);
+  flex-direction: column;
+  gap: var(--mM);
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
 
-  & div {
-    max-width: 60%;
-
-    & ul {
-      display: flex;
-      flex-flow: row wrap;
-      gap: var(--mS);
-
-      & li {
-        & a {
-          color: var(--colorBlack600);
-          display: inline-flex;
-        }
-      }
-
-      & + ul {
-        margin-top: var(--mXS);
-      }
-    }
-  }
-}
-
-@media (--gridPlus) {
-  .footer {
-    padding-right: var(--pL);
-    padding-left: var(--pL);
-  }
-}
-
-@media (--tabletLarge) {
-  .footer {
+  & ul {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer__menus {
-    align-items: flex-start;
+    flex-flow: row wrap;
     justify-content: center;
 
-    & div {
-      max-width: 100%;
+    & li {
+      & a {
+        display: inline-flex;
+        color: var(--colorBlack600);
+      }
+    }
+  }
 
-      & ul {
-        flex-direction: column;
-
-        & li {
-          text-align: left;
-        }
-
-        & + ul {
-          margin-top: var(--mM);
-        }
+  @media (--mobileExtraLarge) {
+    & ul {
+      & li {
+        width: 100%;
       }
     }
   }
 }
 
-@media (--mobileExtraLarge) {
-  .footer__menus {
-    flex-wrap: wrap;
-    gap: var(--mXL);
-    justify-content: flex-start;
+.footer__main-menu {
+  gap: var(--m2XS) var(--mS);
+}
 
-    & div {
-      width: 100%;
+.footer__sub-menu {
+  gap: var(--m2XS) var(--mS);
+}
 
-      & ul {
-        & li {
-          text-align: center;
-        }
-      }
-    }
+.footer__logo {
+  margin-top: var(--mL);
+  margin-bottom: var(--mM);
+
+  @media (--mobileExtraLarge) {
+    margin-top: var(--mS);
+    margin-bottom: var(--mS);
+  }
+}
+
+.footer__socials {
+  gap: var(--mXS);
+  margin-top: var(--mM);
+  margin-bottom: var(--mM);
+
+  @media (--mobileExtraLarge) {
+    margin-top: var(--mS);
+    margin-bottom: var(--mS);
   }
 }
