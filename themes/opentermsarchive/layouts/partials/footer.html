@@ -2,70 +2,61 @@
   <div class="divider">
     <hr >
   </div>
-  <div class="container container--flex container--1211 container--has-no-padding-x container--has-padding-y-small">
+  <div class="container container--flex container--1211 container--has-padding-y-small">
     <footer class="footer">
-      <div class="logo">
-        <svg>
-          <use href="#logo-main"></use>
-        </svg>
-      </div>
-      <div class="footer__menus">
-        <div class="footer__menu">
-          <ul>
-            {{ range .Site.Menus.footer }}
-            <li>
-              <a href="{{ .URL }}" {{ with .Params.target }}target="{{ . }}"{{ end }}>{{ .Name }}</a>
-            </li>
-            {{ end }}
-          </ul>
-          <ul>
-            <li>
-              <a class="a--icontext a--small" target="_blank" rel="me" href="{{ .Param "mastodon.url" }}">
-                <span class="icon__circle-wrapper icon__circle-wrapper--small mr--2xs">
-                  <svg class="icon icon--fill-white">
-                    <use href="#mastodon"></use>
-                  </svg>
-                </span>
-                <span>{{ i18n "footer.mastodon" }}</span>
-              </a>
-            </li>
-            <li>
-              <a class="a--icontext a--small" target="_blank" rel="me" href="mailto:{{ .Param "contact_email" }}">
-                <span class="icon__circle-wrapper icon__circle-wrapper--small mr--2xs">
-                  <i class="icon icon--white" data-lucide="mail"></i>
-                </span>
-                <span>{{ i18n "footer.mail" }}</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__menu footer__menu--is-small footer__menu--align-right">
-          <ul>
-            {{ range .Site.Menus.first_subfooter }}
-            <li>
-              <a href="{{ .URL }}" {{ with .Params.target }}target="{{ . }}"{{ end }}>
-                {{ .Name }}
-              </a>
-            </li>
-            {{ end }}
-          </ul>
-          <ul>
-            {{ range .Site.Menus.second_subfooter }}
-            <li>
-              <a href="{{ .URL }}" {{ with .Params.target }}target="{{ . }}"{{ end }}>
-                {{ .Name }}
-              </a>
-            </li>
-            {{ end }}
-          </ul>
-        </div>
-      </div>
+      <div class="footer__logo logo"><svg><use href="#logo-main"></use></svg></div>
+      <ul class="footer__main-menu">
+        {{ range .Site.Menus.footer }}
+          {{ $href := absLangURL .URL }}
+          {{ if eq .Identifier "mailto" }}
+            {{ $href = printf "mailto:%s" $.Site.Params.contact_email }}
+          {{ end }}
+          <li>
+            <a href="{{ $href }}" {{ with .Params.target }}target="{{ . }}"{{ end }}>{{ .Name }}</a>
+          </li>
+        {{ end }}
+      </ul>
+      <ul class="footer__sub-menu">
+        {{ range .Site.Menus.footer_sub }}
+          <li>
+            <a class="a--small" href="{{ .URL }}" {{ with .Params.target }}target="{{ . }}"{{ end }}>
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+      <ul class="footer__socials">
+        <li>
+          <a class="a--icontext a--small" target="_blank" rel="me" href="{{ .Param "mastodon.url" }}" aria-label="Mastodon">
+            <span class="icon__circle-wrapper icon__circle-wrapper--small">
+              <i class="icon icon--fill-white" data-simple-icon="mastodon"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="a--icontext a--small" target="_blank" rel="me" href="{{ .Param "github.url" }}" aria-label="GitHub">
+            <span class="icon__circle-wrapper icon__circle-wrapper--small">
+              <i class="icon icon--fill-white" data-simple-icon="github"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="a--icontext a--small" target="_blank" rel="me" href="{{ .Param "linkedin.url" }}" aria-label="LinkedIn">
+            <span class="icon__circle-wrapper icon__circle-wrapper--small">
+              <i class="icon icon--fill-white" data-simple-icon="linkedin"></i>
+            </span>
+          </a>
+        </li>
+      </ul>
     </footer>
   </div>
 </div>
 
-{{ $lucideJs := resources.Get "js/lucide.js" | js.Build }}
-<script src="{{ $lucideJs.RelPermalink }}"></script>
+{{ $iconsJs := resources.Get "js/icons.js" | js.Build }}
+<script src="{{ $iconsJs.RelPermalink }}"></script>
+
+{{ $brandsJs := resources.Get "js/brands.js" | js.Build }}
+<script src="{{ $brandsJs.RelPermalink }}"></script>
 
 {{ $languageSwitcherJs := resources.Get "js/languageSwitcher.js" | js.Build }}
 <script src="{{ $languageSwitcherJs.RelPermalink }}"></script>

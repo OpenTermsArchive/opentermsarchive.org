@@ -36,7 +36,10 @@ footer:
   - name: About
     pageRef: /about
     weight: 7
-first_subfooter:
+  - name: Contact-us
+    identifier: mailto
+    weight: 8
+footer_sub:
   - name: Services status
     url: https://stats.uptimerobot.com/nXvrBcl0wx
     weight: 1
@@ -53,13 +56,12 @@ first_subfooter:
     weight: 4
     params:
       target: _blank
-second_subfooter:
   - name: Legal notice
     pageRef: /legal-notice
-    weight: 1
+    weight: 5
   - name: Privacy policy
     pageRef: /privacy-policy
-    weight: 2
+    weight: 6
   - name: 'Accessibility: not compliant'
     pageRef: /accessibility
-    weight: 3
+    weight: 7

@@ -17,9 +17,7 @@
 
 .header__menu-secondary {
   & ul {
-    & li:not(:last-child) {
-      margin: 0 var(--m2XS);
-    }
+    gap: var(--m2XS);
   }
 }
 
