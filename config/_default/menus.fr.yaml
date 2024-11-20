@@ -36,6 +36,9 @@ footer:
   - name: À propos
     pageRef: /about
     weight: 7
+  - name: Contactez-nous
+    identifier: mailto
+    weight: 8
 first_subfooter:
   - name: État des services
     url: https://stats.uptimerobot.com/nXvrBcl0wx

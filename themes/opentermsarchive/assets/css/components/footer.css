@@ -3,13 +3,6 @@
   padding: 0 0 var(--pL) 0;
 }
 
-.version {
-  font-size: 0.8em;
-  font-style: italic;
-  color: var(--colorBlack400);
-  text-align: right;
-}
-
 @media (--tabletLarge) {
   .footer {
     text-align: center;
@@ -24,7 +17,7 @@
   margin-top: var(--mM);
 
   & div {
-    max-width: 45%;
+    max-width: 60%;
 
     & ul {
       display: flex;
@@ -34,11 +27,12 @@
       & li {
         & a {
           color: var(--colorBlack600);
+          display: inline-flex;
         }
       }
 
       & + ul {
-        margin-top: var(--mS);
+        margin-top: var(--mXS);
       }
     }
   }

@@ -13,9 +13,13 @@
         <div class="footer__menu">
           <ul>
             {{ range .Site.Menus.footer }}
-            <li>
-              <a href="{{ .URL }}" {{ with .Params.target }}target="{{ . }}"{{ end }}>{{ .Name }}</a>
-            </li>
+              {{ $href := absLangURL .URL }}
+              {{ if eq .Identifier "mailto" }}
+                {{ $href = printf "mailto:%s" $.Site.Params.contact_email }}
+              {{ end }}
+              <li>
+                <a href="{{ $href }}" {{ with .Params.target }}target="{{ . }}"{{ end }}>{{ .Name }}</a>
+              </li>
             {{ end }}
           </ul>
           <ul>
@@ -24,23 +28,16 @@
                 <span class="icon__circle-wrapper icon__circle-wrapper--small mr--2xs">
                   <i class="icon icon--fill-white" data-simple-icon="mastodon"></i>
                 </span>
-                <span>{{ i18n "footer.mastodon" }}</span>
               </a>
-            </li>
-            <li>
+              <a class="a--icontext a--small" target="_blank" rel="me" href="{{ .Param "github.url" }}">
+                <span class="icon__circle-wrapper icon__circle-wrapper--small mr--2xs">
+                  <i class="icon icon--fill-white" data-simple-icon="github"></i>
+                </span>
+              </a>
               <a class="a--icontext a--small" target="_blank" rel="me" href="{{ .Param "linkedin.url" }}">
                 <span class="icon__circle-wrapper icon__circle-wrapper--small mr--2xs">
                   <i class="icon icon--fill-white" data-simple-icon="linkedin"></i>
                 </span>
-                <span>{{ i18n "footer.linkedin" }}</span>
-              </a>
-            </li>
-            <li>
-              <a class="a--icontext a--small" target="_blank" rel="me" href="mailto:{{ .Param "contact_email" }}">
-                <span class="icon__circle-wrapper icon__circle-wrapper--small mr--2xs">
-                  <i class="icon icon--white" data-lucide="mail"></i>
-                </span>
-                <span>{{ i18n "footer.mail" }}</span>
               </a>
             </li>
           </ul>

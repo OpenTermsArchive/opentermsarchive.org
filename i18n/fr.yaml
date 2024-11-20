@@ -2,10 +2,6 @@ header:
   menu:
     open: Menu
     close: Fermer
-footer:
-  mastodon: Suivez-nous
-  linkedin: Suivez-nous
-  mail: Contactez-nous
 new_reuse:
   title: Votre outil
   subtitle: Si vous souhaitez développer un outil basé sur Open Terms Archive, contactez-nous !
