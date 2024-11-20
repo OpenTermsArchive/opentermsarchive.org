@@ -4,6 +4,8 @@ mastodon:
   username: "@opentermsarchive@mastodon.social"
 github:
   url: https://github.com/OpenTermsArchive
+linkedin:
+  url: https://www.linkedin.com/company/opentermsarchive/
 contributors:
   local_source: allcontributorsrc.json
   additional_sources:
