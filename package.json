@@ -33,6 +33,7 @@
     "@stylistic/stylelint-config": "^1.0.1",
     "all-contributors-cli": "^6.26.1",
     "cypress": "^13.7.3",
+    "dotenv": "^16.4.5",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-json-format": "^2.0.1",
