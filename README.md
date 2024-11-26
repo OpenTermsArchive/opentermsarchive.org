@@ -4,6 +4,10 @@ The website that presents Open Terms Archive to the general public.
 
 ## Installation
 
+### Environment variables
+
+Copy the `.env.example` file to `.env` and set the `UPTIMEROBOT_API_KEY` environment variable.
+
 ### Dependencies
 
 This website is built using [Hugo](https://gohugo.io), a static website editor, and uses [Node.js](https://nodejs.org).
