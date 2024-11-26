@@ -4,34 +4,40 @@ on:
   push:
     branches: [ main ]
   workflow_call:
-
+  schedule:
+    - cron: '*/10 * * * *' # Every 10 minutes
 jobs:
   test:
     uses: "OpenTermsArchive/opentermsarchive.org/.github/workflows/test.yml@main"
-  deploy:
-    needs: [ test ]
+  schedule_test:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
-
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Set Hugo up
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: '0.127.0'
-          extended: true # Prevent error building site: POSTCSS: failed to transform, see https://gohugo.io/troubleshooting/faq/#i-get-this-feature-is-not-available-in-your-current-hugo-version
-
-      - name: Build with Hugo
-        run: npm run build
-
-      - name: Deploy ./public directory to the remote gh-pages branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          cname: opentermsarchive.org
+      - name: Display message
+        run: echo "Workflow triggered at $(date '+%Y-%m-%d %H:%M:%S UTC')"
+  # deploy:
+  #   needs: [ test ]
+  #   runs-on: ubuntu-22.04
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #
+  #     - uses: actions/setup-node@v3
+  #       with:
+  #         node-version: '20'
+  #
+  #     - name: Install dependencies
+  #       run: npm ci
+  #
+  #     - name: Set Hugo up
+  #       uses: peaceiris/actions-hugo@v2
+  #       with:
+  #         hugo-version: '0.127.0'
+  #         extended: true
+  #
+  #     - name: Build with Hugo
+  #       run: npm run build
+  #
+  #     - name: Deploy ./public directory to the remote gh-pages branch
+  #       uses: peaceiris/actions-gh-pages@v3
+  #       with:
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+  #         cname: opentermsarchive.org
