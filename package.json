@@ -25,6 +25,8 @@
     "start:dev": "hugo serve --watch --logLevel debug --disableFastRender --printI18nWarnings",
     "prestart:ci": "node scripts/fetch-uptime.js",
     "start:ci": "hugo serve --logLevel error --port 1313",
+    "prestart:preview": "node scripts/fetch-uptime.js",
+    "start:preview": "hugo --gc --minify -b $DEPLOY_PRIME_URL",
     "lint:markdown": "markdownlint *.md content/**/*.md",
     "lint:css": "stylelint \"themes/opentermsarchive/assets/css/**/*.css\"",
     "lint:js": "eslint themes/opentermsarchive/assets/js/ test/**/*.js",
