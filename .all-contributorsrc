@@ -107,6 +107,17 @@
         "promotion",
         "fundingFinding"
       ]
+    },
+    {
+      "login": "swheeler640",
+      "name": "Sydney Wheeler",
+      "avatar_url": "https://avatars.githubusercontent.com/u/124692055?v=4",
+      "profile": "https://github.com/swheeler640",
+      "contributions": [
+        "content",
+        "promotion",
+        "fundingFinding"
+      ]
     }
   ],
   "repoType": "github",
