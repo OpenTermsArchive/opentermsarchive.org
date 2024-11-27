@@ -4,6 +4,6 @@
       <i class="icon icon--gray icon--medium icon--stroke-thin" data-lucide="{{ . }}"></i>
     </div>
   {{ end }}
-  <span class="h6 h6--ultralight collection__metadata-item-title">{{ .title }}</span>
+  <span class="h6 h6--ultralight collection__metadata-item-title">{{ .title | safeHTML }}</span>
   <h6 class="collection__metadata-item-desc">{{ .desc }}</h6>
 </div>
