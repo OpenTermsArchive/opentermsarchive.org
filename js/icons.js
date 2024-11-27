@@ -80,6 +80,13 @@
     "stroke-linejoin": "round"
   };
 
+  // node_modules/lucide/dist/esm/icons/activity.js
+  var Activity = [
+    "svg",
+    defaultAttributes,
+    [["path", { d: "M22 12h-4l-3 9L9 3l-3 9H2" }]]
+  ];
+
   // node_modules/lucide/dist/esm/icons/arrow-right.js
   var ArrowRight = [
     "svg",
@@ -442,7 +449,8 @@
       MapPin,
       Power,
       PowerOff,
-      Clock
+      Clock,
+      Activity
     },
     attrs: { "aria-hidden": true }
   });
@@ -466,6 +474,14 @@ lucide/dist/esm/replaceElement.js:
    *)
 
 lucide/dist/esm/defaultAttributes.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/activity.js:
   (**
    * @license lucide v0.344.0 - ISC
    *
