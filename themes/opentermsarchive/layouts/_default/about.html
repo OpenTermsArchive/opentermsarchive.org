@@ -63,6 +63,11 @@
           {{ partial "contributors.html" (dict "staffType" "communityManagers" "showInfo" true "class" "mb--2xl contributors--has-no-margin-top" ) }}
         </div>
         <div>
+          <h3>{{ i18n "about.bizdev.title" }}</h3>
+          <p>{{ i18n "about.bizdev.subtitle" }}</p>
+          {{ partial "contributors.html" (dict "staffType" "bizDev" "showInfo" true "class" "mb--2xl contributors--has-no-margin-top" ) }}
+        </div>
+        <div>
           <h3>{{ i18n "about.contributors.title" }}</h3>
           {{ $impactLink := .RelRef (dict "path" "/impact") }}
           <p>{{ i18n "about.contributors.subtitle" (dict "impactLink" $impactLink) | markdownify }}</p>
