@@ -6,7 +6,11 @@ The website that presents Open Terms Archive to the general public.
 
 ### Environment variables
 
-Copy the `.env.example` file to `.env` and set the `UPTIMEROBOT_API_KEY` environment variable.
+Set the `UPTIMEROBOT_API_KEY` environment variable:
+
+1. Locally: copy the `.env.example` file to `.env` and set the value
+2. On GitHub: Repository Settings → Secrets and variables → Actions → New repository secret
+3. On Netlify: Site configuration → Environment variables → Add a variable
 
 ### Dependencies
 
