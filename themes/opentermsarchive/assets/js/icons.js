@@ -28,6 +28,7 @@ import {
   Power,
   PowerOff,
   Clock,
+  Activity,
   createIcons,
 } from 'lucide';
 
@@ -62,6 +63,7 @@ createIcons({
     Power,
     PowerOff,
     Clock,
+    Activity,
   },
   attrs: { 'aria-hidden': true },
 });
