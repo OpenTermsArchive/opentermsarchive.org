@@ -29,6 +29,8 @@ jobs:
           extended: true # Prevent error building site: POSTCSS: failed to transform, see https://gohugo.io/troubleshooting/faq/#i-get-this-feature-is-not-available-in-your-current-hugo-version
 
       - name: Build with Hugo
+        env:
+          UPTIMEROBOT_API_KEY: ${{ secrets.UPTIMEROBOT_API_KEY }}
         run: npm run build
 
       - name: Deploy ./public directory to the remote gh-pages branch
