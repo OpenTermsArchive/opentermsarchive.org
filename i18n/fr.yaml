@@ -83,7 +83,7 @@ collections:
       "30 */12 * * *": Deux fois par jour
       "30 */6 * * *": Quatre fois par jour
       "0 6,18 * * *": Deux fois par jour
-    uptime_ratio: Disponibilité de l'API des 30 derniers jours
+    uptime_ratio: Disponibilité de l'API<br><small>sur les 30 derniers jours</small>
   cta:
     view_all: Explorer d'autres collections
     browse: Voir les documents
