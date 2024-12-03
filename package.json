@@ -22,7 +22,7 @@
     "test:html": "html-validate ./public",
     "test:e2e": "node test/cypress/e2e/index.js",
     "prestart:dev": "node scripts/fetch-uptime.js",
-    "start:dev": "hugo serve --watch --logLevel debug --disableFastRender --printI18nWarnings",
+    "start:dev": "hugo serve --watch --logLevel debug --disableFastRender --printI18nWarnings --ignoreCache",
     "prestart:ci": "node scripts/fetch-uptime.js",
     "start:ci": "hugo serve --logLevel error --port 1313",
     "prestart:preview": "node scripts/fetch-uptime.js",
