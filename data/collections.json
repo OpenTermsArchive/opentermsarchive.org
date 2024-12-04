@@ -30,7 +30,56 @@
         "schedule": "30 */12 * * *",
         "serverLocation": "London, GB"
       }
-    ]
+    ],
+    "governance": {
+      "hosts": [
+        {
+          "name": "Sciences Po Law School Clinic",
+          "logo": "https://opentermsarchive.org/images/contributors/sciences-po-law-school-clinic.png",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        },
+        {
+          "name": "Host without logo and no local image",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        },
+        {
+          "name": "Sciences Po Law School Clinic",
+          "logo": "https://opentermsarchive.org/images/contributors/sciences-po-law-school-clinic.png",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        }
+      ],
+      "administrators": [
+        {
+          "name": "Open Terms Archive",
+          "logo": "https://opentermsarchive.org/images/contributors/open-terms-archive.png",
+          "url": "https://opentermsarchive.org"
+        }
+      ],
+      "curators": [
+        {
+          "name": "Sciences Po Law School Clinic",
+          "logo": "https://opentermsarchive.org/images/contributors/sciences-po-law-school-clinic.png",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        }
+      ],
+      "maintainers": [
+        {
+          "name": "Maintainers with remote logo not working and no local image",
+          "logo": "https://opentermsarchive.org/images/contributors/volunteer-en.png"
+        },
+        {
+          "name": "Maintainers with local image",
+          "url": "https://www.google.fr"
+        }
+      ],
+      "sponsors": [
+        {
+          "name": "Sciences Po Law School Clinic",
+          "logo": "https://opentermsarchive.org/images/contributors/sciences-po-law-school-clinic.png",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        }
+      ]
+    }
   },
   {
     "name": "Platform Governance Archive",
@@ -66,7 +115,43 @@
         "schedule": "30 */12 * * *",
         "serverLocation": "Bremen, DE"
       }
-    ]
+    ],
+    "governance": {
+      "hosts": [
+        {
+          "name": "Sciences Po Law School Clinic",
+          "logo": "https://opentermsarchive.org/images/contributors/sciences-po-law-school-clinic.png",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        }
+      ],
+      "administrators": [
+        {
+          "name": "Open Terms Archive",
+          "logo": "https://opentermsarchive.org/images/contributors/open-terms-archive.png",
+          "url": "https://opentermsarchive.org"
+        }
+      ],
+      "curators": [
+        {
+          "name": "Sciences Po Law School Clinic",
+          "logo": "https://opentermsarchive.org/images/contributors/sciences-po-law-school-clinic.png",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        }
+      ],
+      "maintainers": [
+        {
+          "name": "Maintainers with remote logo not working and no local image",
+          "logo": "https://opentermsarchive.org/images/contributors/volunteer-en.png"
+        }
+      ],
+      "sponsors": [
+        {
+          "name": "Sciences Po Law School Clinic",
+          "logo": "https://opentermsarchive.org/images/contributors/sciences-po-law-school-clinic.png",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        }
+      ]
+    }
   },
   {
     "name": "France",
