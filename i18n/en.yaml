@@ -114,8 +114,16 @@ collections:
   governance:
     title: Governance
     subtitle: These people and entities ensure that terms in this collection are tracked properly.
+    hosts:
+      title: Hosts
+    administrators:
+      title: Administrators
+    curators:
+      title: Curators
     maintainers:
       title: Maintainers
+    sponsors:
+      title: Sponsors
     contributors:
       title: Contributors
 impact:

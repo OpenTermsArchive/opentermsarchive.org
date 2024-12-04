@@ -213,24 +213,66 @@
       <div class="collection__governance container container--1211 container--has-no-padding-x">
         <h3>{{ i18n "collections.governance.title" }}</h3>
         <h5 class="h5--light mt--m">{{ i18n "collections.governance.subtitle" }}</h5>
-        <h4 class="mt--xl">{{ i18n "collections.governance.maintainers.title" }}</h4>
-        <div class="governance__maintainers-items">
-          {{ with .Params.maintainers }}
-            {{ range . }}
-              {{ $image := resources.Get (printf "/images/contributors/%s.png" (.name | urlize)) }}
-              {{ $name := .name }}
-              {{ with $image }}
-                <div class="governance__maintainers-item">
-                  <img src="{{ .RelPermalink }}" alt="{{ $name }}">
-                </div>
+        {{ $governance := .Params.governance }}
+        {{ if $governance }}
+          <div class="governance__items">
+          {{ range $organizationType, $organizationData := .Params.governance }}
+            {{ if $organizationData }}
+              {{ range $organizationData }}
+                {{ $name := .name }}
+                {{ $logo := .logo }}
+                {{ $logoResource := "" }}
+                {{ with $logo }}
+                  {{ with resources.GetRemote $logo }}
+                    {{ if not .Err }}
+                      {{ $logoResource = . }}
+                    {{ else }}
+                      {{ with resources.Get $logo }}
+                        {{ if not .Err }}
+                          {{ $logoResource = . }}
+                        {{ end }}
+                      {{ end }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+
+                  <div class="governance__item">
+                    {{ with .url }}<a class="governance__item-link" href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                      {{ with $logoResource }}
+                        <div class="governance__item-logo">
+                          <img src="{{ .RelPermalink }}" alt="{{ $name }}">
+                        </div>
+                      {{ else }}
+                        <span class="governance__item-placeholder">{{ $name }}</span>
+                      {{ end }}
+                    {{ with .url }}</a>{{ end }}
+                    <div class="governance__item-title">{{ i18n (printf "collections.governance.%s.title" $organizationType) }}</div>
+                  </div>
+                {{ end }}
               {{ end }}
             {{ end }}
-          {{ else }}
-            <div class="governance__maintainers-item">
-              {{ partial "volunteer-contributors.html" . }}
-            </div>
-          {{ end }}
-        </div>
+          </div>
+        {{ end }}
+        <hr />
+          
+          <h4 class="mt--xl">{{ i18n "collections.governance.maintainers.title" }}</h4>
+          <div class="governance__maintainers-items">
+            {{ with .Params.maintainers }}
+              {{ range . }}
+                {{ $image := resources.Get (printf "/images/contributors/%s.png" (.name | urlize)) }}
+                {{ $name := .name }}
+                {{ with $image }}
+                  <div class="governance__maintainers-item">
+                    <img src="{{ .RelPermalink }}" alt="{{ $name }}">
+                  </div>
+                {{ end }}
+              {{ end }}
+            {{ else }}
+              <div class="governance__maintainers-item">
+                {{ partial "volunteer-contributors.html" . }}
+              </div>
+            {{ end }}
+          </div>
         <h4 class="mt--xl">{{ i18n "collections.governance.contributors.title" }}</h4>
         {{ $collectionRepositoryID := print .Params.id "-declarations" | lower }}
         {{ partial "contributors.html" (dict "repositories" (slice $collectionRepositoryID) "showInfo" true "class" "contributors--align-x-left") }}

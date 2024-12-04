@@ -114,8 +114,16 @@ collections:
   governance:
     title: Gouvernance
     subtitle: Ces personnes et entités s'assurent que les termes de cette collection sont bien suivis.
+    hosts:
+      title: Hôtes
+    administrators:
+      title: Administrateurs
+    curators:
+      title: Curateurs
     maintainers:
-      title: Maintenance
+      title: Mainteneurs
+    sponsors:
+      title: Sponsors
     contributors:
       title: Contributeurices
 impact:

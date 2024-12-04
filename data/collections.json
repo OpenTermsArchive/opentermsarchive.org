@@ -30,7 +30,57 @@
         "schedule": "30 */12 * * *",
         "serverLocation": "London, GB"
       }
-    ]
+    ],
+    "governance": {
+      "hosts": [
+        {
+          "name": "Sciences Po Law School Clinic",
+          "logo": "https://opentermsarchive.org/images/contributors/sciences-po-law-school-clinic.png",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        },
+        {
+          "name": "Host without logo",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        },
+        {
+          "name": "Sciences Po Law School Clinic",
+          "logo": "https://opentermsarchive.org/images/contributors/sciences-po-law-school-clinic.png",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        }
+      ],
+      "administrators": [
+        {
+          "name": "Open Terms Archive",
+          "logo": "https://opentermsarchive.org/images/contributors/open-terms-archive.png",
+          "url": "https://opentermsarchive.org"
+        }
+      ],
+      "curators": [
+        {
+          "name": "Sciences Po Law School Clinic",
+          "logo": "https://opentermsarchive.org/images/contributors/sciences-po-law-school-clinic.png",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        }
+      ],
+      "maintainers": [
+        {
+          "name": "Maintainers with remote image not working",
+          "logo": "https://opentermsarchive.org/images/contributors/volunteer-en.png"
+        },
+        {
+          "name": "Maintainers with local image",
+          "url": "https://www.google.fr",
+          "logo": "images/contributors/volunteer-en.png"
+        }
+      ],
+      "sponsors": [
+        {
+          "name": "Sciences Po Law School Clinic",
+          "logo": "https://opentermsarchive.org/images/contributors/sciences-po-law-school-clinic.png",
+          "url": "https://www.sciencespo.fr/ecole-de-droit/en/content/clinic.html"
+        }
+      ]
+    }
   },
   {
     "name": "Platform Governance Archive",

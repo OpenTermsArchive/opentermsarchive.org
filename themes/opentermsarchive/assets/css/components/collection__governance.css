@@ -8,11 +8,12 @@
   }
 }
 
-.governance__maintainers-items {
+.governance__items {
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
   gap: var(--mL);
-  align-items: flex-start;
   margin-top: var(--mL);
 
   @media (--tabletLarge) {
@@ -21,10 +22,42 @@
   }
 }
 
-.governance__maintainers-item {
-  max-width: 220px;
+.governance__item {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--mXS);
+  width: 240px;
 
   & > .icon__volunteer-contributors-wrapper {
     font-size: 2em;
   }
+}
+
+.governance__item-link{
+  text-align: center;
+}
+
+.governance__item-logo {
+  height: 240px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--pS);
+}
+
+.governance__item-placeholder{
+  width: 240px;
+  height: 240px;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  padding: var(--pS);
+  border:1px solid red;
+}
+
+.governance__item-title{
+  font-weight: bold;
 }
