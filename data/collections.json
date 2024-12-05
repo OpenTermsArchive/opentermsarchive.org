@@ -30,7 +30,11 @@
         "schedule": "30 */12 * * *",
         "serverLocation": "London, GB"
       }
-    ]
+    ],
+    "description": {
+      "en": "The generative AI collection tracks terms of the most popular generative AI services that fall under the European Union jurisdiction and are written in English.\n\nIt's aims to engage the analysis of terms changes but also to analyze the evolving regulatory landscape of generative AI services and reflect on compliance assessment.\n\nIt is maintained by the [Sciences Po Law School Clinic's](https://www.sciencespo.fr/ecole-droit/en/clinic/presentation/) for the project \"Artifical Intelligence (AI) Ethics and Regulation Watch\" of the [DIGILAW](https://www.sciencespo.fr/ecole-droit/en/clinic/digilaw/) research program.",
+      "fr": "La collection Generative AI suit les documents des services d'intelligence artificielle générative les plus populaires dans juridiction de l'Union européenne et écrits en anglais.\n\nElle vise à engager l'analyse des changements apportés à ces documents mais aussi à analyser l'évolution du paysage réglementaire des services d'IA générative et à réfléchir à l'évaluation de la conformité.\n\nElle est maintenue par la [Clinique de l'École de droit de Sciences Po](https://www.sciencespo.fr/ecole-droit/fr/clinique/presentation/) pour le projet \"Éthique et réglementation de l'intelligence artificielle (IA)\" du programme de recherche [DIGILAW](https://www.sciencespo.fr/ecole-droit/fr/clinique/digilaw/)."
+    }
   },
   {
     "name": "Platform Governance Archive",
@@ -66,7 +70,11 @@
         "schedule": "30 */12 * * *",
         "serverLocation": "Bremen, DE"
       }
-    ]
+    ],
+    "description": {
+      "en": "The Plateform Governance Archive (PGA) collection tracks the terms of European major global social media services.\n\nThese services declarations are maintained by the [Platform Governance Archive](https://www.platformgovernancearchive.org/) at the Universität Bremen's [Center for Media Communication and Information Research (ZeMKI)](https://www.uni-bremen.de/zemki) to enables researchers, journalists and the public to answer their questions on how platforms order and govern communication and interaction in our societies, and hold these powerful new institutions accountable.",
+      "fr": "La collection Plateform Governance Archive (PGA) suit les documents des principaux services de médias sociaux européens.\n\nCes déclarations de services sont gérées par la [Platform Governance Archive](https://www.platformgovernancearchive.org/) du [Center for Media Communication and Information Research (ZeMKI)](https://www.uni-bremen.de/zemki) de l'Université de Brême pour permettre aux chercheurs, aux journalistes et au public de répondre à leurs questions sur la manière dont les plateformes ordonnent et gouvernent la communication et l'interaction dans nos sociétés afin de pouvoir demander des comptes à ces nouvelles institutions puissantes."
+    }
   },
   {
     "name": "France",
@@ -102,7 +110,11 @@
         "schedule": "30 */12 * * *",
         "serverLocation": "London, GB"
       }
-    ]
+    ],
+    "description": {
+      "en": "The France collection tracks the terms of the largest French online B2C services.\n\nThe terms in this collection were initially declared by [UFC-Que Choisir](https://www.quechoisir.org/) with support from the [Office of the French Ambassador for Digital Affairs](https://www.diplomatie.gouv.fr/en/french-foreign-policy/digital-diplomacy/), and are now maintained by volunteer contributors.\n\nThe France collection has been used to detect irregularities in French online marketplaces and as an example of feasibility for the [TLDR Act](https://www.congress.gov/bill/118th-congress/house-bill/4568/).",
+      "fr": "La collection France suit les documents des plus grands services B2C français en ligne.\n\nLes documents de cette collection ont été initialement déclarés par l'[UFC-Que Choisir](https://www.quechoisir.org/) avec le soutien du [Bureau de l'Ambassadeur français pour le numérique](https://www.diplomatie.gouv.fr/fr/politique-etrangere-de-la-france/diplomatie-numerique/) et sont maintenant maintenus par des contributeurs bénévoles.\n\nLa collection a été utilisée pour détecter des irrégularités sur les marchés en ligne et comme exemple de faisabilité pour le projet de [loi TLDR](https://www.congress.gov/bill/118th-congress/house-bill/4568/)."
+    }
   },
   {
     "name": "P2B Compliance",
@@ -138,7 +150,11 @@
         "schedule": "30 */6 * * *",
         "serverLocation": "London, GB"
       }
-    ]
+    ],
+    "description": {
+      "en": "The Platform-to-Business Compliance (P2B) collection was originally created by [PPMI](https://ppmi.lt) and [OpenEvidence](https://open-evidence.com) to [assess](https://op.europa.eu/en/publication-detail/-/publication/a91f4a7b-5144-11ee-9220-01aa75ed71a1/language-en/format-PDF/source-search) the application of the P2B Regulation.\n\nFollowing the success of the implementation, the European Commission adopted Open Terms Archive directly, operates its own on-premises instance and publishes the [Digital Services Terms and Conditions Database](https://platform-contracts.digital-strategy.ec.europa.eu/). That official database was launched in December 2023, and versions of the original Open Terms Archive collection have not been tracked since August 2024.",
+      "fr": "La collection Platform-to-Business Compliance (P2B) a été originellement créée par [PPMI](https://ppmi.lt) et [OpenEvidence](https://open-evidence.com) pour [évaluer](https://op.europa.eu/en/publication-detail/-/publication/a91f4a7b-5144-11ee-9220-01aa75ed71a1/language-en/format-PDF/source-search) l'application du règlement P2B pour le compte de la Commission européenne.\n\nSuite au succès de la mise en œuvre, la Commission européenne a adopté directement Open Terms Archive, exploite sa propre instance et publie la [Digital Services Terms and Conditions Database](https://platform-contracts.digital-strategy.ec.europa.eu/). Cette base de données officielle a été lancée en décembre 2023, et les versions de la collection originale d'Open Terms Archive n'ont pas été suivies depuis août 2024."
+    }
   },
   {
     "name": "France Élections",
@@ -170,7 +186,11 @@
         "schedule": "30 */6 * * *",
         "serverLocation": "London, GB"
       }
-    ]
+    ],
+    "description": {
+      "en": "Created during the 2022 French presidential elections, the France Elections collection tracked Community Guidelines of the 5 most-used social media platforms in France that could have a systemic impact on the elections.\n\nThe collection was maintained and used by [Reset Tech](https://reset.tech/) to monitor interference in France's 2022 presidential and parliamentary elections and to produce the joint research report [\"The French information ecosystem put to the test\"](https://www.reset.tech/resources/elections-report-en-2022.pdf) with the Online Election Integrity Watch Group.\n\nThis collection has not been updated since 2022 and should be considered as a database only.",
+      "fr": "Créée à l'occasion des élections présidentielles françaises de 2022, la collection France Elections a suivi les Community Guidelines des 5 plateformes de médias sociaux les plus utilisées en France qui pourraient avoir un impact systémique sur les élections.\n\nLa collection a été maintenue et utilisée par [Reset Tech](https://reset.tech/) pour surveiller l'ingérence dans les élections présidentielles et parlementaires françaises de 2022 et pour produire le rapport de recherche [\"The French information ecosystem put to the test\"](https://www.reset.tech/resources/elections-report-en-2022.pdf) conjointement avec le Online Election Integrity Watch Group.\n\nCette collection n'a pas été mise à jour depuis 2022 et doit être considérée comme une base de données uniquement."
+    }
   },
   {
     "name": "Dating",
@@ -203,7 +223,11 @@
         "schedule": "30 */12 * * *",
         "serverLocation": "Roubaix, FR"
       }
-    ]
+    ],
+    "description": {
+      "en": "The Dating collection tracks terms of dating services, in English, used in Europe and Switzerland.\n\nThe terms in this collection are declared and maintained by [Marie-Pierre Vidonne](https://github.com/mvidonne) (with the support of [HestiaLabs](https://hestialabs.org/en/) until end of 2022) for the [Dating Privacy collective](https://dating-privacy.hestialabs.org/en/) who aims to raise awareness about privacy risks and build new practices in online dating for both users and platforms.",
+      "fr": "La collection Dating suit les documents, en anglais, des services de rencontres utilisés en Europe et en Suisse. \n\nLes documents de cette collection sont déclarés et maintenus par [Marie-Pierre Vidonne](https://github.com/mvidonne) (avec le soutien de [HestiaLabs](https://hestialabs.org/fr/) jusqu'à fin 2022) pour le [Collectif Dating Privacy](https://dating-privacy.hestialabs.org/fr/) qui vise à sensibiliser aux risques liés à la protection de la vie privée et à créer de nouvelles pratiques dans le domaine des rencontres en ligne, tant pour les utilisateurs que pour les plateformes."
+    }
   },
   {
     "name": "Contrib",
@@ -231,7 +255,11 @@
         "schedule": "0 6,18 * * *",
         "serverLocation": "London, GB"
       }
-    ]
+    ],
+    "description": {
+      "en": "The Contrib collection contains terms written in English that may concern any industry and any jurisdiction. It was created thanks to a collaboration with [Tosback](https://tosback.org/), which enabled the import of its data history.\n\nIt's one of the federation's largest collections, tracking over 300 services maintained by volunteer contributors. It is also a good entry point into the Open Terms Archive ecosystem to became familiar with monitoring and change analysis.\n\nData from the this collection has been reused in a number of projects, ranging from research on the impact of social media terms of use on human rights to improving document readability.",
+      "fr": "La collection Contrib contient des documents rédigés en anglais qui peuvent concerner n'importe quelle industries et juridictions. Elle a été créée grâce à une collaboration avec [Tosback](https://tosback.org/), qui a permis d'importer son historique de données.\n\nC'est l'une des plus grandes collections de la fédération, avec plus de 300 services maintenus par des contributeurs bénévoles. C'est également un bon point d'entrée dans l'écosystème d'Open Terms Archive pour se familiariser avec le suivi et l'analyse du changement.\n\nLes données de cette collection ont été réutilisées dans un certain nombre de projets, allant de la recherche sur l'impact des conditions d'utilisation des médias sociaux sur les droits de l'homme à l'amélioration de la lisibilité des documents."
+    }
   },
   {
     "name": "Demo",
@@ -263,6 +291,10 @@
         "schedule": "30 */12 * * *",
         "serverLocation": "Roubaix, FR"
       }
-    ]
+    ],
+    "description": {
+      "en": "The Demo collection tracks changes to terms needed to operate the Open Terms Archive engine, which fall under European Union jurisdiction and are written in English.\n\nThat enables the Open Terms Archive core team to be a user of the software it produces by providing a state-of-the-art reference collection.\n\nIt also ensures that the values of the services contributing to its implementation are aligned with its own.",
+      "fr": "La collection Demo suit les modifications apportées aux termes nécessaires au fonctionnement du moteur d'Open Terms Archive, pour la juridiction de l'Union européenne et en anglais.\n\nLe suivi de ces termes permet à l'équipe coeur d'Open Terms Archive d'être elle même utilisatrice du logiciel qu'elle produit en fournissant une collection de référence à l'état de l'art.\n\nCela permet également de s'assurer que les valeurs des services contribuant à sa mise en œuvre sont alignées avec les siennes"
+    }
   }
 ]
