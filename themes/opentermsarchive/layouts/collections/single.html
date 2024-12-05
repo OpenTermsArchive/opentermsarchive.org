@@ -46,7 +46,7 @@
     <div class="container container--wide container--has-no-padding-y {{ if modBool $isGraySectionIndex 2 }}container--is-gray{{ end }}">
       <div class="collection__metadata container container--1211 container--has-no-padding-x">
         <div class="collection__metadata-desc">
-          {{ i18n "collections.metadata.placeholder" | safeHTML }}
+          {{ default (i18n "collections.metadata.placeholder" | safeHTML) (index .Params.description site.Language.Lang | markdownify) }}
         </div>
         <div class="collection__metadata-items">
           {{ with .Params.stats.services }}
