@@ -24,7 +24,7 @@ async function fetchFederatedCollectionsMetadata() {
 
         console.log(`✅ Successfully fetched metadata for ${collection.name}`);
 
-        return { ...data };
+        return { ...data, endpoint: collection.endpoint };
       } catch (error) {
         console.warn(`❌ Failed to fetch metadata for ${collection.name} with the following error message: ${error.message}`);
 
