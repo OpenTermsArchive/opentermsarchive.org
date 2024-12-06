@@ -77,14 +77,6 @@
           {{ end }}
           {{ with .Params.tracking }}
             {{ $currentTracking := index (last 1 .) 0 }}
-            {{ with $currentTracking.serverLocation }}
-              {{ $location := split . "," }}
-              {{ $city := trim (index $location 0) " " }}
-              {{ $countryCode := trim (index $location 1) " " }}
-              {{ $countryName := index site.Data.display_names.regions site.Language.LanguageCode $countryCode }}
-              {{ $fullLocation := printf "%s, %s" $city $countryName }}
-              {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.server_location") "icon" "map-pin" "desc" $fullLocation) }}
-            {{ end }}
             {{ with $currentTracking.startDate }}
               {{ $formatedDate := ( . | time.Format ":date_long") }}
               {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.start_date") "icon" "power" "desc" $formatedDate) }}
@@ -92,6 +84,14 @@
             {{ with $currentTracking.endDate }}
               {{ $formatedDate := ( . | time.Format ":date_long") }}
               {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.end_date") "icon" "power-off" "desc" $formatedDate) }}
+            {{ end }}
+            {{ with $currentTracking.serverLocation }}
+              {{ $location := split . "," }}
+              {{ $city := trim (index $location 0) " " }}
+              {{ $countryCode := trim (index $location 1) " " }}
+              {{ $countryName := index site.Data.display_names.regions site.Language.LanguageCode $countryCode }}
+              {{ $fullLocation := printf "%s, %s" $city $countryName }}
+              {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.server_location") "icon" "map-pin" "desc" $fullLocation) }}
             {{ end }}
             {{ with $currentTracking.schedule }}
               {{ $cronKey := printf "collections.metadata.cron.%s" . }}
