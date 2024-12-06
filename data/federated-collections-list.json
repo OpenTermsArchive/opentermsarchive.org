@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Generative AI",
+    "endpoint": "http://51.77.110.109/collection-api/v1/metadata"
+  },
+  {
+    "name": "Platform Governance Archive",
+    "endpoint": "http://134.102.58.70/collection-api/v1/metadata"
+  },
+  {
+    "name": "France",
+    "endpoint": "http://198.244.142.9/collection-api/v1/metadata"
+  },
+  {
+    "name": "Dating",
+    "endpoint": "http://vps-99ae1d89.vps.ovh.net/collection-api/v1/metadata"
+  },
+  {
+    "name": "Contrib",
+    "endpoint": "http://51.89.224.102/collection-api/v1/metadata"
+  },
+  {
+    "name": "Demo",
+    "endpoint": "http://162.19.74.224/collection-api/v1/metadata"
+  }
+]
