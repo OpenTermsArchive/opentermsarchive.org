@@ -13,7 +13,7 @@
   "license": "EUPL v1.2",
   "author": "Open Terms Archive",
   "scripts": {
-    "prebuild": "node scripts/fetch-uptime.js",
+    "prebuild": "npm run fetch",
     "build": "hugo --minify --cleanDestinationDir --ignoreCache",
     "test": "npm run lint:markdown && npm run lint:css && npm run lint:js && npm run lint:html && npm run test:links && npm run test:html && npm run test:e2e",
     "pretest:links": "npm run build",
@@ -21,16 +21,19 @@
     "pretest:html": "npm run build",
     "test:html": "html-validate ./public",
     "test:e2e": "node test/cypress/e2e/index.js",
-    "prestart:dev": "node scripts/fetch-uptime.js",
+    "prestart:dev": "npm run fetch",
     "start:dev": "hugo serve --watch --logLevel debug --disableFastRender --printI18nWarnings --ignoreCache",
-    "prestart:ci": "node scripts/fetch-uptime.js",
+    "prestart:ci": "npm run fetch",
     "start:ci": "hugo serve --logLevel error --port 1313",
-    "prestart:preview": "node scripts/fetch-uptime.js",
+    "prestart:preview": "npm run fetch",
     "start:preview": "hugo --gc --minify -b $DEPLOY_PRIME_URL",
     "lint:markdown": "markdownlint *.md content/**/*.md",
     "lint:css": "stylelint \"themes/opentermsarchive/assets/css/**/*.css\"",
     "lint:js": "eslint themes/opentermsarchive/assets/js/ test/**/*.js",
-    "lint:html": "eslint themes/opentermsarchive/layouts/**/*.html -c .htmleslintrc.yaml"
+    "lint:html": "eslint themes/opentermsarchive/layouts/**/*.html -c .htmleslintrc.yaml",
+    "fetch": "npm run fetch:uptime && npm run fetch:collections",
+    "fetch:uptime": "node scripts/fetch-uptime.js",
+    "fetch:collections": "node scripts/fetch-collections.js"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.23.1",
