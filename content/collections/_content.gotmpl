@@ -9,7 +9,7 @@
       {{ $uptimeRatio = .custom_uptime_ratio }}
     {{ end }}
   {{ end }}
-  {{ $params := dict "name" .name "id" .id "languages" .languages "jurisdictions" .jurisdictions "maintainers" .maintainers "stats" .stats "industries" .industries "endpoint" $endpoint "tracking" .tracking "uptimeRatio" $uptimeRatio }}
+  {{ $params := dict "name" .name "id" .id "languages" .languages "jurisdictions" .jurisdictions "maintainers" .maintainers "stats" .stats "industries" .industries "endpoint" $endpoint "tracking" .tracking "uptimeRatio" $uptimeRatio "description" .description }}
   {{ $page := dict
     "params" $params
     "path" .name
