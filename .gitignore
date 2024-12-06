@@ -12,6 +12,7 @@ public
 .hugo_build.lock
 resources/_gen/
 data/uptime.json
+data/collections.json
 .env
 
 # VSCode
