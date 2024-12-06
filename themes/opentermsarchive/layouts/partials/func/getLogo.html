@@ -1,0 +1,31 @@
+{{ $type := default .type "contributors" }}
+{{ $remoteLogoUrl := .logoUrl }}
+{{ $resource := "" }}
+{{ $localImagePath := printf "/images/%s/%s.png" $type (.name | urlize)}}
+{{ $errorMessage := ""}}
+
+{{ with $remoteLogoUrl }}
+  {{ with resources.GetRemote $remoteLogoUrl }}
+    {{ with .Err }}
+      {{ $errorMessage = .Err }}
+    {{ else }}
+      {{ $resource = . }}
+    {{ end }}
+  {{ else }}
+    {{ $errorMessage = printf "Failed to fetch %s" $remoteLogoUrl }}
+  {{ end }}
+{{ end }}
+
+{{ if not $resource }}
+  {{ with resources.Get $localImagePath }}
+    {{ with .Err }}
+      {{ $errorMessage = .Err }}
+    {{ else }}
+      {{ $resource = . }}
+    {{ end }}
+  {{ else }}
+    {{ $errorMessage = printf "%s\nFailed to fetch %s" $errorMessage $localImagePath }}
+  {{ end }}
+{{ end }}
+
+{{ return (dict "resource" $resource "error" $errorMessage) }}

@@ -1,20 +1,32 @@
+{{ $name := .Params.name }}
+{{ $tagline := default .Params.tagline (index .Params.i18n site.Language.Lang "tagline") }}
+{{ $collectionLogo := partial "func/getLogo.html" (dict "logoUrl" .Params.logo "name" $name "type" "collections") }}
+{{ with $collectionLogo.error }}{{ warnf . }}{{ end }}
+{{ $i18n := .Params.i18n }}
+
 <div class="card card--is-white card--center">
-  {{ $image := resources.Get (printf "/images/collections/%s.png" (.Params.name | urlize)) }}
-  {{ with $image }}
+  
+  {{ with $collectionLogo.resource }}
     <div class="card__header">
-      <img src="{{ .RelPermalink }}" alt="">
+      <img src="{{ .RelPermalink }}" alt="{{ $name }}">
     </div>
   {{ end }}
+
   <div class="card__body">
-    {{ with .Params.name }}<h4 class="card__title">{{ . }}</h4>{{ end }}
-    {{ with .Params.industries }}<h5 class="card__subtitle h5--light">{{ index . site.Language.Lang | safeHTML }}</h5>{{ end }}
+
+    {{ with $name }}<h4 class="card__title">{{ . }}</h4>{{ end }}
+    {{ with $tagline }}<h5 class="card__subtitle h5--light">{{ . }}</h5>{{ end }}
+
     <div class="cardtable">
-      {{ with .Params.stats.services }}
+
+      {{ with .Params.totalServices }}
         {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.services") "icon" "folder" "desc" .) }}
       {{ end }}
-      {{ with .Params.stats.documents }}
+
+      {{ with .Params.totalTerms }}
         {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.documents") "icon" "file" "desc" .) }}
       {{ end }}
+
       {{ with .Params.languages }}
         {{ $languages := slice }}
         {{ range . }}
@@ -28,6 +40,7 @@
         {{ end }}
         {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.language" (len $languages)) "icon" "message-circle" "desc" (delimit $languages ", ")) }}
       {{ end }}
+
       {{ with .Params.jurisdictions }}
         {{ $jurisdictions := slice }}
         {{ range . }}
@@ -35,15 +48,17 @@
         {{ end }}
         {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.jurisdiction" (len $jurisdictions)) "icon" "map" "desc" (delimit $jurisdictions ", ")) }}
       {{ end }}
+
     </div>
+
     <div class="mt--xl text--center">
       <div>
-        <a class="button button--secondary" href="https://github.com/openTermsArchive/{{ $.Params.id }}-versions" target="_blank" rel="noopener">
+        <a class="button button--secondary" href="{{ .Params.versions }}" target="_blank" rel="noopener">
           {{ i18n "collections.cta.browse" }}
           <i class="icon ml--2xs" data-lucide="search"></i>
         </a>
       </div>
-      <div class="mt--m">
+      <div class="mt--s">
         <a class="linkicon" href="{{ .Permalink }}">
           {{ i18n "collections.cta.details" }}
           <i class="icon ml--2xs" data-lucide="arrow-right"></i>
@@ -51,17 +66,21 @@
       </div>
     </div>
   </div>
-  <div class="card__author card__author--is-center">
-    {{ with .Params.maintainers }}
+
+  {{ with .Params.governance }}
+    <div class="card__author card__author--is-center">
       {{ range . }}
-        {{ $image := resources.Get (printf "/images/contributors/%s.png" (.name | urlize)) }}
-        {{ $name := .name }}
-        {{ with $image }}
-          <img src="{{ .RelPermalink }}" alt="{{ $name }}">
+        {{ if (in .roles "sponsor") }}
+          {{ $entityName := default .name (index $i18n site.Language.Lang "governance" .name "name") }}
+          {{ $entityLogoUrl := default .logo (index $i18n site.Language.Lang "governance" .name "logo") }}
+          {{ $sponsorsLogo := partial "func/getLogo.html" (dict "logoUrl" $entityLogoUrl "name" $entityName) }}
+          {{ with $sponsorsLogo.error }}{{ warnf . }}{{ end }}
+          {{ with $sponsorsLogo.resource }}<img src="{{ .RelPermalink }}" alt="{{ $entityName }}">{{ end }}
         {{ end }}
       {{ end }}
-    {{ else }}
-      {{ partial "volunteer-contributors.html" . }}
-    {{ end }}
-  </div>
+    </div>
+  {{ end }}
+
 </div>
+
+
