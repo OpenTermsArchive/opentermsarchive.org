@@ -72,8 +72,8 @@
       }
     ],
     "description": {
-      "en": "The **Plateform Governance Archive** (PGA) collection tracks the terms of major global social media services.\n\nThese data are maintained and analysed by the [Platform Governance Archive](https://www.platformgovernancearchive.org/) at the Universität Bremen's [Center for Media Communication and Information Research (ZeMKI)](https://www.uni-bremen.de/zemki).\n\nThis initiative offers researchers, journalists and citizens the tools to analyze how platforms structure and regulate communication and interaction in our societies.\n\nIt also aims to promote greater transparency and accountability of these powerful digital services.",
-      "fr": "La collection **Plateform Governance Archive** (PGA) suit les conditions d'utilisation des principaux services de médias sociaux.\n\nCes données sont maintenues et analysées par la [Platform Governance Archive](https://www.platformgovernancearchive.org/) du [Center for Media Communication and Information Research (ZeMKI)](https://www.uni-bremen.de/zemki) de l'Université de Brême.\n\nCette initiative offre aux chercheurs, journalistes et citoyens des outils pour analyser comment les plateformes structurent et régulent la communication et l’interaction dans nos sociétés.\n\nElle vise également à promouvoir une transparence accrue et à renforcer la responsabilité de ces puissants services numériques."
+      "en": "The **Platform Governance Archive** (PGA) collection tracks the terms of major global social media services.\n\nThis data is maintained and analysed by the [Platform Governance Archive](https://www.platformgovernancearchive.org/) at the Universität Bremen's [Center for Media Communication and Information Research (ZeMKI)](https://www.uni-bremen.de/zemki).\n\nThis initiative offers researchers, journalists and citizens the tools to analyze how platforms structure and regulate communication and interaction in our societies.\n\nIt also aims to promote greater transparency and accountability of these powerful digital services.",
+      "fr": "La collection **Platform Governance Archive** (PGA) suit les conditions d'utilisation des principaux services de médias sociaux.\n\nCes données sont maintenues et analysées par la [Platform Governance Archive](https://www.platformgovernancearchive.org/) du [Center for Media Communication and Information Research (ZeMKI)](https://www.uni-bremen.de/zemki) de l'Université de Brême.\n\nCette initiative offre aux chercheurs, journalistes et citoyens des outils pour analyser comment les plateformes structurent et régulent la communication et l’interaction dans nos sociétés.\n\nElle vise également à promouvoir une transparence accrue et à renforcer la responsabilité de ces puissants services numériques."
     }
   },
   {
@@ -112,8 +112,8 @@
       }
     ],
     "description": {
-      "en": "The **France** collection tracks documents from the leading online services for French consumers.\n\nThe terms in this collection were initially declared by [UFC-Que Choisir](https://www.quechoisir.org/) with support from the [Office of the French Ambassador for Digital Affairs](https://www.diplomatie.gouv.fr/en/french-foreign-policy/digital-diplomacy/). They are now maintained by volunteer contributors.\n\nThe France collection has been used to detect irregularities in French online marketplaces also demonstrated its value as a feasibility example for the [TLDR Act](https://www.congress.gov/bill/118th-congress/house-bill/4568/).",
-      "fr": "La collection **France** suit les documents des plus grands services en ligne à destination des consommateurs français.\n\nLes documents de cette collection ont été initialement déclarés par l'[UFC-Que Choisir](https://www.quechoisir.org/) avec le soutien du [Bureau de l'Ambassadeur français pour le numérique](https://www.diplomatie.gouv.fr/fr/politique-etrangere-de-la-france/diplomatie-numerique/). Ils sont dorénavant maintenus par des contributeurs bénévoles.\n\nLa collection a été utilisée pour détecter des irrégularités sur les marchés en ligne et également démontré sa valeur comme exemple de faisabilité pour le projet de [loi TLDR](https://www.congress.gov/bill/118th-congress/house-bill/4568/)."
+      "en": "The **France** collection tracks documents from the leading online services for French consumers.\n\nThe terms in this collection were initially declared by [UFC-Que Choisir](https://www.quechoisir.org/) with support from the [Office of the French Ambassador for Digital Affairs](https://www.diplomatie.gouv.fr/en/french-foreign-policy/digital-diplomacy/). They are now maintained by volunteer contributors.\n\nThe France collection has been used to detect irregularities in French online marketplaces, and demonstrated its value as a feasibility example for the [TLDR Act](https://www.congress.gov/bill/118th-congress/house-bill/4568/).",
+      "fr": "La collection **France** suit les documents des plus grands services en ligne à destination des consommateurs français.\n\nLes documents de cette collection ont été initialement déclarés par l'[UFC-Que Choisir](https://www.quechoisir.org/) avec le soutien du [Bureau de l'Ambassadeur français pour le numérique](https://www.diplomatie.gouv.fr/fr/politique-etrangere-de-la-france/diplomatie-numerique/). Ils sont dorénavant maintenus par des contributeurs bénévoles.\n\nLa collection a été utilisée pour détecter des irrégularités sur des services de vente en ligne et a démontré sa valeur comme preuve de faisabilité pour le [projet de loi TLDR](https://www.congress.gov/bill/118th-congress/house-bill/4568/)."
     }
   },
   {
@@ -130,8 +130,8 @@
       "documents": "253"
     },
     "industries": {
-      "en": "Online intermediation services for businesses subject to the European P2B 2019/1150 regulation",
-      "fr": "Services d’intermédiation en ligne pour les entreprises soumises au règlement européen P2B 2019/1150"
+      "en": "Online intermediation services for businesses in Europe",
+      "fr": "Services d’intermédiation en ligne pour les entreprises européennes"
     },
     "maintainers": [
       {
@@ -152,8 +152,8 @@
       }
     ],
     "description": {
-      "en": "The **Platform-to-Business Compliance** (P2B) collection was originally created by [PPMI](https://ppmi.lt) and [OpenEvidence](https://open-evidence.com) to [assess](https://op.europa.eu/en/publication-detail/-/publication/a91f4a7b-5144-11ee-9220-01aa75ed71a1/language-en/format-PDF/source-search) the application of the <a href=\"https://eur-lex.europa.eu/eli/reg/2019/1150/oj\">P2B 2019/1150</a> on behalf of the European Commission.\n\nFollowing the success of the implementation, the European Commission adopted Open Terms Archive directly. It operates its own on-premises instance and publishes the [Digital Services Terms and Conditions Database](https://platform-contracts.digital-strategy.ec.europa.eu/).\n\nThat official database was launched in December 2023, and versions of the original Open Terms Archive collection have not been tracked since August 2024.",
-      "fr": "La collection **Platform-to-Business Compliance** (P2B) a été originellement créée par [PPMI](https://ppmi.lt) et [OpenEvidence](https://open-evidence.com) pour [évaluer](https://op.europa.eu/en/publication-detail/-/publication/a91f4a7b-5144-11ee-9220-01aa75ed71a1/language-en/format-PDF/source-search) l'application du règlement <a href=\"https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32019R1150&from=EN\">P2B 2019/1150</a> pour le compte de la Commission européenne.\n\nSuite au succès de la mise en œuvre, la Commission européenne a adopté directement Open Terms Archive. Elle exploite sa propre instance et publie la [Digital Services Terms and Conditions Database](https://platform-contracts.digital-strategy.ec.europa.eu/).\n\nCette base de données officielle a été lancée en décembre 2023, et les versions de la collection originale d'Open Terms Archive n'ont pas été suivies depuis août 2024."
+      "en": "The **Platform-to-Business Compliance** (P2B) collection was originally created by [PPMI](https://ppmi.lt) and [OpenEvidence](https://open-evidence.com) to [assess](https://op.europa.eu/en/publication-detail/-/publication/a91f4a7b-5144-11ee-9220-01aa75ed71a1/language-en/format-PDF/source-search) the application of the <a href=\"https://eur-lex.europa.eu/eli/reg/2019/1150/oj\">P2B 2019/1150</a> on behalf of the European Commission.\n\nFollowing the success of the implementation, the European Commission adopted Open Terms Archive directly. It operates its own on-premises instance since December 2023 and publishes the [Digital Services Terms and Conditions Database](https://platform-contracts.digital-strategy.ec.europa.eu/).",
+      "fr": "La collection **Platform-to-Business Compliance** (P2B) a été originellement créée par [PPMI](https://ppmi.lt) et [OpenEvidence](https://open-evidence.com) pour [évaluer](https://op.europa.eu/en/publication-detail/-/publication/a91f4a7b-5144-11ee-9220-01aa75ed71a1/language-en/format-PDF/source-search) l'application du règlement <a href=\"https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32019R1150&from=EN\">P2B 2019/1150</a> pour le compte de la Commission européenne.\n\nSuite au succès de la mise en œuvre, la Commission européenne a adopté directement Open Terms Archive. Elle exploite depuis décembre 2023 sa propre instance et publie la [Digital Services Terms and Conditions Database](https://platform-contracts.digital-strategy.ec.europa.eu/)."
     }
   },
   {
@@ -188,8 +188,8 @@
       }
     ],
     "description": {
-      "en": "The **France Elections** collection was created for the 2022 French presidential election.\n\nIts objective was to track the Community Guidelines of the five most widely used social media platforms in France, likely to have a systemic impact on the conduct and outcome of the elections.\n\nThe collection was maintained and used by [Reset Tech](https://reset.tech/) to monitor interference in France's 2022 presidential and parliamentary elections and to produce the joint research report [\"The French information ecosystem put to the test\"](https://www.reset.tech/resources/elections-report-en-2022.pdf) with the Online Election Integrity Watch Group.\n\nThis collection has not been updated since 2022 and should be considered as a database only.",
-      "fr": "La collection **France Elections** a été créée à l'occasion des élections présidentielles et législatives française de 2022.\n\nSon objectif était de suivre les règles communautaires des cinq plateformes de médias sociaux les plus utilisées en France, susceptibles d’avoir un impact systémique sur le déroulement et les résultats des élections.\n\nLa collection a été maintenue et utilisée par [Reset Tech](https://reset.tech/) pour surveiller l'ingérence dans les élections et pour produire le rapport de recherche [\"The French information ecosystem put to the test\"](https://www.reset.tech/resources/elections-report-en-2022.pdf) conjointement avec le Online Election Integrity Watch Group.\n\nCette collection n'a pas été mise à jour depuis septembre 2022."
+      "en": "The **France Elections** collection was created for the 2022 French presidential election.\n\nIts aim was to track the Community Guidelines of the five most widely used social media platforms in France that were likely to have a systemic impact on the conduct and outcome of the elections.\n\nThe collection was maintained and used by [Reset Tech](https://reset.tech/) to monitor interference in France's 2022 presidential and parliamentary elections and to produce the joint research report [\"The French information ecosystem put to the test\"](https://www.reset.tech/resources/elections-report-en-2022.pdf) with the Online Election Integrity Watch Group.",
+      "fr": "La collection **France Élections** a été créée à l'occasion des élections présidentielles et législatives française de 2022.\n\nSon objectif était de suivre les règles communautaires des cinq plateformes de médias sociaux les plus utilisées en France, susceptibles d’avoir un impact systémique sur le déroulement et les résultats des élections.\n\nLa collection a été maintenue et utilisée par [Reset Tech](https://reset.tech/) pour surveiller l'ingérence dans les élections et pour produire le rapport de recherche [\"The French information ecosystem put to the test\"](https://www.reset.tech/resources/elections-report-en-2022.pdf) conjointement avec le Online Election Integrity Watch Group."
     }
   },
   {
@@ -257,8 +257,8 @@
       }
     ],
     "description": {
-      "en": "The **Contrib** collection gathers terms spanning a wide variety of industries and jurisdictions.\n\nIt was initially created thanks to a collaboration with [Tosback](https://tosback.org/), which enabled the import of its data history.\n\nIt's one of the federation's largest collections, tracking over 300 services maintained by volunteer contributors. It is also a good entry point into the Open Terms Archive ecosystem to became familiar with monitoring and change analysis.\n\nThe data in this collection has been reused in a variety of projects, from research into the impact of social media usage conditions on human rights, to improving the readability of documents.",
-      "fr": "La collection **Contrib** rassemble des conditions d'utilisation couvrant une large diversité d'industries et de juridictions.\n\nElle a été initialement créée en collaboration avec [Tosback](https://tosback.org/), qui a permis d'importer son historique de données.\n\nC'est l'une des plus grandes collections de la fédération, avec plus de 300 services maintenus par des contributeurs bénévoles. C'est également un bon point d'entrée dans l'écosystème d'Open Terms Archive pour se familiariser avec le suivi et l'analyse du changement.\n\nLes données de cette collection ont été réutilisées dans divers projets, allant de la recherche sur l'impact des conditions d'utilisation des médias sociaux sur les droits de l'homme à l'amélioration de la lisibilité des documents."
+      "en": "The **Contrib** collection gathers terms spanning a wide variety of industries and jurisdictions.\n\nIt was initially created thanks to a collaboration with [TOSBack](https://tosback.org/), which enabled the import of its data history.\n\nIt's the largest collections in the federation, tracking over 300 services maintained by volunteer contributors. It is also a good entry point into the Open Terms Archive ecosystem to become familiar with monitoring and change analysis.\n\nThe data in this collection has been reused in a variety of projects, from research into the impact of social media usage conditions on human rights, to improving the readability of documents.",
+      "fr": "La collection **Contrib** rassemble des conditions d'utilisation couvrant une grande variété d'industries et de juridictions.\n\nElle a été initialement créée en collaboration avec [TOSBack](https://tosback.org/), qui a permis d'importer son historique de données.\n\nC'est l'une des plus grandes collections de la fédération, avec plus de 300 services maintenus par des contributeurs bénévoles. C'est également un bon point d'entrée dans l'écosystème d'Open Terms Archive pour se familiariser avec le suivi et l'analyse des changements.\n\nLes données de cette collection ont été réutilisées dans divers projets allant de la recherche sur l'impact des conditions d'utilisation des médias sociaux sur les droits de l'homme à l'amélioration de la lisibilité des CGUs."
     }
   },
   {
@@ -281,8 +281,8 @@
       "documents": "9"
     },
     "industries": {
-      "en": "Subset of services used by Open Terms Archive",
-      "fr": "Sous-ensemble de services utilisés par Open Terms Archive"
+      "en": "Services used by Open Terms Archive",
+      "fr": "Services utilisés par Open Terms Archive"
     },
     "endpoint": "http://162.19.74.224/collection-api/v1",
     "tracking": [
@@ -293,8 +293,8 @@
       }
     ],
     "description": {
-      "en": "The **Demo** collection tracks changes to the terms of use for a subset of services used by Open Terms Archive.\n\nThis enables Open Terms Archive core team to be users of the software it produces and providing a reference collection.",
-      "fr": "La collection **Demo** suit les modifications apportées aux conditions d'utilisation d'un sous ensemble de services utilisés par Open Terms Archive.\n\nCela permet à l'équipe coeur d' Open Terms Archive d'être elle même utilisatrice du logiciel qu'elle produit et de fournir une collection de référence."
+      "en": "The **Demo** collection tracks changes to the terms of use of services used by Open Terms Archive.\n\nThis provides a reference collection for best practices and enables the Open Terms Archive Core Team to be a user of the software it produces.",
+      "fr": "La collection **Demo** suit les modifications apportées aux conditions d'utilisation des services utilisés par Open Terms Archive.\n\nCela fournit une collection de référence pour les bonnes pratiques et permet à l'équipe coeur d’Open Terms Archive d'être elle-même utilisatrice du logiciel qu'elle produit."
     }
   }
 ]
