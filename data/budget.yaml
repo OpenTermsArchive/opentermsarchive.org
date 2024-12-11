@@ -1,100 +1,120 @@
 expenditures:
   - date: 2020-06-01
-    amount: 20164
+    amount: 16352
   - date: 2020-07-01
-    amount: 41225
+    amount: 34273
   - date: 2020-08-01
-    amount: 65980
+    amount: 55440
   - date: 2020-09-01
-    amount: 82662
+    amount: 69880
   - date: 2020-10-01
-    amount: 113006
+    amount: 95290
   - date: 2020-11-01
-    amount: 134122
+    amount: 114388
   - date: 2020-12-01
-    amount: 157444
+    amount: 133449
   - date: 2021-01-01
-    amount: 160489
+    amount: 136495
   - date: 2021-02-01
-    amount: 163535
+    amount: 139540
   - date: 2021-03-01
-    amount: 175102
+    amount: 151107
   - date: 2021-04-01
-    amount: 189532
+    amount: 165538
   - date: 2021-05-01
-    amount: 201578
+    amount: 177583
   - date: 2021-06-01
-    amount: 214084
+    amount: 190089
   - date: 2021-07-01
-    amount: 224887
+    amount: 200892
   - date: 2021-08-01
-    amount: 237278
+    amount: 213283
   - date: 2021-09-01
-    amount: 252117
+    amount: 228123
   - date: 2021-10-01
-    amount: 294596
+    amount: 270602
   - date: 2021-11-01
-    amount: 326758
+    amount: 302764
   - date: 2021-12-01
-    amount: 340544
+    amount: 316549
   - date: 2022-01-01
-    amount: 342250
+    amount: 318255
   - date: 2022-02-01
-    amount: 354120
+    amount: 330126
   - date: 2022-03-01
-    amount: 401509
+    amount: 377515
   - date: 2022-04-01
-    amount: 431689
+    amount: 407695
   - date: 2022-05-01
-    amount: 472800
+    amount: 448805
   - date: 2022-06-01
-    amount: 512906
+    amount: 488911
   - date: 2022-07-01
-    amount: 551087
+    amount: 527092
   - date: 2022-08-01
-    amount: 572105
+    amount: 548110
   - date: 2022-09-01
-    amount: 609376
+    amount: 585381
   - date: 2022-10-01
-    amount: 638153
+    amount: 614158
   - date: 2022-11-01
-    amount: 685259
+    amount: 661264
   - date: 2022-12-01
-    amount: 699557
+    amount: 675562
   - date: 2023-01-01
-    amount: 733520
+    amount: 709525
   - date: 2023-02-01
-    amount: 753788
+    amount: 729793
   - date: 2023-03-01
-    amount: 779472
+    amount: 755477
   - date: 2023-04-01
-    amount: 795976
+    amount: 771981
   - date: 2023-05-01
-    amount: 815324
+    amount: 791329
   - date: 2023-06-01
-    amount: 821293
+    amount: 797298
   - date: 2023-07-01
-    amount: 825705
+    amount: 801711
   - date: 2023-08-01
-    amount: 834110
+    amount: 810115
   - date: 2023-09-01
-    amount: 864169
+    amount: 840174
   - date: 2023-10-01
-    amount: 890602
+    amount: 867052
   - date: 2023-11-01
-    amount: 893129
+    amount: 869579
   - date: 2023-12-01
-    amount: 910387
+    amount: 887317
   - date: 2024-01-01
-    amount: 907617
+    amount: 890298
   - date: 2024-02-01
-    amount: 927776
+    amount: 910473
+  - date: 2024-03-01
+    amount: 938947
+  - date: 2024-04-01
+    amount: 964930
+  - date: 2024-05-01
+    amount: 990880
+  - date: 2024-06-01
+    amount: 1010346
+  - date: 2024-07-01
+    amount: 1020049
+  - date: 2024-08-01
+    amount: 1024565
+  - date: 2024-09-01
+    amount: 1034890
+  - date: 2024-10-01
+    amount: 1077737
+  - date: 2024-11-01
+    amount: 1112269
+  - date: 2024-12-01
+    amount: 1143727
 
 funding_sources:
   - title:
       fr: 🇫🇷🏛 Ministère de l’Europe et des Affaires Étrangères
       en: 🇫🇷🏛 French Ministry for Europe and Foreign Affairs
-    amount: 677921
+    amount: 882205
   - title:
       fr: 🇪🇺🏛 France Relance
       en: 🇪🇺🏛 French Covid Recovery Fund
@@ -106,11 +126,11 @@ funding_sources:
   - title:
       fr: 🇫🇷🏛 Direction Interministérielle du Numérique
       en: 🇫🇷🏛 Interministerial Directorate for Digital Affairs
-    amount: 20551
+    amount: 20638
   - title:
       fr: 🇳🇱🏦 NLNet Foundation
       en: 🇳🇱🏦 NLNet Foundation
-    amount: 19890
+    amount: 24720
   - title:
       fr: 🇩🇪🎓 Université de Brême
       en: 🇩🇪🎓 University of Bremen
@@ -131,3 +151,7 @@ funding_sources:
       fr: 🇫🇷🎓 Université de Brest
       en: 🇫🇷🎓 University of Brest
     amount: 445
+  - title:
+      fr: 🇺🇸🏦 GitHub
+      en: 🇺🇸🏦 GitHub
+    amount: 90
