@@ -22,7 +22,7 @@
     "test:html": "html-validate ./public",
     "test:e2e": "node test/cypress/e2e/index.js",
     "prestart:dev": "npm run fetch",
-    "start:dev": "hugo serve --watch --logLevel debug --disableFastRender --printI18nWarnings --ignoreCache",
+    "start:dev": "hugo serve --watch --logLevel warn --disableFastRender --printI18nWarnings --ignoreCache",
     "prestart:ci": "npm run fetch",
     "start:ci": "hugo serve --logLevel error --port 1313",
     "prestart:preview": "npm run fetch",
