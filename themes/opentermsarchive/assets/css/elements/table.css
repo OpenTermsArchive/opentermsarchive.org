@@ -22,7 +22,7 @@ table {
     }
 
     & tr:nth-child(2n) {
-      background-color: rgb(246, 248, 250);
+      background-color: rgb(246 248 250);
     }
   }
 }
