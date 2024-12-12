@@ -11,6 +11,11 @@
   {{ with $collectionLogo.error }}{{ warnf . }}{{ end }}
   {{ $governance := .Params.governance }}
   {{ $i18n := .Params.i18n }}
+  {{ $languages := .Params.languages }}
+  {{ $allEuLanguages := slice "bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv" }}
+  {{ $nonEuCollectionLanguages := symdiff $languages $allEuLanguages }}
+  {{ $isOnlyEuLanguages := eq (len $nonEuCollectionLanguages) 0 }}
+  {{ $displayLanguages := slice }}
   
   <div class="collection">
     <div class="container container--wide container--has-no-padding-y">
@@ -68,18 +73,15 @@
           {{ with .Params.totalTerms }}
             {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.documents") "icon" "file" "desc" .) }}
           {{ end }}
-          {{ with .Params.languages }}
-            {{ $languages := slice }}
-            {{ range . }}
-              {{ if eq . "*" }}
-                {{ $languages = $languages | append (i18n "collections.metadata.language_various") }}
-              {{ else if eq . "*eu" }}
-                {{ $languages = $languages | append (i18n "collections.metadata.language_europe") }}
-              {{ else }}
-                {{ $languages = $languages | append ( strings.FirstUpper (index site.Data.display_names.languages site.Language.LanguageCode .)) }}
-              {{ end }}
+          {{ with $languages }}
+            {{ if $isOnlyEuLanguages }}
+              {{ $displayLanguages = $displayLanguages | append (i18n "collections.metadata.language_europe") }}
+              {{ $languages = slice }}
             {{ end }}
-            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.language" (len $languages)) "icon" "message-circle" "desc" (delimit $languages ", ")) }}
+            {{ range $languages }}
+              {{ $displayLanguages = $displayLanguages | append ( strings.FirstUpper (index site.Data.display_names.languages site.Language.LanguageCode .)) }}
+            {{ end }}
+            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.language" (len $displayLanguages)) "icon" "message-circle" "desc" (delimit $displayLanguages ", ")) }}
           {{ end }}
           {{ with .Params.jurisdictions }}
             {{ $jurisdictions := slice }}

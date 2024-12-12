@@ -73,7 +73,6 @@ collections:
     language:
       one: Language
       other: Languages
-    language_various: various
     language_europe: European Union
     jurisdiction: 
       one: Jurisdiction

@@ -1,10 +1,54 @@
 languages:
   fr:
+    bg: bulgare
+    cs: tchèque
+    da: danois
+    de: allemand
+    el: grec
     en: anglais
+    es: espagnol
+    et: estonien
+    fi: finnois
     fr: français
+    ga: irlandais
+    hr: croate
+    hu: hongrois
+    it: italien
+    lt: lituanien
+    lv: letton
+    mt: maltais
+    nl: néerlandais
+    pl: polonais
+    pt: portugais
+    ro: roumain
+    sk: slovaque
+    sl: slovène
+    sv: suédois
   en:
+    bg: bulgarian
+    cs: czech
+    da: danish
+    de: german
+    el: greek
     en: english
+    es: spanish
+    et: estonian
+    fi: finnish
     fr: french
+    ga: irish
+    hr: croatian
+    hu: hungarian
+    it: italian
+    lt: lithuanian
+    lv: latvian
+    mt: maltese
+    nl: dutch
+    pl: polish
+    pt: portuguese
+    ro: romanian
+    sk: slovak
+    sl: slovenian
+    sv: swedish
 regions:
   fr:
     EU: Union européenne
