@@ -240,6 +240,8 @@
                 <div class="governance__item-logo">
                   {{ with $entityLogo.resource }}
                     <img src="{{ .RelPermalink }}" alt="{{ $entityName }}">
+                  {{ else }}
+                    <i class="icon icon--gray icon--big icon--stroke-thin" data-lucide="image"></i>
                   {{ end }}
                 </div>
                 <div class="governance__item-name">{{ $entityName }}</div>
