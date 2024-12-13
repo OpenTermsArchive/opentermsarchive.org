@@ -5,7 +5,7 @@ service: OpenAI
 terms_types: ["Terms of Service"]
 dates: ["2023-11-14"]
 author: Brice Bai
-related_collections: ["GenAI"]
+related_collections: ["genai"]
 ---
 
 OpenAI [prohibited](https://github.com/OpenTermsArchive/GenAI-versions/commit/d9d49b2d5e5354590a50a181cb3034b888f7d03d) the modification, copying or leasing of its services as well as the circumvention of their services’ security measures. It also limited its liability by requiring users to warrant rights in their inputs and by clarifying that the output shall not be seen as factual information or as OpenAI’s opinion.

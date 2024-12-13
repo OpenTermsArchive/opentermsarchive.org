@@ -5,7 +5,7 @@ service: OpenAI
 terms_types: ["Privacy Policy"]
 dates: ["2023-11-13"]
 author: Brice Bai
-related_collections: ["GenAI"]
+related_collections: ["genai"]
 ---
 
 OpenAI [stated](https://github.com/OpenTermsArchive/GenAI-versions/commit/2156cb964370ce4a838bc7f03b57513edf07d47e#diff-41ba34d83f6a6973f8baa1a83e44c28a8bfc58b4d5e152865c765bf95e941cc0R92) that starting on December 14, 2023, they would notify organisations (e.g. employers) about individual accounts created with organisational email addresses. This notification allows to transfer these individual accounts to business accounts, under which organisations have access to all inputs and outputs of their generative AI services and control over the individual accounts.
