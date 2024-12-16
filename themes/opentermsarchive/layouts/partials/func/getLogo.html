@@ -1,4 +1,4 @@
-{{ $type := default .type "contributors" }}
+{{ $type := default "contributors" .type }}
 {{ $remoteLogoUrl := .logoUrl }}
 {{ $resource := "" }}
 {{ $localImagePath := printf "/images/%s/%s.png" $type (.name | urlize)}}

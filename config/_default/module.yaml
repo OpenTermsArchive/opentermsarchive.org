@@ -1,6 +1,8 @@
 mounts:
   - source: data/collections.json
     target: static/collections.json
+  - source: assets/images/
+    target: static/images/
   - source: assets
     target: assets
   - source: .all-contributorsrc

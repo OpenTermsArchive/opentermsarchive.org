@@ -1,4 +1,13 @@
 {{ define "main" }}
+  {{ $ambassadeurFrancaisPourLeNumerique := resources.Get "images/contributors/ambassadeur-francais-pour-le-numerique.png" }}
+  {{ $meae := resources.Get "images/contributors/meae.png" }}
+  {{ $franceRelance := resources.Get "images/contributors/france-relance.png" }}
+  {{ $nextgen := resources.Get "images/contributors/nextgen.png" }}
+  {{ $resetTech := resources.Get "images/contributors/reset-tech.png" }}
+  {{ $nlnet := resources.Get "images/contributors/nlnet.png" }}
+  {{ $europeanCommission := resources.Get "images/contributors/european-commission.png" }}
+  {{ $dinum := resources.Get "images/contributors/dinum.png" }}
+
   <div class="container container--has-no-padding-top">
     <div class="container container--98">
       <div class="textcontent text--center">
@@ -10,8 +19,10 @@
           <div class="thumbgallery mb--2xl">
             <div class="thumbgallery__items thumbgallery__items--has-no-margin-top">
               <a href="https://disinfo.quaidorsay.fr" target="_blank" rel="noopener" aria-label="{{ i18n "about.incubator.subtitle" }}">
-                <div class="thumbgallery__itemememem">
-                  <img src="{{ (resources.Get "/images/contributors/ambassadeur-francais-pour-le-numerique.png").RelPermalink }}" width="158" height="80" />
+                <div class="thumbgallery__item">
+                  {{ with $ambassadeurFrancaisPourLeNumerique }}
+                    <img src="{{ .RelPermalink }}" width="158" height="80">
+                  {{ end }}
                 </div>
               </a>
             </div>
@@ -22,27 +33,41 @@
           <p>{{ i18n "about.funders.subtitle" }}</p>
           <div class="thumbgallery thumbgalery--is-small mb--2xl">
             <div class="thumbgallery__items thumbgallery__items--has-no-margin-top">
-              <div class="thumbgallery__item">
-                <img src="{{ (resources.Get "/images/contributors/meae.png").RelPermalink }}" width="130" height="117" />
-              </div>
-              <div class="thumbgallery__item">
-                <img src="{{ (resources.Get "/images/contributors/france-relance.png").RelPermalink }}" width="77" height="77" />
-              </div>
-              <div class="thumbgallery__item">
-                <img src="{{ (resources.Get "/images/contributors/nextgen.png").RelPermalink }}" width="220" height="48" />
-              </div>
-              <div class="thumbgallery__item">
-                <img src="{{ (resources.Get "/images/contributors/reset-tech.png").RelPermalink }}" width="101" height="29" />
-              </div>
-              <div class="thumbgallery__item">
-                <img src="{{ (resources.Get "/images/contributors/nlnet.png").RelPermalink }}" width="160" height="120" />
-              </div>
-              <div class="thumbgallery__item">
-                <img src="{{ (resources.Get "/images/contributors/european-commission.png").RelPermalink }}" width="144" height="100" />
-              </div>
-              <div class="thumbgallery__item">
-                <img src="{{ (resources.Get "/images/contributors/dinum.png").RelPermalink }}" width="320" height="80" />
-              </div>
+              {{ with $meae }}
+                <div class="thumbgallery__item">
+                  <img src="{{ .RelPermalink }}" width="130" height="117">
+                </div>
+              {{ end }}
+              {{ with $franceRelance }}
+                <div class="thumbgallery__item">
+                  <img src="{{ .RelPermalink }}" width="77" height="77">
+                </div>
+              {{ end }}
+              {{ with $nextgen }}
+                <div class="thumbgallery__item">
+                  <img src="{{ .RelPermalink }}" width="220" height="48">
+                </div>
+              {{ end }}
+              {{ with $resetTech }}
+                <div class="thumbgallery__item">
+                  <img src="{{ .RelPermalink }}" width="101" height="29">
+                </div>
+              {{ end }}
+              {{ with $nlnet }}
+                <div class="thumbgallery__item">
+                  <img src="{{ .RelPermalink }}" width="160" height="120">
+                </div>
+              {{ end }}
+              {{ with $europeanCommission }}
+                <div class="thumbgallery__item">
+                  <img src="{{ .RelPermalink }}" width="144" height="100">
+                </div>
+              {{ end }}
+              {{ with $dinum }}
+                <div class="thumbgallery__item">
+                  <img src="{{ .RelPermalink }}" width="320" height="80">
+                </div>
+              {{ end }}
             </div>
           </div>
           <p class="text--light mb--3xl">{{ i18n "about.funders.details" | markdownify }}</p>

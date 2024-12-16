@@ -4,9 +4,11 @@
       {{ range $name, $data := site.Data.distinctions }}
         {{ $image := resources.Get (printf "/images/distinctions/%s.png" ($name | urlize)) }}
         <a class="distinction" href="{{ $data.link }}" target="_blank" rel="noopener">
-          <div class="distinction__img">
-            <img src="{{ $image.RelPermalink }}" alt="">
-          </div>
+          {{ with $image }}
+            <div class="distinction__img">
+              <img src="{{ .RelPermalink }}" alt="">
+            </div>
+          {{ end }}
           <div class="distinction__desc">
             {{ index $data.description site.Language.Lang | safeHTML }}
           </div>

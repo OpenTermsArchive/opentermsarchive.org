@@ -1,13 +1,13 @@
 {{ define "main" }}
   {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "size" "98" ) }}
-  {{ $logoBlackPNG := resources.Get "/images/logo/logo-open-terms-archive-black.png" }}
-  {{ $logoBlackSVG := resources.Get "/images/logo/logo-open-terms-archive-black.svg" }}
-  {{ $logoBlackAlternativePNG := resources.Get "/images/logo/logo-open-terms-archive-black-alternative.png" }}
-  {{ $logoBlackAlternativeSVG := resources.Get "/images/logo/logo-open-terms-archive-black-alternative.svg" }}
-  {{ $logoWhitePNG := resources.Get "/images/logo/logo-open-terms-archive-white.png" }}
-  {{ $logoWhiteSVG := resources.Get "/images/logo/logo-open-terms-archive-white.svg" }}
-  {{ $logoWhiteAlternativePNG := resources.Get "/images/logo/logo-open-terms-archive-white-alternative.png" }}
-  {{ $logoWhiteAlternativeSVG := resources.Get "/images/logo/logo-open-terms-archive-white-alternative.svg" }}
+  {{ $logoBlackPNG := resources.Get "images/logo/logo-open-terms-archive-black.png" }}
+  {{ $logoBlackSVG := resources.Get "images/logo/logo-open-terms-archive-black.svg" }}
+  {{ $logoBlackAlternativePNG := resources.Get "images/logo/logo-open-terms-archive-black-alternative.png" }}
+  {{ $logoBlackAlternativeSVG := resources.Get "images/logo/logo-open-terms-archive-black-alternative.svg" }}
+  {{ $logoWhitePNG := resources.Get "images/logo/logo-open-terms-archive-white.png" }}
+  {{ $logoWhiteSVG := resources.Get "images/logo/logo-open-terms-archive-white.svg" }}
+  {{ $logoWhiteAlternativePNG := resources.Get "images/logo/logo-open-terms-archive-white-alternative.png" }}
+  {{ $logoWhiteAlternativeSVG := resources.Get "images/logo/logo-open-terms-archive-white-alternative.svg" }}
   <div class="container container--is-gray container--has-no-padding-y">
     <div class="container container--98">
       <h2>{{ i18n "media.logo.title" }}</h2>
@@ -22,15 +22,19 @@
         <div class="asset">
           <div class="asset__description">{{ i18n "media.logo.light_background" }}</div>
           <div class="asset__actions">
-            <a class="button" download href="{{ $logoBlackPNG.RelPermalink }}">{{ i18n "media.logo.cta_png" }}</a>
-            <a download href="{{ $logoBlackSVG.RelPermalink }}">{{ i18n "media.logo.cta_svg" }}</a>
+            {{ with $logoBlackPNG }}
+              <a class="button" download href="{{ .RelPermalink }}">{{ i18n "media.logo.cta_png" }}</a>
+              <a download href="{{ .RelPermalink }}">{{ i18n "media.logo.cta_svg" }}</a>
+            {{ end }}
           </div>
         </div>
         <div class="asset">
           <div class="asset__description">{{ i18n "media.logo.dark_background" }}</div>
           <div class="asset__actions">
-            <a class="button" download href="{{ $logoWhitePNG.RelPermalink }}">{{ i18n "media.logo.cta_png" }}</a>
-            <a download href="{{ $logoWhiteSVG.RelPermalink }}">{{ i18n "media.logo.cta_svg" }}</a>
+            {{ with $logoWhitePNG }}
+              <a class="button" download href="{{ .RelPermalink }}">{{ i18n "media.logo.cta_png" }}</a>
+              <a download href="{{ .RelPermalink }}">{{ i18n "media.logo.cta_svg" }}</a>
+            {{ end }}
           </div>
         </div>
       </div>
@@ -45,15 +49,19 @@
         <div class="asset">
           <div class="asset__description">{{ i18n "media.logo.light_background" }}</div>
           <div class="asset__actions">
-            <a class="button" download href="{{ $logoBlackAlternativePNG.RelPermalink }}">{{ i18n "media.logo.cta_png" }}</a>
-            <a download href="{{ $logoBlackAlternativeSVG.RelPermalink }}">{{ i18n "media.logo.cta_svg" }}</a>
+            {{ with $logoBlackAlternativePNG }}
+              <a class="button" download href="{{ .RelPermalink }}">{{ i18n "media.logo.cta_png" }}</a>
+              <a download href="{{ .RelPermalink }}">{{ i18n "media.logo.cta_svg" }}</a>
+            {{ end }}
           </div>
         </div>
         <div class="asset">
           <div class="asset__description">{{ i18n "media.logo.dark_background" }}</div>
           <div class="asset__actions">
-            <a class="button" download href="{{ $logoWhiteAlternativePNG.RelPermalink }}">{{ i18n "media.logo.cta_png" }}</a>
-            <a download href="{{ $logoWhiteAlternativeSVG.RelPermalink }}">{{ i18n "media.logo.cta_svg" }}</a>
+            {{ with $logoWhiteAlternativePNG }}
+              <a class="button" download href="{{ .RelPermalink }}">{{ i18n "media.logo.cta_png" }}</a>
+              <a download href="{{ .RelPermalink }}">{{ i18n "media.logo.cta_svg" }}</a>
+            {{ end }}
           </div>
         </div>
       </div>

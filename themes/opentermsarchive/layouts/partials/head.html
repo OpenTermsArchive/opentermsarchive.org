@@ -17,14 +17,18 @@
   <meta property="og:description" content="{{ with .Param "html_description"}}{{ . }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}">
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
-  {{ $openGraphImage := resources.Get "/images/opengraph/open-terms-archive.png" }}
-  {{ $filename := print (path.BaseName .Page.File.Path) ".png" }}
-  {{ range where .Site.Pages ".Section" .CurrentSection.Section }}
-    {{ with .Page.Resources.GetMatch $filename }}
-      {{ $openGraphImage = . }}
+  {{ $openGraphImage := resources.Get "images/opengraph/open-terms-archive.png" }}
+  {{ if .Page.File }}
+    {{ $filename := print (path.BaseName .Page.File.Path) ".png" }}
+    {{ range where .Site.Pages ".Section" .CurrentSection.Section }}
+      {{ with .Page.Resources.GetMatch $filename }}
+        {{ $openGraphImage = . }}
+      {{ end }}
     {{ end }}
   {{ end }}
-  <meta property="og:image" content="{{ $openGraphImage.Permalink }}">
-  <meta property="og:image:width" content="{{ $openGraphImage.Width }}">
-  <meta property="og:image:height" content="{{ $openGraphImage.Height }}">
+  {{ with $openGraphImage }}
+    <meta property="og:image" content="{{ .Permalink }}">
+    <meta property="og:image:width" content="{{ .Width }}">
+    <meta property="og:image:height" content="{{ .Height }}">
+  {{ end }}
 </head>
