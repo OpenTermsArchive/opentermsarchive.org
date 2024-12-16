@@ -252,9 +252,10 @@
                  {{ range $index, $role := $roles }}
                     {{ $isLast := eq $index (sub (len $roles) 1) }}
                     {{ $translatedRole := i18n (printf "collections.governance.%s" $role) }}
-                    {{ $translatedRole = cond (eq $index 0) $translatedRole (lower $translatedRole) }}
-                    {{ $translatedRole = cond ($isLast) $translatedRole (printf "%s, " $translatedRole) }}
-                    {{ $translatedRole }}
+                    {{ $badgeRoleClass := printf "badge--%s" ($role | lower) }}
+                    <div class="badge {{ $badgeRoleClass }}">
+                      {{ $translatedRole }}
+                    </div>
                   {{ end }}
                 </div>
               {{ end }}
