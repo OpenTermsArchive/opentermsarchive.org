@@ -12,15 +12,15 @@
 }
 
 .cardlist__title {
-  margin-bottom: var(--mXL);
+  margin-bottom: var(--mxl);
 }
 
 .cardlist__subtitle {
-  margin-bottom: var(--m3XL);
+  margin-bottom: var(--m3xl);
 }
 
 .cardlist__title + .cardlist__subtitle {
-  margin-top: var(--mXS);
+  margin-top: var(--mxs);
 }
 
 .cardlist__items {
@@ -44,7 +44,7 @@
 @media (--tabletLarge) {
   .cardlist__items {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: var(--m2XL);
+    margin-top: var(--m2xl);
 
     &.cardlist__items--is-small {
       grid-template-columns: repeat(2, 1fr);

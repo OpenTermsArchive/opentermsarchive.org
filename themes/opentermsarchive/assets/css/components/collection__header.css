@@ -1,7 +1,7 @@
 .collection__header {
   display: flex;
   flex-wrap: nowrap;
-  gap: var(--mL);
+  gap: var(--ml);
   align-items: flex-start;
 
   @media (--tabletSmall) {
@@ -29,7 +29,7 @@
 .collection__header-content {
   display: flex;
   flex-grow: 1;
-  gap: var(--mL);
+  gap: var(--ml);
   align-items: center;
 
   @media (--tabletSmall) {
@@ -42,13 +42,13 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: var(--m2XS);
+  gap: var(--m2xs);
 }
 
 .collection__header-actions {
   display: flex;
   flex-direction: column;
-  gap: var(--mXS);
+  gap: var(--mxs);
   align-items: flex-end;
   margin-left: auto;
 

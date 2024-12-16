@@ -6,7 +6,7 @@
   }
 
   & li:not(:first-child) {
-    margin-left: var(--m2XS);
+    margin-left: var(--m2xs);
   }
 
   & i {

@@ -6,7 +6,7 @@
   grid-gap: var(--gridGutterWidth);
   place-content: center;
   justify-items: center;
-  margin-top: var(--mXL);
+  margin-top: var(--mxl);
 
   &.cardlist__items--is-small {
     grid-template-columns: repeat(4, 1fr);

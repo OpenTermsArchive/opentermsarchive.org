@@ -1,19 +1,19 @@
 .memo {
-  padding: var(--mXL);
+  padding: var(--mxl);
   background-color: var(--colorWhite);
   border: 1px solid var(--colorBlack300);
 }
 
 .memo__title {
-  margin-bottom: var(--mS);
+  margin-bottom: var(--ms);
 }
 
 .memo__subtitle + .memo__author {
-  margin-top: var(--mXS);
+  margin-top: var(--mxs);
 }
 
 .memo__content {
-  padding-top: var(--mL);
-  margin-top: var(--mL);
+  padding-top: var(--ml);
+  margin-top: var(--ml);
   border-top: 1px solid var(--colorBlack300);
 }

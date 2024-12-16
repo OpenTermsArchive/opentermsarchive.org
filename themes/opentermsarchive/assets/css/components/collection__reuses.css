@@ -1,12 +1,12 @@
 .collection__reuses-items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--mL);
-  margin-top: var(--mXL);
+  gap: var(--ml);
+  margin-top: var(--mxl);
 
   @media (--tabletLarge) {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--mS);
+    gap: var(--ms);
   }
 
   @media (--mobileExtraLarge) {
@@ -17,7 +17,7 @@
 .collection__reuses-cta {
   display: flex;
   justify-content: flex-end;
-  margin-top: var(--m2XL);
+  margin-top: var(--m2xl);
 
   @media (--tabletLarge) {
     justify-content: center;

@@ -31,11 +31,11 @@
 }
 
 .card__body {
-  padding: var(--pL) var(--pM) var(--pM) var(--pM);
+  padding: var(--pl) var(--pm) var(--pm) var(--pm);
 }
 
 .card__subtitle {
-  margin: var(--mS) 0 var(--mXL);
+  margin: var(--ms) 0 var(--mxl);
   font-size: 1.8rem;
 }
 
@@ -47,7 +47,7 @@
   }
 
   & button:not(:last-child) {
-    margin-bottom: var(--mXL);
+    margin-bottom: var(--mxl);
   }
 }
 
@@ -55,14 +55,14 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
-  padding: var(--pS);
+  padding: var(--ps);
   margin-top: auto;
   border-top: 1px solid var(--colorBlack200);
 
   & img {
     max-width: 96px;
     max-height: 54px;
-    margin: 0 var(--pXS);
+    margin: 0 var(--pxs);
   }
 
   &.card__author--is-center {
@@ -71,22 +71,22 @@
 }
 
 .card__author-icon {
-  margin-right: var(--m2XS);
+  margin-right: var(--m2xs);
 }
 
 .card--is-big {
   @mixin grid 6, 5;
 
   & .card__body {
-    padding: var(--pXL) var(--pL) var(--p3XL) var(--pL);
+    padding: var(--pxl) var(--pl) var(--p3xl) var(--pl);
   }
 
   & .card__subtitle {
-    margin-top: var(--mS);
+    margin-top: var(--ms);
   }
 
   & .card__children {
-    margin-top: var(--mL);
+    margin-top: var(--ml);
   }
 }
 

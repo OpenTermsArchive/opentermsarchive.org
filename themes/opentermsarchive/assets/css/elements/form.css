@@ -2,7 +2,7 @@ input,
 select,
 textarea {
   width: 100%;
-  padding: var(--pS) var(--pM);
+  padding: var(--ps) var(--pm);
   font-size: 1.6rem;
   color: var(--colorBlack800);
   background-color: var(--colorWhite);
@@ -22,13 +22,13 @@ input:is([disabled]):not([type="submit"]) textarea:disabled {
 input[type="checkbox"] {
   width: 2rem;
   height: 2rem;
-  margin-right: var(--mXS);
+  margin-right: var(--mxs);
 }
 
 label {
   display: block;
   width: 100%;
-  margin-bottom: var(--mXS);
+  margin-bottom: var(--mxs);
   font-weight: bold;
   color: var(--color1-600);
 }
@@ -42,7 +42,7 @@ label {
   width: 100%;
 
   & + .formfield {
-    margin-top: var(--mL);
+    margin-top: var(--ml);
   }
 
   &.formfield--align-right {
@@ -65,7 +65,7 @@ label {
   & svg {
     position: absolute;
     top: var(--mM);
-    right: var(--mS);
+    right: var(--ms);
     pointer-events: none;
   }
 }

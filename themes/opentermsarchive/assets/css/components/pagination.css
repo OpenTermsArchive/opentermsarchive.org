@@ -1,16 +1,16 @@
 .pagination__list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--mXS);
+  gap: var(--mxs);
   align-items: center;
   justify-content: center;
 }
 
 .pagination__link {
   display: inline-flex;
-  gap: var(--m2XS);
+  gap: var(--m2xs);
   align-items: center;
-  padding: var(--pXS) var(--pS);
+  padding: var(--pxs) var(--ps);
 
   &:not(.pagination__link--next, .pagination__link--prev, [aria-current="true"]) {
     border: 1px solid var(--colorPrimary);

@@ -1,6 +1,6 @@
 blockquote {
   position: relative;
-  padding-left: var(--p2XL);
+  padding-left: var(--p2xl);
 
   &::before {
     position: absolute;

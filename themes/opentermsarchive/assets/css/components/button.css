@@ -3,7 +3,7 @@
 
   display: inline-flex;
   align-items: center;
-  padding: var(--pS) var(--pL);
+  padding: var(--ps) var(--pl);
   color: var(--colorWhite);
   background-color: var(--colorPrimary);
   border-radius: 4px;
@@ -40,12 +40,12 @@
   }
 
   &.button--has-only-icon {
-    padding-right: var(--pS);
-    padding-left: var(--pS);
+    padding-right: var(--ps);
+    padding-left: var(--ps);
   }
 
   &.sm {
-    padding: var(--pXS) var(--pM);
+    padding: var(--pxs) var(--pm);
     font-size: 0.8em;
   }
 }
