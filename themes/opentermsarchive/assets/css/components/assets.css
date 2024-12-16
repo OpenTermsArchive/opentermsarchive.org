@@ -1,12 +1,12 @@
 .assets:not(:last-child) {
-  margin-bottom: var(--mXL);
+  margin-bottom: var(--mxl);
 }
 
 .asset {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: var(--pXS) 0;
+  padding: var(--pxs) 0;
 }
 
 .asset:not(:last-child) {

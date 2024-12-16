@@ -1,6 +1,6 @@
 .badge {
   display: inline-flex;
-  padding: var(--p2XS) var(--pS);
+  padding: var(--p2xs) var(--ps);
   font-size: 0.75em;
   border-radius: 2em;
 }

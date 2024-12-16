@@ -3,8 +3,8 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  padding: var(--p2XL) var(--pM) var(--pXL) var(--pM);
-  margin: 0 var(--gridGutterWidth) var(--m2XL) var(--gridGutterWidth);
+  padding: var(--p2xl) var(--pm) var(--pxl) var(--pm);
+  margin: 0 var(--gridGutterWidth) var(--m2xl) var(--gridGutterWidth);
   text-align: center;
   border: 1px solid var(--colorBlack200);
   border-radius: 4px;
@@ -32,6 +32,6 @@
 
 .buttonblock__title {
   & + .buttonblock__desc {
-    margin-top: var(--mXS);
+    margin-top: var(--mxs);
   }
 }

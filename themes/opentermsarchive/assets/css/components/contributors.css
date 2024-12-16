@@ -1,9 +1,9 @@
 .contributors {
-  margin-top: var(--mXL);
+  margin-top: var(--mxl);
 }
 
 .contributors__subtitle {
-  margin-bottom: var(--mL);
+  margin-bottom: var(--ml);
   text-align: center;
 }
 
@@ -15,14 +15,14 @@
   justify-content: center;
 
   @media (--tabletLarge) {
-    gap: var(--mS);
+    gap: var(--ms);
   }
 }
 
 .contributor__link {
   display: flex;
   flex-direction: column;
-  gap: var(--mXS);
+  gap: var(--mxs);
   align-items: center;
 
   &:hover > img {

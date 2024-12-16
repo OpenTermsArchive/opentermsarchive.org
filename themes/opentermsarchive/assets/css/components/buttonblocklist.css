@@ -12,11 +12,11 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-  margin-top: var(--m4XL);
+  margin-top: var(--m4xl);
 }
 
 @media (--tabletSmall) {
   .buttonblocklist__items {
-    margin-top: var(--m3XL);
+    margin-top: var(--m3xl);
   }
 }

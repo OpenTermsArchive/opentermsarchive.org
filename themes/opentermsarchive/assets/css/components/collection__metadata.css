@@ -1,13 +1,13 @@
 .collection__metadata {
   display: flex;
   flex-wrap: nowrap;
-  gap: var(--mXL);
+  gap: var(--mxl);
   align-items: start;
   justify-content: space-between;
 
   @media (--tabletLarge) {
     flex-wrap: wrap;
-    gap: var(--mL);
+    gap: var(--ml);
   }
 }
 
@@ -45,7 +45,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--mL) var(--mM);
+  padding: var(--ml) var(--mM);
   text-align: center;
   background-color: var(--colorWhite);
   border: 1px solid var(--colorBlack300);
@@ -60,10 +60,10 @@
 }
 
 .collection__metadata-item-title {
-  margin-top: var(--mXS);
+  margin-top: var(--mxs);
   color: var(--colorBlack600);
 }
 
 .collection__metadata-item-desc {
-  margin-top: var(--mS);
+  margin-top: var(--ms);
 }

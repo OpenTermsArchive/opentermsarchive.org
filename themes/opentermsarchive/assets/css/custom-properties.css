@@ -36,38 +36,38 @@
   --colorWhite: #fefffd;
 
   /* Sizes */
-  --3XS: 2px;
-  --2XS: 4px;
-  --XS: 8px;
-  --S: 12px;
-  --M: 16px;
-  --L: 24px;
-  --XL: 36px;
-  --2XL: 48px;
-  --3XL: 64px;
-  --4XL: 96px;
+  --3xs: 2px;
+  --2xs: 4px;
+  --xs: 8px;
+  --s: 12px;
+  --m: 16px;
+  --l: 24px;
+  --xl: 36px;
+  --2xl: 48px;
+  --3xl: 64px;
+  --4xl: 96px;
 
   /* Padding & margin */
-  --p3XS: var(--3XS);
-  --p2XS: var(--2XS);
-  --pXS: var(--XS);
-  --pS: var(--S);
-  --pM: var(--M);
-  --pL: var(--L);
-  --pXL: var(--XL);
-  --p2XL: var(--2XL);
-  --p3XL: var(--3XL);
-  --p4XL: var(--4XL);
-  --m3XS: var(--3XS);
-  --m2XS: var(--2XS);
-  --mXS: var(--XS);
-  --mS: var(--S);
-  --mM: var(--M);
-  --mL: var(--L);
-  --mXL: var(--XL);
-  --m2XL: var(--2XL);
-  --m3XL: var(--3XL);
-  --m4XL: var(--4XL);
+  --p3xs: var(--3xs);
+  --p2xs: var(--2xs);
+  --pxs: var(--xs);
+  --ps: var(--s);
+  --pm: var(--m);
+  --pl: var(--l);
+  --pxl: var(--xl);
+  --p2xl: var(--2xl);
+  --p3xl: var(--3xl);
+  --p4xl: var(--4xl);
+  --m3xs: var(--3xs);
+  --m2xs: var(--2xs);
+  --mxs: var(--xs);
+  --ms: var(--s);
+  --mM: var(--m);
+  --ml: var(--l);
+  --mxl: var(--xl);
+  --m2xl: var(--2xl);
+  --m3xl: var(--3xl);
+  --m4xl: var(--4xl);
 
   /* Breakpoints */
   --bpMobileSmall: 320px;

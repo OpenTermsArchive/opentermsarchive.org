@@ -3,8 +3,8 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding-top: var(--pL);
-  padding-bottom: var(--pL);
+  padding-top: var(--pl);
+  padding-bottom: var(--pl);
 }
 
 .header__logo {
@@ -32,10 +32,10 @@
   @mixin resetButton;
 
   position: absolute;
-  top: var(--mL);
-  right: var(--mL);
+  top: var(--ml);
+  right: var(--ml);
   display: none;
-  padding: var(--pS);
+  padding: var(--ps);
   font-size: 1.4rem;
   color: var(--colorPrimary);
 }
@@ -44,17 +44,17 @@
   @mixin resetButton;
 
   position: fixed;
-  top: var(--mL);
-  right: var(--mL);
+  top: var(--ml);
+  right: var(--ml);
   z-index: 1;
   display: none;
   align-items: center;
-  padding: var(--pS);
+  padding: var(--ps);
   font-size: 1.4rem;
   color: var(--colorWhite);
 
   & svg {
-    margin-left: var(--m2XS);
+    margin-left: var(--m2xs);
   }
 }
 
@@ -75,8 +75,8 @@
 
 @media (--gridPlus) {
   .header {
-    padding-right: var(--pL);
-    padding-left: var(--pL);
+    padding-right: var(--pl);
+    padding-left: var(--pl);
   }
 }
 
@@ -115,10 +115,10 @@
       &:last-child {
         flex-direction: column;
         margin-top: auto;
-        margin-bottom: var(--mXL);
+        margin-bottom: var(--mxl);
 
         & div {
-          margin-bottom: var(--mL);
+          margin-bottom: var(--ml);
         }
       }
     }

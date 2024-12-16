@@ -5,7 +5,7 @@ table {
   & thead {
     & tr {
       & th {
-        padding: var(--pXS) var(--pM);
+        padding: var(--pxs) var(--pm);
         background-color: var(--colorBlack200);
         border-right: 1px solid var(--colorBlack300);
         border-bottom: 1px solid var(--colorBlack300);
@@ -24,7 +24,7 @@ table {
   & tbody {
     & tr {
       & td {
-        padding: var(--pXS) var(--pM);
+        padding: var(--pxs) var(--pm);
         border: 1px solid var(--colorBlack200);
       }
     }

@@ -3,13 +3,13 @@
   align-items: flex-start;
 
   & svg {
-    margin-top: var(--m2XS);
+    margin-top: var(--m2xs);
     transition: stroke 0.3s easeoutcirc;
   }
 }
 
 .linkicon__content {
-  margin-left: var(--m2XS);
+  margin-left: var(--m2xs);
   text-align: left;
   transition: all 0.1s easeincirc;
 }

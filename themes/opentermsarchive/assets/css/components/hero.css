@@ -1,5 +1,5 @@
 .hero {
-  margin: var(--m4XL) 0;
+  margin: var(--m4xl) 0;
 
   &.hero--has-no-margin-bottom {
     margin-bottom: 0;
@@ -26,5 +26,5 @@
 }
 
 .hero__title + .hero__subtitle {
-  margin-top: var(--m2XL);
+  margin-top: var(--m2xl);
 }

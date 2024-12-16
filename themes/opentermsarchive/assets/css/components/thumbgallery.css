@@ -11,7 +11,7 @@
 }
 
 .thumbgallery__subtitle {
-  margin-top: var(--mXS);
+  margin-top: var(--mxs);
 }
 
 .thumbgallery__items {
@@ -21,7 +21,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: var(--m2XL);
+  margin-top: var(--m2xl);
 
   &.thumbgallery__items--has-no-margin-top {
     margin-top: 0;
@@ -52,6 +52,6 @@
 
 .thumbgallery--is-small {
   & > .thumbgallery__items:not(.thumbgallery__items--has-no-margin-top) {
-    margin-top: var(--mL);
+    margin-top: var(--ml);
   }
 }

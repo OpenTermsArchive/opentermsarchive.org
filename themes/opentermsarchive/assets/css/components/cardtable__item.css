@@ -1,8 +1,8 @@
 .cardtable__item {
   display: flex;
   align-items: flex-start;
-  padding-top: var(--m2XS);
-  padding-bottom: var(--m2XS);
+  padding-top: var(--m2xs);
+  padding-bottom: var(--m2xs);
 
   &:not(:first-child) {
     border-top: 1px solid var(--colorBlack200);
@@ -12,7 +12,7 @@
 .cardtable__item-icon {
   display: flex;
   flex-shrink: 0;
-  margin-top: var(--m2XS);
+  margin-top: var(--m2xs);
 
   & svg {
     margin: auto;
@@ -20,11 +20,11 @@
 }
 
 .cardtable__item-title {
-  margin-left: var(--m2XS);
+  margin-left: var(--m2xs);
 }
 
 .cardtable__item-desc {
-  padding-left: var(--pS);
+  padding-left: var(--ps);
   margin-left: auto;
   text-align: right;
 }

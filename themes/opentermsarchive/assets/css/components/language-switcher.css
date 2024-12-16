@@ -1,6 +1,6 @@
 .language-switcher {
   position: relative;
-  margin-right: var(--mXS);
+  margin-right: var(--mxs);
   font-size: 1.4rem;
   text-align: right;
 }
@@ -10,13 +10,13 @@
 
   display: flex;
   align-items: center;
-  padding: var(--pXS);
+  padding: var(--pxs);
   background-color: var(--colorWhite);
   border: 1px solid var(--colorBlack200);
   border-radius: 4px;
 
   & > svg {
-    margin-left: var(--m2XS);
+    margin-left: var(--m2xs);
   }
 }
 
@@ -36,7 +36,7 @@
 
 .language-switcher__item {
   width: 100%;
-  padding: var(--pXS);
+  padding: var(--pxs);
   white-space: nowrap;
 
   &.language-switcher__item--is-active {

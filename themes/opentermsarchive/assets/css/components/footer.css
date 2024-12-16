@@ -29,30 +29,30 @@
 }
 
 .footer__main-menu {
-  gap: var(--m2XS) var(--mS);
+  gap: var(--m2xs) var(--ms);
 }
 
 .footer__sub-menu {
-  gap: var(--m2XS) var(--mS);
+  gap: var(--m2xs) var(--ms);
 }
 
 .footer__logo {
-  margin-top: var(--mL);
+  margin-top: var(--ml);
   margin-bottom: var(--mM);
 
   @media (--mobileExtraLarge) {
-    margin-top: var(--mS);
-    margin-bottom: var(--mS);
+    margin-top: var(--ms);
+    margin-bottom: var(--ms);
   }
 }
 
 .footer__socials {
-  gap: var(--mXS);
+  gap: var(--mxs);
   margin-top: var(--mM);
   margin-bottom: var(--mM);
 
   @media (--mobileExtraLarge) {
-    margin-top: var(--mS);
-    margin-bottom: var(--mS);
+    margin-top: var(--ms);
+    margin-bottom: var(--ms);
   }
 }

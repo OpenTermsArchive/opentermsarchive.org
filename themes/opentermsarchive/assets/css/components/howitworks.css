@@ -8,6 +8,6 @@
 
   & code {
     display: block;
-    padding: var(--pM);
+    padding: var(--pm);
   }
 }

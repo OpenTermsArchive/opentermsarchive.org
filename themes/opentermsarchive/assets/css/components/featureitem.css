@@ -4,7 +4,7 @@
   align-items: flex-start;
 
   &:not(:last-child) {
-    margin-bottom: var(--mXL);
+    margin-bottom: var(--mxl);
   }
 }
 
@@ -29,5 +29,5 @@
 }
 
 .featureitem__desc {
-  margin-top: var(--m2XS);
+  margin-top: var(--m2xs);
 }

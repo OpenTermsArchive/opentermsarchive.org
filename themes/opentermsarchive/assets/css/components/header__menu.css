@@ -10,14 +10,14 @@
 .header__menu-primary {
   & ul {
     & li {
-      margin: 0 var(--mS);
+      margin: 0 var(--ms);
     }
   }
 }
 
 .header__menu-secondary {
   & ul {
-    gap: var(--m2XS);
+    gap: var(--m2xs);
   }
 }
 
@@ -28,7 +28,7 @@
 
       & li {
         width: 100%;
-        margin: var(--mS) auto;
+        margin: var(--ms) auto;
 
         & a {
           display: inline-flex;
@@ -41,7 +41,7 @@
   .header__menu-primary {
     & ul {
       & li {
-        margin: var(--mS) auto;
+        margin: var(--ms) auto;
       }
     }
   }
@@ -49,7 +49,7 @@
   .header__menu-secondary {
     & ul {
       & li:not(:last-child) {
-        margin: var(--mS) auto;
+        margin: var(--ms) auto;
       }
     }
   }
