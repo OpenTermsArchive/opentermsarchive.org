@@ -16,7 +16,7 @@
   {{ $nonEuCollectionLanguages := symdiff $languages $allEuLanguages }}
   {{ $isOnlyEuLanguages := eq (len $nonEuCollectionLanguages) 0 }}
   {{ $displayLanguages := slice }}
-  
+
   <div class="collection">
     <div class="container container--wide container--has-no-padding-y">
       <div class="collection__header container container--1211 container--has-no-padding-x">
