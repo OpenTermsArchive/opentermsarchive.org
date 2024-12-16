@@ -24,7 +24,7 @@
 .governance__item {
   display: flex;
   flex-direction: column;
-  gap: var(--mXS);
+  gap: var(--mS);
   align-items: center;
   width: 240px;
   text-align: center;
@@ -33,7 +33,7 @@
 .governance__item-link {
   display: flex;
   flex-direction: column;
-  gap: var(--mXS);
+  gap: var(--mS);
   align-items: center;
 }
 
@@ -46,7 +46,7 @@
   height: 160px;
   overflow: hidden;
   background-color: var(--colorWhite);
-  border: 1px solid var(--colorBlack300);
+  box-shadow: 0 0 0 1px var(--colorBlack300);
   border-radius: 50%;
   transition: box-shadow 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 
@@ -58,10 +58,19 @@
 
 .governance__item-link:hover {
   .governance__item-logo {
-    box-shadow: 0 0 0 6px var(--colorSecondary);
+    box-shadow: 0 0 0 3px var(--colorSecondary);
   }
 }
 
 .governance__item-name {
   font-weight: bold;
+}
+
+.governance__item-type {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--2XS);
 }
