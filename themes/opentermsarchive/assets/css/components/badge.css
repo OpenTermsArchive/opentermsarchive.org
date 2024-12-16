@@ -1,15 +1,15 @@
-.badge{
-  padding: var(--p2XS) var(--pS);
-  border-radius: 2em;
-  font-size: 0.75em;
+.badge {
   display: inline-flex;
+  padding: var(--p2XS) var(--pS);
+  font-size: 0.75em;
+  border-radius: 2em;
 }
 
 .badge--host,
 .badge--sponsor,
 .badge--administrator,
 .badge--curator,
-.badge--maintainer{
+.badge--maintainer {
   color: var(--colorBlack900);
   background-color: var(--colorPrimary300);
 }

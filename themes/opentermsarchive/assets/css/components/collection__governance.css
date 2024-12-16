@@ -46,8 +46,8 @@
   height: 160px;
   overflow: hidden;
   background-color: var(--colorWhite);
-  box-shadow: 0 0 0 1px var(--colorBlack300);
   border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--colorBlack300);
   transition: box-shadow 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 
   & > img {
@@ -68,9 +68,8 @@
 
 .governance__item-type {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
+  gap: var(--2XS);
   align-items: center;
   justify-content: center;
-  gap: var(--2XS);
 }
