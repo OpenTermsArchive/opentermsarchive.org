@@ -73,7 +73,6 @@ collections:
     language:
       one: Langue
       other: Langues
-    language_various: diverses
     language_europe: Union européenne
     jurisdiction: 
       one: Juridiction
@@ -114,10 +113,12 @@ collections:
   governance:
     title: Gouvernance
     subtitle: Ces personnes et entités s'assurent que les termes de cette collection sont bien suivis.
-    maintainers:
-      title: Maintenance
-    contributors:
-      title: Contributeurices
+    host: Hôte
+    administrator: Administrateur
+    curator: Curateur
+    maintainer: Mainteneur
+    sponsor: Sponsor
+    contributors: Contributeurices
 impact:
   related_collections: Collections associées
   reminder: Open Terms Archive enregistre publiquement les conditions d'utilisation des services en ligne dans différentes langues et différents pays plusieurs fois par jour, en améliorant leur lisibilité et en mettant en évidence leurs modifications. Il est conçue comme un outil permettant d'orienter la gouvernance des plateformes vers une plus grande responsabilité, une meilleure législation et une plus grande conformité réglementaire.

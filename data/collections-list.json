@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Generative AI",
+    "endpoint": "http://51.77.110.109/collection-api/v1/"
+  },
+  {
+    "name": "Platform Governance Archive",
+    "endpoint": "http://134.102.58.70/collection-api/v1/"
+  },
+  {
+    "name": "France",
+    "endpoint": "http://198.244.142.9/collection-api/v1/"
+  },
+  {
+    "name": "P2B Compliance",
+    "endpoint": "http://198.244.153.104/collection-api/v1/"
+  },
+  {
+    "name": "France Élections",
+    "endpoint": "http://51.89.225.198/collection-api/v1/"
+  },
+  {
+    "name": "Dating",
+    "endpoint": "http://vps-99ae1d89.vps.ovh.net/collection-api/v1/"
+  },
+  {
+    "name": "Contrib",
+    "endpoint": "http://51.89.224.102/collection-api/v1/"
+  },
+  {
+    "name": "Demo",
+    "endpoint": "http://162.19.74.224/collection-api/v1/"
+  }
+]

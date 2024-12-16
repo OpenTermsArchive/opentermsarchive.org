@@ -1,38 +1,56 @@
 {{ define "main" }}
-{{ $currentCollectionID := .Params.id }}
+  {{ $currentCollectionID := .Params.id }}
+  {{ $name := .Params.name }}
+  {{ $tagline := default .Params.tagline (index .Params.i18n site.Language.Lang "tagline") }}
+  {{ $description := default .Params.description (index .Params.i18n site.Language.Lang "description") }}
+  {{ $donations := default (.Param "opencollective.url") .Params.donations }}
+  {{ $contributionToolURL := printf "%s?destination=OpenTermsArchive/%s-declarations" (.Param "contribution_tool.url") .Params.id }}
+  {{ $issues := printf "%s/issues" .Params.declarations }}
+  {{ $isGraySectionIndex := 0 }}
+  {{ $collectionLogo := partial "func/getLogo.html" (dict "logoUrl" .Params.logo "name" $name "type" "collections") }}
+  {{ with $collectionLogo.error }}{{ warnf . }}{{ end }}
+  {{ $governance := .Params.governance }}
+  {{ $i18n := .Params.i18n }}
+  {{ $languages := .Params.languages }}
+  {{ $allEuLanguages := slice "bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv" }}
+  {{ $nonEuCollectionLanguages := symdiff $languages $allEuLanguages }}
+  {{ $isOnlyEuLanguages := eq (len $nonEuCollectionLanguages) 0 }}
+  {{ $displayLanguages := slice }}
+
   <div class="collection">
-
-    {{ $isGraySectionIndex := 0 }}
-
     <div class="container container--wide container--has-no-padding-y">
       <div class="collection__header container container--1211 container--has-no-padding-x">
-        {{ $image := resources.Get (printf "/images/collections/%s.png" (.Params.name | urlize)) }}
-        {{ with $image }}
+        {{ with $collectionLogo.resource }}
           <div class="collection__header-image">
-            <img src="{{ .RelPermalink }}" alt="">
+            <img src="{{ .RelPermalink }}" alt="{{ $name }}">
           </div>
         {{ end }}
         <div class="collection__header-content">
           <div class="collection__header-infos">
-            <h1>{{ .Title }}</h1>
-            {{ with .Params.industries }}<h2 class="h3 h3--ultralight">{{ index . site.Language.Lang | safeHTML }}</h2>{{ end }}
+            <h1>{{ $name }}</h1>
+            {{ with $tagline }}<h2 class="h3 h3--ultralight">{{ . | safeHTML }}</h2>{{ end }}
           </div>
           <ul class="collection__header-actions">
-            <li>
-              <a class="button button--secondary" href="https://github.com/openTermsArchive/{{ $.Params.id }}-versions" target="_blank" rel="noopener">
-                {{ i18n "collections.cta.browse" }}
-                <i class="icon ml--2xs" data-lucide="search"></i>
-              </a>
-            </li>
-            <li>
-              <a class="button button--secondary" href="https://github.com/openTermsArchive/{{ $.Params.id }}-versions/releases/latest" target="_blank" rel="noopener">
+            {{ with .Params.versions }}
+              <li>
+                <a class="button button--secondary" href="{{ . }}" target="_blank" rel="noopener">
+                  {{ i18n "collections.cta.browse" }}
+                  <i class="icon ml--2xs" data-lucide="search"></i>
+                </a>
+              </li>
+            {{ end }}
+            {{ with .Params.dataset }}
+              <li>
+                <a class="button button--secondary" href="{{ . }}" target="_blank" rel="noopener">
                 {{ i18n "collections.cta.download" }}
                 <i class="icon ml--2xs" data-lucide="download"></i>
-              </a>
-            </li>
-            {{ with $.Params.endpoint }}
+                </a>
+              </li>
+            {{ end }}
+            {{ with .Params.endpoint }}
+              {{ $endpointDocs := printf "%s/docs" . }}
               <li>
-                <a class="button button--secondary" href="{{ . }}/docs" target="_blank" rel="noopener">
+                <a class="button button--secondary" href="{{ $endpointDocs }}" target="_blank" rel="noopener">
                   {{ i18n "collections.cta.endpoint" }}
                   <i class="icon ml--2xs" data-lucide="wrench"></i>
                 </a>
@@ -46,27 +64,24 @@
     <div class="container container--wide container--has-no-padding-y {{ if modBool $isGraySectionIndex 2 }}container--is-gray{{ end }}">
       <div class="collection__metadata container container--1211 container--has-no-padding-x">
         <div class="collection__metadata-desc">
-          {{ default (i18n "collections.metadata.placeholder" | safeHTML) (index .Params.description site.Language.Lang | markdownify) }}
+          {{ default (i18n "collections.metadata.placeholder" | safeHTML) ($description | markdownify) }}
         </div>
         <div class="collection__metadata-items">
-          {{ with .Params.stats.services }}
+          {{ with .Params.totalServices }}
             {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.services") "icon" "folder" "desc" .) }}
           {{ end }}
-          {{ with .Params.stats.documents }}
+          {{ with .Params.totalTerms }}
             {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.documents") "icon" "file" "desc" .) }}
           {{ end }}
-          {{ with .Params.languages }}
-            {{ $languages := slice }}
-            {{ range . }}
-              {{ if eq . "*" }}
-                {{ $languages = $languages | append (i18n "collections.metadata.language_various") }}
-              {{ else if eq . "*eu" }}
-                {{ $languages = $languages | append (i18n "collections.metadata.language_europe") }}
-              {{ else }}
-                {{ $languages = $languages | append ( strings.FirstUpper (index site.Data.display_names.languages site.Language.LanguageCode .)) }}
-              {{ end }}
+          {{ with $languages }}
+            {{ if $isOnlyEuLanguages }}
+              {{ $displayLanguages = $displayLanguages | append (i18n "collections.metadata.language_europe") }}
+              {{ $languages = slice }}
             {{ end }}
-            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.language" (len $languages)) "icon" "message-circle" "desc" (delimit $languages ", ")) }}
+            {{ range $languages }}
+              {{ $displayLanguages = $displayLanguages | append ( strings.FirstUpper (index site.Data.display_names.languages site.Language.LanguageCode .)) }}
+            {{ end }}
+            {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.language" (len $displayLanguages)) "icon" "message-circle" "desc" (delimit $displayLanguages ", ")) }}
           {{ end }}
           {{ with .Params.jurisdictions }}
             {{ $jurisdictions := slice }}
@@ -75,8 +90,9 @@
             {{ end }}
             {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.jurisdiction" (len $jurisdictions)) "icon" "map" "desc" (delimit $jurisdictions ", ")) }}
           {{ end }}
-          {{ with .Params.tracking }}
-            {{ $currentTracking := index (last 1 .) 0 }}
+          {{ with .Params.trackingPeriods }}
+            {{ $currentTracking := . }}
+            {{ if reflect.IsSlice . }}{{ $currentTracking = index (last 1 .) 0 }}{{ end }}
             {{ with $currentTracking.startDate }}
               {{ $formatedDate := ( . | time.Format ":date_long") }}
               {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.start_date") "icon" "power" "desc" $formatedDate) }}
@@ -118,7 +134,7 @@
               <i class="icon icon--primary icon--big icon--stroke-thin" data-lucide="hand-heart"></i>
             </div>
             <h4 class="h4--ultralight">{{ i18n "collections.contribute.donate" }}</h4>
-            <a class="contribute__item-link" href="{{ .Param "opencollective.url" }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.donate" }}"></a>
+            <a class="contribute__item-link" href="{{ $donations }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.donate" }}"></a>
           </div>
           <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
@@ -132,7 +148,6 @@
               <i class="icon icon--primary icon--big icon--stroke-thin" data-lucide="file-plus"></i>
             </div>
             <h4 class="h4--ultralight">{{ i18n "collections.contribute.track" }}</h4>
-            {{ $contributionToolURL := printf "%s?destination=OpenTermsArchive/%s-declarations" (.Param "contribution_tool.url") .Params.id }}
             <a class="contribute__item-link" href="{{ $contributionToolURL }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.track" }}"></a>
           </div>
           <div class="collection__contribute-item">
@@ -140,7 +155,7 @@
               <i class="icon icon--primary icon--big icon--stroke-thin" data-lucide="file-warning"></i>
             </div>
             <h4 class="h4--ultralight">{{ i18n "collections.contribute.restore" }}</h4>
-            <a class="contribute__item-link" href="{{ .Param "github.url" }}/{{ .Params.id }}-declarations/issues" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.restore" }}"></a>
+            <a class="contribute__item-link" href="{{ $issues }}" target="_blank" rel="noopener" aria-label="{{ i18n "collections.contribute.restore" }}"></a>
           </div>
           <div class="collection__contribute-item">
             <div class="icon__circle-wrapper icon__circle-wrapper--big icon__circle-wrapper--graylight">
@@ -213,25 +228,42 @@
       <div class="collection__governance container container--1211 container--has-no-padding-x">
         <h3>{{ i18n "collections.governance.title" }}</h3>
         <h5 class="h5--light mt--m">{{ i18n "collections.governance.subtitle" }}</h5>
-        <h4 class="mt--xl">{{ i18n "collections.governance.maintainers.title" }}</h4>
-        <div class="governance__maintainers-items">
-          {{ with .Params.maintainers }}
-            {{ range . }}
-              {{ $image := resources.Get (printf "/images/contributors/%s.png" (.name | urlize)) }}
-              {{ $name := .name }}
-              {{ with $image }}
-                <div class="governance__maintainers-item">
-                  <img src="{{ .RelPermalink }}" alt="{{ $name }}">
+        <div class="governance__items">
+          {{ range $governance }}
+            {{ $entityName := default .name (index $i18n site.Language.Lang "governance" .name "name") }}
+            {{ $entityLogoUrl := default .logo (index $i18n site.Language.Lang "governance" .name "logo") }}
+            {{ $entityUrl := default .url (index $i18n site.Language.Lang "governance" .name "url") }}
+            {{ $entityLogo := partial "func/getLogo.html" (dict "logoUrl" $entityLogoUrl "name" $entityName) }}
+            {{ with $entityLogo.error }}{{ warnf . }}{{ end }}
+            <div class="governance__item">
+              {{ with $entityUrl }}<a class="governance__item-link" href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+                <div class="governance__item-logo">
+                  {{ with $entityLogo.resource }}
+                    <img src="{{ .RelPermalink }}" alt="{{ $entityName }}">
+                  {{ else }}
+                    <i class="icon icon--gray icon--big icon--stroke-thin" data-lucide="image"></i>
+                  {{ end }}
+                </div>
+                <div class="governance__item-name">{{ $entityName }}</div>
+              {{ with $entityUrl }}</a>{{ end }}
+              {{ with .roles }}
+                {{ $roles := . }}
+                <div class="governance__item-type">
+                 {{ range $index, $role := $roles }}
+                    {{ $isLast := eq $index (sub (len $roles) 1) }}
+                    {{ $translatedRole := i18n (printf "collections.governance.%s" $role) }}
+                    {{ $badgeRoleClass := printf "badge--%s" ($role | lower) }}
+                    <div class="badge {{ $badgeRoleClass }}">
+                      {{ $translatedRole }}
+                    </div>
+                  {{ end }}
                 </div>
               {{ end }}
-            {{ end }}
-          {{ else }}
-            <div class="governance__maintainers-item">
-              {{ partial "volunteer-contributors.html" . }}
             </div>
           {{ end }}
         </div>
-        <h4 class="mt--xl">{{ i18n "collections.governance.contributors.title" }}</h4>
+
+        <h4 class="mt--2xl">{{ i18n "collections.governance.contributors" }}</h4>
         {{ $collectionRepositoryID := print .Params.id "-declarations" | lower }}
         {{ partial "contributors.html" (dict "repositories" (slice $collectionRepositoryID) "showInfo" true "class" "contributors--align-x-left") }}
       </div>

@@ -5,7 +5,7 @@ service: Doubao
 terms_types: ["Privacy Policy"]
 dates: ["2024-03-04"]
 author: Peijun Hu
-related_collections: ["GenAI"]
+related_collections: ["genai"]
 ---
 
 Doubao [expanded](https://github.com/OpenTermsArchive/GenAI-versions/commit/ada4e457907c93f9073efddf755c27ab3ff7ac58) the scope of data collection to include "input information", explicitly encompassing dialogue content and search text. To further broaden the coverage of behavioral information, it appended "etc." at the conclusion of enumerating such data.

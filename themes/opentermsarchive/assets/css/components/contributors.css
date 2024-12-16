@@ -22,11 +22,11 @@
 .contributor__link {
   display: flex;
   flex-direction: column;
-  gap: var(--m2XS);
+  gap: var(--mXS);
   align-items: center;
 
   &:hover > img {
-    box-shadow: 0 0 0 6px var(--colorSecondary);
+    box-shadow: 0 0 0 3px var(--colorSecondary);
   }
 }
 
@@ -39,6 +39,7 @@
 .contributor__image {
   background-color: var(--colorWhite);
   border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--colorBlack300);
   transition: box-shadow 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 

@@ -14,39 +14,60 @@
 
   /* Colors */
   --colorPrimary: #2d63ff;
+  --colorPrimary800: #5b85ff;
+  --colorPrimary700: #7696ff;
+  --colorPrimary600: #91a7ff;
+  --colorPrimary500: #abc8ff;
+  --colorPrimary400: #b6cdff;
+  --colorPrimary300: #c5d9ff;
+  --colorPrimary200: #e2edff;
+  --colorPrimary100: #f5f9ff;
   --colorSecondary: #0b08a0;
   --colorTertiary: #f9dd3f;
   --colorError: #ec368d;
   --colorSuccess: #11ebc3;
   --colorBlack900: #010613;
   --colorBlack800: #333;
+  --colorBlack700: #454545;
   --colorBlack600: #5e5e5e;
   --colorBlack400: #999;
   --colorBlack300: #d6d6d6;
   --colorBlack200: #f5f5f5;
   --colorWhite: #fefffd;
 
+  /* Sizes */
+  --3XS: 2px;
+  --2XS: 4px;
+  --XS: 8px;
+  --S: 12px;
+  --M: 16px;
+  --L: 24px;
+  --XL: 36px;
+  --2XL: 48px;
+  --3XL: 64px;
+  --4XL: 96px;
+
   /* Padding & margin */
-  --p3XS: 2px;
-  --p2XS: 4px;
-  --pXS: 8px;
-  --pS: 12px;
-  --pM: 16px;
-  --pL: 24px;
-  --pXL: 36px;
-  --p2XL: 48px;
-  --p3XL: 64px;
-  --p4XL: 96px;
-  --m3XS: 2px;
-  --m2XS: 4px;
-  --mXS: 8px;
-  --mS: 12px;
-  --mM: 16px;
-  --mL: 24px;
-  --mXL: 36px;
-  --m2XL: 48px;
-  --m3XL: 64px;
-  --m4XL: 96px;
+  --p3XS: var(--3XS);
+  --p2XS: var(--2XS);
+  --pXS: var(--XS);
+  --pS: var(--S);
+  --pM: var(--M);
+  --pL: var(--L);
+  --pXL: var(--XL);
+  --p2XL: var(--2XL);
+  --p3XL: var(--3XL);
+  --p4XL: var(--4XL);
+  --m3XS: var(--3XS);
+  --m2XS: var(--2XS);
+  --mXS: var(--XS);
+  --mS: var(--S);
+  --mM: var(--M);
+  --mL: var(--L);
+  --mXL: var(--XL);
+  --m2XL: var(--2XL);
+  --m3XL: var(--3XL);
+  --m4XL: var(--4XL);
 
   /* Breakpoints */
   --bpMobileSmall: 320px;

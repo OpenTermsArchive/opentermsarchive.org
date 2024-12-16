@@ -5,7 +5,7 @@ service: OpenAI
 terms_types: ["Acceptable Use Policy"]
 dates: ["2024-01-10"]
 author: Brice Bai
-related_collections: ["GenAI"]
+related_collections: ["genai"]
 ---
 
 OpenAI re–[categorised](https://github.com/OpenTermsArchive/GenAI-versions/commit/8cf83dcc3d59265f901db93f5408ea98876dabc3) their Acceptable Use Policy into three distinct lists of prohibitions.

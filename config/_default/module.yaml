@@ -5,3 +5,5 @@ mounts:
     target: assets
   - source: .all-contributorsrc
     target: assets/allcontributorsrc.json
+  - source: node_modules/minireset.css/minireset.css
+    target: assets/css/vendor/minireset.css
