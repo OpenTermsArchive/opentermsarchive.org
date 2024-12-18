@@ -101,6 +101,8 @@ npm run lint:html -- --fix
 
 ### Testing
 
+As a prerequisite, you need to install `ruby` with `brew install ruby` and `html-proofer` Gem with `gem install html-proofer`.
+
 Run the entire test set
 
 ```sh
@@ -108,6 +110,8 @@ npm run test
 ```
 
 #### Check for broken links
+
+Run the following command:
 
 ```sh
 npm run test:links
