@@ -17,7 +17,7 @@
     "build": "hugo --minify --cleanDestinationDir --ignoreCache",
     "test": "npm run lint:markdown && npm run lint:css && npm run lint:js && npm run lint:html && npm run test:links && npm run test:html && npm run test:e2e",
     "pretest:links": "npm run build",
-    "test:links": "linkinator ./public --recurse --verbosity error",
+    "test:links": "htmlproofer ./public --ignore-missing-alt true --enforce_https false --ignore-status-codes 999,429,406,403,401,0 --check-external-hash false",
     "pretest:html": "npm run build",
     "test:html": "html-validate ./public",
     "test:e2e": "node test/cypress/e2e/index.js",
