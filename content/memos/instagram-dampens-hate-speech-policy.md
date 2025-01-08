@@ -19,12 +19,14 @@ This rewrite adds some clear statements:
 Beyond these additions, most of the changes are made of removal of interdictions. Thanks to Open Terms Archive history tracking, one can identify that the following behaviors that were forbidden are now allowed on Instagram starting on January 7:
 
 - Comparing people to ([lines 1338 to 1342](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0L1338-L1342)):
-> * Certain Inanimate Objects and Non-Human States:
-> * Certain objects (**women as household objects or property or objects in general; Black people as farm equipment; transgender or non-binary people as “it”**)
-> * Feces (including but not limited to: shit, crap)
-> * Filth (including but not limited to: dirt, grime, or saying "\[protected characteristic or quasi-protected characteristic\] has bad hygiene")
-> * Disease (including but not limited to: cancer, sexually transmitted diseases)
-> * Criminals
+>
+> - Certain Inanimate Objects and Non-Human States:
+> - Certain objects (**women as household objects or property or objects in general; Black people as farm equipment; transgender or non-binary people as “it”**)
+> - Feces (including but not limited to: shit, crap)
+> - Filth (including but not limited to: dirt, grime, or saying "\[protected characteristic or quasi-protected characteristic\] has bad hygiene")
+> - Disease (including but not limited to: cancer, sexually transmitted diseases)
+> - Criminals
+>
 - **Statements of intent to inflict, advocating or supporting disease, death, suicide, accident…** ([line 1353](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0L1353)).
 - Statements denying existence of a group of people ([line 1361](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0L1361)).
 - Calls for “expelling certain groups” ([line 1403](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0L1403)).
