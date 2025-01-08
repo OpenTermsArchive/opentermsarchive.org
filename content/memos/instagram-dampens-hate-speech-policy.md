@@ -8,7 +8,7 @@ author: Matti Schneider
 related_collections: ["pga"]
 ---
 
-Instagram [updated](https://github.com/OpenTermsArchive/GenAI-versions/commit/30f1df7d18676c57a0ae1c43c3ccdfc264535cb3) the “hate speech” section of its Community Guidelines, replacing it with “hateful conduct”. This new phrasing **removes every mention to “offline violence” that could result from online hate speech**, limiting “hateful conduct” to on-platform behavior. It also removes from the introduction the statement that hate speech creates an environment of intimidation and exclusion, and in some cases may promote offline violence.”
+Instagram [updated](https://github.com/OpenTermsArchive/GenAI-versions/commit/30f1df7d18676c57a0ae1c43c3ccdfc264535cb3) the “hate speech” section of its Community Guidelines, replacing it with “hateful conduct”. The new phrasing **removes every mention to “offline violence” that could result from online hate speech**, limiting “hateful conduct” to on-platform behavior. It also removes from the introduction the statement that hate speech “creates an environment of intimidation and exclusion, and in some cases may promote offline violence.”
 
 This rewrite adds some clear statements of behavior that is now allowed:
 
