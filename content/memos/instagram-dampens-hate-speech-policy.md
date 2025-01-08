@@ -10,10 +10,10 @@ related_collections: ["pga"]
 
 Instagram [updated](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20) the “hate speech” section of its Community Guidelines, replacing it with “hateful conduct”. The new phrasing **removes every mention to “offline violence” that could result from online hate speech**, limiting “hateful conduct” to on-platform behavior. It also removes from the introduction the statement that hate speech “creates an environment of intimidation and exclusion, and in some cases may promote offline violence.”
 
-This rewrite adds some clear statements of behavior that is now allowed:
+This rewrite adds some clear statements:
 
-> - We do allow content arguing for gender-based limitations of military, law enforcement, and teaching jobs. We also allow the same content based on sexual orientation, when the content is based on religious beliefs. ([line 1340](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0R1340)).
 > - **We do allow allegations of mental illness or abnormality when based on gender or sexual orientation**, given political and religious discourse about transgenderism and homosexuality ([line 1346](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0R1346)).
+> - We do allow content arguing for gender-based limitations of military, law enforcement, and teaching jobs. We also allow the same content based on sexual orientation, when the content is based on religious beliefs. ([line 1340](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0R1340)).
 
 Beyond these additions, most of the changes are made of removal of interdictions. Thanks to Open Terms Archive history tracking, one can identify that the following behaviors that were forbidden are now allowed on Instagram starting on January 7:
 
