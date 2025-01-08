@@ -31,7 +31,7 @@ Beyond these additions, most of the changes are made of removal of interdictions
 - Calls for “sex or gender-based exclusion from spaces commonly limited by sex or gender, such as restrooms, sports and sports leagues, health and support groups, and specific schools.” ([line 1341](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0R1341)).
 - Claims that some people are responsible for or spreading Covid-19 ([line 1414](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0L1414)).
 
-This change also [removed](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0L1317) a statement according to which Instagram has “additional restrictions for paid content.”
+Beyond the removal of these specific prohibitions, the update also [removed](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0L1317) a statement according to which Instagram has “additional restrictions for paid content.”
 
 Since several of the types of speech that are now allowed are illegal in most European countries, the section [adds a direct link](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0R1364) to legal removal requests.
 
