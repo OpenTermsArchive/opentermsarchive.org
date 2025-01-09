@@ -26,6 +26,7 @@ Au-delà de ces ajouts, de nombreux changements sont révélés par le retrait d
 > - Les bactéries, les virus ou les microbes
 > - Les maladies (notamment, le cancer et les maladies sexuellement transmissibles)
 > - Des sous-hommes (notamment, les sauvages, les démons, les monstres, les créatures primitives)
+>
 - Nier l’existence d’un groupe de personnes ([ligne 1361](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0L1361)).
 - Les appels à « expulser certains groupes » ([line 1403](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0L1403)).
 - Les appels à « l’exclusion fondée sur le sexe biologique ou le genre d’espaces généralement restreints par le sexe biologique ou le genre, tels que les toilettes, les sports et les ligues sportives, les communautés de santé et de soutien, et certaines écoles »[^traduction]. ([line 1341](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0R1341)).
