@@ -1,6 +1,6 @@
 ---
-html_description : Meta a réécrit ses standards sur le « discours haineux » pour Facebook, Instagram et Threads, autorisant explicitement les insultes et les appels à la discrimination sur la base du genre et de l’orientation sexuelle.
-title : Meta retire des protections contre les discours haineux
+html_description: Meta a réécrit ses standards sur le « discours haineux » pour Facebook, Instagram et Threads, autorisant explicitement les insultes et les appels à la discrimination sur la base du genre et de l’orientation sexuelle.
+title: Meta retire des protections contre les discours haineux
 service: Instagram
 terms_types: ["Community Guidelines"]
 dates: ["2025-01-07"]
