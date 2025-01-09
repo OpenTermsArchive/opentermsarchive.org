@@ -16,7 +16,7 @@ Most of all, this rewrite adds some clear permissions:
 > - We do allow content arguing for gender-based limitations of military, law enforcement, and teaching jobs. We also allow the same content based on sexual orientation, when the content is based on religious beliefs ([line 1340](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0R1340)).
 > - Using “sex- or gender-exclusive language when people […] **call for exclusion or use insulting language in the context of discussing political or religious topics, such as when discussing transgender rights, immigration, or homosexuality. […] Our policies are designed to allow room for these types of speech.**” ([line 1297](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0R1297))
 
-Beyond these additions, many revealing changes are made of removal of interdictions. Thanks to Open Terms Archive history tracking, one can identify that the following content that was forbidden is **allowed on Instagram, Facebook and Threads starting on January 7**:
+Beyond these additions, another revealing change is the removal of bans on specific forms of hate speech. Thanks to Open Terms Archive history tracking, we know that the following content that was previously forbidden is now **allowed on Instagram, Facebook and Threads starting on January 7**:
 
 - Comparing people to ([lines 1338 to 1342](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20#diff-dd1aecfa753374588d9e40f891e39f556b365ad800c9713ef398255bc906aad0L1338-L1342)):
 >
