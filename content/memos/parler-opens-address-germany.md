@@ -1,6 +1,6 @@
 ---
 title: Parler opens address in Germany
-html_description: Social media Parler disclosed a physical address in Köln, Germany, hinting at development towads the European Union.
+html_description: Social media Parler disclosed a physical address in Köln, Germany, hinting at development towards the European Union.
 service: Parler
 terms_types: ["Impressum"]
 dates: ["2025-01-14"]
