@@ -10,7 +10,7 @@ related_collections: ["pga"]
 
 American social media Parler [added](https://github.com/OpenTermsArchive/pga-versions/commit/d63f05bbcbf2b0ebf087e279429a085468d7d74f#diff-f5ac1f4939c7895c9d3bdda244e6f8b6308288b30be6b9a486b142af45c739bdR88) a physical address of operations in the European Union. The address is in Köln, Germany, at the [MiOM space](https://miom.space/en/), “a collective from Cologne with the vision of creating affordable space for creative synergies.”
 
-Little known outside of the United States of America, Parler is a social network mostly used and promoted by American conservatives that was used to coordinate the 2021 storming of the US Capitol, leading to its [suspension](https://www.bbc.com/news/technology-55598887) by app stores.
+Little known outside of the United States of America, Parler is a social network mostly used and promoted by American conservatives. It was notably used to coordinate the 2021 storming of the US Capitol, leading to its [suspension](https://www.bbc.com/news/technology-55598887) by app stores.
 
 ![Screenshot of Parler’s homepage showcasing a picture of Trump winning the elections and motto “Real People. Unfiltered Voices. True Freedom.”](../parler-opens-address-germany.png)
 
