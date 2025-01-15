@@ -10,13 +10,13 @@
 }
 
 .collection__header-image {
+  display: flex;
   flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
   width: 180px;
   height: 180px;
   background-color: var(--colorBlack200);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 50%;
 }
 
