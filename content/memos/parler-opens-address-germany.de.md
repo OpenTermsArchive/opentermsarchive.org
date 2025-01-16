@@ -1,6 +1,6 @@
 ---
-title: Parler eröffnet eine Adresse in Deutschland
-html_description: Soziale Netz Parler offenlegt eine Adresse in Köln, die auf eine Entwicklung in Richtung Europäische Union hinweist.
+title: Parler eröffnet gefälschte Adresse in Deutschland
+html_description: "[AKTUALISIERT] Soziale Netz Parler offenlegt eine Adresse in Köln, die auf eine Entwicklung in Richtung Europäische Union hinweist. Diese Adresse wurde von ihrem Eigentümer abgelehnt und dann von Parler versteckt."
 service: Parler
 terms_types: ["Impressum"]
 dates: ["2025-01-14"]
@@ -15,3 +15,14 @@ Parler ist außerhalb der Vereinigten Staaten von Amerika ein wenig bekanntes so
 ![Screenshot der Homepage von Parler mit einem Bild des Wahlsiegs von Trump und dem Motto „Real People. Unfiltered Voices. True Freedom.“](../parler-opens-address-germany.png)
 
 Diese Ausweitung auf die Europäische Union findet vor dem Hintergrund der verstärkten Präsenz und des politischen Aktivismus der großen amerikanischen sozialen Medien statt. Am 7. Januar [erklärte](https://www.threads.net/@zuck/post/DEhgYx4JbEG) Mark Zuckerberg, dass Meta „mit Präsident Trump zusammenarbeiten wird, um gegen ausländische Regierungen vorzugehen, die amerikanische Unternehmen verfolgen, um sie stärker zu zensieren“, und [dämpfte seine Beschränkungen für Hassreden]({{< relref path="meta-dampens-hate-speech-policy.de" >}}). Am 9. Januar [veranstaltete](https://www.bbc.com/news/articles/cr7errxp5jmo) Elon Musk eine Diskussion auf X zur Unterstützung der rechtsextremen Partei AfD.
+
+### Update 1 (15. Januar)
+
+Nach dem Bericht von Open Terms Archive hat MiOM Kreativraum eine [Erklärung](https://miom.space/posts/parler/) angegeben:
+
+> Der MiOM Kreativraum e.V. hat keine Beziehung zu Parler. Der Verein stand noch nie in Kontakt mit Parler.
+ […] Wir schauen aktuell nach möglichen rechtlichen Maßnahmen.
+
+### Update 2 (15. Januar)
+
+Nach der Erklärung der MiOM Kreativraum hat Parler sowohl die Adresse in Texas als auch in Köln von seiner Website entfernt. Diese Entfernung ist jedoch nur visuell und die Daten sind immer noch auf der Seite vorhanden, und von Suchmaschinen indiziert werden können.

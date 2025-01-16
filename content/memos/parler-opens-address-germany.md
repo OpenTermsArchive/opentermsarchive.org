@@ -1,6 +1,6 @@
 ---
-title: Parler opens address in Germany
-html_description: Social media Parler disclosed a physical address in Köln, Germany, hinting at development towards the European Union.
+title: Parler opens fake address in Germany
+html_description: "[UPDATED] Social media Parler disclosed a physical address in Köln, Germany, hinting at development towards the European Union. This address was denied by its owner, then hidden by Parler."
 service: Parler
 terms_types: ["Impressum"]
 dates: ["2025-01-14"]
@@ -15,3 +15,13 @@ Little known outside of the United States of America, Parler is a social network
 ![Screenshot of Parler’s homepage showcasing a picture of Trump winning the elections and motto “Real People. Unfiltered Voices. True Freedom.”](../parler-opens-address-germany.png)
 
 This expansion towards the European Union takes place in a context of increased presence and political activism from major American social media. On January 7th, Mark Zuckerberg [stated](https://www.threads.net/@zuck/post/DEhgYx4JbEG) that Meta will “work with President Trump to push back against foreign governments going after American companies to censor more” and [dampened its hate speech restrictions]({{< relref path="meta-dampens-hate-speech-policy" >}}). On January 9th, Elon Musk [hosted](https://www.bbc.com/news/articles/cr7errxp5jmo) a discussion on X to support Germany’s far-right party AfD.
+
+### Update 1 (Jan 15)
+
+Following Open Terms Archive’s report, the MiOM space issued a [statement](https://miom.space/en/posts/parler/):
+
+> MiOM Kreativraum e.V. has no relationship with Parler. The association has never been in contact with Parler. […] We are currently looking into possible legal measures.
+
+### Update 2 (Jan 15)
+
+Following MiOM’s statement, Parler hid both their Texas and Köln addresses from their website. However, this removal is only visual and the data is still present on the page, enabling indexing by search engines.
