@@ -14,7 +14,11 @@
 
   {{ with $collectionLogo.resource }}
     <div class="card__header">
-      <img src="{{ .RelPermalink }}" alt="{{ $name }}">
+      <img
+        src="{{ .RelPermalink }}"
+        srcset="{{ .RelPermalink }} 1x, {{ replace .RelPermalink ".png" "@2x.png" }} 2x"
+        alt="{{ $name }}"
+      >
     </div>
   {{ end }}
 
