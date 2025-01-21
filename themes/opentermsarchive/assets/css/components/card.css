@@ -1,5 +1,6 @@
 .card {
   @mixin grid 4,3;
+
   position: relative;
   display: flex;
   flex-direction: column;
