@@ -8,7 +8,7 @@
     "declarations": "https://github.com/OpenTermsArchive/genai-declarations",
     "versions": "https://github.com/OpenTermsArchive/genai-versions",
     "snapshots": "https://github.com/OpenTermsArchive/genai-snapshots",
-    "donations": "https://opencollective.com/opentermsarchive",
+    "donations": "https://opencollective.com/opentermsarchive/projects/genai",
     "logo": "https://opentermsarchive.org/images/collections/generative-ai.png",
     "languages": [
       "en"
@@ -69,7 +69,7 @@
       }
     },
     "totalServices": 20,
-    "totalTerms": 56,
+    "totalTerms": 57,
     "engineVersion": "4.0.1",
     "endpoint": "http://51.77.110.109/collection-api/v1/"
   },
@@ -155,7 +155,7 @@
     "declarations": "https://github.com/OpenTermsArchive/france-declarations",
     "versions": "https://github.com/OpenTermsArchive/france-versions",
     "snapshots": "https://github.com/OpenTermsArchive/france-snapshots",
-    "donations": "https://opencollective.com/opentermsarchive",
+    "donations": "https://opencollective.com/opentermsarchive/projects/france-collection",
     "logo": "https://opentermsarchive.org/images/collections/france.png",
     "languages": [
       "fr"
@@ -422,7 +422,7 @@
       }
     },
     "totalServices": 26,
-    "totalTerms": 66,
+    "totalTerms": 67,
     "engineVersion": "4.0.1",
     "endpoint": "http://vps-99ae1d89.vps.ovh.net/collection-api/v1/"
   },
@@ -435,7 +435,7 @@
     "declarations": "https://github.com/OpenTermsArchive/contrib-declarations",
     "versions": "https://github.com/OpenTermsArchive/contrib-versions",
     "snapshots": "https://github.com/OpenTermsArchive/contrib-snapshots",
-    "donations": "https://opencollective.com/opentermsarchive",
+    "donations": "https://opencollective.com/opentermsarchive/projects/contrib-collection",
     "logo": "https://opentermsarchive.org/images/collections/contrib.png",
     "languages": [
       "en",
