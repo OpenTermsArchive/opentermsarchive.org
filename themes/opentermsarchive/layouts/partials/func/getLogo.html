@@ -4,6 +4,12 @@
 {{ $localImagePath := printf "/images/%s/%s.png" $type (.name | urlize)}}
 {{ $errorMessage := ""}}
 
+{{ $size := default "" .size }}
+{{ if eq $size "2x" }}
+  {{ $remoteLogoUrl = replace $remoteLogoUrl ".png" "@2x.png" }}
+  {{ $localImagePath = replace $localImagePath ".png" "@2x.png" }}
+{{ end }}
+
 {{ with $remoteLogoUrl }}
   {{ with resources.GetRemote $remoteLogoUrl }}
     {{ with .Err }}

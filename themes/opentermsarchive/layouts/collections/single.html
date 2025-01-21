@@ -8,7 +8,9 @@
   {{ $issues := printf "%s/issues" .Params.declarations }}
   {{ $isGraySectionIndex := 0 }}
   {{ $collectionLogo := partial "func/getLogo.html" (dict "logoUrl" .Params.logo "name" $name "type" "collections") }}
+  {{ $collectionLogo2x := partial "func/getLogo.html" (dict "logoUrl" .Params.logo "name" $name "type" "collections" "size" "2x") }}
   {{ with $collectionLogo.error }}{{ warnf . }}{{ end }}
+  {{ with $collectionLogo2x.error }}{{ warnf . }}{{ end }}
   {{ $governance := .Params.governance }}
   {{ $i18n := .Params.i18n }}
   {{ $languages := .Params.languages }}
@@ -21,10 +23,14 @@
     <div class="container container--wide container--has-no-padding-y">
       <div class="collection__header container container--1211 container--has-no-padding-x">
         {{ with $collectionLogo.resource }}
+          {{ $logo := . }}
           <div class="collection__header-image">
             <img
-              src="{{ .RelPermalink }}"
-              srcset="{{ .RelPermalink }} 1x, {{ replace .RelPermalink ".png" "@2x.png" }} 2x"
+              src="{{ $logo.RelPermalink }}"
+              {{ with $collectionLogo2x.resource }}
+                {{ $logo2x := . }}
+                srcset="{{ $logo.RelPermalink }} 1x, {{ $logo2x.RelPermalink }} 2x"
+              {{ end }}
               alt="{{ $name }}"
             >
           </div>

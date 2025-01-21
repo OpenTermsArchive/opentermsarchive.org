@@ -1,7 +1,9 @@
 {{ $name := .Params.name }}
 {{ $tagline := default .Params.tagline (index .Params.i18n site.Language.Lang "tagline") }}
 {{ $collectionLogo := partial "func/getLogo.html" (dict "logoUrl" .Params.logo "name" $name "type" "collections") }}
+{{ $collectionLogo2x := partial "func/getLogo.html" (dict "logoUrl" .Params.logo "name" $name "type" "collections" "size" "2x") }}
 {{ with $collectionLogo.error }}{{ warnf . }}{{ end }}
+{{ with $collectionLogo2x.error }}{{ warnf . }}{{ end }}
 {{ $i18n := .Params.i18n }}
 
 {{ $languages := .Params.languages }}
@@ -13,10 +15,14 @@
 <div class="card card--is-white card--center">
 
   {{ with $collectionLogo.resource }}
+    {{ $logo := . }}
     <div class="card__header">
       <img
-        src="{{ .RelPermalink }}"
-        srcset="{{ .RelPermalink }} 1x, {{ replace .RelPermalink ".png" "@2x.png" }} 2x"
+        src="{{ $logo.RelPermalink }}"
+        {{ with $collectionLogo2x.resource }}
+          {{ $logo2x := . }}
+          srcset="{{ $logo.RelPermalink }} 1x, {{ $logo2x.RelPermalink }} 2x"
+        {{ end }}
         alt="{{ $name }}"
       >
     </div>
