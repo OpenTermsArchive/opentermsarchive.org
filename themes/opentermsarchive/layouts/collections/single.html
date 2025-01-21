@@ -58,7 +58,7 @@
               </li>
             {{ end }}
             {{ with .Params.endpoint }}
-              {{ $endpointDocs := printf "%s/docs" . }}
+              {{ $endpointDocs := printf "%sdocs" . }}
               <li>
                 <a class="button button--secondary" href="{{ $endpointDocs }}" target="_blank" rel="noopener">
                   {{ i18n "collections.cta.endpoint" }}
