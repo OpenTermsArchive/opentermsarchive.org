@@ -14,3 +14,5 @@ rules:
   "@html-eslint/no-duplicate-attrs": warn
   "@html-eslint/require-closing-tags":
     - warn
+  "@html-eslint/quotes":
+    - warn
