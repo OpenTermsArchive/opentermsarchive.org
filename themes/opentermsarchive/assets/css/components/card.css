@@ -1,8 +1,14 @@
 .card {
+  @mixin grid 4,3;
+
   position: relative;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--colorBlack300);
+
+  @media (--mobileExtraLarge) {
+    max-width: 100%;
+  }
 }
 
 .card__link {
