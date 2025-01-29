@@ -40,6 +40,56 @@ Open Terms Archive permet aux parlementaires de suivre l'application de leurs 
 <h2 class="mb__0 mt--4xl">Revue de presse</h2>
 <h4 class="h4--light mb--3xl">Ces articles mentionnent Open Terms Archive</h4>
 
+### Le Canard enchaîné
+
+<p class="text--smallcaps">14 janvier 2025</p>
+
+> Désormais, Meta autorise les messages désignant "les femmes comme des objets du quotidien (…) ; les personnes noires comme du matériel agricole : les transfenres ou personnes non binaires par le déterminant "ça" ", alerte Matti Schneider...d'Open Terms Archive...spécialisée dans l'observation des fournisseurs de services en ligne.
+
+<a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://www.lecanardenchaine.fr/technologie-sciences/49891-a-bruxelles-la-lutte-anti-musk-reste-dans-les-choux" title="A Bruxelles, la lutte anti-Musk reste dans les choux">Lire</a>
+
+---
+
+### Vert
+
+<p class="text--smallcaps">13 janvier 2025</p>
+
+> Meta met fin à sa politique d’inclusion des minorités et a même retiré de ses conditions d’utilisation l’interdiction de comparer les personnes noires à du matériel agricole, ou les femmes à des propriétés.
+
+<a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://vert.eco/articles/musk-zuckerberg-bezos-les-cinq-dernieres-dingueries-des-geants-de-la-tech-qui-montrent-leur-bascule-trumpiste" title="Musk, Zuckerberg, Bezos… les cinq dernières dingueries des géants de la tech qui montrent leur bascule trumpiste">Lire</a>
+
+---
+
+### Louis Derrac
+
+<p class="text--smallcaps">9 janvier 2025</p>
+
+> sa décision… de « simplifier [les] principes de régulation et éliminer différentes restrictions », ou encore de travailler avec Trump pour mettre la pression sur les pays (l’UE au premier chef) qui tentent de réguler les big tech américaines…
+
+<a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://louisderrac.com/nest-il-pas-enfin-temps-de-boycotter-massivement-les-big-tech-americaines/" title="N’est-il pas (enfin) temps de boycotter massivement les big tech américaines ?">Lire</a>
+
+---
+
+### Affordance.info
+
+<p class="text--smallcaps">9 janvier 2025</p>
+
+> Concrètement, les nouveaux « standards de communauté » de Meta stipulent par exemple et parmi d’autres monstruosités : « Nous autorisons les allégations de maladie mentale ou d’anormalité lorsqu’elles sont fondées sur le genre ou l’orientation sexuelle. »
+
+<a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://affordance.framasoft.org/2025/01/la-performativite-selon-la-tech-quand-faire-cest-se-dedire/" title="La performativité selon la tech : quand faire c’est se dédire.">Lire</a>
+
+---
+
+### Alexia Maddox
+
+<p class="text--smallcaps">8 janvier 2025</p>
+
+> Meta’s shift away from fact-checking comes alongside deeply concerning changes to content moderation policies.
+
+<a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://alexiamaddox.com/2025/01/08/thinking-through-metas-fact-checking-changes-what-it-means-for-australia/" title="Thinking Through Meta’s Fact-Checking Changes: What It Means for Australia">Lire</a>
+
+---
+
 ### l’Opinion
 
 <p class="text--smallcaps">4 octobre 2022</p>
