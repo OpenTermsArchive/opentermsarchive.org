@@ -81,7 +81,7 @@ Open Terms Archive enables activists to identify misleading terms.
 
 <p class="text--smallcaps">January 8, 2025</p>
 
-> Meta’s decision to use Community Notes as a replacement for professional fact-checking, rather than a complement to it, while simultaneously reducing other safeguards against hate speech, puts enormous pressure on the system to perform.
+> Meta’s shift away from fact-checking comes alongside deeply concerning changes to content moderation policies.
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://alexiamaddox.com/2025/01/08/thinking-through-metas-fact-checking-changes-what-it-means-for-australia/" title="Thinking Through Meta’s Fact-Checking Changes: What It Means for Australia">Read</a>
 
