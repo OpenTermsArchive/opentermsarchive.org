@@ -40,6 +40,16 @@ Open Terms Archive permet aux parlementaires de suivre l'application de leurs 
 <h2 class="mb__0 mt--4xl">Revue de presse</h2>
 <h4 class="h4--light mb--3xl">Ces articles mentionnent Open Terms Archive</h4>
 
+### Vert
+
+<p class="text--smallcaps">13 janvier 2025</p>
+
+> Meta met fin à sa politique d’inclusion des minorités et a même retiré de ses conditions d’utilisation l’interdiction de comparer les personnes noires à du matériel agricole, ou les femmes à des propriétés.
+
+<a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://vert.eco/articles/musk-zuckerberg-bezos-les-cinq-dernieres-dingueries-des-geants-de-la-tech-qui-montrent-leur-bascule-trumpiste" title="Musk, Zuckerberg, Bezos… les cinq dernières dingueries des géants de la tech qui montrent leur bascule trumpiste">Lire</a>
+
+---
+
 ### Louis Derrac
 
 <p class="text--smallcaps">9 janvier 2025</p>
