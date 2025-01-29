@@ -37,6 +37,16 @@ Open Terms Archive enables activists to identify misleading terms.
 <h2 class="mt--4xl mb__0">Press review</h2>
 <h4 class="h4--light mb--3xl">They talk about Open Terms Archive</h4>
 
+### Louis Derrac
+
+<p class="text--smallcaps">January 9, 2025</p>
+
+> sa décision… de « simplifier [les] principes de régulation et éliminer différentes restrictions », ou encore de travailler avec Trump pour mettre la pression sur les pays (l’UE au premier chef) qui tentent de réguler les big tech américaines…
+
+<a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://louisderrac.com/nest-il-pas-enfin-temps-de-boycotter-massivement-les-big-tech-americaines/" title="N’est-il pas (enfin) temps de boycotter massivement les big tech américaines ?">Read (in French)</a>
+
+---
+
 ### Affordance.info
 
 <p class="text--smallcaps">January 9, 2025</p>
