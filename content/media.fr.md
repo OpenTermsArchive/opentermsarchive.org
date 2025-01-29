@@ -40,6 +40,16 @@ Open Terms Archive permet aux parlementaires de suivre l'application de leurs 
 <h2 class="mb__0 mt--4xl">Revue de presse</h2>
 <h4 class="h4--light mb--3xl">Ces articles mentionnent Open Terms Archive</h4>
 
+### Affordance.info
+
+<p class="text--smallcaps">9 janvier 2025</p>
+
+> Concrètement, les nouveaux « standards de communauté » de Meta stipulent par exemple et parmi d’autres monstruosités : « Nous autorisons les allégations de maladie mentale ou d’anormalité lorsqu’elles sont fondées sur le genre ou l’orientation sexuelle. »
+
+<a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://affordance.framasoft.org/2025/01/la-performativite-selon-la-tech-quand-faire-cest-se-dedire/" title="La performativité selon la tech : quand faire c’est se dédire.">Lire</a>
+
+---
+
 ### Alexia Maddox
 
 <p class="text--smallcaps">8 janvier 2025</p>
