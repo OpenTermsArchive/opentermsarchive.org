@@ -37,6 +37,16 @@ Open Terms Archive enables activists to identify misleading terms.
 <h2 class="mt--4xl mb__0">Press review</h2>
 <h4 class="h4--light mb--3xl">They talk about Open Terms Archive</h4>
 
+### Alexia Maddox
+
+<p class="text--smallcaps">January 8, 2025</p>
+
+> Meta’s decision to use Community Notes as a replacement for professional fact-checking, rather than a complement to it, while simultaneously reducing other safeguards against hate speech, puts enormous pressure on the system to perform.
+
+<a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://alexiamaddox.com/2025/01/08/thinking-through-metas-fact-checking-changes-what-it-means-for-australia/" title="Thinking Through Meta’s Fact-Checking Changes: What It Means for Australia">Read</a>
+
+---
+
 ### l’Opinion
 
 <p class="text--smallcaps">October 4, 2022</p>
