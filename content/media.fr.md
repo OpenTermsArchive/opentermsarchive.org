@@ -40,6 +40,16 @@ Open Terms Archive permet aux parlementaires de suivre l'application de leurs 
 <h2 class="mb__0 mt--4xl">Revue de presse</h2>
 <h4 class="h4--light mb--3xl">Ces articles mentionnent Open Terms Archive</h4>
 
+### Le Canard enchaîné
+
+<p class="text--smallcaps">14 janvier 2025</p>
+
+> Désormais, Meta autorise les messages désignant "les femmes comme des objets du quotidien (…) ; les personnes noires comme du matériel agricole : les transfenres ou personnes non binaires par le déterminant "ça" ", alerte Matti Schneider...d'Open Terms Archive...spécialisée dans l'observation des fournisseurs de services en ligne.
+
+<a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://www.lecanardenchaine.fr/technologie-sciences/49891-a-bruxelles-la-lutte-anti-musk-reste-dans-les-choux" title="A Bruxelles, la lutte anti-Musk reste dans les choux">Lire</a>
+
+---
+
 ### Vert
 
 <p class="text--smallcaps">13 janvier 2025</p>
