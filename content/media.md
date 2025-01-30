@@ -81,7 +81,7 @@ Open Terms Archive enables activists to identify misleading terms.
 
 <p class="text--smallcaps">January 8, 2025</p>
 
-> Meta’s shift away from fact-checking comes alongside deeply concerning changes to content moderation policies.
+> As documented by the Platform Governance Archive, Meta has significantly rewritten its Community Guidelines, removing crucial protections against hate speech and reframing these rules as “hateful conduct” policies. I think Matti Schneider articulates the concerns this raises best in his LinkedIn post on the topic. He argues that these changes explicitly permit previously restricted content, particularly harmful speech targeting gender, sexual orientation, and minority groups.
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://alexiamaddox.com/2025/01/08/thinking-through-metas-fact-checking-changes-what-it-means-for-australia/" title="Thinking Through Meta’s Fact-Checking Changes: What It Means for Australia">Read</a>
 
