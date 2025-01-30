@@ -74,7 +74,7 @@ Open Terms Archive permet aux parlementaires de suivre l'application de leurs 
 
 <p class="text--smallcaps">9 janvier 2025</p>
 
-> Concrètement, les nouveaux « standards de communauté » de Meta stipulent par exemple et parmi d’autres monstruosités : « Nous autorisons les allégations de maladie mentale ou d’anormalité lorsqu’elles sont fondées sur le genre ou l’orientation sexuelle. »
+> Concrètement, les nouveaux « standards de communauté » de Meta stipulent par exemple et parmi d’autres monstruosités : « Nous autorisons les allégations de maladie mentale ou d’anormalité lorsqu’elles sont fondées sur le genre ou l’orientation sexuelle. »
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://affordance.framasoft.org/2025/01/la-performativite-selon-la-tech-quand-faire-cest-se-dedire/" title="La performativité selon la tech : quand faire c’est se dédire.">Lire</a>
 
