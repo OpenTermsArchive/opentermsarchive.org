@@ -68,8 +68,8 @@
         }
       }
     },
-    "totalServices": 20,
-    "totalTerms": 57,
+    "totalServices": 22,
+    "totalTerms": 61,
     "engineVersion": "4.0.1",
     "endpoint": "http://51.77.110.109/collection-api/v1/"
   },
