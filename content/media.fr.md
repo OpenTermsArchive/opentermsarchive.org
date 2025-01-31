@@ -44,7 +44,7 @@ Open Terms Archive permet aux parlementaires de suivre l'application de leurs 
 
 <p class="text--smallcaps">14 janvier 2025</p>
 
-> Désormais, Meta autorise les messages désignant "les femmes comme des objets du quotidien (…) ; les personnes noires comme du matériel agricole : les transfenres ou personnes non binaires par le déterminant "ça" ", alerte Matti Schneider...d'Open Terms Archive...spécialisée dans l'observation des fournisseurs de services en ligne.
+> Désormais, Meta autorise les messages désignant « les femmes comme des objets du quotidien (…) ; les personnes noires comme du matériel agricole ; les transgenres ou personnes non binaires par le déterminant “ça” », alerte Matti Schneider d’Open Terms Archive
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://www.lecanardenchaine.fr/technologie-sciences/49891-a-bruxelles-la-lutte-anti-musk-reste-dans-les-choux" title="A Bruxelles, la lutte anti-Musk reste dans les choux">Lire</a>
 
@@ -64,7 +64,7 @@ Open Terms Archive permet aux parlementaires de suivre l'application de leurs 
 
 <p class="text--smallcaps">9 janvier 2025</p>
 
-> sa décision… de « simplifier [les] principes de régulation et éliminer différentes restrictions », ou encore de travailler avec Trump pour mettre la pression sur les pays (l’UE au premier chef) qui tentent de réguler les big tech américaines…
+> C’est dans une vidéo absolument lunaire que [Mark Zuckerberg] nous explique, au calme, sa vision de notre entrée « dans une ère nouvelle », et sa décision […] de « simplifier [les] principes de régulation et éliminer différentes restrictions »
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://louisderrac.com/nest-il-pas-enfin-temps-de-boycotter-massivement-les-big-tech-americaines/" title="N’est-il pas (enfin) temps de boycotter massivement les big tech américaines ?">Lire</a>
 
@@ -74,7 +74,7 @@ Open Terms Archive permet aux parlementaires de suivre l'application de leurs 
 
 <p class="text--smallcaps">9 janvier 2025</p>
 
-> Concrètement, les nouveaux « standards de communauté » de Meta stipulent par exemple et parmi d’autres monstruosités : « Nous autorisons les allégations de maladie mentale ou d’anormalité lorsqu’elles sont fondées sur le genre ou l’orientation sexuelle. »
+> Concrètement, les nouveaux « standards de communauté » de Meta stipulent par exemple et parmi d’autres monstruosités : « Nous autorisons les allégations de maladie mentale ou d’anormalité lorsqu’elles sont fondées sur le genre ou l’orientation sexuelle. »
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://affordance.framasoft.org/2025/01/la-performativite-selon-la-tech-quand-faire-cest-se-dedire/" title="La performativité selon la tech : quand faire c’est se dédire.">Lire</a>
 
@@ -84,7 +84,7 @@ Open Terms Archive permet aux parlementaires de suivre l'application de leurs 
 
 <p class="text--smallcaps">8 janvier 2025</p>
 
-> Meta’s shift away from fact-checking comes alongside deeply concerning changes to content moderation policies.
+> As documented by the Platform Governance Archive, Meta has significantly rewritten its Community Guidelines, removing crucial protections against hate speech and reframing these rules as “hateful conduct” policies. I think Matti Schneider articulates the concerns this raises best in his LinkedIn post on the topic. He argues that these changes explicitly permit previously restricted content, particularly harmful speech targeting gender, sexual orientation, and minority groups.
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://alexiamaddox.com/2025/01/08/thinking-through-metas-fact-checking-changes-what-it-means-for-australia/" title="Thinking Through Meta’s Fact-Checking Changes: What It Means for Australia">Lire</a>
 

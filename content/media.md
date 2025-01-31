@@ -41,7 +41,7 @@ Open Terms Archive enables activists to identify misleading terms.
 
 <p class="text--smallcaps">January 14, 2025</p>
 
-> Désormais, Meta autorise les messages désignant "les femmes comme des objets du quotidien (…) ; les personnes noires comme du matériel agricole : les transfenres ou personnes non binaires par le déterminant "ça" ", alerte Matti Schneider...d'Open Terms Archive...spécialisée dans l'observation des fournisseurs de services en ligne.
+> From now on, Meta will allow messages that refer to “women as household objects (…); Black people as farm equipment; transgender or non-binary people as ‘it’”, warns Matti Schneider of Open Terms Archive.
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://www.lecanardenchaine.fr/technologie-sciences/49891-a-bruxelles-la-lutte-anti-musk-reste-dans-les-choux" title="A Bruxelles, la lutte anti-Musk reste dans les choux">Read (in French)</a>
 
@@ -51,7 +51,7 @@ Open Terms Archive enables activists to identify misleading terms.
 
 <p class="text--smallcaps">January 13, 2025</p>
 
-> Meta met fin à sa politique d’inclusion des minorités et a même retiré de ses conditions d’utilisation l’interdiction de comparer les personnes noires à du matériel agricole, ou les femmes à des propriétés.
+> Meta ends its minority inclusion policy and even removed from its community guidelines the interdiction to compare Black people to farm equipemnt or women to properties.
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://vert.eco/articles/musk-zuckerberg-bezos-les-cinq-dernieres-dingueries-des-geants-de-la-tech-qui-montrent-leur-bascule-trumpiste" title="Musk, Zuckerberg, Bezos… les cinq dernières dingueries des géants de la tech qui montrent leur bascule trumpiste">Read (in French)</a>
 
@@ -61,7 +61,7 @@ Open Terms Archive enables activists to identify misleading terms.
 
 <p class="text--smallcaps">January 9, 2025</p>
 
-> sa décision… de « simplifier [les] principes de régulation et éliminer différentes restrictions », ou encore de travailler avec Trump pour mettre la pression sur les pays (l’UE au premier chef) qui tentent de réguler les big tech américaines…
+> In an absolutely lunar video, [Mark Zuckerberg] calmly explains his vision of our entry “into a new era”, and his decision […] to “simplify [the] regulatory principles and eliminate various restrictions”.
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://louisderrac.com/nest-il-pas-enfin-temps-de-boycotter-massivement-les-big-tech-americaines/" title="N’est-il pas (enfin) temps de boycotter massivement les big tech américaines ?">Read (in French)</a>
 
@@ -71,7 +71,7 @@ Open Terms Archive enables activists to identify misleading terms.
 
 <p class="text--smallcaps">January 9, 2025</p>
 
-> Concrètement, les nouveaux « standards de communauté » de Meta stipulent par exemple et parmi d’autres monstruosités : « Nous autorisons les allégations de maladie mentale ou d’anormalité lorsqu’elles sont fondées sur le genre ou l’orientation sexuelle. »
+> Concretely, Meta's new “community standards” stipulate, for example, and among other monstrosities: “We allow allegations of mental illness or abnormality when they are based on gender or sexual orientation.”
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://affordance.framasoft.org/2025/01/la-performativite-selon-la-tech-quand-faire-cest-se-dedire/" title="La performativité selon la tech : quand faire c’est se dédire.">Read (in French)</a>
 
@@ -81,7 +81,7 @@ Open Terms Archive enables activists to identify misleading terms.
 
 <p class="text--smallcaps">January 8, 2025</p>
 
-> Meta’s shift away from fact-checking comes alongside deeply concerning changes to content moderation policies.
+> As documented by the Platform Governance Archive, Meta has significantly rewritten its Community Guidelines, removing crucial protections against hate speech and reframing these rules as “hateful conduct” policies. I think Matti Schneider articulates the concerns this raises best in his LinkedIn post on the topic. He argues that these changes explicitly permit previously restricted content, particularly harmful speech targeting gender, sexual orientation, and minority groups.
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://alexiamaddox.com/2025/01/08/thinking-through-metas-fact-checking-changes-what-it-means-for-australia/" title="Thinking Through Meta’s Fact-Checking Changes: What It Means for Australia">Read</a>
 
