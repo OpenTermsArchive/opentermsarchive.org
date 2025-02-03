@@ -28,6 +28,10 @@
     "endpoint": "http://51.89.224.102/collection-api/v1/"
   },
   {
+    "name": "Kenya",
+    "endpoint": "http://102.68.86.60/collection-api/v1/"
+  },
+  {
     "name": "Demo",
     "endpoint": "http://162.19.74.224/collection-api/v1/"
   }
