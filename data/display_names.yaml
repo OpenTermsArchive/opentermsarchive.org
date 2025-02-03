@@ -58,6 +58,7 @@ regions:
     US: États-Unis
     GB: Royaume-Uni
     DE: Allemagne
+    KE: Kenya
   en:
     EU: European Union
     CH: Switzerland
@@ -66,3 +67,4 @@ regions:
     US: United States
     GB: United Kingdom
     DE: Germany
+    KE: Kenya
