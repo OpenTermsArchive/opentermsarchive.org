@@ -249,7 +249,7 @@
               {{ with $entityUrl }}<a class="governance__item-link" href="{{ . }}" target="_blank" rel="noopener">{{ end }}
                 <div class="governance__item-logo">
                   {{ with $entityLogo.resource }}
-                    <img src="{{ .RelPermalink }}" alt="{{ $entityName }}">
+                    <img src="{{ .RelPermalink }}" alt="{{ $entityName }}" class="governance__item-img {{ if eq $entityLogo.remoteType "github" }}governance__item-img--github{{ end }}">
                   {{ else }}
                     <i class="icon icon--gray icon--big icon--stroke-thin" data-lucide="image"></i>
                   {{ end }}

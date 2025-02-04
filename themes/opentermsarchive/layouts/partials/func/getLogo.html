@@ -1,5 +1,6 @@
 {{ $type := default "contributors" .type }}
 {{ $remoteLogoUrl := .logoUrl }}
+{{ $remoteType := "" }}
 {{ $resource := "" }}
 {{ $localImagePath := printf "/images/%s/%s.png" $type (.name | urlize)}}
 {{ $errorMessage := ""}}
@@ -11,6 +12,9 @@
 {{ end }}
 
 {{ with $remoteLogoUrl }}
+  {{ if in $remoteLogoUrl  "avatars.githubusercontent.com" }}
+    {{ $remoteType = "github" }}
+  {{ end }}
   {{ with resources.GetRemote $remoteLogoUrl }}
     {{ with .Err }}
       {{ $errorMessage = .Err }}
@@ -34,4 +38,4 @@
   {{ end }}
 {{ end }}
 
-{{ return (dict "resource" $resource "error" $errorMessage) }}
+{{ return (dict "resource" $resource "error" $errorMessage "remoteType" $remoteType) }}
