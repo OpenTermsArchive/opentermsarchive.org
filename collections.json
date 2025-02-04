@@ -497,6 +497,81 @@
     "endpoint": "http://51.89.224.102/collection-api/v1/"
   },
   {
+    "id": "kenya",
+    "name": "Kenya",
+    "tagline": "Largest digital services used in Kenya",
+    "description": "The **Kenya** collection tracks changes to the terms of use of the largest digital services used in Kenya and written in English.\n\nThis collection is maintained by Clifford Ouma and volunteer contributors.\n",
+    "dataset": "https://github.com/OpenTermsArchive/kenya-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/kenya-declarations",
+    "versions": "https://github.com/OpenTermsArchive/kenya-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/kenya-snapshots",
+    "donations": "https://opencollective.com/opentermsarchive",
+    "logo": "https://opentermsarchive.org/images/collections/kenya.png",
+    "languages": [
+      "en"
+    ],
+    "jurisdictions": [
+      "KE"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2024-03-28T00:00:00.000Z",
+        "schedule": "30 */12 * * *",
+        "serverLocation": "Nairobi, KE"
+      }
+    ],
+    "governance": {
+      "Clifford Ouma": {
+        "url": "https://www.linkedin.com/in/clifford-ochieng/",
+        "logo": "https://avatars.githubusercontent.com/u/56266330?v=4",
+        "roles": [
+          "host",
+          "curator",
+          "maintainer"
+        ]
+      },
+      "Ministry for Europe and Foreign Affairs": {
+        "url": "https://www.diplomatie.gouv.fr/en/",
+        "logo": "https://opentermsarchive.org/images/contributors/meae.png",
+        "roles": [
+          "sponsor"
+        ]
+      },
+      "Open Terms Archive": {
+        "url": "https://opentermsarchive.org",
+        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black.png",
+        "roles": [
+          "administrator"
+        ]
+      },
+      "Volunteer contributors": {
+        "roles": [
+          "curator",
+          "maintainer"
+        ]
+      }
+    },
+    "i18n": {
+      "fr": {
+        "tagline": "Principaux services numériques utilisés au Kenya",
+        "description": "La collection **Kenya** suit les conditions d'utilisation des services les plus utilisés au Kenya en langue anglaise.\n\nCette collection est maintenue par Clifford Ouma et des contributeurs bénévoles.\n",
+        "governance": {
+          "Ministry for Europe and Foreign Affairs": {
+            "name": "Ministère de l'Europe et des Affaires étrangères",
+            "url": "https://www.diplomatie.gouv.fr"
+          },
+          "Volunteer contributors": {
+            "name": "Contributeurs bénévoles"
+          }
+        }
+      }
+    },
+    "totalServices": 3,
+    "totalTerms": 5,
+    "engineVersion": "4.0.1",
+    "endpoint": "http://102.68.86.60/collection-api/v1/"
+  },
+  {
     "id": "demo",
     "name": "Demo",
     "tagline": "Services used by Open Terms Archive",
