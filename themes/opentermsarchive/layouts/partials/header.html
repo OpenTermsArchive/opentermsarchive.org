@@ -37,16 +37,20 @@
               */}}
               {{ if .IsTranslated }}
                 {{ range .Translations }}
-                <div class="language-switcher__item">
-                  <a href="{{ .RelPermalink }}">{{ .Language.Lang | upper }}</a>
-                </div>
+                  {{ if ne .Language.Lang "de" }}
+                    <div class="language-switcher__item">
+                      <a href="{{ .RelPermalink }}">{{ .Language.Lang | upper }}</a>
+                    </div>
+                  {{ end }}
                 {{ end }}
               {{ else }}
-              {{ range $.Site.Home.AllTranslations }}
-                {{ if ne $currentLanguage .Language.Lang }}
-                  <div class="language-switcher__item">
-                    <a href="{{ .RelPermalink }}">{{ .Language.Lang | upper }}</a>
-                  </div>
+                {{ range $.Site.Home.AllTranslations }}
+                  {{ if ne .Language.Lang "de" }}
+                    {{ if ne $currentLanguage .Language.Lang }}
+                      <div class="language-switcher__item">
+                        <a href="{{ .RelPermalink }}">{{ .Language.Lang | upper }}</a>
+                      </div>
+                    {{ end }}
                   {{ end }}
                 {{ end }}
               {{ end }}
