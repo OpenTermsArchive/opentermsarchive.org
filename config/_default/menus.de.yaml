@@ -1,0 +1,67 @@
+header:
+  - name: Collections
+    pageRef: /collections
+    weight: 1
+  - name: Memos
+    pageRef: /memos
+    weight: 2
+  - name: Documentation
+    url: https://docs.opentermsarchive.org
+    weight: 3
+  - name: Impact
+    pageRef: /impact
+    weight: 4
+  - name: About
+    pageRef: /about
+    weight: 5
+footer:
+  - name: Home
+    pageRef: /
+    weight: 1
+  - name: Collections
+    pageRef: /Collections
+    weight: 2
+  - name: Datasets
+    pageRef: /datasets
+    weight: 3
+  - name: Memos
+    pageRef: /memos
+    weight: 4
+  - name: Documentation
+    pageRef: /
+    weight: 5
+  - name: Impact
+    pageRef: /impact
+    weight: 6
+  - name: About
+    pageRef: /about
+    weight: 7
+  - name: Contact-us
+    identifier: mailto
+    weight: 8
+footer_sub:
+  - name: Services status
+    url: https://stats.uptimerobot.com/nXvrBcl0wx
+    weight: 1
+    params:
+      target: _blank
+  - name: Statistics
+    pageRef: /stats
+    weight: 2
+  - name: Media
+    pageRef: /media
+    weight: 3
+  - name: Source code
+    url: https://github.com/OpenTermsArchive/engine
+    weight: 4
+    params:
+      target: _blank
+  - name: Legal notice
+    pageRef: /legal-notice
+    weight: 5
+  - name: Privacy policy
+    pageRef: /privacy-policy
+    weight: 6
+  - name: 'Accessibility: not compliant'
+    pageRef: /accessibility
+    weight: 7
