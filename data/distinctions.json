@@ -2,21 +2,24 @@
   "Digital Public Good": {
     "description": {
       "fr": "Reconnu comme bien public numérique par le <abbr>PNUD</abbr>, l'<abbr>UNICEF</abbr> et la <abbr>Norad</abbr>",
-      "en": "Recognised as Digital Public Good by <abbr>UNDP</abbr>, <abbr>UNICEF</abbr> and <abbr>Norad</abbr>"
+      "en": "Recognised as Digital Public Good by <abbr>UNDP</abbr>, <abbr>UNICEF</abbr> and <abbr>Norad</abbr>",
+      "de": "Recognised as Digital Public Good by <abbr>UNDP</abbr>, <abbr>UNICEF</abbr> and <abbr>Norad</abbr>"
     },
     "link": "https://app.digitalpublicgoods.net/a/10795"
   },
   "Nobel Prize Summit": {
     "description": {
       "fr": "Distingué comme « Innovation ouverte pour l'intégrité de l'information » au Sommet du prix Nobel 2023",
-      "en": "Featured as “Open-Source Innovation for Information Integrity” at the Nobel Prize Summit 2023"
+      "en": "Featured as “Open-Source Innovation for Information Integrity” at the Nobel Prize Summit 2023",
+      "de": "Featured as “Open-Source Innovation for Information Integrity” at the Nobel Prize Summit 2023"
     },
     "link": "https://digitalpublicgoods.net/information-pollution/#:~:text=Open%20Terms%20Archive,digital%20experience."
   },
   "Paris Peace Forum": {
     "description": {
       "fr": "Sélectionné comme solution par le Forum de Paris sur la paix 2020",
-      "en": "Selected as Solution by the Paris Peace Forum 2020"
+      "en": "Selected as Solution by the Paris Peace Forum 2020",
+      "de": "Selected as Solution by the Paris Peace Forum 2020"
     },
     "link": "https://parispeaceforum.org/projects/community-against-disinfo/"
   }

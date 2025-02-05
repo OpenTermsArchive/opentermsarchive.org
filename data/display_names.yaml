@@ -49,6 +49,31 @@ languages:
     sk: slovak
     sl: slovenian
     sv: swedish
+  de:
+    bg: bulgarian
+    cs: czech
+    da: danish
+    de: german
+    el: greek
+    en: english
+    es: spanish
+    et: estonian
+    fi: finnish
+    fr: french
+    ga: irish
+    hr: croatian
+    hu: hungarian
+    it: italian
+    lt: lithuanian
+    lv: latvian
+    mt: maltese
+    nl: dutch
+    pl: polish
+    pt: portuguese
+    ro: romanian
+    sk: slovak
+    sl: slovenian
+    sv: swedish
 regions:
   fr:
     EU: Union européenne
@@ -60,6 +85,15 @@ regions:
     DE: Allemagne
     KE: Kenya
   en:
+    EU: European Union
+    CH: Switzerland
+    CN: China
+    FR: France
+    US: United States
+    GB: United Kingdom
+    DE: Germany
+    KE: Kenya
+  de:
     EU: European Union
     CH: Switzerland
     CN: China

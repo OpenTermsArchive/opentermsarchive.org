@@ -114,44 +114,55 @@ funding_sources:
   - title:
       fr: 🇫🇷🏛 Ministère de l’Europe et des Affaires Étrangères
       en: 🇫🇷🏛 French Ministry for Europe and Foreign Affairs
+      de: 🇫🇷🏛 French Ministry for Europe and Foreign Affairs
     amount: 882205
   - title:
       fr: 🇪🇺🏛 France Relance
       en: 🇪🇺🏛 French Covid Recovery Fund
+      de: 🇪🇺🏛 French Covid Recovery Fund
     amount: 145695
   - title:
       fr: 🇺🇸🏦 Reset
       en: 🇺🇸🏦 Reset
+      de: 🇺🇸🏦 Reset
     amount: 32187
   - title:
       fr: 🇫🇷🏛 Direction Interministérielle du Numérique
       en: 🇫🇷🏛 Interministerial Directorate for Digital Affairs
+      de: 🇫🇷🏛 Interministerial Directorate for Digital Affairs
     amount: 20638
   - title:
       fr: 🇳🇱🏦 NLNet Foundation
       en: 🇳🇱🏦 NLNet Foundation
+      de: 🇳🇱🏦 NLNet Foundation
     amount: 24720
   - title:
       fr: 🇩🇪🎓 Université de Brême
       en: 🇩🇪🎓 University of Bremen
+      de: 🇩🇪🎓 University of Bremen
     amount: 17447
   - title:
       fr: 🇪🇺🏛 Commission européenne
       en: 🇪🇺🏛 European Commission
+      de: 🇪🇺🏛 European Commission
     amount: 12000
   - title:
       fr: 🇺🇳🏦 Digital Public Goods Alliance
       en: 🇺🇳🏦 Digital Public Goods Alliance
+      de: 🇺🇳🏦 Digital Public Goods Alliance
     amount: 6215
   - title:
       fr: 🇫🇷🏢 UFC Que Choisir
       en: 🇫🇷🏢 UFC Que Choisir
+      de: 🇫🇷🏢 UFC Que Choisir
     amount: 2085
   - title:
       fr: 🇫🇷🎓 Université de Brest
       en: 🇫🇷🎓 University of Brest
+      de: 🇫🇷🎓 University of Brest
     amount: 445
   - title:
       fr: 🇺🇸🏦 GitHub
       en: 🇺🇸🏦 GitHub
+      de: 🇺🇸🏦 GitHub
     amount: 90
