@@ -505,7 +505,7 @@
     "declarations": "https://github.com/OpenTermsArchive/kenya-declarations",
     "versions": "https://github.com/OpenTermsArchive/kenya-versions",
     "snapshots": "https://github.com/OpenTermsArchive/kenya-snapshots",
-    "donations": "https://opencollective.com/opentermsarchive",
+    "donations": "https://opencollective.com/opentermsarchive/projects/kenya-collection",
     "logo": "https://opentermsarchive.org/images/collections/kenya.png",
     "languages": [
       "en"
@@ -566,8 +566,8 @@
         }
       }
     },
-    "totalServices": 3,
-    "totalTerms": 5,
+    "totalServices": 16,
+    "totalTerms": 18,
     "engineVersion": "4.0.1",
     "endpoint": "http://102.68.86.60/collection-api/v1/"
   },
