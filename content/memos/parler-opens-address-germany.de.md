@@ -6,6 +6,7 @@ terms_types: ["Impressum"]
 dates: ["2025-01-14"]
 author: Matti Schneider
 related_collections: ["pga"]
+aliases: /en/memos/parler-opens-address-germany.de
 ---
 
 Das amerikanische soziale Netz Parler hat eine physische Betriebsadresse in der Europäischen Union [angegeben](https://github.com/OpenTermsArchive/pga-versions/commit/d63f05bbcbf2b0ebf087e279429a085468d7d74f#diff-f5ac1f4939c7895c9d3bdda244e6f8b6308288b30be6b9a486b142af45c739bdR88). Die Adresse befindet sich in Köln, Deutschland, im [MiOM Kreativraum](https://miom.space/en/), „ein Kollektiv mit der Vision, bezahlbaren Raum für kreative Synergien zu schaffen.“

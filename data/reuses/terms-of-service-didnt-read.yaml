@@ -1,11 +1,14 @@
 title:
   en: Terms of Service; Didn’t Read
+  de: Terms of Service; Didn’t Read
   fr: Terms of Service; Didn’t Read
 author:
   en: ToS;DR
+  de: ToS;DR
   fr: ToS;DR
 description:
   en: Lets users collaboratively rate how respectful terms of services are of their rights.
+  de: Lets users collaboratively rate how respectful terms of services are of their rights.
   fr: Permet aux utilisateurs de donner collaborativement une note aux conditions d’utilisation selon le respect de leurs droits.
 website: https://tosdr.org
 weight: 4

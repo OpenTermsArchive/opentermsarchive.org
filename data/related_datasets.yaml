@@ -2,79 +2,95 @@
   description:
     fr: Historique des politiques de confidentialité des sites web couvrant plus de deux décennies.
     en: Over one million websites privacy policies spanning over two decades.
+    de: Over one million websites privacy policies spanning over two decades.
   website: https://privacypolicies.cs.princeton.edu/ghfront/
 - name: OPP-115 Corpus (ACL 2016)
   description:
     fr: Collection de politiques de confidentialité de sites web avec annotations sur les pratiques de données.
     en: Collection of website privacy policies with annotations that specify data practices.
+    de: Collection of website privacy policies with annotations that specify data practices.
   website: https://www.usableprivacy.org/data
 - name: Privacy Law Corpus ("Government Privacy Instructions Corpus") (ArXiv 2022)
   description:
     fr: Collection de 1 043 lois, réglementations et directives sur la vie privée couvrant 182 juridictions dans le monde.
     en: Privacy Law Corpus ("Government Privacy Instructions Corpus") (ArXiv 2022)
+    de: Privacy Law Corpus ("Government Privacy Instructions Corpus") (ArXiv 2022)
   website: https://www.usableprivacy.org/data
 - name: Connections Between OPP-115 and the GDPR (JURIX 2020)
   description:
     fr: Liens entre le schéma d'annotation OPP-115 et les principes et articles du RGPD.
     en: Links between the PPO-115 annotation scheme and the principles and articles of the RGPD.
+    de: Links between the PPO-115 annotation scheme and the principles and articles of the RGPD.
   website: https://www.usableprivacy.org/data
 - name: Opt-out Choice Dataset (WWW 2020)
   description:
     fr: Corpus de politiques de confidentialité pour détecter les choix de désinscription et les catégories de données.
     en: Corpus of privacy policies to detect unsubscribe choices and data categories.
+    de: Corpus of privacy policies to detect unsubscribe choices and data categories.
   website: https://www.usableprivacy.org/data
 - name: Privacy Q&A Corpus (EMNLP 2019)
   description:
     fr: Corpus de questions sur les politiques de confidentialité avec des annotations d'experts.
     en: Corpus of privacy policy questions with expert annotations.
+    de: Corpus of privacy policy questions with expert annotations.
   website: https://www.usableprivacy.org/data
 - name: APP-350 Corpus (PETS 2019)
   description:
     fr: Corpus de 350 politiques de confidentialité d'applications Android avec annotations sur les pratiques de confidentialité.
     en: Corpus of 350 Android app privacy policies with annotations on privacy practices.
+    de: Corpus of 350 Android app privacy policies with annotations on privacy practices.
   website: https://www.usableprivacy.org/data
 - name: MAPS Policies Dataset (PETS 2019)
   description:
     fr: URL de 441 626 politiques de confidentialité découvertes lors de l'analyse de Google Play Store.
     en: URL of 441,626 privacy policies discovered during Google Play Store analysis.
+    de: URL of 441,626 privacy policies discovered during Google Play Store analysis.
   website: https://www.usableprivacy.org/data
 - name: Opt-out Choice Dataset (EMNLP 2017)
   description:
     fr: Corpus pour identifier les choix dans les politiques de confidentialité.
     en: Corpus to identify choices in privacy policies.
+    de: Corpus to identify choices in privacy policies.
   website: https://www.usableprivacy.org/data
 - name: ACL/COLING 2014 Dataset
   description:
     fr: Corpus de 1 010 politiques de confidentialité des meilleurs sites web classés sur Alexa.com.
     en: Corpus of 1,010 privacy policies from the best websites ranked on Alexa.com.
+    de: Corpus of 1,010 privacy policies from the best websites ranked on Alexa.com.
   website: https://www.usableprivacy.org/data
 - name: ToS;DR API
   description:
     fr: Développer des applications et d'autres services intégrant les données ToS;DR via leur API.
     en: Human assessments of the loyalty of terms offered by services.
+    de: Human assessments of the loyalty of terms offered by services.
   website: https://developers.tosdr.org/dev/
 - name: Privacy Policies over Time
   description:
     fr: Curation et analyse d'une base de données d'un million de documents.
     en: Curation and Analysis of a Million-Document Dataset of Privacy Policies.
+    de: Curation and Analysis of a Million-Document Dataset of Privacy Policies.
   website: https://arxiv.org/abs/2008.09159
 - name: Wayback Machine
   description:
     fr: Explorer plus de 835 milliards de pages web sauvegardées au fil du temps.
     en: Over 835 billion web pages snapshots over time.
+    de: Over 835 billion web pages snapshots over time.
   website: https://web.archive.org/
 - name: Common Crawl
   description:
     fr: Dépôt libre et gratuit de données de navigation sur le web.
     en: Free, open repository of web crawl data.
+    de: Free, open repository of web crawl data.
   website: https://commoncrawl.org/
 - name: Social Media Suspensions of Prominent Accounts
   description:
     fr: Une publication décrivant les pratiques de suspension des principales plateformes de médias sociaux et qui liste différents jeux de données.
     en: A note that describes the suspension practices of the major social media platforms and list several datasets.
+    de: A note that describes the suspension practices of the major social media platforms and list several datasets.
   website: https://tecunningham.github.io/posts/2023-01-31-social-media-suspensions-data.html
 - name: GDPRhub
   description:
     fr: Un wiki collaboratif opéré par nyob.eu qui consolide et résume les décisions prises par les agences de protection des données (DPAs) et les tribunaux sur la base du RGPD, dans toute l'Europe.
     en: A collaborative wiki operated by nyob.eu that collects and summarises GDPR-related decisions from Data Protection Authorities (DPAs) and courts across Europe.
+    de: A collaborative wiki operated by nyob.eu that collects and summarises GDPR-related decisions from Data Protection Authorities (DPAs) and courts across Europe.
   website: https://gdprhub.eu/

@@ -1,0 +1,7 @@
+weight: 2
+languageName: Deutsch
+languageCode: de
+permalinks:
+  page:
+    memos: /memos/:slug/
+    subscribe: /abonnieren/:slug
