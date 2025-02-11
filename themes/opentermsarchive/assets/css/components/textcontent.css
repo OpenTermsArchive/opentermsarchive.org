@@ -7,6 +7,10 @@
     &.mb--3xl {
       margin-bottom: var(--m3xl);
     }
+
+    &.mb--4xl {
+      margin-bottom: var(--m3xl);
+    }
   }
 
   & p {
