@@ -272,8 +272,6 @@
             </div>
           {{ end }}
         </div>
-
-        <h4 class="mt--2xl">{{ i18n "collections.governance.contributors" }}</h4>
         {{ $collectionRepositoryID := print .Params.id "-declarations" | lower }}
         {{ partial "contributors.html" (dict "repositories" (slice $collectionRepositoryID) "showInfo" true "class" "contributors--align-x-left") }}
       </div>

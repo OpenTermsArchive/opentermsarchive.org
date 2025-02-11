@@ -30,10 +30,13 @@
 
 {{ $filteredContributors = shuffle $filteredContributors }}
 
-<div class="contributors {{ with .class }}{{ . }}{{ end }} {{ with .showInfo }}contributors--show-infos{{ end }}">
-  <div class="contributors__items">
-    {{ range $contributor := $filteredContributors }}
-      {{ partial "contributor.html" (dict "contributor" $contributor "thumbnailWidth" $thumbnailWidth "thumbnailHeight" $thumbnailHeight "showInfo" $.showInfo ) }}
-    {{ end }}
+{{ if gt (len $filteredContributors) 0 }}
+  <h4 class="mt--2xl">{{ i18n "collections.governance.contributors" }}</h4>
+  <div class="contributors {{ with .class }}{{ . }}{{ end }} {{ with .showInfo }}contributors--show-infos{{ end }}">
+    <div class="contributors__items">
+      {{ range $contributor := $filteredContributors }}
+        {{ partial "contributor.html" (dict "contributor" $contributor "thumbnailWidth" $thumbnailWidth "thumbnailHeight" $thumbnailHeight "showInfo" $.showInfo ) }}
+      {{ end }}
+    </div>
   </div>
-</div>
+{{ end }}
