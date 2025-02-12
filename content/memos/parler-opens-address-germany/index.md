@@ -12,7 +12,7 @@ American social media Parler [added](https://github.com/OpenTermsArchive/pga-ver
 
 Little known outside of the United States of America, Parler is a social network mostly used and promoted by American conservatives. It was notably used to coordinate the 2021 storming of the US Capitol, leading to its [suspension](https://www.bbc.com/news/technology-55598887) by app stores.
 
-![Screenshot of Parler’s homepage showcasing a picture of Trump winning the elections and motto “Real People. Unfiltered Voices. True Freedom.”](../parler-opens-address-germany.png)
+![Screenshot of Parler’s homepage showcasing a picture of Trump winning the elections and motto “Real People. Unfiltered Voices. True Freedom.”](parler-opens-address-germany.png)
 
 This expansion towards the European Union takes place in a context of increased presence and political activism from major American social media. On January 7th, Mark Zuckerberg [stated](https://www.threads.net/@zuck/post/DEhgYx4JbEG) that Meta will “work with President Trump to push back against foreign governments going after American companies to censor more” and [dampened its hate speech restrictions]({{< relref path="meta-dampens-hate-speech-policy" >}}). On January 9th, Elon Musk [hosted](https://www.bbc.com/news/articles/cr7errxp5jmo) a discussion on X to support Germany’s far-right party AfD.
 
