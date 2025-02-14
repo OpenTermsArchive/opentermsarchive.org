@@ -1,9 +1,9 @@
 ---
 title: Memos
-html_description: Some examples of what Open Terms Archive exposes, as identified by independent contributors.
+html_description: Einige Beispiele dafür, was Open Terms Archive aufdeckt, wie sie von unabhängigen Mitwirkenden ermittelt wurden.
 hero:
   title: Memos
-  subtitle: Some examples of what Open Terms Archive exposes, as identified by independent contributors
+  subtitle: Einige Beispiele dafür, was Open Terms Archive aufdeckt, wie sie von unabhängigen Mitwirkenden ermittelt wurden
 ---
 
-Some memos have not yet been translated into German, but you can [consult them]({{< relref path=\"/memos\" lang="en" >}}) in English. Don't hesitate to contribute to their translation to help the community.
+Einige Memos sind noch nicht ins Deutsche übersetzt, aber Sie können sie [auf Englisch ansehen]({{< relref path=\"/memos\" lang="en" >}}). Ihre Übersetzungsbeiträge sind erwünscht!
