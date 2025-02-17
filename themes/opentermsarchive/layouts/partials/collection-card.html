@@ -81,17 +81,18 @@
   </div>
 
   {{ with .Params.governance }}
-    <div class="card__author card__author--is-center">
-      {{ range . }}
-        {{ if (in .roles "sponsor") }}
+    {{ $sponsors := where . "roles" "intersect" (slice "sponsor") }}
+    {{ if $sponsors }}
+      <div class="card__author card__author--is-center">
+        {{ range $sponsors }}
           {{ $entityName := default .name (index $i18n site.Language.Lang "governance" .name "name") }}
           {{ $entityLogoUrl := default .logo (index $i18n site.Language.Lang "governance" .name "logo") }}
           {{ $sponsorsLogo := partial "func/getLogo.html" (dict "logoUrl" $entityLogoUrl "name" $entityName) }}
           {{ with $sponsorsLogo.error }}{{ warnf . }}{{ end }}
           {{ with $sponsorsLogo.resource }}<img src="{{ .RelPermalink }}" alt="{{ $entityName }}">{{ end }}
         {{ end }}
-      {{ end }}
-    </div>
+      </div>
+    {{ end }}
   {{ end }}
 
 </div>
