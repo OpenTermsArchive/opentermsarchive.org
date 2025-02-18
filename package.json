@@ -26,7 +26,7 @@
     "prestart:ci": "npm run fetch",
     "start:ci": "hugo serve --logLevel error --port 1313",
     "prestart:preview": "npm run fetch",
-    "start:preview": "hugo --gc --minify -b $DEPLOY_PRIME_URL",
+    "start:preview": "hugo --minify -b $DEPLOY_PRIME_URL --ignoreCache --cleanDestinationDir",
     "lint:markdown": "markdownlint *.md content/**/*.md",
     "lint:css": "stylelint \"themes/opentermsarchive/assets/css/**/*.css\"",
     "lint:js": "eslint themes/opentermsarchive/assets/js/ test/**/*.js",
