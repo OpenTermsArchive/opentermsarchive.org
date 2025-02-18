@@ -17,6 +17,10 @@
     {{ $governance = $governance | append (merge $data (dict "name" (title $name))) }}
   {{ end }}
 
+  {{ $aliases := slice }}
+  {{ $currentLang := site.Language.Lang }}
+  {{ $aliases = $aliases | append (printf "/%s/collections/%s/" $currentLang .name) }}
+
   {{ $params := dict 
     "id" .id
     "name" .name
@@ -42,8 +46,9 @@
     "params" $params
     "path" .name
     "title" .name
-    "slug" .id
+    "slug" (.name | urlize)
     "weight" $weight
+    "aliases" $aliases
   }}
 
   {{ $.AddPage $page }}
