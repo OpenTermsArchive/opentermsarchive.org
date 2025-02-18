@@ -1,6 +1,12 @@
-<div class="card card--is-link card--center card--placeholder">
-  <div class="card__body">
-    <h5 class="card__subtitle h5--light">{{ i18n "collections.new" }}</h5>
+<div class="container container--wide container--has-no-padding-top">
+  <div class="container container--87 container--has-no-padding-y">
+    <div class="textcontent text--center">
+      <hr class="mb--4xl">
+      <h3>{{ i18n "collections.new.title" }}</h3>
+      <h4 class="h4--light">{{ i18n "collections.new.desc" }}</h4>
+      <a href="mailto:{{ site.Params.contact_email }}" aria-label="{{ site.Params.contact_email }}" class="button">
+        {{ i18n "collections.new.cta" }}
+      </a>
+    </div>
   </div>
-  <a class="card__link" href="mailto:{{ site.Params.contact_email }}" aria-label="{{ site.Params.contact_email }}"></a>
 </div>

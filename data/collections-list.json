@@ -16,6 +16,10 @@
     "endpoint": "http://198.244.153.104/collection-api/v1/"
   },
   {
+    "name": "France Public Services",
+    "endpoint": "http://ota.iroco.co/collection-api/v1/"
+  },
+  {
     "name": "France Élections",
     "endpoint": "http://51.89.225.198/collection-api/v1/"
   },

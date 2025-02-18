@@ -5,7 +5,8 @@
 
 {{ $additionalSources := site.Params.contributors.additional_sources }}
 {{ range site.Data.collections }}
-  {{ $additionalSources = $additionalSources | append (printf "https://raw.githubusercontent.com/OpenTermsArchive/%s-declarations/main/.all-contributorsrc" .id) }}
+  {{ $declarationsPath := printf "%s/main/.all-contributorsrc" (replace .declarations "https://github.com" "https://raw.githubusercontent.com") }}
+  {{ $additionalSources = $additionalSources | append $declarationsPath }}
 {{ end }}
 
 {{ range $additionalSource := $additionalSources }}

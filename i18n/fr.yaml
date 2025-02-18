@@ -94,7 +94,10 @@ collections:
     endpoint: Accéder à l'API
     reuses: Voir toutes les réutilisations
   volunteer_contributors: Contributeurs bénévoles
-  new: Vous voulez suivre des services visant une autre langue, juridiction ou industrie ? Contactez-nous pour commencer à collaborer !
+  new:
+    title: Vous voulez suivre des services visant une autre langue, juridiction ou industrie ?
+    desc: Contactez-nous pour commencer à collaborer.
+    cta: Contactez-nous
   contribute:
     title: Contribuer
     subtitle: Les façons dont vous pouvez rejoindre la communauté qui suit les termes de cette collection.

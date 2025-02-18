@@ -9,8 +9,8 @@
   {{ $isDatasetsPage = true }}
 {{ end }}
 
-<div class="container container--is-{{ $bgColor }} container--wide container--has-no-padding-x container--has-no-padding-top" id="collections">
-  <div class="container container--1211 {{ if or $isDatasetsPage .featured }}container--has-no-padding-bottom{{ end }}">
+<div class="container container--is-{{ $bgColor }} container--wide container--has-no-padding-x" id="collections">
+  <div class="container container--1211 {{ if or $isDatasetsPage .featured }}container--has-no-padding-bottom{{ end }} container--has-no-padding-y">
     <div class="collections cardlist">
       {{ with $context.Params.collections.title }}
         <div class="cardlist__header cardlist__header--is-center">
@@ -20,9 +20,6 @@
       <div class="cardlist__items">
         {{ range $query }}
           {{ partial "collection-card.html" . }}
-        {{ end }}
-        {{ if and (not (eq "/datasets/" .Page.RelPermalink)) (not .featured) }}
-          {{ partial "new-collection.html" . }}
         {{ end }}
       </div>
     </div>
