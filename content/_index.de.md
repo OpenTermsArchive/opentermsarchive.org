@@ -19,7 +19,7 @@ how_it_works:
     exemple: |
       {
         "name": "Facebook",
-        "documents": {
+        "terms": {
           "Terms of Service": {
             "fetch": "https://facebook.com/legal/terms",
             "select": "body > article > .main_content"
