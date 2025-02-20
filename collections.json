@@ -301,8 +301,8 @@
   {
     "id": "france-public",
     "name": "France Public Services",
-    "tagline": "French main public services",
-    "description": "The **France public services** collection tracks changes to the terms of use of most used French public services.\n",
+    "tagline": "French digital public services",
+    "description": "The **France public services** collection tracks changes to the terms of use of French digital public services.\n",
     "dataset": "https://github.com/iroco-co/france-public-versions/releases",
     "declarations": "https://github.com/iroco-co/france-public-declarations",
     "versions": "https://github.com/iroco-co/france-public-versions",
@@ -343,8 +343,8 @@
     "i18n": {
       "fr": {
         "name": "France Services Publics",
-        "tagline": "Services publics français majeurs",
-        "description": "La collection **France Services Publics** suit les modifications apportées aux conditions d'utilisation des services publics français les plus utilisés.\n",
+        "tagline": "Services publics numériques français",
+        "description": "La collection **France Services Publics** suit les modifications apportées aux conditions d'utilisation des services publics numériques français.\n",
         "governance": {
           "Volunteer contributors": {
             "name": "Contributeurs bénévoles"
@@ -354,7 +354,7 @@
     },
     "totalServices": 24,
     "totalTerms": 31,
-    "engineVersion": "4.0.2",
+    "engineVersion": "5.0.0",
     "endpoint": "http://ota.iroco.co/collection-api/v1/"
   },
   {
@@ -552,7 +552,7 @@
     },
     "totalServices": 351,
     "totalTerms": 743,
-    "engineVersion": "4.0.1",
+    "engineVersion": "5.0.0",
     "endpoint": "http://51.89.224.102/collection-api/v1/"
   },
   {
