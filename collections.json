@@ -550,8 +550,8 @@
         }
       }
     },
-    "totalServices": 351,
-    "totalTerms": 743,
+    "totalServices": 352,
+    "totalTerms": 745,
     "engineVersion": "5.0.0",
     "endpoint": "http://51.89.224.102/collection-api/v1/"
   },
