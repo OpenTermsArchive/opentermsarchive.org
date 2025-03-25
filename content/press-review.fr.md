@@ -1,44 +1,12 @@
 ---
-layout: media
+layout: press-review
 hero:
-  title: Média
-title: Média
-html_description: Logos, règles de rédaction et communiqués de presse
+  title: Revue de presse
+  subtitle: Ces articles mentionnent Open Terms Archive
+title: Revue de presse
+html_description: Revue de presse
+slug: revue-de-presse
 ---
-
-## Règles de rédaction
-
-### Communes à toutes les langues
-
-- Le nom du produit est « Open Terms Archive ».
-- Open Terms Archive est un nom de marque, pas un nom commun. Il n'a pas de déterminant.
-- Il est au singulier. Il ne s'agit pas de  « Open Terms Archives ».
-- Il comporte des espaces. Il ne s'agit pas de « OpenTermsArchive ».
-- À chaque fois que c’est possible, des espaces insécables doivent être utilisés pour séparer les trois mots, afin d'éviter les sauts de ligne au milieu du nom.
--  Si l'abréviation « OTA » peut être utilisée dans les documents et discussions internes, elle n'est pas utilisée publiquement (du moins pas par nous).
-
-### Spécifiques au français
-
-- Open Terms Archive est un nom féminin, car il s'agit de l'archive, la base de données.
-
-### Exemples
-
-Il ne faut **pas écrire** :
-
-```error
-OTA permet aux parlementaires de suivre l'application de leurs lois.
-L’Open Terms Archive permet aux parlementaires de suivre l'application de leurs lois.
-OpenTermsArchive permet aux parlementaires de suivre l'application de leurs lois.
-```
-
-Il faut **écrire** :
-
-```success
-Open Terms Archive permet aux parlementaires de suivre l'application de leurs lois.
-```
-
-<h2 class="mb__0 mt--4xl">Revue de presse</h2>
-<h4 class="h4--light mb--3xl">Ces articles mentionnent Open Terms Archive</h4>
 
 ### Le Canard enchaîné
 

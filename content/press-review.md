@@ -1,40 +1,11 @@
 ---
-layout: media
+layout: press-review
 hero:
-  title: Media
-title: Media
-html_description: Logos, copywriting rules and media releases
+  title: Press Review
+  subtitle: They talk about Open Terms Archive
+title: Press Review
+html_description: Press Review
 ---
-
-## Copywriting
-
-### Common to all languages
-
-- The name of the product is “Open Terms Archive”.
-- Open Terms Archive is a brand name, not a common noun. It does not have a determiner.
-- It is singular. It is not “Open Terms Archives”.
-- It has spaces. It is not “OpenTermsArchive”.
-- As often as possible, non-breakable spaces should be used to separate the three words, in order to avoid line breaks in the middle of the name.
-- While the “OTA” abbreviation can be used in internal documents and discussions, it is not used publicly (at least not by us).
-
-### For Example
-
-You should **not write**:
-
-```error
-OTA enables activists to identify misleading terms.
-The Open Terms Archive enables activists to identify misleading terms.
-OpenTermsArchive enables activists to identify misleading terms.
-```
-
-You should **write**:
-
-```success
-Open Terms Archive enables activists to identify misleading terms.
-```
-
-<h2 class="mt--4xl mb__0">Press review</h2>
-<h4 class="h4--light mb--3xl">They talk about Open Terms Archive</h4>
 
 ### Le Canard enchaîné
 
@@ -50,7 +21,7 @@ Open Terms Archive enables activists to identify misleading terms.
 
 <p class="text--smallcaps">January 13, 2025</p>
 
-> Meta ends its minority inclusion policy and even removed from its community guidelines the interdiction to compare Black people to farm equipemnt or women to properties.
+> Meta ends its minority inclusion policy and even removed from its community guidelines the interdiction to compare Black people to farm equipment or women to properties.
 
 <a target="_blank" rel="noopener" class="float--right button button--secondary" href="https://vert.eco/articles/musk-zuckerberg-bezos-les-cinq-dernieres-dingueries-des-geants-de-la-tech-qui-montrent-leur-bascule-trumpiste" title="Musk, Zuckerberg, Bezos… les cinq dernières dingueries des géants de la tech qui montrent leur bascule trumpiste">Read (in French)</a>
 
