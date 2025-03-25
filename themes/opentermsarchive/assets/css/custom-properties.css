@@ -14,25 +14,20 @@
 
   /* Colors */
   --colorPrimary: #2d63ff;
-  --colorPrimary800: #5b85ff;
-  --colorPrimary700: #7696ff;
-  --colorPrimary600: #91a7ff;
-  --colorPrimary500: #abc8ff;
-  --colorPrimary400: #b6cdff;
   --colorPrimary300: #c5d9ff;
-  --colorPrimary200: #e2edff;
-  --colorPrimary100: #f5f9ff;
   --colorSecondary: #0b08a0;
   --colorTertiary: #f9dd3f;
   --colorError: #ec368d;
   --colorSuccess: #11ebc3;
   --colorBlack900: #010613;
+  --colorBlack850: #171717;
   --colorBlack800: #333;
   --colorBlack700: #454545;
   --colorBlack600: #5e5e5e;
   --colorBlack400: #999;
   --colorBlack300: #d6d6d6;
   --colorBlack200: #f5f5f5;
+  --colorBlack100: #fafafa;
   --colorWhite: #fefffd;
 
   /* Sizes */

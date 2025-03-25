@@ -16,6 +16,12 @@ media:
     light_background: For light background
     cta_png: Download in PNG
     cta_svg: or in SVG
+  colors:
+    title: Colors
+    cols:
+      name: Name
+      code: Code (Hex)
+      color: Color
 budget:
   expenditures:
     title: Total expenditures
