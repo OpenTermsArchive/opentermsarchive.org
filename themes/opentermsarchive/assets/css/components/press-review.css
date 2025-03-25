@@ -1,0 +1,20 @@
+.press-review {
+  padding-bottom: var(--pxl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--xs);
+
+  &:not(:last-child) {
+    margin-bottom: var(--mxl);
+    border-bottom: 1px solid var(--colorBlack300);
+  }
+}
+
+.press-review__quote {
+  margin-top: var(--ml);
+}
+
+.press-review__button {
+  margin-left:auto;
+  margin-top: var(--mM);
+}
