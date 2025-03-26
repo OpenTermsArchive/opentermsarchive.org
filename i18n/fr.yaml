@@ -141,8 +141,8 @@ stats:
     title: "{{ .number }}+ conditions d'utilisations"
     desc: classés selon une taxonomie d'une cinquantaine de types de termes
   analysis:
-    title: "{{ .number }}+ analyses"
-    desc: publiées sous forme de brèves et de tweets
+    title: "{{ .number }}+ mémos"
+    desc: publiées sous forme de brèves et de pouets
   contributors:
     title: "{{ .number }} contributeurs"
     desc: qui valorisent les données produites
