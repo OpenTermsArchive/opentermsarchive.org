@@ -20,5 +20,8 @@ module.exports = defineConfig({
     
     /* Allow the use of unescaped special characters */
     "no-raw-characters": ["error", {"relaxed": true}],
+
+    /* Disable inline styles validation */
+    "no-inline-style": ["off"]
   }
 });
