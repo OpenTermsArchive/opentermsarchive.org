@@ -41,23 +41,23 @@
           {{ $servicesTitle := i18n "stats.services.title" (dict "number" $totalServices) }}
           {{ $servicesDescription := i18n "stats.services.desc" }}
           {{ partial "buttonblock.html" (dict "title" $servicesTitle "description" $servicesDescription "icon" "globe")}}
-          
+
           {{ $termsTitle := i18n "stats.terms.title" (dict "number" $totalTerms) }}
           {{ $termsDescription := i18n "stats.terms.desc" }}
           {{ partial "buttonblock.html" (dict "title" $termsTitle "description" $termsDescription "icon" "file")}}
-          
+
           {{ $analysisTitle := i18n "stats.analysis.title" (dict "number" $totalMemos) }}
           {{ $analysisDescription := i18n "stats.analysis.desc" }}
           {{ partial "buttonblock.html" (dict "title" $analysisTitle "description" $analysisDescription "icon" "eye")}}
-          
+
           {{ $contributorsTitle := i18n "stats.contributors.title" (dict "number" $totalContributors) }}
           {{ $contributorsDescription := i18n "stats.contributors.desc" }}
           {{ partial "buttonblock.html" (dict "title" $contributorsTitle "description" $contributorsDescription "icon" "users")}}
-          
+
           {{ $reusesTitle := i18n "stats.reuses.title" (dict "number" $totalReuses) }}
           {{ $reusesDescription := i18n "stats.reuses.desc" }}
           {{ partial "buttonblock.html" (dict "title" $reusesTitle "description" $reusesDescription "icon" "layers")}}
-          
+
           {{ $collectionsTitle := i18n "stats.collections.title" (dict "number" $totalCollections) }}
           {{ $collectionsDescription := i18n "stats.collections.desc" }}
           {{ partial "buttonblock.html" (dict "title" $collectionsTitle "description" $collectionsDescription "icon" "flag")}}
