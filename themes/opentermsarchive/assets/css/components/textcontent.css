@@ -2,7 +2,7 @@
   & hr {
     margin-bottom: var(--mxl);
     clear: both;
-    border: 1px solid var(--colorBlack300);
+    border: 1px solid var(--colorBlack200);
 
     &.mb--3xl {
       margin-bottom: var(--m3xl);
@@ -63,6 +63,14 @@
     &.mb--0 {
       margin-bottom: 0;
     }
+
+    &.mb--s {
+      margin-bottom: var(--ms);
+    }
+
+    &.mb--m {
+      margin-bottom: var(--mM);
+    }
   }
 
   & h3 {
@@ -75,6 +83,10 @@
     &.mb--0 {
       margin-bottom: 0;
     }
+
+    &.mb--s {
+      margin-bottom: var(--ms);
+    }
   }
 
   & h4 {
@@ -86,6 +98,10 @@
 
     &.mb--0 {
       margin-bottom: 0;
+    }
+
+    &.mb--s {
+      margin-bottom: var(--ms);
     }
 
     &.mb__XL {
@@ -111,6 +127,10 @@
     &.mb--0 {
       margin-bottom: 0;
     }
+
+    &.mb--s {
+      margin-bottom: var(--ms);
+    }
   }
 
   & h6 {
@@ -123,9 +143,15 @@
     &.mb--0 {
       margin-bottom: 0;
     }
+
+    &.mb--s {
+      margin-bottom: var(--ms);
+    }
   }
 
   & p + h2,
+  & pre + h2,
+  & table + h2,
   & ul + h2 {
     margin-top: var(--m3xl);
 
@@ -135,6 +161,8 @@
   }
 
   & p + h3,
+  & pre + h3,
+  & table + h3,
   & ul + h3 {
     margin-top: var(--m2xl);
 
@@ -144,12 +172,28 @@
   }
 
   & p + h4,
+  & pre + h4,
+  & table + h4,
   & ul + h4 {
     margin-top: var(--mxl);
 
     @media (--tabletSmall) {
       margin-bottom: var(--ml);
     }
+  }
+
+  & p + h5,
+  & pre + h5,
+  & table + h5,
+  & ul + h5 {
+    margin-top: var(--ml);
+  }
+
+  & p + h6,
+  & pre + h6,
+  & table + h6,
+  & ul + h6 {
+    margin-top: var(--mM);
   }
 
   & iframe {
@@ -199,22 +243,34 @@
   }
 
   & pre {
-    padding: 0.8rem;
     margin-bottom: var(--mM);
     overflow-x: auto;
+    background-color: var(--colorBlack200);
+    width: 100%;
+
+    & > code {
+      padding: 0.8rem;
+      width: 100%;
+      border: 1px solid var(--colorBlack300);
+    }
+  }
+
+  &:not(pre) > code {
+    padding: 0.2em 0.4em;
   }
 
   & code {
     display: inline-block;
+    border-radius: 0.3em;
     font-size: 0.95em;
     background-color: var(--colorBlack200);
 
     &.language-success {
-      border: 2px solid var(--colorSuccess);
+      border: 1px solid var(--colorSuccess);
     }
 
     &.language-error {
-      border: 2px solid var(--colorError);
+      border: 1px solid var(--colorError);
     }
   }
 
