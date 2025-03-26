@@ -242,28 +242,11 @@
     margin-bottom: var(--mM);
   }
 
-  & pre {
-    margin-bottom: var(--mM);
-    overflow-x: auto;
-    background-color: var(--colorBlack200);
-    width: 100%;
-
-    & > code {
-      padding: 0.8rem;
-      width: 100%;
-      border: 1px solid var(--colorBlack300);
-    }
-  }
-
-  &:not(pre) > code {
-    padding: 0.2em 0.4em;
-  }
-
   & code {
     display: inline-block;
-    border-radius: 0.3em;
     font-size: 0.95em;
     background-color: var(--colorBlack200);
+    border-radius: 0.3em;
 
     &.language-success {
       border: 1px solid var(--colorSuccess);
@@ -272,6 +255,23 @@
     &.language-error {
       border: 1px solid var(--colorError);
     }
+  }
+
+  & pre {
+    width: 100%;
+    margin-bottom: var(--mM);
+    overflow-x: auto;
+    background-color: var(--colorBlack200);
+
+    & > code {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid var(--colorBlack300);
+    }
+  }
+
+  &:not(pre) > code {
+    padding: 0.2em 0.4em;
   }
 
   & .button {
