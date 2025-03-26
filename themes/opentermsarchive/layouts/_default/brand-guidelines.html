@@ -1,4 +1,3 @@
-
 {{ define "main" }}
 
   {{ $logoBlackPNG := resources.Get "images/logo/logo-open-terms-archive-black.png" }}
@@ -9,9 +8,9 @@
   {{ $logoWhiteSVG := resources.Get "images/logo/logo-open-terms-archive-white.svg" }}
   {{ $logoWhiteAlternativePNG := resources.Get "images/logo/logo-open-terms-archive-white-alternative.png" }}
   {{ $logoWhiteAlternativeSVG := resources.Get "images/logo/logo-open-terms-archive-white-alternative.svg" }}
-  
+
   {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "size" "98" ) }}
-  
+
   <div class="container container--is-gray container--has-no-padding-y">
     <div class="container container--98">
       <h2>{{ i18n "media.logo.title" }}</h2>
