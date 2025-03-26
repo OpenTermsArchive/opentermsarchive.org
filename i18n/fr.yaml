@@ -16,6 +16,12 @@ media:
     light_background: Pour fond clair
     cta_png: Télécharger en PNG
     cta_svg: ou en SVG
+  colors:
+    title: Couleurs
+    cols:
+      name: Nom
+      code: Code (Hex)
+      color: Couleur
 budget:
   expenditures:
     title: Dépenses cumulées

@@ -5,3 +5,5 @@ permalinks:
   page:
     memos: /memos/:slug/
     subscribe: /souscrire/:slug
+  section:
+    press-review: /revue-de-presse/

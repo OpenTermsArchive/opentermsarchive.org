@@ -48,20 +48,23 @@ footer_sub:
   - name: Statistiques
     pageRef: /stats
     weight: 2
-  - name: Média
-    pageRef: /media
+  - name: Principes de marque
+    pageRef: /brand-guidelines
     weight: 3
+  - name: Revue de presse
+    pageRef: /press-review
+    weight: 4
   - name: Code source
     url: https://github.com/OpenTermsArchive/engine
-    weight: 4
+    weight: 5
     params:
       target: _blank
   - name: Mentions légales
     pageRef: /legal-notice
-    weight: 5
+    weight: 6
   - name: Politique de confidentialité
     pageRef: /privacy-policy
-    weight: 6
+    weight: 7
   - name: 'Accessibilité : non conforme'
     pageRef: /accessibility
-    weight: 7
+    weight: 8

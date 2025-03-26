@@ -1,0 +1,6 @@
+<div class="press-review">
+  {{ with .title }}<h3 class="press-review__title">{{ . }}</h3>{{ end }}
+  {{ with .date }}<p class="press-review__date text--smallcaps">{{ . | time.Format ":date_long" }}</p>{{ end }}
+  {{ with .quote }}<blockquote class="press-review__quote">{{ . }}</blockquote>{{ end }}
+  {{ with .link }}<a target="_blank" rel="noopener" class="press-review__button" href="{{ .href }}" title="{{ .title }}">{{ .text }}</a>{{ end }}
+</div>

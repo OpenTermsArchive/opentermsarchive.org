@@ -28,6 +28,10 @@ h2,
   letter-spacing: -0.4px;
 
   &.h2--thin {
+    font-weight: normal;
+  }
+
+  &.h2--ultrathin {
     font-weight: 300;
   }
 
@@ -52,11 +56,11 @@ h3,
   color: var(--colorBlack900);
   letter-spacing: -0.4px;
 
-  &.h3--light {
+  &.h3--thin {
     font-weight: normal;
   }
 
-  &.h3--ultralight {
+  &.h3--ultrathin {
     font-weight: 300;
   }
 
@@ -85,11 +89,11 @@ h4,
     color: var(--colorWhite);
   }
 
-  &.h4--light {
+  &.h4--thin {
     font-weight: normal;
   }
 
-  &.h4--ultralight {
+  &.h4--ultrathin {
     font-weight: 300;
   }
 
@@ -109,11 +113,11 @@ h5,
   color: var(--colorBlack900);
   letter-spacing: -0.2px;
 
-  &.h5--light {
+  &.h5--thin {
     font-weight: normal;
   }
 
-  &.h5--ultralight {
+  &.h5--ultrathin {
     font-weight: 300;
   }
 
@@ -133,11 +137,11 @@ h6,
   color: var(--colorBlack900);
   letter-spacing: 0;
 
-  &.h6--light {
+  &.h6--thin {
     font-weight: normal;
   }
 
-  &.h6--ultralight {
+  &.h6--ultrathin {
     font-weight: 300;
   }
 }
