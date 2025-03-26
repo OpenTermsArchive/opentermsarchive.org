@@ -39,9 +39,9 @@ Open Terms Archive enables activists to identify misleading terms.
 <table>
   <thead>
     <tr>
-      <th style="width: 160px;">Name</th>
-      <th style="width: 120px;">Code (Hex)</th>
-      <th>Color</th>
+      <th scope="col" style="width: 160px;">Name</th>
+      <th scope="col" style="width: 120px;">Code (Hex)</th>
+      <th scope="col">Color</th>
     </tr>
   </thead>
   <tbody>

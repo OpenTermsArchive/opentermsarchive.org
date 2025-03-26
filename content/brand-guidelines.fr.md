@@ -44,9 +44,9 @@ Open Terms Archive permet aux parlementaires de suivre l'application de leurs 
 <table>
   <thead>
     <tr>
-      <th style="width: 160px;">Nom</th>
-      <th style="width: 120px;">Code (Hex)</th>
-      <th>Couleur</th>
+      <th scope="col" style="width: 160px;">Nom</th>
+      <th scope="col" style="width: 120px;">Code (Hex)</th>
+      <th scope="col">Couleur</th>
     </tr>
   </thead>
   <tbody>
