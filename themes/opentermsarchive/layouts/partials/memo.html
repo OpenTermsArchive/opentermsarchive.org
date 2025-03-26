@@ -7,8 +7,8 @@
 </h4>{{ end }}
     {{ if eq $template "single" }}<h1 class="memo__title">{{ .memo.Title }}</h1>{{ end }}
 
-    {{ if eq $template "list" }}<h6 class="memo__subtitle h6--ultralight">{{ end }}
-    {{ if eq $template "single" }}<h4 class="memo__subtitle h4--ultralight">{{ end }}
+    {{ if eq $template "list" }}<h6 class="memo__subtitle h6--ultrathin">{{ end }}
+    {{ if eq $template "single" }}<h4 class="memo__subtitle h4--ultrathin">{{ end }}
       {{ .memo.Params.service }} ▪
       {{ delimit .memo.Params.terms_types " , " }} ▪
       {{ $formatedDates := slice }}

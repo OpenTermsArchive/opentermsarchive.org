@@ -13,7 +13,7 @@
   {{ end }}
   <div class="card__body">
     {{ with (index .context.data.title site.Language.Lang) }}<h4 class="card__title">{{ . }}</h4>{{ end }}
-    {{ with (index .context.data.description site.Language.Lang ) }}<h5 class="card__subtitle h5--light">{{ . | safeHTML }}</h5>{{ end }}
+    {{ with (index .context.data.description site.Language.Lang ) }}<h5 class="card__subtitle h5--thin">{{ . | safeHTML }}</h5>{{ end }}
   </div>
   <div class="card__author">
     <div class="card__author-icon">
