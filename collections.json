@@ -687,7 +687,7 @@
       }
     },
     "totalServices": 6,
-    "totalTerms": 14,
+    "totalTerms": 15,
     "engineVersion": "5.0.3",
     "endpoint": "http://162.19.74.224/collection-api/v1/"
   }
