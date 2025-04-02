@@ -129,14 +129,14 @@ impact:
 stats:
   title: As of {{ .date }}
   services:
-    title: "{{ .number }}+ services"
+    title: "{{ .number }} services"
     desc: spread over industries, languages and jurisdictions
   terms:
-    title: "{{ .number }}+ terms"
+    title: "{{ .number }} terms"
     desc: classified along a taxonomy of over fifty terms types
   analysis:
-    title: "{{ .number }}+ memos"
-    desc: published in the form of short stories
+    title: "{{ .number }} memos"
+    desc: published in different languages
   contributors:
     title: "{{ .number }} contributors"
     desc: that allow Open Terms Archive to exist
