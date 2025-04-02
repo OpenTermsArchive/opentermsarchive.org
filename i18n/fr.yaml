@@ -142,7 +142,7 @@ stats:
     desc: classés selon une taxonomie d'une cinquantaine de types de termes
   analysis:
     title: "{{ .number }}+ mémos"
-    desc: publiées sous forme de brèves et de pouets
+    desc: publiées sous forme de brèves
   contributors:
     title: "{{ .number }} contributeurs"
     desc: qui valorisent les données produites
