@@ -18,7 +18,7 @@
     {{ $totalCollections = add $totalCollections 1 }}
   {{ end }}
 
-  {{ range where site.RegularPages "Section" "memos" }}
+  {{ range where site.AllPages "Section" "memos" }}
     {{ $totalMemos = add $totalMemos 1 }}
   {{ end }}
 

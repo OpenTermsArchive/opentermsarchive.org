@@ -135,14 +135,14 @@ impact:
 stats:
   title: L’écosystème Open Terms Archive en {{ .date }}
   services:
-    title: "{{ .number }}+ services"
+    title: "{{ .number }} services"
     desc: répartis sur plusieurs industries, langues et juridictions
   terms:
-    title: "{{ .number }}+ conditions d'utilisations"
+    title: "{{ .number }} documents contractuels"
     desc: classés selon une taxonomie d'une cinquantaine de types de termes
   analysis:
-    title: "{{ .number }}+ mémos"
-    desc: publiées sous forme de brèves
+    title: "{{ .number }} mémos"
+    desc: publiés dans différentes langues
   contributors:
     title: "{{ .number }} contributeurs"
     desc: qui valorisent les données produites
