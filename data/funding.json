@@ -71,8 +71,8 @@
       {
         "guid": "one-month-dev",
         "status": "active",
-        "name": "Sponsor OTA's development",
-        "description": "Sponsor one month of development ",
+        "name": "Sponsor Open Terms Archive's development for one month",
+        "description": "Sponsor one month of development",
         "amount": 20000,
         "currency": "EUR",
         "frequency": "one-time",
