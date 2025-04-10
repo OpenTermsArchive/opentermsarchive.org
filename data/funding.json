@@ -16,10 +16,12 @@
       "name": "engine",
       "description": "The Open Terms Archive engine is a free and open-source tool used to tracks contractual documents and exposes changes to the terms of online services.",
       "webpageUrl": {
-        "url": "https://github.com/OpenTermsArchive/engine"
+        "url": "https://github.com/OpenTermsArchive/engine",
+        "wellKnown": "https://github.com/OpenTermsArchive/engine/blob/main/.well-known/funding-manifest-urls"
       },
       "repositoryUrl": {
-        "url": "https://github.com/OpenTermsArchive/engine"
+        "url": "https://github.com/OpenTermsArchive/engine",
+        "wellKnown": "https://github.com/OpenTermsArchive/engine/blob/main/.well-known/funding-manifest-urls"
       },
       "licenses": [
         "EUPL-v1.2"
@@ -39,10 +41,12 @@
       "name": "Contribution tool",
       "description": "The Open Terms Archive Contribution Tool is a free and open-source tool used to interactively declare services to track with the Open Terms Archive engine.",
       "webpageUrl": {
-        "url": "https://github.com/OpenTermsArchive/contribution-tool"
+        "url": "https://github.com/OpenTermsArchive/contribution-tool",
+        "wellKnown": "https://github.com/OpenTermsArchive/contribution-tool/blob/main/.well-known/funding-manifest-urls"
       },
       "repositoryUrl": {
-        "url": "https://github.com/OpenTermsArchive/contribution-tool"
+        "url": "https://github.com/OpenTermsArchive/contribution-tool",
+        "wellKnown": "https://github.com/OpenTermsArchive/contribution-tool/blob/main/.well-known/funding-manifest-urls"
       },
       "licenses": [
         "EUPL-v1.2"
