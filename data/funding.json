@@ -1,0 +1,86 @@
+{
+  "version": "v1.0.0",
+  "entity": {
+    "type": "organisation",
+    "role": "owner",
+    "name": "Open Terms Archive",
+    "email": "contact@opentermsarchive.org",
+    "description": "Open Terms Archive publicly records every version of the terms of digital services to enable democratic oversight.",
+    "webpageUrl": {
+      "url": "https://opentermsarchive.org"
+    }
+  },
+  "projects": [
+    {
+      "guid": "engine",
+      "name": "engine",
+      "description": "The Open Terms Archive engine is a free and open-source tool used to tracks contractual documents and exposes changes to the terms of online services.",
+      "webpageUrl": {
+        "url": "https://github.com/OpenTermsArchive/engine"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/OpenTermsArchive/engine"
+      },
+      "licenses": [
+        "EUPL-v1.2"
+      ],
+      "tags": [
+        "database",
+        "history",
+        "tos",
+        "terms",
+        "online-services",
+        "terms-and-conditions",
+        "terms-of-service"
+      ]
+    },
+    {
+      "guid": "contribution-tool",
+      "name": "Contribution tool",
+      "description": "The Open Terms Archive Contribution Tool is a free and open-source tool used to interactively declare services to track with the Open Terms Archive engine.",
+      "webpageUrl": {
+        "url": "https://github.com/OpenTermsArchive/contribution-tool"
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/OpenTermsArchive/contribution-tool"
+      },
+      "licenses": [
+        "EUPL-v1.2"
+      ],
+      "tags": [
+        "database",
+        "history",
+        "tos",
+        "terms",
+        "online-services",
+        "terms-and-conditions",
+        "terms-of-service",
+        "gui"
+      ]
+    }
+  ],
+  "funding": {
+    "channels": [
+      {
+        "guid": "opencollective",
+        "type": "payment-provider",
+        "address": "https://opencollective.com/opentermsarchive"
+      }
+    ],
+    "plans": [
+      {
+        "guid": "one-month-dev",
+        "status": "active",
+        "name": "Sponsor OTA's development",
+        "description": "Sponsor one month of development ",
+        "amount": 20000,
+        "currency": "EUR",
+        "frequency": "one-time",
+        "channels": [
+          "opencollective"
+        ]
+      }
+    ],
+    "history": []
+  }
+}
