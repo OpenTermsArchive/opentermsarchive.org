@@ -1,6 +1,8 @@
 mounts:
   - source: data/collections.json
     target: static/collections.json
+  - source: data/funding.json
+    target: static/funding.json
   - source: assets/images/
     target: static/images/
   - source: assets
