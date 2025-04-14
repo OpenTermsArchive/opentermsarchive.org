@@ -4,7 +4,7 @@
 {{ $filteredContributors := slice }}
 {{ $requestedStaffType := .staffType }}
 {{ $requestedRepositories := .repositories }}
-
+{{ $contributorsTitle := .title }}
 {{ $allStaffNames := slice }}
 {{ range site.Data.staff }}{{ $allStaffNames = union $allStaffNames . }}{{ end }}
 
@@ -31,7 +31,7 @@
 {{ $filteredContributors = shuffle $filteredContributors }}
 
 {{ if gt (len $filteredContributors) 0 }}
-  <h4 class="mt--2xl">{{ i18n "collections.governance.contributors" }}</h4>
+  {{ with $contributorsTitle }}<h4 class="mt--2xl">{{ . }}</h4>{{ end }}
   <div class="contributors {{ with .class }}{{ . }}{{ end }} {{ with .showInfo }}contributors--show-infos{{ end }}">
     <div class="contributors__items">
       {{ range $contributor := $filteredContributors }}
