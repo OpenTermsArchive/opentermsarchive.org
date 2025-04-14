@@ -54,17 +54,20 @@ footer_sub:
   - name: Revue de presse
     pageRef: /press-review
     weight: 4
+  - name: Présentations
+    pageRef: /presentations
+    weight: 5
   - name: Code source
     url: https://github.com/OpenTermsArchive/engine
-    weight: 5
+    weight: 6
     params:
       target: _blank
   - name: Mentions légales
     pageRef: /legal-notice
-    weight: 6
+    weight: 7
   - name: Politique de confidentialité
     pageRef: /privacy-policy
-    weight: 7
+    weight: 8
   - name: 'Accessibilité : non conforme'
     pageRef: /accessibility
-    weight: 8
+    weight: 9
