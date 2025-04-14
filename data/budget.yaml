@@ -62,60 +62,66 @@ expenditures:
   - date: 2022-12-01
     amount: 675562
   - date: 2023-01-01
-    amount: 709525
+    amount: 709625
   - date: 2023-02-01
-    amount: 729793
+    amount: 729993
   - date: 2023-03-01
-    amount: 755477
+    amount: 755777
   - date: 2023-04-01
-    amount: 771981
+    amount: 772381
   - date: 2023-05-01
-    amount: 791329
+    amount: 792369
   - date: 2023-06-01
-    amount: 797298
+    amount: 798978
   - date: 2023-07-01
-    amount: 801711
+    amount: 804030
   - date: 2023-08-01
-    amount: 810115
+    amount: 813529
   - date: 2023-09-01
-    amount: 840174
+    amount: 844682
   - date: 2023-10-01
-    amount: 867052
+    amount: 872655
   - date: 2023-11-01
-    amount: 869579
+    amount: 876276
   - date: 2023-12-01
-    amount: 887317
+    amount: 894569
   - date: 2024-01-01
-    amount: 890298
+    amount: 898104
   - date: 2024-02-01
-    amount: 910473
+    amount: 918834
   - date: 2024-03-01
-    amount: 938947
+    amount: 948403
   - date: 2024-04-01
-    amount: 964930
+    amount: 975481
   - date: 2024-05-01
-    amount: 990880
+    amount: 1002525
   - date: 2024-06-01
-    amount: 1010346
+    amount: 1023085
   - date: 2024-07-01
-    amount: 1020049
+    amount: 1033883
   - date: 2024-08-01
-    amount: 1024565
+    amount: 1039494
   - date: 2024-09-01
-    amount: 1034890
+    amount: 1050913
   - date: 2024-10-01
-    amount: 1077737
+    amount: 1094315
   - date: 2024-11-01
-    amount: 1112269
+    amount: 1129401
   - date: 2024-12-01
-    amount: 1143727
+    amount: 1168229
+  - date: 2025-01-01
+    amount: 1178639
+  - date: 2025-02-01
+    amount: 1187938
+  - date: 2025-03-01
+    amount: 1220278
 
 funding_sources:
   - title:
       fr: 🇫🇷🏛 Ministère de l’Europe et des Affaires Étrangères
       en: 🇫🇷🏛 French Ministry for Europe and Foreign Affairs
       de: 🇫🇷🏛 Französicher Auswärtiges Amt
-    amount: 882205
+    amount: 932832
   - title:
       fr: 🇪🇺🏛 France Relance
       en: 🇪🇺🏛 French Covid Recovery Fund
@@ -135,12 +141,12 @@ funding_sources:
       fr: 🇳🇱🏦 NLNet Foundation
       en: 🇳🇱🏦 NLNet Foundation
       de: 🇳🇱🏦 NLNet Foundation
-    amount: 24720
+    amount: 31720
   - title:
       fr: 🇩🇪🎓 Université de Brême
       en: 🇩🇪🎓 University of Bremen
       de: 🇩🇪🎓 Universität Bremen
-    amount: 17447
+    amount: 34293
   - title:
       fr: 🇪🇺🏛 Commission européenne
       en: 🇪🇺🏛 European Commission
@@ -165,4 +171,4 @@ funding_sources:
       fr: 🇺🇸🏦 GitHub
       en: 🇺🇸🏦 GitHub
       de: 🇺🇸🏦 GitHub
-    amount: 90
+    amount: 2143
