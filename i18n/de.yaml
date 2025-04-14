@@ -24,14 +24,14 @@ media:
       color: Color
 budget:
   expenditures:
-    title: Total expenditures
+    title: Gesamtausgaben
     table:
-      col1: Date
-      col2: Cumulative total in €
+      col1: Datum
+      col2: Kumulierter Gesamtbetrag in €
   funding_sources:
-    title: Funding sources
+    title: Finanzierungsquellen
     table:
-      col1: Source
+      col1: Quelle
       col2: in €
 about:
   core:

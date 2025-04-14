@@ -114,12 +114,12 @@ funding_sources:
   - title:
       fr: 🇫🇷🏛 Ministère de l’Europe et des Affaires Étrangères
       en: 🇫🇷🏛 French Ministry for Europe and Foreign Affairs
-      de: 🇫🇷🏛 French Ministry for Europe and Foreign Affairs
+      de: 🇫🇷🏛 Französicher Auswärtiges Amt
     amount: 882205
   - title:
       fr: 🇪🇺🏛 France Relance
       en: 🇪🇺🏛 French Covid Recovery Fund
-      de: 🇪🇺🏛 French Covid Recovery Fund
+      de: 🇪🇺🏛 Französischer Covid-Wiederherstellungsfonds
     amount: 145695
   - title:
       fr: 🇺🇸🏦 Reset
@@ -129,7 +129,7 @@ funding_sources:
   - title:
       fr: 🇫🇷🏛 Direction Interministérielle du Numérique
       en: 🇫🇷🏛 Interministerial Directorate for Digital Affairs
-      de: 🇫🇷🏛 Interministerial Directorate for Digital Affairs
+      de: 🇫🇷🏛 Interministerielle Direktion für Digitales
     amount: 20638
   - title:
       fr: 🇳🇱🏦 NLNet Foundation
@@ -139,12 +139,12 @@ funding_sources:
   - title:
       fr: 🇩🇪🎓 Université de Brême
       en: 🇩🇪🎓 University of Bremen
-      de: 🇩🇪🎓 University of Bremen
+      de: 🇩🇪🎓 Universität Bremen
     amount: 17447
   - title:
       fr: 🇪🇺🏛 Commission européenne
       en: 🇪🇺🏛 European Commission
-      de: 🇪🇺🏛 European Commission
+      de: 🇪🇺🏛 Europäische Kommission
     amount: 12000
   - title:
       fr: 🇺🇳🏦 Digital Public Goods Alliance
@@ -159,7 +159,7 @@ funding_sources:
   - title:
       fr: 🇫🇷🎓 Université de Brest
       en: 🇫🇷🎓 University of Brest
-      de: 🇫🇷🎓 University of Brest
+      de: 🇫🇷🎓 Universität Brest
     amount: 445
   - title:
       fr: 🇺🇸🏦 GitHub
