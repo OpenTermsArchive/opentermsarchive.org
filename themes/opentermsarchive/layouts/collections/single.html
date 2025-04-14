@@ -273,7 +273,7 @@
           {{ end }}
         </div>
         {{ $collectionRepositoryID := print .Params.id "-declarations" | lower }}
-        {{ partial "contributors.html" (dict "repositories" (slice $collectionRepositoryID) "showInfo" true "class" "contributors--align-x-left") }}
+        {{ partial "contributors.html" (dict "repositories" (slice $collectionRepositoryID) "showInfo" true "class" "contributors--align-x-left" "title" (i18n "collections.governance.contributors") "titleSize" "h4" ) }}
       </div>
     </div>
     {{ $isGraySectionIndex = add $isGraySectionIndex 1 }}

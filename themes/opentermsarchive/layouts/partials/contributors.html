@@ -4,7 +4,9 @@
 {{ $filteredContributors := slice }}
 {{ $requestedStaffType := .staffType }}
 {{ $requestedRepositories := .repositories }}
-
+{{ $title := .title }}
+{{ $titleSize := default "h3" .titleSize }}
+{{ $description := .description }}
 {{ $allStaffNames := slice }}
 {{ range site.Data.staff }}{{ $allStaffNames = union $allStaffNames . }}{{ end }}
 
@@ -31,7 +33,8 @@
 {{ $filteredContributors = shuffle $filteredContributors }}
 
 {{ if gt (len $filteredContributors) 0 }}
-  <h4 class="mt--2xl">{{ i18n "collections.governance.contributors" }}</h4>
+  {{ with $title }}{{ printf "<%s class=\"mt--2xl\">%s</%s>" $titleSize . $titleSize | safeHTML }}{{ end }}
+  {{ with $description }}<p>{{ . }}</p>{{ end }}
   <div class="contributors {{ with .class }}{{ . }}{{ end }} {{ with .showInfo }}contributors--show-infos{{ end }}">
     <div class="contributors__items">
       {{ range $contributor := $filteredContributors }}
