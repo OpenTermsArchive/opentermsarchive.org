@@ -73,54 +73,54 @@
           <p class="text--light mb--3xl">{{ i18n "about.funders.details" | markdownify }}</p>
         </div>
         <div>
-          {{ partial "contributors.html" (dict 
-            "staffType" "core" 
-            "thumbnailWidth" 88 
-            "thumbnailHeight" 88 
-            "showInfo" true 
-            "class" "contributors--has-no-margin-top mb--xl" 
-            "title" (i18n "about.core.title") 
-            "description" (i18n "about.core.subtitle") 
+          {{ partial "contributors.html" (dict
+            "staffType" "core"
+            "thumbnailWidth" 88
+            "thumbnailHeight" 88
+            "showInfo" true
+            "class" "contributors--has-no-margin-top mb--xl"
+            "title" (i18n "about.core.title")
+            "description" (i18n "about.core.subtitle")
             ) }}
         </div>
         <div>
-          {{ partial "contributors.html" (dict 
-            "staffType" "alumni" 
-            "showInfo" true 
-            "class" "mb--2xl contributors--has-no-margin-top" 
-            "title" (i18n "about.alumni.title") 
-            "titleSize" "h4" 
-            "description" (i18n "about.alumni.subtitle") 
+          {{ partial "contributors.html" (dict
+            "staffType" "alumni"
+            "showInfo" true
+            "class" "mb--2xl contributors--has-no-margin-top"
+            "title" (i18n "about.alumni.title")
+            "titleSize" "h4"
+            "description" (i18n "about.alumni.subtitle")
           ) }}
         </div>
         <div>
-          {{ partial "contributors.html" (dict 
-            "staffType" "communityManagers" 
-            "showInfo" true 
-            "class" "mb--2xl contributors--has-no-margin-top" 
-            "title" (i18n "about.community_managers.title") 
-            "titleSize" "h4" 
-            "description" (i18n "about.community_managers.subtitle") 
+          {{ partial "contributors.html" (dict
+            "staffType" "communityManagers"
+            "showInfo" true
+            "class" "mb--2xl contributors--has-no-margin-top"
+            "title" (i18n "about.community_managers.title")
+            "titleSize" "h4"
+            "description" (i18n "about.community_managers.subtitle")
           ) }}
         </div>
         <div>
-          {{ partial "contributors.html" (dict 
-            "staffType" "bizDev" 
-            "showInfo" true 
-            "class" "mb--2xl contributors--has-no-margin-top" 
-            "title" (i18n "about.bizdev.title") 
-            "titleSize" "h4" 
-            "description" (i18n "about.bizdev.subtitle") 
+          {{ partial "contributors.html" (dict
+            "staffType" "bizDev"
+            "showInfo" true
+            "class" "mb--2xl contributors--has-no-margin-top"
+            "title" (i18n "about.bizdev.title")
+            "titleSize" "h4"
+            "description" (i18n "about.bizdev.subtitle")
           ) }}
         </div>
         <div>
           {{ $impactLink := .RelRef (dict "path" "/impact") }}
           {{ $description := i18n "about.contributors.subtitle" (dict "impactLink" $impactLink) | markdownify }}
-          {{ partial "contributors.html" (dict 
-            "title" (i18n "about.contributors.title") 
-            "description" $description 
-            "class" "mb--2xl contributors--has-no-margin-top" 
-            "titleSize" "h4" 
+          {{ partial "contributors.html" (dict
+            "title" (i18n "about.contributors.title")
+            "description" $description
+            "class" "mb--2xl contributors--has-no-margin-top"
+            "titleSize" "h4"
           ) }}
         </div>
       </div>
