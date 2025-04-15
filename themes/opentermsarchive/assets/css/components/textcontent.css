@@ -204,6 +204,10 @@
     }
   }
 
+  & video + .embedWrapper {
+    margin-top: var(--ml);
+  }
+
   & ul {
     list-style: none;
 
