@@ -1,0 +1,14 @@
+.presentation {
+  padding: var(--mxl);
+  background-color: var(--colorWhite);
+  border: 1px solid var(--colorBlack300);
+  margin-bottom: var(--ml);
+}
+
+.presentation__title{
+  margin-bottom: var(--ms);
+}
+
+.presentation__content {
+  padding-top: var(--ml);
+}

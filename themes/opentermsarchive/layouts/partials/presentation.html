@@ -1,0 +1,22 @@
+{{ $title := .title }}
+{{ $date := .date }}
+{{ $language := .language }}
+{{ $website := .website }}
+{{ $content := .content }}
+
+<div class="presentation">
+  {{ with $title }}
+    <h3 class="presentation__title">
+      {{ with $website }}<a target="_blank" rel="noopener" href="{{ . }}" title="{{ $title }}">{{ end }}
+      {{ . }}
+      {{ with $website }}</a>{{ end }}
+    </h3>  
+  {{ end }}
+  {{ if or $date $language }}
+    <h6 class="presentation__metadata h6--ultrathin">
+      {{ with $date }}<span class="presentation__metadata-item">{{ . | time.Format ":date_long" }}</span>{{ end }} ▪
+      {{ with $language }}<span class="presentation__metadata-item">{{ i18n "presentations.language" (dict "language" ( index site.Data.display_names.languages site.Language.LanguageCode .)) }}</span>{{ end }}
+    </h6>
+  {{ end }}
+  {{ with $content }}<div class="presentation__content textcontent">{{ . }}</div>{{ end }}
+</div>
