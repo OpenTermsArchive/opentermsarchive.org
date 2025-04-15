@@ -1,6 +1,6 @@
 ---
 title: Budget
-html_description: Total costs of building and operating Open Terms Archive
+html_description: Gesamtkosten für Aufbau und Betrieb Open Terms Archive
 layout: budget
 ---
 
