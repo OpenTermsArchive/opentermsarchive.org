@@ -1,5 +1,6 @@
 {{ $src := .Get "src" }}
 {{ $type := default "application/pdf" (.Get "type") }}
+{{ $title := .Get "title" }}
 
 {{/*
   Ratio = height / width
@@ -15,8 +16,8 @@
   {{ with .Err }}
     {{ errorf "%s" . }}
   {{ else }}
-    <div class="embedWrapper"style="padding-top: {{ $ratio }};">
-      <embed src="{{ .RelPermalink }}" type="{{ $type }}">
+    <div class="embed__wrapper"style="padding-top: {{ $ratio }};">
+      <embed src="{{ .RelPermalink }}" type="{{ $type }}" {{ with $title }}title="{{ . }}"{{ end }}>
     </div>
   {{ end }}
 {{ end }}
