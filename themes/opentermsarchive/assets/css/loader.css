@@ -24,6 +24,7 @@
 @import "/elements/titles.css";
 @import "/elements/utility.css";
 @import "/elements/syntax.css";
+@import "/elements/embed.css";
 
 /* Components */
 @import "/components/article.css";
