@@ -204,7 +204,7 @@
     }
   }
 
-  & video + .embedWrapper {
+  & video + .embed__wrapper {
     margin-top: var(--ml);
   }
 

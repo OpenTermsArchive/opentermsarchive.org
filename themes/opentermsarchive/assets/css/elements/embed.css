@@ -1,11 +1,11 @@
-.embedWrapper {
+.embed__wrapper {
   position: relative;
   width: 100%;
   padding-top: 56.25%; /* 16:9 aspect ratio */
   overflow: hidden;
 }
 
-.embedWrapper embed {
+.embed__wrapper embed {
   position: absolute;
   top: 0;
   left: 0;
