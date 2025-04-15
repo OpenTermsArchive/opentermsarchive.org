@@ -1,11 +1,11 @@
 .presentation {
   padding: var(--mxl);
+  margin-bottom: var(--ml);
   background-color: var(--colorWhite);
   border: 1px solid var(--colorBlack300);
-  margin-bottom: var(--ml);
 }
 
-.presentation__title{
+.presentation__title {
   margin-bottom: var(--ms);
 }
 
