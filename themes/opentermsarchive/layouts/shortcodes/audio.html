@@ -3,5 +3,5 @@
 {{ $type := default "audio/mp3" (.Get "type") }}
 
 <audio {{ $controls }} style="width: 100%;">
-  <source src="{{ $src }}" type="{{ $type }}" />
+  <source src="{{ $src }}" type="{{ $type }}">
 </audio>

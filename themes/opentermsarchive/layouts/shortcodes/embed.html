@@ -1,7 +1,7 @@
 {{ $src := .Get "src" }}
 {{ $type := default "application/pdf" (.Get "type") }}
 
-{{/* 
+{{/*
   Ratio = height / width
   Common aspect ratio values:
     100% → 1:1
@@ -16,7 +16,7 @@
     {{ errorf "%s" . }}
   {{ else }}
     <div class="embedWrapper"style="padding-top: {{ $ratio }};">
-      <embed src="{{ .RelPermalink }}" type="{{ $type }}" />
+      <embed src="{{ .RelPermalink }}" type="{{ $type }}">
     </div>
   {{ end }}
 {{ end }}
