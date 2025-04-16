@@ -9,9 +9,7 @@
 <div class="presentation">
   {{ with $title }}
     <h3 class="presentation__title">
-      {{ with $website }}<a target="_blank" rel="noopener" href="{{ . }}" title="{{ $title }}">{{ end }}
       {{ . }}
-      {{ with $website }}</a>{{ end }}
     </h3>
   {{ end }}
   {{ if or $date $language $location }}
@@ -25,6 +23,14 @@
     <div class="presentation__content textcontent">
       {{ with $description }}<div class="presentation__description">{{ . }}</div>{{ end }}
       {{ with $medias }}<div class="presentation__medias">{{ . | markdownify }}</div>{{ end }}
+    </div>
+  {{ end }}
+  {{ with $website }}
+    <div class="presentation__cta">
+       <a class="linkicon" href="{{ . }}" target="_blank" rel="noopener">
+          {{ i18n "presentations.details.button" }}
+          <i class="icon ml--2xs" data-lucide="arrow-right"></i>
+        </a>
     </div>
   {{ end }}
 </div>
