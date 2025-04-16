@@ -169,3 +169,5 @@ memos:
 reuses: Réutilisations
 presentations:
   language: En {{ .language }}
+  details:
+    button: Voir les détails
