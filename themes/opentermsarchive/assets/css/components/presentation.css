@@ -12,3 +12,9 @@
 .presentation__content {
   padding-top: var(--ml);
 }
+
+.presentation__metadata-item {
+  &:not(:last-child)::after {
+    content: " ▪";
+  }
+}
