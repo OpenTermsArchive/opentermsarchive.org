@@ -10,10 +10,10 @@
 {{ end }}
 
 {{ range $additionalSource := $additionalSources }}
-  {{ with resources.GetRemote $additionalSource }}
+  {{ with try (resources.GetRemote $additionalSource) }}
     {{ with .Err }}
       {{ errorf "%s" . }}
-    {{ else }}
+    {{ else with .Value }}
       {{ $repository := (.Content | unmarshal).projectName }}
       {{ range (.Content | unmarshal).contributors }}
         {{ $contributorName := .name }}
@@ -42,9 +42,9 @@
         {{ $contributors = merge $contributors (dict $contributorName $contributorData) }}
 
       {{ end }}
+    {{ else }}
+      {{ warnf "Unable to get the remote contributors from %q" . }}
     {{ end }}
-  {{ else }}
-    {{ warnf "Unable to get the remote contributors from %q" . }}
   {{ end }}
 {{ end }}
 

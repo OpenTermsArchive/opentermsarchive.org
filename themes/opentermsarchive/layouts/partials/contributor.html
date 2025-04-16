@@ -8,9 +8,17 @@
     {{ with $showImage }}
       {{ $image := default (resources.Get "/images/contributors/placeholder.jpg") (resources.Get (printf "/images/contributors/%s.jpg" ($.contributor.name | urlize))) }}
       {{ with $.contributor.avatar_url }}
-        {{ $remoteImage := resources.GetRemote . }}
-        {{ if or (eq $remoteImage.Data.ContentType "image/jpeg") (eq $remoteImage.Data.ContentType "image/png") }}
-          {{ $image = $remoteImage }}
+        {{ with try (resources.GetRemote .) }}
+          {{ with .Err }}
+            {{ errorf "%s" . }}
+          {{ else with .Value }}
+            {{ $remoteImage := . }}
+            {{ if or (eq $remoteImage.Data.ContentType "image/jpeg") (eq $remoteImage.Data.ContentType "image/png") }}
+              {{ $image = $remoteImage }}
+            {{ end }}
+          {{ else }}
+            {{ errorf "Unable to get remote resource %q" . }}
+          {{ end }}
         {{ end }}
       {{ end }}
       <img class="contributor__image" src="{{ $image.RelPermalink }}" alt="{{ $.contributor.name }}" width="{{ $thumbnailWidth }}" height="{{ $thumbnailHeight }}">
