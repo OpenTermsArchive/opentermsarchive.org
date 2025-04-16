@@ -2,12 +2,17 @@
   date: 2025-04-01
   website: https://regulation-tech.cnam.fr/lunch-learn/
   language: fr
+  location: online
   medias: |
     {{< video src="https://cloud.opentermsarchive.org/index.php/s/rqZofY3AjZTdPwQ/download/2025-04-01%20Lunch%20and%20Learn.mp4" poster="https://cloud.opentermsarchive.org/index.php/s/J6LY2k2KPFqceBB/download/2025-04-01%20Lunch%20and%20Learn.jpg" >}}
+  i18n:
+    fr:
+      location: en ligne
 - title: RightsCon
   date: 2025-02-25
   website: https://www.rightscon.org
   language: en
+  location: Taipei, Taiwan
   medias: |
     {{< figure
       src="https://cloud.opentermsarchive.org/index.php/s/MyFstLyf6o5W7de/download/194603428b0edd5b.jpg"
@@ -24,23 +29,33 @@
   date: 2025-01-21
   website: https://radiostudent.si/druzba/tehno-klistir/fedi-pakt
   language: en
+  location: online
   medias: |
     {{< audio src="https://cloud.opentermsarchive.org/index.php/s/S9NkKXJGnEDwKfG/download/2025-01-21-tehno-klistir-fedi-pakt.mp3" >}}
+  i18n:
+    fr:
+      location: en ligne
 - title: Tech We Want Summit
   date: 2024-10-18
   website: https://okfn.org/en/events/the-tech-we-want-online-summit/
   language: en
+  location: online
   medias: |
     {{< video src="https://cloud.opentermsarchive.org/index.php/s/Z3CqqfMsgwx7b5a/download/2024-10-18%20Tech%20We%20Want%20Summit.webm" type="video/webm" >}}
+  i18n:
+    fr:
+      location: en ligne
 - title: FOSDEM
   date: 2024-02-03
   website: https://archive.fosdem.org/2024/schedule/event/fosdem-2024-3755-open-terms-archive/
   language: en
+  location: Brussels, Belgium
   medias: |
     {{< video src="https://cloud.opentermsarchive.org/index.php/s/oSqm3pHpbxYkNkq/download/fosdem-2024-3755-open-terms-archive.av1.webm" type="video/webm" >}}
     {{< embed src="https://cloud.opentermsarchive.org/index.php/s/DXffgcG7aMM9ozi/download/2024-02-03%20FOSDEM.pdf" title="Open Terms Archive presentation slides at FOSDEM" >}}
   i18n:
     fr:
+      location: Bruxelles, Belgique
       medias: |
         {{< video src="https://cloud.opentermsarchive.org/index.php/s/oSqm3pHpbxYkNkq/download/fosdem-2024-3755-open-terms-archive.av1.webm" type="video/webm" >}}
         {{< embed src="https://cloud.opentermsarchive.org/index.php/s/DXffgcG7aMM9ozi/download/2024-02-03%20FOSDEM.pdf" title="Support de la présentation d'Open Terms Archive au FOSDEM" >}}
@@ -48,37 +63,54 @@
   date: 2023-05-23
   website: https://www.nobelprize.org/events/nobel-prize-summit/2023
   language: en
+  location: online
   medias: |
     {{< video src="https://cloud.opentermsarchive.org/index.php/s/sLe29GmK5xBdAbN/download/Open%20Terms%20Archive,%20Open-source%20Innovations%20for%20Information%20Integrity.mp4" >}}
+  i18n:
+    fr:
+      location: en ligne
 - title: Internet Governance Forum
   date: 2021-12-08
   website: https://www.intgovforum.org
   language: en
+  location: Katowice, Poland
+  i18n:
+    fr:
+      location: Katowice, Pologne
 - title: Festival Transfo
   date: 2021-11-18
   website: https://www.festival-transfo.fr/evenement/738/74-open-terms-archive-suivre-les-modifications-des-cgu.html
   language: fr
+  location: Grenoble, France
 - title: Mois de l'innovation publique
   date: 2021-11-09
   website: https://mobilizon.fr/events/6b4c9255-0056-4b36-9cde-3cadeb1c5ef3
   language: fr
+  location: Paris, France
 - title: OpenLaw
   date: 2021-11-09
   website: https://openlaw.fr
   language: fr
+  location: Paris, France
 - title: Atelier BlueHats
   date: 2021-07-22
   website: https://code.gouv.fr/fr/bluehats/tags/atelier/
   language: fr
+  location: online
   medias: |
     {{< video src="https://cloud.opentermsarchive.org/index.php/s/DSNaAPmq5YCcJq7/download/Atelier%20BlueHats%20prsentation%20d039Open%20Terms%20Archive.mp4" >}}
+  i18n:
+    fr:
+      location: en ligne
 - title: Paris Legal Makers
   date: 2021-06-12
   language: fr
+  location: Paris, France
 - title: Paris Peace forum
   date: 2020-11-11
   website: https://parispeaceforum.org
   language: en
+  location: Paris, France
   medias: |
     {{< figure
       src="https://cloud.opentermsarchive.org/index.php/s/P4HmwPNfi5YY4yd/download/Cover.jpg"
