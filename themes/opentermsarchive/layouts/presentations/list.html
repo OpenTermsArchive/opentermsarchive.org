@@ -2,8 +2,15 @@
   {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "subtitle" (.Params.hero.subtitle | safeHTML) "size" "98" ) }}
   <div class="container container--has-no-padding-top">
     <div class="container container--98">
-      {{ range .Pages }}
-        {{ partial "presentation.html" (dict "title" .Title "date" .Date "language" .Params.language "website" .Params.website "content" .Content) }}
+      {{ range .Site.Data.presentations_metadata }}
+        {{ $lang := $.Page.Language.Lang }}
+        {{ $title := default .title (index .i18n $lang).title }}
+        {{ $description := default .description (index .i18n $lang).description }}
+        {{ $medias := default .medias (index .i18n $lang).medias }}
+        {{ $date := .date }}
+        {{ $language := .language }}
+        {{ $website := .website }}
+        {{ partial "presentation.html" (dict "title" $title "description" $description "medias" $medias "date" $date "language" $language "website" $website) }}
       {{ end }}
     </div>
   </div>
