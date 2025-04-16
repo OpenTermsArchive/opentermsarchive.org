@@ -30,6 +30,7 @@ import {
   Clock,
   Activity,
   Image,
+  Calendar,
   createIcons,
 } from 'lucide';
 
@@ -66,6 +67,7 @@ createIcons({
     Clock,
     Activity,
     Image,
+    Calendar,
   },
   attrs: { 'aria-hidden': true },
 });

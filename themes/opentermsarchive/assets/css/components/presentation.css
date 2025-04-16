@@ -13,13 +13,20 @@
   padding-top: var(--ml);
 }
 
-.presentation__metadata-item {
-  &:not(:last-child)::after {
-    content: " ▪";
-  }
+.presentation__metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ms);
 }
+
+.presentation__metadata-item {
+  display: flex;
+  gap: var(--2xs);
+  align-items: center;
+}
+
 .presentation__cta {
-  margin-top: var(--ml);
   display: flex;
   justify-content: flex-end;
+  margin-top: var(--ml);
 }
