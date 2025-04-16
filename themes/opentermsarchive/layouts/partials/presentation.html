@@ -14,9 +14,24 @@
   {{ end }}
   {{ if or $date $language $location }}
     <h6 class="presentation__metadata h6--ultrathin">
-      {{ with $date }}<span class="presentation__metadata-item">{{ . | time.Format ":date_long" }}</span>{{ end }}
-      {{ with $language }}<span class="presentation__metadata-item">{{ i18n "presentations.language" (dict "language" ( index site.Data.display_names.languages site.Language.LanguageCode .)) }}</span>{{ end }}
-      {{ with $location }}<span class="presentation__metadata-item">{{ . | strings.FirstUpper }}</span>{{ end }}
+      {{ with $date }}
+        <span class="presentation__metadata-item">
+          <i class="icon icon--gray" data-lucide="calendar"></i>
+          {{ . | time.Format ":date_long" }}
+        </span>
+      {{ end }}
+      {{ with $language }}
+        <span class="presentation__metadata-item">
+          <i class="icon icon--gray" data-lucide="message-circle"></i>
+          {{ i18n "presentations.language" (dict "language" ( index site.Data.display_names.languages site.Language.LanguageCode .)) }}
+        </span>
+        {{ end }}
+      {{ with $location }}
+        <span class="presentation__metadata-item">
+          <i class="icon icon--gray" data-lucide="map-pin"></i>
+          {{ . | strings.FirstUpper }}
+        </span>
+      {{ end }}
     </h6>
   {{ end }}
   {{ if or $description $medias }}
