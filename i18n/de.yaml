@@ -168,6 +168,6 @@ memos:
   author: By <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, a third-party contributor
 reuses: Reuses
 presentations:
-  language: In {{ .language }} language
+  language: In {{ .language }}
   details:
     button: See details

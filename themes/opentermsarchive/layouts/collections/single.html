@@ -89,14 +89,14 @@
               {{ $languages = slice }}
             {{ end }}
             {{ range $languages }}
-              {{ $displayLanguages = $displayLanguages | append ( strings.FirstUpper (index site.Data.display_names.languages site.Language.LanguageCode .)) }}
+              {{ $displayLanguages = $displayLanguages | append (index site.Data.display_names.languages site.Language.LanguageCode .) }}
             {{ end }}
             {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.language" (len $displayLanguages)) "icon" "message-circle" "desc" (delimit $displayLanguages ", ")) }}
           {{ end }}
           {{ with .Params.jurisdictions }}
             {{ $jurisdictions := slice }}
             {{ range . }}
-              {{ $jurisdictions = $jurisdictions | append ( strings.FirstUpper (index site.Data.display_names.regions site.Language.LanguageCode .)) }}
+              {{ $jurisdictions = $jurisdictions | append (index site.Data.display_names.regions site.Language.LanguageCode .) }}
             {{ end }}
             {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.jurisdiction" (len $jurisdictions)) "icon" "map" "desc" (delimit $jurisdictions ", ")) }}
           {{ end }}
