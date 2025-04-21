@@ -24,3 +24,7 @@
   gap: var(--2xs);
   align-items: center;
 }
+
+.presentation__description {
+  margin-bottom: var(--ml);
+}

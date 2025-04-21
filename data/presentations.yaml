@@ -18,6 +18,8 @@
       src="https://cloud.opentermsarchive.org/index.php/s/MyFstLyf6o5W7de/download/194603428b0edd5b.jpg"
       alt="At #RightsCon, French Ambassador for Digital Affaires, Henri Verdier, and Open Terms Archive Director Matti Schneider, hosted visitors at the Open Terms Archive booth."
     >}}
+  description: |
+    At RightsCon 2025, French Ambassador for Digital Affaires, Henri Verdier, and Open Terms Archive Director, Matti Schneider, hosted visitors at the Open Terms Archive booth, complete with demos and cookies!
   i18n:
     fr:
       medias: |
@@ -25,6 +27,8 @@
           src="https://cloud.opentermsarchive.org/index.php/s/MyFstLyf6o5W7de/download/194603428b0edd5b.jpg"
           alt="Lors de la conférence #RightsCon, l'ambassadeur français pour le numérique, Henri Verdier, et le directeur d'Open Terms Archive, Matti Schneider, ont accueilli les visiteurs sur le stand d'Open Terms Archive."
         >}}
+      description: |
+        Lors de la conférence RightsCon 2025, l'ambassadeur français pour le numérique, Henri Verdier, et le directeur d'Open Terms Archive, Matti Schneider, ont accueilli les visiteurs sur le stand d'Open Terms Archive avec des démonstrations et des cookies !
 - title: RadioStudent
   date: 2025-01-21
   website: https://radiostudent.si/druzba/tehno-klistir/fedi-pakt
