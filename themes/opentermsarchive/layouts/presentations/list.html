@@ -2,7 +2,7 @@
   {{ partial "hero.html" (dict "title" (.Params.hero.title | safeHTML) "subtitle" (.Params.hero.subtitle | safeHTML) "size" "98" ) }}
   <div class="container container--has-no-padding-top">
     <div class="container container--98">
-      {{ range .Site.Data.presentations_metadata }}
+      {{ range .Site.Data.presentations }}
         {{ $lang := $.Page.Language.Lang }}
         {{ $title := default .title (index .i18n $lang).title }}
         {{ $description := default .description (index .i18n $lang).description }}
