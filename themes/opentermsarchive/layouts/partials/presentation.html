@@ -32,20 +32,21 @@
           {{ . | strings.FirstUpper }}
         </span>
       {{ end }}
+      {{ with $website }}
+        <span class="presentation__metadata-item">
+          <i class="icon icon--gray" data-lucide="globe"></i>
+          <a href="{{ . }}" target="_blank" rel="noopener">
+            {{ $url := urls.Parse . }}
+            {{ $url.Host | strings.TrimPrefix "www." }}
+          </a>
+        </span>
+      {{ end }}
     </h6>
   {{ end }}
   {{ if or $description $medias }}
     <div class="presentation__content textcontent">
       {{ with $description }}<div class="presentation__description">{{ . }}</div>{{ end }}
       {{ with $medias }}<div class="presentation__medias">{{ . | markdownify }}</div>{{ end }}
-    </div>
-  {{ end }}
-  {{ with $website }}
-    <div class="presentation__cta">
-       <a class="linkicon" href="{{ . }}" target="_blank" rel="noopener">
-          {{ i18n "presentations.details.button" }}
-          <i class="icon ml--2xs" data-lucide="arrow-right"></i>
-        </a>
     </div>
   {{ end }}
 </div>

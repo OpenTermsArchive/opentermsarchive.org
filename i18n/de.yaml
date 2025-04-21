@@ -169,5 +169,3 @@ memos:
 reuses: Reuses
 presentations:
   language: In {{ .language }}
-  details:
-    button: Mehr

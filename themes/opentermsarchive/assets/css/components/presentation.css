@@ -24,9 +24,3 @@
   gap: var(--2xs);
   align-items: center;
 }
-
-.presentation__cta {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: var(--ml);
-}
