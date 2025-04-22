@@ -167,3 +167,5 @@ pagination:
 memos:
   author: Par <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, un‧e contributeur tiers
 reuses: Réutilisations
+presentations:
+  language: En {{ .language }}

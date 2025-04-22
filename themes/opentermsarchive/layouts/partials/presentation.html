@@ -1,0 +1,52 @@
+{{ $title := .title }}
+{{ $date := .date }}
+{{ $language := .language }}
+{{ $website := .website }}
+{{ $description := .description }}
+{{ $medias := .medias }}
+{{ $location := .location }}
+
+<div class="presentation">
+  {{ with $title }}
+    <h3 class="presentation__title">
+      {{ . }}
+    </h3>
+  {{ end }}
+  {{ if or $date $language $location }}
+    <h6 class="presentation__metadata h6--ultrathin">
+      {{ with $date }}
+        <span class="presentation__metadata-item">
+          <i class="icon icon--gray" data-lucide="calendar"></i>
+          {{ . | time.Format ":date_long" }}
+        </span>
+      {{ end }}
+      {{ with $language }}
+        <span class="presentation__metadata-item">
+          <i class="icon icon--gray" data-lucide="message-circle"></i>
+          {{ i18n "presentations.language" (dict "language" ( index site.Data.display_names.languages site.Language.LanguageCode .)) }}
+        </span>
+        {{ end }}
+      {{ with $location }}
+        <span class="presentation__metadata-item">
+          <i class="icon icon--gray" data-lucide="map-pin"></i>
+          {{ . | strings.FirstUpper }}
+        </span>
+      {{ end }}
+      {{ with $website }}
+        <span class="presentation__metadata-item">
+          <i class="icon icon--gray" data-lucide="globe"></i>
+          <a href="{{ . }}" target="_blank" rel="noopener">
+            {{ $url := urls.Parse . }}
+            {{ $url.Host | strings.TrimPrefix "www." }}
+          </a>
+        </span>
+      {{ end }}
+    </h6>
+  {{ end }}
+  {{ if or $description $medias }}
+    <div class="presentation__content textcontent">
+      {{ with $description }}<div class="presentation__description">{{ . }}</div>{{ end }}
+      {{ with $medias }}<div class="presentation__medias">{{ . | markdownify }}</div>{{ end }}
+    </div>
+  {{ end }}
+</div>

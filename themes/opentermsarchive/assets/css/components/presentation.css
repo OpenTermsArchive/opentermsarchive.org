@@ -1,0 +1,30 @@
+.presentation {
+  padding: var(--mxl);
+  margin-bottom: var(--ml);
+  background-color: var(--colorWhite);
+  border: 1px solid var(--colorBlack300);
+}
+
+.presentation__title {
+  margin-bottom: var(--ms);
+}
+
+.presentation__content {
+  padding-top: var(--ml);
+}
+
+.presentation__metadata {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ms);
+}
+
+.presentation__metadata-item {
+  display: flex;
+  gap: var(--2xs);
+  align-items: center;
+}
+
+.presentation__description {
+  margin-bottom: var(--ml);
+}
