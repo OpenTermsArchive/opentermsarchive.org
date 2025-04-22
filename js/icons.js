@@ -97,6 +97,18 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/calendar.js
+  var Calendar = [
+    "svg",
+    defaultAttributes,
+    [
+      ["path", { d: "M8 2v4" }],
+      ["path", { d: "M16 2v4" }],
+      ["rect", { width: "18", height: "18", x: "3", y: "4", rx: "2" }],
+      ["path", { d: "M3 10h18" }]
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/chevron-down.js
   var ChevronDown = ["svg", defaultAttributes, [["path", { d: "m6 9 6 6 6-6" }]]];
 
@@ -462,7 +474,8 @@
       PowerOff,
       Clock,
       Activity,
-      Image
+      Image,
+      Calendar
     },
     attrs: { "aria-hidden": true }
   });
@@ -502,6 +515,14 @@ lucide/dist/esm/icons/activity.js:
    *)
 
 lucide/dist/esm/icons/arrow-right.js:
+  (**
+   * @license lucide v0.344.0 - ISC
+   *
+   * This source code is licensed under the ISC license.
+   * See the LICENSE file in the root directory of this source tree.
+   *)
+
+lucide/dist/esm/icons/calendar.js:
   (**
    * @license lucide v0.344.0 - ISC
    *
