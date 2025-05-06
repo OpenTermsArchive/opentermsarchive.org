@@ -16,12 +16,12 @@ Set the `UPTIMEROBOT_API_KEY` environment variable:
 
 #### Hugo
 
-[Install Hugo](https://gohugo.io/getting-started/installing/) in version `0.127.0` edition `extended`.
+[Install Hugo](https://gohugo.io/getting-started/installing/) in version `0.147.1` edition `extended`.
 
 ##### With Homebrew
 
 1. Add Open Terms Archive homebrew tap: `brew tap OpenTermsArchive/homebrew-tap https://github.com/OpenTermsArchive/homebrew-tap`
-2. Install Hugo: `brew install hugo@0.127.0`
+2. Install Hugo: `brew install hugo@0.147.1`
 
 See [Open Terms Archive homebrew tap](https://github.com/OpenTermsArchive/homebrew-tap) for more information.
 

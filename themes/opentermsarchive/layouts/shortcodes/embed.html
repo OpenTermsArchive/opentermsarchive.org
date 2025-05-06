@@ -12,12 +12,14 @@
 */}}
 {{ $ratio := default "56.25%" (.Get "ratio") }}
 
-{{ with resources.GetRemote $src }}
+{{ with try (resources.GetRemote $src) }}
   {{ with .Err }}
     {{ errorf "%s" . }}
-  {{ else }}
+  {{ else with .Value }}
     <div class="embed__wrapper"style="padding-top: {{ $ratio }};">
       <embed src="{{ .RelPermalink }}" type="{{ $type }}" {{ with $title }}title="{{ . }}"{{ end }}>
     </div>
+  {{ else }}
+    {{ errorf "Unable to get remote resource %q" . }}
   {{ end }}
 {{ end }}

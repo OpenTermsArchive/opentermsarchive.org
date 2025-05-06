@@ -15,26 +15,26 @@
   {{ if in $remoteLogoUrl  "avatars.githubusercontent.com" }}
     {{ $remoteType = "github" }}
   {{ end }}
-  {{ with resources.GetRemote $remoteLogoUrl }}
+  {{ with try (resources.GetRemote $remoteLogoUrl) }}
     {{ with .Err }}
       {{ $errorMessage = .Err }}
-    {{ else }}
+    {{ else with .Value }}
       {{ $resource = . }}
+    {{ else }}
+      {{ $errorMessage = printf "Failed to fetch %s" $remoteLogoUrl }}
     {{ end }}
-  {{ else }}
-    {{ $errorMessage = printf "Failed to fetch %s" $remoteLogoUrl }}
   {{ end }}
 {{ end }}
 
 {{ if not $resource }}
-  {{ with resources.Get $localImagePath }}
+  {{ with try (resources.Get $localImagePath) }}
     {{ with .Err }}
       {{ $errorMessage = .Err }}
-    {{ else }}
+    {{ else with .Value }}
       {{ $resource = . }}
+    {{ else }}
+      {{ $errorMessage = printf "%s\nFailed to fetch %s" $errorMessage $localImagePath }}
     {{ end }}
-  {{ else }}
-    {{ $errorMessage = printf "%s\nFailed to fetch %s" $errorMessage $localImagePath }}
   {{ end }}
 {{ end }}
 
