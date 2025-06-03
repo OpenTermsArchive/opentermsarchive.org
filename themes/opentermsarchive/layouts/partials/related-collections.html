@@ -21,7 +21,7 @@
 
         {{ range where site.RegularPages "Section" "collections" }}
           {{ if (in $.relatedCollectionsIDs .Params.id) }}
-            {{ partial "collection-card.html" . }}
+            {{ partial "collection-card.html" (dict "context" .) }}
           {{ end }}
         {{ end }}
       </div>

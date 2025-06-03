@@ -19,7 +19,7 @@
       {{ end }}
       <div class="cardlist__items">
         {{ range $query }}
-          {{ partial "collection-card.html" . }}
+          {{ partial "collection-card.html" (dict "context" .) }}
         {{ end }}
       </div>
     </div>

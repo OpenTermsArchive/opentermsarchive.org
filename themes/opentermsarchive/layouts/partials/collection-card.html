@@ -1,12 +1,12 @@
-{{ $name := .Params.name }}
-{{ $tagline := default .Params.tagline (index .Params.i18n site.Language.Lang "tagline") }}
-{{ $collectionLogo := partial "func/getLogo.html" (dict "logoUrl" .Params.logo "name" $name "type" "collections") }}
-{{ $collectionLogo2x := partial "func/getLogo.html" (dict "logoUrl" .Params.logo "name" $name "type" "collections" "size" "2x") }}
+{{ $name := .context.Params.name }}
+{{ $tagline := default .context.Params.tagline (index .context.Params.i18n site.Language.Lang "tagline") }}
+{{ $collectionLogo := partial "func/getLogo.html" (dict "logoUrl" .context.Params.logo "name" $name "type" "collections") }}
+{{ $collectionLogo2x := partial "func/getLogo.html" (dict "logoUrl" .context.Params.logo "name" $name "type" "collections" "size" "2x") }}
 {{ with $collectionLogo.error }}{{ warnf . }}{{ end }}
 {{ with $collectionLogo2x.error }}{{ warnf . }}{{ end }}
-{{ $i18n := .Params.i18n }}
+{{ $i18n := .context.Params.i18n }}
 
-{{ $languages := .Params.languages }}
+{{ $languages := .context.Params.languages }}
 {{ $allEuLanguages := slice "bg" "cs" "da" "de" "el" "en" "es" "et" "fi" "fr" "ga" "hr" "hu" "it" "lt" "lv" "mt" "nl" "pl" "pt" "ro" "sk" "sl" "sv" }}
 {{ $nonEuCollectionLanguages := symdiff $languages $allEuLanguages }}
 {{ $isOnlyEuLanguages := eq (len $nonEuCollectionLanguages) 0 }}
@@ -31,67 +31,75 @@
   <div class="card__body">
 
     {{ with $name }}<h4 class="card__title">{{ . }}</h4>{{ end }}
-    {{ with $tagline }}<h5 class="card__subtitle h5--thin">{{ . }}</h5>{{ end }}
+    {{ if not .mini }}
+      {{ with $tagline }}<h5 class="card__subtitle h5--thin">{{ . }}</h5>{{ end }}
+    {{ end }}
 
-    <div class="cardtable">
+    {{ if not .mini }}
+      <div class="cardtable">
 
-      {{ with .Params.totalServices }}
-        {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.services") "icon" "folder" "desc" .) }}
-      {{ end }}
-
-      {{ with .Params.totalTerms }}
-        {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.documents") "icon" "file" "desc" .) }}
-      {{ end }}
-
-      {{ with $languages }}
-        {{ if $isOnlyEuLanguages }}
-          {{ $displayLanguages = $displayLanguages | append (i18n "collections.metadata.language_europe") }}
-          {{ $languages = slice }}
+        {{ with .context.Params.totalServices }}
+          {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.services") "icon" "folder" "desc" .) }}
         {{ end }}
-        {{ range $languages }}
-          {{ $displayLanguages = $displayLanguages | append (index site.Data.display_names.languages site.Language.LanguageCode .) }}
+
+        {{ with .context.Params.totalTerms }}
+          {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.documents") "icon" "file" "desc" .) }}
         {{ end }}
-        {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.language" (len $languages)) "icon" "message-circle" "desc" (delimit $displayLanguages ", ")) }}
-      {{ end }}
 
-      {{ with .Params.jurisdictions }}
-        {{ $jurisdictions := slice }}
-        {{ range . }}
-          {{ $jurisdictions = $jurisdictions | append (index site.Data.display_names.regions site.Language.LanguageCode .) }}
+        {{ with $languages }}
+          {{ if $isOnlyEuLanguages }}
+            {{ $displayLanguages = $displayLanguages | append (i18n "collections.metadata.language_europe") }}
+            {{ $languages = slice }}
+          {{ end }}
+          {{ range $languages }}
+            {{ $displayLanguages = $displayLanguages | append (index site.Data.display_names.languages site.Language.LanguageCode .) }}
+          {{ end }}
+          {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.language" (len $languages)) "icon" "message-circle" "desc" (delimit $displayLanguages ", ")) }}
         {{ end }}
-        {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.jurisdiction" (len $jurisdictions)) "icon" "map" "desc" (delimit $jurisdictions ", ")) }}
-      {{ end }}
 
-    </div>
+        {{ with .context.Params.jurisdictions }}
+          {{ $jurisdictions := slice }}
+          {{ range . }}
+            {{ $jurisdictions = $jurisdictions | append (index site.Data.display_names.regions site.Language.LanguageCode .) }}
+          {{ end }}
+          {{ partial "card-table-item.html" (dict "title" (i18n "collections.metadata.jurisdiction" (len $jurisdictions)) "icon" "map" "desc" (delimit $jurisdictions ", ")) }}
+        {{ end }}
 
-    <div class="mt--xl text--center">
-      <div>
-        <a class="button button--secondary" href="{{ .Params.versions }}" target="_blank" rel="noopener">
-          {{ i18n "collections.cta.browse" }}
-          <i class="icon ml--2xs" data-lucide="search"></i>
-        </a>
       </div>
-      <div class="mt--s">
-        <a class="linkicon" href="{{ .Permalink }}">
-          {{ i18n "collections.cta.details" }}
-          <i class="icon ml--2xs" data-lucide="arrow-right"></i>
-        </a>
+    {{ end }}
+    
+    {{ if not .mini }}
+      <div class="mt--xl text--center">
+        <div>
+          <a class="button button--secondary" href="{{ .context.Params.versions }}" target="_blank" rel="noopener">
+            {{ i18n "collections.cta.browse" }}
+            <i class="icon ml--2xs" data-lucide="search"></i>
+          </a>
+        </div>
+        <div class="mt--s">
+          <a class="linkicon" href="{{ .context.Permalink }}">
+            {{ i18n "collections.cta.details" }}
+            <i class="icon ml--2xs" data-lucide="arrow-right"></i>
+          </a>
+        </div>
       </div>
-    </div>
+    {{ end }}
   </div>
 
-  {{ with .Params.governance }}
-    {{ $sponsors := where . "roles" "intersect" (slice "sponsor") }}
-    {{ if $sponsors }}
-      <div class="card__author card__author--is-center">
-        {{ range $sponsors }}
-          {{ $entityName := default .name (index $i18n site.Language.Lang "governance" .name "name") }}
-          {{ $entityLogoUrl := default .logo (index $i18n site.Language.Lang "governance" .name "logo") }}
-          {{ $sponsorsLogo := partial "func/getLogo.html" (dict "logoUrl" $entityLogoUrl "name" $entityName) }}
-          {{ with $sponsorsLogo.error }}{{ warnf . }}{{ end }}
-          {{ with $sponsorsLogo.resource }}<img src="{{ .RelPermalink }}" alt="{{ $entityName }}">{{ end }}
-        {{ end }}
-      </div>
+  {{ if not .mini }}
+    {{ with .context.Params.governance }}
+      {{ $sponsors := where . "roles" "intersect" (slice "sponsor") }}
+      {{ if $sponsors }}
+        <div class="card__author card__author--is-center">
+          {{ range $sponsors }}
+            {{ $entityName := default .name (index $i18n site.Language.Lang "governance" .name "name") }}
+            {{ $entityLogoUrl := default .logo (index $i18n site.Language.Lang "governance" .name "logo") }}
+            {{ $sponsorsLogo := partial "func/getLogo.html" (dict "logoUrl" $entityLogoUrl "name" $entityName) }}
+            {{ with $sponsorsLogo.error }}{{ warnf . }}{{ end }}
+            {{ with $sponsorsLogo.resource }}<img src="{{ .RelPermalink }}" alt="{{ $entityName }}">{{ end }}
+          {{ end }}
+        </div>
+      {{ end }}
     {{ end }}
   {{ end }}
 

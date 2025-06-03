@@ -133,25 +133,31 @@ impact:
   reminder: Open Terms Archive enregistre publiquement les conditions d'utilisation des services en ligne dans différentes langues et différents pays plusieurs fois par jour, en améliorant leur lisibilité et en mettant en évidence leurs modifications. Il est conçue comme un outil permettant d'orienter la gouvernance des plateformes vers une plus grande responsabilité, une meilleure législation et une plus grande conformité réglementaire.
   link: En savoir plus sur notre modèle d'impact.
 stats:
-  title: L’écosystème Open Terms Archive en {{ .date }}
+  title: Open Terms Archive est un écosystème décentralisé et fédéré dont l'évolution peut être suivie à travers plusieurs métriques complémentaires, portant sur l’usage, l’utilisabilité et l’utilité du service.
   services:
-    title: "{{ .number }} services"
+    title: "{{ with .number }}{{ . }} {{ end }}services"
     desc: répartis sur plusieurs industries, langues et juridictions
   terms:
-    title: "{{ .number }} documents contractuels"
+    title: "{{ with .number }}{{ . }} {{ end }}documents contractuels"
     desc: classés selon une taxonomie d'une cinquantaine de types de termes
   analysis:
-    title: "{{ .number }} mémos"
+    title: "{{ with .number }}{{ . }} {{ end }}mémos"
     desc: publiés dans différentes langues
   contributors:
-    title: "{{ .number }} contributeurs"
+    title: "{{ with .number }}{{ . }} {{ end }}contributeurs"
     desc: qui valorisent les données produites
   reuses:
-    title: "{{ .number }} réutilisations"
+    title: "{{ with .number }}{{ . }} {{ end }}réutilisations"
     desc: qui valorisent les données produites
   collections:
-    title: "{{ .number }} collections"
+    title: "{{ with .number }}{{ . }} {{ end }}collections"
     desc: maintenues par divers partenaires
+  versions:
+    title: "Changements enregistrés"
+    desc: dans les documents contractuels
+  partners:
+    title: "{{ with .number }}{{ . }} {{ end }}partenaires"
+    desc: qui soutiennent Open Terms Archive
 alias:
   title: Open Terms Archive
   html_description: Open Terms Archive enregistre publiquement chaque version des conditions d'utilisation des services en ligne pour en permettre le contrôle démocratique.
