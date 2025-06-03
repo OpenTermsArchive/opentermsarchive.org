@@ -94,3 +94,9 @@
     en: A collaborative wiki operated by nyob.eu that collects and summarises GDPR-related decisions from Data Protection Authorities (DPAs) and courts across Europe.
     de: Ein kollaboratives Wiki von nyob.eu, das Entscheidungen von Datenschutzbehörden (DPAs) und Gerichten zum Thema DSGVO in ganz Europa sammelt und zusammenfasst.
   website: https://gdprhub.eu/
+- name: "Event Dataset: Musk Takeover of Twitter"
+  description:
+    fr: Événements horodatés et annotés décrivant la prise de contrôle de Twitter / X par Elon Musk.
+    en: Timestamped, annotated events describing the takeover of Twitter / X by Elon Musk.
+    de: Zeitlich markierte, kommentierte Ereignisse zur Übernahme von Twitter / X durch Elon Musk.
+  website: https://osf.io/x7gqy
