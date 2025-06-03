@@ -9,6 +9,19 @@
     display: inline-block;
     font-size: 2.75rem;
   }
+
+  &.hero--center {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+    & > .hero__title,
+    & > .hero__subtitle {
+      @mixin grid 10, 9;
+    }
+  }
 }
 
 .hero__title {
