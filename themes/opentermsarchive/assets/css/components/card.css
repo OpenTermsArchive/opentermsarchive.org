@@ -23,11 +23,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
-  height: 180px;
-  margin: var(--ml) auto 0 auto;
   background-color: var(--colorBlack200);
-  border-radius: 50%;
+
+  &.card__header--rounded {
+    width: 180px;
+    height: 180px;
+    margin: var(--ml) auto 0 auto;
+    border-radius: 50%;
+  }
 }
 
 .card__body {
@@ -68,6 +71,12 @@
   &.card__author--is-center {
     justify-content: center;
   }
+}
+
+.card__bottom {
+  padding: var(--pm) var(--ps);
+  margin-top: auto;
+  border-top: 1px solid var(--colorBlack200);
 }
 
 .card__author-icon {

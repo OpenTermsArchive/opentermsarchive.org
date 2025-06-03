@@ -16,7 +16,7 @@
 
   {{ with $collectionLogo.resource }}
     {{ $logo := . }}
-    <div class="card__header">
+    <div class="card__header card__header--rounded">
       <img
         src="{{ $logo.RelPermalink }}"
         {{ with $collectionLogo2x.resource }}
