@@ -40,6 +40,7 @@
     "@html-eslint/parser": "^0.23.0",
     "@stylistic/stylelint-config": "^1.0.1",
     "all-contributors-cli": "^6.26.1",
+    "chart.js": "^4.4.9",
     "cypress": "^13.7.3",
     "dotenv": "^16.4.5",
     "eslint": "^8.56.0",
