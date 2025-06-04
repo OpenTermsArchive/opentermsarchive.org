@@ -24,10 +24,10 @@ actors:
       role: Peuvent avoir un impact significatif sur la réputation d’un service, pouvant aller jusqu’à menacer son nombre d’utilisateurs.
       case_studies: La publication d’articles dans le [Canard enchaîné](https://www.lecanardenchaine.fr/technologie-sciences/49891-a-bruxelles-la-lutte-anti-musk-reste-dans-les-choux),  [Vert](https://vert.eco/articles/musk-zuckerberg-bezos-les-cinq-dernieres-dingueries-des-geants-de-la-tech-qui-montrent-leur-bascule-trumpiste) et plusieurs blogs de l’écosystème numérique a été rendue possible grâce à l’identification et la diffusion, en janvier 2025, par Open Terms Archive, des changements apportés par Meta à leurs protections contre les discours haineux. 
       icon: newspaper
-      nsm: Nombre d'articles produits
+      nsm: Nombre d'articles publiés
     - title: Associations de protection des consommateurs
       role: Peuvent établir des précédents juridiques dissuadant les plateformes d’appliquer des pratiques déloyales.
       case_studies: L'association française de protection des consommateurs [UFC-Que Choisir](https://www.quechoisir.org/) contacte une place de marché à la suite d'une mise à jour de ses conditions de vente, identifiée par Open Terms Archive, rétablissant une clause obligatoire par la loi en cinq jours.
       icon: shopping-cart
-      nsm: Nombre de plaintes et rapports produits
+      nsm: Nombre de plaintes et rapports émis
 ---
