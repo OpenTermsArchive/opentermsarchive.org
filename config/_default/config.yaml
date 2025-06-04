@@ -11,3 +11,5 @@ minify:
   tdewolff:
     html:
       keepQuotes: true
+build:
+  noJSConfigInAssets: true
