@@ -100,3 +100,9 @@
     en: Timestamped, annotated events describing the takeover of Twitter / X by Elon Musk.
     de: Zeitlich markierte, kommentierte Ereignisse zur Übernahme von Twitter / X durch Elon Musk.
   website: https://osf.io/x7gqy
+- name: COMPARE (Content Moderation Policies and Reports)
+  description:
+    fr: Informations générales sur 132 plateformes accompagnées de six liens vers des sites web où les plateformes publient des rapports sur différents aspects de leur modération de contenu, ainsi que le texte de 76 règles communautaires, dont 13 proviennent de la collection Platform Governance Archive.
+    en: General information about 132 platforms with six links to websites where platforms report on different content moderation aspects and the text of 76 community guidelines, 13 of which coming from the Platform Governance Archive collection.
+    de: Allgemeine Informationen zu 132 Plattformen mit sechs Links zu Websites, auf denen Plattformen über verschiedene Aspekte der Inhaltsmoderation berichten, sowie der Text von 76 Community-Richtlinien, von denen 13 aus der Sammlung „Platform Governance Archive“ stammen.
+  website: https://github.com/transparency-in-content-moderation/COMPARE
