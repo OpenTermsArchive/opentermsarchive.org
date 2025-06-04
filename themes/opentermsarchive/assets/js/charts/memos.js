@@ -48,7 +48,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   });
 
-  new Chart(canvas, {
+  // eslint-disable-next-line no-unused-vars
+  const memosChart = new Chart(canvas, {
     type: 'line',
     data: {
       datasets: datasets.map((dataset, index) => ({
@@ -106,9 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
             label(context) {
               const { dataset } = context;
               const value = context.raw.y;
-              const total = context.chart.data.datasets
-                .filter(d => d.stack === dataset.stack)
-                .reduce((sum, d) => sum + d.data[context.dataIndex].y, 0);
 
               return `${dataset.label}: ${value}`;
             },

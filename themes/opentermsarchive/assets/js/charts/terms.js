@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   gradient.addColorStop(0, 'rgba(75,192,192,0.3)');
   gradient.addColorStop(1, 'rgba(75,192,192,0.05)');
 
-  new Chart(canvas, {
+  // eslint-disable-next-line no-unused-vars
+  const termsChart = new Chart(canvas, {
     type: 'line',
     data: {
       datasets: [{
@@ -95,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const sortedTypes = Object.entries(dataPoint.types)
                   .sort((a, b) => b[1] - a[1]);
 
-                const mainTypes = sortedTypes.filter(([ _, count ]) => count >= 5);
-                const otherTypes = sortedTypes.filter(([ _, count ]) => count < 5);
+                const mainTypes = sortedTypes.filter(([ next, count ]) => count >= 5);
+                const otherTypes = sortedTypes.filter(([ next, count ]) => count < 5);
 
                 // Add main types
                 mainTypes.forEach(([ type, count ]) => {
@@ -105,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Add others if there are any
                 if (otherTypes.length > 0) {
-                  const othersCount = otherTypes.reduce((sum, [ _, count ]) => sum + count, 0);
+                  const othersCount = otherTypes.reduce((sum, [ next, count ]) => sum + count, 0);
 
                   label.push(`Others: ${othersCount}`);
                 }

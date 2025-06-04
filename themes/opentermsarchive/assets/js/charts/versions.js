@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   gradient.addColorStop(0, 'rgba(75,192,192,0.3)');
   gradient.addColorStop(1, 'rgba(75,192,192,0.05)');
 
-  new Chart(canvas, {
+  // eslint-disable-next-line no-unused-vars
+  const versionsChart = new Chart(canvas, {
     type: 'line',
     data: {
       datasets: [{
