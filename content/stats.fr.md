@@ -31,5 +31,3 @@ actors:
       icon: shopping-cart
       nsm: Nombre de plaintes et rapports produits
 ---
-
-La publication d’articles dans le Canard enchaîné, Vert et plusieurs blogs de l’écosystème numérique a été rendue possible grâce à l’identification et la diffusion, en janvier 2025, par Open Terms Archive, des changements apportés par Meta à leurs protections contre les discours haineux. 
