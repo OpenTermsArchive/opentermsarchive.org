@@ -8,7 +8,7 @@ layout: stats
 slug: /statistiques
 aliases: /fr/stats
 actors:
-  title: Nous avons quatre types d'utilisateurs et nous suivons la valeur produite, la <span class="fontstyle--italic">North Star Metric</span> <i class="icon icon--size-inherit" data-lucide="sparkles"></i>, pour chacun d'eux.
+  title: Nous avons quatre types d'utilisateurs et nous visons la valeur produite, la <span class="fontstyle--italic">North Star Metric</span> <i class="icon icon--size-inherit" data-lucide="sparkles"></i>, pour chacun d'eux.
   items:
     - title: Régulateurs
       role: Jouent un rôle important dans le contrôle des services numériques, ayant la capacité d’imposer des peines ou des sanctions.
