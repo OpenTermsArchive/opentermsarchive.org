@@ -2,32 +2,32 @@
 title: Statistiques
 html_description: Nombre total de documents, services, études de cas et analyses dans l'écosystème Open Terms Archive
 hero:
-  title: Statistiques
-  subtitle: "Les plateformes numériques exercent une influence majeure sur la circulation mondiale de l’information, la gestion des données personnelles et les pratiques commerciales. Cette influence repose sur des règles formulées dans des documents souvent complexes et en perpétuelle évolution : conditions d’utilisation, politiques de confidentialité, régles de la communauté, etc.<br/><br/>Open Terms Archive comble une lacune essentielle en rendant ces règles lisibles, comparables et accessibles, afin d’en suivre les évolutions et d’en comprendre les enjeux."
+  title: Statistiques d'impact
+  subtitle: "Les plateformes numériques déterminent ce que les citoyennes et citoyens peuvent dire, comment leurs achats sont faits, où leurs données sont traitées. Ces règles sont édictées dans des documents complexes et changeants : CGUs, politiques de confidentialité, standards de communauté…<br/><br/>Open Terms Archive rend ces règles lisibles et informe de leurs changements, pour garantir que nos lois sont appliquées, nos valeurs respectées et nos intérêts défendus dans l'espace numérique."
 layout: stats
 slug: /statistiques
 aliases: /fr/stats
 actors:
-  title: Nous avons quatre types d'utilisateurs et nous visons la valeur produite, la <span class="fontstyle--italic">North Star Metric</span> <i class="icon icon--size-inherit" data-lucide="sparkles"></i>, pour chacun d'eux.
+  title: Open Terms Archive est un outil de diplomatie numérique qui réunit et multiplie les capacités des quatre types d'utilisateurs capables d'influencer la gouvernance des plateformes.<br/><br/>Pour chacun d'eux, leur mode d'action est identifié et leur renforcement évalué par une <span class="fontstyle--italic">North Star Metric</span> <i class="icon icon--size-inherit" data-lucide="sparkles"></i>
   items:
     - title: Régulateurs
-      role: Jouent un rôle important dans le contrôle des services numériques, ayant la capacité d’imposer des peines ou des sanctions.
-      case_studies: La Commission européenne a [émis un rapport](https://op.europa.eu/en/publication-detail/-/publication/d6a287b5-5116-11ee-9220-01aa75ed71a1/language-en/) utilisant Open Terms Archive pour faire une [évaluation](https://ppmi.lt/news-insights/ppmi-has-completed-early-evaluation-p2b-regulation) à grande échelle de la conformité au [règlement P2B](https://eur-lex.europa.eu/eli/reg/2019/1150/oj).
+      role: Contrôlent et font respecter la loi par les services numériques.<br/>Peuvent prononcer des sanctions financières, voire des interdictions d'opération.
+      case_studies: La Commission européenne utilise Open Terms Archive pour [évaluer](https://op.europa.eu/en/publication-detail/-/publication/d6a287b5-5116-11ee-9220-01aa75ed71a1/language-en/) à grande échelle la conformité à la première réglementation horizontale au monde de l’économie des plateformes numériques, le [règlement P2B](https://eur-lex.europa.eu/eli/reg/2019/1150/oj), qui fixe des normes de transparence pour les relations commerciales de plateforme à entreprise.
       icon: gavel
       nsm: Nombre d'enquêtes accélérées
     - title: Législateurs
-      role: Déterminent les conditions des opérations commerciales dans leurs juridictions et peuvent dans certains cas avoir de l’influence au-delà de leur territoire.
-      case_studies: Le [TLDR Act](https://www.lifewire.com/the-tldr-act-could-help-you-make-sense-of-terms-of-service-agreements-5216643), projet de loi américain visant à imposer la publication des résumés des conditions d’utilisation dans des formats lisibles par les machines, a cité Open Terms Archive en exemple.
+      role: Déterminent les conditions d’opération des services dans leurs juridictions.<br/>L’UE et les USA peuvent même faire évoluer les pratiques mondiales.
+      case_studies: Des membres du Congrès américain portent le [TLDR Act](https://www.lifewire.com/the-tldr-act-could-help-you-make-sense-of-terms-of-service-agreements-5216643), projet de loi bipartisan édictant des règles de transparence des conditions d’utilisation des services en ligne. La faisabilité d’imposer des formats lisibles par les machines a été déterminée en amont des débats parlementaires avec l’expertise et les données d’Open Terms Archive.
       icon: shield-half
       nsm: Nombre de projets de loi et études d'impact facilités
     - title: Médias et presse
-      role: Peuvent avoir un impact significatif sur la réputation d’un service, pouvant aller jusqu’à menacer son nombre d’utilisateurs.
-      case_studies: La publication d’articles dans le [Canard enchaîné](https://www.lecanardenchaine.fr/technologie-sciences/49891-a-bruxelles-la-lutte-anti-musk-reste-dans-les-choux),  [Vert](https://vert.eco/articles/musk-zuckerberg-bezos-les-cinq-dernieres-dingueries-des-geants-de-la-tech-qui-montrent-leur-bascule-trumpiste) et plusieurs blogs de l’écosystème numérique a été rendue possible grâce à l’identification et la diffusion, en janvier 2025, par Open Terms Archive, des changements apportés par Meta à leurs protections contre les discours haineux. 
+      role: Impactent la réputation des services numériques.<br>Peuvent démontrer la loyauté comme menacer le nombre d’utilisateurs.
+      case_studies: Le [Canard Enchaîné](https://www.lecanardenchaine.fr/technologie-sciences/49891-a-bruxelles-la-lutte-anti-musk-reste-dans-les-choux), [Vert.eco](https://vert.eco/articles/musk-zuckerberg-bezos-les-cinq-dernieres-dingueries-des-geants-de-la-tech-qui-montrent-leur-bascule-trumpiste) et d’autres médias ont publié des articles révélant l’étendue de la réduction des protections contre les discours de haine effectuée par Meta en janvier 2025, et détectée et [analysée](https://opentermsarchive.org/fr/memos/meta-retire-des-protections-contre-les-discours-haineux/) par Open Terms Archive quelques heures après une prise de parole de son PDG.
       icon: newspaper
       nsm: Nombre d'articles publiés
-    - title: Associations de protection des consommateurs
-      role: Peuvent établir des précédents juridiques dissuadant les plateformes d’appliquer des pratiques déloyales.
-      case_studies: L’association française [UFC-Que Choisir](https://www.quechoisir.org/) a contacté un service de vente en ligne après avoir détecté, grâce à Open Terms Archive, la suppression d’une clause obligatoire dans ses conditions de vente, entraînant son rétablissement en cinq jours.
+    - title: Associations de défense des consommateurs
+      role: Établissent une jurisprudence par des plaintes et des actions de groupe.<br/>Mobilisent leur base pour faire pression sur les fournisseurs de services.
+      case_studies: L’association française [UFC-Que Choisir](https://www.quechoisir.org/) a pu détecter grâce à Open Terms Archive la suppression d’une clause obligatoire dans les conditions de vente d’un service en ligne majeur, menant à une prise de contact par son directeur des affaires juridiques 48 heures après le changement et le rétablissement de la clause en moins de cinq jours.
       icon: shopping-cart
       nsm: Nombre de plaintes et rapports émis
 ---

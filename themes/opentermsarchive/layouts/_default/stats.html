@@ -42,7 +42,7 @@
                 <i class="icon icon--primary icon--big icon--stroke-thin" data-lucide="{{ .icon }}"></i>
               </div>
               <h4>{{ .title }}</h4>
-              <p class="mt--xs text--light fontstyle--italic">{{ .role }}</p>
+              <p class="mt--xs text--light fontstyle--italic">{{ .role | safeHTML }}</p>
               <div class="mt--2xl h6 h6--thin">{{ .case_studies | markdownify }}</div>
             </div>
             <div class="card__bottom">
