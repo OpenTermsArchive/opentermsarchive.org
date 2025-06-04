@@ -145,10 +145,10 @@ stats:
     desc: publiés dans différentes langues
   contributors:
     title: "{{ with .number }}{{ . }} {{ end }}contributeurs"
-    desc: qui valorisent les données produites
+    desc: impliqués dans le projet
   reuses:
     title: "{{ with .number }}{{ . }} {{ end }}réutilisations"
-    desc: qui valorisent les données produites
+    desc: valorisant les données produites
   collections:
     title: "{{ with .number }}{{ . }} {{ end }}collections"
     desc: maintenues par divers partenaires
@@ -157,7 +157,7 @@ stats:
     desc: dans les documents contractuels
   partners:
     title: "{{ with .number }}{{ . }} {{ end }}partenaires"
-    desc: qui soutiennent Open Terms Archive
+    desc: soutenant Open Terms Archive
 alias:
   title: Open Terms Archive
   html_description: Open Terms Archive enregistre publiquement chaque version des conditions d'utilisation des services en ligne pour en permettre le contrôle démocratique.
