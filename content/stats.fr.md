@@ -27,7 +27,7 @@ actors:
       nsm: Nombre d'articles publiés
     - title: Associations de protection des consommateurs
       role: Peuvent établir des précédents juridiques dissuadant les plateformes d’appliquer des pratiques déloyales.
-      case_studies: L'association française de protection des consommateurs [UFC-Que Choisir](https://www.quechoisir.org/) contacte une place de marché à la suite d'une mise à jour de ses conditions de vente, identifiée par Open Terms Archive, rétablissant une clause obligatoire par la loi en cinq jours.
+      case_studies: L’association française [UFC-Que Choisir](https://www.quechoisir.org/) a contacté une place de marché à la suite d’une mise à jour de ses conditions de vente, repérée grâce à Open Terms Archive, qui a rétabli en cinq jours une clause obligatoire prévue par la loi.
       icon: shopping-cart
       nsm: Nombre de plaintes et rapports émis
 ---
