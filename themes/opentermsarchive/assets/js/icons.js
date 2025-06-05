@@ -31,6 +31,11 @@ import {
   Activity,
   Image,
   Calendar,
+  ShieldHalf,
+  ShoppingCart,
+  Gavel,
+  Newspaper,
+  Sparkles,
   createIcons,
 } from 'lucide';
 
@@ -68,6 +73,11 @@ createIcons({
     Activity,
     Image,
     Calendar,
+    ShieldHalf,
+    ShoppingCart,
+    Gavel,
+    Newspaper,
+    Sparkles,
   },
   attrs: { 'aria-hidden': true },
 });

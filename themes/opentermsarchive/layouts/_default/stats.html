@@ -26,41 +26,186 @@
     {{ $totalReuses = add $totalReuses 1 }}
   {{ end }}
 
-  <div class="container container--109">
-    <div class="textcontent">
-      {{ .Content }}
+  {{ partial "hero.html" (dict "title" .Params.hero.title "subtitle" (.Params.hero.subtitle | safeHTML) "class" "hero--center" "dark" true) }}
+
+  <div class="container container--wide container--has-no-padding-y text--center">
+    <div class="container container--1211 container--flex container--has-no-padding-x container--has-padding">
+      <div class="cardlist">
+        <div class="cardlist__header cardlist__header--is-center">
+          <h3 class="cardlist__subtitle h3--thin">{{ .Params.actors.title | safeHTML }}</h3>
+        </div>
+        <div class="cardlist__items cardlist__items--is-big">
+        {{ range .Params.actors.items }}
+          <div class="card card--is-big">
+            <div class="card__body">
+              <div class="icon__circle-wrapper icon__circle-wrapper--graylight icon__circle-wrapper--big mb--m mt--l">
+                <i class="icon icon--primary icon--big icon--stroke-thin" data-lucide="{{ .icon }}"></i>
+              </div>
+              <h4>{{ .title }}</h4>
+              <p class="mt--xs text--light fontstyle--italic">{{ .role | safeHTML }}</p>
+              <div class="mt--2xl h6 h6--thin">{{ .case_studies | markdownify }}</div>
+            </div>
+            <div class="card__bottom">
+              <div class="badge badge--nsm badge--has-icon">
+                <i class="icon" data-lucide="sparkles"></i>
+                <span>{{ .nsm }}</span>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+        </div>
+      </div>
     </div>
   </div>
-  <div class="container container--wide container--has-no-padding-top">
-    <div class="container container--1211 container--has-no-padding-x container--has-no-padding-y">
-      <div class="buttonblocklist">
-        <div class="buttonblocklist__header">
-          <h2 class="buttonblocklist__title">{{ i18n "stats.title" (dict "date" (now | time.Format "January 2006") ) }}</h2>
+
+  <div class="container container--wide container--has-no-padding-y container--is-gray">
+    <div class="container container--1110 container--has-no-padding-bottom">
+      <h3 class="h3--thin">{{ i18n "stats.title" }}</h3>
+    </div>
+  </div>
+
+  {{ $servicesTitle := i18n "stats.services.title" | strings.FirstUpper }}
+  {{ $servicesDescription := i18n "stats.services.desc" }}
+  <div class="container container--wide container--has-no-padding-y container--is-gray">
+    <div class="container container--1110 container--has-no-padding-bottom">
+      <h4>{{ $servicesTitle }}</h4>
+      <h5 class="h5--thin">{{ $servicesDescription }}</h5>
+      <div class="stats mt--xl">
+        <canvas id="servicesChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  {{ $termsTitle := i18n "stats.terms.title" | strings.FirstUpper }}
+  {{ $termsDescription := i18n "stats.terms.desc" }}
+  <div class="container container--wide container--has-no-padding-y container--is-gray">
+    <div class="container container--1110 container--has-no-padding-bottom">
+      <h4>{{ $termsTitle }}</h4>
+      <h5 class="h5--thin">{{ $termsDescription }}</h5>
+      <div class="stats mt--xl">
+        <canvas id="termsChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  {{ $versionsTitle := i18n "stats.versions.title" | strings.FirstUpper }}
+  {{ $versionsDescription := i18n "stats.versions.desc" }}
+  <div class="container container--wide container--has-no-padding-y container--is-gray">
+    <div class="container container--1110 container--has-no-padding-bottom">
+      <h4>{{ $versionsTitle }}</h4>
+      <h5 class="h5--thin">{{ $versionsDescription }}</h5>
+      <div class="stats mt--xl">
+        <canvas id="versionsChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  {{ $analysisTitle := i18n "stats.analysis.title" | strings.FirstUpper }}
+  {{ $analysisDescription := i18n "stats.analysis.desc" }}
+  <div class="container container--wide container--has-no-padding-y container--is-gray">
+    <div class="container container--1110 container--has-no-padding-bottom">
+      <h4>{{ $analysisTitle }}</h4>
+      <h5 class="h5--thin">{{ $analysisDescription }}</h5>
+      <div class="stats mt--xl">
+        <canvas id="memosChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  {{ $collectionsTitle := i18n "stats.collections.title" (dict "number" $totalCollections) }}
+  {{ $collectionsDescription := i18n "stats.collections.desc" }}
+  <div class="container container--wide container--has-no-padding-y container--is-gray text--center">
+    <div class="container container--1110 container--has-no-padding-bottom ">
+      <h4>{{ $collectionsTitle }}</h4>
+      <h5 class="h5--thin">{{ $collectionsDescription }}</h5>
+      <div class="collections cardlist">
+        <div class="cardlist__items mt--xl">
+          {{ range where site.RegularPages.ByWeight "Section" "collections" }}
+            {{ partial "collection-card.html" (dict "context" . "mini" true) }}
+          {{ end }}
         </div>
-        <div class="buttonblocklist__items">
-          {{ $servicesTitle := i18n "stats.services.title" (dict "number" $totalServices) }}
-          {{ $servicesDescription := i18n "stats.services.desc" }}
-          {{ partial "buttonblock.html" (dict "title" $servicesTitle "description" $servicesDescription "icon" "globe")}}
+      </div>
+    </div>
+  </div>
 
-          {{ $termsTitle := i18n "stats.terms.title" (dict "number" $totalTerms) }}
-          {{ $termsDescription := i18n "stats.terms.desc" }}
-          {{ partial "buttonblock.html" (dict "title" $termsTitle "description" $termsDescription "icon" "file")}}
+  {{ $reusesTitle := i18n "stats.reuses.title" (dict "number" $totalReuses) }}
+  {{ $reusesDescription := i18n "stats.reuses.desc" }}
+  <div class="container container--wide container--has-no-padding-y container--is-gray">
+    <div class="container container--1110 container--has-no-padding-bottom text--center">
+      <h4>{{ $reusesTitle }}</h4>
+      <h5 class="h5--thin">{{ $reusesDescription }}</h5>
+      {{ $reuses := partial "func/getReuses.html" . }}
+      <div class="collections cardlist">
+        <div class="cardlist__items mt--xl">
+          {{ range $reuses }}
+            {{ partial "reuse.html" (dict "context" . "mini" true) }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
 
-          {{ $analysisTitle := i18n "stats.analysis.title" (dict "number" $totalMemos) }}
-          {{ $analysisDescription := i18n "stats.analysis.desc" }}
-          {{ partial "buttonblock.html" (dict "title" $analysisTitle "description" $analysisDescription "icon" "eye")}}
+  {{ $uniqueSponsors := slice }}
+  {{ range where site.RegularPages.ByWeight "Section" "collections" }}
+    {{ $i18n := .Params.i18n }}
+    {{ with .Params.governance }}
+      {{ $sponsors := where . "roles" "intersect" (slice "sponsor") }}
+      {{ range $sponsors }}
+        {{ $entityName := default .name (index $i18n site.Language.Lang "governance" .name "name") }}
+        {{ if not (in $uniqueSponsors $entityName) }}
+          {{ $uniqueSponsors = $uniqueSponsors | append $entityName }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $partnersTitle := i18n "stats.partners.title" (dict "number" (len $uniqueSponsors)) }}
+  {{ $partnersDescription := i18n "stats.partners.desc" }}
+  <div class="container container--wide container--has-no-padding-y container--is-gray text--center">
+    <div class="container container--1110 container--has-no-padding-bottom">
+      <h4>{{ $partnersTitle }}</h4>
+      <h5 class="h5--thin">{{ $partnersDescription }}</h5>
+      <div class="collections cardlist">
+        <div class="cardlist__items mt--xl">
+          {{ $uniqueSponsors := slice }}
+          {{ range where site.RegularPages.ByWeight "Section" "collections" }}
+            {{ $i18n := .Params.i18n }}
+            {{ with .Params.governance }}
+              {{ $sponsors := where . "roles" "intersect" (slice "sponsor") }}
+              {{ range $sponsors }}
+                {{ $entityName := default .name (index $i18n site.Language.Lang "governance" .name "name") }}
+                {{ if not (in $uniqueSponsors $entityName) }}
+                  {{ $uniqueSponsors = $uniqueSponsors | append $entityName }}
+                  <div class="card card--is-white card--center">
+                    <div class="card__header card__header--rounded">
+                      {{ $entityLogoUrl := default .logo (index $i18n site.Language.Lang "governance" .name "logo") }}
+                      {{ $sponsorsLogo := partial "func/getLogo.html" (dict "logoUrl" $entityLogoUrl "name" $entityName) }}
+                      {{ with $sponsorsLogo.error }}{{ warnf . }}{{ end }}
+                      {{ with $sponsorsLogo.resource }}<img src="{{ (.Fit "108x108").RelPermalink }}" alt="{{ $entityName }}">{{ end }}
+                    </div>
+                    <div class="card__body">
+                      <h4 class="card__title">{{ $entityName }}</h4>
+                    </div>
+                  </div>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
 
-          {{ $contributorsTitle := i18n "stats.contributors.title" (dict "number" $totalContributors) }}
-          {{ $contributorsDescription := i18n "stats.contributors.desc" }}
-          {{ partial "buttonblock.html" (dict "title" $contributorsTitle "description" $contributorsDescription "icon" "users")}}
-
-          {{ $reusesTitle := i18n "stats.reuses.title" (dict "number" $totalReuses) }}
-          {{ $reusesDescription := i18n "stats.reuses.desc" }}
-          {{ partial "buttonblock.html" (dict "title" $reusesTitle "description" $reusesDescription "icon" "layers")}}
-
-          {{ $collectionsTitle := i18n "stats.collections.title" (dict "number" $totalCollections) }}
-          {{ $collectionsDescription := i18n "stats.collections.desc" }}
-          {{ partial "buttonblock.html" (dict "title" $collectionsTitle "description" $collectionsDescription "icon" "flag")}}
+  {{ $contributorsTitle := i18n "stats.contributors.title" (dict "number" $totalContributors) }}
+  {{ $contributorsDescription := i18n "stats.contributors.desc" }}
+  <div class="container container--wide container--has-no-padding-top container--is-gray">
+    <div class="container container--1110 text--center">
+      <h4>{{ $contributorsTitle }}</h4>
+      <h5 class="h5--thin">{{ $contributorsDescription }}</h5>
+      <div class="contributors">
+        <div class="contributors__items">
+          {{ range $contributor := $contributors }}
+            {{ partial "contributor.html" (dict "contributor" $contributor ) }}
+          {{ end }}
         </div>
       </div>
     </div>

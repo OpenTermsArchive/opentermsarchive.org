@@ -133,25 +133,31 @@ impact:
   reminder: Open Terms Archive enregistre publiquement les conditions d'utilisation des services en ligne dans différentes langues et différents pays plusieurs fois par jour, en améliorant leur lisibilité et en mettant en évidence leurs modifications. Il est conçue comme un outil permettant d'orienter la gouvernance des plateformes vers une plus grande responsabilité, une meilleure législation et une plus grande conformité réglementaire.
   link: En savoir plus sur notre modèle d'impact.
 stats:
-  title: L’écosystème Open Terms Archive en {{ .date }}
+  title: Le déploiement public d’Open Terms Archive est suivi par plusieurs métriques. En plus de cet écosystème décentralisé et fédéré, des collections privées dédiées par exemple à des enquêtes ciblées peuvent exister.
   services:
-    title: "{{ .number }} services"
+    title: "{{ with .number }}{{ . }} {{ end }}services ciblés"
     desc: répartis sur plusieurs industries, langues et juridictions
   terms:
-    title: "{{ .number }} documents contractuels"
+    title: "{{ with .number }}{{ . }} {{ end }}documents contractuels suivis"
     desc: classés selon une taxonomie d'une cinquantaine de types de termes
   analysis:
-    title: "{{ .number }} mémos"
-    desc: publiés dans différentes langues
+    title: "{{ with .number }}{{ . }} {{ end }}mémos"
+    desc: publiés dans différentes langues pour rendre compréhensibles les changements
   contributors:
-    title: "{{ .number }} contributeurs"
-    desc: qui valorisent les données produites
+    title: "{{ with .number }}{{ . }} {{ end }}contributrices et contributeurs"
+    desc: qui ajoutent des services, améliorent le moteur, produisent des analyses
   reuses:
-    title: "{{ .number }} réutilisations"
+    title: "{{ with .number }}{{ . }} {{ end }}réutilisations"
     desc: qui valorisent les données produites
   collections:
-    title: "{{ .number }} collections"
-    desc: maintenues par divers partenaires
+    title: "{{ with .number }}{{ . }} {{ end }}collections"
+    desc: opérées et maintenues par différents partenaires
+  versions:
+    title: "Changements détectés"
+    desc: rendus lisibles ligne par ligne et notifiés aux partenaires
+  partners:
+    title: "{{ with .number }}{{ . }} {{ end }}partenaires"
+    desc: qui utilisent et soutiennent Open Terms Archive
 alias:
   title: Open Terms Archive
   html_description: Open Terms Archive enregistre publiquement chaque version des conditions d'utilisation des services en ligne pour en permettre le contrôle démocratique.

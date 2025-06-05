@@ -3,12 +3,19 @@
   padding: var(--p2xs) var(--ps);
   font-size: 0.75em;
   border-radius: 2em;
+
+  &.badge--has-icon {
+    gap: var(--m2xs);
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .badge--host,
 .badge--sponsor,
 .badge--administrator,
 .badge--curator,
+.badge--nsm,
 .badge--maintainer {
   color: var(--colorBlack900);
   background-color: var(--colorPrimary300);

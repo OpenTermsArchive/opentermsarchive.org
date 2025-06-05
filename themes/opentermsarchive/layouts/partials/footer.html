@@ -64,6 +64,11 @@
 {{ $headerJs := resources.Get "js/header.js" | js.Build }}
 <script src="{{ $headerJs.RelPermalink }}"></script>
 
+{{ if eq .Layout "stats" }}
+  {{ $chartJs := resources.Get "js/charts/index.js" | js.Build }}
+  <script src="{{ $chartJs.RelPermalink }}"></script>
+{{ end }}
+
 <script>
   var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
