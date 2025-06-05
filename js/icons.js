@@ -206,6 +206,19 @@
     ]
   ];
 
+  // node_modules/lucide/dist/esm/icons/gavel.js
+  var Gavel = [
+    "svg",
+    defaultAttributes,
+    [
+      ["path", { d: "m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8" }],
+      ["path", { d: "m16 16 6-6" }],
+      ["path", { d: "m8 8 6-6" }],
+      ["path", { d: "m9 7 8 8" }],
+      ["path", { d: "m21 11-8-8" }]
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/globe.js
   var Globe = [
     "svg",
@@ -326,6 +339,23 @@
     [["path", { d: "M7.9 20A9 9 0 1 0 4 16.1L2 22Z" }]]
   ];
 
+  // node_modules/lucide/dist/esm/icons/newspaper.js
+  var Newspaper = [
+    "svg",
+    defaultAttributes,
+    [
+      [
+        "path",
+        {
+          d: "M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"
+        }
+      ],
+      ["path", { d: "M18 14h-8" }],
+      ["path", { d: "M15 18h-5" }],
+      ["path", { d: "M10 6h8v4h-8V6Z" }]
+    ]
+  ];
+
   // node_modules/lucide/dist/esm/icons/power-off.js
   var PowerOff = [
     "svg",
@@ -355,6 +385,53 @@
     [
       ["circle", { cx: "11", cy: "11", r: "8" }],
       ["path", { d: "m21 21-4.3-4.3" }]
+    ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/shield-half.js
+  var ShieldHalf = [
+    "svg",
+    defaultAttributes,
+    [
+      [
+        "path",
+        {
+          d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+        }
+      ],
+      ["path", { d: "M12 22V2" }]
+    ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/shopping-cart.js
+  var ShoppingCart = [
+    "svg",
+    defaultAttributes,
+    [
+      ["circle", { cx: "8", cy: "21", r: "1" }],
+      ["circle", { cx: "19", cy: "21", r: "1" }],
+      [
+        "path",
+        { d: "M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" }
+      ]
+    ]
+  ];
+
+  // node_modules/lucide/dist/esm/icons/sparkles.js
+  var Sparkles = [
+    "svg",
+    defaultAttributes,
+    [
+      [
+        "path",
+        {
+          d: "m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"
+        }
+      ],
+      ["path", { d: "M5 3v4" }],
+      ["path", { d: "M19 17v4" }],
+      ["path", { d: "M3 5h4" }],
+      ["path", { d: "M17 19h4" }]
     ]
   ];
 
@@ -475,7 +552,12 @@
       Clock,
       Activity,
       Image,
-      Calendar
+      Calendar,
+      ShieldHalf,
+      ShoppingCart,
+      Gavel,
+      Newspaper,
+      Sparkles
     },
     attrs: { "aria-hidden": true }
   });
@@ -499,6 +581,7 @@ lucide/dist/esm/icons/file-warning.js:
 lucide/dist/esm/icons/file.js:
 lucide/dist/esm/icons/flag.js:
 lucide/dist/esm/icons/folder.js:
+lucide/dist/esm/icons/gavel.js:
 lucide/dist/esm/icons/globe.js:
 lucide/dist/esm/icons/hand-heart.js:
 lucide/dist/esm/icons/hash.js:
@@ -509,9 +592,13 @@ lucide/dist/esm/icons/map-pin.js:
 lucide/dist/esm/icons/map.js:
 lucide/dist/esm/icons/megaphone.js:
 lucide/dist/esm/icons/message-circle.js:
+lucide/dist/esm/icons/newspaper.js:
 lucide/dist/esm/icons/power-off.js:
 lucide/dist/esm/icons/power.js:
 lucide/dist/esm/icons/search.js:
+lucide/dist/esm/icons/shield-half.js:
+lucide/dist/esm/icons/shopping-cart.js:
+lucide/dist/esm/icons/sparkles.js:
 lucide/dist/esm/icons/square-pen.js:
 lucide/dist/esm/icons/user.js:
 lucide/dist/esm/icons/users.js:
