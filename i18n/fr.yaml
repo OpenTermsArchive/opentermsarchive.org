@@ -153,7 +153,7 @@ stats:
     title: "{{ with .number }}{{ . }} {{ end }}collections"
     desc: opérées et maintenues par différents partenaires
   versions:
-    title: "Changements détectés"
+    title: "{{ with .number }}{{ . }} {{ end }}changements détectés"
     desc: rendus lisibles ligne par ligne et notifiés aux partenaires
   partners:
     title: "{{ with .number }}{{ . }} {{ end }}partenaires"

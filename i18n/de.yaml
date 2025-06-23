@@ -133,25 +133,31 @@ impact:
   reminder: Open Terms Archive publicly records the terms of services of online services in different languages and countries several times a day, increasing their readability and highlighting their changes. It is designed as a tool to steer platform governance towards increased accountability, improved legislation and stronger regulatory compliance.
   link: Read more on our impact model.
 stats:
-  title: As of {{ .date }}
+  title: The public deployment of Open Terms Archive is tracked by several metrics. In addition to this decentralized and federated ecosystem, private collections dedicated to targeted investigations can exist.
   services:
-    title: "{{ .number }} services"
-    desc: spread over industries, languages and jurisdictions
+    title: "{{ with .number }}{{ . }} {{ end }}targeted services"
+    desc: spread across multiple industries, languages and jurisdictions
   terms:
-    title: "{{ .number }} terms"
-    desc: classified along a taxonomy of over fifty terms types
+    title: "{{ with .number }}{{ . }} {{ end }}contractual documents tracked"
+    desc: classified according to a taxonomy of about fifty types of terms
   analysis:
-    title: "{{ .number }} memos"
-    desc: published in different languages
+    title: "{{ with .number }}{{ . }} {{ end }}memos"
+    desc: published in different languages to make changes understandable
   contributors:
-    title: "{{ .number }} contributors"
-    desc: that allow Open Terms Archive to exist
+    title: "{{ with .number }}{{ . }} {{ end }}contributors"
+    desc: who add services, improve the engine, produce analyses
   reuses:
-    title: "{{ .number }} reuses"
-    desc: that illustrate the value of this data
+    title: "{{ with .number }}{{ . }} {{ end }}reuses"
+    desc: that enhance the produced data
   collections:
-    title: "{{ .number }} collections"
-    desc: maintained by various partners
+    title: "{{ with .number }}{{ . }} {{ end }}collections"
+    desc: operated and maintained by different partners
+  versions:
+    title: "{{ with .number }}{{ . }} {{ end }}detected changes"
+    desc: made readable line by line and notified to partners
+  partners:
+    title: "{{ with .number }}{{ . }} {{ end }}partners"
+    desc: who use and support Open Terms Archive
 alias:
   title: Open Terms Archive
   html_description: Open Terms Archive publicly records every version of the terms of digital services to enable democratic oversight.
