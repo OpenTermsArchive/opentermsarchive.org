@@ -1,11 +1,12 @@
 {{ $template := default "single" .template }}
+{{ $title := .memo.Title }}
 
 <article class="memo{{ with .class }} {{ . }}{{ end }}">
   <header>
     {{ if eq $template "list" }}<h4 class="memo__title">
-<a href="{{ .memo.RelPermalink }}">{{ .memo.Title }}</a>
+<a href="{{ .memo.RelPermalink }}">{{ $title }}</a>
 </h4>{{ end }}
-    {{ if eq $template "single" }}<h1 class="memo__title">{{ .memo.Title }}</h1>{{ end }}
+    {{ if eq $template "single" }}<h1 class="memo__title">{{ $title }}</h1>{{ end }}
 
     {{ if eq $template "list" }}<h6 class="memo__subtitle h6--ultrathin">{{ end }}
     {{ if eq $template "single" }}<h4 class="memo__subtitle h4--ultrathin">{{ end }}
@@ -27,6 +28,8 @@
           <div class="memo__author text--light fontstyle--italic">
             {{ i18n "memos.author" (dict "profile" .profile "name" .name) | safeHTML }}
           </div>
+        {{ else }}
+          {{ warnf "Author %s of the memo %s not found in contributors" . $title }}
         {{ end }}
       {{ end }}
     {{ end }}
