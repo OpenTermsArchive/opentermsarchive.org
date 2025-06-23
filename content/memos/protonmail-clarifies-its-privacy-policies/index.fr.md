@@ -5,7 +5,7 @@ service: "Protonmail"
 terms_types: ["Privacy Policy"]
 dates: ["2021-09-06"]
 aliases: /fr/etudes-de-cas/protonmail-clarifie-ses-politiques-de-confidentialite/
-author: Elsa Trujilo
+author: Elsa Trujillo
 related_collections: ["contrib"]
 ---
 
