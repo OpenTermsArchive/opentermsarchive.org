@@ -5,7 +5,7 @@ service: "Pinterest"
 terms_types: ["Privacy Policy"]
 dates: ["2020-07-21"]
 aliases: /fr/etudes-de-cas/pinterest-retire-les-mentions-du-privacy-shield-sans-mettre-a-jour-la-date-de-modification/
-author: Elsa Trujilo
+author: Elsa Trujillo
 related_collections: ["contrib"]
 ---
 

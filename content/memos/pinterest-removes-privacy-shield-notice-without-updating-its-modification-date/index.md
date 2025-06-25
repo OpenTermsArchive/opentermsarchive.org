@@ -7,7 +7,7 @@ dates: ["2020-07-21"]
 aliases:
   - /case-studies/pinterest-removes-privacy-shield-notice-without-updating-its-modification-date/
   - /en/case-studies/pinterest-removes-privacy-shield-notice-without-updating-its-modification-date/
-author: Elsa Trujilo
+author: Elsa Trujillo
 related_collections: ["contrib"]
 ---
 
