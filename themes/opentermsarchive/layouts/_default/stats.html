@@ -27,7 +27,6 @@
     {{ $totalReuses = add $totalReuses 1 }}
   {{ end }}
 
-
   {{ partial "hero.html" (dict "title" .Params.hero.title "subtitle" (.Params.hero.subtitle | safeHTML) "class" "hero--center" "dark" true) }}
 
   <div class="container container--wide container--has-no-padding-y text--center">
