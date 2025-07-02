@@ -5,7 +5,7 @@ service: "Alibaba"
 terms_types: ["Terms of use"]
 dates: ["2020-06-23"]
 aliases: /fr/etudes-de-cas/alibaba-ajoute-les-epidemies-a-ses-clauses-dexclusion-de-responsabilite/
-author: Elsa Trujilo
+author: Elsa Trujillo
 related_collections: ["contrib"]
 ---
 

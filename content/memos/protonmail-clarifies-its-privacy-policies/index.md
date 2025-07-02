@@ -7,7 +7,7 @@ dates: ["2021-09-06"]
 aliases:
   - /case-studies/protonmail-clarifies-its-privacy-policies/
   - /en/case-studies/protonmail-clarifies-its-privacy-policies/
-author: Elsa Trujilo
+author: Elsa Trujillo
 related_collections: ["contrib"]
 ---
 

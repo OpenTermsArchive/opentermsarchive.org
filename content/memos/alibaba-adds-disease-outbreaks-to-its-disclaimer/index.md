@@ -7,7 +7,7 @@ dates: ["2020-06-23"]
 aliases:
   - /case-studies/alibaba-adds-disease-outbreaks-to-its-disclaimer/
   - /en/case-studies/alibaba-adds-disease-outbreaks-to-its-disclaimer/
-author: Elsa Trujilo
+author: Elsa Trujillo
 related_collections: ["contrib"]
 ---
 
