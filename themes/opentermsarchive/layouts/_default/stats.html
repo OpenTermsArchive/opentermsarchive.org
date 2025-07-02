@@ -65,7 +65,7 @@
     </div>
   </div>
 
-  {{ $servicesTitle := i18n "stats.services.title" (dict "number" $totalServices) | strings.FirstUpper }}
+  {{ $servicesTitle := i18n "stats.services.title" | strings.FirstUpper }}
   {{ $servicesDescription := i18n "stats.services.desc" }}
   <div class="container container--wide container--has-no-padding-y container--is-gray">
     <div class="container container--1110 container--has-no-padding-bottom">
@@ -77,7 +77,7 @@
     </div>
   </div>
 
-  {{ $termsTitle := i18n "stats.terms.title" (dict "number" $totalTerms) | strings.FirstUpper }}
+  {{ $termsTitle := i18n "stats.terms.title" | strings.FirstUpper }}
   {{ $termsDescription := i18n "stats.terms.desc" }}
   <div class="container container--wide container--has-no-padding-y container--is-gray">
     <div class="container container--1110 container--has-no-padding-bottom">
@@ -89,7 +89,7 @@
     </div>
   </div>
 
-  {{ $versionsTitle := i18n "stats.versions.title" (dict "number" $totalVersions) | strings.FirstUpper }}
+  {{ $versionsTitle := i18n "stats.versions.title" | strings.FirstUpper }}
   {{ $versionsDescription := i18n "stats.versions.desc" }}
   <div class="container container--wide container--has-no-padding-y container--is-gray">
     <div class="container container--1110 container--has-no-padding-bottom">
@@ -101,7 +101,7 @@
     </div>
   </div>
 
-  {{ $analysisTitle := i18n "stats.analysis.title" (dict "number" $totalMemos) | strings.FirstUpper }}
+  {{ $analysisTitle := i18n "stats.analysis.title" | strings.FirstUpper }}
   {{ $analysisDescription := i18n "stats.analysis.desc" }}
   <div class="container container--wide container--has-no-padding-y container--is-gray">
     <div class="container container--1110 container--has-no-padding-bottom">
@@ -113,7 +113,7 @@
     </div>
   </div>
 
-  {{ $collectionsTitle := i18n "stats.collections.title" (dict "number" $totalCollections) }}
+  {{ $collectionsTitle := i18n "stats.collections.title" | strings.FirstUpper }}
   {{ $collectionsDescription := i18n "stats.collections.desc" }}
   <div class="container container--wide container--has-no-padding-y container--is-gray text--center">
     <div class="container container--1110 container--has-no-padding-bottom ">
@@ -129,7 +129,7 @@
     </div>
   </div>
 
-  {{ $reusesTitle := i18n "stats.reuses.title" (dict "number" $totalReuses) }}
+  {{ $reusesTitle := i18n "stats.reuses.title" | strings.FirstUpper }}
   {{ $reusesDescription := i18n "stats.reuses.desc" }}
   <div class="container container--wide container--has-no-padding-y container--is-gray">
     <div class="container container--1110 container--has-no-padding-bottom text--center">
@@ -159,7 +159,7 @@
       {{ end }}
     {{ end }}
   {{ end }}
-  {{ $partnersTitle := i18n "stats.partners.title" (dict "number" (len $uniqueSponsors)) }}
+  {{ $partnersTitle := i18n "stats.partners.title" | strings.FirstUpper }}
   {{ $partnersDescription := i18n "stats.partners.desc" }}
   <div class="container container--wide container--has-no-padding-y container--is-gray text--center">
     <div class="container container--1110 container--has-no-padding-bottom">
@@ -196,7 +196,7 @@
     </div>
   </div>
 
-  {{ $contributorsTitle := i18n "stats.contributors.title" (dict "number" $totalContributors) }}
+  {{ $contributorsTitle := i18n "stats.contributors.title" | strings.FirstUpper }}
   {{ $contributorsDescription := i18n "stats.contributors.desc" }}
   <div class="container container--wide container--has-no-padding-top container--is-gray">
     <div class="container container--1110 text--center">
