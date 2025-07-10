@@ -70,7 +70,7 @@
     },
     "totalServices": 33,
     "totalTerms": 83,
-    "engineVersion": "6.0.0",
+    "engineVersion": "6.0.1",
     "endpoint": "http://51.77.110.109/collection-api/v1/"
   },
   {
@@ -211,7 +211,7 @@
     },
     "totalServices": 117,
     "totalTerms": 245,
-    "engineVersion": "5.3.1",
+    "engineVersion": "6.0.1",
     "endpoint": "http://198.244.142.9/collection-api/v1/"
   },
   {
@@ -482,7 +482,7 @@
     },
     "totalServices": 26,
     "totalTerms": 67,
-    "engineVersion": "5.3.1",
+    "engineVersion": "6.0.1",
     "endpoint": "http://vps-99ae1d89.vps.ovh.net/collection-api/v1/"
   },
   {
@@ -552,6 +552,7 @@
     },
     "totalServices": 357,
     "totalTerms": 752,
+    "engineVersion": "6.0.1",
     "endpoint": "http://51.89.224.102/collection-api/v1/"
   },
   {
@@ -687,7 +688,7 @@
     },
     "totalServices": 7,
     "totalTerms": 19,
-    "engineVersion": "6.0.0",
+    "engineVersion": "6.0.1",
     "endpoint": "http://162.19.74.224/collection-api/v1/"
   }
 ]
