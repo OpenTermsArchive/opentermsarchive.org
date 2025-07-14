@@ -26,7 +26,7 @@ actors:
       nsm: Number of articles published
     - title: Consumer protection organisations
       role: Help establish case law through complaints and class actions.<br/>Mobilise their base to put pressure on service providers.
-      case_studies: "The French consumer protection association [UFC-Que Choisir](https://www.quechoisir.org/) used Open Terms Archive to detect the removal of a mandatory clause from the general terms and conditions of a major online service. This enabled their Director of Legal Affairs to contact the platform just 48 hours after the change, leading to the clause being reinstated under five days."
+      case_studies: "French consumer protection association [UFC-Que Choisir](https://www.quechoisir.org/) used Open Terms Archive to detect the removal of a mandatory clause from the general terms and conditions of a major online service. This enabled their Director of Legal Affairs to contact the platform just 48 hours after the change, leading to the clause being reinstated under five days."
       icon: shopping-cart
       nsm: Number of complaints and reports issued
 ---
