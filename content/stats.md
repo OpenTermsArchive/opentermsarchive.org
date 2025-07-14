@@ -21,12 +21,12 @@ actors:
       nsm: Number of bills drafted and impact studies facilitated
     - title: Media and press
       role: Influence the reputation of digital services.<br/>Can highlight platform loyalty - or drive users away.
-      case_studies: "In January 2025, [Le Canard Enchaîné](https://www.lecanardenchaine.fr/technologie-sciences/49891-a-bruxelles-la-lutte-anti-musk-reste-dans-les-choux), [Vert.eco](https://vert.eco/articles/musk-zuckerberg-bezos-les-cinq-dernieres-dingueries-des-geants-de-la-tech-qui-montrent-leur-bascule-trumpiste) and other media outlets revealed the extent of Meta’s rollback of hate speech protections—changes that had been detected and [analyzed](https://opentermsarchive.org/fr/memos/meta-retire-des-protections-contre-les-discours-haineux/) by Open Terms Archive just hours after a public statement from the company’s CEO, which focused on other upcoming policy changes."
+      case_studies: "In January 2025, [Le Canard Enchaîné](https://www.lecanardenchaine.fr/technologie-sciences/49891-a-bruxelles-la-lutte-anti-musk-reste-dans-les-choux), [Vert.eco](https://vert.eco/articles/musk-zuckerberg-bezos-les-cinq-dernieres-dingueries-des-geants-de-la-tech-qui-montrent-leur-bascule-trumpiste) and other media outlets revealed the extent of Meta’s rollback of hate speech protections—changes that had been detected and [analysed](https://opentermsarchive.org/fr/memos/meta-retire-des-protections-contre-les-discours-haineux/) by Open Terms Archive just hours after a public statement from the company’s CEO, which focused on other upcoming policy changes."
       icon: newspaper
       nsm: Number of articles published
-    - title: Consumer advocacy organizations
-      role: Help establish case law through complaints and class actions.<br/>Mobilize their base to put pressure on service providers.
-      case_studies: "The French consumer organization [UFC-Que Choisir](https://www.quechoisir.org/) used Open Terms Archive to detect the removal of a mandatory clause from the general terms and conditions of a major online service. This enabled their Director of Legal Affairs to contact the platform just 48 hours after the change, leading to the clause being reinstated under five days."
+    - title: Consumer protection organisations
+      role: Help establish case law through complaints and class actions.<br/>Mobilise their base to put pressure on service providers.
+      case_studies: "The French consumer protection association [UFC-Que Choisir](https://www.quechoisir.org/) used Open Terms Archive to detect the removal of a mandatory clause from the general terms and conditions of a major online service. This enabled their Director of Legal Affairs to contact the platform just 48 hours after the change, leading to the clause being reinstated under five days."
       icon: shopping-cart
       nsm: Number of complaints and reports issued
 ---
