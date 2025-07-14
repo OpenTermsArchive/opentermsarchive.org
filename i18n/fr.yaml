@@ -133,7 +133,7 @@ impact:
   reminder: Open Terms Archive enregistre publiquement les conditions d'utilisation des services en ligne dans différentes langues et différents pays plusieurs fois par jour, en améliorant leur lisibilité et en mettant en évidence leurs modifications. Il est conçue comme un outil permettant d'orienter la gouvernance des plateformes vers une plus grande responsabilité, une meilleure législation et une plus grande conformité réglementaire.
   link: En savoir plus sur notre modèle d'impact.
 stats:
-  title: Le déploiement public d’Open Terms Archive est suivi par plusieurs métriques. En plus de cet écosystème décentralisé et fédéré, des collections privées dédiées par exemple à des enquêtes ciblées peuvent exister.
+  title: Le déploiement public d’Open Terms Archive est suivi par plusieurs métriques. En plus de cet écosystème décentralisé et fédéré, des collections privées dédiées par exemple à des enquêtes ciblées sont également déployées.
   services:
     title: "{{ with .number }}{{ . }} {{ end }}services ciblés"
     desc: répartis sur plusieurs industries, langues et juridictions
