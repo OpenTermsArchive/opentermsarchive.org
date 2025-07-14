@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title(context) {
               const date = new Date(context[0].raw.x);
 
-              return date.toLocaleDateString(undefined, { month: 'long', year: 'numeric' });  // use user's locale, see https://stackoverflow.com/a/31873738
+              return date.toLocaleDateString(undefined, { month: 'long', year: 'numeric' }); // use user's locale, see https://stackoverflow.com/a/31873738
             },
             label(context) {
               const { dataset } = context;

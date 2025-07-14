@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
               const total = context[0].raw.y;
 
               return [
-                date.toLocaleDateString(undefined, { month: 'long', year: 'numeric' }),  // use user's locale, see https://stackoverflow.com/a/31873738
+                date.toLocaleDateString(undefined, { month: 'long', year: 'numeric' }), // use user's locale, see https://stackoverflow.com/a/31873738
                 `${total} services`,
               ];
             },
