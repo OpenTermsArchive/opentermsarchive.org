@@ -5,11 +5,8 @@ import Annotation from 'chartjs-plugin-annotation';
 
 Chart.register(Annotation);
 
-const languages = {
-  en: 'Anglais',
-  fr: 'Français',
-  de: 'Allemand',
-};
+const languageLocaliser = new Intl.DisplayNames(undefined, { type: 'language' });
+
 const dataMemos = { months: [ '2020-06', '2020-07', '2021-09', '2021-11', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06', '2023-10', '2023-11', '2023-12', '2024-01', '2024-03', '2024-05', '2024-09', '2025-01', '2025-02', '2025-03', '2025-05' ], languages: [ 'en', 'fr', 'de' ], languagesByDate: [ 'de', 'fr', 'en' ], counts: { fr: [ 1, 2, 3, 5, 9, 13, 21, 24, 28, 28, 28, 28, 28, 28, 28, 29, 30, 31, 31, 32 ], en: [ 1, 2, 3, 5, 9, 13, 21, 24, 28, 29, 33, 37, 40, 41, 43, 44, 46, 47, 48, 49 ], de: [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2 ] } };
 
 const colors = {
@@ -31,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gradient.addColorStop(1, color.replace('rgb', 'rgba').replace(')', ', 0.05)'));
 
     return {
-      label: languages[lang],
+      label: languageLocaliser.of(lang),
       data: dataMemos.months.map((month, i) => ({
         x: new Date(month),
         y: dataMemos.counts[lang][i],
@@ -102,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title(context) {
               const date = new Date(context[0].raw.x);
 
-              return date.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' });
+              return date.toLocaleDateString(undefined, { month: 'long', year: 'numeric' }); // use user's locale, see https://stackoverflow.com/a/31873738
             },
             label(context) {
               const { dataset } = context;

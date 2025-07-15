@@ -127,7 +127,7 @@ impact:
   reminder: Open Terms Archive publicly records the terms of services of online services in different languages and countries several times a day, increasing their readability and highlighting their changes. It is designed as a tool to steer platform governance towards increased accountability, improved legislation and stronger regulatory compliance.
   link: Read more on our impact model.
 stats:
-  title: The public deployment of Open Terms Archive is tracked by several metrics. In addition to this decentralized and federated ecosystem, private collections dedicated to targeted investigations can exist.
+  title: The public deployment of Open Terms Archive is tracked by several metrics. In addition to this decentralized and federated ecosystem, private collections dedicated to targeted investigations are also deployed.
   services:
     title: "{{ with .number }}{{ . }} {{ end }}targeted services"
     desc: spread across multiple industries, languages and jurisdictions
