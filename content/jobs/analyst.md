@@ -15,7 +15,7 @@ This has for example enabled uncovering how [Telegram silently expanded cooperat
 
 Working as an analyst with Open Terms Archive is your opportunity to delve deep into the policies of big tech, get access to a trove of real-time and historical data and get paid to inform policymakers, media, regulators and activists of history in the making. You will be part of our first cohort of analysts focused on cross-jurisdiction comparison, checking not only changes as they appear but also the differential treatment of citizens based on their country of residence. This work is especially critical at a time where protective European regulations see their major geopolitical relevance demonstrated by threats on military alliances and trade wars, both inspiring democracies globally and being challenged by powerful actors.
 
-{{< video src="https://cloud.opentermsarchive.org/index.php/s/QAmqG23RSHpapnr/download/nobel-prize-summit-presentation.mp4#t=22" >}}
+<video controls><source src="https://cloud.opentermsarchive.org/index.php/s/QAmqG23RSHpapnr/download/nobel-prize-summit-presentation.mp4#t=22" type="video/mp4"></video>
 
 ## What you will be doing
 
