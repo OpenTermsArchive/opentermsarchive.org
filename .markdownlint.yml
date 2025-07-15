@@ -21,6 +21,8 @@ no-inline-html:
     - button
     - p
     - relref
+    - source
+    - video
 
 no-duplicate-header: false
 
