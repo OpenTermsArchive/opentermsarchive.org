@@ -15,6 +15,8 @@ This has for example enabled uncovering how [Telegram silently expanded cooperat
 
 Working as an analyst with Open Terms Archive is your opportunity to delve deep into the policies of big tech, get access to a trove of real-time and historical data and get paid to inform policymakers, media, regulators and activists of history in the making. You will be part of our first cohort of analysts focused on cross-jurisdiction comparison, checking not only changes as they appear but also the differential treatment of citizens based on their country of residence. This work is especially critical at a time where protective European regulations see their major geopolitical relevance demonstrated by threats on military alliances and trade wars, both inspiring democracies globally and being challenged by powerful actors.
 
+{{< video src="https://cloud.opentermsarchive.org/index.php/s/QAmqG23RSHpapnr/download/nobel-prize-summit-presentation.mp4#t=22" >}}
+
 ## What you will be doing
 
 - Review daily the changes that have been recorded. Some days there will be none, some days there will be 3 small ones, some days there will be a [major rewrite](https://github.com/OpenTermsArchive/pga-versions/commit/5faf6e9b5a26035990188bf1fc9365af61411935).
@@ -28,6 +30,8 @@ Working as an analyst with Open Terms Archive is your opportunity to delve dee
 ## Who you will work with
 
 Open Terms Archive has a distributed remote community. The [core team](https://opentermsarchive.org/en/about/) is made of 3 people. They will be your main point of contact. You will also interact with our business developer who will help with outreach, and our technical community manager who will support with data collection. Every team member works part time and most are based in the EU timezone. The wider community is made of contributors who are located anywhere. You will likely interact with them during our monthly [community calls](https://docs.opentermsarchive.org/community/reference/community-call/) and on our [community chat](https://docs.opentermsarchive.org/community/how-to/join/).
+
+![Community call](https://docs.opentermsarchive.org/community/reference/community-call.jpg)
 
 ## Working conditions
 
