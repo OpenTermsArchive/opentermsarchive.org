@@ -20765,7 +20765,8 @@
                 const date = new Date(context[0].raw.x);
                 const total = context[0].raw.y;
                 return [
-                  date.toLocaleDateString("fr-FR", { month: "long", year: "numeric" }),
+                  date.toLocaleDateString(void 0, { month: "long", year: "numeric" }),
+                  // use user's locale, see https://stackoverflow.com/a/31873738
                   `${total} services`
                 ];
               },
@@ -20907,7 +20908,8 @@
                 const date = new Date(context[0].raw.x);
                 const total = context[0].raw.y;
                 return [
-                  date.toLocaleDateString("fr-FR", { month: "long", year: "numeric" }),
+                  date.toLocaleDateString(void 0, { month: "long", year: "numeric" }),
+                  // use user's locale, see https://stackoverflow.com/a/31873738
                   `${total} terms`
                 ];
               },
@@ -20964,11 +20966,7 @@
 
   // ns-hugo-imp:/home/runner/work/opentermsarchive.org/opentermsarchive.org/themes/opentermsarchive/assets/js/charts/memos.js
   auto_default.register(annotation);
-  var languages = {
-    en: "Anglais",
-    fr: "Fran\xE7ais",
-    de: "Allemand"
-  };
+  var languageLocaliser = new Intl.DisplayNames(void 0, { type: "language" });
   var dataMemos = { months: ["2020-06", "2020-07", "2021-09", "2021-11", "2022-02", "2022-03", "2022-04", "2022-05", "2022-06", "2023-10", "2023-11", "2023-12", "2024-01", "2024-03", "2024-05", "2024-09", "2025-01", "2025-02", "2025-03", "2025-05"], languages: ["en", "fr", "de"], languagesByDate: ["de", "fr", "en"], counts: { fr: [1, 2, 3, 5, 9, 13, 21, 24, 28, 28, 28, 28, 28, 28, 28, 29, 30, 31, 31, 32], en: [1, 2, 3, 5, 9, 13, 21, 24, 28, 29, 33, 37, 40, 41, 43, 44, 46, 47, 48, 49], de: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2] } };
   var colors2 = {
     en: "rgb(75, 192, 192)",
@@ -20985,7 +20983,7 @@
       gradient.addColorStop(0, color2.replace("rgb", "rgba").replace(")", ", 0.3)"));
       gradient.addColorStop(1, color2.replace("rgb", "rgba").replace(")", ", 0.05)"));
       return {
-        label: languages[lang],
+        label: languageLocaliser.of(lang),
         data: dataMemos.months.map((month, i) => ({
           x: new Date(month),
           y: dataMemos.counts[lang][i]
@@ -21053,7 +21051,7 @@
             callbacks: {
               title(context) {
                 const date = new Date(context[0].raw.x);
-                return date.toLocaleDateString("fr-FR", { month: "long", year: "numeric" });
+                return date.toLocaleDateString(void 0, { month: "long", year: "numeric" });
               },
               label(context) {
                 const { dataset } = context;
@@ -21163,7 +21161,7 @@
             callbacks: {
               title(context) {
                 const date = new Date(context[0].raw.x);
-                return date.toLocaleDateString("fr-FR", { month: "long", year: "numeric" });
+                return date.toLocaleDateString(void 0, { month: "long", year: "numeric" });
               },
               label(context) {
                 return `${context.raw.y} changements enregistr\xE9s`;
