@@ -143,7 +143,7 @@
     },
     "totalServices": 22,
     "totalTerms": 93,
-    "engineVersion": "5.7.0",
+    "engineVersion": "6.0.1",
     "endpoint": "http://134.102.58.70/collection-api/v1/"
   },
   {
