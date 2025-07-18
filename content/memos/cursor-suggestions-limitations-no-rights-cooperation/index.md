@@ -4,7 +4,8 @@ title: Cursor details AI suggestions limitations and that users are not granted 
 service: Cursor
 terms_types: ["Terms of Service"]
 dates: ["2025-06-19"]
-author: Matti Schneider (with GPT-4o assistance)
+author: Matti Schneider
+assistance: [GPT-4o]
 related_collections: [genai]
 ---
 

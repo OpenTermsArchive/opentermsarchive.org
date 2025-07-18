@@ -4,7 +4,8 @@ title: Cursor précise les limites de l’IA et l’absence de droits donnés au
 service: Cursor
 terms_types: ["Terms of Service"]
 dates: ["2025-06-19"]
-author: Matti Schneider (avec assistance GPT-4o)
+author: Matti Schneider
+assistance: [GPT-4o]
 related_collections: [genai]
 ---
 
