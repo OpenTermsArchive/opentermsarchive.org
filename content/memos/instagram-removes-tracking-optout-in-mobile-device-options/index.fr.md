@@ -4,7 +4,8 @@ title: Instagram retire la possibilité de refuser le suivi publicitaire via les
 service: Instagram
 terms_types: ["Trackers Policy"]
 dates: ["2025-07-18"]
-author: Matti Schneider (avec assistance GPT-4o)
+author: Matti Schneider
+assistance: [GPT-4o]
 related_collections: ["pga"]
 ---
 

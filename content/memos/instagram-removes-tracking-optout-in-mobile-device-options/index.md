@@ -4,7 +4,8 @@ title: "Instagram removes support for tracking opt-out via mobile device setting
 service: "Instagram"
 terms_types: ["Trackers Policy"]
 dates: ["2025-07-18"]
-author: Matti Schneider (with GPT-4o assistance)
+author: Matti Schneider
+assistance: [GPT-4o]
 related_collections: ["pga"]
 ---
 

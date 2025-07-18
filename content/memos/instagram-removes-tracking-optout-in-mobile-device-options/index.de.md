@@ -4,7 +4,8 @@ title: "Instagram entfernt Möglichkeit zum Opt-out über Geräteeinstellungen"
 service: "Instagram"
 terms_types: ["Trackers Policy"]
 dates: ["2025-07-18"]
-author: Matti Schneider (mit GPT-4o Unterstützung)
+author: Matti Schneider
+assistance: [GPT-4o]
 related_collections: ["pga"]
 ---
 
