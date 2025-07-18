@@ -4,7 +4,8 @@ title: Instagram and Facebook can now disable accounts that like or save child a
 service: Instagram, Facebook
 terms_types: ["Community Guidelines"]
 dates: ["2025-07-18"]
-author: Matti Schneider (with GPT-4o assistance)
+author: Matti Schneider
+assistance: [GPT-4o]
 related_collections: ["pga"]
 ---
 

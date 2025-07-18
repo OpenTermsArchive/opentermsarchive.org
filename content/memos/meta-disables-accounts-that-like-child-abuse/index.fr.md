@@ -4,7 +4,8 @@ title: Instagram et Facebook peuvent désactiver les comptes qui likent des cont
 service: Instagram, Facebook
 terms_types: ["Community Guidelines"]
 dates: ["2025-07-18"]
-author: Matti Schneider (avec assistance GPT-4o)
+author: Matti Schneider
+assistance: [GPT-4o]
 related_collections: ["pga"]
 ---
 
