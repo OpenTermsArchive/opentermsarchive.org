@@ -4,7 +4,8 @@ title: Bluesky déplace son point de contact DSA de la Belgique vers l’Irlande
 service: Bluesky
 terms_types: ["Terms of Service"]
 dates: ["2025-06-18"]
-author: Matti Schneider (avec assistance GPT-4o)
+author: Matti Schneider
+assistance: [GPT-4o]
 related_collections: ["pga"]
 ---
 
