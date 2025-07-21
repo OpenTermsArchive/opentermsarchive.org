@@ -69,7 +69,7 @@ Send an email before Sunday 27th of July to `contact@opentermsarchive.org` with 
 - a few lines to tell us what motivates you in this role;
 - 3 timeslots that would work for you for a 1 hour interview over a video call between Tuesday 29th and Thursday 31st of July.
 
-You are welcome to use an LLM to proofread your text if you so desire. However, any significant part that was written by such a tool has to be disclosed with details on the assistant used. The undisclosed use of generative AI assistants for any part of the application process will lead to disqualification and blacklisting for future opportunities. We want to hire a professional who can write with their own words. That professional is free to use whichever tool they see fit to help them be better or more efficient at their task, but we can write prompts ourselves, thanks.
+You are welcome to use an LLM to proofread your text if you so desire. However, any significant part that was written by such a tool has to be disclosed with details on the assistant used. The undisclosed use of generative AI assistants for any part of the application process will lead to disqualification and blacklisting for future opportunities. We want to hire a professional who can write with their own words.
 
 We will get back to you latest on Monday 28th of July with either a confirmation of your interview time, a request for additional information, or an explanation why we cannot work together on this mission.
 
