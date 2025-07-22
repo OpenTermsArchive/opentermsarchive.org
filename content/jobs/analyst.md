@@ -69,6 +69,8 @@ Send an email before Sunday 27th of July to `contact@opentermsarchive.org` with 
 - a few lines to tell us what motivates you in this role;
 - 3 timeslots that would work for you for a 1 hour interview over a video call between Tuesday 29th and Thursday 31st of July.
 
+You are welcome to use an LLM to proofread your text if you so desire. If you do, please make sure to detail which parts were written by such a tool, along with which assistant was used. The undisclosed use of generative AI assistants for any part of the application process will lead to disqualification.
+
 We will get back to you latest on Monday 28th of July with either a confirmation of your interview time, a request for additional information, or an explanation why we cannot work together on this mission.
 
 We pride ourselves in being an inclusive community and welcome applications from candidates of all backgrounds. If you are excited about the job but unsure if you could be a good fit, try applying. Our application process is designed to confront yourself with an introductory level of difficulty to the concrete production you would have to deliver. We're looking forward to receiving your application!
