@@ -1,11 +1,11 @@
 ---
 title: Analyst position
-html_description: Join Open Terms Archive as an analyst. Bring light to the evolution of big tech policies. Apply by July 27, 2025.
+html_description: (Applications closed) Join Open Terms Archive as an analyst. Bring light to the evolution of big tech policies.
 ---
 
 # Analyst position hiring
 
-**Join Open Terms Archive as an analyst. Bring light to the evolution of big tech policies. Apply by July 27, 2025.**
+**This opportunity is closed since July 28, 2025.**
 
 ## Why that job is timely and important
 
@@ -76,3 +76,39 @@ We will get back to you latest on Monday 28th of July with either a confirmation
 We pride ourselves in being an inclusive community and welcome applications from candidates of all backgrounds. If you are excited about the job but unsure if you could be a good fit, try applying. Our application process is designed to confront yourself with an introductory level of difficulty to the concrete production you would have to deliver. We're looking forward to receiving your application!
 
 If you have any additional question, reach out to `contact@opentermsarchive.org`.
+
+- - -
+
+## Interview process
+
+If you have been selected for an interview, here is what to prepare for.
+
+First of all, don't stress! 🙂 If you've been asked to join an interview, it's because we're confident you have the skills to produce memos. We want to talk with you to understand better your motivations, desires, and what we would need to provide you with to ensure our collaboration is beneficial and productive.
+
+You will join a 45-minutes video call with the core team, at a URL and time that has been provided over email.
+
+The process will be the following:
+
+1. **Check-in.** We will do a short round of giving names and the emotional state and context we join this call in. This will help us all make sense of the nonverbal cues that will necessarily be visible during the call. _(5 min)_
+2. **Reverse presentations.** You will share what you understood Open Terms Archive does and who we are, and we will share what we understood of your profile. We will then both have a bit of time to correct any misunderstandings. _(10 min)_
+3. **Motivation exploration.** We will ask you a few questions about your motivation and interests, to deepen what you sent in writing. _(5 min)_
+4. **Memo review.** You will tell us about the difficulties you encountered when writing the memo you sent with your application. _(5 min)_
+5. **Context understanding.** Ahead of the interview, make sure to read the [Meta January 7th memo](https://opentermsarchive.org/en/memos/meta-dampens-hate-speech-policy/) and [our analysis](https://opentermsarchive.org/en/memos/pinterest-bans-all-nudity/) of the same Pinterest changes you wrote a memo on in your application. You will explain and we will discuss the links you can draw between these two seemingly unrelated changes. _(10 min)_
+6. **Closing questions.** Some time to go through any unanswered burning questions. _(5 min)_
+
+We would like you to behave in this interview as you would if we were already colleagues. The whole point is to get a feeling of what it would feel like to work together over the next months, and you won't be calling us “sir / madam” throughout that time together 😉 This also means that you should do your best to ensure a good video quality for the call, as we will consider it a baseline for what synchronous communication with you will be like. Here are some tips:
+
+- If you are not familiar with the videoconferencing platform we will use, make sure to try it out before connecting.
+- Ensure you have a fast and reliable internet connection. Sit next to the router, or consider using a wired connection if you are in a location with limited connectivity.
+- Quit every app and website that uses significant power or bandwidth, such as video streaming.
+- Be in a quiet and calm environment. Background noise will be a problem. People interrupting you through the call will be a problem.
+- Prefer laptop over phone. If joining from a phone, use it in landscape (horizontal) mode and position it on a stable piece of furniture, don't hold it in your hand.
+- Use headphones. Make sure the microphone is close to your mouth. Test it with a friend beforehand.
+- Avoid background blurring unless your hardware is powerful enough to do it without slowing down video recording.
+- Make sure your face is well lit by a bright environment. Sit in front of a light and with no direct light in your back.
+- Apply the rule of thirds: position the camera so that your eyes are on an imaginary line separating the top and middle thirds of the frame, and your mouth on an imaginary line separating the middle and bottom thirds of the frame.
+- Don't be late. Double-check the timezone conversions to make sure you're on time.
+
+Basically, you don't need to come wearing a suit and tie, but having a quiet room and a stable connection would be a good idea!
+
+We're looking forward to meeting you 😊
