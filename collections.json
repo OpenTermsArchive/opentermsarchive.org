@@ -358,6 +358,62 @@
     "endpoint": "http://ota.iroco.co/collection-api/v1/"
   },
   {
+    "id": "france-elections",
+    "name": "France Élections",
+    "tagline": "Major social media likely to impact the 2022 French elections",
+    "description": "The **France Elections** collection was created for the 2022 French presidential election.\n\nIts aim was to track the Community Guidelines of the five most widely used social media platforms in France that were likely to have a systemic impact on the conduct and outcome of the elections.\n\nThe collection was maintained and used by [Reset Tech](https://reset.tech/) to monitor interference in France's 2022 presidential and parliamentary elections and to produce the joint research report [\"The French information ecosystem put to the test\"](https://www.reset.tech/resources/elections-report-en-2022.pdf) with the Online Election Integrity Watch Group.\n",
+    "dataset": "https://github.com/OpenTermsArchive/france-elections-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/france-elections-declarations",
+    "versions": "https://github.com/OpenTermsArchive/france-elections-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/france-elections-snapshots",
+    "donations": "https://opencollective.com/opentermsarchive",
+    "logo": "https://opentermsarchive.org/images/collections/france-elections.png",
+    "languages": [
+      "fr"
+    ],
+    "jurisdictions": [
+      "FR"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2022-03-14T00:00:00.000Z",
+        "endDate": "2022-09-01T00:00:00.000Z",
+        "schedule": "30 */6 * * *",
+        "serverLocation": "London, GB"
+      }
+    ],
+    "governance": {
+      "Open Terms Archive": {
+        "url": "https://opentermsarchive.org",
+        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black-small.png",
+        "roles": [
+          "host",
+          "administrator",
+          "curator",
+          "maintainer"
+        ]
+      },
+      "Reset Tech": {
+        "url": "https://reset.tech",
+        "logo": "https://opentermsarchive.org/images/contributors/reset-tech.png",
+        "roles": [
+          "curator",
+          "sponsor"
+        ]
+      }
+    },
+    "i18n": {
+      "fr": {
+        "tagline": "Principaux médias sociaux susceptibles d’impacter les élections françaises de 2022",
+        "description": "La collection **France Élections** a été créée à l'occasion des élections présidentielles et législatives française de 2022.\n\nSon objectif était de suivre les règles communautaires des cinq plateformes de médias sociaux les plus utilisées en France, susceptibles d’avoir un impact systémique sur le déroulement et les résultats des élections.\n\nLa collection a été maintenue et utilisée par [Reset Tech](https://reset.tech/) pour surveiller l'ingérence dans les élections et pour produire le rapport de recherche [\"The French information ecosystem put to the test\"](https://www.reset.tech/resources/elections-report-en-2022.pdf) conjointement avec le Online Election Integrity Watch Group.\n"
+      }
+    },
+    "totalServices": 5,
+    "totalTerms": 65,
+    "engineVersion": "4.0.1",
+    "endpoint": "http://51.89.225.198/collection-api/v1/"
+  },
+  {
     "id": "dating",
     "name": "Dating",
     "tagline": "Online dating services",
