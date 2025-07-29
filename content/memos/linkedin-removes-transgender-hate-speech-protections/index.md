@@ -1,15 +1,17 @@
 ---
-html_description: "On July 29, 2025, LinkedIn removed protections for transgender individuals from its hateful and derogatory content policy."
+html_description: "On July 29, 2025, LinkedIn removed “misgendering or deadnaming” from examples of prohibited content in its policy on hateful and derogatory content."
 title: "LinkedIn removes hate speech protections for transgender individuals"
 service: "LinkedIn"
 terms_types: ["Community Guidelines"]
 dates: ["2025-07-29"]
 author: Matti Schneider
-assistance: GPT-4o
+assistance: [GPT-4o, DeepL]
 related_collections: ["pga"]
 ---
 
-LinkedIn [removed](https://github.com/OpenTermsArchive/pga-versions/commit/537447facc3a1922e77cfc7fe90b0fc69414b613#diff-88386d527dff09b9311f1e66713dff8eebbf339a52952a1b2376eb198d34a60fL313) transgender-related protections from its policy on hateful and derogatory content. The platform **no longer lists “misgendering[^misgendering] or deadnaming[^deadnaming] of transgender individuals” as examples of prohibited conduct**. It also removed “race or gender identity” from its examples of inherent traits for which negative comments are considered harassment. That qualification of harassment is now kept only for behaviour “disparaging another member’s […] perceived gender”, not mentioning race or “gender identity” anymore.
+LinkedIn [removed](https://github.com/OpenTermsArchive/pga-versions/commit/537447facc3a1922e77cfc7fe90b0fc69414b613#diff-88386d527dff09b9311f1e66713dff8eebbf339a52952a1b2376eb198d34a60fL313) transgender-related protections from its policy on hateful and derogatory content. The platform **no longer lists “misgendering[^misgendering] or deadnaming[^deadnaming] of transgender individuals” as examples of prohibited conduct**. While “content that attacks, denigrates, intimidates, dehumanizes, incites or threatens hatred, violence, prejudicial or discriminatory action” is still considered hateful, addressing a person by a gender and name they ask not be designated by is not anymore.
+
+Similarly, the platform removed “race or gender identity” from its examples of inherent traits for which negative comments are considered harassment. That qualification of harassment is now kept only for behaviour that is actively “disparaging another member’s […] perceived gender”, not mentioning race or gender identity anymore.
 
 The “last update” date of the [Hateful and Derogatory Content](https://www.linkedin.com/help/linkedin/answer/a1339812/?lang=en-US) was updated, but the service did not otherwise communicate publicly on this change in its [Trust &amp; Safety blog](https://www.linkedin.com/blog/engineering/trust-and-safety), like [it did](https://www.linkedin.com/blog/engineering/trust-and-safety/evolution-enforcing-our-professional-community-policies-at-scale) for example to describe how it improved enforcement of its community guidelines at scale.
 

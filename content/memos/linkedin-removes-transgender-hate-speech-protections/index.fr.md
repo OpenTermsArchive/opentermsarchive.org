@@ -1,15 +1,17 @@
 ---
-html_description: "Le 29 juillet 2025, LinkedIn a retiré les protections envers les personnes transgenres de sa politique sur le contenu haineux et dénigrant."
+html_description: "Le 29 juillet 2025, LinkedIn a retiré le « mégenrage ou le deadnaming » des exemples de contenu interdit par sa politique sur le contenu haineux."
 title: "LinkedIn retire des protections contre les discours de haine envers les personnes transgenres"
 service: "LinkedIn"
 terms_types: ["Community Guidelines"]
 dates: ["2025-07-29"]
 author: Matti Schneider
-assistance: GPT-4o
+assistance: [GPT-4o, DeepL]
 related_collections: ["pga"]
 ---
 
-LinkedIn a [retiré](https://github.com/OpenTermsArchive/pga-versions/commit/537447facc3a1922e77cfc7fe90b0fc69414b613#diff-88386d527dff09b9311f1e66713dff8eebbf339a52952a1b2376eb198d34a60fL313) de sa « politique sur le contenu haineux et dénigrant » les protections spécifiques aux personnes transgenres. La plateforme **ne mentionne plus le « mégenrage[^misgendering] ou l’utilisation du prénom de naissance » comme exemples de comportements prohibés**. Elle a également retiré les termes « l’origine ethnique ou l’identité sexuelle » des exemples de caractéristiques intrinsèques pour lesquelles les commentaires négatifs sont considérés comme du harcèlement. Cette qualification de harcèlement n’est désormais appliquée que pour les comportements qui « diminuent […] le genre perçu des autres membres »[^traduction], sans plus de mention de « l’origine ethnique ou l’identité sexuelle ».
+LinkedIn [a retiré](https://github.com/OpenTermsArchive/pga-versions/commit/537447facc3a1922e77cfc7fe90b0fc69414b613#diff-88386d527dff09b9311f1e66713dff8eebbf339a52952a1b2376eb198d34a60fL313) de sa « politique sur le contenu haineux et dénigrant » les protections spécifiques aux personnes transgenres. La plateforme **ne mentionne plus le « mégenrage[^misgendering] ou l’utilisation du prénom de naissance » comme exemples de comportements prohibés**. Si le « contenu apparenté à une attaque personnelle, une intimidation, une humiliation, du harcèlement ou du dénigrement » est toujours considéré comme abusif, le fait de s'adresser à une personne en utilisant un genre et un nom qu’elle ne souhaite plus utiliser ne l’est plus.
+
+De même, la plateforme a retiré les termes « l’origine ethnique ou l’identité sexuelle » des exemples de caractéristiques intrinsèques pour lesquelles les commentaires négatifs sont considérés comme du harcèlement. Cette qualification de harcèlement n’est désormais appliquée que pour les comportements qui « dénigrent activement […] le genre perçu des autres membres »[^traduction], sans plus de mention de « l’origine ethnique ou l’identité sexuelle ».
 
 La date de dernière mise à jour de la [politique](https://www.linkedin.com/help/linkedin/answer/a1339812/?lang=fr-FR) sur le contenu haineux et dénigrant a bien été actualisée, mais le service n’a pas communiqué publiquement à ce sujet sur son [blog Trust & Safety](https://www.linkedin.com/blog/engineering/trust-and-safety), contrairement à ce qu’il avait fait par exemple pour [présenter](https://www.linkedin.com/blog/engineering/trust-and-safety/evolution-enforcing-our-professional-community-policies-at-scale) des améliorations de son application des règles de communauté à grande échelle.
 
