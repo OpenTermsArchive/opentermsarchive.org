@@ -1,6 +1,6 @@
 ---
 html_description: "Le 29 juillet 2025, LinkedIn a retiré les protections envers les personnes transgenres de sa politique sur le contenu haineux et dénigrant."
-title: "LinkedIn retire les protections contre les discours de haine envers les personnes transgenres"
+title: "LinkedIn retire des protections contre les discours de haine envers les personnes transgenres"
 service: "LinkedIn"
 terms_types: ["Community Guidelines"]
 dates: ["2025-07-29"]
