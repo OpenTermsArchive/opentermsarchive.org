@@ -68,9 +68,9 @@
         }
       }
     },
-    "totalServices": 34,
-    "totalTerms": 88,
-    "engineVersion": "6.0.1",
+    "totalServices": 38,
+    "totalTerms": 113,
+    "engineVersion": "7.0.0",
     "endpoint": "http://51.77.110.109/collection-api/v1/"
   },
   {
@@ -141,8 +141,8 @@
         }
       }
     },
-    "totalServices": 22,
-    "totalTerms": 93,
+    "totalServices": 23,
+    "totalTerms": 96,
     "engineVersion": "7.0.0",
     "endpoint": "http://134.102.58.70/collection-api/v1/"
   },
@@ -550,8 +550,8 @@
         }
       }
     },
-    "totalServices": 366,
-    "totalTerms": 772,
+    "totalServices": 370,
+    "totalTerms": 784,
     "engineVersion": "6.0.1",
     "endpoint": "http://51.89.224.102/collection-api/v1/"
   },
