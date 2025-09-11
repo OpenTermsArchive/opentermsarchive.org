@@ -68,8 +68,8 @@
         }
       }
     },
-    "totalServices": 39,
-    "totalTerms": 118,
+    "totalServices": 40,
+    "totalTerms": 122,
     "engineVersion": "7.0.0",
     "endpoint": "http://51.77.110.109/collection-api/v1/"
   },
@@ -550,8 +550,8 @@
         }
       }
     },
-    "totalServices": 371,
-    "totalTerms": 789,
+    "totalServices": 373,
+    "totalTerms": 793,
     "engineVersion": "6.0.1",
     "endpoint": "http://51.89.224.102/collection-api/v1/"
   },
