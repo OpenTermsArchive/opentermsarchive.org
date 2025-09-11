@@ -8,6 +8,10 @@
     "endpoint": "http://134.102.58.70/collection-api/v1/"
   },
   {
+    "name": "Santé numérique France",
+    "endpoint": "http://54.38.188.145/collection-api/v1"
+  },
+  {
     "name": "France",
     "endpoint": "http://198.244.142.9/collection-api/v1/"
   },
