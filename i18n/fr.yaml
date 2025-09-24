@@ -123,10 +123,14 @@ collections:
     title: Gouvernance
     subtitle: Ces personnes et entités s'assurent que les termes de cette collection sont bien suivis.
     host: Hôte
-    administrator: Administrateur
+    administrator: Administrateur système
+    sysadmin: Administrateur système
     curator: Curateur
     maintainer: Mainteneur
+    analyst: Analyste
+    diffuser: Diffuseur
     sponsor: Sponsor
+    contributor: Contributeurice
     contributors: Contributeurices
 impact:
   related_collections: Collections associées

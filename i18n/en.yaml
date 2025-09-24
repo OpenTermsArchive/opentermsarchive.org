@@ -117,10 +117,14 @@ collections:
     title: Governance
     subtitle: These people and entities ensure that terms in this collection are tracked properly.
     host: Host
-    administrator: Administrator
+    administrator: System administrator
+    sysadmin: System administrator
     curator: Curator
     maintainer: Maintainer
+    analyst: Analyst
+    diffuser: Diffuser
     sponsor: Sponsor
+    contributor: Contributor
     contributors: Contributors
 impact:
   related_collections: Related collections
