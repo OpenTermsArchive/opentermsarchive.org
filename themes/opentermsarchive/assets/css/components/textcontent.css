@@ -268,7 +268,9 @@
     background-color: var(--colorBlack200);
 
     & > code {
-      width: 100%;
+      display: block;
+      width: max-content;
+      min-width: 100%;
       padding: 0.8rem;
       border: 1px solid var(--colorBlack300);
     }
