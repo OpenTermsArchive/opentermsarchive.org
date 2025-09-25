@@ -10,7 +10,7 @@ async function fetchCollections() {
 
     const collections = await Promise.allSettled(collectionsList.map(async collection => {
       try {
-        const metadataEndpoint = `${collection.endpoint}/metadata`;
+        const metadataEndpoint = new URL('metadata', collection.endpoint).href;
         const response = await fetch(metadataEndpoint, { timeout: 5000, referrer: 'https://opentermsarchive.org' });
 
         if (!response.ok) {
