@@ -13,10 +13,9 @@ The European [Digital Services Act article 34](https://eur-lex.europa.eu/eli/reg
 
 ## Data
 
-| Platform | Year | Source document | Text version |
-|----------|------|-----------------|--------------|
-
-All documents can also be downloaded as an [Open Terms Archive dataset of DSA reports](https://github.com/OpenTermsArchive/dsa-reports-versions/releases).
+- [All systemic risks reports](https://github.com/OpenTermsArchive/dsa-reports-snapshots/)
+- [Textual versions](https://github.com/OpenTermsArchive/dsa-reports-versions/)
+- Download all versions as an [Open Terms Archive dataset](https://github.com/OpenTermsArchive/dsa-reports-versions/releases)
 
 ## Contact
 
