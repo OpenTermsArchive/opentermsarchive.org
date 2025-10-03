@@ -11,6 +11,7 @@
 {{ $nonEuCollectionLanguages := symdiff $languages $allEuLanguages }}
 {{ $isOnlyEuLanguages := eq (len $nonEuCollectionLanguages) 0 }}
 {{ $displayLanguages := slice }}
+{{ $viewDetails := default true .context.Params.viewDetails }}
 
 <div class="card card--is-white card--center">
 
@@ -75,12 +76,14 @@
             <i class="icon ml--2xs" data-lucide="search"></i>
           </a>
         </div>
-        <div class="mt--s">
-          <a class="linkicon" href="{{ .context.Permalink }}">
-            {{ i18n "collections.cta.details" }}
-            <i class="icon ml--2xs" data-lucide="arrow-right"></i>
-          </a>
-        </div>
+        {{ if $viewDetails }}
+          <div class="mt--s">
+            <a class="linkicon" href="{{ .context.Permalink }}">
+              {{ i18n "collections.cta.details" }}
+              <i class="icon ml--2xs" data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        {{ end }}
       </div>
     {{ end }}
   </div>
