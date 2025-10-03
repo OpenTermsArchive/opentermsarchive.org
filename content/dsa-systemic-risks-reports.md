@@ -43,15 +43,50 @@ The European [Digital Services Act article 34](https://eur-lex.europa.eu/eli/reg
 | Pinterest | 2023 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Pinterest/Systemic%20Risks%20—%202023.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Pinterest/Systemic%20Risks%20—%202023.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Pinterest/Systemic%20Risks%20—%202023.md)
 | Pinterest| 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Pinterest/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Pinterest/Systemic%20Risks%20—%202024.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Pinterest/Systemic%20Risks%20—%202024.md)
 | PornHub | 2025 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/PornHub/Systemic%20Risks%20—%202025.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/PornHub/Systemic%20Risks%20—%202025.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/PornHub/Systemic%20Risks%20—%202025.md)
+| Shein | — | None published | None published | None published |
 | Snapchat | 2023 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Snapchat/Systemic%20Risks%20—%202023.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Snapchat/Systemic%20Risks%20—%202023.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Snapchat/Systemic%20Risks%20—%202023.md)
+| Stripchat | — | None published | None published | None published |
+| Temu | — | None published | None published | None published |
 | Tiktok | 2023 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Tiktok/Systemic%20Risks%20—%202023.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Tiktok/Systemic%20Risks%20—%202023.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Tiktok/Systemic%20Risks%20—%202023.md)
 | Tiktok | 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Tiktok/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Tiktok/Systemic%20Risks%20—%202024.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Tiktok/Systemic%20Risks%20—%202024.md)
+| Wikipedia | 2023 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Wikipedia/Systemic%20Risks%20—%202023.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Wikipedia/Systemic%20Risks%20—%202023.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Wikipedia/Systemic%20Risks%20—%202023.md) |
+| Wikipedia | 2024 | Unusable format | Unusable format | Unusable format |
 | X | 2023 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/X/Systemic%20Risks%20—%202023.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/X/Systemic%20Risks%20—%202023.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/X/Systemic%20Risks%20—%202023.md)
 | X | 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/X/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/X/Systemic%20Risks%20—%202024.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/X/Systemic%20Risks%20—%202024.md)
+| XNXX | — | None published | None published | None published |
 | Xvideos | 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Xvideos/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Xvideos/Systemic%20Risks%20—%202024.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Xvideos/Systemic%20Risks%20—%202024.md)
 | Xvideos | 2025 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Xvideos/Systemic%20Risks%20—%202025.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Xvideos/Systemic%20Risks%20—%202025.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Xvideos/Systemic%20Risks%20—%202025.md)
 | YouTube | 2023 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Youtube/Systemic%20Risks%20—%202023.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Youtube/Systemic%20Risks%20—%202023.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Youtube/Systemic%20Risks%20—%202023.md)
 | YouTube | 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Youtube/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Youtube/Systemic%20Risks%20—%202024.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Youtube/Systemic%20Risks%20—%202024.md)
+
+## Known limitations
+
+All reports contain many images and tables that are often improperly converted in the textual version.
+
+### Stripchat
+
+No report published at the time of writing. If it is out now, [contribute it](https://github.com/OpenTermsArchive/dsa-reports-declarations/blob/main/CONTRIBUTING.md)!
+
+### XNXX
+
+No report published at the time of writing. If it is out now, [contribute it](https://github.com/OpenTermsArchive/dsa-reports-declarations/blob/main/CONTRIBUTING.md)!
+
+### Shein
+
+No report published at the time of writing. If it is out now, [contribute it](https://github.com/OpenTermsArchive/dsa-reports-declarations/blob/main/CONTRIBUTING.md)!
+
+### Temu
+
+No report published at the time of writing. If it is out now, [contribute it](https://github.com/OpenTermsArchive/dsa-reports-declarations/blob/main/CONTRIBUTING.md)!
+
+### Wikipedia
+
+Wikipedia uses a new format for 2024 that cannot be tracked with the current system, as it is a [ZIP archive](
+https://foundation.wikimedia.org/wiki/File:WMF_23-24_approved_DSA_SRAM_(Risk_Register).zip) containing an HTML file.
+
+### Google
+
+Google issues a unique report consolidating the assessment for all of its services.
 
 ## Contact
 
