@@ -17,6 +17,12 @@ The European [Digital Services Act article 34](https://eur-lex.europa.eu/eli/reg
 - [Textual versions](https://github.com/OpenTermsArchive/dsa-reports-versions/)
 - Download all versions as an [Open Terms Archive dataset](https://github.com/OpenTermsArchive/dsa-reports-versions/releases)
 
+<!-- [html-validate-disable-block wcag/h63: markdown does not generate tables with scope attribute] -->
+| Platform | Year | Source document | Text version |
+|----------|------|-----------------|--------------|
+
+All documents can also be downloaded as an [Open Terms Archive dataset of DSA reports](https://github.com/OpenTermsArchive/dsa-reports-versions/releases).
+
 ## Contact
 
 If you are making use of this data, please let us know!
