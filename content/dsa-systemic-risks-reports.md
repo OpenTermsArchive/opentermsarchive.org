@@ -1,7 +1,7 @@
 ---
 layout: "dsa-systemic-risks"
 title: "DSA Systemic Risks Reports Archive"
-html_description: "This archive ensures the long term preservation of DSA-mandated systemic risks reports. It supports research and reinforces platform accountability"
+html_description: "This archive ensures the long term preservation of DSA-mandated systemic risks reports."
 ---
 # DSA Systemic Risks Reports Archive
 
