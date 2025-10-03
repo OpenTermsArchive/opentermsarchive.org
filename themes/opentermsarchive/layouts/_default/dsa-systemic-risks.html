@@ -1,0 +1,37 @@
+{{ define "main" }}
+  <div class="container container--has-no-padding-top">
+    <div class="container container--98">
+      <div class="textcontent">
+        {{ .Content }}
+
+        <h3>Related collection</h3>
+        {{ $dsaCollection := index (where site.Data.unfederated_collections "id" "dsa-reports") 0 }}
+        {{ with $dsaCollection }}
+          {{ partial "collection-card.html" (dict
+            "context" (dict
+              "Params" (dict
+                "name" .name
+                "tagline" .tagline
+                "description" .description
+                "totalServices" .totalServices
+                "totalTerms" .totalTerms
+                "languages" .languages
+                "jurisdictions" .jurisdictions
+                "versions" .versions
+                "dataset" .dataset
+                "declarations" .declarations
+                "snapshots" .snapshots
+                "governance" .governance
+                "i18n" .i18n
+                "engineVersion" .engineVersion
+                "endpoint" .endpoint
+                "viewDetails" false
+              )
+            )
+          ) }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+{{ end }}
