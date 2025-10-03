@@ -28,3 +28,6 @@ You can contact the team over email at [`contact@opentermsarchive.org`](mailto:c
 ## Credits
 
 This collection was created as a collaboration between [Open Terms Archive](https://opentermsarchive.org/) and [CheckFirst](https://checkfirst.network) as part of the [Hack the DSA](https://regulation-tech.cnam.fr/hack-the-dsa/) hackathon hosted by the CNAM’s _Chaire sur la Modération des Contenus_ in October 2025.
+
+[![Hack the DSA](/images/hack-the-dsa.jpg)](https://regulation-tech.cnam.fr/hack-the-dsa/)
+
