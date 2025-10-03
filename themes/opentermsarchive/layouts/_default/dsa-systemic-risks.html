@@ -3,7 +3,24 @@
     <div class="container container--98">
       <div class="textcontent">
         {{ .Content }}
+
+        <h3>Related collection</h3>
+         {{ partial "collection-card.html" (dict 
+          "context" (dict 
+            "Params" (dict
+              "name" "DSA Systemic Risks Reports"
+              "tagline" "European Digital Services Act compliance monitoring"
+              "totalServices" 2
+              "totalTerms" 2
+              "languages" (slice "fr")
+              "jurisdictions" (slice "EU")
+              "versions" "https://github.com/OpenTermsArchive/dsa-reports-versions/releases"
+            )
+          )
+        ) }}
       </div>
     </div>
   </div>
+  
+ 
 {{ end }}
