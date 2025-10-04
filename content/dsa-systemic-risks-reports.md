@@ -11,6 +11,11 @@ html_description: "This archive ensures the long term preservation of DSA-mandat
 
 The European [Digital Services Act article 34](https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng#art_34) mandates very large online platforms and search engines (VLOPSEs) to publish systemic risk assessments “at least once every year”. [Open Terms Archive](https://opentermsarchive.org/) makes these reports available independently from platforms hosting, distributes them with a cryptographic audit trail guaranteeing that the data is not tampered with, and automatically tracks any changes applied to the reports after they are published.
 
+## Contribute
+
+Long-term archival needs resources. You can [financially contribute](https://opencollective.com/opentermsarchive/projects/dsa-systemic-risks-reports) to the sustainability of this project on our OpenCollective page.
+You can also directly [contribute data](https://github.com/OpenTermsArchive/dsa-reports-declarations/blob/main/CONTRIBUTING.md) to ensure that all reports are tracked.
+
 ## Data
 
 - [All systemic risks reports](https://github.com/OpenTermsArchive/dsa-reports-snapshots/)
