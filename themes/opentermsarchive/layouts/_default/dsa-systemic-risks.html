@@ -1,6 +1,7 @@
 {{ define "main" }}
+  {{ partial "hero.html" (dict "title" .Params.hero.title "subtitle" .Params.hero.subtitle "size" "98" ) }}
   <div class="container container--has-no-padding-top">
-    <div class="container container--98">
+    <div class="container container--98 container--has-no-padding-top">
       <div class="textcontent">
         {{ .Content }}
 
