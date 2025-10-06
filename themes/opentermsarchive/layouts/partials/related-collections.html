@@ -13,7 +13,7 @@
 {{ range where site.RegularPages "Section" "collections" }}
   {{ if (in $.relatedCollectionsIDs .Params.id) }}
 
-  <div class="container {{ $.class }}" id="related-collections">
+  <div class="container {{ $.class }}" id="related-collections-{{ .Params.id }}">
     <div class="container container--{{ $size }} container--has-no-padding-y">
       <div class="collections cardlist">
         <div class="cardlist__header">
