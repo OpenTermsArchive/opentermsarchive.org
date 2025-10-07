@@ -26,7 +26,7 @@
       {{ with .memo.Params.author }}
         {{ with index $contributors . }}
           <div class="memo__author text--light fontstyle--italic">
-            {{ i18n "memos.author" (dict "profile" .profile "name" .name) | safeHTML }}
+            {{ i18n "memos.author" (dict "profile" .profile "name" (.name | title)) | safeHTML }}
           </div>
         {{ else }}
           {{ warnf "Author %s of the memo %s not found in contributors" . $title }}
