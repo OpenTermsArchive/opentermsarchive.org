@@ -1,0 +1,15 @@
+title:
+  en: Terms Watch
+  de: Terms Watch
+  fr: Terms Watch
+author:
+  en: Shlomi Hod
+  de: Shlomi Hod
+  fr: Shlomi Hod
+description:
+  en: AI-generated summaries of changes to terms across major platforms.
+  de: AI-generated summaries of changes to terms across major platforms.
+  fr: Résumés générés par IA des modifications apportées aux conditions générales des principales plateformes.
+website: https://termswatch.io
+weight: 9
+related_collections: ["pga", "genai"]
