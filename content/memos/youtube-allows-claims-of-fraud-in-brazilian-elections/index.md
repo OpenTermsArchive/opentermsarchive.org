@@ -3,7 +3,7 @@ html_description: "YouTube removed an explicit prohibition regarding content adv
 title: "YouTube allows claims of fraud in Brazilian elections"
 service: "YouTube"
 terms_types: ["Community Guidelines"]
-dates: ["2025-08-18"]
+dates: ["2025-08-28"]
 author: "tam kien duong"
 related_collections: ["pga"]
 ---
