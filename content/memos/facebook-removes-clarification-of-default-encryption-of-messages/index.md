@@ -1,10 +1,10 @@
 ---
 html_description: Facebook removed clarifications about default end-to-end encryption from its Law Enforcement Guidelines, raising uncertainty about what data it will disclose to authorities.
-title: Facebook removes clarification of default encryption of messages 
+title: Facebook removes clarification of default encryption of messages
 service: Facebook
 terms_types: ["Law Enforcement Guidelines"]
 dates: ["2025-09-08"]
-author: saumyaanaidu
+author: Saumyaa Naidu
 related_collections: ["pga"]
 ---
 
