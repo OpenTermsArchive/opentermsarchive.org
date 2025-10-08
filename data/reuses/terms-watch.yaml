@@ -7,9 +7,9 @@ author:
   de: Shlomi Hod
   fr: Shlomi Hod
 description:
-  en: AI-generated summaries of changes to terms across major platforms.
-  de: AI-generated summaries of changes to terms across major platforms.
-  fr: Résumés générés par IA des modifications apportées aux conditions générales des principales plateformes.
+  en: AI-generated summaries of changes to terms across major social media and generative AI platforms.
+  de: AI-generated summaries of changes to terms across major social media and generative AI platforms.
+  fr: Résumés générés par IA des modifications apportées aux conditions générales des principales plateformes de réseaux sociaux et d'IA générative.
 website: https://termswatch.io
 weight: 9
 related_collections: ["pga", "genai"]
