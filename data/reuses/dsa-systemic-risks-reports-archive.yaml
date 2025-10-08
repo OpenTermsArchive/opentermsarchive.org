@@ -7,9 +7,9 @@ author:
   de: Open Terms Archive & CheckFirst
   fr: Open Terms Archive & CheckFirst
 description:
-  en: Archive of systemic risk assessments reports (Digital Services Act article 34), available independently from platforms hosting.
-  de: Archive of systemic risk assessments reports (Digital Services Act article 34), available independently from platforms hosting.
-  fr: Archive des rapports d'évaluation des risques systémiques (article 34 du Règlement sur les Services Numériques), disponibles indépendamment des plateformes d'hébergement.
+  en: Public archive of systemic risk assessment reports (Article 34, Digital Services Act), hosted independently of the platforms that publish them.
+  de: Public archive of systemic risk assessment reports (Article 34, Digital Services Act), hosted independently of the platforms that publish them.
+  fr: Archive publique des rapports d'évaluation des risques systémiques (article 34 du Règlement sur les Services Numériques), hébergée indépendamment des plateformes qui publient ces rapports.
 website: https://github.com/OpenTermsArchive/dsa-reports-versions
 weight: 10
 related_collections: ["dsa-reports"]
