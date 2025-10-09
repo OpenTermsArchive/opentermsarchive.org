@@ -10,6 +10,6 @@ description:
   en: Archive of systemic risk assessment reports mandated under article 34 of the Digital Services Act, consolidated and hosted independently of the platforms that publish them.
   de: Archive of systemic risk assessment reports mandated under article 34 of the Digital Services Act, consolidated and hosted independently of the platforms that publish them.
   fr: Archive des rapports d'évaluation des risques systémiques soumis à l'article 34 du règlement sur les services numériques (DSA), consolidés et hébergés indépendamment des plateformes.
-website: https://github.com/OpenTermsArchive/dsa-reports-versions
+website: https://opentermsarchive.org/en/dsa-systemic-risks-reports/
 weight: 10
 related_collections: ["dsa-reports"]
