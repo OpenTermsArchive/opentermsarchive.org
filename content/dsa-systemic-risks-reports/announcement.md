@@ -29,4 +29,4 @@ In line with Open Terms Archive’s first design principle, "never trust the pla
 
 This project was developed collaboratively by the Open Terms Archive and CheckFirst teams during the [**Hack the DSA**](https://regulation-tech.cnam.fr/hack-the-dsa/) hackathon hosted by the **CNAM’s Chaire sur la modération des contenus** on **October 3, 2025** and was awarded second prize by a jury of experts.
 
-This dataset currently covers systemic risk assessment reports but could be expanded to include other reports mandated by the DSA, such as transparency (article 42) or audit reports (article 37). We are looking for partners to expand coverage, reach out to contact@opentermsarchive.org if interested to collaborate on this expansion!
+This dataset currently covers systemic risk assessment reports but could be expanded to include other reports mandated by the DSA, such as transparency (article 42) or audit reports (article 37). We are looking for partners to expand coverage, reach out to <contact@opentermsarchive.org> if interested to collaborate on this expansion!
