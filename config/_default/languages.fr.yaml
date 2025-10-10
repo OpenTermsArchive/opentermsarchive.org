@@ -5,5 +5,7 @@ permalinks:
   page:
     memos: /memos/:slug/
     subscribe: /souscrire/:slug
+    dsa-systemic-risks-reports: /rapports-d-evaluation-des-risques-systemiques/:slug/
   section:
     press-review: /revue-de-presse/
+    dsa-systemic-risks-reports: /rapports-d-evaluation-des-risques-systemiques/
