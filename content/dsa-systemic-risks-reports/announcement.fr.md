@@ -1,6 +1,6 @@
 ---
 layout: "dsa-systemic-risks"
-title: Open Terms Archive répertorie désormais tous les rapports publiés dans le cadre DSA sur l'évaluation des risques systémiques des très grandes plateformes en ligne.
+title: Open Terms Archive répertorie désormais tous les rapports publiés dans le cadre du DSA sur l'évaluation des risques systémiques des très grandes plateformes en ligne.
 html_description: Open Terms Archive suit et archive désormais tous les rapports d’évaluation des risques systémiques publiés à ce jour par les 21 très grandes plateformes en ligne dans le cadre du DSA, créant ainsi un ensemble de données dédié pour ce nouveau type de document.
 hero:
   title: Open Terms Archive répertorie désormais tous les rapports publiés dans le cadre du DSA sur l'évaluation des risques systémiques des très grandes plateformes en ligne.
