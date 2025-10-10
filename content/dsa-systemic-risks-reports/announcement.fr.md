@@ -27,6 +27,6 @@ Conformément au premier principe de conception d'Open Terms Archive, « ne jama
 - **Garantir la traçabilité des versions** et l'authenticité des documents.
 - **Identifier** les plateformes qui ont publié ces rapports obligatoires et, par conséquent, celles qui ne sont pas en conformité.
 
-Ce projet a été développé en collaboration par les équipes d'Open Terms Archive et de CheckFirst lors du hackathon [**Hack the DSA**](https://regulation-tech.cnam.fr/hack-the-dsa/) organisé par la **Chaire sur la modération des contenus du CNAM** le **3 octobre 2025** et a remporté le deuxième prix décerné par un jury d'experts.
+Ce projet a été développé en collaboration par les équipes d'Open Terms Archive et de [CheckFirst](https://checkfirst.network) lors du hackathon [**Hack the DSA**](https://regulation-tech.cnam.fr/hack-the-dsa/) organisé par la **Chaire sur la modération des contenus du CNAM** le **3 octobre 2025** et a remporté le deuxième prix décerné par un jury d'experts.
 
 Cet ensemble de données couvre actuellement les rapports d'évaluation des risques systémiques, mais pourrait être élargi pour inclure d'autres rapports exigés par le DSA, tels que les rapports de transparence (article 42) ou les rapports d'audit (article 37). Nous recherchons des partenaires pour élargir la couverture. Si vous êtes intéressé par une collaboration à cette expansion, contactez-nous à l'adresse <contact@opentermsarchive.org> !
