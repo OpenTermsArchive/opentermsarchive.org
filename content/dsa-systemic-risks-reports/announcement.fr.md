@@ -1,14 +1,14 @@
 ---
 layout: "dsa-systemic-risks"
-title: Open Terms Archive répertorie désormais tous les rapports publiés par le DSA sur l'évaluation des risques systémiques des très grandes plateformes en ligne.
-html_description: Open Terms Archive suit et archive désormais tous les rapports d’évaluation des risques systémiques DSA publiés à ce jour par les 21 très grandes plateformes en ligne, créant ainsi un ensemble de données dédié pour ce nouveau type de document.
+title: Open Terms Archive répertorie désormais tous les rapports publiés dans le cadre DSA sur l'évaluation des risques systémiques des très grandes plateformes en ligne.
+html_description: Open Terms Archive suit et archive désormais tous les rapports d’évaluation des risques systémiques publiés à ce jour par les 21 très grandes plateformes en ligne dans le cadre du DSA, créant ainsi un ensemble de données dédié pour ce nouveau type de document.
 hero:
-  title: Open Terms Archive répertorie désormais tous les rapports publiés par le DSA sur l'évaluation des risques systémiques des très grandes plateformes en ligne.
+  title: Open Terms Archive répertorie désormais tous les rapports publiés dans le cadre du DSA sur l'évaluation des risques systémiques des très grandes plateformes en ligne.
 ---
 
 **Paris, le 3 octobre 2025**
 
-Open Terms Archive suit et archive désormais tous les rapports d'évaluation des risques systémiques DSA publiés à ce jour par les **21 très grandes plateformes en ligne**, créant ainsi un [ensemble de données dédié]({{< relref path="dsa-systemic-risks-reports">}}) pour ce nouveau type de document.
+Open Terms Archive suit et archive désormais tous les rapports d'évaluation des risques systémiques publiés à ce jour par les **21 très grandes plateformes en ligne** dans le cadre du DSA, créant ainsi un [ensemble de données dédié]({{< relref path="dsa-systemic-risks-reports">}}) pour ce nouveau type de document.
 
 En s'appuyant sur son logiciel open source, initialement conçu pour surveiller les modifications apportées aux documents contractuels des services en ligne, l'équipe a développé une nouvelle collection qui archive et suit automatiquement les rapports d'évaluation des risques systémiques publiés conformément au [Digital Services Act (DSA)](https://www.eu-digital-services-act.com/Digital_Services_Act_Articles.html).
 
