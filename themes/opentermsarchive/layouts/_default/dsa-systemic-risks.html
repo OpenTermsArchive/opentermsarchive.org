@@ -4,7 +4,7 @@
     <div class="container container--98 container--has-no-padding-top">
       <div class="textcontent">
         {{ .Content }}
-
+        <hr />
         <h3>Related collection</h3>
         {{ $dsaCollection := index (where site.Data.unfederated_collections "id" "dsa-reports") 0 }}
         {{ with $dsaCollection }}
