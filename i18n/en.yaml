@@ -173,3 +173,5 @@ memos:
 reuses: Reuses
 presentations:
   language: In {{ .language }}
+dsa_systemic_risks_reports:
+  related_collection: Related collection
