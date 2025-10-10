@@ -8,7 +8,7 @@ hero:
 
 **Paris, October 3, 2025**
 
-Open Terms Archive now archives and tracks all DSA systemic risk assessment Reports across the **21 very large online platforms** that have published them to date, creating a [dedicated dataset](https://opentermsarchive.org/en/dsa-systemic-risks-reports/) for this new type of document.
+Open Terms Archive now archives and tracks all DSA systemic risk assessment Reports across the **21 very large online platforms** that have published them to date, creating a [dedicated dataset]({{< relref path="dsa-systemic-risks-reports">}}) for this new type of document.
 
 Leveraging its open-source software, originally designed to monitor changes to online services’ contractual documents, the team developed a new collection that automatically archives and tracks Systemic Risk Assessment Reports published in compliance with the [EU Digital Services Act (DSA)](https://www.eu-digital-services-act.com/Digital_Services_Act_Articles.html).
 
