@@ -179,3 +179,5 @@ memos:
 reuses: Réutilisations
 presentations:
   language: En {{ .language }}
+dsa_systemic_risks_reports:
+  related_collection: Collection associé

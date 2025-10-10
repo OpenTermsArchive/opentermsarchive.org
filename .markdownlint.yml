@@ -39,3 +39,5 @@ heading-increment: false # allow to skip header levels
 
 no-trailing-punctuation:
   punctuation: .,;:。，；
+
+MD036: false # allow emphasis use as a header
