@@ -4,32 +4,34 @@
     <div class="container container--98 container--has-no-padding-top">
       <div class="textcontent">
         {{ .Content }}
-        <hr />
-        <h3>Related collection</h3>
-        {{ $dsaCollection := index (where site.Data.unfederated_collections "id" "dsa-reports") 0 }}
-        {{ with $dsaCollection }}
-          {{ partial "collection-card.html" (dict
-            "context" (dict
-              "Params" (dict
-                "name" .name
-                "tagline" .tagline
-                "description" .description
-                "totalServices" .totalServices
-                "totalTerms" .totalTerms
-                "languages" .languages
-                "jurisdictions" .jurisdictions
-                "versions" .versions
-                "dataset" .dataset
-                "declarations" .declarations
-                "snapshots" .snapshots
-                "governance" .governance
-                "i18n" .i18n
-                "engineVersion" .engineVersion
-                "endpoint" .endpoint
-                "viewDetails" false
+        {{ if .IsSection }}
+          <hr />
+          <h3>Related collection</h3>
+          {{ $dsaCollection := index (where site.Data.unfederated_collections "id" "dsa-reports") 0 }}
+          {{ with $dsaCollection }}
+            {{ partial "collection-card.html" (dict
+              "context" (dict
+                "Params" (dict
+                  "name" .name
+                  "tagline" .tagline
+                  "description" .description
+                  "totalServices" .totalServices
+                  "totalTerms" .totalTerms
+                  "languages" .languages
+                  "jurisdictions" .jurisdictions
+                  "versions" .versions
+                  "dataset" .dataset
+                  "declarations" .declarations
+                  "snapshots" .snapshots
+                  "governance" .governance
+                  "i18n" .i18n
+                  "engineVersion" .engineVersion
+                  "endpoint" .endpoint
+                  "viewDetails" false
+                )
               )
-            )
-          ) }}
+            ) }}
+          {{ end }}
         {{ end }}
       </div>
     </div>
