@@ -10,6 +10,8 @@ hero:
 
 **Open Terms Archive now tracks all DSA systemic risk assessment Reports across all very large online platforms and search engines (VLOPSEs), creating a [dedicated dataset]({{< relref path="dsa-systemic-risks-reports">}}) ensuring the long-term availability and traceability of these documents.**
 
+![The team presenting the dataset to the hackathon jury](/images/hackathon-jury.jpg)
+
 Leveraging its open-source software, originally designed to monitor changes to online services’ contractual documents, Open Terms Archive collaborated with CheckFirst to create a new collection that automatically archives and tracks Systemic Risk Assessment Reports published in compliance with the [EU Digital Services Act (DSA)](https://www.eu-digital-services-act.com/Digital_Services_Act_Articles.html).
 
 Under articles [34](https://www.eu-digital-services-act.com/Digital_Services_Act_Article_34.html) and [35](https://www.eu-digital-services-act.com/Digital_Services_Act_Article_35.html) of the DSA, VLOPSEs must publish systemic risk assessment reports at least once per year. These reports identify and analyze risks stemming from their services and describe the measures taken to mitigate them.
