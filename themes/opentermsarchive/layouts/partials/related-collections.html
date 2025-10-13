@@ -6,7 +6,7 @@
 
 {{ range $.relatedCollectionsIDs }}
   {{ if not (in $collectionsIDs .) }}
-    {{ warnf "Reladed collection %q not found" . }}
+    {{ warnf "Related collection %q not found" . }}
   {{ end }}
 {{ end }}
 

@@ -11,7 +11,7 @@ hero:
 
 The European [Digital Services Act article 34](https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng#art_34) mandates very large online platforms and search engines (VLOPSEs) to publish systemic risk assessments “at least once every year”. [Open Terms Archive](https://opentermsarchive.org/) makes these reports available independently from platforms hosting, distributes them with a cryptographic audit trail guaranteeing that the data is not tampered with, and automatically tracks any changes applied to the reports after they are published.
 
-[Read the announcement]({{< relref path="announcement" >}})
+**Read the [press release]({{< relref path="announcement" >}}).**
 
 ## Contribute
 
@@ -20,8 +20,8 @@ You can also directly [contribute data](https://github.com/OpenTermsArchive/dsa-
 
 ## Data
 
-- [All systemic risks reports](https://github.com/OpenTermsArchive/dsa-reports-snapshots/)
-- [Textual versions](https://github.com/OpenTermsArchive/dsa-reports-versions/)
+- Access [all systemic risks reports](https://github.com/OpenTermsArchive/dsa-reports-snapshots/)
+- Access [textual versions](https://github.com/OpenTermsArchive/dsa-reports-versions/)
 - Download all versions as an [Open Terms Archive dataset](https://github.com/OpenTermsArchive/dsa-reports-versions/releases)
 
 <!-- [html-validate-disable-block wcag/h63: markdown does not generate tables with scope attribute] -->
