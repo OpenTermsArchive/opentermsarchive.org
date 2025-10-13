@@ -1,15 +1,15 @@
 ---
 layout: "dsa-systemic-risks"
-title: Open Terms Archive suit désormais les rapports d'évaluation des risques systémiques du RSN (DSA)
+title: Open Terms Archive suit désormais les rapports d'évaluation des risques systémiques du DSA
 html_description: Open Terms Archive archive et suit désormais tous les rapports d'évaluation des risques systémiques publiés à ce jour dans le cadre du RSN (DSA) par toutes les très grandes plateformes en ligne.
 hero:
-  title: Open Terms Archive suit désormais les rapports d'évaluation des risques systémiques du RSN (DSA)
+  title: Open Terms Archive suit désormais les rapports d'évaluation des risques systémiques du DSA
 slug: communique-de-presse
 ---
 
 **Paris, le 3 octobre 2025**
 
-**Open Terms Archive suit désormais les rapports d'évaluation des risques systémiques publiés par l'ensemble des très grandes plateformes en ligne et moteurs de recherche (VLOPSEs) dans le cadre du RSN (DSA) et publie un [jeu de données dédié]({{< relref path="dsa-systemic-risks-reports">}}) qui garantit la disponibilité et la traçabilité de ces documents sur le long terme.**
+**Open Terms Archive suit désormais les rapports d'évaluation des risques systémiques publiés par l'ensemble des très grandes plateformes en ligne et moteurs de recherche (VLOPSEs) dans le cadre du règlement sur les services numériques (DSA) et publie un [jeu de données dédié]({{< relref path="dsa-systemic-risks-reports">}}) qui garantit la disponibilité et la traçabilité de ces documents sur le long terme.**
 
 ![L'équipe présente le jeu de données au jury du hackathon](/images/hackathon-jury.jpg)
 
