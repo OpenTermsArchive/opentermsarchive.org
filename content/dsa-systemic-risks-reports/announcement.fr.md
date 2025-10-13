@@ -21,13 +21,13 @@ Les premières versions des rapports ont notamment suscité des [inquiétudes](h
 
 Bien que le DSA n’impose pas pour le moment de rendre les rapports d'évaluation des risques systémiques lisibles par les machines, ni de notifier les modifications apportées aux versions précédemment publiées, il [impose](https://eur-lex.europa.eu/legal-content/FR/TXT/PDF/?uri=OJ:L_202402835) ces normes à d'autres types de rapports, tels que les rapports de transparence, et pourrait à l'avenir les étendre à d'autres catégories.
 
-Conformément au premier [principe de conception](https://docs.opentermsarchive.org/concepts/design-principles/) d'Open Terms Archive, « ne jamais faire confiance aux plateformes », et à sa mission de renforcer la transparence et de soutenir la recherche dans la gouvernance des plateformes, ce jeu de données a été créé pour :
+Conformément au premier [principe de conception](https://docs.opentermsarchive.org/concepts/design-principles/) d'Open Terms Archive, « ne jamais faire confiance aux plateformes », et à sa mission de renforcer la transparence et de soutenir la recherche dans la gouvernance des plateformes, ce [jeu de données]({{< relref path="dsa-systemic-risks-reports">}}) a été créé pour :
 
 - **Archiver** tous les rapports d'évaluation des risques systémiques publiés, pour donner accès aux chercheurs et régulateurs à toutes leurs versions sur le long terme.
 - **Suivre les modifications** au fil du temps afin de vérifier les mises à jour des rapports.
 - **Garantir la traçabilité des versions** et l'authenticité des documents.
 - **Identifier** les plateformes qui ont publié ces rapports obligatoires et, par conséquent, celles qui ne sont pas en conformité.
 
-Ce projet a été développé en collaboration par les équipes d'Open Terms Archive et de [CheckFirst](https://checkfirst.network) lors du hackathon [Hack the DSA](https://regulation-tech.cnam.fr/hack-the-dsa-cr/) organisé par la Chaire sur la modération des contenus du CNAM le 3 octobre 2025 et a remporté le deuxième prix décerné par un jury d'experts.
+[Ce projet]({{< relref path="dsa-systemic-risks-reports">}}) a été développé en collaboration par les équipes d'Open Terms Archive et de [CheckFirst](https://checkfirst.network) lors du hackathon [Hack the DSA](https://regulation-tech.cnam.fr/hack-the-dsa-cr/) organisé par la Chaire sur la modération des contenus du CNAM le 3 octobre 2025 et a remporté le deuxième prix décerné par un jury d'experts.
 
 Ce jeu de données couvre actuellement les rapports d'évaluation des risques systémiques, mais pourrait être élargi pour inclure d'autres rapports exigés par le DSA, tels que les rapports de transparence (article 42) ou les rapports d'audit (article 37). Nous recherchons des partenaires pour élargir la couverture. Si vous êtes intéressé·e par une collaboration à cette expansion, contactez-nous à l'adresse <contact@opentermsarchive.org> !

@@ -20,13 +20,13 @@ Early versions of the reports have [raised concerns](https://dsa-observatory.eu/
 
 While the DSA does not currently require Systemic Risk Assessment Reports to be machine-readable or mandate notification of modifications to previously published versions, it already [imposes](https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=OJ:L_202402835) these standards on other types of reports, such as transparency reports and could, in the future, extend them to additional categories.
 
-In line with Open Terms Archive’s first [design principle](https://docs.opentermsarchive.org/concepts/design-principles/), “**never trust the platforms**”, and its ongoing mission to strengthen transparency and research in online platform governance, this dataset was created to:
+In line with Open Terms Archive’s first [design principle](https://docs.opentermsarchive.org/concepts/design-principles/), “**never trust the platforms**”, and its ongoing mission to strengthen transparency and research in online platform governance, this [dataset]({{< relref path="dsa-systemic-risks-reports">}}) was created to:
 
 - **Archive** all published systemic risk assessment reports, giving researchers and regulators access to all of their versions over the long term.
 - **Track modifications** over time to enable verification of report updates.
 - **Ensure version traceability** and document authenticity.
 - **Identify** which platforms have published these required reports, and therefore which ones are not in compliance.
 
-This project was developed collaboratively by the Open Terms Archive and [CheckFirst](https://checkfirst.network) teams during the [Hack the DSA](https://regulation-tech.cnam.fr/hack-the-dsa-cr/) hackathon hosted by the CNAM’s _Chaire sur la modération des contenus_ on October 3, 2025 and was awarded second prize by a jury of experts.
+[This project]({{< relref path="dsa-systemic-risks-reports">}}) was developed collaboratively by the Open Terms Archive and [CheckFirst](https://checkfirst.network) teams during the [Hack the DSA](https://regulation-tech.cnam.fr/hack-the-dsa-cr/) hackathon hosted by the CNAM’s _Chaire sur la modération des contenus_ on October 3, 2025 and was awarded second prize by a jury of experts.
 
 This dataset currently covers systemic risk assessment reports but could be expanded to include other reports mandated by the DSA, such as transparency (article 42) or audit reports (article 37). We are looking for partners to expand coverage, reach out to <contact@opentermsarchive.org> if interested to collaborate on this expansion!
