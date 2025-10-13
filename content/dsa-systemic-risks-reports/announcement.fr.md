@@ -13,7 +13,7 @@ slug: communique-de-presse
 
 ![L'équipe présente le jeu de données au jury du hackathon](/images/hackathon-jury.jpg)
 
-En s’appuyant sur son logiciel libre, initialement conçu pour surveiller les modifications apportées aux documents contractuels des services en ligne, l'équipe Open Terms Archive a collaboré avec CheckFirst pour développer une nouvelle collection qui archive et suit automatiquement les rapports d'évaluation des risques systémiques publiés conformément au règlement européen sur les services numériques ([_Digital Services Act_, « DSA »](https://www.eu-digital-services-act.com/Digital_Services_Act_Articles.html)).
+En s’appuyant sur son logiciel libre, initialement conçu pour surveiller les modifications apportées aux documents contractuels des services en ligne, [Open Terms Archive](https://opentermsarchive.org) a collaboré avec [CheckFirst](https://checkfirst.network) pour développer une nouvelle collection qui archive et suit automatiquement les rapports d'évaluation des risques systémiques publiés conformément au règlement européen sur les services numériques ([_Digital Services Act_, « DSA »](https://www.eu-digital-services-act.com/Digital_Services_Act_Articles.html)).
 
 En vertu des articles [34](https://www.eu-digital-services-act.com/Digital_Services_Act_Article_34.html) et [35](https://www.eu-digital-services-act.com/Digital_Services_Act_Article_35.html) du DSA, les très grandes plateformes en ligne et les moteurs de recherche (VLOPs et VLOSEs, collectivement appelées VLOPSEs) doivent publier au moins une fois par an des rapports d'évaluation des risques systémiques. Dans ces rapports, elles identifient et analysent les risques découlant de leurs services et décrivent les mesures prises pour les atténuer.
 
