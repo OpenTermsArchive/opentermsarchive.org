@@ -3,7 +3,7 @@ html_description: X now requires creators to have an active paid subscription to
 title: X adds paid subscription requirement to Creator Monetization Standards
 service: "X"
 terms_types: ["Content Monetisation Policy"]
-dates: ["2025-20-28"]
+dates: ["2025-10-28"]
 author: Asma Sifaoui
 related_collections: ["vlopses-us"]
 ---
