@@ -3,7 +3,7 @@ html_description: LinkedIn now uses profile details, posts, and feed activity da
 title: LinkedIn now uses profile details, posts, and feed activity data to train AI models
 service: "LinkedIn"
 terms_types: ["Privacy Policy"]
-dates: ["2024-11-03"]
+dates: ["2025-11-03"]
 author: Saumyaa Naidu
 related_collections: ["vlopses-ie"]
 ---
