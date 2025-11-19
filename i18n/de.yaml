@@ -46,6 +46,9 @@ about:
   bizdev:
     title: Business Developers
     subtitle: Promote Open Terms Archive to increase adoption, impact and sustainability.
+  analysts:
+    title: Analysts
+    subtitle: Analyze terms and write memos.
   incubator:
     title: Incubator
     subtitle: Provides legal hosting and political sponsorship.
