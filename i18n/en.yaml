@@ -169,7 +169,7 @@ pagination:
     current:
       aria_label: Current page, number {{ .currrentPageNumber }}
 memos:
-  author: By <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, {{ if .isTeamMember }}a Open Terms Archive team member{{ else }}a community contributor{{ end }}
+  author: By <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, {{ if .isTeamMember }}an Open Terms Archive team member{{ else }}a community contributor{{ end }}
 reuses: Reuses
 presentations:
   language: In {{ .language }}
