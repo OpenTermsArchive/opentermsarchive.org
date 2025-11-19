@@ -104,6 +104,15 @@
         </div>
         <div>
           {{ partial "contributors.html" (dict
+            "staffType" "analysts"
+            "showInfo" true
+            "class" "mb--2xl contributors--has-no-margin-top"
+            "title" (i18n "about.analysts.title")
+            "description" (i18n "about.analysts.subtitle")
+          ) }}
+        </div>
+        <div>
+          {{ partial "contributors.html" (dict
             "staffType" "communityManagers"
             "showInfo" true
             "class" "mb--2xl contributors--has-no-margin-top"
