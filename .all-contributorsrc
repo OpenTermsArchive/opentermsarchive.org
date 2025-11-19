@@ -136,6 +136,14 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "name": "Siegrid Henry",
+      "profile": "https://www.linkedin.com/in/siegridhenry/",
+      "contributions": [
+        "content",
+        "promotion"
+      ]
     }
   ],
   "repoType": "github",
