@@ -11,11 +11,11 @@
     {{ if eq $template "list" }}<h6 class="memo__subtitle h6--ultrathin">{{ end }}
     {{ if eq $template "single" }}<h4 class="memo__subtitle h4--ultrathin">{{ end }}
       {{ if reflect.IsSlice .memo.Params.service }}
-        {{ delimit .memo.Params.service " , " }}
+        {{ delimit .memo.Params.service ", " }}
       {{ else }}
         {{ .memo.Params.service }}
       {{ end }} ▪
-      {{ delimit .memo.Params.terms_types " , " }} ▪
+      {{ delimit .memo.Params.terms_types ", " }} ▪
       {{ $formatedDates := slice }}
       {{ range .memo.Params.dates }}
         {{ $formatedDate := ( . | time.Format ":date_long") }}
