@@ -1,0 +1,13 @@
+{{/*
+  Check if an author name is a current team member (excluding alumni)
+  Usage: {{ $isTeamMember := partial "func/isTeamMember.html" "Author Name" }}
+*/}}
+{{ $authorName := . }}
+{{ $isTeamMember := false }}
+{{ range $group, $members := site.Data.staff }}
+  {{ if and (ne $group "alumni") (in $members $authorName) }}
+    {{ $isTeamMember = true }}
+  {{ end }}
+{{ end }}
+{{ return $isTeamMember }}
+
