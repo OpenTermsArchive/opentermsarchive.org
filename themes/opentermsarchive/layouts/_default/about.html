@@ -85,16 +85,6 @@
         </div>
         <div>
           {{ partial "contributors.html" (dict
-            "staffType" "alumni"
-            "showInfo" true
-            "class" "mb--2xl contributors--has-no-margin-top"
-            "title" (i18n "about.alumni.title")
-            "titleSize" "h4"
-            "description" (i18n "about.alumni.subtitle")
-          ) }}
-        </div>
-        <div>
-          {{ partial "contributors.html" (dict
             "staffType" "bizDev"
             "showInfo" true
             "class" "mb--2xl contributors--has-no-margin-top"
@@ -118,6 +108,15 @@
             "class" "mb--2xl contributors--has-no-margin-top"
             "title" (i18n "about.community_managers.title")
             "description" (i18n "about.community_managers.subtitle")
+          ) }}
+        </div>
+        <div>
+          {{ partial "contributors.html" (dict
+            "staffType" "alumni"
+            "showInfo" true
+            "class" "mb--2xl contributors--has-no-margin-top"
+            "title" (i18n "about.alumni.title")
+            "description" (i18n "about.alumni.subtitle")
           ) }}
         </div>
         <div>
