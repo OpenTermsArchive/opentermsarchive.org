@@ -1,28 +1,35 @@
 {{ $size := default "87" .size }}
-{{ $collectionsIDs := slice }}
+{{ $allCollectionsIDs := slice }}
 {{ range site.Data.collections }}
-  {{ $collectionsIDs = $collectionsIDs | append (index . "id") }}
+  {{ $allCollectionsIDs = $allCollectionsIDs | append (index . "id") }}
 {{ end }}
 
 {{ range $.relatedCollectionsIDs }}
-  {{ if not (in $collectionsIDs .) }}
+  {{ if not (in $allCollectionsIDs .) }}
     {{ warnf "Related collection %q not found" . }}
   {{ end }}
 {{ end }}
 
-<div class="container {{ $.class }}" id="related-collections-{{ .Params.id }}">
-  <div class="container container--{{ $size }} container--has-no-padding-y">
-    <div class="collections cardlist">
-      <div class="cardlist__header">
-        <h3 class="cardlist__title">{{ i18n "impact.related_collections" }}</h3>
-      </div>
-      <div class="cardlist__items">
-        {{ range where site.RegularPages "Section" "collections" }}
-          {{ if in $.relatedCollectionsIDs .Params.id }}
+{{ $matchingCollections := slice }}
+{{ range where site.RegularPages "Section" "collections" }}
+  {{ if in $.relatedCollectionsIDs .Params.id }}
+    {{ $matchingCollections = $matchingCollections | append . }}
+  {{ end }}
+{{ end }}
+
+{{ if $matchingCollections }}
+  <div class="container {{ $.class }}" id="related-collections-{{ .Params.id }}">
+    <div class="container container--{{ $size }} container--has-no-padding-y">
+      <div class="collections cardlist">
+        <div class="cardlist__header">
+          <h3 class="cardlist__title">{{ i18n "impact.related_collections" }}</h3>
+        </div>
+        <div class="cardlist__items">
+          {{ range $matchingCollections }}
             {{ partial "collection-card.html" (dict "context" .) }}
           {{ end }}
-        {{ end }}
+        </div>
       </div>
     </div>
   </div>
-</div>
+{{ end }}
