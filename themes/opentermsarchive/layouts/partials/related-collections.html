@@ -10,21 +10,19 @@
   {{ end }}
 {{ end }}
 
-{{ range where site.RegularPages "Section" "collections" }}
-  {{ if (in $.relatedCollectionsIDs .Params.id) }}
-
-  <div class="container {{ $.class }}" id="related-collections-{{ .Params.id }}">
-    <div class="container container--{{ $size }} container--has-no-padding-y">
-      <div class="collections cardlist">
-        <div class="cardlist__header">
-          <h3 class="cardlist__title">{{ i18n "impact.related_collections" }}</h3>
-        </div>
-        <div class="cardlist__items">
-          {{ partial "collection-card.html" (dict "context" .) }}
-        </div>
+<div class="container {{ $.class }}" id="related-collections-{{ .Params.id }}">
+  <div class="container container--{{ $size }} container--has-no-padding-y">
+    <div class="collections cardlist">
+      <div class="cardlist__header">
+        <h3 class="cardlist__title">{{ i18n "impact.related_collections" }}</h3>
+      </div>
+      <div class="cardlist__items">
+        {{ range where site.RegularPages "Section" "collections" }}
+          {{ if in $.relatedCollectionsIDs .Params.id }}
+            {{ partial "collection-card.html" (dict "context" .) }}
+          {{ end }}
+        {{ end }}
       </div>
     </div>
   </div>
-
-  {{ end }}
-{{ end }}
+</div>
