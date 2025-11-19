@@ -6,7 +6,6 @@ terms_types: ["Privacy Policy"]
 dates: ["2025-10-30"]
 author: tam kien duong
 related_collections: ["vlopses-gb"]
-draft: true
 ---
 
 TikTok has [announced](https://github.com/OpenTermsArchive/vlopses-gb-versions/commit/68d0988a48b7fb7e95e8fc4763533ade9debd2e8) several modifications to the extent of its data collection practices in Europe, the United Kingdom, and Switzerland. The document specifies that, starting on 30 November 2025, the service will now gather "precise location information from devices," whereas previous versions only allow for using "approximate location." The new policy also allows data collection from "interactions with websites within the in-app browser." In addition, TikTok will no longer restrict itself to collecting data from "activity on and off the Platform," extending data collection to "information associated with (...) user account[s\]." Lastly, TikTok will explicitly scan direct messages for safety and protection.
