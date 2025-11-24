@@ -4,7 +4,7 @@
 {{ $showInfo := default false .showInfo }}
 
 <div class="contributor">
-  <a class="contributor__link" href="{{ .contributor.profile }}" target="_blank" rel="nofollow noopener">
+  <a class="contributor__link" href="{{ .contributor.profile }}" target="_blank" rel="nofollow noopener" title="{{ $.contributor.name }}">
     {{ with $showImage }}
       {{ $image := default (resources.Get "/images/contributors/placeholder.jpg") (resources.Get (printf "/images/contributors/%s.jpg" ($.contributor.name | urlize))) }}
       {{ with $.contributor.avatar_url }}

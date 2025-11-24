@@ -28,7 +28,7 @@
     {{ if eq $template "single" }}
       {{ $contributors := partial "load_contributors.html" . }}
       {{ with .memo.Params.author }}
-        {{ with index $contributors . }}
+        {{ with index $contributors (. | lower) }}
           <div class="memo__author text--light fontstyle--italic">
             {{ $isTeamMember := partial "func/isTeamMember.html" .name }}
             {{ i18n "memos.author" (dict "profile" .profile "name" (.name | title) "isTeamMember" $isTeamMember) | safeHTML }}

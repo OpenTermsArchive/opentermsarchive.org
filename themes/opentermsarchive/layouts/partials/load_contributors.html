@@ -1,6 +1,21 @@
+{{ $staffNamesLowerByType := dict }}
+{{ range $staffType, $staffMembers := site.Data.staff }}
+  {{ $staffNamesLower := slice }}
+  {{ range $staffMembers }}{{ $staffNamesLower = $staffNamesLower | append (. | lower) }}{{ end }}
+  {{ $staffNamesLowerByType = merge $staffNamesLowerByType (dict $staffType $staffNamesLower) }}
+{{ end }}
+
 {{ $contributors := dict }}
 {{ range (resources.Get site.Params.contributors.local_source | unmarshal).contributors }}
-  {{ $contributors = $contributors | merge (dict .name .) }}
+  {{ $contributorNameLower := .name | lower }}
+  {{ $contributorData := . }}
+  {{ $contributorData = merge $contributorData (dict "staff" nil) }}
+  {{ range $staffType, $staffNamesLower := $staffNamesLowerByType }}
+    {{ if in $staffNamesLower $contributorNameLower }}
+      {{ $contributorData = merge $contributorData (dict "staff" $staffType) }}
+    {{ end }}
+  {{ end }}
+  {{ $contributors = $contributors | merge (dict $contributorNameLower $contributorData) }}
 {{ end }}
 
 {{ $additionalSources := site.Params.contributors.additional_sources }}
@@ -16,30 +31,29 @@
     {{ else with .Value }}
       {{ $repository := (.Content | unmarshal).projectName }}
       {{ range (.Content | unmarshal).contributors }}
-        {{ $contributorName := .name }}
+        {{ $contributorNameLower := .name | lower }}
         {{ $contributorData := dict
           "repositories" (slice ($repository | lower))
           "avatar_url" .avatar_url
           "contributions" .contributions
           "login" .login
-          "name" $contributorName
+          "name" .name
           "profile" .profile
           "staff" nil
         }}
 
-        {{ if isset $contributors $contributorName }}
-          {{ $existingContributor := index $contributors $contributorName }}
+        {{ if isset $contributors $contributorNameLower }}
+          {{ $existingContributor := index $contributors $contributorNameLower }}
           {{ $contributorData = merge $contributorData (dict "repositories" (union $existingContributor.repositories $contributorData.repositories)) }}
         {{ end }}
 
-        {{ range $staffType, $staffMembers := site.Data.staff }}
-          {{ if in $staffMembers $contributorName }}
-            {{ $existingContributor := index $contributors $contributorName }}
+        {{ range $staffType, $staffNamesLower := $staffNamesLowerByType }}
+          {{ if in $staffNamesLower $contributorNameLower }}
             {{ $contributorData = merge $contributorData (dict "staff" $staffType) }}
           {{ end }}
         {{ end }}
 
-        {{ $contributors = merge $contributors (dict $contributorName $contributorData) }}
+        {{ $contributors = merge $contributors (dict $contributorNameLower $contributorData) }}
 
       {{ end }}
     {{ else }}
