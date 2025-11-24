@@ -7,12 +7,10 @@
 {{ $title := .title }}
 {{ $titleSize := default "h3" .titleSize }}
 {{ $description := .description }}
-{{ $allStaffNames := slice }}
-{{ range site.Data.staff }}{{ $allStaffNames = union $allStaffNames . }}{{ end }}
 
 {{ range $contributor := $contributors }}
   {{ with $requestedStaffType }}
-    {{ if (in (index site.Data.staff $requestedStaffType) $contributor.name) }}
+    {{ if eq $contributor.staff $requestedStaffType }}
       {{ $filteredContributors = $filteredContributors | append $contributor }}
     {{ end }}
   {{ else }}
@@ -23,7 +21,7 @@
         {{ end }}
       {{ end }}
     {{ else }}
-      {{ if not (in $allStaffNames $contributor.name) }}
+      {{ if not $contributor.staff }}
         {{ $filteredContributors = $filteredContributors | append $contributor }}
       {{ end }}
     {{ end }}

@@ -3,10 +3,15 @@
   Usage: {{ $isTeamMember := partial "func/isTeamMember.html" "Author Name" }}
 */}}
 {{ $authorName := . }}
+{{ $authorNameLower := $authorName | lower }}
 {{ $isTeamMember := false }}
 {{ range $group, $members := site.Data.staff }}
-  {{ if and (ne $group "alumni") (in $members $authorName) }}
-    {{ $isTeamMember = true }}
+  {{ if ne $group "alumni" }}
+    {{ range $members }}
+      {{ if eq (. | lower) $authorNameLower }}
+        {{ $isTeamMember = true }}
+      {{ end }}
+    {{ end }}
   {{ end }}
 {{ end }}
 {{ return $isTeamMember }}
