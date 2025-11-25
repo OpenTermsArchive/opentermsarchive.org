@@ -168,7 +168,7 @@ stats:
 alias:
   title: Open Terms Archive
   html_description: Open Terms Archive enregistre publiquement chaque version des conditions d'utilisation des services en ligne pour en permettre le contrôle démocratique.
-  message: Vous devriez être redirigé rapidement, si toutefois ce n'était pas le cas <a href="{{ .permalink }}">cliquez ici</a>.
+  message: Vous devriez être redirigé‧e rapidement, si toutefois ce n'était pas le cas <a href="{{ .permalink }}">cliquez ici</a>.
 pagination:
   nav_aria_label: Navigation de la pagination
   previous_page: Page précédente
@@ -178,7 +178,7 @@ pagination:
     current:
       aria_label: Page courante, numéro {{ .currrentPageNumber }}
 memos:
-  author: Par <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, {{ if .isTeamMember }}un.e membre de l'équipe d'Open Terms Archive{{ else }}un.e contributeur·trice de la communauté{{ end }}
+  author: Par <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, {{ if .isTeamMember }}un‧e membre de l'équipe d'Open Terms Archive{{ else }}un‧e contributeur·trice de la communauté{{ end }}
 reuses: Réutilisations
 presentations:
   language: En {{ .language }}
