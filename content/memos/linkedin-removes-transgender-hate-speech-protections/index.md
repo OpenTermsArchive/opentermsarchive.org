@@ -7,6 +7,7 @@ dates: ["2025-07-29"]
 author: Matti Schneider
 assistance: [GPT-4o, DeepL]
 related_collections: ["pga"]
+featured: true
 ---
 
 LinkedIn [removed](https://github.com/OpenTermsArchive/pga-versions/commit/537447facc3a1922e77cfc7fe90b0fc69414b613#diff-88386d527dff09b9311f1e66713dff8eebbf339a52952a1b2376eb198d34a60fL313) transgender-related protections from its policy on hateful and derogatory content. The platform **no longer lists “misgendering[^misgendering] or deadnaming[^deadnaming] of transgender individuals” as examples of prohibited conduct**. While “content that attacks, denigrates, intimidates, dehumanizes, incites or threatens hatred, violence, prejudicial or discriminatory action” is still considered hateful, addressing a person by a gender and name they ask not be designated by is not anymore.

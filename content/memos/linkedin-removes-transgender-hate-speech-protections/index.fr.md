@@ -7,6 +7,7 @@ dates: ["2025-07-29"]
 author: Matti Schneider
 assistance: [GPT-4o, DeepL]
 related_collections: ["pga"]
+featured: true
 ---
 
 LinkedIn [a retiré](https://github.com/OpenTermsArchive/pga-versions/commit/537447facc3a1922e77cfc7fe90b0fc69414b613#diff-88386d527dff09b9311f1e66713dff8eebbf339a52952a1b2376eb198d34a60fL313) de sa « politique sur le contenu haineux et dénigrant » les protections spécifiques aux personnes transgenres. La plateforme **ne mentionne plus le « mégenrage[^misgendering] ou l’utilisation du prénom de naissance » comme exemples de comportements prohibés**. Si le « contenu apparenté à une attaque personnelle, une intimidation, une humiliation, du harcèlement ou du dénigrement » est toujours considéré comme abusif, le fait de s'adresser à une personne en utilisant un genre et un nom qu’elle ne souhaite plus utiliser ne l’est plus.
