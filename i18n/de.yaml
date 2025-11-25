@@ -179,8 +179,23 @@ pagination:
       aria_label: Current page, number {{ .currrentPageNumber }}
 memos:
   author: By <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, a third-party contributor
+  featured:
+    title: Memos
+    subtitle: Memos are short explanations of a specific change in some terms of a service.
+    desc: | 
+      They remove the technical and expertise barriers needed to interpret a textual change.
+      They can provide additional context to make sense of that change, such as outlining the regulation, geopolitical tensions or public controversy that likely led to it.
+      They can also highlight the potential consequences of that change on the users and partners of the service, as well as potential real-world harms to society.
+    cta: See all memos
 reuses: Reuses
 presentations:
   language: In {{ .language }}
 dsa_systemic_risks_reports:
   related_collection: Related collection
+publications:
+  author: By <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, {{ if .isTeamMember }}an Open Terms Archive team member{{ else }}a community contributor{{ end }}
+  title: Trend reports
+  subtitle: Trend reports compile observations of multiple changes to draw broader conclusions on how rules evolve across time, services and jurisdictions.
+  desc: | 
+    They use either memos or direct recorded changes as sources.
+    They enable uncovering adaptation to external events on longer periods of time, or even at the scale of an entire industrial sector.

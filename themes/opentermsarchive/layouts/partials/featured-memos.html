@@ -1,0 +1,30 @@
+{{ $title := i18n "memos.featured.title" }}
+{{ $subtitle := i18n "memos.featured.subtitle" }}
+{{ $description := i18n "memos.featured.desc" }}
+
+{{ $memos := where site.RegularPages "Section" "memos" }}
+{{ $featuredMemos := where $memos "Params.featured" true }}
+
+{{ if gt (len $featuredMemos) 0 }}
+  <div class="container container--has-padding-top-medium container--has-no-padding-bottom">
+    <div class="container container--has-no-padding-y container--98">
+      <div class="textcontent">
+        <h2>{{ i18n "memos.featured.title" }}</h2>
+        <h3 class="h4">{{ i18n "memos.featured.subtitle" }}</h3>
+        {{ i18n "memos.featured.desc" | markdownify }}
+      </div>
+      <div class="mt--xl">
+        {{ range $featuredMemos }}
+          {{ partial "memo.html" (dict "memo" . "template" "list" "class" "mb--xl" "context" .) }}
+        {{ end }}
+      </div>
+    </div>
+    <div class="container container--has-no-padding-top container--98 text--right">
+      <a href="{{ relref . "/memos" }}" class="button">
+        {{ i18n "memos.featured.cta" }}
+        <i class="icon ml--2xs" data-lucide="arrow-right"></i>
+      </a>
+    </div>
+  </div>
+{{ end }}
+
