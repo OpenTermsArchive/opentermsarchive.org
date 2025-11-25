@@ -7,6 +7,7 @@ dates: ["2025-01-07"]
 author: Matti Schneider
 related_collections: ["pga"]
 aliases: /en/memos/meta-dampens-hate-speech-policy.de/
+featured: true
 ---
 
 Meta hat den Abschnitt „Hassrede“ seiner Gemeinschaftsstandards [umgeschrieben](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20) und damit die auf seinen Plattformen Facebook, Instagram und Threads zulässigen Inhalte erheblich erweitert. Der neue Abschnitt heißt jetzt „hasserfülltes Verhalten“[^ubersetzung] und entfernt die Aussage, dass Hassreden „ein Umfeld der Einschüchterung und Ausgrenzung“ schaffe. Außerdem wird jeder Hinweis auf „Gewalt in der Offline-Welt“ gestrichen, die aus Hassreden resultieren könnte.

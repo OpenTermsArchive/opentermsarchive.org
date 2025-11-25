@@ -6,6 +6,7 @@ terms_types: ["Community Guidelines"]
 dates: ["2025-01-07"]
 author: Matti Schneider
 related_collections: ["pga"]
+featured: true
 ---
 
 Meta [rewrote](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20) the “hate speech” section of its Community Guidelines, significantly broadening the content allowed on its platforms Facebook, Instagram and Threads. The rewritten section is now called “hateful conduct” and removes the statement that hate speech “creates an environment of intimidation and exclusion”. It also removes every mention to “offline violence” that could result from online hate speech.

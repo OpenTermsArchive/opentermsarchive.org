@@ -6,6 +6,7 @@ terms_types: ["Community Guidelines"]
 dates: ["2025-01-07"]
 author: Matti Schneider
 related_collections: ["pga"]
+featured: true
 ---
 
 Meta a [réécrit](https://github.com/OpenTermsArchive/pga-versions/commit/a90e9d276cda1ca23878fd2b2df7cc066d549c20) la section « discours haineux » de ses standards de la communauté, élargissant ainsi considérablement le contenu autorisé sur ses plateformes Facebook, Instagram et Threads. La section réécrite s’appelle désormais « conduite haineuse »[^traduction] et supprime la déclaration selon laquelle les discours haineux «  créent un environnement intimidant et excluant ». Elle supprime également toute mention de la « violence hors ligne » qui pourrait résulter d’un discours de haine en ligne.
