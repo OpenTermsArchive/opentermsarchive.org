@@ -1,0 +1,47 @@
+{{ $template := default "single" .template }}
+{{ $title := .publication.Title }}
+
+<article class="publication{{ with .class }} {{ . }}{{ end }}">
+  <header>
+    {{ if eq $template "list" }}<h4 class="publication__title"><a href="{{ .publication.RelPermalink }}">{{ $title }}</a></h4>{{ end }}
+    {{ if eq $template "single" }}<h1 class="publication__title">{{ $title }}</h1>{{ end }}
+
+    {{ if eq $template "list" }}<h6 class="publication__subtitle h6--ultrathin">{{ end }}
+    {{ if eq $template "single" }}<h4 class="publication__subtitle h4--ultrathin">{{ end }}
+      
+      {{ if reflect.IsSlice .publication.Params.regulations }}
+        {{ delimit .publication.Params.regulations ", " }}
+      {{ else }}
+        {{ .publication.Params.regulations }}
+      {{ end }} ▪
+      {{ if reflect.IsSlice .publication.Params.topic }}
+        {{ delimit .publication.Params.topic ", " }}
+      {{ else }}
+        {{ .publication.Params.topic }}
+      {{ end }} ▪
+      {{ .publication.Params.date | time.Format ":date_long" }}
+
+    {{ if eq $template "list" }}</h6>{{ end }}
+    {{ if eq $template "single" }}</h4>{{ end }}
+
+    {{ if eq $template "single" }}
+      {{ $contributors := partial "load_contributors.html" . }}
+      {{ with .publication.Params.author }}
+        {{ with index $contributors (. | lower) }}
+          <div class="publication__author text--light fontstyle--italic">
+            {{ $isTeamMember := partial "func/isTeamMember.html" .name }}
+            {{ i18n "publications.author" (dict "profile" .profile "name" (.name | title) "isTeamMember" $isTeamMember) | safeHTML }}
+          </div>
+        {{ else }}
+          {{ warnf "Author %s of the publication %s not found in contributors" . $title }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+</header>
+
+  {{ if eq $template "single" }}
+    <div class="publication__content textcontent">
+      {{ .publication.Content }}
+    </div>
+  {{ end }}
+</article>

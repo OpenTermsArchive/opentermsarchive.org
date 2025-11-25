@@ -179,8 +179,23 @@ pagination:
       aria_label: Page courante, numéro {{ .currrentPageNumber }}
 memos:
   author: Par <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, {{ if .isTeamMember }}un‧e membre de l'équipe d'Open Terms Archive{{ else }}un‧e contributeur·trice de la communauté{{ end }}
+  featured:
+    title: Mémos
+    subtitle: Les mémos sont de brèves explications concernant un changement spécifique apporté à certaines conditions d'un service.
+    desc: | 
+      Ils suppriment les obstacles techniques et liés à l'expertise nécessaires pour interpréter une modification textuelle.
+      Ils peuvent fournir un contexte supplémentaire pour donner un sens à cette modification, par exemple en décrivant la réglementation, les tensions géopolitiques ou les controverses publiques qui ont probablement conduit à celle-ci.
+      Ils peuvent également mettre en évidence les conséquences potentielles de cette modification sur les utilisateurs et les partenaires du service, ainsi que les dommages potentiels dans le monde réel pour la société.
+    cta: Voir tous les mémos
 reuses: Réutilisations
 presentations:
   language: En {{ .language }}
 dsa_systemic_risks_reports:
   related_collection: Collection associé
+publications:
+  author: Par <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, {{ if .isTeamMember }}un‧e membre de l'équipe d'Open Terms Archive{{ else }}un‧e contributeur·trice de la communauté{{ end }}
+  title: Rapport de tendances
+  subtitle: Les rapports de tendances compilent les observations relatives à de multiples changements afin de tirer des conclusions plus générales sur l'évolution des règles au fil du temps, selon les services et les juridictions.
+  desc: | 
+    Ils utilisent comme sources, soit des mémos, soit des changements enregistrés directement.
+    Ils permettent de mettre en évidence l'adaptation à des événements externes sur des périodes plus longues, voire à l'échelle d'un secteur industriel entier.
