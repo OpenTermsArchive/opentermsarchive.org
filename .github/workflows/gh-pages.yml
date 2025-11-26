@@ -23,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Set Hugo up
-        uses: peaceiris/actions-hugo@3a287949d38134f0920e6ac20032acef6d4a23c4
+        uses: peaceiris/actions-hugo@75d2e84710de30f6ff7268e08f310b60ef14033f
         with:
           hugo-version: '0.147.1'
           extended: true # Prevent error building site: POSTCSS: failed to transform, see https://gohugo.io/troubleshooting/faq/#i-get-this-feature-is-not-available-in-your-current-hugo-version
