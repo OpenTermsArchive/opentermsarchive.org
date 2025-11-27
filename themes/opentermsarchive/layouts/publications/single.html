@@ -6,10 +6,6 @@
     </div>
   </div>
 
-  <div class="container container--has-no-padding-y">
-    <div class="container container--98 container--has-padding-bottom-medium">
-      {{ partial "publication.html" (dict "publication" . "template" "single") }}
-    </div>
-  </div>
+  {{ partial "publication.html" (dict "publication" . "template" "single") }} 
 
 {{ end }}

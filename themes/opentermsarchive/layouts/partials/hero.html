@@ -10,6 +10,11 @@
           {{ end }}
         </h2>
       {{ end }}
+      {{ with .content }}
+        <div class="hero__content">
+          {{ . | markdownify }}
+        </div>
+      {{ end }}
     </div>
   </div>
 </div>
