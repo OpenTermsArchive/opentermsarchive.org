@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+  <div class="container container--wide container--is-gray container--has-no-padding-y">
+    <div class="container container--1211 container--has-padding-y-small">
+      {{ partial "breadcrumb.html" . }}
+    </div>
+  </div>
+
+  {{ partial "publication.html" (dict "publication" . "template" "single") }}
+
+{{ end }}

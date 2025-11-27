@@ -1,0 +1,51 @@
+{{ $template := default "single" .template }}
+{{ $title := .publication.Title }}
+
+{{ $regulations := "" }}
+{{ if reflect.IsSlice .publication.Params.regulations }}
+  {{ $regulations = delimit .publication.Params.regulations ", " }}
+{{ else }}
+  {{ $regulations = .publication.Params.regulations }}
+{{ end }}
+
+{{ $topics := "" }}
+{{ if reflect.IsSlice .publication.Params.topic }}
+  {{ $topics = delimit .publication.Params.topic ", " }}
+{{ else }}
+  {{ $topics = .publication.Params.topic }}
+{{ end }}
+
+{{ $date := .publication.Params.date | time.Format ":date_long" }}
+{{ $subtitle := printf "%s ▪ %s ▪ %s" $regulations $topics $date }}
+
+{{ if eq $template "single" }}
+  {{ $contributors := partial "load_contributors.html" . }}
+  {{ $authorText := "" }}
+  {{ with .publication.Params.author }}
+    {{ with index $contributors (. | lower) }}
+      {{ $isTeamMember := partial "func/isTeamMember.html" .name }}
+      {{ $authorText = i18n "publications.author" (dict "profile" .profile "name" (.name | title) "isTeamMember" $isTeamMember) | safeHTML }}
+    {{ else }}
+      {{ warnf "Author %s of the publication %s not found in contributors" . $title }}
+    {{ end }}
+  {{ end }}
+  {{ partial "hero.html" (dict "title" ($title | safeHTML) "subtitle" ($subtitle | safeHTML) "content" ($authorText | safeHTML) "size" "109") }}
+{{ end }}
+
+<div class="container container--has-no-padding-y">
+  <div class="container container--109 {{ if eq $template "list" }}container--has-padding-bottom-medium{{ end }} container--has-no-padding-top">
+    <article class="publication{{ with .class }} {{ . }}{{ end }}">
+      {{ if eq $template "list" }}
+        <header>
+          <h4 class="publication__title"><a href="{{ .publication.RelPermalink }}">{{ $title }}</a></h4>
+          <h6 class="publication__subtitle h6--ultrathin">{{ $subtitle | safeHTML }}</h6>
+        </header>
+      {{ end }}
+      {{ if eq $template "single" }}
+        <div class="publication__content textcontent">
+          {{ .publication.Content }}
+        </div>
+      {{ end }}
+    </article>
+  </div>
+</div>

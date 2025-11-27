@@ -4,11 +4,6 @@
   &.hero--has-no-margin-bottom {
     margin-bottom: 0;
   }
-
-  & a {
-    display: inline-block;
-    font-size: 2.75rem;
-  }
 }
 
 .hero__title {
@@ -23,6 +18,11 @@
   @mixin grid 12, 11;
 
   font-size: 2.75rem;
+
+  & > a {
+    display: inline-block;
+    font-size: 2.75rem;
+  }
 }
 
 .hero__title + .hero__subtitle {
@@ -40,4 +40,8 @@
   & > .hero__subtitle {
     @mixin grid 10, 9;
   }
+}
+
+.hero__content {
+  margin-top: var(--2xs);
 }

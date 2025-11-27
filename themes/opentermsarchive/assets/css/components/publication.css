@@ -1,0 +1,17 @@
+.publication {
+  padding: var(--mxl);
+  background-color: var(--colorWhite);
+  border: 1px solid var(--colorBlack300);
+}
+
+.publication__title {
+  margin-bottom: var(--ms);
+}
+
+.publication__subtitle + .publication__author {
+  margin-top: var(--mxs);
+}
+
+.publication__content {
+  padding-top: var(--ml);
+}
