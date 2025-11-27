@@ -3,12 +3,14 @@
 
 <article class="publication{{ with .class }} {{ . }}{{ end }}">
   <header>
-    {{ if eq $template "list" }}<h4 class="publication__title"><a href="{{ .publication.RelPermalink }}">{{ $title }}</a></h4>{{ end }}
+    {{ if eq $template "list" }}<h4 class="publication__title">
+<a href="{{ .publication.RelPermalink }}">{{ $title }}</a>
+</h4>{{ end }}
     {{ if eq $template "single" }}<h1 class="publication__title">{{ $title }}</h1>{{ end }}
 
     {{ if eq $template "list" }}<h6 class="publication__subtitle h6--ultrathin">{{ end }}
     {{ if eq $template "single" }}<h4 class="publication__subtitle h4--ultrathin">{{ end }}
-      
+
       {{ if reflect.IsSlice .publication.Params.regulations }}
         {{ delimit .publication.Params.regulations ", " }}
       {{ else }}
