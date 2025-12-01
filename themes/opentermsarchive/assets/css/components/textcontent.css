@@ -219,6 +219,12 @@
   & li {
     position: relative;
 
+    &:not(:last-child) {
+      margin-bottom: var(--mM);
+    }
+  }
+
+  & ul & li {
     &::before {
       position: absolute;
       left: calc(var(--mM) * -1);
@@ -231,10 +237,6 @@
       position: absolute;
       top: var(--m2xs);
       left: calc(var(--ml) * -1);
-    }
-
-    &:not(:last-child) {
-      margin-bottom: var(--mM);
     }
   }
 
