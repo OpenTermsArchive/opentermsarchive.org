@@ -1,6 +1,6 @@
 ---
 title: "Political Advertising After the TTPA: Exit, Adaptation, and the Future of Platform Governance"
-html_description: ""
+html_description: "The EU's TTPA regulation transformed political ad transparency from voluntary to mandatory. Major platforms' withdrawal exposes a structural gap: their advertising systems prioritize efficiency over the detailed traceability that democratic oversight demands."
 author: Asma Sifaoui
 regulations: ["TTPA"]
 topic: ["Political Advertising"]
