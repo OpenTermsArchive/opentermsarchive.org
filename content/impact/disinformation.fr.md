@@ -59,7 +59,6 @@ Constatant la présence persistante de publicités politiques sur LinkedIn, Mari
 
 Elle raconte :
 > Grâce à la réponse de l’analyste Tam Kien Duong à ma question sur la façon de signaler une publicité, j’ai pu trouver les contenus sponsorisés dans un pays précis via [cette page](https://www.linkedin.com/ad-library/search?countries=CH&dateOption=last-30-days).
-
 > Cette collaboration interne m'a vraiment été très utile pour entreprendre ma démarche.
 
 Elle a ensuite mis en place une veille basée sur des mots-clés en français, allemand, italien et anglais, les quatre langues parlées en Suisse, afin d’identifier toutes les publicités politiques non conformes aux nouvelles règles de la plateforme.

@@ -218,13 +218,13 @@
 
   & li {
     position: relative;
-    
+
     &:not(:last-child) {
       margin-bottom: var(--mM);
     }
   }
 
-  & ul > li {
+  & ul & li {
     &::before {
       position: absolute;
       left: calc(var(--mM) * -1);
