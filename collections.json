@@ -1,14 +1,14 @@
 [
   {
-    "id": "genai",
+    "id": "genai-contrib",
     "name": "Generative AI",
     "tagline": "Most popular generative AI services",
-    "description": "The **Generative AI** collection tracks terms of the most popular generative AI services that fall under the European Union jurisdiction and are written in English.\n\nIts aim is to analyze the changes made to these documents, to assess the compliance of generative AI services with draft regulatory laws, and to study the evolution of the regulatory landscape.\n\nIt is maintained by the [Sciences Po Law School Clinic's](https://www.sciencespo.fr/ecole-droit/en/clinic/presentation/) for the project \"Artifical Intelligence (AI) Ethics and Regulation Watch\" of the [DIGILAW](https://www.sciencespo.fr/ecole-droit/en/clinic/digilaw/) research program.\n",
-    "dataset": "https://github.com/OpenTermsArchive/genai-versions/releases",
-    "declarations": "https://github.com/OpenTermsArchive/genai-declarations",
-    "versions": "https://github.com/OpenTermsArchive/genai-versions",
-    "snapshots": "https://github.com/OpenTermsArchive/genai-snapshots",
-    "donations": "https://opencollective.com/opentermsarchive/projects/genai",
+    "description": "The **Generative AI Contrib** collection tracks terms of the most popular generative AI services.\n\nIts aim is to analyze the changes made to these documents, to assess the compliance of generative AI services with draft regulatory laws, and to study the evolution of the regulatory landscape.\n\nCollection open to all contributions.\n",
+    "dataset": "https://github.com/OpenTermsArchive/genai-contrib-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/genai-contrib-declarations",
+    "versions": "https://github.com/OpenTermsArchive/genai-contrib-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/genai-contrib-snapshots",
+    "donations": "https://opencollective.com/opentermsarchive/projects/genai-contrib",
     "logo": "https://opentermsarchive.org/images/collections/generative-ai.png",
     "languages": [
       "en"
@@ -54,7 +54,7 @@
     "i18n": {
       "fr": {
         "tagline": "Services d'IA générative les plus populaires",
-        "description": "La collection **Generative AI** suit les conditions d'utilisation des services d'intelligence artificielle générative les plus populaires.\n\nElle vise à engager l'analyse des changements apportés à ces documents, à évaluer la conformité des services d'IA générative aux projets de lois de régulations et à étudier l'évolution du paysage réglementaire.\n\nElle est maintenue par la [Clinique de l'École de droit de Sciences Po](https://www.sciencespo.fr/ecole-droit/fr/clinique/presentation/) pour le projet \"Éthique et réglementation de l'intelligence artificielle (IA)\" du programme de recherche [DIGILAW](https://www.sciencespo.fr/ecole-droit/fr/clinique/digilaw/).\n",
+        "description": "La collection **Generative AI** suit les conditions d'utilisation des services d'intelligence artificielle générative les plus populaires.\n\nElle vise à engager l'analyse des changements apportés à ces documents, à évaluer la conformité des services d'IA générative aux projets de lois de régulations et à étudier l'évolution du paysage réglementaire.\n\nCollection ouverte à toutes contributions\n",
         "governance": {
           "Ministry for Europe and Foreign Affairs": {
             "name": "Ministère de l'Europe et des Affaires étrangères",
