@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: Starlink has updated its privacy policy to become a global policy, applying to all services and allowing de-identified user data to be used for any purpose. The policy also permits data disclosure to government regulators or law enforcement to protect against death or serious bodily injury. Additionally, Starlink has introduced specific privacy policies for Nigeria and South Korea. 
 title: Starlink globalizes its policies and adds specificities for Nigeria and South Korea
 service: Starlink
 terms_types: ["Privacy Policy"]
