@@ -2,7 +2,7 @@
 title: X no longer restricts shopping to US-based businesses
 html_description: 
 service: X
-terms_types: ["Shopping Policy"]
+terms_types: ["Community Guidelines"]
 dates: ["2025-10-30"]
 author: tam kien duong
 related_collections: ["vlopses-us"]
