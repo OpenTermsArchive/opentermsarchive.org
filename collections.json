@@ -1,9 +1,9 @@
 [
   {
     "id": "genai-contrib",
-    "name": "Generative AI",
+    "name": "Generative AI Contrib",
     "tagline": "Most popular generative AI services",
-    "description": "The **Generative AI Contrib** collection tracks terms of the most popular generative AI services.\n\nIts aim is to analyze the changes made to these documents, to assess the compliance of generative AI services with draft regulatory laws, and to study the evolution of the regulatory landscape.\n\nCollection open to all contributions.\n",
+    "description": "The **Generative AI Contrib** collection tracks terms of the most popular generative AI services and is open to all contributions.\n\nIts aim is to analyze the changes made to these documents, to assess the compliance of generative AI services with draft regulatory laws, and to study the evolution of the regulatory landscape.\n\nCollection open to all contributions.\n",
     "dataset": "https://github.com/OpenTermsArchive/genai-contrib-versions/releases",
     "declarations": "https://github.com/OpenTermsArchive/genai-contrib-declarations",
     "versions": "https://github.com/OpenTermsArchive/genai-contrib-versions",
@@ -19,7 +19,13 @@
     ],
     "trackingPeriods": [
       {
+        "startDate": "2025-12-02T00:00:00.000Z",
+        "schedule": "30 */12 * * *",
+        "serverLocation": "Dublin, IE"
+      },
+      {
         "startDate": "2023-09-26T00:00:00.000Z",
+        "endDate": "2025-12-01T00:00:00.000Z",
         "schedule": "30 */12 * * *",
         "serverLocation": "London, GB"
       }
@@ -40,30 +46,16 @@
           "administrator",
           "maintainer"
         ]
-      },
-      "Sciences Po Law School Clinic": {
-        "url": "https://www.sciencespo.fr/ecole-droit/en/clinic/presentation/",
-        "logo": "https://opentermsarchive.org/images/contributors/sciences-po-law-school-clinic.png",
-        "roles": [
-          "curator",
-          "maintainer",
-          "sponsor"
-        ]
       }
     },
     "i18n": {
       "fr": {
         "tagline": "Services d'IA générative les plus populaires",
-        "description": "La collection **Generative AI** suit les conditions d'utilisation des services d'intelligence artificielle générative les plus populaires.\n\nElle vise à engager l'analyse des changements apportés à ces documents, à évaluer la conformité des services d'IA générative aux projets de lois de régulations et à étudier l'évolution du paysage réglementaire.\n\nCollection ouverte à toutes contributions\n",
+        "description": "La collection **Generative AI Contrib** suit les conditions d'utilisation des services d'intelligence artificielle générative les plus populaires et est ouverte à toutes contributions.\n\nElle vise à engager l'analyse des changements apportés à ces documents, à évaluer la conformité des services d'IA générative aux projets de lois de régulations et à étudier l'évolution du paysage réglementaire.\n\nCollection ouverte à toutes contributions\n",
         "governance": {
           "Ministry for Europe and Foreign Affairs": {
             "name": "Ministère de l'Europe et des Affaires étrangères",
             "url": "https://www.diplomatie.gouv.fr"
-          },
-          "Sciences Po Law School Clinic": {
-            "name": "Clinique de l'École de droit de Sciences Po",
-            "url": "https://www.sciencespo.fr/ecole-droit/fr/clinique/presentation/",
-            "logo": "https://opentermsarchive.org/images/contributors/sciences-po-ecole-de-droit.png"
           }
         }
       }
