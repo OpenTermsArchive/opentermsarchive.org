@@ -1,6 +1,6 @@
 ---
 title: X no longer restricts shopping to US-based businesses
-html_description: 
+html_description: X has updated its merchandise sales rules, removing the requirement for US-based businesses, allowing state-affiliated media to sell merchandise, opening sales to X Premium accounts (previously restricted to Professional Accounts), and permitting local currency pricing instead of US dollars only.
 service: X
 terms_types: ["Community Guidelines"]
 dates: ["2025-10-30"]
