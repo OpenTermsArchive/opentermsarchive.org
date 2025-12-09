@@ -25,7 +25,7 @@
   },
   {
     "name": "Dating",
-    "endpoint": "http://79.137.75.49/collection-api/v1"
+    "endpoint": "http://79.137.75.49/collection-api/v1/"
   },
   {
     "name": "Contrib",
