@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: Apple has updated its App Store Review Guidelines, requiring clear disclosure of personal data use, prohibiting use of Apple APIs for contact databases or advertising, adding restrictions on reusing other developers' brands, requiring age-restriction mechanisms, including crypto exchanges as highly regulated services, and tightening loan app standards with a 36% APR cap.
 title: Apple updates App Store rules on data use, age-gating, external software, and loan app disclosures
 service: App Store
 terms_types: ["Review Guidelines"]
