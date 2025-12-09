@@ -1,7 +1,7 @@
 [
   {
-    "name": "Generative AI",
-    "endpoint": "http://51.77.110.109/collection-api/v1/"
+    "name": "Generative AI Contrib",
+    "endpoint": "http://86.54.83.121/collection-api/v1/"
   },
   {
     "name": "Platform Governance Archive",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Dating",
-    "endpoint": "http://vps-99ae1d89.vps.ovh.net/collection-api/v1/"
+    "endpoint": "http://79.137.75.49/collection-api/v1/"
   },
   {
     "name": "Contrib",
