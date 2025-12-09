@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: X has restructured its Civic Integrity policy, expanding civic processes to explicitly include political elections, censuses, major referendums, and ballot initiatives. The policy reorganizes prohibited behavior into broader categories instead of detailed examples and shifts enforcement toward Community Notes as the primary transparency tool rather than automatic labeling, broadening scope while giving X more flexibility in interpreting violations.
 title: X expands and restructures its Civic-Integrity Policy
 service: X
 terms_types: ["Community Guidelines"]
