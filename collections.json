@@ -71,7 +71,7 @@
     "totalServices": 40,
     "totalTerms": 122,
     "engineVersion": "7.0.0",
-    "endpoint": "http://51.77.110.109/collection-api/v1/"
+    "endpoint": "http://86.54.83.121/collection-api/v1/"
   },
   {
     "id": "pga",
@@ -483,7 +483,7 @@
     "totalServices": 26,
     "totalTerms": 67,
     "engineVersion": "6.0.1",
-    "endpoint": "http://vps-99ae1d89.vps.ovh.net/collection-api/v1/"
+    "endpoint": "http://79.137.75.49/collection-api/v1/"
   },
   {
     "id": "contrib",
