@@ -8,7 +8,7 @@ author: tam kien duonga
 related_collections: ["contrib"]
 ---
 
-On November 26, 2025, Starlink [updated](https://github.com/OpenTermsArchive/contrib-versions/commit/f0ad253188913e4877d5cf277d4264bf1fbaf2c6) its privacy policy to become a global privacy policy. Long overdue, the last official version was from May 1, 2023. The updated policy applies to all services provided by starlink, not just its website. It now allows using de-identified data ‘from and about’ users to be used for ‘any purpose, including improving our services, to the extent permitted by applicable law’. Data will be disclosed to government regulators or law enforcement agencies in order ‘to protect any person from death or serious bodily injury’.
+On November 26, 2025, Starlink [updated](https://github.com/OpenTermsArchive/contrib-versions/commit/f0ad253188913e4877d5cf277d4264bf1fbaf2c6) its privacy policy to become a global privacy policy. Long overdue, the last official version was from May 1, 2023. The updated policy applies to all services provided by Starlink, not just its website. It now allows using de-identified data ‘from and about’ users to be used for ‘any purpose, including improving our services, to the extent permitted by applicable law’. Data will be disclosed to government regulators or law enforcement agencies in order ‘to protect any person from death or serious bodily injury’.
 
 Additionally, specific privacy policies for [Nigeria](https://www.starlink.com/legal/documents/DOC-DF-1906-75496-66) have also been incorporated. On December 4, another change [introduced](https://github.com/OpenTermsArchive/contrib-versions/commit/7b319573075aea7f6dc00f5746b4dac2076cd2df) a dedicated set for [South Korea](https://starlink.com/legal/documents/DOC-DF-1909-87689-76).
 
