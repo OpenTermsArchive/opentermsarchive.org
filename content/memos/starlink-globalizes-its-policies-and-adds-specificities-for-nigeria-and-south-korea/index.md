@@ -4,7 +4,7 @@ title: Starlink globalizes its policies and adds specificities for Nigeria and S
 service: Starlink
 terms_types: ["Privacy Policy"]
 dates: ["2025-11-26","2025-12-04"]
-author: tam kien duonga
+author: tam kien duong
 related_collections: ["contrib"]
 ---
 
