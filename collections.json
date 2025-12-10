@@ -478,6 +478,76 @@
     "endpoint": "http://79.137.75.49/collection-api/v1/"
   },
   {
+    "id": "contrib",
+    "name": "Contrib",
+    "tagline": "Collection open to all contributions",
+    "description": "The **Contrib** collection gathers terms spanning a wide variety of industries and jurisdictions.\n\nIt was initially created thanks to a collaboration with [TOSBack](https://tosback.org/), which enabled the import of its data history.\n\nIt's the largest collections in the federation, tracking over 300 services maintained by volunteer contributors. It is also a good entry point into the Open Terms Archive ecosystem to become familiar with monitoring and change analysis.\n\nThe data in this collection has been reused in a variety of projects, from research into the impact of social media usage conditions on human rights, to improving the readability of documents.\n",
+    "dataset": "https://github.com/OpenTermsArchive/contrib-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/contrib-declarations",
+    "versions": "https://github.com/OpenTermsArchive/contrib-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/contrib-snapshots",
+    "donations": "https://opencollective.com/opentermsarchive/projects/contrib-collection",
+    "logo": "https://opentermsarchive.org/images/collections/contrib.png",
+    "languages": [
+      "en",
+      "fr"
+    ],
+    "jurisdictions": [
+      "EU",
+      "US"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2021-11-14T00:00:00.000Z",
+        "schedule": "0 6,18 * * *",
+        "serverLocation": "London, GB"
+      }
+    ],
+    "governance": {
+      "Ministry for Europe and Foreign Affairs": {
+        "url": "https://www.diplomatie.gouv.fr/en/",
+        "logo": "https://opentermsarchive.org/images/contributors/meae.png",
+        "roles": [
+          "host",
+          "sponsor"
+        ]
+      },
+      "Open Terms Archive": {
+        "url": "https://opentermsarchive.org",
+        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black-small.png",
+        "roles": [
+          "sysadmin",
+          "maintainer"
+        ]
+      },
+      "Volunteer contributors": {
+        "roles": [
+          "curator",
+          "maintainer"
+        ]
+      }
+    },
+    "i18n": {
+      "fr": {
+        "tagline": "Collection ouverte à toutes contributions",
+        "description": "La collection **Contrib** rassemble des conditions d'utilisation couvrant une grande variété d'industries et de juridictions.\n\nElle a été initialement créée en collaboration avec [TOSBack](https://tosback.org/), qui a permis d'importer son historique de données.\n\nC'est l'une des plus grandes collections de la fédération, avec plus de 300 services maintenus par des contributeurs bénévoles. C'est également un bon point d'entrée dans l'écosystème d'Open Terms Archive pour se familiariser avec le suivi et l'analyse des changements.\n\nLes données de cette collection ont été réutilisées dans divers projets allant de la recherche sur l'impact des conditions d'utilisation des médias sociaux sur les droits de l'homme à l'amélioration de la lisibilité des CGUs.\n",
+        "governance": {
+          "Ministry for Europe and Foreign Affairs": {
+            "name": "Ministère de l'Europe et des Affaires étrangères",
+            "url": "https://www.diplomatie.gouv.fr"
+          },
+          "Volunteer contributors": {
+            "name": "Contributeurs bénévoles"
+          }
+        }
+      }
+    },
+    "totalServices": 379,
+    "totalTerms": 811,
+    "engineVersion": "10.1.2",
+    "endpoint": "http://86.54.83.7/collection-api/v1/"
+  },
+  {
     "id": "kenya",
     "name": "Kenya",
     "tagline": "Largest digital services used in Kenya",
@@ -610,7 +680,7 @@
     },
     "totalServices": 7,
     "totalTerms": 19,
-    "engineVersion": "9.1.0",
+    "engineVersion": "10.1.2",
     "endpoint": "http://162.19.74.224/collection-api/v1/"
   }
 ]
