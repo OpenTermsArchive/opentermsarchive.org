@@ -43,7 +43,7 @@
         "url": "https://opentermsarchive.org",
         "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black-small.png",
         "roles": [
-          "administrator",
+          "sysadmin",
           "maintainer"
         ]
       }
@@ -62,7 +62,7 @@
     },
     "totalServices": 40,
     "totalTerms": 122,
-    "engineVersion": "7.0.0",
+    "engineVersion": "10.1.2",
     "endpoint": "http://86.54.83.121/collection-api/v1/"
   },
   {
@@ -102,7 +102,7 @@
         "url": "https://opentermsarchive.org",
         "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black-small.png",
         "roles": [
-          "administrator"
+          "sysadmin"
         ]
       },
       "Platform Governance Archive": {
@@ -135,7 +135,7 @@
     },
     "totalServices": 23,
     "totalTerms": 103,
-    "engineVersion": "9.2.0",
+    "engineVersion": "10.1.2",
     "endpoint": "http://134.102.58.70/collection-api/v1/"
   },
   {
@@ -445,7 +445,7 @@
         "url": "https://opentermsarchive.org",
         "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black-small.png",
         "roles": [
-          "administrator"
+          "sysadmin"
         ]
       },
       "Ministry for Europe and Foreign Affairs": {
@@ -474,7 +474,7 @@
     },
     "totalServices": 26,
     "totalTerms": 67,
-    "engineVersion": "6.0.1",
+    "engineVersion": "10.1.2",
     "endpoint": "http://79.137.75.49/collection-api/v1/"
   },
   {
@@ -592,7 +592,7 @@
         "url": "https://opentermsarchive.org",
         "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black.png",
         "roles": [
-          "administrator"
+          "sysadmin"
         ]
       },
       "Volunteer contributors": {
@@ -619,7 +619,7 @@
     },
     "totalServices": 16,
     "totalTerms": 18,
-    "engineVersion": "5.3.1",
+    "engineVersion": "10.1.2",
     "endpoint": "http://102.68.86.60/collection-api/v1/"
   },
   {
