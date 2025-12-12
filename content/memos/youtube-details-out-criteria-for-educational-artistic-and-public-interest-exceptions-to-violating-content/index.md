@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: YouTube expanded its criteria for exceptions to content violating community guidelines, clarifying that educational, documentary, scientific, or artistic (EDSA) content and public interest content (such as congressional proceedings, campaign speeches, or government debates) will be considered exceptions to otherwise prohibited content across multiple policy sections.
 title: YouTube details out criteria for educational, artistic, and public interest exceptions to violating content
 service: YouTube
 terms_types: ["Community Guidelines"]
