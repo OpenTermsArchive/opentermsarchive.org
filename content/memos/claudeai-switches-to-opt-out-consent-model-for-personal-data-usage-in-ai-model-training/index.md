@@ -5,7 +5,7 @@ service: Claude.ai
 terms_types: ["Privacy Policy"]
 dates: ["2025-08-29"]
 author: Sydney Wheeler
-related_collections: ["genai"]
+related_collections: ["genai-contrib"]
 assistance: [GPT-4o]
 ---
 

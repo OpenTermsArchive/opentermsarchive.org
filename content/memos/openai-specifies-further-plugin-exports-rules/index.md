@@ -5,7 +5,7 @@ service: OpenAI
 terms_types: ["Developers Terms"]
 dates: ["2024-01-10"]
 author: Brice Bai
-related_collections: ["genai"]
+related_collections: ["genai-contrib"]
 ---
 
 OpenAI [specified](https://github.com/OpenTermsArchive/GenAI-versions/commit/30f1df7d18676c57a0ae1c43c3ccdfc264535cb3) that, as far as European (EEA and Swiss) developers were concerned, their Agreement is with OpenAI Ireland Ltd. OpenAI stopped acting as a separate controller of personal data, and developers now have to present a privacy notice to their users prior to processing their data.
