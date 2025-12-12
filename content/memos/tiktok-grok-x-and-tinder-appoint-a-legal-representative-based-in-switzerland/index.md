@@ -5,7 +5,7 @@ service: ["TikTok", "Grok", "X", "Tinder"]
 terms_types: ["Privacy Policy"]
 dates: ["2025-06-25","2025-07-31","2025-08-01","2025-09-09"]
 author: Marie-Pierre Vidonne
-related_collections: ["contrib","pga","genai","dating"]
+related_collections: ["contrib","pga","genai-contrib","dating"]
 ---
 
 [TikTok](https://github.com/OpenTermsArchive/pga-versions/commit/603abfff21a8a8cde1e9aaf14a4bd8b32c86faa2), [Grok](https://github.com/OpenTermsArchive/GenAI-versions/commit/30f91c5645819d35c4138fcd83ff3d55773af3e5

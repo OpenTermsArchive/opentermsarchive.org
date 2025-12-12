@@ -5,7 +5,7 @@ service: Mistral AI
 terms_types: ["Data Processor Agreement"]
 dates: ["2025-02-10"]
 author: Matti Schneider
-related_collections: ["genai"]
+related_collections: ["genai-contrib"]
 ---
 
 Mistral [added](https://github.com/OpenTermsArchive/GenAI-versions/commit/225931387dda66a4f182e78acf72feecf729136e) the USA to the locations it handles personal data on its Google Cloud Platform infrastructure, whereas it was previously limited to Ireland in the EU.
