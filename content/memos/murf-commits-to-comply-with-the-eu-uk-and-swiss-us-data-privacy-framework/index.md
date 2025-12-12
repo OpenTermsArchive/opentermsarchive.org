@@ -5,7 +5,7 @@ service: Murf
 terms_types: ["Privacy Policy"]
 dates: ["2023-11-03"]
 author: Brice Bai
-related_collections: ["genai"]
+related_collections: ["genai-contrib"]
 ---
 
 Murf [committed](https://github.com/OpenTermsArchive/GenAI-versions/commit/4adb6986e2e69a76fd265dc19597a3bd19395354) to comply with the EU-U.S. Data Protection Framework (DPF), the UK Extension of the EU-U.S. DPF, and the Swiss-U.S. DPF.
