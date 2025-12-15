@@ -14,12 +14,12 @@
 
 {{ with try (resources.GetRemote $src) }}
   {{ with .Err }}
-    {{ errorf "%s" . }}
+    {{ warnf "%s" . }}
   {{ else with .Value }}
     <div class="embed__wrapper"style="padding-top: {{ $ratio }};">
       <embed src="{{ .RelPermalink }}" type="{{ $type }}" {{ with $title }}title="{{ . }}"{{ end }}>
     </div>
   {{ else }}
-    {{ errorf "Unable to get remote resource %q" . }}
+    {{ warnf "Unable to get remote resource %q" . }}
   {{ end }}
 {{ end }}
