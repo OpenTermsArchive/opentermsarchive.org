@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: Pinterest updated its Marketplace Sellers Conditions to permit the promotion of alcoholic beverages in its shopping ads.
 title: Pinterest permits alcoholic beverage advertisements
 service: Pinterest
 terms_types: ["Marketplace Sellers Conditions"]
