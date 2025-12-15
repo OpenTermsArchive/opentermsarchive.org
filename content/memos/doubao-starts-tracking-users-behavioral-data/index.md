@@ -5,7 +5,7 @@ service: Copy.AI
 terms_types: ["Privacy Policy"]
 dates: ["2023-12-28"]
 author: Peijun Hu
-related_collections: ["genai"]
+related_collections: ["genai-contrib"]
 ---
 
 Doubao [added](https://github.com/OpenTermsArchive/GenAI-versions/commit/c799b6fce756dfc6894a2537db01d71d91a4f776) personalized recommendations for prompts and chatbots and personal data collection requirements, with an opt-out option.
