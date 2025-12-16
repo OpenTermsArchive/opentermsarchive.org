@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: Instagram now collects data from user interactions with AI at Meta to personalise experiences and ads, shares this information with other Meta Companies, and uses it for developing and improving AI at Meta. The platform removed previous privacy clarifications and expanded data collection on user connections and interactions.
 title: Instagram begins use of AI interactions to personalise experiences and ads
 service: Instagram
 terms_types: ["Privacy Policy"]
