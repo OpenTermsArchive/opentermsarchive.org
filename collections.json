@@ -2,8 +2,8 @@
   {
     "id": "genai-contrib",
     "name": "Generative AI Contrib",
-    "tagline": "Most popular generative AI services",
-    "description": "The **Generative AI Contrib** collection tracks terms of the most popular generative AI services and is open to all contributions.\n\nIts aim is to analyze the changes made to these documents, to assess the compliance of generative AI services with draft regulatory laws, and to study the evolution of the regulatory landscape.\n\nCollection open to all contributions.\n",
+    "tagline": "Open to all contributions on generative AI services",
+    "description": "The **Generative AI Contrib** collection tracks terms of generative AI services and is open to all contributions.\n\nIt was initially created by the [Sciences Po Law School Clinic's](https://www.sciencespo.fr/ecole-droit/en/clinic/presentation/) for the project “Artifical Intelligence (AI) Ethics and Regulation Watch” of the [DIGILAW](https://www.sciencespo.fr/ecole-droit/en/clinic/digilaw/) research program. Its aim was to assess the evolution of compliance of generative AI services with draft regulatory laws, and to study the impact of changes in the regulatory landscape.\n\nAt the end of the research project, the collection was taken over by volunteers and open to all contributions.\n",
     "dataset": "https://github.com/OpenTermsArchive/genai-contrib-versions/releases",
     "declarations": "https://github.com/OpenTermsArchive/genai-contrib-declarations",
     "versions": "https://github.com/OpenTermsArchive/genai-contrib-versions",
@@ -35,7 +35,6 @@
         "url": "https://www.diplomatie.gouv.fr/en/",
         "logo": "https://opentermsarchive.org/images/contributors/meae.png",
         "roles": [
-          "host",
           "sponsor"
         ]
       },
@@ -43,7 +42,13 @@
         "url": "https://opentermsarchive.org",
         "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black-small.png",
         "roles": [
-          "sysadmin",
+          "host",
+          "sysadmin"
+        ]
+      },
+      "Volunteer contributors": {
+        "roles": [
+          "curator",
           "maintainer"
         ]
       }
@@ -51,7 +56,7 @@
     "i18n": {
       "fr": {
         "tagline": "Services d'IA générative les plus populaires",
-        "description": "La collection **Generative AI Contrib** suit les conditions d'utilisation des services d'intelligence artificielle générative les plus populaires et est ouverte à toutes contributions.\n\nElle vise à engager l'analyse des changements apportés à ces documents, à évaluer la conformité des services d'IA générative aux projets de lois de régulations et à étudier l'évolution du paysage réglementaire.\n\nCollection ouverte à toutes contributions\n",
+        "description": "La collection **Generative AI Contrib** suit les conditions d'utilisation des services d'intelligence artificielle générative et est ouverte à toute contribution.\n\nElle a été initialement créée par la [Clinique de l'École de droit de Sciences Po](https://www.sciencespo.fr/ecole-droit/fr/clinique/presentation/) pour le projet « Éthique et réglementation de l'intelligence artificielle (IA) » du programme de recherche [DIGILAW](https://www.sciencespo.fr/ecole-droit/fr/clinique/digilaw/). Elle visait à évaluer l’évolution de la conformité des services d'IA générative aux projets de règlementations et à étudier l’impact des changements réglementaires.\n\nÀ la fin du projet de recherche, la collection a été reprise par des contributeurices bénévoles et ouverte à toutes les contributions.\n",
         "governance": {
           "Ministry for Europe and Foreign Affairs": {
             "name": "Ministère de l'Europe et des Affaires étrangères",
@@ -205,6 +210,57 @@
     "totalTerms": 245,
     "engineVersion": "6.0.1",
     "endpoint": "http://198.244.142.9/collection-api/v1/"
+  },
+  {
+    "id": "sante-numerique-france",
+    "name": "Numérique en santé France",
+    "tagline": "Digital health services used in France",
+    "description": "The “Numérique en santé France” collection is dedicated to monitoring the conditions of use of digital health services used in France, particularly when they are listed in the Mon espace santé service catalog.",
+    "dataset": "https://github.com/OpenTermsArchive/sante-numerique-france-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/sante-numerique-france-declarations",
+    "versions": "https://github.com/OpenTermsArchive/sante-numerique-france-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/sante-numerique-france-snapshots",
+    "languages": [
+      "fr"
+    ],
+    "jurisdictions": [
+      "FR"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2025-07-17",
+        "schedule": "30 */12 * * *",
+        "serverLocation": "Strasbourg, FR"
+      }
+    ],
+    "governance": {
+      "Open Terms Archive": {
+        "url": "https://opentermsarchive.org",
+        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black.png",
+        "roles": [
+          "sysadmin",
+          "maintainer"
+        ]
+      },
+      "Délégation au numérique en santé": {
+        "url": "https://sante.gouv.fr/",
+        "logo": "https://opentermsarchive.org/images/contributors/ministere-sante.png",
+        "roles": [
+          "analyst",
+          "curator"
+        ]
+      }
+    },
+    "i18n": {
+      "fr": {
+        "tagline": "Services numériques en santé utilisés en France",
+        "description": "La collection « Numérique en santé France » est dédiée au suivi des conditions d’utilisation des services numériques en santé utilisés en France, notamment lorsqu’ils sont référencés au sein du catalogue de services de Mon espace santé."
+      }
+    },
+    "totalServices": 14,
+    "totalTerms": 46,
+    "engineVersion": "10.1.2",
+    "endpoint": "http://54.38.188.145/collection-api/v1/"
   },
   {
     "id": "p2b-compliance",
