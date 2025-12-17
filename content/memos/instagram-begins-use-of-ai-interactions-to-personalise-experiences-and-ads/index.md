@@ -3,12 +3,12 @@ html_description: Instagram now collects data from user interactions with AI at 
 title: Instagram begins use of AI interactions to personalise experiences and ads
 service: Instagram
 terms_types: ["Privacy Policy"]
-dates: ["2025-10-16"]
+dates: ["2025-12-16"]
 author: Saumyaa Naidu
 related_collections: ["vlopses-us"]
 ---
 
-Instagram [included](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/cefd1b4fc1e850a1991d661f5581903d0d166943) AI at Meta as a Meta Product to which its privacy policy now applies. The platform will collect information from a user’s interactions with AI at Meta, and information provided by others about a user to AI at Meta, including messages and content that the user may have shared. In the revised policy, information collected across Products will be used to personalise features, content, and ads in AI at Meta, among other Meta Products. The information will also be shared with other Meta Companies to personalise features and integrations. 
+Instagram [included](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/2b539280359100f59d72663ac2aaa8913e3e5f29) AI at Meta as a Meta Product to which its privacy policy now applies. The platform will collect information from a user’s interactions with AI at Meta, and information provided by others about a user to AI at Meta, including messages and content that the user may have shared. In the revised policy, information collected across Products will be used to personalise features, content, and ads in AI at Meta, among other Meta Products. The information will also be shared with other Meta Companies to personalise features and integrations. 
 
 Furthermore, interactions with AI at Meta and related metadata such as content and messages will be used for purposes such as personalising and improving Meta Products, promoting safety, integrity, and security, providing measurement, analytics, and business services, personalising ads on Meta Audience Network, undertaking research for social good, and sharing information with others, including law enforcement. 
 
