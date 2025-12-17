@@ -33,7 +33,7 @@
     {{ else with .Value }}
       {{ $resource = . }}
     {{ else }}
-      {{ $errorMessage = printf "%s\nFailed to fetch %s" $errorMessage $localImagePath }}
+      {{ $errorMessage = printf "%s\nFailed to fetch local fallback %s" $errorMessage $localImagePath }}
     {{ end }}
   {{ end }}
 {{ end }}

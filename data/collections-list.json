@@ -12,6 +12,10 @@
     "endpoint": "http://198.244.142.9/collection-api/v1/"
   },
   {
+    "name": "Numérique en santé France",
+    "endpoint": "http://54.38.188.145/collection-api/v1/"
+  },
+  {
     "name": "P2B Compliance",
     "endpoint": "http://198.244.153.104/collection-api/v1/"
   },
