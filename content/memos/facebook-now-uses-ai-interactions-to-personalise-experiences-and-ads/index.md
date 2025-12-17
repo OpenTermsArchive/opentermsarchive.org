@@ -8,7 +8,7 @@ author: Saumyaa Naidu
 related_collections: [""]
 ---
 
-Facebook [included](https://mbasic.facebook.com/privacy/policy/printable/)\* AI at Meta as a Meta Product to which its privacy policy now applies. The generative AI features and experiences across Meta Company Products are collectively referred to as AI at Meta. The platform will collect information from interactions with AI at Meta, and also share it on Meta Products and with integrated partners. These interactions will include prompts, responses received, actions requested, and feedback given to AI. Facebook will also record information provided by others about a user to AI at Meta, including messages and content that the user may have shared.
+Facebook [included](https://mbasic.facebook.com/privacy/policy/printable/) [^1] AI at Meta as a Meta Product to which its privacy policy now applies. The generative AI features and experiences across Meta Company Products are collectively referred to as AI at Meta. The platform will collect information from interactions with AI at Meta, and also share it on Meta Products and with integrated partners. These interactions will include prompts, responses received, actions requested, and feedback given to AI. Facebook will also record information provided by others about a user to AI at Meta, including messages and content that the user may have shared.
 
 In the revised policy, information collected across Products will be used to personalise features, content, and ads in AI at Meta, among other Meta Products. The information will also be shared with other Meta Companies to personalise features and integrations.
 
@@ -22,4 +22,4 @@ The policy no longer provides details of information used to decide which ads an
 
 Meta is among the several major platforms that have [introduced](https://www.aljazeera.com/news/2025/11/24/are-tech-companies-using-your-private-data-to-train-ai-models) updates related to AI data use, including Google, LinkedIn, and Open AI. Given this shift, researchers have [highlighted](https://news.stanford.edu/stories/2025/10/ai-chatbot-privacy-concerns-risks-research) concerns such as privacy risks, manipulation using vulnerabilities, and a [lack of users' control](https://bostoninstituteofanalytics.org/blog/meta-will-begin-using-ai-chatbot-conversations-to-target-ads/) over their data and experience on platforms.
 
-\*This memo currently uses the link to the newer Privacy Policy from Facebook. It will be updated to include the link to the diff once the change has been implemented and tracked by Open Terms Archive. 
+[^1]: This memo currently uses the link to the newer Privacy Policy from Facebook. It will be updated to include the link to the diff once the change has been implemented and tracked by Open Terms Archive. 
