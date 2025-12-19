@@ -9,7 +9,7 @@
   },
   {
     "name": "France",
-    "endpoint": "http://198.244.142.9/collection-api/v1/"
+    "endpoint": "http://217.182.67.38/france/collection-api/v1/"
   },
   {
     "name": "Numérique en santé France",
@@ -17,7 +17,7 @@
   },
   {
     "name": "P2B Compliance",
-    "endpoint": "http://198.244.153.104/collection-api/v1/"
+    "endpoint": "http://217.182.67.38/p2b-compliance/collection-api/v1/"
   },
   {
     "name": "France Public Services",
@@ -25,7 +25,7 @@
   },
   {
     "name": "France Élections",
-    "endpoint": "http://51.89.225.198/collection-api/v1/"
+    "endpoint": "http://217.182.67.38/france-elections/collection-api/v1/"
   },
   {
     "name": "Dating",
