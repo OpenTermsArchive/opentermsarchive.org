@@ -215,7 +215,7 @@
     "id": "sante-numerique-france",
     "name": "Numérique en santé France",
     "tagline": "Digital health services used in France",
-    "description": "The “Numérique en santé France” collection is dedicated to monitoring the conditions of use of digital health services used in France, particularly when they are listed in the Mon espace santé service catalog.",
+    "description": "The “Numérique en santé France” collection is dedicated to monitoring the conditions of use of digital health services used in France that are listed in the _Mon espace santé_ [services catalog](https://editeurs.monespacesante.fr/services-references).",
     "dataset": "https://github.com/OpenTermsArchive/sante-numerique-france-versions/releases",
     "declarations": "https://github.com/OpenTermsArchive/sante-numerique-france-declarations",
     "versions": "https://github.com/OpenTermsArchive/sante-numerique-france-versions",
@@ -238,6 +238,7 @@
         "url": "https://opentermsarchive.org",
         "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black.png",
         "roles": [
+          "host",
           "sysadmin",
           "maintainer"
         ]
@@ -254,7 +255,7 @@
     "i18n": {
       "fr": {
         "tagline": "Services numériques en santé utilisés en France",
-        "description": "La collection « Numérique en santé France » est dédiée au suivi des conditions d’utilisation des services numériques en santé utilisés en France, notamment lorsqu’ils sont référencés au sein du catalogue de services de Mon espace santé."
+        "description": "La collection « Numérique en santé France » est dédiée au suivi des conditions d’utilisation des services numériques dans le domaine de la santé utilisés en France et référencés au sein du [catalogue de services](https://editeurs.monespacesante.fr/services-references) de _Mon espace santé_."
       }
     },
     "totalServices": 14,
