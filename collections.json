@@ -65,8 +65,8 @@
         }
       }
     },
-    "totalServices": 40,
-    "totalTerms": 122,
+    "totalServices": 48,
+    "totalTerms": 141,
     "engineVersion": "10.1.2",
     "endpoint": "http://86.54.83.121/collection-api/v1/"
   },
@@ -180,7 +180,7 @@
         "url": "https://opentermsarchive.org",
         "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black-small.png",
         "roles": [
-          "administrator",
+          "sysadmin",
           "curator",
           "maintainer"
         ]
@@ -206,10 +206,10 @@
         }
       }
     },
-    "totalServices": 117,
-    "totalTerms": 245,
-    "engineVersion": "6.0.1",
-    "endpoint": "http://198.244.142.9/collection-api/v1/"
+    "totalServices": 120,
+    "totalTerms": 248,
+    "engineVersion": "10.1.2",
+    "endpoint": "http://217.182.67.38/france/collection-api/v1/"
   },
   {
     "id": "sante-numerique-france",
@@ -316,7 +316,7 @@
         "logo": "https://opentermsarchive.org/images/contributors/open-evidence.png",
         "roles": [
           "host",
-          "administrator",
+          "sysadmin",
           "curator",
           "maintainer"
         ]
@@ -343,8 +343,8 @@
     },
     "totalServices": 203,
     "totalTerms": 245,
-    "engineVersion": "4.0.1",
-    "endpoint": "http://198.244.153.104/collection-api/v1/"
+    "engineVersion": "10.1.2",
+    "endpoint": "http://217.182.67.38/p2b-compliance/collection-api/v1/"
   },
   {
     "id": "france-public",
@@ -436,7 +436,7 @@
         "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black-small.png",
         "roles": [
           "host",
-          "administrator",
+          "sysadmin",
           "curator",
           "maintainer"
         ]
@@ -458,8 +458,8 @@
     },
     "totalServices": 5,
     "totalTerms": 65,
-    "engineVersion": "4.0.1",
-    "endpoint": "http://51.89.225.198/collection-api/v1/"
+    "engineVersion": "10.1.2",
+    "endpoint": "http://217.182.67.38/france-elections/collection-api/v1/"
   },
   {
     "id": "dating",
