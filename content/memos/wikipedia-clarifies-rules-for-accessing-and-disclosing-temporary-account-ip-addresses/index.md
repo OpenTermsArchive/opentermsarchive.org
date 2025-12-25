@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: Wikipedia clarified rules for accessing and disclosing temporary account IP addresses, explicitly allowing IP auto-reveal during investigations while prohibiting direct connection of temporary accounts to IP addresses in public block reasons.
 title: Wikipedia clarifies rules for accessing and disclosing temporary account IP addresses
 service: Wikipedia
 terms_types: ["Privacy Policy"]
