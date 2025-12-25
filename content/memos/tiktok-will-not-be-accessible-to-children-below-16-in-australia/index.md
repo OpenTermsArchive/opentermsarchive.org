@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: TikTok added minimum age requirements to comply with Social Media Minimum Age (SMMA) law in Australia, specifying that the platform is not directed at children under 16.
 title: TikTok will not be accessible to children below 16 in Australia
 service: TikTok
 terms_types: ["Privacy Policy"]
