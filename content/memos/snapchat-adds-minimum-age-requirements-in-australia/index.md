@@ -1,6 +1,6 @@
 ---
-html_description: 
-title: Snapchat adds minimum age requirements in Australia 
+html_description: Snapchat added Social Media Minimum Age (SMMA) requirements for Australian users, requiring age verification through third-party provider k-ID.
+title: Snapchat adds minimum age requirements in Australia 
 service: Snapchat
 terms_types: ["Privacy Policy"]
 dates: ["2025-12-09"]
