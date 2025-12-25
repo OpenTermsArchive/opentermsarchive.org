@@ -1,6 +1,6 @@
 ---
-html_description: 
-title: X adds minimum user age of 16 in Australia 
+html_description: X added a minimum user age of 16 in Australia to comply with Social Media Minimum Age (SMMA) requirements, implementing multi-layered age verification including self-attestation, ID verification, email-based estimation, and AI-verified government IDs.
+title: X adds minimum user age of 16 in Australia
 service: X
 terms_types: ["Community Guidelines"]
 dates: ["2025-12-09"]
