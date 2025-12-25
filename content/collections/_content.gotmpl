@@ -14,7 +14,7 @@
   {{ end }}
   
   {{ range $name, $data := .governance }}
-    {{ $governance = $governance | append (merge $data (dict "name" (title $name))) }}
+    {{ $governance = $governance | append (merge $data (dict "name" $name)) }}
   {{ end }}
 
   {{ $params := dict 
