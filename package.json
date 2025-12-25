@@ -24,7 +24,7 @@
     "prestart:dev": "npm run fetch",
     "start:dev": "hugo serve --watch --logLevel warn --disableFastRender --printI18nWarnings --ignoreCache",
     "prestart:ci": "npm run fetch",
-    "start:ci": "hugo serve --logLevel error --port 1313",
+    "start:ci": "hugo serve --logLevel warn --port 1313 --ignoreCache",
     "prestart:preview": "npm run fetch",
     "start:preview": "hugo --gc --minify -b $DEPLOY_PRIME_URL",
     "lint:markdown": "markdownlint *.md content/**/*.md",
