@@ -3,7 +3,7 @@ title: Facebook now uses AI interactions to personalise experiences and ads
 html_description: Facebook has removed transparency details about ad targeting and Feed personalization, clarified that third parties use public user content according to their own terms, and added that it can remove content from non-account holders. This update is part of a broader industry trend where major platforms are updating their AI data use policies, raising privacy and user control concerns.
 service: Facebook
 terms_types: ["Privacy Policy"]
-dates: ["2025-12-16"]
+dates: ["2025-12-28"]
 author: Saumyaa Naidu
 related_collections: ["vlopses-us"]
 ---
