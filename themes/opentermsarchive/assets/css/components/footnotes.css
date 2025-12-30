@@ -1,0 +1,8 @@
+.footnotes {
+  margin-top: var(--xl);
+  font-size: 0.9em;
+
+  & > hr {
+    margin-bottom: var(--l);
+  }
+}
