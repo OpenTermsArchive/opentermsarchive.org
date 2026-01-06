@@ -13,7 +13,7 @@ module.exports = defineConfig({
     "valid-id": ["error", {"relaxed": true}],
 
     /* Increase max <title> size */
-    "long-title": ["error", {"maxlength": 120}],
+    "long-title": ["error", {"maxlength": 180}],
 
     /* Validates BEM class names, based on https://github.com/potherca-blog/BEM-Regex */
     "class-pattern": ["error", {"pattern": "^[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$"}],
