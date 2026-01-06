@@ -6,7 +6,7 @@ terms_types: ["Terms of Service"]
 dates: ["2025-06-19"]
 author: Matti Schneider
 assistance: [GPT-4o]
-related_collections: [genai]
+related_collections: ["genai-contrib"]
 ---
 
 Cursor a [ajouté](https://github.com/OpenTermsArchive/GenAI-versions/commit/b197079f729d0056f31e8d9a12ef13283773c507) une description des limites des suggestions générées par les IA génératives, avertissant qu’elles peuvent contenir « des erreurs ou des informations trompeuses », manquer de créativité, mal interpréter les nuances linguistiques, échouer sur des tâches complexes ou refléter des biais présents dans les données d’entraînement, et que les utilisateurs assument l’ensemble des risques liés à leur usage.
