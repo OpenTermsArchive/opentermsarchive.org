@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: TikTok updated its Developer Terms to introduce Commercial Content Library (CCL) API access tied to EU Digital Services Act Article 39, defining CCL Data and CCL Purposes for supervision and research into risks including illegal ads, manipulation, and disinformation.
 title: TikTok updates its Developer Terms to introduce Commercial Content Library access, clarify research purposes, and reorganize core definitions
 service: TikTok
 terms_types: ["Developer Terms"]
