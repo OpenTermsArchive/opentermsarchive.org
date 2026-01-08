@@ -4,7 +4,7 @@ title: LinkedIn shares data with Microsoft and its subsidiaries to train AI mode
 service: LinkedIn
 terms_types: ["Privacy Policy"]
 dates: ["2025-11-04", "2025-11-03"]
-author: Asma Sifaoui
+author: ["Asma Sifaoui","Saumyaa Naidu","Matti Schneider"]
 related_collections: ["vlopses-us","vlopses-ie"]
 ---
 
