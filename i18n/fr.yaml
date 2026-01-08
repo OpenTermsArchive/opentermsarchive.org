@@ -178,7 +178,7 @@ pagination:
     current:
       aria_label: Page courante, numéro {{ .currrentPageNumber }}
 memos:
-  author: Par {{ .name }}, {{ if .isTeamMember }}un‧e membre de l'équipe d'Open Terms Archive{{ else }}un‧e contributeur·trice de la communauté{{ end }}
+  author: Par {{ .name }}, {{ if .isTeamMember }}membre de l'équipe d'Open Terms Archive{{ else }}contributeur·trice de la communauté{{ end }}
   authors: Par {{ .names }}, membres de l'équipe d'Open Terms Archive
   authors_last_separator: et
   featured:
