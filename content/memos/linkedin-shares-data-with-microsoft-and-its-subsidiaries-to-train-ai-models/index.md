@@ -1,0 +1,21 @@
+---
+html_description: 
+title: LinkedIn shares data with Microsoft and its subsidiaries to train AI models
+service: LinkedIn
+terms_types: ["Privacy Policy"]
+dates: ["2025-11-04", "2025-11-03"]
+author: Asma Sifaoui
+related_collections: ["vlopses-us","vlopses-ie"]
+---
+
+LinkedIn [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/a58058977951278dcf908f987dc2f8c307da1178) its Privacy Policy globally to expand the scope of personal data sharing across [Microsoft services\]\[^acquisition]. For example, LinkedIn may receive information about user engagement in Outlook, instead of only sending its engagement data to Microsoft. The affiliates list now explicitly includes GitHub, Inc. among Microsoft-controlled entities under this personal data sharing agreement. The language regarding targeted advertising and data use across services has been refined to state that LinkedIn may use engagement data from its affiliates to improve ad-targeting tools.
+
+Within the existing purpose of AI features, LinkedIn added use of personal data points from profiles such as work and volunteer experience, people and companies you follow, and licenses and certifications, along with adding conversation data from Generative AI features (GenAI), member generated content, data related to service use, and inferences about users.
+
+The [European version](https://github.com/OpenTermsArchive/vlopses-ie-versions/commit/50dcbecfd7c391c0aaa4cf0db72ffc9763f85cd3) of the terms and conditions gives more information on the data collected and intended use, owing to GDPR requirements. There, we can see that LinkedIn removed the earlier distinction of not using personal data for training and improving their AI systems for content creation. It introduced new purposes for personal data collection and use under the “Legitimate interest” legal basis: offering content-generating GenAI features to members, training these features, and improving LinkedIn's products and services. For these, it will use data from profiles, activities, connections and group memberships, but also **group activity and messages, inferences about users feedback provided on services, data provided when users request support from LinkedIn, and conversations with GenAI features**. This change is applicable to residents of the EU, EEA, UK, and Switzerland. LinkedIn allows users to opt out of having their data used for this purpose at any time.
+
+The [UK version](https://github.com/OpenTermsArchive/vlopses-ie-versions/commit/50dcbecfd7c391c0aaa4cf0db72ffc9763f85cd3#diff-76a551146a4ec374ed641f47021ce1c496ae80172cccb4a4e8049e2a2085785fR513) of the changes also makes the usage of personal data for GenAI clearer, stating that uses include “train, fine-tune, and evaluate […] Microsoft’s AI models”. It also explicitly mentions, beyond “posts, comments, articles”, company page data and job postings, that “LinkedIn video you create, LinkedIn Learning Videos and Transcripts” are used for GenAI model improvements. This is in compliance with the UK [GDPR requirements](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/artificial-intelligence/explaining-decisions-made-with-artificial-intelligence/part-1-the-basics-of-explaining-ai/legal-framework/) that specify principles such as purpose limitation and data transparency. This update reflects the raging [competition](https://www.technologyreview.com/2025/09/12/1123562/how-do-ai-models-generate-videos/) on video generation in the AI industry, where state of the art models like Sora from OpenAI and Veo from Google need immense amounts of video footage for training. Researchers have [highlighted](https://hai.stanford.edu/news/privacy-ai-era-how-do-we-protect-our-personal-information) that this scenario could lead to numerous privacy concerns including collection and misuse of personal information captured through training data. 
+
+The differences traced in the terms for different jurisdictions based on their regulatory requirements emphasise the need for cross-jurisdiction tracking and analysis of platform policies. It also highlights the varying levels of AI regulations and enforcement across jurisdictions and how platforms respond to them. 
+
+[^acquisition]: We note that Microsoft acquired LinkedIn in December 2016.
