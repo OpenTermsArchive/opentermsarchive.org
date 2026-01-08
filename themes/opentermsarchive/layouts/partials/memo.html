@@ -28,13 +28,30 @@
     {{ if eq $template "single" }}
       {{ $contributors := partial "load_contributors.html" . }}
       {{ with .memo.Params.author }}
-        {{ with index $contributors (. | lower) }}
-          <div class="memo__author text--light fontstyle--italic">
+        {{ $authors := cond (reflect.IsSlice .) . (slice .) }}
+        {{ $authorInfos := slice }}
+        {{ range $authorName := $authors }}
+          {{ with index $contributors ($authorName | lower) }}
             {{ $isTeamMember := partial "func/isTeamMember.html" .name }}
-            {{ i18n "memos.author" (dict "profile" .profile "name" (.name | title) "isTeamMember" $isTeamMember) | safeHTML }}
+            {{ $authorInfos = $authorInfos | append (dict "name" (.name | title) "profile" .profile "isTeamMember" $isTeamMember) }}
+          {{ else }}
+            {{ warnf "Author %s of the memo %s not found in contributors" $authorName $title }}
+          {{ end }}
+        {{ end }}
+        {{ if gt (len $authorInfos) 0 }}
+          {{ $firstAuthor := index $authorInfos 0 }}
+          {{ $authorLinks := slice }}
+          {{ range $author := $authorInfos }}
+            {{ $authorLinks = $authorLinks | append (printf "<a href=\"%s\" target=\"_blank\" rel=\"noopener\">%s</a>" $author.profile $author.name) }}
+          {{ end }}
+          <div class="memo__author text--light fontstyle--italic">
+            {{ if eq (len $authorLinks) 1 }}
+              {{ i18n "memos.author" (dict "name" (index $authorLinks 0) "isTeamMember" $firstAuthor.isTeamMember) | safeHTML }}
+            {{ else }}
+              {{ $names := delimit $authorLinks ", " (printf " %s " (i18n "memos.authors_last_separator")) }}
+              {{ i18n "memos.authors" (dict "names" $names) | safeHTML }}
+            {{ end }}
           </div>
-        {{ else }}
-          {{ warnf "Author %s of the memo %s not found in contributors" . $title }}
         {{ end }}
       {{ end }}
     {{ end }}

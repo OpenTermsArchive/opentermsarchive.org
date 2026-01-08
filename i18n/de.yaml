@@ -178,7 +178,9 @@ pagination:
     current:
       aria_label: Current page, number {{ .currrentPageNumber }}
 memos:
-  author: By <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, a third-party contributor
+  author: By {{ .name }}, {{ if .isTeamMember }}Open Terms Archive team member{{ else }}community contributor{{ end }}
+  authors: By {{ .names }}, Open Terms Archive team members
+  authors_last_separator: and
   featured:
     title: Memos
     subtitle: Memos are short explanations of a specific change in some terms of a service.
