@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: Australia’s Online Safety Act 2021 requires age verification for online services. Telegram was fined in 2025 for non-compliance and now applies an 18+ age requirement to users located in Australia.
 title: Telegram adds an age limit for Australian users
 service: Telegram
 terms_types: ["Terms of Service"]
