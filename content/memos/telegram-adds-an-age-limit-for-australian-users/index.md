@@ -1,6 +1,6 @@
 ---
 html_description: Australia’s Online Safety Act 2021 requires age verification for online services. Telegram was fined in 2025 for non-compliance and now applies an 18+ age requirement to users located in Australia.
-title: Telegram adds an age limit for Australian users
+title: Telegram expands its age eligibility requirement to Australian users
 service: Telegram
 terms_types: ["Terms of Service"]
 dates: ["2026-01-07"]
@@ -8,7 +8,9 @@ author: tam kien duong
 related_collections: ["vlopses-us"]
 ---
 
-Telegram slightly [changed](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/eec51f63d0fe52a2b4c3a23a5544fc4b52dbb79b) the minimum age requirement for signing up for its service. Previously, the wording stated that ‘citizens of EU countries and the United Kingdom’ had to be at least 18 years old to use the platform. However, the updated version now refers to ‘users’ instead of ‘citizens’. This modification means that the restriction is based on location rather than nationality. Users in Australia are now subject to the 18-year-old threshold.
+Telegram [expanded](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/eec51f63d0fe52a2b4c3a23a5544fc4b52dbb79b) its age eligibility requirement **by adding Australia** to the regions where users must be at least 18 years old to sign up, alongside the EU and the United Kingdom.
+
+The wording was also revised. Whereas the previous policy referred to “citizens of EU countries and the United Kingdom,” linking the restriction to nationality, the updated text applies to “users,” making the requirement dependent on the **user’s location rather than citizenship**.
 
 [Australia's Online Safety Act 2021](https://www.aph.gov.au/Parliamentary_Business/Bills_LEGislation/Bills_Search_Results/Result?bId=r6680) introduced age verification. Telegram was [fined](https://www.theguardian.com/technology/2025/feb/24/australian-esafety-telegram-fine-reporting-delay) AUD 957,780 for non-compliance in February 2025. Since November, Telegram has been [challenging](https://www.yahoo.com/news/articles/telegram-sues-australia-over-age-102715194.html) the fine on technical, legal and freedom of speech grounds.
 
