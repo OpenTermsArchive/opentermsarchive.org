@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: LinkedIn updated its Privacy Policy to expand personal data sharing across Microsoft services, explicitly including GitHub. It now uses profile data, conversations with GenAI features, and member-generated content to train AI models. European users can opt out, while the UK version specifies data use for training Microsoft's AI models including LinkedIn videos.
 title: LinkedIn shares data with Microsoft and its subsidiaries to train AI models
 service: LinkedIn
 terms_types: ["Privacy Policy"]
