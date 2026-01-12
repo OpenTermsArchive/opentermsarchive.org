@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: Pinterest updated its Commercial Terms, replacing brick-and-mortar pharmacies with brick-and-mortar casinos in the list of ads prohibited in Qatar and Saudi Arabia.
 title: Pinterest is replacing pharmacies in its list of prohibited ads with casinos
 service: Pinterest
 terms_types: ["Commercial Terms"]
