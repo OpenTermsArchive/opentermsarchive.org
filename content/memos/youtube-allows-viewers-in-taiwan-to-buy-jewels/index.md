@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: YouTube expanded its Virtual Items Program to Taiwan, allowing viewers to purchase Jewels for microtransactions during live streams, shifting eligibility from citizenship to location.
 title: YouTube allows viewers in Taiwan to buy Jewels
 service: YouTube
 terms_types: ["Content Monetisation Policy"]
