@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: AliExpress updated its Marketplace Sellers Conditions to allow local sellers in Poland, Germany, France, Italy, and Spain to sell live ornamental plants, while agricultural products remain prohibited.
 title: AliExpress allows the sale of decorative plants in Poland, France, Germany, Italy and Spain
 service: AliExpress
 terms_types: ["Marketplace Sellers Conditions"]
