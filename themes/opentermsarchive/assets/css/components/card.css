@@ -37,7 +37,7 @@
   padding: var(--pl) var(--pm) var(--pm) var(--pm);
 }
 
-.card__body > .cardtable{
+.card__body > .cardtable {
   margin-top: var(--ml);
 }
 
