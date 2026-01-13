@@ -1,0 +1,42 @@
+{{- $pagesWithDate := slice -}}
+{{- range .RegularPages -}}
+  {{- $firstDate := (index .Params.dates 0) | time -}}
+  {{- $pagesWithDate = $pagesWithDate | append (dict "date" $firstDate "page" .) -}}
+{{- end -}}
+{{- $sortedPages := sort $pagesWithDate "date" "desc" -}}
+{{- $limit := .Site.Config.Services.RSS.Limit -}}
+{{- if ge $limit 1 -}}
+  {{- $sortedPages = $sortedPages | first $limit -}}
+{{- end -}}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>{{ .Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ with .Param "html_description"}}{{ . }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}</description>
+    <language>{{ .Site.Language.LanguageCode }}</language>
+    {{- with index $sortedPages 0 }}
+    <lastBuildDate>{{ .date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- end }}
+    {{- with .OutputFormats.Get "RSS" }}
+    <atom:link href="{{ .Permalink }}" rel="self" type="{{ .MediaType | safeHTML  }}" />
+    {{- end }}
+    {{- range $sortedPages }}
+    {{- $page := .page -}}
+    {{- $pubDate := .date }}
+    <item>
+      <title>{{ $page.Title }}</title>
+      <link>{{ $page.Permalink }}</link>
+      <pubDate>{{ $pubDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+      {{- with $page.Params.author }}
+      {{- $authors := cond (reflect.IsSlice .) . (slice .) -}}
+      {{- range $authors }}
+      <dc:creator>{{ . }}</dc:creator>
+      {{- end }}
+      {{- end }}
+      <guid>{{ $page.Permalink }}</guid>
+      <description>{{ $page.Summary | transform.XMLEscape | safeHTML }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>
