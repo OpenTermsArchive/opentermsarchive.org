@@ -37,8 +37,11 @@
   padding: var(--pl) var(--pm) var(--pm) var(--pm);
 }
 
+.card__body > .cardtable{
+  margin-top: var(--ml);
+}
+
 .card__subtitle {
-  margin: var(--ms) 0 var(--mxl);
   font-size: 1.8rem;
 }
 
