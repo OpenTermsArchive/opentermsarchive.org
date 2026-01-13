@@ -24,3 +24,6 @@ minify:
       keepComments: true
 build:
   noJSConfigInAssets: true
+services:
+  rss:
+    limit: 20
