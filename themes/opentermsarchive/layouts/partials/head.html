@@ -3,6 +3,11 @@
   <title>{{ with .Param "html_title" }}{{ . }}{{ else }}{{ .Title }}{{ end }}</title>
   <meta name="description" content="{{ with .Param "html_description"}}{{ . }}{{ else }}{{ .Summary | truncate 160 }}{{ end }}">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  {{- with $.Site.GetPage "/memos" }}
+    {{- with .OutputFormats.Get "rss" }}
+  <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="Memos">
+    {{- end }}
+  {{- end }}
   {{ $styles := resources.Get "css/loader.css" | toCSS | postCSS (dict "config" "./assets/css/postcss.config.js" "inlineImports" true) }}
   {{ if hugo.IsProduction }}{{ $styles = $styles | minify | fingerprint | resources.PostProcess }}{{ end }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
