@@ -2,8 +2,9 @@
 {{ $isDatasetsPage := false }}
 {{ $context := .context }}
 {{ $featured := default false .featured }}
-{{ $query := where site.RegularPages.ByWeight "Section" "collections" }}
-{{ if .featured }}{{ $query = first 3 $query }}{{ end }}
+{{ $collections := where site.RegularPages.ByWeight "Section" "collections" }}
+{{ $collectionsFederated := where $collections ".Params.federated" true }}
+{{ if .featured }}{{ $collectionsFederated = first 3 $collectionsFederated }}{{ end }}
 {{ if eq (relref $context "/datasets") $context.Page.RelPermalink }}
   {{ $bgColor = "white" }}
   {{ $isDatasetsPage = true }}
@@ -18,7 +19,7 @@
         </div>
       {{ end }}
       <div class="cardlist__items">
-        {{ range $query }}
+        {{ range $collectionsFederated }}
           {{ partial "collection-card.html" (dict "context" .) }}
         {{ end }}
       </div>

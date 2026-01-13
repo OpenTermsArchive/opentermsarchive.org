@@ -7,7 +7,7 @@
         {{ if .IsSection }}
           <hr />
           <h3>{{ i18n "dsa_systemic_risks_reports.related_collection" }}</h3>
-          {{ $dsaCollection := index (where site.Data.unfederated_collections "id" "dsa-reports") 0 }}
+          {{ $dsaCollection := index (where site.Data.collections "id" "dsa-reports") 0 }}
           {{ with $dsaCollection }}
             {{ partial "collection-card.html" (dict
               "context" (dict

@@ -31,10 +31,9 @@
     "lint:css": "stylelint \"themes/opentermsarchive/assets/css/**/*.css\"",
     "lint:js": "eslint themes/opentermsarchive/assets/js/ test/**/*.js",
     "lint:html": "eslint themes/opentermsarchive/layouts/**/*.html -c .htmleslintrc.yaml",
-    "fetch": "npm run fetch:uptime && npm run fetch:collections && npm run fetch:unfederated-collections",
+    "fetch": "npm run fetch:uptime && npm run fetch:collections",
     "fetch:uptime": "node scripts/fetch-uptime.js",
-    "fetch:collections": "node scripts/fetch-collections.js",
-    "fetch:unfederated-collections": "node scripts/fetch-unfederated-collections.js"
+    "fetch:collections": "node scripts/fetch-collections.js"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.23.1",
