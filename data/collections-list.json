@@ -1,46 +1,62 @@
 [
   {
     "name": "Generative AI Contrib",
-    "endpoint": "http://86.54.83.121/collection-api/v1/"
+    "endpoint": "http://86.54.83.121/collection-api/v1/",
+    "federated": true
   },
   {
     "name": "Platform Governance Archive",
-    "endpoint": "http://134.102.58.70/collection-api/v1/"
+    "endpoint": "http://134.102.58.70/collection-api/v1/",
+    "federated": true
   },
   {
     "name": "France",
-    "endpoint": "http://217.182.67.38/france/collection-api/v1/"
+    "endpoint": "http://217.182.67.38/france/collection-api/v1/",
+    "federated": true
   },
   {
     "name": "Numérique en santé France",
-    "endpoint": "http://54.38.188.145/collection-api/v1/"
+    "endpoint": "http://54.38.188.145/collection-api/v1/",
+    "federated": true
   },
   {
     "name": "P2B Compliance",
-    "endpoint": "http://217.182.67.38/p2b-compliance/collection-api/v1/"
+    "endpoint": "http://217.182.67.38/p2b-compliance/collection-api/v1/",
+    "federated": true
   },
   {
     "name": "France Public Services",
-    "endpoint": "http://ota.iroco.co/collection-api/v1/"
+    "endpoint": "http://ota.iroco.co/collection-api/v1/",
+    "federated": true
   },
   {
     "name": "France Élections",
-    "endpoint": "http://217.182.67.38/france-elections/collection-api/v1/"
+    "endpoint": "http://217.182.67.38/france-elections/collection-api/v1/",
+    "federated": true
   },
   {
     "name": "Dating",
-    "endpoint": "http://79.137.75.49/collection-api/v1/"
+    "endpoint": "http://79.137.75.49/collection-api/v1/",
+    "federated": true
   },
   {
     "name": "Contrib",
-    "endpoint": "http://86.54.83.7/collection-api/v1/"
+    "endpoint": "http://86.54.83.7/collection-api/v1/",
+    "federated": true
   },
   {
     "name": "Kenya",
-    "endpoint": "http://102.68.86.60/collection-api/v1/"
+    "endpoint": "http://102.68.86.60/collection-api/v1/",
+    "federated": true
   },
   {
     "name": "Demo",
-    "endpoint": "http://162.19.74.224/collection-api/v1/"
+    "endpoint": "http://162.19.74.224/collection-api/v1/",
+    "federated": true
+  },
+  {
+    "name": "DSA Systemic Risks Reports",
+    "endpoint": "http://51.38.36.133/collection-api/v1/",
+    "federated": false
   }
 ]
