@@ -58,5 +58,30 @@
     "name": "DSA Systemic Risks Reports",
     "endpoint": "http://51.38.36.133/collection-api/v1/",
     "federated": false
+  },
+  {
+    "name": "VLOPSEs United States",
+    "endpoint": "http://38.146.25.84/collection-api/v1/",
+    "federated": false
+  },
+  {
+    "name": "VLOPSEs Canada",
+    "endpoint": "http://72.14.155.148/collection-api/v1/",
+    "federated": false
+  },
+  {
+    "name": "VLOPSEs Australia",
+    "endpoint": "http://139.99.155.143/collection-api/v1/",
+    "federated": false
+  },
+  {
+    "name": "VLOPSEs Ireland",
+    "endpoint": "http://46.16.131.72/collection-api/v1/",
+    "federated": false
+  },
+  {
+    "name": "VLOPSEs United Kingdom",
+    "endpoint": "http://57.129.129.3/collection-api/v1/",
+    "federated": false
   }
 ]
