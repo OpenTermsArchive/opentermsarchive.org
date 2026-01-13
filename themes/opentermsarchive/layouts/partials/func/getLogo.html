@@ -21,7 +21,7 @@
     {{ else with .Value }}
       {{ $resource = . }}
     {{ else }}
-      {{ $errorMessage = printf "Failed to fetch %s" $remoteLogoUrl }}
+      {{ $errorMessage = printf "Failed to get remote from %s" $remoteLogoUrl }}
     {{ end }}
   {{ end }}
 {{ end }}
@@ -33,7 +33,20 @@
     {{ else with .Value }}
       {{ $resource = . }}
     {{ else }}
-      {{ $errorMessage = printf "%s\nFailed to fetch local fallback %s" $errorMessage $localImagePath }}
+      {{ $errorMessage = printf "%s\nFailed to get local fallback from %s" $errorMessage $localImagePath }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if not $resource }}
+  {{ $defaultImagePath := printf "/images/%s/placeholder.png" $type }}
+  {{ with try (resources.Get $defaultImagePath) }}
+    {{ with .Err }}
+      {{ $errorMessage = .Err }}
+    {{ else with .Value }}
+      {{ $resource = . }}
+    {{ else }}
+      {{ $errorMessage = printf "%s\nFailed to get default fallback from %s" $errorMessage $defaultImagePath }}
     {{ end }}
   {{ end }}
 {{ end }}

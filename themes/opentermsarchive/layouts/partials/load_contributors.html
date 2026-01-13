@@ -57,7 +57,7 @@
 
       {{ end }}
     {{ else }}
-      {{ warnf "Unable to get the remote contributors from %q" . }}
+      {{ warnf "Failed to get remote contributors from %q" $additionalSource }}
     {{ end }}
   {{ end }}
 {{ end }}
