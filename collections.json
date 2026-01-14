@@ -68,7 +68,8 @@
     "totalServices": 48,
     "totalTerms": 141,
     "engineVersion": "10.1.2",
-    "endpoint": "http://86.54.83.121/collection-api/v1/"
+    "endpoint": "http://86.54.83.121/collection-api/v1/",
+    "federated": true
   },
   {
     "id": "pga",
@@ -141,7 +142,8 @@
     "totalServices": 23,
     "totalTerms": 103,
     "engineVersion": "10.1.2",
-    "endpoint": "http://134.102.58.70/collection-api/v1/"
+    "endpoint": "http://134.102.58.70/collection-api/v1/",
+    "federated": true
   },
   {
     "id": "france",
@@ -209,7 +211,8 @@
     "totalServices": 122,
     "totalTerms": 259,
     "engineVersion": "10.1.3",
-    "endpoint": "http://217.182.67.38/france/collection-api/v1/"
+    "endpoint": "http://217.182.67.38/france/collection-api/v1/",
+    "federated": true
   },
   {
     "id": "sante-numerique-france",
@@ -261,7 +264,8 @@
     "totalServices": 14,
     "totalTerms": 46,
     "engineVersion": "10.1.2",
-    "endpoint": "http://54.38.188.145/collection-api/v1/"
+    "endpoint": "http://54.38.188.145/collection-api/v1/",
+    "federated": true
   },
   {
     "id": "p2b-compliance",
@@ -345,7 +349,8 @@
     "totalServices": 203,
     "totalTerms": 245,
     "engineVersion": "10.1.2",
-    "endpoint": "http://217.182.67.38/p2b-compliance/collection-api/v1/"
+    "endpoint": "http://217.182.67.38/p2b-compliance/collection-api/v1/",
+    "federated": true
   },
   {
     "id": "france-public",
@@ -404,7 +409,8 @@
     "totalServices": 23,
     "totalTerms": 31,
     "engineVersion": "7.0.0",
-    "endpoint": "http://ota.iroco.co/collection-api/v1/"
+    "endpoint": "http://ota.iroco.co/collection-api/v1/",
+    "federated": true
   },
   {
     "id": "france-elections",
@@ -460,7 +466,8 @@
     "totalServices": 5,
     "totalTerms": 65,
     "engineVersion": "10.1.2",
-    "endpoint": "http://217.182.67.38/france-elections/collection-api/v1/"
+    "endpoint": "http://217.182.67.38/france-elections/collection-api/v1/",
+    "federated": true
   },
   {
     "id": "dating",
@@ -532,7 +539,8 @@
     "totalServices": 26,
     "totalTerms": 67,
     "engineVersion": "10.1.2",
-    "endpoint": "http://79.137.75.49/collection-api/v1/"
+    "endpoint": "http://79.137.75.49/collection-api/v1/",
+    "federated": true
   },
   {
     "id": "contrib",
@@ -602,7 +610,8 @@
     "totalServices": 379,
     "totalTerms": 816,
     "engineVersion": "10.1.3",
-    "endpoint": "http://86.54.83.7/collection-api/v1/"
+    "endpoint": "http://86.54.83.7/collection-api/v1/",
+    "federated": true
   },
   {
     "id": "kenya",
@@ -677,7 +686,8 @@
     "totalServices": 16,
     "totalTerms": 18,
     "engineVersion": "10.1.2",
-    "endpoint": "http://102.68.86.60/collection-api/v1/"
+    "endpoint": "http://102.68.86.60/collection-api/v1/",
+    "federated": true
   },
   {
     "id": "demo",
@@ -738,6 +748,259 @@
     "totalServices": 7,
     "totalTerms": 19,
     "engineVersion": "10.1.3",
-    "endpoint": "http://162.19.74.224/collection-api/v1/"
+    "endpoint": "http://162.19.74.224/collection-api/v1/",
+    "federated": true
+  },
+  {
+    "id": "dsa-reports",
+    "name": "DSA Systemic Risks Reports",
+    "tagline": "Systemic risks reports mandated by the Digital Services Act",
+    "description": "The European [Digital Services Act article 34](https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng#art_34) mandates very large online platforms and search engines (VLOPSEs) to publish systemic risk assessments “at least once every year”. [Open Terms Archive](https://opentermsarchive.org/) makes these reports available independently from platforms hosting, and tracks any changes applied to the reports after they are published. This effort ensures the long term preservation of these documents to support research and guarantee platform accountability. This collection was created as a collaboration between [Open Terms Archive](https://opentermsarchive.org/) and [CheckFirst](https://checkfirst.network) as part of the [Hack the DSA](https://regulation-tech.cnam.fr/hack-the-dsa/) hackathon hosted by the CNAM’s _Chaire sur la Modération des Contenus_ in October 2025.",
+    "dataset": "https://github.com/OpenTermsArchive/dsa-reports-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/dsa-reports-declarations",
+    "versions": "https://github.com/OpenTermsArchive/dsa-reports-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/dsa-reports-snapshots",
+    "languages": [
+      "en"
+    ],
+    "jurisdictions": [
+      "FR"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2025-10-03",
+        "schedule": "0 4 * * 0",
+        "serverLocation": "Gravelines, FR"
+      }
+    ],
+    "governance": {
+      "Open Terms Archive": {
+        "url": "https://opentermsarchive.org",
+        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black.png",
+        "roles": [
+          "host",
+          "sysadmin",
+          "curator",
+          "maintainer",
+          "contributor",
+          "sponsor"
+        ]
+      },
+      "CheckFirst": {
+        "url": "https://checkfirst.network",
+        "logo": "https://checkfirst.network/wp-content/themes/checkfirst/core/img/checkfirst.png",
+        "roles": [
+          "curator",
+          "contributor"
+        ]
+      }
+    },
+    "i18n": {
+      "fr": {
+        "name": "Rapports de risques systémiques DSA",
+        "tagline": "Rapports de risques systémiques mandatés par le règlement sur les services numériques (DSA)",
+        "description": "L’[article 34](https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng#art_34) du règlement européen sur les services numériques oblige les très grandes plateformes en ligne et les moteurs de recherche (VLOPSEs) à publier des évaluations des risques systémiques « au moins une fois par an ». [Open Terms Archive](https://opentermsarchive.org/) met ces rapports à disposition indépendamment des plateformes qui les hébergent et suit toutes les modifications apportées aux rapports après leur publication. Cette initiative garantit la préservation à long terme de ces documents afin de soutenir la recherche et de garantir la redevabilité des plateformes. Cette collection a été créée par une collaboration entre [Open Terms Archive](https://opentermsarchive.org/) et [CheckFirst](https://checkfirst.network) dans le cadre du hackathon [Hack the DSA](https://regulation-tech.cnam.fr/hack-the-dsa/) organisé par la _Chaire sur la Modération des Contenus du CNAM_ en octobre 2025."
+      }
+    },
+    "totalServices": 21,
+    "totalTerms": 51,
+    "engineVersion": "10.1.2",
+    "endpoint": "http://51.38.36.133/collection-api/v1/",
+    "federated": false
+  },
+  {
+    "id": "vlopses-us",
+    "name": "VLOPSEs United States",
+    "tagline": "",
+    "description": "",
+    "dataset": "https://github.com/OpenTermsArchive/vlopses-us-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/vlopses-us-declarations",
+    "versions": "https://github.com/OpenTermsArchive/vlopses-us-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/vlopses-us-snapshots",
+    "languages": [
+      "en"
+    ],
+    "jurisdictions": [
+      "US"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2025-07-11",
+        "schedule": "30 */12 * * *",
+        "serverLocation": "Los Angeles, USA"
+      }
+    ],
+    "governance": {
+      "Open Terms Archive": {
+        "url": "https://opentermsarchive.org",
+        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black.png",
+        "roles": [
+          "sysadmin",
+          "curator",
+          "maintainer"
+        ]
+      }
+    },
+    "totalServices": 21,
+    "totalTerms": 184,
+    "engineVersion": "10.1.2",
+    "endpoint": "http://38.146.25.84/collection-api/v1/",
+    "federated": false
+  },
+  {
+    "id": "vlopses-ca",
+    "name": "VLOPSEs Canada",
+    "tagline": "",
+    "description": "",
+    "dataset": "https://github.com/OpenTermsArchive/vlopses-ca-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/vlopses-ca-declarations",
+    "versions": "https://github.com/OpenTermsArchive/vlopses-ca-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/vlopses-ca-snapshots",
+    "languages": [
+      "en"
+    ],
+    "jurisdictions": [
+      "CA"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2025-07-11",
+        "schedule": "30 */12 * * *",
+        "serverLocation": "Toronto, CA"
+      }
+    ],
+    "governance": {
+      "Open Terms Archive": {
+        "url": "https://opentermsarchive.org",
+        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black.png",
+        "roles": [
+          "sysadmin",
+          "curator",
+          "maintainer"
+        ]
+      }
+    },
+    "totalServices": 11,
+    "totalTerms": 100,
+    "engineVersion": "10.1.2",
+    "endpoint": "http://72.14.155.148/collection-api/v1/",
+    "federated": false
+  },
+  {
+    "id": "vlopses-au",
+    "name": "VLOPSEs Australia",
+    "tagline": "",
+    "description": "",
+    "dataset": "https://github.com/OpenTermsArchive/vlopses-au-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/vlopses-au-declarations",
+    "versions": "https://github.com/OpenTermsArchive/vlopses-au-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/vlopses-au-snapshots",
+    "languages": [
+      "en"
+    ],
+    "jurisdictions": [
+      "AU"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2025-07-11",
+        "schedule": "30 */12 * * *",
+        "serverLocation": "Sydney, AU"
+      }
+    ],
+    "governance": {
+      "Open Terms Archive": {
+        "url": "https://opentermsarchive.org",
+        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black.png",
+        "roles": [
+          "sysadmin",
+          "curator",
+          "maintainer"
+        ]
+      }
+    },
+    "totalServices": 11,
+    "totalTerms": 102,
+    "engineVersion": "10.1.2",
+    "endpoint": "http://139.99.155.143/collection-api/v1/",
+    "federated": false
+  },
+  {
+    "id": "vlopses-ie",
+    "name": "VLOPSEs Ireland",
+    "tagline": "",
+    "description": "",
+    "dataset": "https://github.com/OpenTermsArchive/vlopses-ie-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/vlopses-ie-declarations",
+    "versions": "https://github.com/OpenTermsArchive/vlopses-ie-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/vlopses-ie-snapshots",
+    "languages": [
+      "en"
+    ],
+    "jurisdictions": [
+      "IE"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2025-07-10T00:00:00.000Z",
+        "schedule": "30 */12 * * *",
+        "serverLocation": "Dublin, IE"
+      }
+    ],
+    "governance": {
+      "Open Terms Archive": {
+        "url": "https://opentermsarchive.org",
+        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black.png",
+        "roles": [
+          "sysadmin",
+          "curator",
+          "maintainer"
+        ]
+      }
+    },
+    "totalServices": 12,
+    "totalTerms": 112,
+    "engineVersion": "10.1.2",
+    "endpoint": "http://46.16.131.72/collection-api/v1/",
+    "federated": false
+  },
+  {
+    "id": "vlopses-gb",
+    "name": "VLOPSEs United Kingdom",
+    "tagline": "",
+    "description": "",
+    "dataset": "https://github.com/OpenTermsArchive/vlopses-gb-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/vlopses-gb-declarations",
+    "versions": "https://github.com/OpenTermsArchive/vlopses-gb-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/vlopses-gb-snapshots",
+    "languages": [
+      "en"
+    ],
+    "jurisdictions": [
+      "GB"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2025-07-09T00:00:00.000Z",
+        "schedule": "30 */12 * * *",
+        "serverLocation": "London, UK"
+      }
+    ],
+    "governance": {
+      "Open Terms Archive": {
+        "url": "https://opentermsarchive.org",
+        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black.png",
+        "roles": [
+          "sysadmin",
+          "curator",
+          "maintainer"
+        ]
+      }
+    },
+    "totalServices": 11,
+    "totalTerms": 100,
+    "engineVersion": "10.1.2",
+    "endpoint": "http://57.129.129.3/collection-api/v1/",
+    "federated": false
   }
 ]
