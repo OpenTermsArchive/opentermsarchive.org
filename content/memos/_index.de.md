@@ -1,6 +1,9 @@
 ---
 title: Memos
 html_description: Einige Beispiele dafür, was Open Terms Archive aufdeckt, wie sie von unabhängigen Mitwirkenden ermittelt wurden.
+outputs:
+  - HTML
+  - RSS
 hero:
   title: Memos
   subtitle: Einige Beispiele dafür, was Open Terms Archive aufdeckt, wie sie von unabhängigen Mitwirkenden ermittelt wurden

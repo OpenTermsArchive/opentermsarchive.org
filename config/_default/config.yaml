@@ -7,6 +7,16 @@ disableKinds:
   - taxonomy
 ignoreErrors: ["error-disable-taxonomy"]
 removePathAccents: true
+# Limit RSS feeds outputs by opt-in via front matter
+outputs:
+  home:
+    - HTML
+  section:
+    - HTML
+  taxonomy:
+    - HTML
+  term:
+    - HTML
 minify:
   tdewolff:
     html:
@@ -14,3 +24,6 @@ minify:
       keepComments: true
 build:
   noJSConfigInAssets: true
+services:
+  rss:
+    limit: 20
