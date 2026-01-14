@@ -24,6 +24,15 @@
     {{- range $sortedPages }}
     {{- $page := .page -}}
     {{- $pubDate := .date }}
+    {{- $service := cond (reflect.IsSlice $page.Params.service) (delimit $page.Params.service ", ") $page.Params.service }}
+    {{- $termsTypes := delimit $page.Params.terms_types ", " }}
+    {{- $formatedDates := slice }}
+    {{- range $page.Params.dates }}
+      {{- $formatedDate := ( . | time.Format ":date_long") }}
+      {{- $formatedDates = $formatedDates | append $formatedDate }}
+    {{- end }}
+    {{- $datesString := delimit $formatedDates " - " }}
+    {{- $metadataString := printf "%s ▪ %s ▪ %s" $service $termsTypes $datesString }}
     <item>
       <title>{{ $page.Title }}</title>
       <link>{{ $page.Permalink }}</link>
@@ -35,7 +44,7 @@
       {{- end }}
       {{- end }}
       <guid>{{ $page.Permalink }}</guid>
-      <description>{{ $page.Summary | transform.XMLEscape | safeHTML }}</description>
+      <description>{{ printf "<p>%s</p>%s" ($metadataString | transform.XMLEscape) ($page.Summary | transform.XMLEscape) | safeHTML }}</description>
     </item>
     {{- end }}
   </channel>
