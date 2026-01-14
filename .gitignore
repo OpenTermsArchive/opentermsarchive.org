@@ -13,7 +13,6 @@ public
 resources/_gen/
 data/uptime.json
 data/collections.json
-data/unfederated_collections.json
 data/contributors.json
 .env
 
