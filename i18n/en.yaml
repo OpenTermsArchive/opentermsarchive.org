@@ -88,6 +88,7 @@ collections:
       "30 */12 * * *": Twice a day
       "30 */6 * * *": Four times a day
       "0 6,18 * * *": Twice a day
+      "0 4 * * 0": Once a week
     uptime_ratio: API availability<br><small>last 30 days</small>
   cta:
     view_all: Explore other collections

@@ -116,13 +116,17 @@
               {{ $city := trim (index $location 0) " " }}
               {{ $countryCode := trim (index $location 1) " " }}
               {{ $countryName := index site.Data.display_names.regions site.Language.LanguageCode $countryCode }}
-              {{ $fullLocation := printf "%s, %s" $city $countryName }}
-              {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.server_location") "icon" "map-pin" "desc" $fullLocation) }}
+              {{ if $countryName }}
+                {{ $fullLocation := printf "%s, %s" $city $countryName }}
+                {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.server_location") "icon" "map-pin" "desc" $fullLocation) }}
+              {{ end }}
             {{ end }}
             {{ with $currentTracking.schedule }}
               {{ $cronKey := printf "collections.metadata.cron.%s" . }}
               {{ $cronExpression := i18n $cronKey . }}
-              {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.schedule") "icon" "clock" "desc" $cronExpression) }}
+              {{ if ne $cronExpression $cronKey }}
+                {{ partial "collection-metadata-item.html" (dict "title" (i18n "collections.metadata.schedule") "icon" "clock" "desc" $cronExpression) }}
+              {{ end }}
             {{ end }}
           {{ end }}
           {{ with .Params.uptimeRatio }}

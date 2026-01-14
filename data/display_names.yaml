@@ -81,6 +81,7 @@ regions:
     CN: Chine
     FR: France
     US: États-Unis
+    USA: États-Unis
     GB: Royaume-Uni
     DE: Allemagne
     KE: Kenya
@@ -90,6 +91,7 @@ regions:
     CN: China
     FR: France
     US: United States
+    USA: United States
     GB: United Kingdom
     DE: Germany
     KE: Kenya
@@ -99,6 +101,7 @@ regions:
     CN: China
     FR: France
     US: United States
+    USA: United States
     GB: United Kingdom
     DE: Germany
     KE: Kenya

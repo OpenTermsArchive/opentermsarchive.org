@@ -13,7 +13,10 @@
     {{ $totalContributors = add $totalContributors 1 }}
   {{ end }}
 
-  {{ range where site.RegularPages "Section" "collections" }}
+  {{ $collections := where site.RegularPages.ByWeight "Section" "collections" }}
+  {{ $collectionsFederated := where $collections ".Params.federated" true }}
+
+  {{ range $collectionsFederated }}
     {{ $totalTerms = add $totalTerms .Params.totalTerms }}
     {{ $totalServices = add $totalServices .Params.totalServices }}
     {{ $totalCollections = add $totalCollections 1 }}
@@ -121,7 +124,7 @@
       <h5 class="h5--thin">{{ $collectionsDescription }}</h5>
       <div class="collections cardlist">
         <div class="cardlist__items mt--xl">
-          {{ range where site.RegularPages.ByWeight "Section" "collections" }}
+          {{ range $collectionsFederated }}
             {{ partial "collection-card.html" (dict "context" . "mini" true) }}
           {{ end }}
         </div>
@@ -147,7 +150,7 @@
   </div>
 
   {{ $uniqueSponsors := slice }}
-  {{ range where site.RegularPages.ByWeight "Section" "collections" }}
+  {{ range $collectionsFederated }}
     {{ $i18n := .Params.i18n }}
     {{ with .Params.governance }}
       {{ $sponsors := where . "roles" "intersect" (slice "sponsor") }}
@@ -168,7 +171,7 @@
       <div class="collections cardlist">
         <div class="cardlist__items mt--xl">
           {{ $uniqueSponsors := slice }}
-          {{ range where site.RegularPages.ByWeight "Section" "collections" }}
+          {{ range $collectionsFederated }}
             {{ $i18n := .Params.i18n }}
             {{ with .Params.governance }}
               {{ $sponsors := where . "roles" "intersect" (slice "sponsor") }}

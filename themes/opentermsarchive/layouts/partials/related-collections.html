@@ -11,7 +11,8 @@
 {{ end }}
 
 {{ $matchingCollections := slice }}
-{{ range where site.RegularPages "Section" "collections" }}
+{{ $collections := where site.RegularPages.ByWeight "Section" "collections" }}
+{{ range $collections }}
   {{ if in $.relatedCollectionsIDs .Params.id }}
     {{ $matchingCollections = $matchingCollections | append . }}
   {{ end }}

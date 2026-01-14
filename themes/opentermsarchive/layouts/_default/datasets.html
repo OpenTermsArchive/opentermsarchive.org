@@ -5,8 +5,9 @@
         {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
         {{ .Content }}
         <ul class="mt--xl">
-          {{ $query := where site.RegularPages.ByWeight "Section" "collections" }}
-          {{ range $query }}
+          {{ $collections := where site.RegularPages.ByWeight "Section" "collections" }}
+          {{ $collectionsFederated := where $collections ".Params.federated" true }}
+          {{ range $collectionsFederated }}
             <li>
               <a href="https://github.com/openTermsArchive/{{ .Params.id }}-versions/releases/latest" target="_blank" rel="noopener">
                 {{ .Params.name }}
