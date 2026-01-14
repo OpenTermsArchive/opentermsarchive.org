@@ -31,9 +31,10 @@
     "lint:css": "stylelint \"themes/opentermsarchive/assets/css/**/*.css\"",
     "lint:js": "eslint themes/opentermsarchive/assets/js/ test/**/*.js",
     "lint:html": "eslint themes/opentermsarchive/layouts/**/*.html -c .htmleslintrc.yaml",
-    "fetch": "npm run fetch:uptime && npm run fetch:collections",
+    "fetch": "npm run fetch:uptime && npm run fetch:collections && npm run fetch:contributors",
     "fetch:uptime": "node scripts/fetch-uptime.js",
-    "fetch:collections": "node scripts/fetch-collections.js"
+    "fetch:collections": "node scripts/fetch-collections.js",
+    "fetch:contributors": "node scripts/fetch-contributors.js"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.23.1",
@@ -50,6 +51,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-json-format": "^2.0.1",
     "html-validate": "^8.12.0",
+    "js-yaml": "^4.1.0",
     "linkinator": "^6.0.4",
     "lucide": "^0.344.0",
     "markdownlint-cli": "^0.39.0",

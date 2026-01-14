@@ -7,7 +7,7 @@
   {{ $totalReuses := 0 }}
   {{ $totalMemos := 0 }}
   {{ $totalVersions := 53669 }}
-  {{ $contributors := partial "load_contributors.html" . }}
+  {{ $contributors := site.Data.contributors }}
 
   {{ range $contributor := $contributors }}
     {{ $totalContributors = add $totalContributors 1 }}

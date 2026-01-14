@@ -7,6 +7,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      UPTIMEROBOT_API_KEY: ${{ secrets.UPTIMEROBOT_API_KEY }}
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3

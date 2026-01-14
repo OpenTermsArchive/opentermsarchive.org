@@ -138,6 +138,54 @@ Note that because of CloudFlare protection, tests on external links are not run 
 npm run test:e2e
 ```
 
+### Fetching data
+
+Before building or serving the site, you need to fetch external data using the fetch scripts. These scripts are automatically run before building (`prebuild`) or starting the development server (`prestart:dev`), but you can also run them manually.
+
+#### Fetch all data
+
+To fetch all required data at once:
+
+```sh
+npm run fetch
+```
+
+This command runs all fetch scripts in the correct order:
+
+1. `fetch:uptime` - Fetches uptime monitoring data
+2. `fetch:collections` - Fetches collections metadata
+3. `fetch:contributors` - Fetches contributors data
+
+#### Fetch uptime data
+
+Fetches monitoring data from UptimeRobot API and saves it to `data/uptime.json`. Requires the `UPTIMEROBOT_API_KEY` environment variable to be set.
+
+```sh
+npm run fetch:uptime
+```
+
+#### Fetch collections data
+
+Fetches metadata for all collections listed in `data/collections-list.json` from their respective endpoints and saves the aggregated data to `data/collections.json`.
+
+```sh
+npm run fetch:collections
+```
+
+#### Fetch contributors data
+
+Aggregates contributor information from multiple sources:
+
+- Local contributors from `.all-contributorsrc`
+- Additional sources defined in `config/_default/params.yaml`
+- Contributors from each collection's `.all-contributorsrc` file
+
+The script merges all contributors, identifies staff members from `data/staff.yaml`, and saves the result to `data/contributors.json`.
+
+```sh
+npm run fetch:contributors
+```
+
 ## Deployment
 
 The `main` branch is used on production and automatically deployed through GitHub pages. Refer to the configuration file `.github/workflows/gh-pages.yml`.
