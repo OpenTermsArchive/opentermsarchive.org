@@ -1,6 +1,6 @@
 {{ $thumbnailWidth := default 64 .thumbnailWidth }}
 {{ $thumbnailHeight := default 64 .thumbnailHeight }}
-{{ $contributors := partial "load_contributors.html" . }}
+{{ $contributors := site.Data.contributors }}
 {{ $filteredContributors := slice }}
 {{ $requestedStaffType := .staffType }}
 {{ $requestedRepositories := .repositories }}

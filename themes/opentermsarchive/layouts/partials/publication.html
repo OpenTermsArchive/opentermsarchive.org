@@ -19,7 +19,7 @@
 {{ $subtitle := printf "%s ▪ %s ▪ %s" $regulations $topics $date }}
 
 {{ if eq $template "single" }}
-  {{ $contributors := partial "load_contributors.html" . }}
+  {{ $contributors := site.Data.contributors }}
   {{ $authorText := "" }}
   {{ with .publication.Params.author }}
     {{ with index $contributors (. | lower) }}

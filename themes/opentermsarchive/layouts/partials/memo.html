@@ -26,7 +26,7 @@
     {{ if eq $template "single" }}</h4>{{ end }}
 
     {{ if eq $template "single" }}
-      {{ $contributors := partial "load_contributors.html" . }}
+      {{ $contributors := site.Data.contributors }}
       {{ with .memo.Params.author }}
         {{ $authors := cond (reflect.IsSlice .) . (slice .) }}
         {{ $authorInfos := slice }}
