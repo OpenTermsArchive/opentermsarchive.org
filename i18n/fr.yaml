@@ -196,7 +196,7 @@ presentations:
 dsa_systemic_risks_reports:
   related_collection: Collection associé
 publications:
-  author: Par <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, {{ if .isTeamMember }}un‧e membre de l'équipe d'Open Terms Archive{{ else }}un‧e contributeur·trice de la communauté{{ end }}
+  author: Par <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, {{ if .isTeamMember }}membre de l'équipe d'Open Terms Archive{{ else }}un‧e contributeur·trice de la communauté{{ end }}
   title: Rapport de tendances
   subtitle: Les rapports de tendances compilent les observations relatives à de multiples changements afin de tirer des conclusions plus générales sur l'évolution des règles au fil du temps, selon les services et les juridictions.
   desc: | 
