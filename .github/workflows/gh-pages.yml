@@ -9,6 +9,7 @@ on:
 jobs:
   test:
     uses: "OpenTermsArchive/opentermsarchive.org/.github/workflows/test.yml@main"
+    secrets: inherit
   deploy:
     needs: [ test ]
     runs-on: ubuntu-22.04
