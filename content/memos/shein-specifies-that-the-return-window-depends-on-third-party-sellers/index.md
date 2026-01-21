@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: Shein updated its return and refund policies to clarify that the return period varies depending on third-party sellers. 
 title: Shein specifies that the return window depends on third-party sellers
 service: Shein
 terms_types: ["General Conditions of Sale"]
