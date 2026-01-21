@@ -4,6 +4,11 @@
   border: 1px solid var(--colorBlack300);
 }
 
+.publication--single {
+  padding: var(--m2xl) var(--mxl);
+  margin-top: var(--m2xl);
+}
+
 .publication__title {
   margin-bottom: var(--ms);
 }
@@ -13,5 +18,5 @@
 }
 
 .publication__content {
-  padding-top: var(--ml);
+  padding-top: var(--m2xl);
 }

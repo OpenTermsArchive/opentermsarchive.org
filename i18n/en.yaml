@@ -188,7 +188,7 @@ presentations:
 dsa_systemic_risks_reports:
   related_collection: Related collection
 publications:
-  author: By <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, {{ if .isTeamMember }}an Open Terms Archive team member{{ else }}a community contributor{{ end }}
+  author: By <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, {{ if .isTeamMember }}Open Terms Archive team member{{ else }}a community contributor{{ end }}
   title: Trend reports
   subtitle: Trend reports compile observations of multiple changes to draw broader conclusions on how rules evolve across time, services and jurisdictions.
   desc: | 

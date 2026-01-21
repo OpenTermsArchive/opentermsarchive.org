@@ -1,13 +1,6 @@
 {{ $template := default "single" .template }}
 {{ $title := .publication.Title }}
 
-{{ $regulations := "" }}
-{{ if reflect.IsSlice .publication.Params.regulations }}
-  {{ $regulations = delimit .publication.Params.regulations ", " }}
-{{ else }}
-  {{ $regulations = .publication.Params.regulations }}
-{{ end }}
-
 {{ $topics := "" }}
 {{ if reflect.IsSlice .publication.Params.topic }}
   {{ $topics = delimit .publication.Params.topic ", " }}
@@ -16,31 +9,33 @@
 {{ end }}
 
 {{ $date := .publication.Params.date | time.Format ":date_long" }}
-{{ $subtitle := printf "%s ▪ %s ▪ %s" $regulations $topics $date }}
+{{ $subtitle := printf "%s ▪ %s" $topics $date }}
 
-{{ if eq $template "single" }}
-  {{ $contributors := site.Data.contributors }}
-  {{ $authorText := "" }}
-  {{ with .publication.Params.author }}
-    {{ with index $contributors (. | lower) }}
-      {{ $isTeamMember := partial "func/isTeamMember.html" .name }}
-      {{ $authorText = i18n "publications.author" (dict "profile" .profile "name" (.name | title) "isTeamMember" $isTeamMember) | safeHTML }}
-    {{ else }}
-      {{ warnf "Author %s of the publication %s not found in contributors" . $title }}
-    {{ end }}
+{{ $titleTag := cond (eq $template "single") "h1" "h4" }}
+{{ $subtitleTag := cond (eq $template "single") "h2" "h6" }}
+{{ $titleContent := cond (eq $template "single") $title (printf "<a href=\"%s\">%s</a>" .publication.RelPermalink $title) }}
+
+{{ $authorText := "" }}
+{{ $contributors := site.Data.contributors }}
+{{ with .publication.Params.author }}
+  {{ with index $contributors (. | lower) }}
+    {{ $isTeamMember := partial "func/isTeamMember.html" .name }}
+    {{ $authorText = i18n "publications.author" (dict "profile" .profile "name" (.name | title) "isTeamMember" $isTeamMember) | safeHTML }}
+  {{ else }}
+    {{ warnf "Author %s of the publication %s not found in contributors" . $title }}
   {{ end }}
-  {{ partial "hero.html" (dict "title" ($title | safeHTML) "subtitle" ($subtitle | safeHTML) "content" ($authorText | safeHTML) "size" "109") }}
 {{ end }}
 
 <div class="container container--has-no-padding-y">
-  <div class="container container--109 {{ if eq $template "list" }}container--has-padding-bottom-medium{{ end }} container--has-no-padding-top">
-    <article class="publication{{ with .class }} {{ . }}{{ end }}">
-      {{ if eq $template "list" }}
-        <header>
-          <h4 class="publication__title"><a href="{{ .publication.RelPermalink }}">{{ $title }}</a></h4>
-          <h6 class="publication__subtitle h6--ultrathin">{{ $subtitle | safeHTML }}</h6>
-        </header>
-      {{ end }}
+  <div class="container container--98 {{ if eq $template "list" }}container--has-no-padding-bottom{{ end }} container--has-no-padding-top">
+    <article class="publication{{ with .class }} {{ . }}{{ end }} {{ if eq $template "single" }}publication--single{{ end }}">
+      <header>
+        {{ printf "<%s class=\"publication__title\">%s</%s>" $titleTag $titleContent $titleTag | safeHTML }}
+        {{ printf "<%s class=\"publication__subtitle %s--ultrathin\">%s</%s>" $subtitleTag $subtitleTag $subtitle $subtitleTag | safeHTML }}
+        {{ if eq $template "single" }}
+          <p>{{ $authorText | safeHTML }}</p>
+        {{ end }}
+      </header>
       {{ if eq $template "single" }}
         <div class="publication__content textcontent">
           {{ .publication.Content }}
