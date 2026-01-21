@@ -2,7 +2,6 @@
 title: Trends in AI data collection by Big Tech and regulatory responses across jurisdictions
 html_description: "Big Tech companies are intensifying data collection for AI training, with policies varying dramatically across jurisdictions. While the EU enforces rights-oriented regulations like the AI Act, DSA, and DMA, the US pursues a pro-innovation approach with limited oversight. This analysis reveals how regulatory differences shape platform policies and privacy protections worldwide."
 author: Saumyaa Naidu
-regulations: ["AI Act", "DSA", "DMA"]
 topic: ["Privacy"]
 date: 2026-01-16
 ---

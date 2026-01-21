@@ -1,13 +1,6 @@
 {{ $template := default "single" .template }}
 {{ $title := .publication.Title }}
 
-{{ $regulations := "" }}
-{{ if reflect.IsSlice .publication.Params.regulations }}
-  {{ $regulations = delimit .publication.Params.regulations ", " }}
-{{ else }}
-  {{ $regulations = .publication.Params.regulations }}
-{{ end }}
-
 {{ $topics := "" }}
 {{ if reflect.IsSlice .publication.Params.topic }}
   {{ $topics = delimit .publication.Params.topic ", " }}
@@ -16,7 +9,7 @@
 {{ end }}
 
 {{ $date := .publication.Params.date | time.Format ":date_long" }}
-{{ $subtitle := printf "%s ▪ %s ▪ %s" $regulations $topics $date }}
+{{ $subtitle := printf "%s ▪ %s" $topics $date }}
 
 {{ $titleTag := cond (eq $template "single") "h1" "h4" }}
 {{ $subtitleTag := cond (eq $template "single") "h2" "h6" }}
