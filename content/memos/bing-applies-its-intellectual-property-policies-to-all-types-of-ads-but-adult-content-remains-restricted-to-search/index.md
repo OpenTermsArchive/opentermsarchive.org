@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: On January 8, 2026, Bing modified its intellectual property policies to apply to all ad types, while restricting adult content to search ads only.
 title: Bing applies its intellectual property policies to all types of ads, but adult content remains restricted to search
 service: Bing
 terms_types: ["Privacy Policy"]
