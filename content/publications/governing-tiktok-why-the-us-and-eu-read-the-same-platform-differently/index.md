@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: "Open Terms Archive findings reveal how the U.S. and EU approach TikTok governance differently: the U.S. frames it as a national security challenge, while the EU focuses on privacy and regulatory compliance. This divergence highlights broader tensions in how jurisdictions define platform risk and respond to evolving data practices."
 title: "Governing TikTok: Why the U.S. and EU Read the Same Platform Differently"
 author: Asma Sifaoui
 topic: ["Platform Governance", "Privacy"]
