@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: TikTok's newly established US entity, TikTok USDS Joint Venture LLC, has updated its privacy policy to expand data collection practices, including tracking AI interactions, precise location data, in-app browser activity, and shopping-related information.
 title: TikTok’s new US entity expands data collection with AI interactions and broadens data sharing network
 service: TikTok
 terms_types: ["Privacy Policy"]
