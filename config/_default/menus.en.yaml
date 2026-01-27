@@ -71,6 +71,3 @@ footer_sub:
   - name: Privacy policy
     pageRef: /privacy-policy
     weight: 8
-  - name: 'Accessibility: not compliant'
-    pageRef: /accessibility
-    weight: 9

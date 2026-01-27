@@ -71,6 +71,3 @@ footer_sub:
   - name: Politique de confidentialité
     pageRef: /privacy-policy
     weight: 8
-  - name: 'Accessibilité : non conforme'
-    pageRef: /accessibility
-    weight: 9
