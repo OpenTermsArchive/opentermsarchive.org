@@ -747,7 +747,7 @@
     },
     "totalServices": 7,
     "totalTerms": 19,
-    "engineVersion": "10.3.3",
+    "engineVersion": "10.6.0",
     "endpoint": "http://162.19.74.224/collection-api/v1/",
     "federated": true
   },
@@ -843,7 +843,7 @@
     },
     "totalServices": 22,
     "totalTerms": 195,
-    "engineVersion": "10.1.2",
+    "engineVersion": "10.6.0",
     "endpoint": "http://38.146.25.84/collection-api/v1/",
     "federated": false
   },
@@ -882,7 +882,7 @@
     },
     "totalServices": 11,
     "totalTerms": 100,
-    "engineVersion": "10.1.2",
+    "engineVersion": "10.6.0",
     "endpoint": "http://72.14.155.148/collection-api/v1/",
     "federated": false
   },
