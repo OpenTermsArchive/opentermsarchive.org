@@ -12,7 +12,6 @@ Open Terms Archive collective ℅ Clément Biron
 6 chemin des gandins, 38660 Plateau des Petites Roches, France
 `contact@opentermsarchive.org`
 
-
 ## Director of the publication
 
 Matti Schneider
