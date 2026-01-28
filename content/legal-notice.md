@@ -6,12 +6,11 @@ aliases: /legal-notice
 
 # Legal notice
 
-## Publisher of the Platform
+## Publisher of the platform
 
-The Open Terms Archive Platform is published by a collective located at:
-
-_Open Terms Archive collective ℅ Clément Biron_
-_6 chemin des gandins, 38660 Plateau des Petites Roches, France_
+Open Terms Archive collective ℅ Clément Biron
+6 chemin des gandins, 38660 Plateau des Petites Roches, France
+`contact@opentermsarchive.org`
 
 
 ## Director of the publication
@@ -22,5 +21,9 @@ Matti Schneider
 
 This site is hosted by GitHub Pages:
 
-_[https://pages.github.com](https://pages.github.com)_
-_GitHub, Inc. 88 Colin P. Kelly Jr. St. San Francisco, CA 94107 États-Unis_
+[`pages.github.com`](https://pages.github.com)
+GitHub, Inc.
+88 Colin P. Kelly Jr. St.
+San Francisco
+CA 94107
+United States of America

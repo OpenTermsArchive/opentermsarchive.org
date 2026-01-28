@@ -10,9 +10,9 @@ slug: /mentions-legales
 
 La Plateforme Open Terms Archive est éditée par un collectif dont l'adresse est :
 
-_Collectif Open Terms Archive ℅ Clément Biron_
-_6 chemin des gandins, 38660 Plateau des Petites Roches, France_
-_contact - at - opentermsarchive.org_
+Collectif Open Terms Archive ℅ Clément Biron
+6 chemin des gandins, 38660 Plateau des Petites Roches, France
+`contact@opentermsarchive.org`
 
 ## Directeur de la publication
 
@@ -22,5 +22,9 @@ Matti Schneider
 
 Ce site est hébergé chez GitHub Pages :
 
-_[https://pages.github.com](https://pages.github.com)_
-_GitHub, Inc. 88 Colin P. Kelly Jr. St. San Francisco, CA 94107 États-Unis_
+[`pages.github.com`](https://pages.github.com)
+GitHub, Inc.
+88 Colin P. Kelly Jr. St.
+San Francisco
+CA 94107
+États-Unis
