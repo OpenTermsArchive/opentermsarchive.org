@@ -1,5 +1,5 @@
 ---
-html_description: TikTok introduced US-specific terms following Oracle’s acquisition, splitting from global policies. Other regions saw minor updates and a US Data Sharing Agreement for developers.
+html_description: TikTok introduced US-specific terms following Oracle's acquisition, splitting from global policies. The US privacy policy expanded data collection from AI interactions, shopping features, and usage patterns, while widening information sharing with new business partners. Other regions saw minor updates and a US Data Sharing Agreement for developers.
 title: TikTok rewrites all US terms following the transfer of its USA operations
 service: TikTok
 terms_types:
