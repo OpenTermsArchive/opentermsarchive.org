@@ -141,7 +141,7 @@
     },
     "totalServices": 23,
     "totalTerms": 104,
-    "engineVersion": "10.3.3",
+    "engineVersion": "10.4.0",
     "endpoint": "http://134.102.58.70/collection-api/v1/",
     "federated": true
   },
