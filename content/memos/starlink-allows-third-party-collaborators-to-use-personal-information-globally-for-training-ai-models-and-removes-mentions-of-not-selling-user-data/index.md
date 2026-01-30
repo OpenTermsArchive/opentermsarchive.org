@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: Starlink's privacy policy now permits third-party collaborators to use personal information globally for AI model training, requires users to opt out of such data sharing, and removes previous language stating the service does not sell user data.
 title: Starlink allows third-party collaborators to use personal information globally for training AI models and removes mentions of not selling user data
 service: Starlink
 terms_types: ["Privacy Policy"]
