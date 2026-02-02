@@ -220,11 +220,11 @@
     position: relative;
 
     &:not(:last-child) {
-      margin-bottom: var(--mM);
+      margin-bottom: var(--mxs);
     }
   }
 
-  & ul & li {
+  & ul > li {
     &::before {
       position: absolute;
       left: calc(var(--mM) * -1);
