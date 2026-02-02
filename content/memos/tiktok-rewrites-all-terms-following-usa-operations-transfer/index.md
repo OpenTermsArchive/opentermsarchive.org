@@ -1,5 +1,5 @@
 ---
-html_description: TikTok introduced US-specific terms following Oracle's acquisition, splitting from global policies. The US privacy policy expanded data collection from AI interactions, shopping features, and usage patterns, while widening information sharing with new business partners. Other regions saw minor updates and a US Data Sharing Agreement for developers.
+html_description: TikTok introduced US-specific terms following acquisition, splitting from global policies. The US privacy policy expanded data collection and information sharing with business partners. Other regions saw minor updates and a US Data Sharing Agreement for developers.
 title: TikTok rewrites all US terms following the transfer of its USA operations
 service: TikTok
 terms_types:
@@ -22,11 +22,17 @@ related_collections:
 
 On January 23, 2026, TikTok [revised](https://github.com/OpenTermsArchive/vlopses-us-versions/commits/main/TikTok?since=2026-01-23&until=2026-01-23) multiple policy documents in several jurisdictions. The updates established a new legal entity, _“TikTok USDS Joint Venture LLC”_, as the new “operator of the Platform in the United States”. Most importantly, the terms that applied globally with a few paragraphs defining local specificities, now have a dedicated US version that applies only to that country.
 
-The [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/ead840fe377f24345b833cdf770cde7e3cd398c3) privacy policy for this US entity (also applicable to TikTok Ad Network) replaced all references to the "Platform" with "Service". It now includes data collection from AI interactions. The [tracking](https://opentermsarchive.org/en/memos/tiktok-expands-data-collection-in-europe-the-united-kingdom-and-switzerland/) of precise location information if location services for the TikTok app are enabled has been part of the policy in Europe, the United Kingdom and Switzerland since October 2025.
+The [updated](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/ead840fe377f24345b833cdf770cde7e3cd398c3) privacy policy for this US entity (also applicable to TikTok Ad Network) replaced all references to the "Platform" with "Service". It now includes data collection from AI interactions. The [tracking](https://opentermsarchive.org/en/memos/tiktok-expands-data-collection-in-europe-the-united-kingdom-and-switzerland/) of precise location information has been part of the policy in Europe, the United Kingdom and Switzerland since October 2025.
 
-The data collection through usage information has also been expanded to include the duration and frequency of use of the Services, engagement with other users, and information about interactions with websites while using the in-app browser. It will collect further data through sellers as well as payment and transaction fulfillment providers, such as payment confirmation details, and information about the delivery of products purchased through TikTok's shopping features.
+The data collection has been expanded to include as sources:
 
-The Service has added shopping features and age verification as purposes for data collection, and widened information sharing with several new Service Providers and Business Partners such as TT Commerce & Global Services LLC and its affiliates to facilitate a global and interoperable experience, sellers and their service providers, and third-party platforms and partners. The policy states that the U.S. entity will share certain data with international TikTok operations for interoperability in compliance with applicable laws.
+- the duration and frequency of use;
+- engagement with other users;
+- interactions with websites while using the in-app browser;
+- information from sellers and payment providers;
+- information on the delivery of products purchased through TikTok's shopping features.
+
+TikTok has added shopping features and age verification as purposes for data collection, and widened information sharing with several new service providers, business partners and their affiliates to “facilitate a global and interoperable experience”. The policy states that the US entity will share certain data with international TikTok operations for interoperability “in compliance with applicable laws”.
 
 Documents from other jurisdictions ([Ireland](https://github.com/OpenTermsArchive/vlopses-ie-versions/commits/main/TikTok?since=2026-01-23&until=2026-01-23), the [United Kingdom](https://github.com/OpenTermsArchive/vlopses-gb-versions/commits/main/TikTok?since=2026-01-23&until=2026-01-23), [Australia](https://github.com/OpenTermsArchive/vlopses-au-versions/commits/main/TikTok?since=2026-01-23&until=2026-01-23) and [Canada](https://github.com/OpenTermsArchive/vlopses-ca-versions/commits/main/TikTok?since=2026-01-23&until=2026-01-23)) have been less affected. They mainly reflect changes in the service's contact points in the US and update links to point to new "global" versions of the terms that now differ from the US version. The Developer Terms, however, contain a new section named "[TikTok Developer US Data Sharing Agreement](https://github.com/OpenTermsArchive/vlopses-ca-versions/commit/567351ff16948889f8b500500d92b01be4d286f9#diff-d0b0f6dad4d26fa6e1f58d217b15bb5e2a85e1054afd15df9f7ca8632156a301R408)".
 
