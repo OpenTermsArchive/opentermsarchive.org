@@ -1,5 +1,5 @@
 ---
-title: "TikTok and the USA National Security Frame: Data Power, Jurisdiction, and Strategic Exposure"
+title: "TikTok and the USA national security frame: data power, jurisdiction, and strategic exposure"
 html_description: "USA national security concerns over TikTok center on large-scale behavioral data collection, algorithmic influence infrastructure, and Chinese jurisdictional leverage. Recent expansions in European data collection demonstrate platform trajectory that compliance-based regulation may not address."
 author: Asma Sifaoui
 regulations: ["GDPR"]
