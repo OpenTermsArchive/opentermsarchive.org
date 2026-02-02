@@ -222,9 +222,7 @@
     &:not(:last-child) {
       margin-bottom: var(--mxs);
     }
-  }
 
-  & ul > li {
     &::before {
       position: absolute;
       left: calc(var(--mM) * -1);
