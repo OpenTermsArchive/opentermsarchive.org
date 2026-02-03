@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: X updated its automated content enforcement policy in the UK, adding clarifications on child protection, “proactive technology,” and reporting under the Online Safety Act, amid growing regulatory scrutiny.
 title: X focuses its automated enforcement on child protection in the UK
 service: X
 terms_types: ["Community Guidelines"]
