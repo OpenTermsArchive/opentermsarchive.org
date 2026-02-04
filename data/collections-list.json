@@ -10,6 +10,10 @@
     "federated": true
   },
   {
+    "name": "GenAI Governance Archive",
+    "endpoint": "http://134.102.58.170/collection-api/v1/"
+  },
+  {
     "name": "France",
     "endpoint": "http://217.182.67.38/france/collection-api/v1/",
     "federated": true
