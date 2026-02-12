@@ -67,7 +67,7 @@
     },
     "totalServices": 48,
     "totalTerms": 141,
-    "engineVersion": "10.1.2",
+    "engineVersion": "10.6.1",
     "endpoint": "http://86.54.83.121/collection-api/v1/",
     "federated": true
   },
@@ -140,7 +140,7 @@
       }
     },
     "totalServices": 23,
-    "totalTerms": 104,
+    "totalTerms": 106,
     "engineVersion": "10.4.0",
     "endpoint": "http://134.102.58.70/collection-api/v1/",
     "federated": true
@@ -609,7 +609,7 @@
     },
     "totalServices": 379,
     "totalTerms": 816,
-    "engineVersion": "10.3.3",
+    "engineVersion": "10.6.1",
     "endpoint": "http://86.54.83.7/collection-api/v1/",
     "federated": true
   },
@@ -842,7 +842,7 @@
       }
     },
     "totalServices": 22,
-    "totalTerms": 195,
+    "totalTerms": 194,
     "engineVersion": "10.6.0",
     "endpoint": "http://38.146.25.84/collection-api/v1/",
     "federated": false
