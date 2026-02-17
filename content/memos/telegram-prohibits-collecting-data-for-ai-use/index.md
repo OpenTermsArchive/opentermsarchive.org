@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: Telegram prohibits data scraping for AI use, targeting all users, businesses, and third-party services accessing the platform, including via developer APIs.
 title: Telegram prohibits collecting data for AI use
 service: Telegram
 terms_types: ["Terms of Service", "Developer Terms"]
