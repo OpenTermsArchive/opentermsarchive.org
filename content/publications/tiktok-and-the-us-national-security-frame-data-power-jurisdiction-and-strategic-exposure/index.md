@@ -1,5 +1,5 @@
 ---
-title: "TikTok and the USA national security frame: data power, jurisdiction, and strategic exposure"
+title: "The USA national security framing of platform governance: the case of TikTok"
 html_description: "USA national security concerns over TikTok center on large-scale behavioral data collection, algorithmic influence infrastructure, and Chinese jurisdictional leverage. Recent expansions in European data collection demonstrate platform trajectory that compliance-based regulation may not address."
 author: Asma Sifaoui
 regulations: ["GDPR"]
@@ -37,4 +37,4 @@ Many USA allies have been more hesitant to adopt an explicit national security f
 
 The Open Terms Archive findings complicate this distinction. If a platform can continue expanding sensitive data collection even within jurisdictions characterized by robust regulatory oversight, then compliance-based approaches alone may not fully address long-term strategic exposure. From a national security perspective, this raises questions about whether existing regulatory frameworks are equipped to account for platform trajectory, accumulated capability, and jurisdictional leverage over time.
 
-TikTok thus highlights a broader governance dilemma. Platforms operating at global scale increasingly function as infrastructure with potential national security relevance, yet oversight mechanisms remain largely organized around company-specific compliance rather than systemic risk. The TikTok case has brought these tensions into clearer view, prompting renewed attention to how data-driven platforms are assessed, governed, and constrained as their capabilities evolve. Whether such scrutiny results in more durable governance frameworks or remains focused on individual platforms remains an open question.
+TikTok thus highlights a broader governance dilemma. Platforms operating at global scale increasingly function as infrastructure with potential national security relevance, yet oversight mechanisms globally remain largely organised around industry-specific compliance rather than systemic risk. The TikTok case has brought these tensions into clearer view, prompting renewed attention to how data-driven platforms are assessed, governed, and constrained as their capabilities evolve. Whether such scrutiny results in more durable governance frameworks or remains focused on individual platforms remains an open question.
