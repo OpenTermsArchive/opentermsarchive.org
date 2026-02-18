@@ -1,6 +1,6 @@
 ---
 title: "The USA national security framing of platform governance: the case of TikTok"
-html_description: "USA national security concerns over TikTok center on large-scale behavioral data collection, algorithmic influence infrastructure, and Chinese jurisdictional leverage. Recent expansions in European data collection demonstrate platform trajectory that compliance-based regulation may not address."
+html_description: "The USA sees TikTok as a national security risk through data collection, algorithmic influence, and foreign legal leverage. Meanwhile, the EU focuses on privacy and compliance. Both approaches face a key challenge: how can laws keep up with a platform’s growing capabilities?"
 author: Asma Sifaoui
 regulations: ["GDPR"]
 topic: ["Privacy and Surveillance"]
