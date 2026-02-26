@@ -146,6 +146,54 @@
     "federated": true
   },
   {
+    "id": "genai-eu",
+    "name": "GenAI Governance Archive",
+    "tagline": "Major global generative AI services",
+    "description": "\nThe **Generative AI Governance Archive** collection tracks the terms of major global Generative AI (GenAI) providers.\n\nThis is the second collection from the team behind [Platform Governance Archive](https://www.platformgovernancearchive.org/) which is maintained by the [Lab Platform Governance, Media and Technology (PGMT)](https://platform-governance.org/) at the University of Bremen [Center for Media Communication and Information Research (ZeMKI)](https://zemki.uni-bremen.de/).\n\nThe collection tracks policies of major GenAI providers as they emerge and develop. In so doing, it offers fellow researchers, journalists, and citizens the tools to analyze how GenAI providers regulate the use of their products.\n\nUltimately, the collection aims to promote greater transparency and accountability of these powerful digital services.\n",
+    "dataset": "https://github.com/OpenTermsArchive/genai-eu-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/genai-eu-declarations",
+    "versions": "https://github.com/OpenTermsArchive/genai-eu-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/genai-eu-snapshots",
+    "languages": [
+      "en"
+    ],
+    "jurisdictions": [
+      "EU"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2025-11-11",
+        "schedule": "30 */12 * * *",
+        "serverLocation": "Bremen, DE"
+      }
+    ],
+    "governance": {
+      "Centre for Media, Communication and Information Research": {
+        "url": "https://zemki.uni-bremen.de",
+        "logo": "https://opentermsarchive.org/images/contributors/zemki.png",
+        "roles": [
+          "host",
+          "curator",
+          "maintainer",
+          "contributor",
+          "analyst"
+        ]
+      },
+      "Open Terms Archive": {
+        "url": "https://opentermsarchive.org",
+        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black-small.png",
+        "roles": [
+          "sysadmin"
+        ]
+      }
+    },
+    "totalServices": 11,
+    "totalTerms": 54,
+    "engineVersion": "10.6.1",
+    "endpoint": "http://134.102.58.170/collection-api/v1/",
+    "federated": true
+  },
+  {
     "id": "france",
     "name": "France",
     "tagline": "Largest digital services used in France",
@@ -998,7 +1046,7 @@
       }
     },
     "totalServices": 12,
-    "totalTerms": 109,
+    "totalTerms": 108,
     "engineVersion": "10.6.0",
     "endpoint": "http://57.129.129.3/collection-api/v1/",
     "federated": false
