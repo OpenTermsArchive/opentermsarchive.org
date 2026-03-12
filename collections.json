@@ -187,6 +187,12 @@
         ]
       }
     },
+    "i18n": {
+      "fr": {
+        "tagline": "Principaux services mondiaux d'IA générative",
+        "description": "La collection **Generative AI Governance Archive** recense les conditions générales des principaux fournisseurs mondiaux d'IA générative (GenAI).\n\nIl s'agit de la deuxième collection de l'équipe à l'origine de [Platform Governance Archive](https://www.platformgovernancearchive.org/), gérée par le [Lab Platform Governance, Media and Technology (PGMT)](https://platform-governance.org/) du [Center for Media Communication and Information Research (ZeMKI)](https://zemki.uni-bremen.de) à l'université de Brême.\n\nLa collection suit les politiques des principaux fournisseurs de GenAI à mesure qu'elles apparaissent et évoluent. Elle offre aux chercheurs, journalistes et citoyens les outils nécessaires pour analyser la manière dont les fournisseurs de GenAI réglementent l'utilisation de leurs produits.\n\nCe faisant, la collection vise à promouvoir une plus grande transparence et une meilleure responsabilité de ces puissants services numériques.\n"
+      }
+    },
     "totalServices": 11,
     "totalTerms": 54,
     "engineVersion": "10.6.1",
@@ -929,7 +935,7 @@
       }
     },
     "totalServices": 11,
-    "totalTerms": 100,
+    "totalTerms": 99,
     "engineVersion": "10.6.0",
     "endpoint": "http://72.14.155.148/collection-api/v1/",
     "federated": false
@@ -968,7 +974,7 @@
       }
     },
     "totalServices": 11,
-    "totalTerms": 102,
+    "totalTerms": 101,
     "engineVersion": "10.6.0",
     "endpoint": "http://139.99.155.143/collection-api/v1/",
     "federated": false
