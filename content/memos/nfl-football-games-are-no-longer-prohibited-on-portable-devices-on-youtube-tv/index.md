@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: YouTube TV removed the restriction prohibiting NFL football games on portable devices and replaced its single base plan with four distinct subscription tiers. A new section on promotional offers was also added, clarifying that subscribers will be charged the standard plan price once a promotional period ends.
 title: NFL Football games are no longer prohibited on portable devices on YouTube TV
 service: Youtube
 terms_types: ["Commercial Terms"]
