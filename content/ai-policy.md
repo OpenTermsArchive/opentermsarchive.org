@@ -5,9 +5,9 @@ html_description: Policy on the use of AI in contributions to Open Terms Archive
 
 # Policy on the use of AI
 
-Open Terms Archive allows the use of AI tools in contributions. They do not, however, replace contributor responsibility or human judgment. This policy defines the conditions of use across [Open Terms Archive projects](https://github.com/OpenTermsArchive).
+This policy defines the conditions of use of Artificial Intelligence in contributions across [Open Terms Archive projects](https://github.com/OpenTermsArchive). 
 
-As a digital common, Open Terms Archive holds all its contributors to the same standard. This policy applies equally to core team members, regular contributors, occasional contributors and community members. It is as much a requirement the core team sets for itself as it is for any other contributor.
+As a digital common, Open Terms Archive holds all its contributors to the same standard. This policy applies equally to all Open Terms Archive contributors, regardless of their level of involvement, whether core team members, regular contributors, occasional participants, or community members.
 
 AI can be used to help write or suggest code, documentation and other written content, refactor or clarify existing work. Regardless of the form of the contribution, it must have been read and fully understood by its author before being submitted.
 
