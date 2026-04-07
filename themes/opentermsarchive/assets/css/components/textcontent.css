@@ -236,6 +236,7 @@
       top: var(--m2xs);
       left: calc(var(--ml) * -1);
     }
+
   }
 
   & .textcontent--no-list-style {
@@ -290,6 +291,10 @@
     &.mb--0 {
       margin-bottom: 0;
     }
+  }
+
+  & table + p {
+    margin-top: var(--ml);
   }
 }
 
