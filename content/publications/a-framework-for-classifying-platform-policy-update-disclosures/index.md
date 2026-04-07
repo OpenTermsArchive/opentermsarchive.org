@@ -1,5 +1,5 @@
 ---
-title: A Framework for Classifying Platform Policy Update Disclosures
+title: A framework for classifying platform policy update disclosures
 html_description: 
 author: Saumyaa Naidu
 topic: ["Methodology"]
@@ -8,7 +8,7 @@ date: 2026-04-07
 
 Disclosures from internet platforms about changes in their policies are crucial for transparency and user autonomy. However, platforms often update their terms and policies with minimal, last‑minute, or no direct notice to users, despite their far‑reaching implications for rights and risks. This preliminary study investigates in what ways and how often major platforms provide, or fail to provide, timely and meaningful notification of policy changes. By empirically tracking updates and their disclosures across services using Open Terms Archive, it aims to define a classification system for policy disclosure. This classification framework constitutes an essential indicator for assessing the transparency of policy changes by internet platforms. 
 
-## Scope and Methodology
+## Scope and methodology
 
 The study uses Open Terms Archive to track changes in different terms and policies on four platforms: YouTube, Facebook, LinkedIn, and TikTok. These were identified based on the highest active user base, diversity in ownership, and range of policy updates. We looked at policy updates between the time period of August 1, 2025 to December 31, 2025. We focused on policy changes in the United States (US), given the consistent tracking of updates in this jurisdiction on Open Terms Archive over this time period. The study builds upon existing frameworks and classifications of platform disclosures[^1].
 
@@ -22,10 +22,10 @@ For all the updates mentioned in the following table with an advance notice, the
 
 | Timing → Medium ↓ | Advance notice (30 days or more) | Less than 30 days | No advance notice |
 | :---- | :---- | :---- | :---- |
-| Public Announcement/Press release | *YouTube Privacy Policy: Using machine learning for age estimation*  Effective on Aug 13, 2025  Announced on Jul 29, 2025 | | |
-| In App | | | |
-| Email | YouTube Paid Service Terms of Service: Access from country where the user signed up  Effective on September 26, 2025 Announced on August 12, 2025 | | |
-| Terms and policies only | | *YouTube Content Monetisation Policy: "Repetitious Content" renamed to "Inauthentic Content"*  Effective on July 15, 2025 Announced on July 2, 2025 | YouTube community guidelines: Colloidal silver removed from list of harmful substances Effective on October 9, 2025 |
+| Public announcement/press release | *YouTube privacy policy: using machine learning for age estimation*  Effective on Aug 13, 2025  Announced on Jul 29, 2025 | | |
+| In app | | | |
+| Email | YouTube paid service terms of service: access from country where the user signed up  Effective on September 26, 2025 Announced on August 12, 2025 | | |
+| Terms and policies only | | *YouTube content monetisation policy: "Repetitious content" renamed to "Inauthentic content"*  Effective on July 15, 2025 Announced on July 2, 2025 | YouTube community guidelines: colloidal silver removed from list of harmful substances Effective on October 9, 2025 |
 | No notification of changes | | | |
 
 #### Observations
@@ -38,10 +38,10 @@ For all the updates mentioned in the following table with an advance notice, the
 
 | Timing → Medium ↓ | Advance notice (30 days or more) | Less than 30 days | No advance notice |
 | :---- | :---- | :---- | :---- |
-| Public Announcement/Press release | Facebook Privacy Policy: AI interaction tracking Effective on Dec 16, 2025 Announced on October 7, 2025 | | |
-| In App | Facebook Privacy Policy: AI interaction tracking Effective on Dec 16, 2025 Announced on October 7, 2025 | | Facebook Copyrights Claims Policy: Content protection feature for creators Effective on Nov 18, 2025 |
-| Email | Facebook Privacy Policy: AI interaction tracking Effective on Dec 16, 2025 Announced on October 7, 2025 | | |
-| Terms and policies only | | | Facebook Community Guidelines: removing accounts for interacting with violating content Effective on September 20, 2025 |
+| Public announcement/press release | Facebook privacy policy: AI interaction tracking Effective on Dec 16, 2025 Announced on October 7, 2025 | | |
+| In app | Facebook privacy policy: AI interaction tracking Effective on Dec 16, 2025 Announced on October 7, 2025 | | Facebook copyrights claims policy: content protection feature for creators Effective on Nov 18, 2025 |
+| Email | Facebook privacy policy: AI interaction tracking Effective on Dec 16, 2025 Announced on October 7, 2025 | | |
+| Terms and policies only | | | Facebook community guidelines: removing accounts for interacting with violating content Effective on September 20, 2025 |
 | No notification of changes | | | |
 
 #### Observations
@@ -54,11 +54,11 @@ For all the updates mentioned in the following table with an advance notice, the
 
 | Timing → Medium ↓ | Advance notice (30 days or more) | Less than 30 days | No advance notice |
 | :---- | :---- | :---- | :---- |
-| Public Announcement/Press release | | | |
-| In App | | | |
-| Email | LinkedIn Terms of Service and Privacy Policy: Data sharing with Microsoft Effective on Nov 3, 2025 Announced on Sept 28, 2025 | | |
-| Terms and policies only | | | LinkedIn Community Guidelines: Ban on political ads  Effective on Oct 2, 2025 |
-| No notification of changes | | | LinkedIn Privacy Policy: Data use for AI training |
+| Public announcement/press release | | | |
+| In app | | | |
+| Email | LinkedIn terms of service and privacy policy: data sharing with Microsoft Effective on Nov 3, 2025 Announced on Sept 28, 2025 | | |
+| Terms and policies only | | | LinkedIn community guidelines: ban on political ads  Effective on Oct 2, 2025 |
+| No notification of changes | | | LinkedIn privacy policy: data use for AI training |
 
 #### Observations
 
@@ -70,10 +70,10 @@ For all the updates mentioned in the following table with an advance notice, the
 
 | Timing → Medium ↓ | Advance notice (30 days or more) | Less than 30 days | No advance notice |
 | :---- | :---- | :---- | :---- |
-| Public Announcement/Press release | *TikTok Community Guidelines: User safety, live streaming, AI content* Effective on September 13, 2025  Announced on August 14, 2025 | | TikTok: Establishment of separate US entity  Effective on January 23, 2026 |
-| In App | *TikTok Community Guidelines: User safety, live streaming, AI content* Effective on September 13, 2025  Announced on August 14, 2025 | | TikTok: Establishment of separate US entity  Effective on January 23, 2026 |
-| Email | *TikTok Community Guidelines: User safety, live streaming, AI content* Effective on September 13, 2025  Announced on August 14, 2025 | | |
-| Terms and policies only | | TikTok Privacy Policy: Addition of TikTok Ad Network Privacy Policy Effective on November 30, 2025  Announced on November 6, 2025 | TikTok Developer Terms: Commercial Content Library access introduced Effective on December 26, 2025 |
+| Public announcement/press release | *TikTok community guidelines: user safety, live streaming, AI content* Effective on September 13, 2025  Announced on August 14, 2025 | | TikTok: establishment of separate US entity  Effective on January 23, 2026 |
+| In app | *TikTok community guidelines: user safety, live streaming, AI content* Effective on September 13, 2025  Announced on August 14, 2025 | | TikTok: establishment of separate US entity  Effective on January 23, 2026 |
+| Email | *TikTok community guidelines: user safety, live streaming, AI content* Effective on September 13, 2025  Announced on August 14, 2025 | | |
+| Terms and policies only | | TikTok privacy policy: addition of TikTok Ad Network privacy policy Effective on November 30, 2025  Announced on November 6, 2025 | TikTok developer terms: commercial content library access introduced Effective on December 26, 2025 |
 | No notification of changes | | | |
 
 #### Observations
@@ -86,7 +86,7 @@ Mapping these examples reveals a classification framework comprising various deg
 
 The examples also illustrate that while platforms often issue advance notices for significant changes, these are rarely accompanied by requesting consent or offering an opt-out. The channels through which notifications are communicated also remain inconsistent with different timing across platforms. For instance, direct emails or in-app notifications are not connected to the impact of changes or to the urgency of communication.
 
-## Further Work
+## Further work
 
 This classification framework can be further detailed by collecting more data. Expanding the dataset to include more services over a longer period of time across more jurisdictions could provide further gradations in all the axes. In terms of methodology, notification evidence can also be captured by monitoring user-facing channels. This can be done by automated methods such as RSS feeds or manually by maintaining test accounts for each platform and making schedule checks for notifications and emails.
 
@@ -100,7 +100,7 @@ Details of each example and sources
 
 **YouTube** 
 
-**YouTube Privacy Policy: Using machine learning for age estimation**
+**YouTube privacy policy: using machine learning for age estimation**
 Effective on Aug 13, 2025
 [https://www.change.org/p/youtube-s-ai-tracks-everything-you-watch-stop-this-now](https://www.change.org/p/youtube-s-ai-tracks-everything-you-watch-stop-this-now)
 [https://www.cnn.com/2025/08/13/tech/youtube-ai-age-verification](https://www.cnn.com/2025/08/13/tech/youtube-ai-age-verification)
@@ -112,7 +112,7 @@ Public announcement: Yes
 In-App: No
 Opt-out: No
 
-**YouTube Paid Service Terms of Service: Access from country where the user signed up**  
+**YouTube paid service terms of service: access from country where the user signed up**  
 Effective on Sept 26, 2025  
 Announced on August 12, 2025  
 Email: Yes (on August 22, 2025)  
@@ -122,7 +122,7 @@ Public announcement: No
 In-App: No
 Opt-out: No
 
-**YouTube Content Monetisation Policy: "Repetitious Content" renamed to "Inauthentic Content"**
+**YouTube content monetisation policy: "Repetitious content" renamed to "Inauthentic content"**
 Effective on July 15, 2025
 [https://support.google.com/youtube/answer/10008196?hl=en\#zippy=%2Cyoutube-partner-program](https://support.google.com/youtube/answer/10008196?hl=en#zippy=%2Cyoutube-partner-program)
 [https://www.theverge.com/news/703772/youtube-monetization-policy-update-ai-spam](https://www.theverge.com/news/703772/youtube-monetization-policy-update-ai-spam)
@@ -136,7 +136,7 @@ Public announcement: No
 In-App: No
 Opt-out: No
 
-**YouTube community guidelines: Colloidal silver removed from list of harmful substances**  
+**YouTube community guidelines: colloidal silver removed from list of harmful substances**  
 Effective on October 9, 2025  
 [https://opentermsarchive.org/en/memos/youtube-now-allows-promotion-of-colloidal-silver/](https://opentermsarchive.org/en/memos/youtube-now-allows-promotion-of-colloidal-silver/)
 Email: No  
@@ -146,7 +146,7 @@ Opt-out: No
 
 **Facebook** 
 
-**Facebook Privacy Policy: Using interactions with AIs to personalize experiences and ads**  
+**Facebook privacy policy: using interactions with AIs to personalise experiences and ads**  
 Effective on Dec 16, 2025  
 Announced on October 7, 2025  
 Email: Yes
@@ -154,7 +154,7 @@ Press release: Yes
 In App: Yes [https://about.fb.com/news/2025/10/improving-your-recommendations-apps-ai-meta/](https://about.fb.com/news/2025/10/improving-your-recommendations-apps-ai-meta/)
 Opt-out: No  
 
-**Facebook Copyrights Claims Policy: Content protection feature for creators**  
+**Facebook copyrights claims policy: content protection feature for creators**  
 Effective on Nov 18, 2025  
 [https://www.socialmediatoday.com/news/facebook-launches-content-protection-for-creators/805714/](https://www.socialmediatoday.com/news/facebook-launches-content-protection-for-creators/805714/)
 [https://creators.facebook.com/blog/content-protection-your-new-creative-guardian-on-facebook](https://creators.facebook.com/blog/content-protection-your-new-creative-guardian-on-facebook)
@@ -164,7 +164,7 @@ Press release: No, but blog announcement was made
 In App: Yes  
 Opt-out: No, but creators can apply if not already part of the rights manager system
 
-**Facebook Community Guidelines: removing accounts based on their interactions with violating accounts, content, and groups**  
+**Facebook community guidelines: removing accounts based on their interactions with violating accounts, content, and groups**  
 Effective on September 20, 2025  
 [https://opentermsarchive.org/en/memos/facebook-can-now-remove-accounts-for-interacting-with-violating-content/](https://opentermsarchive.org/en/memos/facebook-can-now-remove-accounts-for-interacting-with-violating-content/)
 Email: No
@@ -174,7 +174,7 @@ Opt-out: No
 
 **LinkedIn**
 
-**LinkedIn Terms of Service and Privacy Policy: Data sharing with Microsoft**  
+**LinkedIn terms of service and privacy policy: data sharing with Microsoft**  
 Effective on Nov 3, 2025  
 [https://www.linkedin.com/help/linkedin/answer/a8059228](https://www.linkedin.com/help/linkedin/answer/a8059228)
 Announced on Sept 28, 2025  
@@ -184,7 +184,7 @@ Public announcement: No, article in help centre
 In-App: No
 Opt-out: Yes (enabled by default)
 
-**LinkedIn Community Guidelines: Ban on political ads**
+**LinkedIn community guidelines: ban on political ads**
 Effective on Oct 2, 2025  
 [https://opentermsarchive.org/en/memos/linkedin-joins-meta-and-google-in-ban-of-political-advertisement/](https://opentermsarchive.org/en/memos/linkedin-joins-meta-and-google-in-ban-of-political-advertisement/)
 [https://github.com/OpenTermsArchive/vlopses-us-versions/commit/74bc03d153823a9b1412b3d871753074c67b782c](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/74bc03d153823a9b1412b3d871753074c67b782c)
@@ -194,7 +194,7 @@ Public announcement: No
 In-App: No
 Opt-out: No
 
-**LinkedIn Privacy Policy: Data use for AI training**
+**LinkedIn privacy policy: data use for AI training**
 Date of implementation unclear in the US  
 [https://www.linkedin.com/help/linkedin/answer/a8059228](https://www.linkedin.com/help/linkedin/answer/a8059228)
 [https://opentermsarchive.org/en/memos/linkedin-shares-data-with-microsoft-and-its-subsidiaries-to-train-ai-models/](https://opentermsarchive.org/en/memos/linkedin-shares-data-with-microsoft-and-its-subsidiaries-to-train-ai-models/)
@@ -206,7 +206,7 @@ Opt-out: Yes (announced in Sept 2025)
 
 **TikTok**
 
-**TikTok Privacy Policy: Addition of TikTok Ad Network Privacy Policy**
+**TikTok privacy policy: addition of TikTok Ad Network privacy policy**
 Effective on November 30, 2025
 [https://github.com/OpenTermsArchive/vlopses-us-versions/commit/107a7a3fa7d836d2083f8fa3b67548dd3b2b8904](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/107a7a3fa7d836d2083f8fa3b67548dd3b2b8904)
 Announced on November 6, 2025  
@@ -215,7 +215,7 @@ Public announcement: No
 In-App: No
 Opt-out: No 
 
-**TikTok Developer Terms: Commercial Content Library access introduced**  
+**TikTok developer terms: commercial content library access introduced**  
 Effective on December 26, 2025
 [https://github.com/OpenTermsArchive/vlopses-us-versions/commit/4663035ba671ce711211525453090089f9225fa0](https://github.com/OpenTermsArchive/vlopses-us-versions/commit/4663035ba671ce711211525453090089f9225fa0)
 [https://opentermsarchive.org/en/memos/tiktok-updates-its-developer-terms-to-introduce-commercial-content-library-access-clarify-research-purposes-and-reorganize-core-definitions/](https://opentermsarchive.org/en/memos/tiktok-updates-its-developer-terms-to-introduce-commercial-content-library-access-clarify-research-purposes-and-reorganize-core-definitions/)
@@ -225,7 +225,7 @@ Public announcement: No
 In-App: No  
 Opt-out: No 
 
-**TikTok: Establishment of separate US entity**
+**TikTok: establishment of separate US entity**
 Effective on January 23, 2026  
 [https://opentermsarchive.org/en/memos/tiktok-rewrites-all-terms-following-usa-operations-transfer/](https://opentermsarchive.org/en/memos/tiktok-rewrites-all-terms-following-usa-operations-transfer/)
 Deal in news since December, but no official advance public announcement from TikTok
@@ -240,7 +240,7 @@ In-App: Yes
 Opt-out: No, but asked to agree to new terms or will be unable to use the service  
 [https://www.cbsnews.com/news/tiktok-new-terms-of-service-privacy-geolocation-personal-information/](https://www.cbsnews.com/news/tiktok-new-terms-of-service-privacy-geolocation-personal-information/) 
 
-**TikTok Community Guidelines: User safety, live streaming, AI content**  
+**TikTok community guidelines: user safety, live streaming, AI content**  
 Effective on September 13, 2025
 [https://www.tiktok.com/community-guidelines/en/overview?cgversion=2025H2update](https://www.tiktok.com/community-guidelines/en/overview?cgversion=2025H2update)
 [https://www.socialmediatoday.com/news/tiktok-updates-community-guidelines-misinformation-bullying/757740/?utm\_campaign=Yahoo-Licensed-Content\&utm\_source=yahoo\&utm\_medium=referral](https://www.socialmediatoday.com/news/tiktok-updates-community-guidelines-misinformation-bullying/757740/?utm_campaign=Yahoo-Licensed-Content&utm_source=yahoo&utm_medium=referral)
@@ -251,5 +251,7 @@ Email: Yes (based on last paragraph of press release)
 Public announcement: Yes
 In-App: Yes (based on last paragraph of press release)  
 Opt-out: No 
+
+---
 
 [^1]:  Schaub, F., Balebako, R., Durity, A. L., Cranor, L. F., A Design Space for Effective Privacy Notices. USENIX Association (2015). [https://www.usenix.org/system/files/conference/soups2015/soups15-paper-schaub.pdf](https://www.usenix.org/system/files/conference/soups2015/soups15-paper-schaub.pdf); Flanagan, A. J., King, J., Warren, S. Redesigning Data Privacy: Reimagining Notice & Consent for human-technology interaction. World Economic Forum (2022). [https://www3.weforum.org/docs/WEF\_Redesigning\_Data\_Privacy\_Report\_2020.pdf](https://www3.weforum.org/docs/WEF_Redesigning_Data_Privacy_Report_2020.pdf); Kuznetsov, M., Novikova, E. & Kotenko, I. Modelling user notification scenarios in privacy policies. *Cybersecurity* **7**, 41 (2024). [https://doi.org/10.1186/s42400-024-00234-8](https://doi.org/10.1186/s42400-024-00234-8) [https://link.springer.com/article/10.1186/s42400-024-00234-8](https://link.springer.com/article/10.1186/s42400-024-00234-8)
