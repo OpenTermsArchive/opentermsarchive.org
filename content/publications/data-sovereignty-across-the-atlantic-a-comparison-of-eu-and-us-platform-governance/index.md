@@ -44,4 +44,4 @@ The shared blind spot is the role of private actors. Both systems still think of
 
 A platform might be able to localize data storage, but centralize model development and value extraction. In this regard, the sovereignty issues move from the movement to the transformation, i.e., who controls the training pipelines, who audits the models, who decides on the acceptable use cases, and who is accountable for the negative consequences.
 
-None of the governance models is well-equipped to handle this shift. The rights-based model has difficulty dealing with the accumulation, while the control-based model has difficulty legitimizing the opaque transformation.
+Neither of these governance models is well-equipped to handle this shift. The rights-based model has difficulty dealing with the accumulation, while the control-based model has difficulty legitimizing the opaque transformation.
