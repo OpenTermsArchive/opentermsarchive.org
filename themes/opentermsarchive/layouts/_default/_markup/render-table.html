@@ -1,0 +1,34 @@
+{{ with .THead }}
+  <table>
+    <thead>
+      {{ range . }}
+      <tr>
+        {{ range . }}
+        <th scope="col"{{ with .Alignment }} style="text-align: {{ . }}"{{ end }}>{{ .Text }}</th>
+        {{ end }}
+      </tr>
+      {{ end }}
+    </thead>
+    <tbody>
+      {{ range $.TBody }}
+      <tr>
+        {{ range . }}
+        <td{{ with .Alignment }} style="text-align: {{ . }}"{{ end }}>{{ .Text }}</td>
+        {{ end }}
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+  {{ else }}
+  <table>
+    <tbody>
+      {{ range .TBody }}
+      <tr>
+        {{ range . }}
+        <td{{ with .Alignment }} style="text-align: {{ . }}"{{ end }}>{{ .Text }}</td>
+        {{ end }}
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+{{ end }}
