@@ -142,7 +142,7 @@ Details of each example and sources.
 | | |
 | :---- | :---- |
 | Effective on | Oct 9, 2025 |
-| Announced on | — |
+| Announced on | - |
 | Email | No |
 | Public announcement | No |
 | In-App | No |
@@ -168,7 +168,7 @@ Details of each example and sources.
 | | |
 | :---- | :---- |
 | Effective on | Nov 18, 2025 |
-| Announced on | — |
+| Announced on | - |
 | Email | No |
 | Public announcement | No, but blog announcement was made |
 | In-App | Yes |
@@ -180,7 +180,7 @@ Details of each example and sources.
 | | |
 | :---- | :---- |
 | Effective on | Sep 20, 2025 |
-| Announced on | — |
+| Announced on | - |
 | Email | No |
 | Public announcement | No |
 | In-App | No |
@@ -206,7 +206,7 @@ Details of each example and sources.
 | | |
 | :---- | :---- |
 | Effective on | Oct 2, 2025 |
-| Announced on | — |
+| Announced on | - |
 | Email | No |
 | Public announcement | No |
 | In-App | No |
@@ -218,7 +218,7 @@ Details of each example and sources.
 | | |
 | :---- | :---- |
 | Effective on | Unclear |
-| Announced on | — |
+| Announced on | - |
 | Email | No |
 | Public announcement | No |
 | In-App | No |
@@ -244,7 +244,7 @@ Details of each example and sources.
 | | |
 | :---- | :---- |
 | Effective on | Dec 26, 2025 |
-| Announced on | — |
+| Announced on | - |
 | Email | No |
 | Public announcement | No |
 | In-App | No |
@@ -256,7 +256,7 @@ Details of each example and sources.
 | | |
 | :---- | :---- |
 | Effective on | Jan 23, 2026 |
-| Announced on | — |
+| Announced on | - |
 | Email | No |
 | Public announcement | Yes |
 | In-App | Yes |
