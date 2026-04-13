@@ -1,6 +1,6 @@
 ---
 title: "Data sovereignty across the Atlantic: a comparison of EU and US platform governance"
-html_description: 
+html_description: "The EU and the US both invoke data sovereignty, but through opposite logics: the EU governs platforms through enforceable constraint, the US through discretionary control. Both models create friction for global platforms, and neither is equipped for a world where sovereignty is no longer about data transfers, but about who controls AI training pipelines."
 author: Saumyaa Naidu
 topic: ["Data Sovereignty"]
 date: 2026-04-13
