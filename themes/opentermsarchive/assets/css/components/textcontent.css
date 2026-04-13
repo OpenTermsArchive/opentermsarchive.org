@@ -16,10 +16,6 @@
   & p {
     margin-bottom: var(--mM);
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-
     &.mb--0 {
       margin-bottom: 0;
     }
@@ -27,6 +23,14 @@
     &.mb--3xl {
       margin-bottom: var(--m3xl);
     }
+  }
+
+  & table + p {
+    margin-top: var(--ml);
+  }
+
+  & p:last-child {
+    margin-bottom: 0;
   }
 
   & p + hr {

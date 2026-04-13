@@ -13,6 +13,10 @@ table {
     }
   }
 
+  thead:has(th:empty) {
+    display: none;
+  }
+
   & tbody {
     & tr {
       & td {

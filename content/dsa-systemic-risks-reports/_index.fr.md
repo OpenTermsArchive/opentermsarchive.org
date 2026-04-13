@@ -24,7 +24,6 @@ Vous pouvez également [contribuer directement en fournissant des données](http
 - [Versions textuelles](https://github.com/OpenTermsArchive/dsa-reports-versions/)
 - Télécharger toutes les versions sous forme d'un [jeu de données Open Terms Archive](https://github.com/OpenTermsArchive/dsa-reports-versions/releases)
 
-<!-- [html-validate-disable-block wcag/h63: markdown does not generate tables with scope attribute] -->
 | Plateforme | Année | Rapport complet | Version texte | Modifications |
 |----------|------|-------------|--------------|---------|
 | AliExpress | 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/AliExpress/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/AliExpress/Systemic%20Risks%20—%202024.md) | [Historique](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/AliExpress/Systemic%20Risks%20—%202024.md) |
