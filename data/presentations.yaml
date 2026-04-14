@@ -1,3 +1,51 @@
+- title: "Résilience numérique européenne et géopolitique en 2026"
+  date: 2026-01-20
+  website: https://iscpif.fr/20janvier2026/
+  language: fr
+  location: Paris, France
+  medias: |
+    {{< video src="https://cloud.opentermsarchive.org/index.php/s/2NbKb5KRJZYBoTY/download/sydney_wheeler_-_%2320janvier_2026%20%281080p%29.mp4" poster="https://cloud.opentermsarchive.org/index.php/s/CEwwzSwKW5PjPyy/download/Flyer.jpeg" >}}
+   description: |
+    At the “European Digital Resilience and Geopolitics in 2026” event organized by David Chavalarias of the Institut des Systèmes Complexes and Henri Verdier of the Fondation Inria, Sydney Wheeler, Head of Partnerships at Open Terms Archive, explains how we analyze terms of service as indicators of regulatory effectiveness.  
+  i18n:
+    fr:
+      location: Paris, France
+      medias: |
+    {{< video src="https://cloud.opentermsarchive.org/index.php/s/2NbKb5KRJZYBoTY/download/sydney_wheeler_-_%2320janvier_2026%20%281080p%29.mp4" poster="https://cloud.opentermsarchive.org/index.php/s/CEwwzSwKW5PjPyy/download/Flyer.jpeg" >}}
+     description: |
+    Lors de la soirée "Résilience numérique européenne et géopolitique en 2026" organisée par David Chavalarias de l'Institut des Systèmes Complexes et Henri Verdier de la Fondation Inria, Sydney Wheeler, responsable des partenariats chez Open Terms Archive, explique en quoi nous observons les conditions d’utilisation comme marqueurs d’efficacité règlementaire.
+- title: "MiXiT On Air"
+  date: 2025-04-29
+  website: https://smartlink.ausha.co/mixit/episode-04-la-transparence-des-changements-des-documents-contractuels
+  language: fr
+  location: Lyon, France
+  medias: |
+    {{< audio src="https://cloud.opentermsarchive.org/index.php/s/MNCQ34Mc7ByBeLG/download/MixIT%20On%20Air.mp3" poster="https://cloud.opentermsarchive.org/index.php/s/WJoBS7FYBwyXkNq/download/2025-29-04%20MiXiT%20On%20Air%20Visual.jpg" >}}
+   description: |
+    At MiXiT 2025, Open Terms Archive Core team members Matti Schneider and Clément Biron speak with Romain Couturier and Aude Lemar-Verrier from MiXiT On Air about the transparency of terms of service across large online platforms and how digital commons make democratic oversight possible. 
+  i18n:
+    fr:
+      location: Lyon, France
+      medias: |
+    {{< audio src="https://cloud.opentermsarchive.org/index.php/s/MNCQ34Mc7ByBeLG/download/MixIT%20On%20Air.mp3" poster="https://cloud.opentermsarchive.org/index.php/s/WJoBS7FYBwyXkNq/download/2025-29-04%20MiXiT%20On%20Air%20Visual.jpg" >}}
+   description: |
+    Lors de MiXiT 2025, Matti Schneider et Clément Biron, de l'équipe coeur d'Open Terms Archive, discute avec Romain Couturier et Aude Lemar-Verrier de MiXit On Air sur la transparence des conditions d'utilisation des grandes plateformes numériques et comment le contrôle démocratique devient possible avec les communs numériques.
+- title: "MiXiT 2025"
+  date: 2025-04-29
+  website: https://mixitconf.org/2025/rendre-transparents-les-changements-des-cgus-avec-open-terms-archive
+  language: fr
+  location: Lyon, France
+  medias: |
+    {{< video src="https://cloud.opentermsarchive.org/index.php/s/HyF5Xd5BkKK8wJr/download/Rendre%20transparents%20les%20changements%20des%20CGUs%20Open%20Terms%20Archive.mp4" poster="https://cloud.opentermsarchive.org/index.php/s/5PNS45MdzKEftyC/download/2025-04-29%20MiXiT%20presentation%20thumbnail.jpg" >}}
+   description: |
+    At MiXiT 2025, Open Terms Archive core team members Matti Schneider and Clément Biron demonstrate how to make changes to ToS transparent with Open Terms Archive. 
+  i18n:
+    fr:
+      location: Lyon, France
+      medias: |
+    {{< video src="https://cloud.opentermsarchive.org/index.php/s/HyF5Xd5BkKK8wJr/download/Rendre%20transparents%20les%20changements%20des%20CGUs%20Open%20Terms%20Archive.mp4" poster="https://cloud.opentermsarchive.org/index.php/s/5PNS45MdzKEftyC/download/2025-04-29%20MiXiT%20presentation%20thumbnail.jpg" >}}
+   description: |
+    Lors de MiXiT 2025, Matti Schneider et Clément Biron, de l'équipe coeur d'Open Terms Archive, montre comment rendre transparents les changements des CGUs avec Open Terms Archive.
 - title: "Lunch & Learn #1"
   date: 2025-04-01
   website: https://regulation-tech.cnam.fr/lunch-learn-1/
