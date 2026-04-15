@@ -2,7 +2,7 @@
 title: "Study: Toward a framework for classifying platform policy update disclosures"
 html_description: This preliminary study investigates in what ways and how often major platforms provide, or fail to provide, timely and meaningful notification of policy changes. This classification framework constitutes an essential indicator for assessing the transparency of policy changes by internet platforms.
 author: Saumyaa Naidu
-topic: ["Study"]
+topic: ["Methodology"]
 date: 2026-04-07
 ---
 
