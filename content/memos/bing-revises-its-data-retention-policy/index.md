@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: "Bing removed specific retention periods for personalised advertising and search query data, and broadened its legal basis for retaining personal data to include business operations, product improvement, and security."
 title: Bing revises its data retention policy
 service: Bing
 terms_types: ["Privacy Policy"]
