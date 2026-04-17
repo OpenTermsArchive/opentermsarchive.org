@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: "YouTube's privacy policy now explicitly includes Google Ads alongside Google Analytics as services that collect and analyse data across YouTube and other sites and apps, expanding the disclosed scope of cross-platform tracking."
 title: YouTube uses ad services to analyse data from other sites and apps
 service: YouTube
 terms_types: ["Privacy Policy"]
