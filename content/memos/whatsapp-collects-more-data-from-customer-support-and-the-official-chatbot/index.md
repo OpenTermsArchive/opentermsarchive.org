@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: "WhatsApp expanded data collection in its Privacy Policy for Ireland: contacting customersupport now gathers deviceand app information, and interactions with the integrated chatbot transmit log, troubleshooting, and usage data to Meta."
 title: WhatsApp collects more data from customer support and the official chatbot
 service: WhatsApp
 terms_types: ["Privacy Policy"]
