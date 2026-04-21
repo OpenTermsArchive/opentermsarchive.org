@@ -1,8 +1,8 @@
 ---
 title: "Age Restrictions on Internet Platforms: Platform Compliance and Accountability"
-html_description: 
+html_description: An analysis of platform strategies to comply with age restrictions while managing legal risks and expanding data-driven verification systems.
 author: Asma Sifaoui
-topic: [""]
+topic: ["Access and Accessibility","Privacy and Surveillance"]
 date: 2026-04-21
 ---
 
