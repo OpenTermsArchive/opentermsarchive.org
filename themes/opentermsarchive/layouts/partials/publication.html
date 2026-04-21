@@ -12,7 +12,7 @@
 {{ $subtitle := printf "%s ▪ %s" $topics $date }}
 
 {{ $titleTag := cond (eq $template "single") "h1" "h4" }}
-{{ $subtitleTag := cond (eq $template "single") "h2" "h6" }}
+{{ $subtitleTag := cond (eq $template "single") "h4" "h6" }}
 {{ $titleContent := cond (eq $template "single") $title (printf "<a href=\"%s\">%s</a>" .publication.RelPermalink $title) }}
 
 {{ $authorText := "" }}
@@ -33,7 +33,7 @@
         {{ printf "<%s class=\"publication__title\">%s</%s>" $titleTag $titleContent $titleTag | safeHTML }}
         {{ printf "<%s class=\"publication__subtitle %s--ultrathin\">%s</%s>" $subtitleTag $subtitleTag $subtitle $subtitleTag | safeHTML }}
         {{ if eq $template "single" }}
-          <p>{{ $authorText | safeHTML }}</p>
+          <p class="publication__author text--light fontstyle--italic">{{ $authorText | safeHTML }}</p>
         {{ end }}
       </header>
       {{ if eq $template "single" }}

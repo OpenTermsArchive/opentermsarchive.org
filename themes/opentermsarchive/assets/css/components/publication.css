@@ -18,5 +18,7 @@
 }
 
 .publication__content {
-  padding-top: var(--m2xl);
+  padding-top: var(--mxl);
+  margin-top: var(--mxl);
+  border-top: 1px solid var(--colorBlack300);
 }
