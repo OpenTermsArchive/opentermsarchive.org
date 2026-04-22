@@ -930,8 +930,8 @@
         ]
       }
     },
-    "totalServices": 12,
-    "totalTerms": 109,
+    "totalServices": 20,
+    "totalTerms": 169,
     "engineVersion": "10.6.0",
     "endpoint": "http://72.14.155.148/collection-api/v1/",
     "federated": false
@@ -969,8 +969,8 @@
         ]
       }
     },
-    "totalServices": 11,
-    "totalTerms": 101,
+    "totalServices": 18,
+    "totalTerms": 151,
     "engineVersion": "10.6.0",
     "endpoint": "http://139.99.155.143/collection-api/v1/",
     "federated": false
