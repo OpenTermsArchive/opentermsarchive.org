@@ -102,6 +102,7 @@ collections:
     details: Voir les détails
     download: Télécharger le jeu de données
     endpoint: Accéder à l'API
+    feed: S'abonner au flux
     reuses: Voir toutes les réutilisations
   volunteer_contributors: Contributeurs bénévoles
   new:

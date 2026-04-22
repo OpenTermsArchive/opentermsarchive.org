@@ -96,6 +96,7 @@ collections:
     details: View details
     download: Download dataset
     endpoint: Access API
+    feed: Subscribe to feed
     reuses: See all reuses
   volunteer_contributors: Volunteer contributors
   new:
