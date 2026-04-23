@@ -1008,8 +1008,8 @@
         ]
       }
     },
-    "totalServices": 21,
-    "totalTerms": 188,
+    "totalServices": 22,
+    "totalTerms": 200,
     "engineVersion": "10.6.0",
     "endpoint": "http://46.16.131.72/collection-api/v1/",
     "federated": false
