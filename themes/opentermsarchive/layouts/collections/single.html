@@ -66,6 +66,14 @@
                 </a>
               </li>
             {{ end }}
+            {{ if .Params.hasFeed }}
+              <li>
+                <a class="button button--secondary" href="{{ printf "%sfeed" .Params.endpoint }}" target="_blank" rel="noopener">
+                  {{ i18n "collections.cta.feed" }}
+                  <i class="icon ml--2xs" data-lucide="rss"></i>
+                </a>
+              </li>
+            {{ end }}
           </ul>
         </div>
       </div>

@@ -8,6 +8,9 @@
   <link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="Memos">
     {{- end }}
   {{- end }}
+  {{- if .Params.hasFeed }}
+  <link rel="alternate" type="application/atom+xml" href="{{ printf "%sfeed" .Params.endpoint }}" title="{{ .Params.name }}">
+  {{- end }}
   {{ $styles := resources.Get "css/loader.css" | toCSS | postCSS (dict "config" "./assets/css/postcss.config.js" "inlineImports" true) }}
   {{ if hugo.IsProduction }}{{ $styles = $styles | minify | fingerprint | resources.PostProcess }}{{ end }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
