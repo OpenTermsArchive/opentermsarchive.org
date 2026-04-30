@@ -930,8 +930,8 @@
         ]
       }
     },
-    "totalServices": 20,
-    "totalTerms": 169,
+    "totalServices": 23,
+    "totalTerms": 197,
     "engineVersion": "10.6.0",
     "endpoint": "http://72.14.155.148/collection-api/v1/",
     "federated": false
@@ -969,8 +969,8 @@
         ]
       }
     },
-    "totalServices": 18,
-    "totalTerms": 151,
+    "totalServices": 23,
+    "totalTerms": 199,
     "engineVersion": "10.6.0",
     "endpoint": "http://139.99.155.143/collection-api/v1/",
     "federated": false
@@ -1008,8 +1008,8 @@
         ]
       }
     },
-    "totalServices": 22,
-    "totalTerms": 200,
+    "totalServices": 24,
+    "totalTerms": 219,
     "engineVersion": "10.6.0",
     "endpoint": "http://46.16.131.72/collection-api/v1/",
     "federated": false
@@ -1047,8 +1047,8 @@
         ]
       }
     },
-    "totalServices": 19,
-    "totalTerms": 159,
+    "totalServices": 23,
+    "totalTerms": 200,
     "engineVersion": "10.6.0",
     "endpoint": "http://57.129.129.3/collection-api/v1/",
     "federated": false
