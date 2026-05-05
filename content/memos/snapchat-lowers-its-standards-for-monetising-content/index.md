@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: "Snapchat relaxed its content monetisation criteria, removing requirements on visible faces, audible audio, and originality, and dropping the exclusion of AI-generated content."
 title: Snapchat lowers its standards for monetising content
 service: Snapchat
 terms_types: ["Content Monetisation Policy"]
