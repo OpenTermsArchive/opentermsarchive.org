@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: "YouTube excluded ad revenue from Image Posts in the Shorts Feed from the Creator Pool used to compensate Shorts creators."
 title: YouTube excludes Image Posts as revenue source for Shorts creators
 service: YouTube
 terms_types: ["Content Monetisation Policy"]
