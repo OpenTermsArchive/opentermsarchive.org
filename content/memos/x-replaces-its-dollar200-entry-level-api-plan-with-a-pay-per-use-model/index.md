@@ -1,5 +1,5 @@
 ---
-html_description: 
+html_description: "X replaced its $200 flat-rate API tier with a pay-per-use 'self-serve' model for hobbyists, prototyping, and small-scale integrations, while the Enterprise plan remains for commercial uses."
 title: X replaces its $200 entry-level API plan with a pay-per-use model
 service: X
 terms_types: ["Developer Terms"]
