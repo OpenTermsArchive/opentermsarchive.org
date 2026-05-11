@@ -6,7 +6,7 @@ topic: ["Privacy and Surveillance"]
 date: 2026-05-05
 ---
 
-[Meta announced in March 2026 that end-to-end encryption (E2EE) for Instagram direct messages would be discontinued as of May 8, 2026](https://help.instagram.com/491565145294150), citing low user adoption.
+Meta [announced in March 2026](https://help.instagram.com/491565145294150) that end-to-end encryption (E2EE) for Instagram direct messages would be discontinued as of May 8, 2026, citing low user adoption.
 
 ## The adoption argument does not hold
 
