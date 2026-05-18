@@ -43,13 +43,11 @@ about:
   analysts:
     title: Analysts
     subtitle: Analyze terms changes, spot important ones and make them understandable through memos and reports.
-  incubator:
-    title: Incubator
-    subtitle: Provides legal hosting and political sponsorship.
   funders:
     title: Funders
     subtitle: Compensate the time of the Core Team and pay for the technical infrastructure.
-    details: This project was in part [funded](https://nlnet.nl/project/TOSDR-OTA/) through the [NGI0 Entrust](https://nlnet.nl/entrust) Fund, a fund established by [NLnet](https://nlnet.nl/) with financial support from the European Commission's [Next Generation Internet](https://www.ngi.eu/) programme, under the aegis of DG Communications Networks, Content and Technology under grant agreement N°101069594.
+    details: This project has been [funded](https://nlnet.nl/project/TOSDR-OTA/) in part through the [NGI0 Entrust](https://nlnet.nl/entrust) Fund, a fund established by [NLnet](https://nlnet.nl/) with financial support from the European Commission's [Next Generation Internet](https://www.ngi.eu/) programme, under the aegis of DG Communications Networks, Content and Technology under grant agreement N°101069594.  
+    From January 2020 to January 2026, Open Terms Archive was incubated by the French ambassador for digital affairs, who provided legal funding and political sponsorship.
   contributors:
     title: Contributors
     subtitle: Volunteer time and effort to improve the software, data, documentation, outreach or any other form of action that serves Open Terms Archive’s [impact model]({{ .impactLink }}).
