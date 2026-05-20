@@ -36,6 +36,7 @@ import {
   Gavel,
   Newspaper,
   Sparkles,
+  Rss,
   createIcons,
 } from 'lucide';
 
@@ -78,6 +79,7 @@ createIcons({
     Gavel,
     Newspaper,
     Sparkles,
+    Rss,
   },
   attrs: { 'aria-hidden': true },
 });

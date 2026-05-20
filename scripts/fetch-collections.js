@@ -21,12 +21,22 @@ async function fetchCollections() {
 
         const data = await response.json();
 
+        const feedEndpoint = new URL('feed', collection.endpoint).href;
+        let hasFeed = false;
+        try {
+          const feedResponse = await fetch(feedEndpoint, { method: 'HEAD', timeout: 5000, referrer: 'https://opentermsarchive.org' });
+          hasFeed = feedResponse.ok;
+        } catch {
+          hasFeed = false;
+        }
+
         console.log(`✅ Successfully fetched ${collection.name}`);
 
         return {
           ...data,
           endpoint: collection.endpoint,
           federated: collection.federated,
+          hasFeed,
         };
       } catch (error) {
         console.warn(`❌ Failed to fetch ${collection.name} with the following error message: ${error.message}`);
