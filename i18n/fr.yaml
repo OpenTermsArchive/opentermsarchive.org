@@ -49,13 +49,12 @@ about:
   analysts:
     title: Analystes
     subtitle: Analysent les changements dans les conditions, repèrent les importants, et les rendent lisibles en rédigeant des mémos et rapports.
-  incubator:
-    title: Incubateur
-    subtitle: Fournit la structure légale et le soutien politique.
   funders:
     title: Financeurs
     subtitle: Indemnisent le temps de l'équipe cœur et financent l'infrastructure technique.
-    details: Ce projet a été en partie [financé](https://nlnet.nl/project/TOSDR-OTA/) par le fonds [NGI0 Entrust](https://nlnet.nl/entrust), un fonds établi par [NLnet](https://nlnet.nl/) avec le soutien financier du programme [Next Generation Internet](https://www.ngi.eu/) de la Commission européenne, sous l'égide de la DG Réseaux de communication, contenu et technologies dans le cadre de la convention de subvention N°101069594.
+    details: | 
+      Ce projet a été en partie [financé](https://nlnet.nl/project/TOSDR-OTA/) par le fonds [NGI0 Entrust](https://nlnet.nl/entrust), un fonds établi par [NLnet](https://nlnet.nl/) avec le soutien financier du programme [Next Generation Internet](https://www.ngi.eu/) de la Commission européenne, sous l'égide de la DG Réseaux de communication, contenu et technologies dans le cadre de la convention de subvention N°101069594.
+      De janvier 2020 à janvier 2026, Open Terms Archive a bénéficié du soutien de l'Ambassadeur pour le numérique, qui lui a apporté un financement et un soutien politique.
   contributors:
     title: Contributeurs
     subtitle: Offrent du temps bénévole pour améliorer le logiciel, les données, la documentation, la visibilité ou toute autre forme d'action qui contribue au [modèle d'impact]({{ .impactLink }}) d'Open Terms Archive.

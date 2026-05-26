@@ -14,21 +14,6 @@
         {{ .Content }}
         <hr>
         <div>
-          <h3>{{ i18n "about.incubator.title" }}</h3>
-          <p>{{ i18n "about.incubator.subtitle" }}</p>
-          <div class="thumbgallery mb--2xl">
-            <div class="thumbgallery__items thumbgallery__items--has-no-margin-top">
-              <a href="https://disinfo.quaidorsay.fr" target="_blank" rel="noopener" aria-label="{{ i18n "about.incubator.subtitle" }}">
-                <div class="thumbgallery__item">
-                  {{ with $ambassadeurFrancaisPourLeNumerique }}
-                    <img src="{{ .RelPermalink }}" width="158" height="80">
-                  {{ end }}
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div>
           <h3>{{ i18n "about.funders.title" }}</h3>
           <p>{{ i18n "about.funders.subtitle" }}</p>
           <div class="thumbgallery thumbgalery--is-small mb--2xl">
