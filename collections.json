@@ -117,7 +117,7 @@
     },
     "totalServices": 25,
     "totalTerms": 116,
-    "engineVersion": "11.0.1",
+    "engineVersion": "11.0.2",
     "endpoint": "http://134.102.58.70/collection-api/v1/",
     "federated": true,
     "hasFeed": false
@@ -641,8 +641,8 @@
         }
       }
     },
-    "totalServices": 379,
-    "totalTerms": 816,
+    "totalServices": 380,
+    "totalTerms": 818,
     "engineVersion": "10.6.1",
     "endpoint": "http://86.54.83.7/collection-api/v1/",
     "federated": true,
