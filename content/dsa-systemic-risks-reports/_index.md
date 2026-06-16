@@ -42,8 +42,6 @@ You can also directly [contribute data](https://github.com/OpenTermsArchive/dsa-
 | Booking.com | 2025 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Booking.com/Systemic%20Risks%20—%202025.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Booking.com/Systemic%20Risks%20—%202025.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Booking.com/Systemic%20Risks%20—%202025.md) |
 | Facebook | 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Facebook/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Facebook/Systemic%20Risks%20—%202024.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Facebook/Systemic%20Risks%20—%202024.md) |
 | Facebook | 2025 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Facebook/Systemic%20Risks%20—%202025.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Facebook/Systemic%20Risks%20—%202025.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Facebook/Systemic%20Risks%20—%202025.md) |
-| Google | 2023 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Google/Systemic%20Risks%20—%202023.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Google/Systemic%20Risks%20—%202023.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Google/Systemic%20Risks%20—%202023.md) |
-| Google | 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Google/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Google/Systemic%20Risks%20—%202024.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Google/Systemic%20Risks%20—%202024.md) |
 | Google Maps | 2023 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Google%20Maps/Systemic%20Risks%20—%202023.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Google%20Maps/Systemic%20Risks%20—%202023.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Google%20Maps/Systemic%20Risks%20—%202023.md) |
 | Google Maps | 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Google%20Maps/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Google%20Maps/Systemic%20Risks%20—%202024.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Google%20Maps/Systemic%20Risks%20—%202024.md) |
 | Google Maps | 2025 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Google%20Maps/Systemic%20Risks%20—%202025.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Google%20Maps/Systemic%20Risks%20—%202025.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Google%20Maps/Systemic%20Risks%20—%202025.md) |
@@ -87,7 +85,9 @@ You can also directly [contribute data](https://github.com/OpenTermsArchive/dsa-
 | YouTube | 2023 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Youtube/Systemic%20Risks%20—%202023.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Youtube/Systemic%20Risks%20—%202023.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Youtube/Systemic%20Risks%20—%202023.md) |
 | YouTube | 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Youtube/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Youtube/Systemic%20Risks%20—%202024.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Youtube/Systemic%20Risks%20—%202024.md) |
 | YouTube | 2025 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Youtube/Systemic%20Risks%20—%202025.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Youtube/Systemic%20Risks%20—%202025.md) | [History](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Youtube/Systemic%20Risks%20—%202025.md) |
-| Zalando | — | Fetching failed | None published | None published |
+| Zalando | 2023 | [Access blocked](https://github.com/OpenTermsArchive/dsa-reports-declarations/issues/11) | Extraction failed | Extraction failed |
+| Zalando | 2024 | [Access blocked](https://github.com/OpenTermsArchive/dsa-reports-declarations/issues/12) | Extraction failed | Extraction failed |
+| Zalando | 2025 | [Access blocked](https://github.com/OpenTermsArchive/dsa-reports-declarations/issues/46) | Extraction failed | Extraction failed |
 
 ## Known limitations
 
@@ -96,6 +96,10 @@ All reports contain many images and tables that are often improperly converted i
 ### Booking.com
 
 The 2024 report could not be converted into a reliable text version.
+
+### Stripchat
+
+Stripchat was temporarily designated as a VLOP, and was un-designated on 27 May 2025. We did not find any report to archive from that period of designation. If you know of a source, please [contribute](https://github.com/OpenTermsArchive/dsa-reports-declarations/blob/main/CONTRIBUTING.md)!
 
 ### Wikipedia
 

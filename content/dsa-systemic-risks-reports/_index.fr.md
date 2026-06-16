@@ -42,8 +42,6 @@ Vous pouvez également [contribuer directement en fournissant des données](http
 | Booking.com | 2025 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Booking.com/Systemic%20Risks%20—%202025.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Booking.com/Systemic%20Risks%20—%202025.md) | [Historique](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Booking.com/Systemic%20Risks%20—%202025.md) |
 | Facebook | 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Facebook/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Facebook/Systemic%20Risks%20—%202024.md) | [Historique](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Facebook/Systemic%20Risks%20—%202024.md) |
 | Facebook | 2025 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Facebook/Systemic%20Risks%20—%202025.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Facebook/Systemic%20Risks%20—%202025.md) | [Historique](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Facebook/Systemic%20Risks%20—%202025.md) |
-| Google | 2023 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Google/Systemic%20Risks%20—%202023.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Google/Systemic%20Risks%20—%202023.md) | [Historique](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Google/Systemic%20Risks%20—%202023.md) |
-| Google | 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Google/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Google/Systemic%20Risks%20—%202024.md) | [Historique](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Google/Systemic%20Risks%20—%202024.md) |
 | Google Maps | 2023 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Google%20Maps/Systemic%20Risks%20—%202023.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Google%20Maps/Systemic%20Risks%20—%202023.md) | [Historique](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Google%20Maps/Systemic%20Risks%20—%202023.md) |
 | Google Maps | 2024 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Google%20Maps/Systemic%20Risks%20—%202024.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Google%20Maps/Systemic%20Risks%20—%202024.md) | [Historique](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Google%20Maps/Systemic%20Risks%20—%202024.md) |
 | Google Maps | 2025 | [PDF](https://github.com/OpenTermsArchive/dsa-reports-snapshots/blob/main/Google%20Maps/Systemic%20Risks%20—%202025.pdf) | [Markdown](https://raw.githubusercontent.com/OpenTermsArchive/dsa-reports-versions/refs/heads/main/Google%20Maps/Systemic%20Risks%20—%202025.md) | [Historique](https://github.com/OpenTermsArchive/dsa-reports-versions/commits/main/Google%20Maps/Systemic%20Risks%20—%202025.md) |
@@ -98,6 +96,10 @@ Tous les rapports contiennent de nombreuses images et tableaux qui sont souvent 
 ### Booking.com
 
 Le rapport 2024 n'a pas pu être converti en une version textuelle fiable.
+
+### Stripchat
+
+Stripchat a été temporairement désigné comme VLOP, puis retiré le 27 mai 2025. Nous n'avons trouvé aucun rapport à archiver concernant cette période. Si vous connaissez une source, n'hésitez pas à [contribuer](https://github.com/OpenTermsArchive/dsa-reports-declarations/blob/main/CONTRIBUTING.md) !
 
 ### Wikipédia
 
