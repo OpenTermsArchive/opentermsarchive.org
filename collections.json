@@ -694,68 +694,10 @@
     },
     "totalServices": 7,
     "totalTerms": 19,
-    "engineVersion": "12.0.0",
+    "engineVersion": "14.0.0",
     "endpoint": "http://162.19.74.224/collection-api/v1/",
     "federated": true,
     "hasFeed": true
-  },
-  {
-    "id": "dsa-reports",
-    "name": "DSA Systemic Risks Reports",
-    "tagline": "Systemic risks reports mandated by the Digital Services Act",
-    "description": "The European [Digital Services Act article 34](https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng#art_34) mandates very large online platforms and search engines (VLOPSEs) to publish systemic risk assessments “at least once every year”. [Open Terms Archive](https://opentermsarchive.org/) makes these reports available independently from platforms hosting, and tracks any changes applied to the reports after they are published. This effort ensures the long term preservation of these documents to support research and guarantee platform accountability. This collection was created as a collaboration between [Open Terms Archive](https://opentermsarchive.org/) and [CheckFirst](https://checkfirst.network) as part of the [Hack the DSA](https://regulation-tech.cnam.fr/hack-the-dsa/) hackathon hosted by the CNAM’s _Chaire sur la Modération des Contenus_ in October 2025.",
-    "dataset": "https://github.com/OpenTermsArchive/dsa-reports-versions/releases",
-    "declarations": "https://github.com/OpenTermsArchive/dsa-reports-declarations",
-    "versions": "https://github.com/OpenTermsArchive/dsa-reports-versions",
-    "snapshots": "https://github.com/OpenTermsArchive/dsa-reports-snapshots",
-    "languages": [
-      "en"
-    ],
-    "jurisdictions": [
-      "FR"
-    ],
-    "trackingPeriods": [
-      {
-        "startDate": "2025-10-03",
-        "schedule": "0 4 * * 0",
-        "serverLocation": "Gravelines, FR"
-      }
-    ],
-    "governance": {
-      "Open Terms Archive": {
-        "url": "https://opentermsarchive.org",
-        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black.png",
-        "roles": [
-          "host",
-          "sysadmin",
-          "curator",
-          "maintainer",
-          "contributor",
-          "sponsor"
-        ]
-      },
-      "CheckFirst": {
-        "url": "https://checkfirst.network",
-        "logo": "https://checkfirst.network/wp-content/themes/checkfirst/core/img/checkfirst.png",
-        "roles": [
-          "curator",
-          "contributor"
-        ]
-      }
-    },
-    "i18n": {
-      "fr": {
-        "name": "Rapports de risques systémiques DSA",
-        "tagline": "Rapports de risques systémiques mandatés par le règlement sur les services numériques (DSA)",
-        "description": "L’[article 34](https://eur-lex.europa.eu/eli/reg/2022/2065/oj/eng#art_34) du règlement européen sur les services numériques oblige les très grandes plateformes en ligne et les moteurs de recherche (VLOPSEs) à publier des évaluations des risques systémiques « au moins une fois par an ». [Open Terms Archive](https://opentermsarchive.org/) met ces rapports à disposition indépendamment des plateformes qui les hébergent et suit toutes les modifications apportées aux rapports après leur publication. Cette initiative garantit la préservation à long terme de ces documents afin de soutenir la recherche et de garantir la redevabilité des plateformes. Cette collection a été créée par une collaboration entre [Open Terms Archive](https://opentermsarchive.org/) et [CheckFirst](https://checkfirst.network) dans le cadre du hackathon [Hack the DSA](https://regulation-tech.cnam.fr/hack-the-dsa/) organisé par la _Chaire sur la Modération des Contenus du CNAM_ en octobre 2025."
-      }
-    },
-    "totalServices": 25,
-    "totalTerms": 83,
-    "engineVersion": "10.1.2",
-    "endpoint": "http://51.38.36.133/collection-api/v1/",
-    "federated": false,
-    "hasFeed": false
   },
   {
     "id": "vlopses-us",
@@ -792,10 +734,10 @@
     },
     "totalServices": 23,
     "totalTerms": 200,
-    "engineVersion": "10.6.0",
+    "engineVersion": "14.0.0",
     "endpoint": "http://38.146.25.84/collection-api/v1/",
     "federated": false,
-    "hasFeed": false
+    "hasFeed": true
   },
   {
     "id": "vlopses-ca",
@@ -832,10 +774,10 @@
     },
     "totalServices": 23,
     "totalTerms": 197,
-    "engineVersion": "10.6.0",
+    "engineVersion": "14.0.0",
     "endpoint": "http://72.14.155.148/collection-api/v1/",
     "federated": false,
-    "hasFeed": false
+    "hasFeed": true
   },
   {
     "id": "vlopses-au",
@@ -872,10 +814,10 @@
     },
     "totalServices": 23,
     "totalTerms": 199,
-    "engineVersion": "10.6.0",
+    "engineVersion": "14.0.0",
     "endpoint": "http://139.99.155.143/collection-api/v1/",
     "federated": false,
-    "hasFeed": false
+    "hasFeed": true
   },
   {
     "id": "vlopses-gb",
@@ -910,11 +852,11 @@
         ]
       }
     },
-    "totalServices": 23,
-    "totalTerms": 200,
-    "engineVersion": "10.6.0",
+    "totalServices": 24,
+    "totalTerms": 210,
+    "engineVersion": "14.0.0",
     "endpoint": "http://57.129.129.3/collection-api/v1/",
     "federated": false,
-    "hasFeed": false
+    "hasFeed": true
   }
 ]
