@@ -86,7 +86,7 @@
   },
   {
     "name": "VLOPSEs Ireland",
-    "endpoint": "http://46.16.131.72/collection-api/v1/",
+    "endpoint": "http://193.24.234.158/collection-api/v1/",
     "federated": false
   },
   {
