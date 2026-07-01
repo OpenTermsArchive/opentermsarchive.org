@@ -1,5 +1,10 @@
 [
   {
+    "name": "User Rights",
+    "endpoint": "http://193.24.234.188/collection-api/v1/",
+    "federated": true
+  },
+  {
     "name": "Generative AI Contrib",
     "endpoint": "http://86.54.83.121/collection-api/v1/",
     "federated": true
