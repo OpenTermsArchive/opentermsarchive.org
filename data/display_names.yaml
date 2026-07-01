@@ -85,6 +85,7 @@ regions:
     GB: Royaume-Uni
     DE: Allemagne
     KE: Kenya
+    IE: Irlande
   en:
     EU: European Union
     CH: Switzerland
@@ -95,6 +96,7 @@ regions:
     GB: United Kingdom
     DE: Germany
     KE: Kenya
+    IE: Ireland
   de:
     EU: European Union
     CH: Switzerland
@@ -105,3 +107,4 @@ regions:
     GB: United Kingdom
     DE: Germany
     KE: Kenya
+    IE: Ireland
