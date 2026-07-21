@@ -1,5 +1,60 @@
 [
   {
+    "id": "user-rights",
+    "name": "User Rights",
+    "tagline": "Social media platforms where User Rights supports appeals",
+    "description": "[User Rights](https://www.user-rights.org/) is an independent and free of charge [out-of-court dispute settlement body](https://digital-strategy.ec.europa.eu/en/policies/dsa-out-court-dispute-settlement) under the European Union’s Digital Services Act. It evaluates whether actions like content removal or decision to leave content on a platform after being notified of its potential illegality are justified. Their assessments are based on European law, considering freedom of expression and other fundamental rights, as well as on the platforms’ own terms.\nThis collection ensures that the rules used for case review are always up to date and that those in force at the time of complaint can be referenced without ambiguity.",
+    "dataset": "https://github.com/OpenTermsArchive/user-rights-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/user-rights-declarations",
+    "versions": "https://github.com/OpenTermsArchive/user-rights-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/user-rights-snapshots",
+    "languages": [
+      "en"
+    ],
+    "jurisdictions": [
+      "IE"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2026-05-13",
+        "schedule": "30 */12 * * *",
+        "serverLocation": "Dublin, IE"
+      }
+    ],
+    "governance": {
+      "Anthelia": {
+        "url": "https://anthelia.tech",
+        "logo": "https://cloud.anthelia.tech/index.php/apps/files_sharing/publicpreview/qm3jorLYgwi5M36?file=/&fileId=713&x=2880&y=1800&a=true&etag=5be2dafb66b483c2348ebd1e20e02dc8",
+        "roles": [
+          "host",
+          "sysadmin",
+          "maintainer"
+        ]
+      },
+      "User Rights": {
+        "url": "https://www.user-rights.org/",
+        "logo": "https://opentermsarchive.org/images/collections/user-rights.png",
+        "roles": [
+          "curator",
+          "analyst",
+          "sponsor"
+        ]
+      }
+    },
+    "i18n": {
+      "fr": {
+        "tagline": "Médias sociaux pour lesquels un appel peut être déposé chez User Rights",
+        "description": "[User Rights](https://www.user-rights.org/fr) est un [organisme de règlement extrajudiciaire des litiges](https://digital-strategy.ec.europa.eu/fr/policies/dsa-out-court-dispute-settlement) indépendant et gratuit, opérant au titre de la législation sur les services numériques de l’Union européenne. Il évalue si la décision d’une plateforme de retirer un contenu ou de le laisser en ligne après qu’elle ait été notifiée de son illégalité potentielle sont justifiés. Ses évaluations s’appuient sur le droit européen, en tenant compte de la liberté d’expression et d’autres droits fondamentaux, ainsi que sur les conditions d’utilisation propres à chaque plateforme.\nCette collection garantit que les règles utilisées pour l’examen des dossiers sont toujours à jour et que celles en vigueur au moment de la plainte peuvent être consultées, même a posteriori."
+      }
+    },
+    "totalServices": 6,
+    "totalTerms": 36,
+    "engineVersion": "15.1.0",
+    "endpoint": "http://193.24.234.188/collection-api/v1/",
+    "federated": true,
+    "hasFeed": true
+  },
+  {
     "id": "genai-contrib",
     "name": "Generative AI Contrib",
     "tagline": "Open to all contributions on generative AI services",
@@ -57,68 +112,6 @@
     "totalTerms": 141,
     "engineVersion": "15.1.0",
     "endpoint": "http://86.54.83.121/collection-api/v1/",
-    "federated": true,
-    "hasFeed": true
-  },
-  {
-    "id": "pga",
-    "name": "Platform Governance Archive",
-    "tagline": "Major global social media services",
-    "description": "The **Platform Governance Archive** (PGA) collection tracks the terms of major global social media services.\n\nThis data is maintained and analysed by the [Platform Governance Archive](https://www.platformgovernancearchive.org/) at the Universität Bremen's [Center for Media Communication and Information Research (ZeMKI)](https://www.uni-bremen.de/zemki).\n\nThis initiative offers researchers, journalists and citizens the tools to analyze how platforms structure and regulate communication and interaction in our societies.\n\nIt also aims to promote greater transparency and accountability of these powerful digital services.\n",
-    "dataset": "https://github.com/OpenTermsArchive/pga-versions/releases",
-    "declarations": "https://github.com/OpenTermsArchive/pga-declarations",
-    "versions": "https://github.com/OpenTermsArchive/pga-versions",
-    "snapshots": "https://github.com/OpenTermsArchive/pga-snapshots",
-    "donations": "https://opencollective.com/opentermsarchive",
-    "logo": "https://opentermsarchive.org/images/collections/platform-governance-archive.png",
-    "languages": [
-      "en"
-    ],
-    "jurisdictions": [
-      "EU"
-    ],
-    "trackingPeriods": [
-      {
-        "startDate": "2022-04-20T00:00:00.000Z",
-        "schedule": "30 */12 * * *",
-        "serverLocation": "Bremen, DE"
-      }
-    ],
-    "governance": {
-      "Centre for Media, Communication and Information Research": {
-        "url": "https://zemki.uni-bremen.de",
-        "logo": "https://opentermsarchive.org/images/contributors/zemki.png",
-        "roles": [
-          "host",
-          "sponsor"
-        ]
-      },
-      "Open Terms Archive": {
-        "url": "https://opentermsarchive.org",
-        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black-small.png",
-        "roles": [
-          "sysadmin"
-        ]
-      },
-      "Platform Governance Archive": {
-        "url": "https://www.platformgovernancearchive.org",
-        "logo": "https://opentermsarchive.org/images/contributors/pga.png",
-        "roles": [
-          "curator",
-          "maintainer"
-        ]
-      }
-    },
-    "i18n": {
-      "fr": {
-        "tagline": "Médias sociaux mondiaux majeurs",
-        "description": "La collection **Platform Governance Archive** (PGA) suit les conditions d'utilisation des principaux services de médias sociaux.\n\nCes données sont maintenues et analysées par la [Platform Governance Archive](https://www.platformgovernancearchive.org/) du [Center for Media Communication and Information Research (ZeMKI)](https://www.uni-bremen.de/zemki) de l'Université de Brême.\n\nCette initiative offre aux chercheurs, journalistes et citoyens des outils pour analyser comment les plateformes structurent et régulent la communication et l’interaction dans nos sociétés.\n\nElle vise également à promouvoir une transparence accrue et à renforcer la responsabilité de ces puissants services numériques.\n"
-      }
-    },
-    "totalServices": 25,
-    "totalTerms": 117,
-    "engineVersion": "14.1.0",
-    "endpoint": "http://134.102.58.70/collection-api/v1/",
     "federated": true,
     "hasFeed": true
   },
@@ -828,6 +821,46 @@
     "totalTerms": 199,
     "engineVersion": "15.0.0",
     "endpoint": "http://139.99.155.143/collection-api/v1/",
+    "federated": false,
+    "hasFeed": true
+  },
+  {
+    "id": "vlopses-ie",
+    "name": "VLOPSEs Ireland",
+    "tagline": "",
+    "description": "",
+    "dataset": "https://github.com/OpenTermsArchive/vlopses-ie-versions/releases",
+    "declarations": "https://github.com/OpenTermsArchive/vlopses-ie-declarations",
+    "versions": "https://github.com/OpenTermsArchive/vlopses-ie-versions",
+    "snapshots": "https://github.com/OpenTermsArchive/vlopses-ie-snapshots",
+    "languages": [
+      "en"
+    ],
+    "jurisdictions": [
+      "IE"
+    ],
+    "trackingPeriods": [
+      {
+        "startDate": "2025-07-10T00:00:00.000Z",
+        "schedule": "30 */12 * * *",
+        "serverLocation": "Dublin, IE"
+      }
+    ],
+    "governance": {
+      "Open Terms Archive": {
+        "url": "https://opentermsarchive.org",
+        "logo": "https://opentermsarchive.org/images/logo/logo-open-terms-archive-black.png",
+        "roles": [
+          "sysadmin",
+          "curator",
+          "maintainer"
+        ]
+      }
+    },
+    "totalServices": 24,
+    "totalTerms": 219,
+    "engineVersion": "15.0.0",
+    "endpoint": "http://193.24.234.158/collection-api/v1/",
     "federated": false,
     "hasFeed": true
   },
