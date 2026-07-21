@@ -1,5 +1,10 @@
 [
   {
+    "name": "User Rights",
+    "endpoint": "http://193.24.234.188/collection-api/v1/",
+    "federated": true
+  },
+  {
     "name": "Generative AI Contrib",
     "endpoint": "http://86.54.83.121/collection-api/v1/",
     "federated": true
@@ -81,7 +86,7 @@
   },
   {
     "name": "VLOPSEs Ireland",
-    "endpoint": "http://46.16.131.72/collection-api/v1/",
+    "endpoint": "http://193.24.234.158/collection-api/v1/",
     "federated": false
   },
   {
