@@ -697,8 +697,8 @@
         }
       }
     },
-    "totalServices": 380,
-    "totalTerms": 818,
+    "totalServices": 382,
+    "totalTerms": 826,
     "engineVersion": "15.1.0",
     "endpoint": "http://86.54.83.7/collection-api/v1/",
     "federated": true,
