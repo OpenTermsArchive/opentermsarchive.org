@@ -192,7 +192,7 @@ reuses: Réutilisations
 presentations:
   language: En {{ .language }}
 dsa_systemic_risks_reports:
-  related_collection: Collection associé
+  related_collection: Collection associée
 publications:
   author: Par <a href="{{ .profile }}" target="_blank" rel="noopener">{{ .name }}</a>, {{ if .isTeamMember }}membre de l'équipe d'Open Terms Archive{{ else }}un‧e contributeur·trice de la communauté{{ end }}
   title: Rapports
