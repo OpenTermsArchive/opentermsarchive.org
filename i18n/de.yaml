@@ -185,10 +185,8 @@ memos:
   featured:
     title: Memos
     subtitle: Memos are short explanations of a specific change in some terms of a service.
-    desc: | 
-      They remove the technical and expertise barriers needed to interpret a textual change.
-      They can provide additional context to make sense of that change, such as outlining the regulation, geopolitical tensions or public controversy that likely led to it.
-      They can also highlight the potential consequences of that change on the users and partners of the service, as well as potential real-world harms to society.
+    desc: |
+      They remove the technical and expertise barriers needed to interpret a textual change. They can provide additional context to make sense of that change, such as outlining the regulation, geopolitical tensions or public controversy that likely led to it. They can also highlight the potential consequences of that change on the users and partners of the service, as well as potential real-world harms to society.
     cta: See all memos
 reuses: Reuses
 presentations:

@@ -185,10 +185,8 @@ memos:
   featured:
     title: Mémos
     subtitle: Les mémos sont de brèves explications concernant un changement spécifique apporté à certaines conditions d'un service.
-    desc: | 
-      Ils suppriment les obstacles techniques et liés à l'expertise nécessaires pour interpréter une modification textuelle.
-      Ils peuvent fournir un contexte supplémentaire pour donner un sens à cette modification, par exemple en décrivant la réglementation, les tensions géopolitiques ou les controverses publiques qui ont probablement conduit à celle-ci.
-      Ils peuvent également mettre en évidence les conséquences potentielles de cette modification sur les utilisateurs et les partenaires du service, ainsi que les dommages potentiels dans le monde réel pour la société.
+    desc: |
+      Ils suppriment les obstacles techniques et liés à l'expertise nécessaires pour interpréter une modification textuelle. Ils peuvent fournir un contexte supplémentaire pour donner un sens à cette modification, par exemple en décrivant la réglementation, les tensions géopolitiques ou les controverses publiques qui ont probablement conduit à celle-ci. Ils peuvent également mettre en évidence les conséquences potentielles de cette modification sur les utilisateurs et les partenaires du service, ainsi que les dommages potentiels dans le monde réel pour la société.
     cta: Voir tous les mémos
 reuses: Réutilisations
 presentations:
