@@ -9,8 +9,6 @@ assistance: [GLM-5-2]
 related_collections: ["dsa-reports"]
 ---
 
-# Updating DSA Transparency Reports: How TikTok’s Silent Correction Tests Implementing Regulation
-
 _Open Terms Archive tracks platforms’ documents and ensures that every published version remains accessible and that the data has not been tampered with. The system automatically detects any change applied after publication and exposes. The entire investigation described in this article rests on a record that no regulator, researcher, or journalist relying solely on the platform’s own pages would have ever seen._
 
 ## Open Terms Archive spotted a change in a TikTok transparency report 6 months after publishing
