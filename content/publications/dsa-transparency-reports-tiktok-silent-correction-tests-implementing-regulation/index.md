@@ -13,7 +13,7 @@ related_collections: ["dsa-reports"]
 
 ## Open Terms Archive spotted a change in a TikTok transparency report 6 months after publishing
 
-On 30 August 2026, Open Terms Archive [detected](https://github.com/OpenTermsArchive/dsa-reports-versions/commit/0f2bf601504fe9b4a3e9baa78ba43bc9631e6a49) that TikTok had repointed the download link for its Digital Services Act (DSA) transparency report covering the period of July - December 2025. The report had originally been published on 27 February 2026. Without any public announcement, the canonical download URL was changed to point to a new archive labelled “corrected” and “updated”, while the original archive was left accessible at its previous address.
+On 30 August 2026, Open Terms Archive [detected](https://github.com/OpenTermsArchive/dsa-reports-versions/commit/0f2bf601504fe9b4a3e9baa78ba43bc9631e6a49) that TikTok had repointed the download link for its Digital Services Act (DSA) transparency report covering the period of July - December 2025. The report had originally been published on 27 February 2026. Without any public announcement, the canonical download URL was changed to point to a new archive whose name contained “corrected” and “updated”, while the original archive was left accessible at its previous address.
 
 ![Diff showing the detected change](detected_change.png)
 
@@ -53,7 +53,7 @@ A 44 percent drop in reported notices for terrorist content, as well as a threef
 
 ### Value change for “unsafe products”
 
-Category 13b (unsafe products) previously contained no data at all and is populated with values in the new report version. Several other lines have no data in both versions, which leads us to ask why only this line was corrected.
+Category 13b (unsafe products) previously contained no data at all and is populated with values in the new report version. Several other lines have no data in both versions, which opens the question why only this line was corrected.
 
 ### Structural changes
 
@@ -125,7 +125,7 @@ Beyond TikTok’s publishing practices, the case also highlights structural weak
 
 #### 1. Publish an Implementing Regulation for systemic risk assessments
 
-The existing transparency report guidelines are very clear; the same for systemic risk assessments would be useful!
+The existing transparency report guidelines are clear; the same for systemic risk assessments would be useful!
 
 #### 2. Rely on an independent archive instead of linking to the platforms
 
@@ -133,11 +133,11 @@ Transparency documents on the [Commission’s page](https://digital-strategy.ec.
 
 #### 3. Fund civil society organisations on which DSA enforcement relies
 
-Under DSA §43, the European Commission collects a “supervisory fee” on VLOPSEs. At the same time, the DSA’s enforcement framework assigns a significant enforcement role to civil society organisations (CSOs) and independent actors, including trusted flaggers, academic researchers, consumer protection organisations, and providers of open-source tools.
+Under DSA §43, the European Commission collects a “supervisory fee” on VLOPSEs. At the same time, the DSA’s enforcement framework assigns a significant enforcement role to independent actors such as trusted flaggers, academic researchers, consumer protection organisations, and providers of open-source tools.
 
-The European Commission’s DSA enforcement team relies on this broader ecosystem, yet these organisations face a growing workload driven by the increasing number of designated platforms, the weaponisation of these platforms by malicious actors, and the acceleration of abusive content creation enabled by the widespread use of LLM-based tools. Furthermore, drastic budget cuts stemming from the withdrawal of funding by longstanding US public and philanthropic funders as a result of actions by the Trump administration are hitting CSOs hard, leaving their internal resources increasingly constrained.
+The European Commission’s DSA enforcement team relies on this broader ecosystem, yet these organisations face a growing workload driven by the increasing number of designated platforms, the weaponisation of these platforms by malicious actors, and the acceleration of abusive content creation enabled by the widespread use of LLM-based tools. Furthermore, drastic budget cuts stemming from the withdrawal of funding by longstanding US public and philanthropic funders as a result of actions by the Trump administration are hitting civil society organisations hard.
 
-The DSA was built for a world in which platforms would cooperate, CSOs had sufficient resources to fulfil their role, and US funding helped sustain organisations defending fundamental rights online and countering hate speech. That world is rapidly disappearing, while the responsibilities placed on this ecosystem remain. European funding must therefore support not only the design of European digital regulation, but also the civil society capacity required to make its enforcement effective.
+The DSA was built for a world in which platforms would cooperate, civil society had sufficient resources to fulfil its missions, and US funding helped sustain organisations defending fundamental rights online and countering hate speech. That world has disappeared, while the responsibilities placed on this ecosystem remain. European funding must therefore support not only the design of digital regulation, but also the civil society capacity it has decided to entrust with its enforcement effectiveness.
 
 ## Only Open Terms Archive could surface this
 
