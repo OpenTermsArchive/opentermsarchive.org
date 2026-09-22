@@ -67,7 +67,7 @@ More problematically, the update notice refers to “Category 10d” and “Cate
 
 The XLSX file handling is, on the whole, sensible: the original spreadsheet was left in place, and a second, updated file was added alongside it. The original content therefore remains available, which is good practice.
 
-However, an approximately 8% difference in file size led us to investigate the supposedly unchanged original XLSX. We found that it had been re-exported, introducing previously absent elements, including an embedded PNG watermark, possibly added accidentally.
+However, an approximately 8% increase in file size led us to investigate the supposedly unchanged original XLSX. We compared contents through both visual diffing and data comparison and did not find any change in the data. With the help of two independent LLMs (`GLM-5-2` and `Claude Fable 5.1-medium`), we identified the source of this size increase to be a background watermark displaying a name. That name matches the author recorded in the metadata of the original file and, according to public sources, is TikTok’s EMEA Transparency Program Manager. We assume this watermark to have been applied through a re-export of the document for the updated archive, possibly accidentally.
 
 The updated XLSX file also carries a metadata inconsistency. Its first sheet still lists `2026-02-27` as the “Date of the publication of the report”. While technically accurate, since the report was first published on that date, the only indication of the correction date is the `_updated_28082026` suffix in the filename; the correction date is not recorded within the file itself.
 
