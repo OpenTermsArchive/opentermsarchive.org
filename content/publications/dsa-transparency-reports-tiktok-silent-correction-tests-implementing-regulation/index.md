@@ -4,7 +4,9 @@ html_description: "On 28 August 2026, TikTok silently corrected its 2025S2 DSA t
 service: TikTok
 topic: ["Platform Accountability"]
 date: 2026-08-28
-author: Matti Schneider
+author:
+- Matti Schneider
+- Sydney Wheeler
 assistance: [GLM-5-2]
 related_collections: ["dsa-reports"]
 ---
