@@ -1,6 +1,6 @@
 ---
 title: "Updating DSA Transparency Reports: How TikTok’s Silent Correction Tests Implementing Regulation"
-html_description: "On 28 August 2026, TikTok silently corrected its 2025S2 DSA transparency report 6 months after publishing. Open Terms Archive detected changes and minor inconsistencies in the data. Useful learnings in interpreting the Implementing Regulation can be derived."
+html_description: "On 28 August 2026, TikTok silently corrected its 2025S2 DSA transparency report 6 months after publishing. Open Terms Archive detected changes and minor inconsistencies in the data. Useful learnings in interpreting the Implementing Regulation can be derived."
 service: TikTok
 topic: ["Platform Accountability"]
 date: 2026-08-28
@@ -13,9 +13,9 @@ related_collections: ["dsa-reports"]
 
 _Open Terms Archive tracks platforms’ documents and ensures that every published version remains accessible and that the data has not been tampered with. The system automatically detects any change applied after publication and exposes. The entire investigation described in this article rests on a record that no regulator, researcher, or journalist relying solely on the platform’s own pages would have ever seen._
 
-## Open Terms Archive spotted a change in a TikTok transparency report 6 months after publishing
+## Open Terms Archive spotted a change in a TikTok transparency report 6 months after publishing
 
-On 30 August 2026, Open Terms Archive [detected](https://github.com/OpenTermsArchive/dsa-reports-versions/commit/0f2bf601504fe9b4a3e9baa78ba43bc9631e6a49) that TikTok had repointed the download link for its Digital Services Act (DSA) transparency report covering the period of July - December 2025. The report had originally been published on 27 February 2026. Without any public announcement, the canonical download URL was changed to point to a new archive whose name contained “corrected” and “updated”, while the original archive was left accessible at its previous address.
+On 30 August 2026, Open Terms Archive [detected](https://github.com/OpenTermsArchive/dsa-reports-versions/commit/0f2bf601504fe9b4a3e9baa78ba43bc9631e6a49) that TikTok had repointed the download link for its Digital Services Act (DSA) transparency report covering the period of July - December 2025. The report had originally been published on 27 February 2026. Without any public announcement, the canonical download URL was changed to point to a new archive whose name contained “corrected” and “updated”, while the original archive was left accessible at its previous address.
 
 ![Diff showing the detected change](detected_change.png)
 
@@ -39,7 +39,7 @@ The notice reads:
 
 > Update on August 28, 2026: The values for specific data points included in tab “4_notices” of the report published on 27 February 2026 have been updated with the correct values for Category 10d and Category 13b. This update does not affect any other parts of the report.
 
-At Open Terms Archive, our first design principle is “[never trust the platforms](https://docs.opentermsarchive.org/concepts/design-principles/#1-never-trust-the-services).” We therefore independently verified the scope of the announced correction.
+At Open Terms Archive, our first design principle is “[never trust the platforms](https://docs.opentermsarchive.org/concepts/design-principles/#1-never-trust-the-services).” We therefore independently verified the scope of the announced correction.
 
 ## The “notices” CSV
 
@@ -103,7 +103,7 @@ TikTok posted a [newsroom announcement](https://newsroom.tiktok.com/digital-serv
 
 #### 2. Preserve and clearly label original and updated versions
 
-The original archive was correctly left accessible, which is good practice. However, there is no discoverability of the previous version from the list of reports. Without Open Terms Archive, there is no way to recover the original URL. We recommend that the canonical download URL be redirected to the corrected version while the original file is retained at a separate, explicitly versioned location.
+The original archive was correctly left accessible, which is good practice. However, there is no discoverability of the previous version from the list of reports. Without Open Terms Archive, there is no way to recover the original URL. We recommend that the canonical download URL be redirected to the corrected version while the original file is retained at a separate, explicitly versioned location.
 
 #### 3. Provide a single source of data
 
