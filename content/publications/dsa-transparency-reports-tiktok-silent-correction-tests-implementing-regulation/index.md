@@ -2,7 +2,7 @@
 title: "DSA Transparency Reports: how TikTok’s silent correction tests the Implementing Regulation"
 html_description: "On 28 August 2026, TikTok silently corrected its 2025S2 DSA transparency report 6 months after publishing. Open Terms Archive detected changes and minor inconsistencies in the data. Useful learnings in interpreting the Implementing Regulation can be derived."
 service: TikTok
-terms_types: ["Transparency Report"]
+topic: ["Platform Accountability"]
 dates: ["2026-08-28"]
 author: Matti Schneider
 assistance: [GLM-5-2]
