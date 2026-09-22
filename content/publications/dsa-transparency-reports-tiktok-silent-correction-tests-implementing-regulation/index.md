@@ -71,7 +71,7 @@ However, an approximately 8% increase in file size led us to investigate the sup
 
 The updated XLSX file also carries a metadata inconsistency. Its first sheet still lists `2026-02-27` as the “Date of the publication of the report”. While technically accurate, since the report was first published on that date, the only indication of the correction date is the `_updated_28082026` suffix in the filename; the correction date is not recorded within the file itself.
 
-These discrepancies illustrate the importance of consistent and reproducible publishing processes.
+These minor discrepancies illustrate the importance of consistent and reproducible publishing processes.
 
 ## The correction introduced an inconsistency
 
