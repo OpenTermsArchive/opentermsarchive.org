@@ -135,7 +135,7 @@ Guidelines are clear for transparency reports, the same for systemic risk assess
 
 #### 2. Rely on an independent archive instead of linking to the platforms
 
-Transparency documents on the [Commission’s page](https://digital-strategy.ec.europa.eu/en/policies/dsa-brings-transparency) are only links to the platforms’ download pages. This is a missed opportunity for official archival of critical transparency documents and makes the regulator trust the regulated with compliance evidence. The Commission is already using Open Terms Archive for its [Digital Services Terms and Conditions Database](https://platform-contracts.digital-strategy.ec.europa.eu), it would make sense to expand usage to collect risk reports as well.
+Transparency documents on the [Commission’s page](https://digital-strategy.ec.europa.eu/en/policies/dsa-brings-transparency) are only links to the platforms’ download pages. This is a missed opportunity for official archival of critical transparency documents and makes the regulator trust the regulated with compliance evidence. The Commission is already using Open Terms Archive for its [Digital Services Terms and Conditions Database](https://platform-contracts.digital-strategy.ec.europa.eu), it would make sense to expand usage to collect risk and transparency reports as well by contributing to this open collection.
 
 #### 3. Fund civil society organisations on which DSA enforcement relies
 
