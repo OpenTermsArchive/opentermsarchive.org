@@ -45,7 +45,7 @@ An XLSX spreadsheet is provided as a database, containing several sheets. Each o
 
 ### Value change for terrorist content notices
 
-For Category 10d (terrorist content), the number of notices received fell from 77 729 to 43 119 and the median time to take action fell from 6.82 to 2.43. We could not find the unit used in the table nor in the PDF report itself. Assuming these are days, going from a week to two and a half days to act on terrorist content is a significant improvement. The origin of the data correction can be inferred from the “Description of the sub-category” column, which was also amended: the previous data had been calculated from reports for “Consumer-related offences”, which was corrected to “Terrorist Content”.
+For Category 10d (terrorist content), the number of notices received fell from 77 729 to 43 119 and the median time to take action fell from 6.82 to 2.43. We could not find the unit used in the table nor in the PDF report itself. Since Regulation (EU) [2021/784 §3](https://eur-lex.europa.eu/eli/reg/2021/784/oj/eng#art_3) requires terrorist content to be removed within a few hours, we assume these are hours. The origin of the data correction can be inferred from the “Description of the sub-category” column, which was also amended: the previous data had been calculated from reports for “Consumer-related offences”, which was corrected to “Terrorist Content”.
 
 ![Spreadsheet comparison of the original and updated “4_notices” tab, with row 66 (Category 10d, KEYWORD_TERRORIST_CONTENT) highlighted, showing the number of notices received changing from 77729 to 43119](spreadsheet_diff.png)
 
@@ -150,3 +150,7 @@ By archiving every report independently from the platforms’ hosting with a cry
 We are grateful to the CNAM, and specifically its Chaire sur la modération des contenus, for [having supported](https://regulation-tech.vergnolle.org/ota-community-call/) both with expertise and financially the creation and maintenance of this archive. That funding has now run out, leading us to take actions such as decreasing the tracking frequency to weekly in an aim to spare resources. Maintaining a trustworthy, continuously updated archive of systemic risk assessments across all very large online platforms requires sustained engineering and monitoring. We encourage every actor who makes use of these reports to support the maintenance of this tracking via our [OpenCollective page](https://opencollective.com/opentermsarchive/projects/dsa-systemic-risks-reports).
 
 If you are in a position to sponsor the long-term maintenance of this work, and even better its expansion to properly cover the transparency reports and analyse changes, please [reach out to us](mailto:contact@opentermsarchive.org?subject=DSA%20reports)!
+
+### Credits
+
+Thank you to [Suzanne Vergnolle](https://vergnolle.org/) for pointing to Regulation (EU) 2021/784 and suggesting the unit for median response time must be minutes or hours.
