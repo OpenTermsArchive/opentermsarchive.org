@@ -11,6 +11,8 @@ related_collections: ["dsa-reports"]
 
 # Updating DSA Transparency Reports: How TikTok’s Silent Correction Tests Implementing Regulation
 
+_Open Terms Archive tracks platforms’ documents and ensures that every published version remains accessible and that the data has not been tampered with. The system automatically detects any change applied after publication and exposes. The entire investigation described in this article rests on a record that no regulator, researcher, or journalist relying solely on the platform’s own pages would have ever seen._
+
 ## Open Terms Archive spotted a change in a TikTok transparency report 6 months after publishing
 
 On 30 August 2026, Open Terms Archive [detected](https://github.com/OpenTermsArchive/dsa-reports-versions/commit/0f2bf601504fe9b4a3e9baa78ba43bc9631e6a49) that TikTok had repointed the download link for its Digital Services Act (DSA) transparency report covering the period of July - December 2025. The report had originally been published on 27 February 2026. Without any public announcement, the canonical download URL was changed to point to a new archive whose name contained “corrected” and “updated”, while the original archive was left accessible at its previous address.
@@ -45,7 +47,7 @@ An XLSX spreadsheet is provided as a database, containing several sheets. Each o
 
 ### Value change for terrorist content notices
 
-For Category 10d (terrorist content), the number of notices received fell from 77 729 to 43 119 and the median time to take action fell from 6.82 to 2.43. We could not find the unit used in the table nor in the PDF report itself. Since Regulation (EU) [2021/784 §3](https://eur-lex.europa.eu/eli/reg/2021/784/oj/eng#art_3) requires terrorist content to be removed within a few hours, we assume these are hours. The origin of the data correction can be inferred from the “Description of the sub-category” column, which was also amended: the previous data had been calculated from reports for “Consumer-related offences”, which was corrected to “Terrorist Content”.
+For Category 10d (terrorist content), the number of notices received fell from 77 729 to 43 119 and the median time to take action fell from 6.82 to 2.43. We could not find the unit used in the table nor in the PDF report itself. Since Regulation (EU) [2021/784 §3](https://eur-lex.europa.eu/eli/reg/2021/784/oj/eng#art_3) requires terrorist content to be removed within a few hours, we assume these are hours[^credit]. The origin of the data correction can be inferred from the “Description of the sub-category” column, which was also amended: the previous data had been calculated from reports for “Consumer-related offences”, which was corrected to “Terrorist Content”.
 
 ![Spreadsheet comparison of the original and updated “4_notices” tab, with row 66 (Category 10d, KEYWORD_TERRORIST_CONTENT) highlighted, showing the number of notices received changing from 77729 to 43119](spreadsheet_diff.png)
 
@@ -137,20 +139,16 @@ Under DSA §43, the European Commission collects a “supervisory fee” on VLOP
 
 The European Commission’s DSA enforcement team relies on this broader ecosystem, yet these organisations face a growing workload driven by the increasing number of designated platforms, the weaponisation of these platforms by malicious actors, and the acceleration of abusive content creation enabled by the widespread use of LLM-based tools. Furthermore, drastic budget cuts stemming from the withdrawal of funding by longstanding US public and philanthropic funders as a result of actions by the Trump administration are hitting civil society organisations hard.
 
-The DSA was built for a world in which platforms would cooperate, civil society had sufficient resources to fulfil its missions, and US funding helped sustain organisations defending fundamental rights online and countering hate speech. That world has disappeared, while the responsibilities placed on this ecosystem remain. European funding must therefore support not only the design of digital regulation, but also the civil society capacity it has decided to entrust with its enforcement effectiveness.
+The DSA was built for a world in which platforms would cooperate, civil society had sufficient resources to fulfil its missions, and US funding helped sustain organisations defending fundamental rights online and countering hate speech. That world has disappeared, while the responsibilities placed on this ecosystem remain. European funding must therefore support not only the design of digital regulation, but also the civil society capacity it has decided to entrust with its enforcement effectiveness, as has been repeatedly called for since 2023[^collective-intelligence-report].
 
-## Only Open Terms Archive could surface this
+- - -
 
-While the implementing regulation requires 5 years retaining of the reports, the European Commission's own transparency page lists reports only as links to the platforms' web pages. When a platform quietly changes the file behind such a link, there is no way to detect it, no diff to consult, and no archived prior version to compare against. This is the gap that Open Terms Archive closes.
+## Funding
 
-By archiving every report independently from the platforms’ hosting with a cryptographic signature, Open Terms Archive ensures that every published version remains accessible and that the data has not been tampered with. Our system automatically detects any change applied after publication and exposes it as a reviewable diff. The entire investigation described in this article rests on a record that no regulator, researcher, or journalist relying solely on the platform’s own pages would have ever seen.
+We are grateful to the [CNAM](https://www.cnam.eu), and specifically its _Chaire sur la modération des contenus_, for having [supported](https://regulation-tech.vergnolle.org/ota-community-call/) the creation and maintenance of the [Systemic Risks Reports Archive](https://opentermsarchive.org/en/dsa-systemic-risks-reports/). Maintaining a trustworthy, continuously updated archive of systemic risk assessments across all very large online platforms requires sustained engineering and monitoring.
 
-### But for how long?
+That funding has now run out and **Open Terms Archive needs support to maintain this tracking**. If you are in a position to sponsor the maintenance of this work and its expansion to transparency reports, please [reach out to us](mailto:contact@opentermsarchive.org?subject=DSA%20reports) or donate directly on our [OpenCollective page](https://opencollective.com/opentermsarchive/projects/dsa-systemic-risks-reports).
 
-We are grateful to the CNAM, and specifically its Chaire sur la modération des contenus, for [having supported](https://regulation-tech.vergnolle.org/ota-community-call/) both with expertise and financially the creation and maintenance of this archive. That funding has now run out, leading us to take actions such as decreasing the tracking frequency to weekly in an aim to spare resources. Maintaining a trustworthy, continuously updated archive of systemic risk assessments across all very large online platforms requires sustained engineering and monitoring. We encourage every actor who makes use of these reports to support the maintenance of this tracking via our [OpenCollective page](https://opencollective.com/opentermsarchive/projects/dsa-systemic-risks-reports).
 
-If you are in a position to sponsor the long-term maintenance of this work, and even better its expansion to properly cover the transparency reports and analyse changes, please [reach out to us](mailto:contact@opentermsarchive.org?subject=DSA%20reports)!
-
-### Credits
-
-Thank you to [Suzanne Vergnolle](https://vergnolle.org/) for pointing to Regulation (EU) 2021/784 and suggesting the unit for median response time must be minutes or hours.
+[^credit]: Thank you to [Suzanne Vergnolle](https://vergnolle.org/) for pointing to Regulation (EU) 2021/784 and suggesting the unit for median response time must be minutes or hours.
+[^collective-intelligence-report]: “[Putting collective intelligence to the enforcement of the Digital Services Act](https://dsa-enforcement.vergnolle.org/assets/S.%20Vergnolle%20-%20Putting%20collective%20intelligence%20to%20the%20enforcement%20of%20the%20Digital%20Services%20Act.pdf)” report, published May 2023.
