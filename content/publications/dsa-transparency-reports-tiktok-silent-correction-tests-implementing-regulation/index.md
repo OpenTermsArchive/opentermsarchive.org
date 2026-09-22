@@ -53,7 +53,7 @@ A 44 percent drop in reported notices for terrorist content, as well as a threef
 
 ### Value change for “unsafe products”
 
-Category 13b (unsafe products) previously contained no data at all and is populated with values in the new report version. Several other lines have no data in both versions, which opens the question why only this line was corrected.
+Category 13b (unsafe products) previously contained no data at all and is populated with values in the new report version. Several other lines have no data in both versions, which raises the question why only this line was corrected.
 
 ### Structural changes
 
