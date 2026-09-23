@@ -5,17 +5,15 @@ require('dotenv').config();
 
 const outputPath = path.join(__dirname, '../data/uptime.json');
 
-function writeFallbackIfMissing() {
-  if (!fs.existsSync(outputPath)) {
-    fs.writeFileSync(outputPath, JSON.stringify({ monitors: [] }, null, 2));
-    console.warn('⚠️ Empty uptime data written to data/uptime.json');
-  }
+function writeEmptyData() {
+  fs.writeFileSync(outputPath, JSON.stringify({ monitors: [] }, null, 2));
+  console.warn('⚠️ Empty uptime data written to data/uptime.json');
 }
 
 async function fetchUptimeData() {
   if (!process.env.UPTIMEROBOT_API_KEY) {
     console.warn('⚠️ UPTIMEROBOT_API_KEY environment variable is not set; uptime data will not be displayed.');
-    writeFallbackIfMissing();
+    writeEmptyData();
     return;
   }
 
@@ -37,7 +35,7 @@ async function fetchUptimeData() {
 
     if (!response.ok) {
       console.warn(`⚠️ Failed to fetch UptimeRobot data: ${response.status} ${response.statusText}; uptime data will not be displayed.`);
-      writeFallbackIfMissing();
+      writeEmptyData();
       return;
     }
 
@@ -47,7 +45,7 @@ async function fetchUptimeData() {
     console.log('✅ Uptime data successfully written to data/uptime.json');
   } catch (error) {
     console.warn(`⚠️ Failed to fetch UptimeRobot data: ${error.message}; uptime data will not be displayed.`);
-    writeFallbackIfMissing();
+    writeEmptyData();
   }
 }
 
