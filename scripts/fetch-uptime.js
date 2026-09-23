@@ -3,10 +3,20 @@ const path = require('path');
 
 require('dotenv').config();
 
+const outputPath = path.join(__dirname, '../data/uptime.json');
+
+function writeFallbackIfMissing() {
+  if (!fs.existsSync(outputPath)) {
+    fs.writeFileSync(outputPath, JSON.stringify({ monitors: [] }, null, 2));
+    console.warn('⚠️ Empty uptime data written to data/uptime.json');
+  }
+}
+
 async function fetchUptimeData() {
   if (!process.env.UPTIMEROBOT_API_KEY) {
-    console.error('❌ UPTIMEROBOT_API_KEY environment variable is not set.');
-    process.exit(1);
+    console.warn('⚠️ UPTIMEROBOT_API_KEY environment variable is not set; uptime data will not be displayed.');
+    writeFallbackIfMissing();
+    return;
   }
 
   const options = {
@@ -26,18 +36,18 @@ async function fetchUptimeData() {
     const response = await fetch('https://api.uptimerobot.com/v2/getMonitors', options);
 
     if (!response.ok) {
-      console.error(`❌ Failed to fetch UptimeRobot data: ${response.status} ${response.statusText}`);
-      process.exit(1);
+      console.warn(`⚠️ Failed to fetch UptimeRobot data: ${response.status} ${response.statusText}; uptime data will not be displayed.`);
+      writeFallbackIfMissing();
+      return;
     }
 
     const data = await response.json();
-    const outputPath = path.join(__dirname, '../data/uptime.json');
 
     fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
     console.log('✅ Uptime data successfully written to data/uptime.json');
   } catch (error) {
-    console.error('❌ Failed to fetch UptimeRobot data:', error.message);
-    process.exit(1);
+    console.warn(`⚠️ Failed to fetch UptimeRobot data: ${error.message}; uptime data will not be displayed.`);
+    writeFallbackIfMissing();
   }
 }
 
