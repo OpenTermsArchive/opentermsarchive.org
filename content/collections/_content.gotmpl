@@ -8,7 +8,7 @@
   {{ $governance := slice }}
   
   {{ range $uptime.monitors }}
-    {{ if in .url $endpoint }}
+    {{ if in .url (strings.TrimSuffix "/" $endpoint) }}
       {{ $uptimeRatio = .custom_uptime_ratio }}
     {{ end }}
   {{ end }}
@@ -39,6 +39,7 @@
     "engineVersion" .engineVersion
     "federated" .federated
     "hasFeed" .hasFeed
+    "uptimeRatio" $uptimeRatio
   }}
   {{ $page := dict
     "params" $params

@@ -6,7 +6,7 @@ The website that presents Open Terms Archive to the general public.
 
 ### Environment variables
 
-Set the `UPTIMEROBOT_API_KEY` environment variable:
+Set the `UPTIMEROBOT_API_KEY` environment variable. It is optional for local development: without it, the site builds normally but the uptime ratio is not displayed on collections pages. It is required for the production deployment.
 
 1. Locally: copy the `.env.example` file to `.env` and set the value
 2. On GitHub: Repository Settings → Secrets and variables → Actions → New repository secret
