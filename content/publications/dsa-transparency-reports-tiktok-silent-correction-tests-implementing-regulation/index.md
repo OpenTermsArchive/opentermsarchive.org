@@ -9,7 +9,7 @@ assistance: [GLM-5-2]
 related_collections: ["dsa-reports"]
 ---
 
-_Open Terms Archive tracks platforms’ documents and ensures that every published version remains accessible and unaltered. The system automatically detects any changes applied after publication and exposes the precise differences. The investigation described in this article was made possible by a record that would have been invisible to any regulator, researcher, or journalist relying solely on the platform’s own pages._
+_Open Terms Archive tracks platforms’ documents and ensures that every published version remains accessible and unaltered. The system automatically detects any changes applied after publication and exposes the precise differences. The investigation described in this article was made possible by a record invisible to any regulator, researcher, or journalist relying solely on the platform’s own pages._
 
 ## Open Terms Archive spotted a change in a TikTok transparency report 6 months after publishing
 
