@@ -1,6 +1,6 @@
 ---
 title: "Updating DSA Transparency Reports: How TikTok’s Silent Correction Tests Implementing Regulation"
-html_description: "On 28 August 2026, TikTok silently corrected its 2025S2 DSA transparency report 6 months after publishing. Open Terms Archive detected changes and minor inconsistencies in the data. Useful learnings in interpreting the Implementing Regulation can be derived."
+html_description: "On 28 August 2026, TikTok silently corrected its 2025S2 DSA transparency report 6 months after publishing. Open Terms Archive detected changes and minor inconsistencies in the data. This case demonstrates useful learnings for interpreting the DSA Implementing Regulation."
 service: TikTok
 topic: ["Platform Accountability"]
 date: 2026-08-28
@@ -9,7 +9,7 @@ assistance: [GLM-5-2]
 related_collections: ["dsa-reports"]
 ---
 
-_Open Terms Archive tracks platforms’ documents and ensures that every published version remains accessible and that the data has not been tampered with. The system automatically detects any change applied after publication and exposes. The entire investigation described in this article rests on a record that no regulator, researcher, or journalist relying solely on the platform’s own pages would have ever seen._
+_Open Terms Archive tracks platforms’ documents and ensures that every published version remains accessible and unaltered. The system automatically detects any changes applied after publication and exposes the precise differences. The investigation described in this article was made possible by a record that would have been invisible to any regulator, researcher, or journalist relying solely on the platform’s own pages._
 
 ## Open Terms Archive spotted a change in a TikTok transparency report 6 months after publishing
 
@@ -49,7 +49,7 @@ For Category 10d (terrorist content), the number of notices received fell from 7
 
 ![Spreadsheet comparison of the original and updated “4_notices” tab, with row 66 (Category 10d, KEYWORD_TERRORIST_CONTENT) highlighted, showing the number of notices received changing from 77729 to 43119](spreadsheet_diff.png)
 
-A 44 percent drop in reported notices for terrorist content, as well as a threefold decrease in median action time, are material changes to the public record on how the platform handles content reporting. We cannot know how many reports have already been published on this data, nor how many cross-platform comparisons on handling performance have been made. Making it easier for their authors to update their conclusions would be important.
+A 44 percent drop in reported notices for terrorist content, as well as a threefold decrease in median action time, are material changes to the public record on how the platform handles content reporting. We cannot know how many reports have already been published using this data, nor how many cross-platform comparisons on handling performance have been made. Making this type of correction more visible would make it easier for researchers and analysts to update their findings accordingly.
 
 ### Value change for “unsafe products”
 
@@ -145,7 +145,7 @@ The DSA was built for a world in which platforms would cooperate, civil society 
 
 We are grateful to the [CNAM](https://www.cnam.eu), and specifically its _Chaire sur la modération des contenus_, for having [supported](https://regulation-tech.vergnolle.org/ota-community-call/) the creation and maintenance of the [Systemic Risks Reports Archive](https://opentermsarchive.org/en/dsa-systemic-risks-reports/). Maintaining a trustworthy, continuously updated archive of systemic risk assessments across all very large online platforms requires sustained engineering and monitoring.
 
-That funding has now run out and **Open Terms Archive needs support to maintain this tracking**. If you are in a position to sponsor the maintenance of this work and its expansion to transparency reports, please [reach out to us](mailto:contact@opentermsarchive.org?subject=DSA%20reports) or donate directly on our [OpenCollective page](https://opencollective.com/opentermsarchive/projects/dsa-systemic-risks-reports).
+The initial funding has now come to an end and **Open Terms Archive needs support to continue this work**. If you are in a position to sponsor the archive and its expansion to transparency reports, please [reach out to us](mailto:contact@opentermsarchive.org?subject=DSA%20reports) or donate directly on our [OpenCollective page](https://opencollective.com/opentermsarchive/projects/dsa-systemic-risks-reports).
 
 
 [^credit]: Thank you to [Suzanne Vergnolle](https://vergnolle.org/) for pointing to Regulation (EU) 2021/784 and suggesting the unit for median response time must be minutes or hours.
