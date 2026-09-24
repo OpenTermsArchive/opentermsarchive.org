@@ -4,7 +4,6 @@ hero:
   title: Brand guidelines
 title: Brand guidelines
 html_description: Logos, copywriting rules, font and titles styles
-aliases: /en/media
 ---
 
 ## Copywriting
