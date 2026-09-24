@@ -5,7 +5,6 @@ hero:
   title: Impact Statistics
   subtitle: "Digital platforms determine what citizens can say, how their purchases are made, and where their data is processed. These rules are set out in complex and changing documents: terms of service, privacy policies, and community standards, to name a few. <br/><br/>Open Terms Archive makes these rules easier to understand and tracks their changes to ensure that our laws are enforced, our values upheld, and our interests protected in the digital space."
 layout: stats
-aliases: /stats
 actors:
   title: Open Terms Archive serves four main types of users with influence over platform governance, pooling and strengthening their ability to drive meaningful change.<br/><br/>Each group is presented below with its typical mode of action, a use case, and its main success indicator - its <span class="fontstyle--italic">North Star Metric</span> <i class="icon icon--size-inherit" data-lucide="sparkles"></i>
   items:
