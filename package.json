@@ -15,11 +15,12 @@
   "scripts": {
     "prebuild": "npm run fetch",
     "build": "hugo --minify --cleanDestinationDir --ignoreCache",
-    "test": "npm run lint:markdown && npm run lint:css && npm run lint:js && npm run lint:html && npm run test:links && npm run test:html && npm run test:e2e",
+    "test": "npm run lint:markdown && npm run lint:css && npm run lint:js && npm run lint:html && npm run test:links && npm run test:html && npm run test:e2e && npm run test:build",
     "pretest:links": "npm run build",
     "test:links": "linkinator ./public --recurse --verbosity error",
     "pretest:html": "npm run build",
     "test:html": "html-validate ./public",
+    "test:build": "hugo --logLevel warn --ignoreCache --panicOnWarning --printPathWarnings --printI18nWarnings",
     "test:e2e": "node test/cypress/e2e/index.js",
     "prestart:dev": "npm run fetch",
     "start:dev": "hugo serve --watch --logLevel warn --disableFastRender --printI18nWarnings --ignoreCache",
