@@ -1,6 +1,7 @@
 ---
 html_title: Thanks for subscribing!
 html_description: You are now subscribed.
+slug: /bestaetigt
 ---
 
 # You are now subscribed!
