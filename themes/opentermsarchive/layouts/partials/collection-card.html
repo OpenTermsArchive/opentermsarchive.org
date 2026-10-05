@@ -2,8 +2,8 @@
 {{ $tagline := default .context.Params.tagline (index .context.Params.i18n site.Language.Lang "tagline") }}
 {{ $collectionLogo := partial "func/getLogo.html" (dict "logoUrl" .context.Params.logo "name" $name "type" "collections") }}
 {{ $collectionLogo2x := partial "func/getLogo.html" (dict "logoUrl" .context.Params.logo "name" $name "type" "collections" "size" "2x") }}
-{{ with $collectionLogo.error }}{{ warnf . }}{{ end }}
-{{ with $collectionLogo2x.error }}{{ warnf . }}{{ end }}
+{{ with $collectionLogo.error }}{{ printf . }}{{ end }}
+{{ with $collectionLogo2x.error }}{{ printf . }}{{ end }}
 {{ $i18n := .context.Params.i18n }}
 
 {{ $languages := .context.Params.languages }}

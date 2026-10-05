@@ -9,8 +9,8 @@
   {{ $isGraySectionIndex := 0 }}
   {{ $collectionLogo := partial "func/getLogo.html" (dict "logoUrl" .Params.logo "name" $name "type" "collections") }}
   {{ $collectionLogo2x := partial "func/getLogo.html" (dict "logoUrl" .Params.logo "name" $name "type" "collections" "size" "2x") }}
-  {{ with $collectionLogo.error }}{{ warnf . }}{{ end }}
-  {{ with $collectionLogo2x.error }}{{ warnf . }}{{ end }}
+  {{ with $collectionLogo.error }}{{ printf . }}{{ end }}
+  {{ with $collectionLogo2x.error }}{{ printf . }}{{ end }}
   {{ $governance := .Params.governance }}
   {{ $i18n := .Params.i18n }}
   {{ $languages := .Params.languages }}
