@@ -1,0 +1,15 @@
+title:
+  en: Decoding Digital Policies
+  de: Digitale Vertragsbedingungen entschlüsseln
+  fr: Décrypter les politiques numériques
+author:
+  en: Open Terms Archive & wikirate
+  de: Open Terms Archive & wikirate
+  fr: Open Terms Archive & wikirate
+description:
+  en: Dataset that uses Open Terms Archive data to compare the length, reading time and readability of key policies across digital services.
+  de: Daten von Open Terms Archive werden verwendet, um die Länge, Lesezeit und Lesbarkeit der wichtigsten Vertragsdokumente verschiedener digitaler Dienste zu vergleichen.
+  fr: Jeu de données qui utilise les données d’Open Terms Archive pour comparer la longueur, le temps de lecture et la lisibilité des documents contractuels principaux de différents services numériques.
+website: https://wikirate.org/Open_Terms_Archive_Decoding_Digital_Policies?tab=details
+weight: 10
+related_collections: ["platform-governance-archive"]
