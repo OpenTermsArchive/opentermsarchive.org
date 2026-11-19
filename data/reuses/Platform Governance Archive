@@ -1,0 +1,15 @@
+title: 
+  en: Platform Governance Archive
+  de: Platform Governance Archive
+  fr: Platform Governance Archive
+author:
+  en: Lab Platform Governance, Media, and Technology at the Centre for Media, Communication and Information Research (ZeMKI), University of Bremen
+  de: Lab Platform Governance, Media, and Technology at the Centre for Media, Communication and Information Research (ZeMKI), University of Bremen
+  fr: Lab Platform Governance, Media, and Technology at the Centre for Media, Communication and Information Research (ZeMKI), University of Bremen
+description:
+  en: A data repository that collects and curates policies of major social media platforms and generative AI services in a long-term perspective.
+  de: Ein Datenarchiv, das die Richtlinien großer Social-Media-Plattformen und generativer KI-Dienste langfristig sammelt, aufbereitet und dokumentiert.
+  fr: Un référentiel de données qui collecte, organise et documente les politiques des principales plateformes de réseaux sociaux et des services d’IA générative dans le temps.
+website: https://www.platformgovernancearchive.org/
+weight: 8
+related_collections: ["Platform-Governance-Archive", "GenAI-Governance-Archive"]
