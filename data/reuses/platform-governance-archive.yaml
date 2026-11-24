@@ -11,5 +11,5 @@ description:
   de: Ein Datenarchiv, das die Richtlinien großer Social-Media-Plattformen und generativer KI-Dienste langfristig sammelt, aufbereitet und dokumentiert.
   fr: Un référentiel de données qui collecte, organise et documente les politiques des principales plateformes de réseaux sociaux et des services d’IA générative dans le temps.
 website: https://www.platformgovernancearchive.org/
-weight: 8
+weight: 10
 related_collections: ["pga", "genai-eu"]

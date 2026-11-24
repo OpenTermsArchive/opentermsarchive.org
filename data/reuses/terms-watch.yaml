@@ -11,5 +11,5 @@ description:
   de: AI-generated summaries of changes to terms across select Open Terms Archive collections.
   fr: Résumés générés par IA des modifications détectées dans les conditions d'utilisation par certaines collections Open Terms Archive.
 website: https://termswatch.io
-weight: 9
+weight: 8
 related_collections: ["pga", "genai-contrib"]
