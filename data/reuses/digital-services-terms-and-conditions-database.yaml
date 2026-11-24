@@ -11,5 +11,5 @@ description:
   de: Dedicated portal to access data from a collection operated by the DSA Enforcement Team within the European Commission.
   fr: Portail d'accès aux données d'une collection opérée par l’équipe « application du DSA » au sein de la Commission européenne.
 website: https://platform-contracts.digital-strategy.ec.europa.eu/
-weight: 8
+weight: 11
 related_collections: ["p2b-compliance"]
