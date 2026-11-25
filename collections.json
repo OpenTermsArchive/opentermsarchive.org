@@ -53,8 +53,8 @@
         "description": "La collection **Generative AI Contrib** suit les conditions d'utilisation des services d'intelligence artificielle générative et est ouverte à toute contribution.\n\nElle a été initialement créée par la [Clinique de l'École de droit de Sciences Po](https://www.sciencespo.fr/ecole-droit/fr/clinique/presentation/) pour le projet « Éthique et réglementation de l'intelligence artificielle (IA) » du programme de recherche [DIGILAW](https://www.sciencespo.fr/ecole-droit/fr/clinique/digilaw/). Elle visait à évaluer l’évolution de la conformité des services d'IA générative aux projets de règlementations et à étudier l’impact des changements réglementaires.\n\nÀ la fin du projet de recherche, la collection a été reprise par des contributeurices bénévoles et ouverte à toutes les contributions.\n"
       }
     },
-    "totalServices": 48,
-    "totalTerms": 141,
+    "totalServices": 49,
+    "totalTerms": 142,
     "engineVersion": "17.0.1",
     "endpoint": "http://86.54.83.121/collection-api/v1/",
     "federated": true,
@@ -299,8 +299,8 @@
         }
       }
     },
-    "totalServices": 389,
-    "totalTerms": 838,
+    "totalServices": 390,
+    "totalTerms": 840,
     "engineVersion": "17.0.1",
     "endpoint": "http://86.54.83.7/collection-api/v1/",
     "federated": true,
